@@ -52,13 +52,22 @@ export async function fileExists(filePath: string): Promise<boolean> {
 }
 
 export function pathKey(sourcePath: string): string {
-  return sourcePath
-    .replace(/\\/g, "/")
-    .replace(/^\/+/, "")
-    .replace(/\.md$/i, "")
-    .replace(/[^a-zA-Z0-9]+/g, "_")
-    .replace(/^_+|_+$/g, "")
-    .toLowerCase();
+  const maxKeyLength = 160;
+  const normalized = sourcePath.replace(/\\/g, "/");
+  const key =
+    normalized
+      .replace(/^\/+/, "")
+      .replace(/\.md$/i, "")
+      .replace(/[^a-zA-Z0-9]+/g, "_")
+      .replace(/^_+|_+$/g, "")
+      .toLowerCase() || sha256(normalized).slice(0, 16);
+
+  if (key.length <= maxKeyLength) return key;
+
+  const digest = sha256(normalized).slice(0, 16);
+  const prefixLength = maxKeyLength - digest.length - 1;
+  const prefix = key.slice(0, prefixLength).replace(/_+$/g, "") || key.slice(0, prefixLength);
+  return `${prefix}_${digest}`;
 }
 
 export function posixRelative(from: string, to: string): string {
@@ -69,4 +78,3 @@ export async function readOptionalJson<T>(filePath: string, fallback: T): Promis
   if (!(await fileExists(filePath))) return fallback;
   return readJson<T>(filePath);
 }
-

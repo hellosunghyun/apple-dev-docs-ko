@@ -156,17 +156,30 @@ jobs:
           cp "$queue_path" "$artifact_dir/queue.json"
           cp tmp/results/latest.json "$artifact_dir/results.json"
           QUEUE_PATH="$queue_path" ARTIFACT_DIR="$artifact_dir" node <<'NODE'
+          const crypto = require('node:crypto');
           const fs = require('node:fs');
           const path = require('node:path');
 
+          function sha256(value) {
+            return crypto.createHash('sha256').update(value).digest('hex');
+          }
+
           function pathKey(sourcePath) {
-            return sourcePath
-              .replace(/\\/g, '/')
+            const maxKeyLength = 160;
+            const normalized = sourcePath.replace(/\\/g, '/');
+            const key = normalized
               .replace(/^\/+/, '')
               .replace(/\.md$/i, '')
               .replace(/[^a-zA-Z0-9]+/g, '_')
               .replace(/^_+|_+$/g, '')
-              .toLowerCase();
+              .toLowerCase() || sha256(normalized).slice(0, 16);
+
+            if (key.length <= maxKeyLength) return key;
+
+            const digest = sha256(normalized).slice(0, 16);
+            const prefixLength = maxKeyLength - digest.length - 1;
+            const prefix = key.slice(0, prefixLength).replace(/_+$/g, '') || key.slice(0, prefixLength);
+            return `${prefix}_${digest}`;
           }
 
           const queue = JSON.parse(fs.readFileSync(process.env.QUEUE_PATH, 'utf8'));
