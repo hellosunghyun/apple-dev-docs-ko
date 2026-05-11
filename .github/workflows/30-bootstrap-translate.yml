@@ -20,6 +20,14 @@ on:
         required: true
         default: "true"
         description: Commit and push aggregate translation output.
+      checkpoint_results:
+        required: true
+        default: "true"
+        description: Push each completed shard to a checkpoint branch.
+      mock_translation:
+        required: true
+        default: "false"
+        description: Smoke-test mode only. Uses mock translations and never commits.
 
 permissions:
   contents: write
@@ -111,6 +119,7 @@ jobs:
           name: manifest-state
           path: .
       - uses: ./.github/actions/setup-codex-auth
+        if: inputs.mock_translation != 'true'
         with:
           codex-auth-json: ${{ secrets.CODEX_AUTH_JSON }}
       - id: shard
@@ -135,6 +144,8 @@ jobs:
           fi
           pnpm tsx scripts/translate/build-queue.ts "${args[@]}"
       - run: LLM_CONCURRENCY="${{ inputs.llm_concurrency }}" pnpm tsx scripts/translate/run-workers.ts --queue "state/queue/shard-${{ steps.shard.outputs.id }}.json"
+        env:
+          MOCK_TRANSLATION: ${{ inputs.mock_translation == 'true' && '1' || '' }}
       - name: Pack shard artifact
         env:
           SHARD_ID: ${{ steps.shard.outputs.id }}
@@ -174,6 +185,30 @@ jobs:
           path: tmp/artifacts/translation-shard-${{ steps.shard.outputs.id }}/
           retention-days: 3
           if-no-files-found: error
+      - name: Push shard checkpoint
+        if: inputs.checkpoint_results == 'true' && inputs.mock_translation != 'true'
+        env:
+          SHARD_ID: ${{ steps.shard.outputs.id }}
+        run: |
+          checkpoint_branch="checkpoint/${GITHUB_RUN_ID}/shard-${SHARD_ID}"
+          checkpoint_dir="checkpoints/run-${GITHUB_RUN_ID}/translation-shard-${SHARD_ID}"
+          checkpoint_tmp="${RUNNER_TEMP}/translation-shard-${SHARD_ID}"
+
+          rm -rf "$checkpoint_tmp"
+          mkdir -p "$checkpoint_tmp"
+          cp -R "tmp/artifacts/translation-shard-${SHARD_ID}/." "$checkpoint_tmp/"
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git checkout --orphan "$checkpoint_branch"
+          git rm -rf . >/dev/null 2>&1 || true
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+
+          mkdir -p "$checkpoint_dir"
+          cp -R "$checkpoint_tmp/." "$checkpoint_dir/"
+          git add "$checkpoint_dir"
+          git commit -m "feat: 번역 샤드 ${SHARD_ID} 체크포인트"
+          git push --force origin "HEAD:refs/heads/${checkpoint_branch}"
 
   aggregate:
     needs:
@@ -239,4 +274,4 @@ jobs:
           git add state translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
           git commit -m "feat: 병렬 번역 샤드 결과 갱신" || echo "No changes"
           git push
-        if: inputs.commit_results == 'true'
+        if: inputs.commit_results == 'true' && inputs.mock_translation != 'true'
