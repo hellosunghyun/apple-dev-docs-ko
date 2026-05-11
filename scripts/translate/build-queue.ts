@@ -6,8 +6,14 @@ import { applyOverride, readMemory, segmentNeedsTranslation } from "../lib/memor
 import type { Manifest, QueueFile, TranslationBatchInput, TranslationMemorySegment } from "../lib/types.js";
 
 const program = new Command();
-program.option("--shard <index>").option("--shard-total <total>").option("--limit-files <count>").option("--changed-only").parse();
-const options = program.opts<{ shard?: string; shardTotal?: string; limitFiles?: string; changedOnly?: boolean }>();
+program
+  .option("--shard <index>")
+  .option("--shard-total <total>")
+  .option("--limit-files <count>")
+  .option("--changed-only")
+  .option("--force", "retranslate existing machine-translated segments")
+  .parse();
+const options = program.opts<{ shard?: string; shardTotal?: string; limitFiles?: string; changedOnly?: boolean; force?: boolean }>();
 
 async function main(): Promise<void> {
   const translationConfig = await loadTranslationConfig();
@@ -38,7 +44,7 @@ async function main(): Promise<void> {
         locked += 1;
         continue;
       }
-      if (segmentNeedsTranslation(segment)) {
+      if (options.force || segmentNeedsTranslation(segment)) {
         candidates.push(segment);
       } else {
         skipped += 1;
@@ -118,4 +124,3 @@ function makeBatch(segments: TranslationBatchInput["segments"], glossary: Record
 }
 
 await main();
-
