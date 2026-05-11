@@ -34,21 +34,32 @@ Every implementation stage must be committed.
 Commit message format is mandatory:
 
 ```text
-feat: 한국어 설명
+type: 한국어 설명
 ```
 
 Examples:
 
 ```text
 feat: 저장소 에이전트 규칙 추가
-feat: 파일 기반 번역 메모리 구조 추가
-feat: 문서 사이트 원문 보기 기능 추가
+fix: 번역 큐 중복 생성 오류 수정
+docs: 에이전트 커밋 규칙 정리
+test: 문장 분리 회귀 테스트 추가
+ci: 페이지 배포 워크플로 추가
 ```
 
 Rules:
 
-- Use `feat:` for every commit unless the user explicitly changes this rule.
-- The summary after `feat:` must be Korean.
+- Choose the commit type that matches the primary change.
+- Use `feat:` only for a new project capability or user-facing site/automation surface.
+- Use `fix:` for bug fixes, validation corrections, and broken workflow repairs.
+- Use `docs:` for documentation, planning, README, checklist, and AGENTS-only changes.
+- Use `test:` for test code, fixtures, and verification-only changes.
+- Use `refactor:` for behavior-preserving code restructuring.
+- Use `perf:` for performance improvements.
+- Use `ci:` for GitHub Actions, Pages deployment automation, and runner configuration.
+- Use `build:` for dependency, package, and build-system configuration changes.
+- Use `chore:` for repository maintenance that does not change product behavior.
+- The summary after the type must be Korean.
 - Stage only intended files.
 - Never stage `.DS_Store`, secrets, runner tokens, `auth.json`, temporary logs, browser screenshots, local build output, or dependency folders.
 - Do not rewrite or revert user changes unless the user explicitly asks.
