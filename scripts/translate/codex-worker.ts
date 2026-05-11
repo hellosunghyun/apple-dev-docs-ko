@@ -1,6 +1,6 @@
 import { execa } from "execa";
 import { readText, resolveRoot } from "../lib/fs.js";
-import { extractJsonObject, validateTranslationOutput } from "../lib/validate.js";
+import { extractJsonObject, repairTranslationOutput, validateTranslationOutput } from "../lib/validate.js";
 import type { TranslationBatchInput, TranslationBatchOutput } from "../lib/types.js";
 
 export async function translateBatch(input: TranslationBatchInput): Promise<TranslationBatchOutput> {
@@ -24,7 +24,7 @@ export async function translateBatch(input: TranslationBatchInput): Promise<Tran
           reject: true
         }
       );
-      const output = extractJsonObject(stdout) as TranslationBatchOutput;
+      const output = repairTranslationOutput(input, extractJsonObject(stdout) as TranslationBatchOutput);
       const errors = validateTranslationOutput(input, output);
       if (errors.length) throw new Error(errors.join("\n"));
       return output;

@@ -44,5 +44,56 @@ export function collectUrls(value: string): string[] {
 }
 
 export function collectMarkdownLinks(value: string): string[] {
-  return Array.from(value.matchAll(/\[[^\]]+\]\(([^)]+)\)/g), (match) => match[1]);
+  return collectMarkdownLinkReferences(value).map((link) => link.target);
+}
+
+export interface MarkdownLinkReference {
+  raw: string;
+  text: string;
+  target: string;
+  start: number;
+  end: number;
+  targetStart: number;
+  targetEnd: number;
+}
+
+export function collectMarkdownLinkReferences(value: string): MarkdownLinkReference[] {
+  const links: MarkdownLinkReference[] = [];
+  let index = 0;
+  while (index < value.length) {
+    const open = value.indexOf("[", index);
+    if (open < 0) break;
+    const close = value.indexOf("](", open + 1);
+    if (close < 0) break;
+
+    const targetStart = close + 2;
+    let cursor = targetStart;
+    let depth = 0;
+    while (cursor < value.length) {
+      const char = value[cursor];
+      if (char === "(") {
+        depth += 1;
+      } else if (char === ")") {
+        if (depth === 0) break;
+        depth -= 1;
+      }
+      cursor += 1;
+    }
+    if (cursor >= value.length) {
+      index = close + 2;
+      continue;
+    }
+
+    links.push({
+      raw: value.slice(open, cursor + 1),
+      text: value.slice(open + 1, close),
+      target: value.slice(targetStart, cursor),
+      start: open,
+      end: cursor + 1,
+      targetStart,
+      targetEnd: cursor
+    });
+    index = cursor + 1;
+  }
+  return links;
 }
