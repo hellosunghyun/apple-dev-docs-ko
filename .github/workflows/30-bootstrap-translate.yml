@@ -23,7 +23,11 @@ on:
       checkpoint_results:
         required: true
         default: "true"
-        description: Push each completed shard to a checkpoint branch.
+        description: Push each shard to a checkpoint branch while translation is running.
+      checkpoint_interval_seconds:
+        required: true
+        default: "120"
+        description: Seconds between in-progress checkpoint pushes per shard.
       mock_translation:
         required: true
         default: "false"
@@ -143,18 +147,106 @@ jobs:
             args+=(--limit-files "$LIMIT_FILES")
           fi
           pnpm tsx scripts/translate/build-queue.ts "${args[@]}"
-      - run: LLM_CONCURRENCY="${{ inputs.llm_concurrency }}" pnpm tsx scripts/translate/run-workers.ts --queue "state/queue/shard-${{ steps.shard.outputs.id }}.json"
+      - name: Translate shard with incremental progress
         env:
           MOCK_TRANSLATION: ${{ inputs.mock_translation == 'true' && '1' || '' }}
+          SHARD_ID: ${{ steps.shard.outputs.id }}
+          LLM_CONCURRENCY: ${{ inputs.llm_concurrency }}
+          CHECKPOINT_RESULTS: ${{ inputs.checkpoint_results }}
+          CHECKPOINT_INTERVAL_SECONDS: ${{ inputs.checkpoint_interval_seconds }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROGRESS_SUMMARY_INTERVAL_BATCHES: "5"
+        run: |
+          set -euo pipefail
+
+          queue_path="state/queue/shard-${SHARD_ID}.json"
+          checkpoint_branch="checkpoint/${GITHUB_RUN_ID}/shard-${SHARD_ID}"
+          checkpoint_dir="checkpoints/run-${GITHUB_RUN_ID}/translation-shard-${SHARD_ID}"
+          checkpoint_source="${RUNNER_TEMP}/translation-shard-${SHARD_ID}"
+          checkpoint_log="${RUNNER_TEMP}/checkpoint-${SHARD_ID}.log"
+
+          collect_checkpoint_files() {
+            rm -rf "$checkpoint_source"
+            mkdir -p "$checkpoint_source/results" "$checkpoint_source/progress"
+            cp "$queue_path" "$checkpoint_source/queue.json"
+            if [ -d tmp/results ]; then
+              cp -R tmp/results/. "$checkpoint_source/results/"
+            fi
+            if [ -d tmp/progress ]; then
+              cp -R tmp/progress/. "$checkpoint_source/progress/"
+            fi
+          }
+
+          push_checkpoint() {
+            if [ "$CHECKPOINT_RESULTS" != "true" ] || [ -n "${MOCK_TRANSLATION:-}" ]; then
+              return 0
+            fi
+            collect_checkpoint_files
+            CHECKPOINT_BRANCH="$checkpoint_branch" \
+              CHECKPOINT_DIR="$checkpoint_dir" \
+              CHECKPOINT_SOURCE_DIR="$checkpoint_source" \
+              CHECKPOINT_MESSAGE="feat: 번역 샤드 ${SHARD_ID} 진행 체크포인트" \
+              GITHUB_TOKEN="$GITHUB_TOKEN" \
+              GITHUB_REPOSITORY="$GITHUB_REPOSITORY" \
+              scripts/ops/push-shard-checkpoint.sh >> "$checkpoint_log" 2>&1 || true
+          }
+
+          checkpoint_loop() {
+            while true; do
+              sleep "$CHECKPOINT_INTERVAL_SECONDS"
+              push_checkpoint
+            done
+          }
+
+          cleanup() {
+            status=$?
+            push_checkpoint
+            if [ -n "${checkpoint_pid:-}" ]; then
+              kill "$checkpoint_pid" >/dev/null 2>&1 || true
+              wait "$checkpoint_pid" >/dev/null 2>&1 || true
+            fi
+            if [ -f "$checkpoint_log" ]; then
+              tail -n 20 "$checkpoint_log" || true
+            fi
+            exit "$status"
+          }
+          trap cleanup EXIT
+          trap 'exit 130' INT TERM
+
+          if [ "$CHECKPOINT_RESULTS" = "true" ] && [ -z "${MOCK_TRANSLATION:-}" ]; then
+            checkpoint_loop &
+            checkpoint_pid=$!
+          fi
+
+          pnpm tsx scripts/translate/run-workers.ts \
+            --queue "$queue_path" \
+            --results "tmp/results/latest.json" \
+            --progress "tmp/progress/latest.json" \
+            --batch-dir "tmp/results/batches"
       - name: Pack shard artifact
+        if: always()
         env:
           SHARD_ID: ${{ steps.shard.outputs.id }}
         run: |
           artifact_dir="tmp/artifacts/translation-shard-${SHARD_ID}"
           queue_path="state/queue/shard-${SHARD_ID}.json"
-          mkdir -p "$artifact_dir/translation-memory/files"
-          cp "$queue_path" "$artifact_dir/queue.json"
-          cp tmp/results/latest.json "$artifact_dir/results.json"
+          mkdir -p "$artifact_dir/translation-memory/files" "$artifact_dir/results" "$artifact_dir/progress"
+          printf '{"shard":"%s","packedAt":"%s"}\n' "$SHARD_ID" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > "$artifact_dir/metadata.json"
+          if [ -f "$queue_path" ]; then
+            cp "$queue_path" "$artifact_dir/queue.json"
+          fi
+          if [ -d tmp/results ]; then
+            cp -R tmp/results/. "$artifact_dir/results/"
+          fi
+          if [ -d tmp/progress ]; then
+            cp -R tmp/progress/. "$artifact_dir/progress/"
+          fi
+          if [ -f tmp/results/latest.json ]; then
+            cp tmp/results/latest.json "$artifact_dir/results.json"
+          fi
+          if [ ! -f "$queue_path" ]; then
+            exit 0
+          fi
           QUEUE_PATH="$queue_path" ARTIFACT_DIR="$artifact_dir" node <<'NODE'
           const crypto = require('node:crypto');
           const fs = require('node:fs');
@@ -193,15 +285,17 @@ jobs:
           }
           NODE
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: translation-shard-${{ steps.shard.outputs.id }}
           path: tmp/artifacts/translation-shard-${{ steps.shard.outputs.id }}/
           retention-days: 3
           if-no-files-found: error
       - name: Push shard checkpoint
-        if: inputs.checkpoint_results == 'true' && inputs.mock_translation != 'true'
+        if: always() && inputs.checkpoint_results == 'true' && inputs.mock_translation != 'true'
         env:
           SHARD_ID: ${{ steps.shard.outputs.id }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           checkpoint_branch="checkpoint/${GITHUB_RUN_ID}/shard-${SHARD_ID}"
           checkpoint_dir="checkpoints/run-${GITHUB_RUN_ID}/translation-shard-${SHARD_ID}"
@@ -209,19 +303,17 @@ jobs:
 
           rm -rf "$checkpoint_tmp"
           mkdir -p "$checkpoint_tmp"
-          cp -R "tmp/artifacts/translation-shard-${SHARD_ID}/." "$checkpoint_tmp/"
+          if [ -d "tmp/artifacts/translation-shard-${SHARD_ID}" ]; then
+            cp -R "tmp/artifacts/translation-shard-${SHARD_ID}/." "$checkpoint_tmp/"
+          fi
 
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git checkout --orphan "$checkpoint_branch"
-          git rm -rf . >/dev/null 2>&1 || true
-          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-
-          mkdir -p "$checkpoint_dir"
-          cp -R "$checkpoint_tmp/." "$checkpoint_dir/"
-          git add "$checkpoint_dir"
-          git commit -m "feat: 번역 샤드 ${SHARD_ID} 체크포인트"
-          git push --force origin "HEAD:refs/heads/${checkpoint_branch}"
+          CHECKPOINT_BRANCH="$checkpoint_branch" \
+            CHECKPOINT_DIR="$checkpoint_dir" \
+            CHECKPOINT_SOURCE_DIR="$checkpoint_tmp" \
+            CHECKPOINT_MESSAGE="feat: 번역 샤드 ${SHARD_ID} 체크포인트" \
+            GITHUB_TOKEN="$GITHUB_TOKEN" \
+            GITHUB_REPOSITORY="$GITHUB_REPOSITORY" \
+            scripts/ops/push-shard-checkpoint.sh
 
   aggregate:
     needs:
