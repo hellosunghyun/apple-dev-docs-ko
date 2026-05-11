@@ -45,6 +45,7 @@ export function mergeMemory(existing: TranslationMemoryFile | undefined, fresh: 
   const segments = fresh.segments.map((segment) => {
     const old = existingById.get(segment.id);
     if (!old) return segment;
+    if (!segment.translatable && segment.status === "preserved") return segment;
     if (old.sourceHash === segment.sourceHash) {
       return { ...segment, ko: old.ko, status: old.status, reviewed: old.reviewed, locked: old.locked, translatedAt: old.translatedAt, translator: old.translator };
     }
@@ -117,21 +118,50 @@ export function applyOverride(memory: TranslationMemoryFile, overrideFile?: Over
 }
 
 export function toMemorySegment(segment: Segment): TranslationMemorySegment {
+  const translatable = segment.translatable && !shouldPreserveWithoutTranslation(segment.source);
   return {
     ...segment,
-    ko: segment.translatable ? "" : segment.source,
-    status: segment.translatable ? "failed" : "preserved",
+    translatable,
+    ko: translatable ? "" : segment.source,
+    status: translatable ? "failed" : "preserved",
     reviewed: false,
-    locked: !segment.translatable
+    locked: !translatable,
+    preserveReason: segment.preserveReason ?? (translatable ? undefined : "nonlinguistic_reference")
   };
 }
 
 export function segmentNeedsTranslation(segment: TranslationMemorySegment): boolean {
   if (!segment.translatable) return false;
+  if (shouldPreserveWithoutTranslation(segment.source)) return false;
   if (segment.locked) return false;
   if (segment.status === "machine_translated" && segment.ko.trim()) return false;
   if (segment.status === "human_edited" || segment.status === "human_reviewed") return false;
   return true;
+}
+
+export function shouldPreserveWithoutTranslation(source: string): boolean {
+  const value = source.trim();
+  if (!value) return true;
+  if (/^\*\[View on Apple Developer\]\(https:\/\/developer\.apple\.com\/documentation\/[^)]+\)\*$/i.test(value)) return true;
+  if (/^(?:iOS|iPadOS|macOS|Mac Catalyst|tvOS|visionOS|watchOS|Xcode)\s+\d+(?:\.\d+)*(?:\+)?$/i.test(value)) return true;
+  if (/^\*\*Availability\*\*:$/.test(value)) return true;
+  if (/^\*\*Framework\*\*:\s*[\w .+-]+\s+\*\*Kind\*\*:\s*[\w .+-]+$/i.test(value)) return true;
+
+  const markdownLink = value.match(/^\[([^\]]+)\]\(([^)]+\.md)\)$/i);
+  if (markdownLink && isApiReferenceText(markdownLink[1])) return true;
+
+  if (/^(?:class|struct|enum|protocol|actor|var|let|func|init|case|typealias|associatedtype|subscript)\s+[A-Za-z_`]/.test(value)) {
+    return true;
+  }
+
+  return false;
+}
+
+function isApiReferenceText(text: string): boolean {
+  const value = text.trim().replace(/`/g, "");
+  if (/^(?:class|struct|enum|protocol|actor|var|let|func|init|case|typealias|associatedtype|subscript)\s+/.test(value)) return true;
+  if (/^[A-Za-z_][\w.<>?]*(?:\(\))?$/.test(value)) return true;
+  return false;
 }
 
 function statusFromSegments(segments: TranslationMemorySegment[]): TranslationMemoryFile["status"] {
