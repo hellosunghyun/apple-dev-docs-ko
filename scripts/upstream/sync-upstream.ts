@@ -1,3 +1,4 @@
+import { rm } from "node:fs/promises";
 import { execa } from "execa";
 import { loadSourceConfig } from "../lib/config.js";
 import { ensureDir, fileExists, resolveRoot, writeJson } from "../lib/fs.js";
@@ -9,6 +10,7 @@ async function main(): Promise<void> {
   await ensureDir(cacheDir);
 
   if (!(await fileExists(`${cacheDir}/.git`))) {
+    await rm(cacheDir, { recursive: true, force: true });
     await execa("git", [
       "clone",
       "--filter=blob:none",
@@ -39,4 +41,3 @@ async function main(): Promise<void> {
 }
 
 await main();
-
