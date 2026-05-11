@@ -31,6 +31,8 @@ jobs:
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
       - run: pnpm run site:build
+        env:
+          SITE_BASE: /apple-dev-docs-ko/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/dist
@@ -44,4 +46,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-

@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const searchIndexUrl = `${import.meta.env.BASE_URL}search/index.json`;
 ---
 
 <BaseLayout title="검색 - Apple Dev Docs KO">
-  <main class="site-shell search-layout">
+  <main class="site-shell search-layout" data-search-index={searchIndexUrl} data-base-url={import.meta.env.BASE_URL}>
     <h1>검색</h1>
     <input class="search-input" type="search" placeholder="문서 제목, framework, symbol, path 검색" data-search-input />
     <ul class="result-list" data-search-results></ul>
@@ -13,7 +14,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     const input = document.querySelector("[data-search-input]");
     const results = document.querySelector("[data-search-results]");
     let items = [];
-    fetch("/search/index.json")
+    const root = document.querySelector("[data-search-index]");
+    const searchIndexUrl = root?.getAttribute("data-search-index") || "/search/index.json";
+    const baseUrl = root?.getAttribute("data-base-url") || "/";
+    fetch(searchIndexUrl)
       .then((response) => response.ok ? response.json() : { items: [] })
       .then((data) => {
         items = data.items ?? [];
@@ -29,7 +33,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       for (const item of found) {
         const li = document.createElement("li");
         li.className = "result-item";
-        li.innerHTML = `<strong><a href="/docs/${item.slug}/">${item.title}</a></strong><br><span>${item.framework} · ${item.sourcePath}</span>`;
+        li.innerHTML = `<strong><a href="${baseUrl}docs/${item.slug}/">${item.title}</a></strong><br><span>${item.framework} · ${item.sourcePath}</span>`;
         results.append(li);
       }
       if (!found.length) {
