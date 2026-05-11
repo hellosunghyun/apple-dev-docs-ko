@@ -22,22 +22,63 @@ for (const item of items) {
 }
 ---
 
-<aside class="sidebar">
-  <h2>Frameworks</h2>
-  {
-    Array.from(grouped.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([framework, docs]) => (
-      <section>
-        <h3 class="badge">{framework}</h3>
-        <ul class="sidebar-list">
-          {docs.slice(0, 80).map((doc) => (
-            <li>
-              <a href={href(`docs/${doc.slug}/`)} aria-current={current === doc.slug ? "page" : undefined}>
-                {doc.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))
-  }
+<aside class="documentation-navigator" data-navigator>
+  <div class="navigator-title">
+    <span class="navigator-icon" aria-hidden="true">
+      <svg viewBox="0 0 20 20">
+        <path d="M3.5 3.5h5v13h-5a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1Zm8 0h5a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-5v-13Zm-1.5 0h1.5v13H10v-13Z" fill="currentColor" />
+      </svg>
+    </span>
+    <h2>Documentation</h2>
+  </div>
+  <div class="navigator-scroll">
+    {
+      Array.from(grouped.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([framework, docs]) => (
+        <section class="navigator-group">
+          <h3 class="navigator-group-title">{framework}</h3>
+          <ul class="navigator-list">
+            {docs.slice(0, 120).map((doc) => (
+              <li data-filter-value={`${framework} ${doc.title} ${doc.sourcePath}`.toLowerCase()}>
+                <a class="navigator-link" href={href(`docs/${doc.slug}/`)} aria-current={current === doc.slug ? "page" : undefined}>
+                  <span class="navigator-stack" aria-hidden="true"><span></span></span>
+                  <span>{doc.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+  <div class="navigator-filter">
+    <label class="navigator-filter-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true">
+        <path d="M3 5.5h14V7H3V5.5Zm3 4h8v1.5H6V9.5Zm3 4h2v1.5H9v-1.5Z" fill="currentColor" />
+      </svg>
+      <span class="sr-only">문서 필터</span>
+      <input type="search" placeholder="Filter" data-navigator-filter />
+    </label>
+    <span class="shortcut-key" aria-hidden="true">/</span>
+  </div>
 </aside>
+
+<script>
+  // @ts-nocheck
+  for (const navigator of document.querySelectorAll("[data-navigator]")) {
+    const input = navigator.querySelector("[data-navigator-filter]");
+    const rows = Array.from(navigator.querySelectorAll("[data-filter-value]"));
+    input?.addEventListener("input", () => {
+      const query = input.value.trim().toLowerCase();
+      for (const row of rows) {
+        row.hidden = query ? !row.dataset.filterValue.includes(query) : false;
+      }
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "/" || event.metaKey || event.ctrlKey || event.altKey) return;
+      const target = event.target;
+      if (target?.matches?.("input, textarea, select")) return;
+      event.preventDefault();
+      input?.focus();
+    });
+  }
+</script>

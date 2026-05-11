@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import DocsSidebar from "../../components/DocsSidebar.astro";
 import nav from "../../data/navigation.json";
 
 const grouped = new Map();
@@ -13,19 +14,22 @@ for (const item of nav) {
 ---
 
 <BaseLayout title="문서 - Apple Dev Docs KO">
-  <main class="site-shell list-layout">
-    <h1>전체 문서</h1>
-    <p>비공식 한국어 번역 문서 인덱스입니다. 정확한 최신 내용은 각 문서의 공식 원문 링크를 기준으로 확인하세요.</p>
-    <ul class="framework-list">
-      {
-        Array.from(grouped.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([framework, docs]) => (
-          <li class="framework-item">
-            <h2>{framework}</h2>
-            <p>{docs.length}개 문서</p>
-            <a class="button" href={href(`docs/${docs[0]?.slug ?? ""}/`)}>첫 문서 열기</a>
-          </li>
-        ))
-      }
-    </ul>
+  <main class="documentation-frame">
+    <DocsSidebar items={nav} />
+    <section class="list-layout">
+      <h1>Documentation</h1>
+      <p>비공식 한국어 번역 문서 인덱스입니다. 왼쪽 navigator 또는 framework 카드를 통해 문서를 열 수 있습니다.</p>
+      <ul class="framework-list">
+        {
+          Array.from(grouped.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([framework, docs]) => (
+            <li class="framework-item">
+              <strong>{framework}</strong>
+              <p>{docs.length}개 문서</p>
+              <a class="button compact" href={href(`docs/${docs[0]?.slug ?? ""}/`)}>Open</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
   </main>
 </BaseLayout>
