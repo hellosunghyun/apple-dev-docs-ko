@@ -1,0 +1,51 @@
+{
+  "name": "apple-dev-docs-ko-automation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "setup": "pnpm install --frozen-lockfile",
+    "typecheck": "tsc -p tsconfig.json && pnpm --dir site run check",
+    "test": "vitest run",
+    "build": "pnpm run validate && pnpm run test && pnpm run site:build",
+    "validate": "pnpm run secret-scan && pnpm run lint:workflows",
+    "secret-scan": "tsx scripts/validate/secret-scan.ts",
+    "lint:workflows": "tsx scripts/validate/lint-workflows.ts",
+    "upstream:sync": "tsx scripts/upstream/sync-upstream.ts",
+    "sample": "tsx scripts/ops/seed-sample-source.ts && pnpm run manifest && pnpm run segment && MOCK_TRANSLATION=1 pnpm run queue && MOCK_TRANSLATION=1 pnpm run translate && pnpm tsx scripts/translate/apply-results.ts && pnpm run render && pnpm run site:content",
+    "manifest": "tsx scripts/upstream/build-manifest.ts && tsx scripts/upstream/build-shard-plan.ts",
+    "parse": "tsx scripts/parser/parse-markdown.ts",
+    "segment": "tsx scripts/segmenter/split-segments.ts",
+    "queue": "tsx scripts/translate/build-queue.ts",
+    "translate": "tsx scripts/translate/run-workers.ts",
+    "render": "tsx scripts/render/render-markdown.ts && tsx scripts/render/build-source-maps.ts",
+    "site:content": "tsx scripts/site/build-site-content.ts && tsx scripts/site/build-search-index.ts && tsx scripts/site/build-status-data.ts",
+    "site:build": "pnpm run site:content && pnpm --dir site run build",
+    "site:dev": "pnpm run site:content && pnpm --dir site run dev --host 127.0.0.1",
+    "progress": "tsx scripts/ops/check-progress.ts",
+    "report": "tsx scripts/ops/report-run.ts"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "commander": "^12.1.0",
+    "execa": "^9.5.2",
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
+    "github-slugger": "^2.0.0",
+    "mdast-util-to-markdown": "^2.1.2",
+    "mdast-util-to-string": "^4.0.0",
+    "p-queue": "^8.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
+    "unified": "^11.0.5",
+    "yaml": "^2.7.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["sourcePath", "segments"],
+  "properties": {
+    "sourcePath": { "type": "string" },
+    "updatedBy": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "segments": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["ko"],
+        "properties": {
+          "ko": { "type": "string", "minLength": 1 },
+          "reason": { "type": "string" },
+          "locked": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
+

@@ -1,0 +1,25 @@
+---
+interface Props {
+  files: number;
+  translatedFiles: number;
+  failedSegments: number;
+  needsReview: number;
+  progress: number;
+}
+const { files, translatedFiles, failedSegments, needsReview, progress } = Astro.props;
+const percent = Math.round((progress || 0) * 100);
+---
+
+<section class="status-panel" aria-label="번역 진행 상태">
+  <div class="metric-grid">
+    <div class="metric"><strong>{files}</strong><span>전체 문서</span></div>
+    <div class="metric"><strong>{translatedFiles}</strong><span>번역 완료</span></div>
+    <div class="metric"><strong>{failedSegments}</strong><span>실패 segment</span></div>
+    <div class="metric"><strong>{needsReview}</strong><span>검토 필요</span></div>
+  </div>
+  <p><strong>{percent}%</strong> 진행</p>
+  <div class="progress" aria-label={`번역 진행률 ${percent}%`}>
+    <span style={`width:${percent}%`}></span>
+  </div>
+</section>
+

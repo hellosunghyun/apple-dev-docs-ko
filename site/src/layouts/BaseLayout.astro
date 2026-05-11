@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Apple Dev Docs KO",
+  description = "Apple Developer Documentation 비공식 한국어 번역 프로젝트"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body data-source-mode="ko_only">
+    <div class="notice">
+      이 사이트는 Apple Developer Academy @ POSTECH 내 학습 목적으로 제작된 비공식 한국어 번역 프로젝트이며 Apple Inc.와 무관합니다.
+    </div>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">KO</span>
+        <span>Apple Dev Docs KO</span>
+      </a>
+      <nav class="site-nav" aria-label="주요 탐색">
+        <a href="/docs/">문서</a>
+        <a href="/search/">검색</a>
+        <a href="/status/">상태</a>
+        <a href="/contribute/">기여</a>
+        <a href="/disclaimer/">고지</a>
+      </nav>
+    </header>
+    <slot />
+    <footer>
+      비공식 번역입니다. Apple Inc.와 제휴, 후원, 승인 또는 공식 관계가 없습니다. 정확한 최신 정보는 공식 Apple Developer Documentation을 확인하세요.
+    </footer>
+  </body>
+</html>
+

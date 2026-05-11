@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="검색 - Apple Dev Docs KO">
+  <main class="site-shell search-layout">
+    <h1>검색</h1>
+    <input class="search-input" type="search" placeholder="문서 제목, framework, symbol, path 검색" data-search-input />
+    <ul class="result-list" data-search-results></ul>
+  </main>
+  <script>
+    // @ts-nocheck
+    const input = document.querySelector("[data-search-input]");
+    const results = document.querySelector("[data-search-results]");
+    let items = [];
+    fetch("/search/index.json")
+      .then((response) => response.ok ? response.json() : { items: [] })
+      .then((data) => {
+        items = data.items ?? [];
+        render(items.slice(0, 20));
+      });
+    input?.addEventListener("input", () => {
+      const query = input.value.trim().toLowerCase();
+      const found = query ? items.filter((item) => item.haystack.includes(query)).slice(0, 50) : items.slice(0, 20);
+      render(found);
+    });
+    function render(found) {
+      results.innerHTML = "";
+      for (const item of found) {
+        const li = document.createElement("li");
+        li.className = "result-item";
+        li.innerHTML = `<strong><a href="/docs/${item.slug}/">${item.title}</a></strong><br><span>${item.framework} · ${item.sourcePath}</span>`;
+        results.append(li);
+      }
+      if (!found.length) {
+        const li = document.createElement("li");
+        li.className = "result-item";
+        li.textContent = "검색 결과가 없습니다.";
+        results.append(li);
+      }
+    }
+  </script>
+</BaseLayout>

@@ -1,0 +1,55 @@
+name: Track Upstream Diff Translation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: track-upstream-diff
+  cancel-in-progress: true
+
+jobs:
+  diff-translate:
+    runs-on: [self-hosted, codex-oauth]
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - name: Seed Codex auth if missing
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+        run: |
+          export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
+          mkdir -p "$CODEX_HOME"
+          chmod 700 "$CODEX_HOME"
+          if [ ! -f "$CODEX_HOME/auth.json" ]; then
+            printf "%s" "$CODEX_AUTH_JSON" > "$CODEX_HOME/auth.json"
+            chmod 600 "$CODEX_HOME/auth.json"
+          fi
+      - run: pnpm run upstream:sync
+      - run: pnpm tsx scripts/upstream/diff-files.ts
+      - run: pnpm run manifest
+      - run: pnpm run segment
+      - run: pnpm run queue
+      - run: LLM_CONCURRENCY=3 pnpm run translate
+      - run: pnpm tsx scripts/translate/apply-results.ts
+      - run: pnpm run render
+      - run: pnpm run site:build
+      - run: pnpm run report
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add state translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
+          git commit -m "feat: 업스트림 변경 번역 갱신" || echo "No changes"
+          git push
+

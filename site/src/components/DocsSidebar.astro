@@ -1,0 +1,42 @@
+---
+interface NavItem {
+  sourcePath: string;
+  slug: string;
+  title: string;
+  framework: string;
+}
+
+interface Props {
+  items: NavItem[];
+  current?: string;
+}
+
+const { items, current = "" } = Astro.props;
+const grouped = new Map<string, NavItem[]>();
+for (const item of items) {
+  const list = grouped.get(item.framework) ?? [];
+  list.push(item);
+  grouped.set(item.framework, list);
+}
+---
+
+<aside class="sidebar">
+  <h2>Frameworks</h2>
+  {
+    Array.from(grouped.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([framework, docs]) => (
+      <section>
+        <h3 class="badge">{framework}</h3>
+        <ul class="sidebar-list">
+          {docs.slice(0, 80).map((doc) => (
+            <li>
+              <a href={`/docs/${doc.slug}/`} aria-current={current === doc.slug ? "page" : undefined}>
+                {doc.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</aside>
+

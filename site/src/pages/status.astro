@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProgressSummary from "../components/ProgressSummary.astro";
+import status from "../data/status.json";
+
+const totals = status.totals ?? { files: 0, translatedFiles: 0, failedSegments: 0, needsReview: 0, progress: 0 };
+---
+
+<BaseLayout title="상태 - Apple Dev Docs KO">
+  <main class="site-shell status-layout">
+    <h1>번역 상태</h1>
+    <ProgressSummary {...totals} />
+    <section class="panel" style="padding:1rem">
+      <h2>Framework별 진행</h2>
+      <ul class="framework-list">
+        {(status.frameworks ?? []).map((item) => (
+          <li class="framework-item">
+            <strong>{item.framework}</strong>
+            <p>{item.translated} / {item.files} 문서 번역 완료 · 실패 {item.failedSegments} · 검토 필요 {item.needsReview}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </main>
+</BaseLayout>
+

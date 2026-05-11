@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["generatedAt", "upstream", "files"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "upstream": {
+      "type": "object",
+      "required": ["repo", "branch", "latestSha"],
+      "properties": {
+        "repo": { "type": "string" },
+        "branch": { "type": "string" },
+        "latestSha": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sourcePath", "sourceFileHash", "bytes", "chars", "lineCount", "framework", "title"],
+        "properties": {
+          "sourcePath": { "type": "string" },
+          "sourceFileHash": { "type": "string" },
+          "bytes": { "type": "number" },
+          "chars": { "type": "number" },
+          "lineCount": { "type": "number" },
+          "framework": { "type": "string" },
+          "title": { "type": "string" },
+          "officialUrl": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
+

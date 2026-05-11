@@ -1,0 +1,88 @@
+---
+interface Props {
+  sourceMapUrl: string;
+  editBase: string;
+}
+const { sourceMapUrl, editBase } = Astro.props;
+---
+
+<div class="doc-tools" data-source-map-url={sourceMapUrl} data-edit-base={editBase}>
+  <div class="segmented-control" aria-label="원문 보기 모드">
+    <button type="button" data-source-mode-button="ko_only" aria-pressed="true">한국어만</button>
+    <button type="button" data-source-mode-button="sentence_popover" aria-pressed="false">문장 원문</button>
+    <button type="button" data-source-mode-button="inline_original" aria-pressed="false">아래 원문</button>
+    <button type="button" data-source-mode-button="side_by_side" aria-pressed="false">좌우 병렬</button>
+  </div>
+  <a class="button" data-edit-link href={editBase}>이 번역 수정하기</a>
+</div>
+
+<script>
+  // @ts-nocheck
+  const tool = document.querySelector("[data-source-map-url]");
+  const buttons = Array.from(document.querySelectorAll("[data-source-mode-button]"));
+  const segmentSource = new Map();
+  let popover;
+
+  async function loadSourceMap() {
+    if (!tool) return;
+    const url = tool.getAttribute("data-source-map-url");
+    if (!url) return;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) return;
+      const data = await response.json();
+      for (const segment of data.segments ?? []) {
+        segmentSource.set(segment.id, segment.source ?? "");
+      }
+    } catch {
+      // Source view gracefully stays Korean-only when the source map is missing.
+    }
+  }
+
+  function setMode(mode) {
+    document.body.dataset.sourceMode = mode;
+    for (const button of buttons) {
+      button.setAttribute("aria-pressed", String(button.getAttribute("data-source-mode-button") === mode));
+    }
+    document.querySelectorAll(".source-inline").forEach((node) => node.remove());
+    if (popover) popover.remove();
+    if (mode === "inline_original" || mode === "side_by_side") {
+      for (const segment of document.querySelectorAll(".ko-segment")) {
+        const source = segmentSource.get(segment.dataset.segmentId) || "";
+        if (!source) continue;
+        const inline = document.createElement("span");
+        inline.className = "source-inline";
+        inline.textContent = source;
+        segment.insertAdjacentElement("afterend", inline);
+      }
+    }
+  }
+
+  function showPopover(target) {
+    if (document.body.dataset.sourceMode !== "sentence_popover") return;
+    const source = segmentSource.get(target.dataset.segmentId) || "";
+    if (!source) return;
+    if (popover) popover.remove();
+    popover = document.createElement("div");
+    popover.className = "source-popover";
+    popover.textContent = source;
+    document.body.append(popover);
+    const rect = target.getBoundingClientRect();
+    popover.style.left = `${Math.min(rect.left, window.innerWidth - popover.offsetWidth - 16)}px`;
+    popover.style.top = `${Math.min(rect.bottom + 8, window.innerHeight - popover.offsetHeight - 16)}px`;
+  }
+
+  buttons.forEach((button) => button.addEventListener("click", () => setMode(button.getAttribute("data-source-mode-button"))));
+  document.addEventListener("mouseover", (event) => {
+    const target = event.target.closest?.(".ko-segment");
+    if (target) showPopover(target);
+  });
+  document.addEventListener("click", (event) => {
+    const target = event.target.closest?.(".ko-segment");
+    if (target) showPopover(target);
+  });
+  document.addEventListener("mouseout", (event) => {
+    if (event.target.closest?.(".ko-segment") && popover) popover.remove();
+  });
+  loadSourceMap();
+</script>

@@ -1,0 +1,39 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DocsSidebar from "../../components/DocsSidebar.astro";
+import SourceViewControls from "../../components/SourceViewControls.astro";
+import nav from "../../data/navigation.json";
+
+export async function getStaticPaths() {
+  const docs = await getCollection("docs");
+  return docs.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const sourcePath = entry.data.source_path ?? `${entry.slug}.md`;
+const sourceMapUrl = `/source-maps/${entry.slug}.json`;
+const editBase = `https://github.com/OWNER/apple-dev-docs-ko-automation/edit/main/overrides/ko/${sourcePath.replace(/\.md$/i, ".yaml")}`;
+---
+
+<BaseLayout title={`${entry.data.source_path ?? entry.slug} - Apple Dev Docs KO`}>
+  <main class="site-shell docs-grid">
+    <DocsSidebar items={nav} current={entry.slug} />
+    <article class="doc-main">
+      <p class="badge">비공식 번역</p>
+      <SourceViewControls sourceMapUrl={sourceMapUrl} editBase={editBase} />
+      <div class="doc-content">
+        <Content />
+      </div>
+    </article>
+    <aside class="toc">
+      <h2>On this page</h2>
+      <ul class="sidebar-list">
+        {headings.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}
+      </ul>
+      <p><a href={entry.data.official_url ?? "#"}>공식 원문</a></p>
+    </aside>
+  </main>
+</BaseLayout>
+

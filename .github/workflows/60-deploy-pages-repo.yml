@@ -1,0 +1,34 @@
+name: Deploy to Public Pages Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run site:build
+      - name: Push dist to public Pages repo
+        env:
+          PAGES_DEPLOY_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          PAGES_REPO: ${{ vars.PAGES_REPO }}
+        run: |
+          test -n "$PAGES_REPO"
+          git clone "https://x-access-token:${PAGES_DEPLOY_TOKEN}@github.com/${PAGES_REPO}.git" /tmp/apple-dev-docs-ko-pages
+          rsync -a --delete site/dist/ /tmp/apple-dev-docs-ko-pages/
+          cd /tmp/apple-dev-docs-ko-pages
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "feat: 정적 문서 사이트 배포" || echo "No changes"
+          git push origin main
+

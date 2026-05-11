@@ -1,0 +1,58 @@
+name: Bootstrap Translate Shard
+
+on:
+  workflow_dispatch:
+    inputs:
+      shard_total:
+        required: true
+        default: "200"
+      shard_index:
+        required: true
+        default: "0"
+      llm_concurrency:
+        required: true
+        default: "3"
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: bootstrap-translate-${{ inputs.shard_index }}
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: [self-hosted, codex-oauth]
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - name: Seed Codex auth if missing
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+        run: |
+          export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
+          mkdir -p "$CODEX_HOME"
+          chmod 700 "$CODEX_HOME"
+          if [ ! -f "$CODEX_HOME/auth.json" ]; then
+            printf "%s" "$CODEX_AUTH_JSON" > "$CODEX_HOME/auth.json"
+            chmod 600 "$CODEX_HOME/auth.json"
+          fi
+      - run: pnpm tsx scripts/segmenter/split-segments.ts
+      - run: pnpm tsx scripts/translate/build-queue.ts --shard "${{ inputs.shard_index }}" --shard-total "${{ inputs.shard_total }}"
+      - run: LLM_CONCURRENCY="${{ inputs.llm_concurrency }}" pnpm tsx scripts/translate/run-workers.ts --queue "state/queue/shard-${{ inputs.shard_index }}.json"
+      - run: pnpm tsx scripts/translate/apply-results.ts --queue "state/queue/shard-${{ inputs.shard_index }}.json"
+      - run: pnpm run render
+      - run: pnpm run site:content
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add state translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
+          git commit -m "feat: 전체 번역 샤드 결과 갱신" || echo "No changes"
+          git push
+
