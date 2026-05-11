@@ -49,6 +49,20 @@ async function main(): Promise<void> {
   await ensureDir(resolveRoot("reports/runs"));
   const frameworkCounts = new Map<string, number>();
   for (const file of manifestFiles) frameworkCounts.set(file.framework, (frameworkCounts.get(file.framework) ?? 0) + 1);
+  const summary = {
+    generatedAt: manifest.generatedAt,
+    upstream: manifest.upstream,
+    totals: {
+      files: manifest.files.length,
+      frameworks: frameworkCounts.size,
+      chars: manifest.files.reduce((sum, file) => sum + file.chars, 0),
+      bytes: manifest.files.reduce((sum, file) => sum + file.bytes, 0)
+    },
+    frameworks: Array.from(frameworkCounts.entries())
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([name, count]) => ({ name, count }))
+  };
+  await writeJson(resolveRoot("state/manifest-summary.json"), summary);
   const report = [
     "# Manifest Report",
     "",

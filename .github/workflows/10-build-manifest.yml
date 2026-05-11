@@ -19,10 +19,18 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm run upstream:sync
       - run: pnpm run manifest
+      - uses: actions/upload-artifact@v4
+        with:
+          name: upstream-manifest
+          path: |
+            state/manifest.json
+            state/shard-plan.json
+            state/manifest-summary.json
+            reports/latest.md
+          retention-days: 7
       - run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add state reports
+          git add state/upstream.json state/manifest-summary.json reports/latest.md
           git commit -m "feat: 업스트림 문서 목록 갱신" || echo "No changes"
           git push
-
