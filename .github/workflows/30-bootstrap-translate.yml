@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   translate:
-    runs-on: [self-hosted, codex-oauth]
+    runs-on: ubuntu-latest
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
@@ -32,17 +32,9 @@ jobs:
           node-version: 22
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
-      - name: Seed Codex auth if missing
-        env:
-          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
-        run: |
-          export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
-          mkdir -p "$CODEX_HOME"
-          chmod 700 "$CODEX_HOME"
-          if [ ! -f "$CODEX_HOME/auth.json" ]; then
-            printf "%s" "$CODEX_AUTH_JSON" > "$CODEX_HOME/auth.json"
-            chmod 600 "$CODEX_HOME/auth.json"
-          fi
+      - uses: ./.github/actions/setup-codex-auth
+        with:
+          codex-auth-json: ${{ secrets.CODEX_AUTH_JSON }}
       - run: pnpm tsx scripts/segmenter/split-segments.ts
       - run: pnpm tsx scripts/translate/build-queue.ts --shard "${{ inputs.shard_index }}" --shard-total "${{ inputs.shard_total }}"
       - run: LLM_CONCURRENCY="${{ inputs.llm_concurrency }}" pnpm tsx scripts/translate/run-workers.ts --queue "state/queue/shard-${{ inputs.shard_index }}.json"
@@ -55,4 +47,3 @@ jobs:
           git add state translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
           git commit -m "feat: 전체 번역 샤드 결과 갱신" || echo "No changes"
           git push
-

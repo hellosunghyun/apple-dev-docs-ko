@@ -8,6 +8,9 @@ for (const file of workflowFiles) {
   if (/pull_request:[\s\S]*codex-oauth/.test(text)) {
     errors.push(`${file}: pull_request workflow must not use codex-oauth runner`);
   }
+  if (/runs-on:\s*(?:\[[^\]]*(self-hosted|codex-oauth)[^\]]*\]|(?:self-hosted|codex-oauth)\b)/.test(text)) {
+    errors.push(`${file}: Codex workflows must use GitHub-hosted runners plus CODEX_AUTH_JSON setup`);
+  }
   if (/set -x/.test(text)) errors.push(`${file}: set -x is forbidden around secrets`);
 }
 if (errors.length) {
@@ -15,4 +18,3 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(`workflow lint passed (${workflowFiles.length} files)`);
-

@@ -10,21 +10,15 @@ permissions:
 
 jobs:
   healthcheck:
-    runs-on: [self-hosted, codex-oauth]
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Seed auth.json if missing
-        env:
-          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
-        run: |
-          export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
-          mkdir -p "$CODEX_HOME"
-          chmod 700 "$CODEX_HOME"
-          if [ ! -f "$CODEX_HOME/auth.json" ]; then
-            printf "%s" "$CODEX_AUTH_JSON" > "$CODEX_HOME/auth.json"
-            chmod 600 "$CODEX_HOME/auth.json"
-          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: ./.github/actions/setup-codex-auth
+        with:
+          codex-auth-json: ${{ secrets.CODEX_AUTH_JSON }}
       - name: Verify Codex
         run: codex exec --ephemeral "Return exactly OK."
-

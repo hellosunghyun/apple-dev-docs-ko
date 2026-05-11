@@ -75,7 +75,7 @@ Prefer the Codex Browser plugin when available. If it is unavailable or blocked,
 
 - `CODEX_AUTH_JSON` is private automation only.
 - `auth.json` must never be committed, printed, uploaded as an artifact, or cached.
-- Self-hosted Codex OAuth jobs must not run on untrusted pull request code.
+- Codex OAuth jobs must use GitHub-hosted runners with `CODEX_AUTH_JSON`; pull request validation must not receive secrets.
 - Pull request validation must run without secrets.
 - Public Pages output must not contain secrets or source cache internals.
 
