@@ -1,4 +1,4 @@
-name: Bootstrap Translate Shard
+name: Bootstrap Translate Shards
 
 on:
   workflow_dispatch:
@@ -6,25 +6,36 @@ on:
       shard_total:
         required: true
         default: "200"
-      shard_index:
+      max_parallel:
         required: true
-        default: "0"
+        default: "4"
       llm_concurrency:
         required: true
         default: "3"
+      limit_files:
+        required: false
+        default: ""
+        description: Optional smoke-test limit. Leave blank for all manifest files.
+      commit_results:
+        required: true
+        default: "true"
+        description: Commit and push aggregate translation output.
 
 permissions:
   contents: write
   actions: read
 
 concurrency:
-  group: bootstrap-translate-${{ inputs.shard_index }}
+  group: bootstrap-translate-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  translate:
+  prepare:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 90
+    outputs:
+      cache_key: ${{ steps.cache-key.outputs.value }}
+      shards: ${{ steps.plan.outputs.shards }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -32,18 +43,200 @@ jobs:
           node-version: 22
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
+      - id: cache-key
+        run: echo "value=apple-dev-docs-source-${{ runner.os }}-${{ github.run_id }}" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: source-cache/apple-dev-docs
+          key: ${{ steps.cache-key.outputs.value }}
+          restore-keys: |
+            apple-dev-docs-source-${{ runner.os }}-
+      - run: pnpm run upstream:sync
+      - run: pnpm run manifest
+      - id: plan
+        env:
+          SHARD_TOTAL: ${{ inputs.shard_total }}
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const total = Number(process.env.SHARD_TOTAL);
+          if (!Number.isInteger(total) || total < 1 || total > 256) {
+            console.error('shard_total must be an integer from 1 to 256');
+            process.exit(1);
+          }
+          const shards = Array.from({ length: total }, (_, index) => index);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `shards=${JSON.stringify(shards)}\n`);
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: manifest-state
+          path: |
+            state/upstream.json
+            state/manifest.json
+            state/manifest-summary.json
+            state/shard-plan.json
+            reports/latest.md
+          retention-days: 3
+
+  translate:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(inputs.max_parallel) }}
+      matrix:
+        shard_index: ${{ fromJSON(needs.prepare.outputs.shards) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/cache@v4
+        id: source-cache
+        with:
+          path: source-cache/apple-dev-docs
+          key: ${{ needs.prepare.outputs.cache_key }}
+      - name: Require prepared source cache
+        if: steps.source-cache.outputs.cache-hit != 'true'
+        run: |
+          test -d source-cache/apple-dev-docs/.git || {
+            echo "::error::Prepared source cache was not restored";
+            exit 1;
+          }
+      - uses: actions/download-artifact@v4
+        with:
+          name: manifest-state
+          path: .
       - uses: ./.github/actions/setup-codex-auth
         with:
           codex-auth-json: ${{ secrets.CODEX_AUTH_JSON }}
-      - run: pnpm tsx scripts/segmenter/split-segments.ts
-      - run: pnpm tsx scripts/translate/build-queue.ts --shard "${{ inputs.shard_index }}" --shard-total "${{ inputs.shard_total }}"
-      - run: LLM_CONCURRENCY="${{ inputs.llm_concurrency }}" pnpm tsx scripts/translate/run-workers.ts --queue "state/queue/shard-${{ inputs.shard_index }}.json"
-      - run: pnpm tsx scripts/translate/apply-results.ts --queue "state/queue/shard-${{ inputs.shard_index }}.json"
-      - run: pnpm run render
-      - run: pnpm run site:content
+      - id: shard
+        run: |
+          printf 'id=%04d\n' '${{ matrix.shard_index }}' >> "$GITHUB_OUTPUT"
+      - name: Segment shard
+        env:
+          LIMIT_FILES: ${{ inputs.limit_files }}
+        run: |
+          args=(--shard "${{ matrix.shard_index }}" --shard-total "${{ inputs.shard_total }}")
+          if [ -n "$LIMIT_FILES" ]; then
+            args+=(--limit-files "$LIMIT_FILES")
+          fi
+          pnpm tsx scripts/segmenter/split-segments.ts "${args[@]}"
+      - name: Build shard queue
+        env:
+          LIMIT_FILES: ${{ inputs.limit_files }}
+        run: |
+          args=(--shard "${{ matrix.shard_index }}" --shard-total "${{ inputs.shard_total }}")
+          if [ -n "$LIMIT_FILES" ]; then
+            args+=(--limit-files "$LIMIT_FILES")
+          fi
+          pnpm tsx scripts/translate/build-queue.ts "${args[@]}"
+      - run: LLM_CONCURRENCY="${{ inputs.llm_concurrency }}" pnpm tsx scripts/translate/run-workers.ts --queue "state/queue/shard-${{ steps.shard.outputs.id }}.json"
+      - name: Pack shard artifact
+        env:
+          SHARD_ID: ${{ steps.shard.outputs.id }}
+        run: |
+          artifact_dir="tmp/artifacts/translation-shard-${SHARD_ID}"
+          queue_path="state/queue/shard-${SHARD_ID}.json"
+          mkdir -p "$artifact_dir/translation-memory/files"
+          cp "$queue_path" "$artifact_dir/queue.json"
+          cp tmp/results/latest.json "$artifact_dir/results.json"
+          QUEUE_PATH="$queue_path" ARTIFACT_DIR="$artifact_dir" node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+
+          function pathKey(sourcePath) {
+            return sourcePath
+              .replace(/\\/g, '/')
+              .replace(/^\/+/, '')
+              .replace(/\.md$/i, '')
+              .replace(/[^a-zA-Z0-9]+/g, '_')
+              .replace(/^_+|_+$/g, '')
+              .toLowerCase();
+          }
+
+          const queue = JSON.parse(fs.readFileSync(process.env.QUEUE_PATH, 'utf8'));
+          for (const sourcePath of queue.sourcePaths) {
+            const key = pathKey(sourcePath);
+            const source = path.join('translation-memory', 'files', `${key}.json`);
+            if (!fs.existsSync(source)) continue;
+            const target = path.join(process.env.ARTIFACT_DIR, source);
+            fs.mkdirSync(path.dirname(target), { recursive: true });
+            fs.copyFileSync(source, target);
+          }
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: translation-shard-${{ steps.shard.outputs.id }}
+          path: tmp/artifacts/translation-shard-${{ steps.shard.outputs.id }}/
+          retention-days: 3
+          if-no-files-found: error
+
+  aggregate:
+    needs:
+      - prepare
+      - translate
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/cache@v4
+        id: source-cache
+        with:
+          path: source-cache/apple-dev-docs
+          key: ${{ needs.prepare.outputs.cache_key }}
+      - name: Require prepared source cache
+        if: steps.source-cache.outputs.cache-hit != 'true'
+        run: |
+          test -d source-cache/apple-dev-docs/.git || {
+            echo "::error::Prepared source cache was not restored";
+            exit 1;
+          }
+      - uses: actions/download-artifact@v4
+        with:
+          name: manifest-state
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: translation-shard-*
+          path: tmp/translation-shards
+      - name: Apply shard results
+        run: |
+          mkdir -p translation-memory/files
+          find tmp/translation-shards -path '*/translation-memory/files/*.json' -print0 | while IFS= read -r -d '' file; do
+            cp "$file" "translation-memory/files/$(basename "$file")"
+          done
+
+          find tmp/translation-shards -mindepth 1 -maxdepth 1 -type d -name 'translation-shard-*' | sort | while read -r shard_dir; do
+            pnpm tsx scripts/translate/apply-results.ts --queue "$shard_dir/queue.json" --results "$shard_dir/results.json"
+          done
+      - name: Render site content
+        env:
+          LIMIT_FILES: ${{ inputs.limit_files }}
+        run: |
+          if [ -n "$LIMIT_FILES" ]; then
+            pnpm tsx scripts/render/render-markdown.ts --limit-files "$LIMIT_FILES"
+            pnpm tsx scripts/render/build-source-maps.ts --limit-files "$LIMIT_FILES"
+            pnpm run site:content
+            pnpm --dir site run build
+          else
+            pnpm run render
+            pnpm run site:build
+          fi
+      - run: pnpm run report
       - run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
           git add state translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
-          git commit -m "feat: 전체 번역 샤드 결과 갱신" || echo "No changes"
+          git commit -m "feat: 병렬 번역 샤드 결과 갱신" || echo "No changes"
           git push
+        if: inputs.commit_results == 'true'

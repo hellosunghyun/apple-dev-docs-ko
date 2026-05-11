@@ -6,14 +6,19 @@ import { parseMarkdownDocument } from "../lib/markdown.js";
 import type { Manifest, ManifestFile, Segment } from "../lib/types.js";
 
 const program = new Command();
-program.option("--file <sourcePath>").option("--limit-files <count>").parse();
-const options = program.opts<{ file?: string; limitFiles?: string }>();
+program.option("--file <sourcePath>").option("--limit-files <count>").option("--shard <index>").option("--shard-total <total>").parse();
+const options = program.opts<{ file?: string; limitFiles?: string; shard?: string; shardTotal?: string }>();
 
 async function main(): Promise<void> {
   const sourceConfig = await loadSourceConfig();
   const manifest = await readJson<Manifest>(resolveRoot("state/manifest.json"));
   let files = options.file ? manifest.files.filter((file) => file.sourcePath === options.file) : manifest.files;
   if (options.limitFiles) files = files.slice(0, Number(options.limitFiles));
+  if (options.shard && options.shardTotal) {
+    const index = Number(options.shard);
+    const total = Number(options.shardTotal);
+    files = files.filter((_, i) => i % total === index);
+  }
 
   let count = 0;
   for (const file of files) {
@@ -39,4 +44,3 @@ async function segmentFile(file: ManifestFile, cacheDir: string, upstreamSha: st
 }
 
 await main();
-
