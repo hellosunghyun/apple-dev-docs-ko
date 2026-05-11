@@ -22,29 +22,30 @@ const editBase = `https://github.com/OWNER/apple-dev-docs-ko-automation/edit/mai
 
 <BaseLayout title={`${entry.data.source_path ?? entry.slug} - Apple Dev Docs KO`}>
   <main class="docs-grid">
-    <DocsSidebar items={nav} current={entry.slug} />
+    <DocsSidebar items={nav} current={entry.slug} mode="framework" currentFramework={currentNav?.framework} headings={headings} />
     <div class="docs-content-frame">
       <article class="doc-main">
-        <div class="doc-body-grid">
-          <div class="doc-article">
-            <nav class="breadcrumb" aria-label="문서 경로">
-              <a href={href("docs/")}>Documentation</a>
-              <span>/</span>
-              <span>{currentNav?.framework ?? "Framework"}</span>
-            </nav>
-            <p class="badge">비공식 한국어 번역</p>
+        <div class="doc-topbar">
+          <details class="doc-options">
+            <summary>Language: Swift</summary>
             <SourceViewControls sourceMapUrl={sourceMapUrl} editBase={editBase} />
-            <div class="doc-content">
-              <Content />
-            </div>
+          </details>
+        </div>
+        <div class="doc-body-grid">
+          <nav class="breadcrumb" aria-label="문서 경로">
+            <a href={href("docs/")}>{currentNav?.framework ?? "Documentation"}</a>
+            <span>/</span>
+            <span>{currentNav?.title ?? entry.slug}</span>
+          </nav>
+          <p class="doc-kind">Class</p>
+          <h1 class="doc-title">{currentNav?.title ?? entry.slug}</h1>
+          <p class="doc-abstract">Korean translation of the Apple Developer Documentation reference. Use the translation menu when you need source text or edit controls.</p>
+          <p class="doc-availability">Translated Reference <span>|</span> Official Source <span>|</span> Human Override Ready</p>
+          <pre class="declaration-pill"><code>class {currentNav?.title ?? entry.slug}</code></pre>
+          <div class="doc-content">
+            <Content />
           </div>
-          <aside class="toc">
-            <h2>On this page</h2>
-            <ul class="sidebar-list">
-              {headings.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}
-            </ul>
-            <p><a href={entry.data.official_url ?? "#"}>View official documentation</a></p>
-          </aside>
+          <p class="doc-official-link"><a href={entry.data.official_url ?? "#"}>View official documentation</a></p>
         </div>
       </article>
     </div>

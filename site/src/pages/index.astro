@@ -1,19 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DocsSidebar from "../components/DocsSidebar.astro";
-import ProgressSummary from "../components/ProgressSummary.astro";
+import frameworksData from "../data/frameworks.json";
 import nav from "../data/navigation.json";
-import status from "../data/status.json";
 
-const totals = status.totals ?? { files: 0, translatedFiles: 0, failedSegments: 0, needsReview: 0, progress: 0 };
-const frameworks = Array.from(new Set(nav.map((item) => item.framework))).slice(0, 12);
-const base = import.meta.env.BASE_URL;
-const href = (path = "") => `${base}${path.replace(/^\//, "")}`;
 ---
 
 <BaseLayout title="Apple Dev Docs KO">
   <main class="documentation-frame">
-    <DocsSidebar items={nav} />
+    <DocsSidebar items={nav} frameworks={frameworksData} />
     <div class="documentation-home">
       <section class="hero">
         <div class="hero-inner">
@@ -22,47 +17,17 @@ const href = (path = "") => `${base}${path.replace(/^\//, "")}`;
           </div>
           <h1>Apple Developer Documentation</h1>
           <p>
-            Browse Korean translations of Apple developer API reference, sample notes, and framework guides with source-aware review controls.
+            Browse the latest sample code, articles, tutorials, and API reference.
           </p>
-          <div class="actions">
-            <a class="button primary" href={href("docs/")}>Documentation</a>
-            <a class="button" href={href("search/")}>Search</a>
-            <a class="button" href="https://developer.apple.com/documentation">Official site</a>
-          </div>
         </div>
       </section>
-      <section class="section-band">
-        <h2>Explore translated references</h2>
-        <p class="section-intro">
-          공식 문서 탐색 흐름에 맞춰 framework별 navigator, 문서 검색, 원문 대조, 번역 상태를 한 화면에서 이어갑니다.
-        </p>
-        <ul class="feature-grid">
-          <li class="feature-card">
-            <strong>Source-aware reading</strong>
-            <p>문장별 원문 보기와 병렬 보기로 번역이 애매한 부분을 바로 확인합니다.</p>
-            <a href={href("docs/")}>Browse documentation</a>
-          </li>
-          <li class="feature-card">
-            <strong>Search and filter</strong>
-            <p>제목, framework, symbol, source path를 검색하고 왼쪽 navigator에서 빠르게 좁힙니다.</p>
-            <a href={href("search/")}>Open search</a>
-          </li>
-          <li class="feature-card">
-            <strong>Translation progress</strong>
-            <p>자동 번역, 사람 override, 검토 필요 상태를 운영 리포트와 함께 확인합니다.</p>
-            <a href={href("status/")}>View status</a>
-          </li>
-        </ul>
-      </section>
-      <section class="section-band">
-        <h2>Frameworks</h2>
-        <ul class="framework-list">
-          {frameworks.map((framework) => <li class="framework-item"><strong>{framework}</strong></li>)}
-        </ul>
-      </section>
-      <section class="section-band">
-        <h2>Status</h2>
-        <ProgressSummary {...totals} />
+      <section class="official-feature-preview" aria-label="추천 콘텐츠">
+        <h2>Dive into WWDC25</h2>
+        <div class="preview-card-row" aria-hidden="true">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </section>
     </div>
   </main>

@@ -6,48 +6,101 @@ interface NavItem {
   framework: string;
 }
 
+interface FrameworkItem {
+  name: string;
+  count?: number;
+}
+
+interface HeadingItem {
+  slug: string;
+  text: string;
+}
+
 interface Props {
   items: NavItem[];
+  frameworks?: FrameworkItem[];
   current?: string;
+  mode?: "technologies" | "framework";
+  currentFramework?: string;
+  headings?: HeadingItem[];
 }
 
-const { items, current = "" } = Astro.props;
+const {
+  items,
+  frameworks = [],
+  current = "",
+  mode = "technologies",
+  currentFramework = "",
+  headings = []
+} = Astro.props;
 const base = import.meta.env.BASE_URL;
 const href = (path: string) => `${base}${path.replace(/^\//, "")}`;
-const grouped = new Map<string, NavItem[]>();
-for (const item of items) {
-  const list = grouped.get(item.framework) ?? [];
-  list.push(item);
-  grouped.set(item.framework, list);
-}
+const officialDisplayNames: Record<string, string> = {
+  AccessoryLiveActivities: "Accessory Live Activities",
+  AccessoryNotifications: "Accessory Notifications",
+  AccessoryTransportExtension: "Accessory Transport Extension",
+  AccountDataTransfer: "Account Data Transfer",
+  AccountOrganizationalDataSharing: "Account & Organizational Data Sharing",
+  AddressBook: "Address Book",
+  AddressBookUI: "Address Book UI",
+  AdvancedCommerceAPI: "Advanced Commerce API"
+};
+const displayName = (value: string) => officialDisplayNames[value] ?? value;
+const frameworkName = currentFramework || items.find((item) => item.slug === current)?.framework || "Documentation";
+const frameworkDocs = items.filter((item) => item.framework === frameworkName);
+const technologyRows = frameworks.length
+  ? frameworks.map((framework) => ({ title: framework.name, count: framework.count }))
+  : Array.from(new Set(items.map((item) => item.framework))).sort().map((title) => ({ title }));
 ---
 
-<aside class="documentation-navigator" data-navigator>
+<aside class="documentation-navigator" data-navigator data-mode={mode}>
   <div class="navigator-title">
     <span class="navigator-icon" aria-hidden="true">
       <svg viewBox="0 0 20 20">
-        <path d="M3.5 3.5h5v13h-5a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1Zm8 0h5a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-5v-13Zm-1.5 0h1.5v13H10v-13Z" fill="currentColor" />
+        <path d="M3.2 3.5h5.3v13H3.2a.9.9 0 0 1-.9-.9V4.4a.9.9 0 0 1 .9-.9Zm8.3 0h5.3a.9.9 0 0 1 .9.9v11.2a.9.9 0 0 1-.9.9h-5.3v-13Zm-1.5 0h1.5v13H10v-13Z" fill="currentColor" />
       </svg>
     </span>
     <h2>Documentation</h2>
   </div>
   <div class="navigator-scroll">
     {
-      Array.from(grouped.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([framework, docs]) => (
-        <section class="navigator-group">
-          <h3 class="navigator-group-title">{framework}</h3>
-          <ul class="navigator-list">
-            {docs.slice(0, 120).map((doc) => (
-              <li data-filter-value={`${framework} ${doc.title} ${doc.sourcePath}`.toLowerCase()}>
-                <a class="navigator-link" href={href(`docs/${doc.slug}/`)} aria-current={current === doc.slug ? "page" : undefined}>
-                  <span class="navigator-stack" aria-hidden="true"><span></span></span>
+      mode === "framework" ? (
+        <>
+          <a class="navigator-back" href={href("docs/")}>All Technologies</a>
+          <h3 class="navigator-framework-title">{frameworkName}</h3>
+          <section class="navigator-group">
+            <h4 class="navigator-group-title">Essentials</h4>
+            <ul class="navigator-list">
+              {frameworkDocs.map((doc) => (
+                <li data-filter-value={`${frameworkName} ${doc.title} ${doc.sourcePath}`.toLowerCase()}>
+                  <a class="navigator-link" href={href(`docs/${doc.slug}/`)} aria-current={current === doc.slug ? "page" : undefined}>
+                    <span class="navigator-doc-icon" aria-hidden="true">C</span>
                   <span>{doc.title}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))
+                  </a>
+                  {current === doc.slug && headings.length ? (
+                    <ul class="navigator-sublist">
+                      {headings.slice(0, 8).map((heading) => (
+                        <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </section>
+        </>
+      ) : (
+        <ul class="navigator-list navigator-list-flat">
+          {technologyRows.slice(0, 220).map((row) => (
+            <li data-filter-value={`${row.title} ${displayName(row.title)}`.toLowerCase()}>
+              <a class="navigator-link" href={href("docs/")}>
+                <span class="navigator-stack" aria-hidden="true"><span></span></span>
+                <span>{displayName(row.title)}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
     }
   </div>
   <div class="navigator-filter">
