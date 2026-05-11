@@ -9,14 +9,39 @@ export async function translateBatch(input: TranslationBatchInput): Promise<Tran
   }
   const promptTemplate = await readText(resolveRoot("prompts/translate-segments.md"));
   const prompt = promptTemplate.replace("<INPUT_JSON>", JSON.stringify(input, null, 2));
-  const { stdout } = await execa("codex", ["exec", "--ephemeral", prompt], {
-    timeout: Number(process.env.CODEX_TIMEOUT_MS ?? 180_000),
-    reject: true
-  });
-  const output = extractJsonObject(stdout) as TranslationBatchOutput;
-  const errors = validateTranslationOutput(input, output);
-  if (errors.length) throw new Error(errors.join("\n"));
-  return output;
+  const attempts = Math.max(1, Number(process.env.CODEX_RETRIES ?? 2) + 1);
+  const timeout = Number(process.env.CODEX_TIMEOUT_MS ?? 600_000);
+  let lastError: unknown;
+
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const { stdout } = await execa(
+        "codex",
+        ["exec", "--ephemeral", "--output-schema", resolveRoot("schemas/translation-output.schema.json"), "-"],
+        {
+          input: prompt,
+          timeout,
+          reject: true
+        }
+      );
+      const output = extractJsonObject(stdout) as TranslationBatchOutput;
+      const errors = validateTranslationOutput(input, output);
+      if (errors.length) throw new Error(errors.join("\n"));
+      return output;
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) {
+        console.warn(`Codex translation attempt ${attempt}/${attempts} failed; retrying: ${errorMessage(error)}`);
+      }
+    }
+  }
+
+  throw new Error(errorMessage(lastError));
+}
+
+function errorMessage(error: unknown): string {
+  if (error instanceof Error) return error.message;
+  return String(error);
 }
 
 function mockTranslate(input: TranslationBatchInput): TranslationBatchOutput {
@@ -37,4 +62,3 @@ function mockKorean(source: string): string {
     .replace(/^A /i, "")
     .replace(/^An /i, "");
 }
-

@@ -11,9 +11,19 @@ program
   .option("--shard-total <total>")
   .option("--limit-files <count>")
   .option("--changed-only")
+  .option("--batch-segments <count>")
+  .option("--batch-chars <count>")
   .option("--force", "retranslate existing machine-translated segments")
   .parse();
-const options = program.opts<{ shard?: string; shardTotal?: string; limitFiles?: string; changedOnly?: boolean; force?: boolean }>();
+const options = program.opts<{
+  shard?: string;
+  shardTotal?: string;
+  limitFiles?: string;
+  changedOnly?: boolean;
+  batchSegments?: string;
+  batchChars?: string;
+  force?: boolean;
+}>();
 
 async function main(): Promise<void> {
   const translationConfig = await loadTranslationConfig();
@@ -52,7 +62,9 @@ async function main(): Promise<void> {
     }
   }
 
-  const batches = buildBatches(candidates, translationConfig.translation.batchSegments, translationConfig.translation.batchChars, await loadGlossary());
+  const batchSegments = Number(options.batchSegments ?? process.env.BATCH_SEGMENTS ?? translationConfig.translation.batchSegments);
+  const batchChars = Number(options.batchChars ?? process.env.BATCH_CHARS ?? translationConfig.translation.batchChars);
+  const batches = buildBatches(candidates, batchSegments, batchChars, await loadGlossary());
   const queue: QueueFile = {
     generatedAt: new Date().toISOString(),
     shard: options.shard && options.shardTotal ? { index: Number(options.shard), total: Number(options.shardTotal) } : undefined,

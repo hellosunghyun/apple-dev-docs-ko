@@ -13,8 +13,9 @@ program
   .option("--results <file>", "incremental result file", "tmp/results/latest.json")
   .option("--progress <file>", "incremental progress file", "tmp/progress/latest.json")
   .option("--batch-dir <dir>", "per-batch output directory", "tmp/results/batches")
+  .option("--max-failures <count>", "stop scheduling more batches after this many failures")
   .parse();
-const options = program.opts<{ queue: string; concurrency?: string; results: string; progress: string; batchDir: string }>();
+const options = program.opts<{ queue: string; concurrency?: string; results: string; progress: string; batchDir: string; maxFailures?: string }>();
 
 type BatchState = {
   index: number;
@@ -33,6 +34,7 @@ async function main(): Promise<void> {
   const resultsPath = resolveRoot(options.results);
   const progressPath = resolveRoot(options.progress);
   const batchDir = resolveRoot(options.batchDir);
+  const maxFailures = Number(options.maxFailures ?? process.env.MAX_TRANSLATION_FAILURES ?? 8);
   const outputs: Array<TranslationBatchOutput | undefined> = [];
   const failures: Array<{ batchIndex: number; error: string }> = [];
   const batchStates: BatchState[] = queueFile.batches.map((batch, index) => ({
@@ -47,16 +49,18 @@ async function main(): Promise<void> {
   let completed = 0;
   let failed = 0;
   let flushChain = Promise.resolve();
+  let abortReason = "";
 
   await appendSummaryHeader(queueFile, totalBatches, totalSegments, concurrency);
   notice(
     "Shard queue",
-    `${shardLabel(queueFile)}: batches=${totalBatches}, segments=${totalSegments}, concurrency=${concurrency}`
+    `${shardLabel(queueFile)}: batches=${totalBatches}, segments=${totalSegments}, concurrency=${concurrency}, maxFailures=${maxFailures}`
   );
   await flushState("initialized");
 
   queueFile.batches.forEach((batch, batchIndex) => {
     workerQueue.add(async () => {
+      if (abortReason) return;
       const batchState = batchStates[batchIndex];
       const batchStartedAt = Date.now();
       batchState.status = "in_progress";
@@ -97,6 +101,12 @@ async function main(): Promise<void> {
         });
         console.error(`Batch ${batchIndex + 1}/${totalBatches} failed: ${message}`);
         logProgress(queueFile, "batch-failed", batchIndex, totalBatches, completed, failed, started, batchState.durationMs);
+        if (maxFailures > 0 && failed >= maxFailures && !abortReason) {
+          abortReason = `Stopped after ${failed} failed batches`;
+          workerQueue.clear();
+          console.error(abortReason);
+          notice("Shard stopped", `${shardLabel(queueFile)}: ${abortReason}`);
+        }
       }
       await queueFlush(`batch-${batchIndex}-${batchState.status}`);
       await appendSummaryRow(queueFile, totalBatches, completed, failed, started);
@@ -108,7 +118,7 @@ async function main(): Promise<void> {
   await flushState("finished");
   await appendSummaryRow(queueFile, totalBatches, completed, failed, started, true);
   if (failures.length) {
-    console.error(`Translation failures: ${failures.length}`);
+    console.error(`Translation failures: ${failures.length}${abortReason ? ` (${abortReason})` : ""}`);
     process.exitCode = 1;
   } else {
     console.log(`Translated batches: ${outputs.length}`);
@@ -132,6 +142,7 @@ async function main(): Promise<void> {
       reason,
       queue: options.queue,
       shard: queueFile.shard,
+      abortReason,
       totals: {
         batches: totalBatches,
         segments: totalSegments,
@@ -148,6 +159,7 @@ async function main(): Promise<void> {
       generatedAt: startedAt,
       updatedAt,
       queue: options.queue,
+      abortReason,
       outputs,
       failures,
       progress

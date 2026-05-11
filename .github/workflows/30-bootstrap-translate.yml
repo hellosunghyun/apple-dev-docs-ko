@@ -12,6 +12,26 @@ on:
       llm_concurrency:
         required: true
         default: "3"
+      batch_segments:
+        required: false
+        default: ""
+        description: Optional segments per LLM batch. Leave blank to use config.
+      batch_chars:
+        required: false
+        default: ""
+        description: Optional character budget per LLM batch. Leave blank to use config.
+      codex_timeout_seconds:
+        required: true
+        default: "600"
+        description: Timeout for each Codex translation attempt.
+      codex_retries:
+        required: true
+        default: "2"
+        description: Retry count after a failed Codex translation attempt.
+      max_translation_failures:
+        required: true
+        default: "8"
+        description: Stop a shard after this many failed batches.
       limit_files:
         required: false
         default: ""
@@ -141,10 +161,18 @@ jobs:
       - name: Build shard queue
         env:
           LIMIT_FILES: ${{ inputs.limit_files }}
+          BATCH_SEGMENTS: ${{ inputs.batch_segments }}
+          BATCH_CHARS: ${{ inputs.batch_chars }}
         run: |
           args=(--shard "${{ matrix.shard_index }}" --shard-total "${{ inputs.shard_total }}")
           if [ -n "$LIMIT_FILES" ]; then
             args+=(--limit-files "$LIMIT_FILES")
+          fi
+          if [ -n "$BATCH_SEGMENTS" ]; then
+            args+=(--batch-segments "$BATCH_SEGMENTS")
+          fi
+          if [ -n "$BATCH_CHARS" ]; then
+            args+=(--batch-chars "$BATCH_CHARS")
           fi
           pnpm tsx scripts/translate/build-queue.ts "${args[@]}"
       - name: Translate shard with incremental progress
@@ -154,10 +182,14 @@ jobs:
           LLM_CONCURRENCY: ${{ inputs.llm_concurrency }}
           CHECKPOINT_RESULTS: ${{ inputs.checkpoint_results }}
           CHECKPOINT_INTERVAL_SECONDS: ${{ inputs.checkpoint_interval_seconds }}
+          CODEX_TIMEOUT_SECONDS: ${{ inputs.codex_timeout_seconds }}
+          CODEX_RETRIES: ${{ inputs.codex_retries }}
+          MAX_TRANSLATION_FAILURES: ${{ inputs.max_translation_failures }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PROGRESS_SUMMARY_INTERVAL_BATCHES: "5"
         run: |
           set -euo pipefail
+          export CODEX_TIMEOUT_MS="$((CODEX_TIMEOUT_SECONDS * 1000))"
 
           queue_path="state/queue/shard-${SHARD_ID}.json"
           checkpoint_branch="checkpoint/${GITHUB_RUN_ID}/shard-${SHARD_ID}"
@@ -222,7 +254,8 @@ jobs:
             --queue "$queue_path" \
             --results "tmp/results/latest.json" \
             --progress "tmp/progress/latest.json" \
-            --batch-dir "tmp/results/batches"
+            --batch-dir "tmp/results/batches" \
+            --max-failures "$MAX_TRANSLATION_FAILURES"
       - name: Pack shard artifact
         if: always()
         env:
