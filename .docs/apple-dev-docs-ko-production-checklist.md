@@ -21,6 +21,35 @@
 - [ ] public Pages 결과물에는 Apple 로고, Apple 공식 favicon, 공식으로 오해될 표현을 넣지 않는다.
 - [ ] 원문 문장 노출은 기본 OFF이며, 법적/정책 리스크가 커지면 공식 문서 링크만 제공하는 fallback을 유지한다.
 
+### 0.1 현재 구현 진행 로그
+
+- [x] repo-local `AGENTS.md` 작성
+  - 증거: commit `1d36b84 feat: 저장소 에이전트 규칙 추가`
+  - 포함: `feat: 한국어 설명` 커밋 규칙, DB 금지, 브라우저 검증 규칙, secret 취급 규칙
+- [x] 기존 기획/체크리스트의 `translation DB` 표현을 파일 기반 번역 메모리 기준으로 정리
+  - 증거: commit `c8d10d1 feat: 제작 문서 파일 메모리 기준 정리`
+- [x] Node.js/TypeScript/Astro 기반 구현 scaffold 작성
+  - 증거: commit `1e3ca80 feat: 파일 기반 번역 자동화와 문서 사이트 구현`
+  - 포함: `config`, `schemas`, `prompts`, `scripts`, `translation-memory`, `translations`, `site`, `.github/workflows`
+- [x] 샘플 Apple docs source 기반 end-to-end 파이프라인 검증
+  - 증거: `pnpm run sample` 성공
+  - 생성: manifest, shard plan, segments, queue, mock translation result, file-backed translation memory, Korean Markdown, source maps, search index, status JSON
+- [x] 자동 검증 통과
+  - 증거: `pnpm run typecheck`, `pnpm run test`, `pnpm run validate`, `pnpm run site:build` 성공
+- [x] 브라우저 검증 통과
+  - 증거: Browser plugin으로 `http://127.0.0.1:4321/` 및 문서/검색 페이지 검증
+  - 확인: 문서 상세 로드, source view toggle, inline original 표시, 검색 결과 필터, desktop viewport, mobile viewport, console error 없음
+- [x] production upstream sync가 sample cache 이후에도 재초기화되도록 보강
+  - 증거: commit `824bfbd feat: 업스트림 동기화 재초기화 보강`
+
+운영 환경에서 남은 실행 항목:
+
+- [ ] 실제 `Averyy/apple-dev-docs` 전체 upstream sync 실행
+- [ ] self-hosted runner에서 `CODEX_AUTH_JSON` 등록 후 OAuth healthcheck 실행
+- [ ] 실제 Codex 번역으로 100개 문서 POC 실행
+- [ ] 전체 shard bootstrap 실행
+- [ ] public Pages repo와 `PAGES_DEPLOY_TOKEN` 연결 후 실제 배포 실행
+
 작업 증거 형식:
 
 ```md
