@@ -2,20 +2,71 @@ name: Track Upstream Diff Translation
 
 on:
   workflow_dispatch:
+    inputs:
+      shard_total:
+        required: true
+        default: "256"
+      resume_run_id:
+        required: false
+        default: ""
+        description: Optional previous run id. Restores completed shard batch outputs from checkpoint branches.
+      max_parallel:
+        required: true
+        default: "32"
+      llm_concurrency:
+        required: true
+        default: "3"
+      batch_segments:
+        required: false
+        default: "60"
+        description: Sentence segments per LLM batch. Segments are never split.
+      batch_chars:
+        required: false
+        default: "16000"
+        description: Character budget per LLM batch. Segments are never split.
+      codex_timeout_seconds:
+        required: true
+        default: "900"
+        description: Timeout for each Codex translation attempt.
+      codex_retries:
+        required: true
+        default: "1"
+        description: Retry count after a failed Codex translation attempt.
+      max_translation_failures:
+        required: true
+        default: "8"
+        description: Stop a shard after this many failed batches.
+      checkpoint_results:
+        required: true
+        default: "true"
+        description: Push each shard to a checkpoint branch while translation is running.
+      checkpoint_interval_seconds:
+        required: true
+        default: "300"
+        description: Seconds between in-progress checkpoint pushes per shard.
+      commit_results:
+        required: true
+        default: "true"
+        description: Commit and push aggregate translation output.
   schedule:
     - cron: "0 */6 * * *"
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
-  group: track-upstream-diff
+  group: track-upstream-diff-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  diff-translate:
+  prepare:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 90
+    outputs:
+      cache_key: ${{ steps.cache-key.outputs.value }}
+      changed_count: ${{ steps.plan.outputs.changed_count }}
+      shards: ${{ steps.plan.outputs.shards }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -25,22 +76,420 @@ jobs:
           node-version: 22
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
-      - uses: ./.github/actions/setup-codex-auth
+      - id: cache-key
+        run: echo "value=apple-dev-docs-diff-source-${{ runner.os }}-${{ github.run_id }}" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
         with:
-          codex-auth-json: ${{ secrets.CODEX_AUTH_JSON }}
+          path: source-cache/apple-dev-docs
+          key: ${{ steps.cache-key.outputs.value }}
+          restore-keys: |
+            apple-dev-docs-diff-source-${{ runner.os }}-
+            apple-dev-docs-source-${{ runner.os }}-
       - run: pnpm run upstream:sync
       - run: pnpm tsx scripts/upstream/diff-files.ts
       - run: pnpm run manifest
-      - run: pnpm run segment
-      - run: pnpm run queue
-      - run: LLM_CONCURRENCY=3 pnpm run translate
-      - run: pnpm tsx scripts/translate/apply-results.ts
-      - run: pnpm run render
-      - run: pnpm run site:build
+      - id: plan
+        env:
+          SHARD_TOTAL: ${{ inputs.shard_total || '256' }}
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+
+          const shardTotal = Number(process.env.SHARD_TOTAL || '256');
+          if (!Number.isInteger(shardTotal) || shardTotal < 1 || shardTotal > 256) {
+            console.error('shard_total must be an integer from 1 to 256');
+            process.exit(1);
+          }
+
+          const manifest = JSON.parse(fs.readFileSync('state/manifest.json', 'utf8'));
+          const changedState = JSON.parse(fs.readFileSync('state/changed-files.json', 'utf8'));
+          const sourceRoot = 'documentation';
+          const rootPrefix = `${sourceRoot}/`;
+
+          function sourcePathFromChange(change) {
+            const status = String(change.status || '').toUpperCase();
+            if (status.startsWith('D')) return undefined;
+            const paths = Array.isArray(change.paths) ? change.paths : [];
+            const rawPath = status.startsWith('R') || status.startsWith('C') ? paths.at(-1) : paths[0];
+            if (!rawPath) return undefined;
+            const normalized = String(rawPath).replace(/\\/g, '/');
+            const rootIndex = normalized.indexOf(rootPrefix);
+            const sourcePath = rootIndex >= 0 ? normalized.slice(rootIndex) : normalized;
+            return sourcePath.startsWith(rootPrefix) && sourcePath.toLowerCase().endsWith('.md') ? sourcePath : undefined;
+          }
+
+          const changed = new Set(changedState.changes.map(sourcePathFromChange).filter(Boolean));
+          const shardCounts = new Map();
+          let matchingFiles = 0;
+          for (const [index, file] of manifest.files.entries()) {
+            if (!changed.has(file.sourcePath)) continue;
+            matchingFiles += 1;
+            const shardIndex = index % shardTotal;
+            shardCounts.set(shardIndex, (shardCounts.get(shardIndex) || 0) + 1);
+          }
+
+          const shards = Array.from(shardCounts.keys()).sort((a, b) => a - b);
+          const plannedShards = shards.length ? shards : [0];
+          const plan = {
+            generatedAt: new Date().toISOString(),
+            shardTotal,
+            changedMarkdownFiles: matchingFiles,
+            shards: shards.map((shardIndex) => ({ shardIndex, files: shardCounts.get(shardIndex) }))
+          };
+
+          fs.writeFileSync('state/diff-shard-plan.json', `${JSON.stringify(plan, null, 2)}\n`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed_count=${matchingFiles}\n`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `shards=${JSON.stringify(plannedShards)}\n`);
+          console.log(`Changed markdown files: ${matchingFiles}; active shards: ${shards.length}/${shardTotal}`);
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: diff-manifest-state
+          path: |
+            state/upstream.json
+            state/changed-files.json
+            state/manifest.json
+            state/manifest-summary.json
+            state/shard-plan.json
+            state/diff-shard-plan.json
+            reports/latest.md
+          retention-days: 3
+
+  translate:
+    needs: prepare
+    if: needs.prepare.outputs.changed_count != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(inputs.max_parallel || '32') }}
+      matrix:
+        shard_index: ${{ fromJSON(needs.prepare.outputs.shards) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/cache@v4
+        id: source-cache
+        with:
+          path: source-cache/apple-dev-docs
+          key: ${{ needs.prepare.outputs.cache_key }}
+      - name: Require prepared source cache
+        if: steps.source-cache.outputs.cache-hit != 'true'
+        run: |
+          test -d source-cache/apple-dev-docs/.git || {
+            echo "::error::Prepared source cache was not restored";
+            exit 1;
+          }
+      - uses: actions/download-artifact@v4
+        with:
+          name: diff-manifest-state
+          path: .
+      - uses: ./.github/actions/setup-codex-auth
+        with:
+          codex-auth-json: ${{ secrets.CODEX_AUTH_JSON }}
+      - id: shard
+        run: |
+          printf 'id=%04d\n' '${{ matrix.shard_index }}' >> "$GITHUB_OUTPUT"
+      - name: Segment changed shard
+        run: |
+          pnpm tsx scripts/segmenter/split-segments.ts \
+            --changed-only \
+            --shard "${{ matrix.shard_index }}" \
+            --shard-total "${{ inputs.shard_total || '256' }}"
+      - name: Build changed shard queue
+        env:
+          BATCH_SEGMENTS: ${{ inputs.batch_segments || '60' }}
+          BATCH_CHARS: ${{ inputs.batch_chars || '16000' }}
+        run: |
+          pnpm tsx scripts/translate/build-queue.ts \
+            --changed-only \
+            --shard "${{ matrix.shard_index }}" \
+            --shard-total "${{ inputs.shard_total || '256' }}" \
+            --batch-segments "$BATCH_SEGMENTS" \
+            --batch-chars "$BATCH_CHARS"
+      - name: Restore shard checkpoint
+        if: inputs.resume_run_id != ''
+        env:
+          SHARD_ID: ${{ steps.shard.outputs.id }}
+          RESUME_RUN_ID: ${{ inputs.resume_run_id }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          resume_branch="checkpoint/${RESUME_RUN_ID}/shard-${SHARD_ID}"
+          resume_tmp="${RUNNER_TEMP}/resume-shard-${SHARD_ID}"
+          resume_dir="${resume_tmp}/checkpoints/run-${RESUME_RUN_ID}/translation-shard-${SHARD_ID}"
+
+          rm -rf "$resume_tmp"
+          git init "$resume_tmp" >/dev/null
+          git -C "$resume_tmp" remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if ! git -C "$resume_tmp" fetch --depth=1 origin "$resume_branch" >/dev/null 2>&1; then
+            echo "No checkpoint branch found for ${resume_branch}; starting shard from scratch."
+            exit 0
+          fi
+          git -C "$resume_tmp" checkout --detach FETCH_HEAD >/dev/null 2>&1
+          mkdir -p tmp/results/batches tmp/progress
+          if [ -d "${resume_dir}/results/batches" ]; then
+            find "${resume_dir}/results/batches" -maxdepth 1 -type f -name 'batch-*.json' ! -name '*.failure.json' -exec cp {} tmp/results/batches/ \;
+          fi
+          if [ -f "${resume_dir}/results/latest.json" ]; then
+            cp "${resume_dir}/results/latest.json" tmp/results/resumed-latest.json
+          fi
+          if [ -f "${resume_dir}/progress/latest.json" ]; then
+            cp "${resume_dir}/progress/latest.json" tmp/progress/resumed-latest.json
+          fi
+          restored="$(find tmp/results/batches -name 'batch-*.json' ! -name '*.failure.json' | wc -l | tr -d ' ')"
+          echo "Restored ${restored} completed batch outputs from ${resume_branch}."
+      - name: Translate changed shard with incremental progress
+        env:
+          SHARD_ID: ${{ steps.shard.outputs.id }}
+          LLM_CONCURRENCY: ${{ inputs.llm_concurrency || '3' }}
+          CHECKPOINT_RESULTS: ${{ inputs.checkpoint_results || 'true' }}
+          CHECKPOINT_INTERVAL_SECONDS: ${{ inputs.checkpoint_interval_seconds || '300' }}
+          CODEX_TIMEOUT_SECONDS: ${{ inputs.codex_timeout_seconds || '900' }}
+          CODEX_RETRIES: ${{ inputs.codex_retries || '1' }}
+          MAX_TRANSLATION_FAILURES: ${{ inputs.max_translation_failures || '8' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROGRESS_SUMMARY_INTERVAL_BATCHES: "5"
+        run: |
+          set -euo pipefail
+          export CODEX_TIMEOUT_MS="$((CODEX_TIMEOUT_SECONDS * 1000))"
+
+          queue_path="state/queue/shard-${SHARD_ID}.json"
+          checkpoint_branch="checkpoint/${GITHUB_RUN_ID}/shard-${SHARD_ID}"
+          checkpoint_dir="checkpoints/run-${GITHUB_RUN_ID}/translation-shard-${SHARD_ID}"
+          checkpoint_source="${RUNNER_TEMP}/translation-shard-${SHARD_ID}"
+          checkpoint_log="${RUNNER_TEMP}/checkpoint-${SHARD_ID}.log"
+
+          collect_checkpoint_files() {
+            rm -rf "$checkpoint_source"
+            mkdir -p "$checkpoint_source/results" "$checkpoint_source/progress"
+            cp "$queue_path" "$checkpoint_source/queue.json"
+            if [ -d tmp/results ]; then
+              cp -R tmp/results/. "$checkpoint_source/results/"
+            fi
+            if [ -d tmp/progress ]; then
+              cp -R tmp/progress/. "$checkpoint_source/progress/"
+            fi
+          }
+
+          push_checkpoint() {
+            if [ "$CHECKPOINT_RESULTS" != "true" ]; then
+              return 0
+            fi
+            collect_checkpoint_files
+            CHECKPOINT_BRANCH="$checkpoint_branch" \
+              CHECKPOINT_DIR="$checkpoint_dir" \
+              CHECKPOINT_SOURCE_DIR="$checkpoint_source" \
+              CHECKPOINT_MESSAGE="feat: 변경 번역 샤드 ${SHARD_ID} 진행 체크포인트" \
+              GITHUB_TOKEN="$GITHUB_TOKEN" \
+              GITHUB_REPOSITORY="$GITHUB_REPOSITORY" \
+              scripts/ops/push-shard-checkpoint.sh >> "$checkpoint_log" 2>&1 || true
+          }
+
+          checkpoint_loop() {
+            while true; do
+              sleep "$CHECKPOINT_INTERVAL_SECONDS"
+              push_checkpoint
+            done
+          }
+
+          cleanup() {
+            status=$?
+            push_checkpoint
+            if [ -n "${checkpoint_pid:-}" ]; then
+              kill "$checkpoint_pid" >/dev/null 2>&1 || true
+              wait "$checkpoint_pid" >/dev/null 2>&1 || true
+            fi
+            if [ -f "$checkpoint_log" ]; then
+              tail -n 20 "$checkpoint_log" || true
+            fi
+            exit "$status"
+          }
+          trap cleanup EXIT
+          trap 'exit 130' INT TERM
+
+          if [ "$CHECKPOINT_RESULTS" = "true" ]; then
+            checkpoint_loop &
+            checkpoint_pid=$!
+          fi
+
+          pnpm tsx scripts/translate/run-workers.ts \
+            --queue "$queue_path" \
+            --concurrency "$LLM_CONCURRENCY" \
+            --results "tmp/results/latest.json" \
+            --progress "tmp/progress/latest.json" \
+            --batch-dir "tmp/results/batches" \
+            --max-failures "$MAX_TRANSLATION_FAILURES"
+      - name: Pack shard artifact
+        if: always()
+        env:
+          SHARD_ID: ${{ steps.shard.outputs.id }}
+        run: |
+          artifact_dir="tmp/artifacts/translation-shard-${SHARD_ID}"
+          queue_path="state/queue/shard-${SHARD_ID}.json"
+          mkdir -p "$artifact_dir/translation-memory/files" "$artifact_dir/results" "$artifact_dir/progress"
+          printf '{"shard":"%s","packedAt":"%s"}\n' "$SHARD_ID" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > "$artifact_dir/metadata.json"
+          if [ -f "$queue_path" ]; then
+            cp "$queue_path" "$artifact_dir/queue.json"
+          fi
+          if [ -d tmp/results ]; then
+            cp -R tmp/results/. "$artifact_dir/results/"
+          fi
+          if [ -d tmp/progress ]; then
+            cp -R tmp/progress/. "$artifact_dir/progress/"
+          fi
+          if [ -f tmp/results/latest.json ]; then
+            cp tmp/results/latest.json "$artifact_dir/results.json"
+          fi
+          if [ ! -f "$queue_path" ]; then
+            exit 0
+          fi
+          QUEUE_PATH="$queue_path" ARTIFACT_DIR="$artifact_dir" node <<'NODE'
+          const crypto = require('node:crypto');
+          const fs = require('node:fs');
+          const path = require('node:path');
+
+          function sha256(value) {
+            return crypto.createHash('sha256').update(value).digest('hex');
+          }
+
+          function pathKey(sourcePath) {
+            const maxKeyLength = 160;
+            const normalized = sourcePath.replace(/\\/g, '/');
+            const key = normalized
+              .replace(/^\/+/, '')
+              .replace(/\.md$/i, '')
+              .replace(/[^a-zA-Z0-9]+/g, '_')
+              .replace(/^_+|_+$/g, '')
+              .toLowerCase() || sha256(normalized).slice(0, 16);
+
+            if (key.length <= maxKeyLength) return key;
+
+            const digest = sha256(normalized).slice(0, 16);
+            const prefixLength = maxKeyLength - digest.length - 1;
+            const prefix = key.slice(0, prefixLength).replace(/_+$/g, '') || key.slice(0, prefixLength);
+            return `${prefix}_${digest}`;
+          }
+
+          const queue = JSON.parse(fs.readFileSync(process.env.QUEUE_PATH, 'utf8'));
+          for (const sourcePath of queue.sourcePaths) {
+            const key = pathKey(sourcePath);
+            const source = path.join('translation-memory', 'files', `${key}.json`);
+            if (!fs.existsSync(source)) continue;
+            const target = path.join(process.env.ARTIFACT_DIR, source);
+            fs.mkdirSync(path.dirname(target), { recursive: true });
+            fs.copyFileSync(source, target);
+          }
+          NODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: translation-shard-${{ steps.shard.outputs.id }}
+          path: tmp/artifacts/translation-shard-${{ steps.shard.outputs.id }}/
+          retention-days: 3
+          if-no-files-found: error
+      - name: Push shard checkpoint
+        if: always() && inputs.checkpoint_results != 'false'
+        env:
+          SHARD_ID: ${{ steps.shard.outputs.id }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          checkpoint_branch="checkpoint/${GITHUB_RUN_ID}/shard-${SHARD_ID}"
+          checkpoint_dir="checkpoints/run-${GITHUB_RUN_ID}/translation-shard-${SHARD_ID}"
+          checkpoint_tmp="${RUNNER_TEMP}/translation-shard-${SHARD_ID}"
+
+          rm -rf "$checkpoint_tmp"
+          mkdir -p "$checkpoint_tmp"
+          if [ -d "tmp/artifacts/translation-shard-${SHARD_ID}" ]; then
+            cp -R "tmp/artifacts/translation-shard-${SHARD_ID}/." "$checkpoint_tmp/"
+          fi
+
+          CHECKPOINT_BRANCH="$checkpoint_branch" \
+            CHECKPOINT_DIR="$checkpoint_dir" \
+            CHECKPOINT_SOURCE_DIR="$checkpoint_tmp" \
+            CHECKPOINT_MESSAGE="feat: 변경 번역 샤드 ${SHARD_ID} 체크포인트" \
+            GITHUB_TOKEN="$GITHUB_TOKEN" \
+            GITHUB_REPOSITORY="$GITHUB_REPOSITORY" \
+            scripts/ops/push-shard-checkpoint.sh
+
+  aggregate:
+    needs:
+      - prepare
+      - translate
+    if: always() && needs.prepare.outputs.changed_count != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Fail after failed translate shards
+        if: needs.translate.result == 'failure' || needs.translate.result == 'cancelled'
+        run: |
+          echo "::error::One or more translate shards failed or were cancelled."
+          exit 1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/cache@v4
+        id: source-cache
+        with:
+          path: source-cache/apple-dev-docs
+          key: ${{ needs.prepare.outputs.cache_key }}
+      - name: Require prepared source cache
+        if: steps.source-cache.outputs.cache-hit != 'true'
+        run: |
+          test -d source-cache/apple-dev-docs/.git || {
+            echo "::error::Prepared source cache was not restored";
+            exit 1;
+          }
+      - uses: actions/download-artifact@v4
+        with:
+          name: diff-manifest-state
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: translation-shard-*
+          path: tmp/translation-shards
+      - name: Detect paused shards
+        id: paused
+        run: |
+          paused_count="$(find tmp/translation-shards -path '*/progress/pause.json' -type f | wc -l | tr -d ' ')"
+          echo "count=${paused_count}" >> "$GITHUB_OUTPUT"
+          if [ "$paused_count" != "0" ]; then
+            echo "paused=true" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Translation paused::${paused_count} shard(s) paused after Codex usage limits. Checkpoints and artifacts were saved; aggregate is skipped."
+            find tmp/translation-shards -path '*/progress/pause.json' -type f -print | sort | head -n 20
+          else
+            echo "paused=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Apply shard results
+        if: steps.paused.outputs.paused != 'true'
+        run: |
+          mkdir -p translation-memory/files
+          find tmp/translation-shards -path '*/translation-memory/files/*.json' -print0 | while IFS= read -r -d '' file; do
+            cp "$file" "translation-memory/files/$(basename "$file")"
+          done
+
+          find tmp/translation-shards -mindepth 1 -maxdepth 1 -type d -name 'translation-shard-*' | sort | while read -r shard_dir; do
+            pnpm tsx scripts/translate/apply-results.ts --queue "$shard_dir/queue.json" --results "$shard_dir/results.json"
+          done
+      - name: Render site content
+        if: steps.paused.outputs.paused != 'true'
+        run: |
+          pnpm run render
+          pnpm run site:build
       - run: pnpm run report
+        if: steps.paused.outputs.paused != 'true'
       - run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
           git add state translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
-          git commit -m "feat: 업스트림 변경 번역 갱신" || echo "No changes"
+          git commit -m "feat: 업스트림 변경 병렬 번역 갱신" || echo "No changes"
           git push
+        if: steps.paused.outputs.paused != 'true' && inputs.commit_results != 'false'

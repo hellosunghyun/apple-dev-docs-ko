@@ -1,18 +1,26 @@
 import { Command } from "commander";
 import { loadSourceConfig } from "../lib/config.js";
+import { filterChangedManifestFiles } from "../lib/changed-files.js";
 import { createMemoryFromParsed, mergeMemory, readMemory, writeMemory } from "../lib/memory.js";
 import { readJson, readText, resolveRoot, writeJson } from "../lib/fs.js";
 import { parseMarkdownDocument } from "../lib/markdown.js";
 import type { Manifest, ManifestFile, Segment } from "../lib/types.js";
 
 const program = new Command();
-program.option("--file <sourcePath>").option("--limit-files <count>").option("--shard <index>").option("--shard-total <total>").parse();
-const options = program.opts<{ file?: string; limitFiles?: string; shard?: string; shardTotal?: string }>();
+program
+  .option("--file <sourcePath>")
+  .option("--limit-files <count>")
+  .option("--shard <index>")
+  .option("--shard-total <total>")
+  .option("--changed-only")
+  .parse();
+const options = program.opts<{ file?: string; limitFiles?: string; shard?: string; shardTotal?: string; changedOnly?: boolean }>();
 
 async function main(): Promise<void> {
   const sourceConfig = await loadSourceConfig();
   const manifest = await readJson<Manifest>(resolveRoot("state/manifest.json"));
   let files = options.file ? manifest.files.filter((file) => file.sourcePath === options.file) : manifest.files;
+  if (options.changedOnly) files = await filterChangedManifestFiles(files);
   if (options.limitFiles) files = files.slice(0, Number(options.limitFiles));
   if (options.shard && options.shardTotal) {
     const index = Number(options.shard);

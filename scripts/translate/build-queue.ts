@@ -2,6 +2,7 @@ import { appendFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { Command } from "commander";
 import { loadGlossary, loadTranslationConfig } from "../lib/config.js";
+import { filterChangedSourcePaths } from "../lib/changed-files.js";
 import { ensureDir, readJson, resolveRoot, writeJson } from "../lib/fs.js";
 import { readOverride } from "../lib/overrides.js";
 import { applyOverride, readMemory, segmentNeedsTranslation } from "../lib/memory.js";
@@ -31,6 +32,7 @@ async function main(): Promise<void> {
   const translationConfig = await loadTranslationConfig();
   const manifest = await readJson<Manifest>(resolveRoot("state/manifest.json"));
   let sourcePaths = manifest.files.map((file) => file.sourcePath);
+  if (options.changedOnly) sourcePaths = await filterChangedSourcePaths(sourcePaths);
   if (options.limitFiles) sourcePaths = sourcePaths.slice(0, Number(options.limitFiles));
   if (options.shard && options.shardTotal) {
     const index = Number(options.shard);
