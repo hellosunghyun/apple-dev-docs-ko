@@ -1,0 +1,310 @@
+{
+  "batchIndex": 29,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:38.739Z",
+  "durationMs": 18071,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:coordinate-updates-to-the-view-and-layer-hierarchy:0021:0001",
+        "ko": "`LayerHierarchyHostingTransactionCoordinator`는 뷰와 레이어에 대한 업데이트 정보를 전달하지 않습니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:coordinate-updates-to-the-view-and-layer-hierarchy:0021:0002",
+        "ko": "브라우저 앱과 익스텐션 프로세스 간에 뷰와 레이어 변경 컨텍스트를 트랜잭션 코디네이터와 함께 XPC 통신 채널로 전송합니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:coordinate-updates-to-the-view-and-layer-hierarchy:0022:0001",
+        "ko": "트랜잭션 코디네이터의 수명은 [`commit()`](layerhierarchyhostingtransactioncoordinator/commit().md) 호출 시점까지 초기화 후 가능한 한 짧게 유지하여 UI가 응답하지 않는 상태가 되는 것을 방지해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:coordinate-updates-to-the-view-and-layer-hierarchy:0022:0002",
+        "ko": "시스템은 짧은 간격 내에 `commit()`을 호출하기를 기대하며, 이 기간을 초과하면 트랜잭션 조정을 중단합니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:coordinate-updates-to-the-view-and-layer-hierarchy:0022:0003",
+        "ko": "브라우저 앱 사용자는 이를 앱의 사용자 인터페이스에 깜빡임이나 애니메이션 일관성 저하로 체감합니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:heading:dispose-of-views-with-hosted-layers:0023:0001",
+        "ko": "호스팅된 레이어가 있는 뷰 정리"
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:dispose-of-views-with-hosted-layers:0024:0001",
+        "ko": "`LayerHierarchyHostingView`에서 렌더링되는 레이어가 더 이상 필요하지 않으면, 익스텐션의 레이어 계층에서 [`invalidate()`](layerhierarchy/invalidate().md) 메서드를 호출합니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:dispose-of-views-with-hosted-layers:0024:0002",
+        "ko": "브라우저에 뷰를 superview에서 제거하라고 알리는 XPC 메시지를 전송합니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:dispose-of-views-with-hosted-layers:0024:0003",
+        "ko": "`LayerHierarchy`를 무효화하면 해당 계층이나 그 호스팅 뷰를 더 이상 사용할 수 없습니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:heading:see-also:0025:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "다른 프로세스의 뷰에 렌더링된 레이어에 대한 참조를 보유하는 객체입니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "다른 프로세스에서 관리하는 레이어 계층을 호스팅하는 뷰입니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "서로 다른 프로세스의 뷰와 레이어 업데이트를 동기화하는 클래스입니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserEngineKit/hosting-browser-view-layers-in-the-rendering-extension.md",
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "앱이 프로세스 간에 공유하는 레이어 계층에 대한 참조입니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserKit/bebrowserdatahistoryvisit/redirectdestinationdateofvisit.md",
+        "id": "seg:paragraph:redirectdestinationdateofvisit:0002:0001",
+        "ko": "리디렉션 대상 방문 날짜입니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserKit/bebrowserdatahistoryvisit/redirectdestinationdateofvisit.md",
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/BrowserKit/bebrowserdatahistoryvisit/redirectdestinationdateofvisit.md",
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "방문이 리디렉션되는 URL입니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserKit/bebrowserdatahistoryvisit/redirectdestinationdateofvisit.md",
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "리디렉션 원본 방문 날짜입니다."
+      },
+      {
+        "sourcePath": "documentation/BrowserKit/bebrowserdatahistoryvisit/redirectdestinationdateofvisit.md",
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "방문 페이지로 리디렉션되는 URL입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/com.apple.developer.driverkit.transport.usb/binterfaceprotocol.md",
+        "id": "seg:paragraph:binterfaceprotocol:0004:0001",
+        "ko": "**Type**: string"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/com.apple.developer.driverkit.transport.usb/binterfaceprotocol.md",
+        "id": "seg:heading:see-also:0005:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:comappledevelopernetworkingmulticast:0002:0001",
+        "ko": "앱이 IP 멀티캐스트 트래픽을 전송하거나 수신할 수 있는지 나타내는 부울 값입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:comappledevelopernetworkingmulticast:0005:0001",
+        "ko": "**Type**: boolean"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:discussion:0007:0001",
+        "ko": "앱이 iOS에서 IP 멀티캐스트 또는 브로드캐스트를 전송하거나 수신하려면 이 엔타이틀먼트를 사용해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:discussion:0007:0002",
+        "ko": "또한 이 엔타이틀먼트는 앱이 임의의 Bonjour 서비스 유형을 탐색하고 광고할 수 있도록 허용합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 엔타이틀먼트를 앱에서 사용하려면 Apple의 권한이 필요합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "Apple의 [`Multicast Networking Entitlement Request`](https://developer.apple.comhttps://developer.apple.com/contact/request/networking-multicast) 페이지에서 권한을 요청해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[Network Extensions Entitlement](entitlements/com.apple.developer.networking.networkextension.md)"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "앱이 네트워킹 기능을 사용자 지정하기 위해 사용할 수 있는 API입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[Personal VPN Entitlement](entitlements/com.apple.developer.networking.vpn.api.md)"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "앱이 사용자 지정 시스템 VPN 구성을 생성하고 제어하는 데 사용할 수 있는 API입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[Associated Domains Entitlement](entitlements/com.apple.developer.associated-domains.md)"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "공유 웹 자격 증명, 유니버설 링크, App Clips와 같은 특정 서비스용 연관 도메인입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "앱이 유니버설 링크를 사용할 수 있는지 나타내는 부울 값입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "앱이 ThreadNetwork를 사용할 수 있는지 나타내는 부울 값입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:list:see-also:0020:0001",
+        "ko": "[5G Network Slicing App Category](entitlements/com.apple.developer.networking.slicing.appcategory.md)"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "셀룰러 네트워크 슬라이싱을 사용할 수 있게 앱 카테고리 엔타이틀먼트를 정의하는 키입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:list:see-also:0022:0001",
+        "ko": "[5G Network Slicing Traffic Category](entitlements/com.apple.developer.networking.slicing.trafficcategory.md)"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "셀룰러 네트워크 슬라이싱을 사용할 수 있게 트래픽 카테고리 엔타이틀먼트를 정의하는 키입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:list:see-also:0024:0002",
+        "ko": "[Configuring your app for ultra-constrained networks](configuring-your-app-for-ultra-constrained-networks.md)"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "자원이 제한된 데이터 네트워크에서 데이터를 전달할 수 있도록 준비합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "통신사 제공 위성 네트워크 접근을 위한 앱 카테고리를 정의하는 키입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/entitlements/comappledevelopernetworkingmulticast.md",
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "앱이 통신사 제공 위성 네트워크에 최적화되어 있는지 나타내는 부울 값입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/bainitialdownloadrestrictions/baessentialdownloadallowance.md",
+        "id": "seg:paragraph:baessentialdownloadallowance:0002:0001",
+        "ko": "필수 자산 다운로드 파일의 총 최대 크기입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/bainitialdownloadrestrictions/baessentialdownloadallowance.md",
+        "id": "seg:paragraph:baessentialdownloadallowance:0005:0001",
+        "ko": "**Type**: integer"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/bainitialdownloadrestrictions/baessentialdownloadallowance.md",
+        "id": "seg:paragraph:discussion:0007:0001",
+        "ko": "필수 자산을 압축하는 경우 이 값을 지정할 때 시스템이 다운로드하는 압축 파일 크기를 사용해야 하며, 압축되지 않은 파일 크기는 사용하지 않아야 합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/bainitialdownloadrestrictions/baessentialdownloadallowance.md",
+        "id": "seg:paragraph:discussion:0007:0002",
+        "ko": "이 키는 Background Assets를 사용하려면 필요합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/bainitialdownloadrestrictions/baessentialdownloadallowance.md",
+        "id": "seg:heading:see-also:0008:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/bainitialdownloadrestrictions/baessentialdownloadallowance.md",
+        "id": "seg:paragraph:see-also:0010:0001",
+        "ko": "초기 비필수 자산 다운로드 파일의 총 최대 크기입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/bainitialdownloadrestrictions/baessentialdownloadallowance.md",
+        "id": "seg:paragraph:see-also:0012:0001",
+        "ko": "초기 자산 다운로드 세트를 예약할 때 익스텐션에서 사용할 수 있는 허용 도메인 목록입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/nsnetworkvolumesusagedescription.md",
+        "id": "seg:paragraph:nsnetworkvolumesusagedescription:0002:0001",
+        "ko": "네트워크 볼륨의 파일에 대한 접근이 필요한 이유를 사용자에게 알려주는 메시지입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/nsnetworkvolumesusagedescription.md",
+        "id": "seg:paragraph:nsnetworkvolumesusagedescription:0005:0001",
+        "ko": "**Type**: string"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/nsnetworkvolumesusagedescription.md",
+        "id": "seg:paragraph:discussion:0007:0001",
+        "ko": "시스템은 사용자가 열기 또는 저장 패널에서 파일을 선택하거나, 파일을 앱으로 드래그하거나, Finder에서 파일을 열면 네트워크 볼륨의 파일에 대한 접근 권한을 앱에 암시적으로 부여합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/nsnetworkvolumesusagedescription.md",
+        "id": "seg:paragraph:discussion:0007:0002",
+        "ko": "앱은 즉시 해당 파일에 접근할 수 있으며, 이후에도 언제든 접근할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/nsnetworkvolumesusagedescription.md",
+        "id": "seg:paragraph:discussion:0007:0003",
+        "ko": "또한 앱이 네트워크 볼륨에서 새 파일을 생성한 경우, 앱은 사용자 동의 없이 해당 파일에 접근할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/nsnetworkvolumesusagedescription.md",
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "사용자 동의가 암시되지 않은 상태에서 앱이 네트워크 볼륨의 파일에 처음 접근 시도할 때 시스템은 네트워크 볼륨 접근 권한을 사용자에게 요청합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/nsnetworkvolumesusagedescription.md",
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "앱이 왜 네트워크 볼륨 접근이 필요한지 설명하는 프롬프트 문자열을 제공하려면 앱의 [`Information Property List`](information-property-list.md) 파일에 [`NSNetworkVolumesUsageDescription`](information-property-list/nsnetworkvolumesusagedescription.md) 키를 추가해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/nsnetworkvolumesusagedescription.md",
+        "id": "seg:paragraph:discussion:0008:0003",
+        "ko": "사용 설명은 선택 사항이지만 강력히 권장됩니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/information-property-list/nsnetworkvolumesusagedescription.md",
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "사용자가 접근 권한 부여 여부를 선택하면 시스템이 해당 선택을 기억합니다."
+      }
+    ]
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "batchIndex": 21,
+  "status": "success",
+  "completedAt": "2026-05-12T14:38:04.157Z",
+  "durationMs": 24393,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:list:parameters:0018:0010",
+        "ko": "`backgroundColor`: 배경색입니다. 색상을 제공하는 경우 `kvImageBackgroundColorFill` 플래그도 함께 설정해야 합니다. 그렇지 않으면 함수가 해당 색상을 무시합니다."
+      },
+      {
+        "id": "seg:list:parameters:0018:0011",
+        "ko": "`flags`: 작업을 수행할 때 사용할 옵션입니다. 코드에서 자체 타일링이나 자체 멀티스레딩을 구현한 경우 [`kvImageDoNotTile`](kvimagedonottile.md) 플래그를 전달합니다. 함수가 작업 영역 메모리의 최소 크기를 반환하도록 하려면 [`kvImageGetTempBufferSize`](kvimagegettempbuffersize.md) 플래그를 설정합니다. 소스 이미지 경계를 벗어난 픽셀 위치를 vImage가 처리하는 방식을 지정하려면 다음 플래그 중 하나를 전달합니다: [`kvImageCopyInPlace`](kvimagecopyinplace.md), [`kvImageTruncateKernel`](kvimagetruncatekernel.md), [`kvImageBackgroundColorFill`](kvimagebackgroundcolorfill.md), 또는 [`kvImageEdgeExtend`](kvimageedgeextend.md). vImage가 더 빠르지만 정밀도가 낮은 내부 산술을 사용하도록 하려면 [`kvImageUseFP16Accumulator`](kvimageusefp16accumulator.md) 플래그를 설정합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0019:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0020:0001",
+        "ko": "[func vImageConvolve_ARGBFFFF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, vImagePixelCount, vImagePixelCount, UnsafePointer<Float>!, UInt32, UInt32, UnsafePointer<Float>!, vImage_Flags) -> vImage_Error](vimageconvolve_argbffff(_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "부동 소수점 32비트 채널당 4채널 interleaved 이미지를 2D 커널로 컨볼루션한 다음 픽셀 값을 divisor로 나눕니다."
+      },
+      {
+        "id": "seg:list:see-also:0022:0001",
+        "ko": "[func vImageConvolveWithBias_Planar8(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, vImagePixelCount, vImagePixelCount, UnsafePointer<Int16>!, UInt32, UInt32, Int32, Int32, Pixel_8, vImage_Flags) -> vImage_Error](vimageconvolvewithbias_planar8(_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "8비트 planar 이미지를 2D 커널로 컨볼루션하고 bias를 더합니다."
+      },
+      {
+        "id": "seg:list:see-also:0024:0001",
+        "ko": "[func vImageConvolveWithBias_Planar16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, vImagePixelCount, vImagePixelCount, UnsafePointer<Float>!, UInt32, UInt32, Float, Pixel_16F, vImage_Flags) -> vImage_Error](vimageconvolvewithbias_planar16f(_:_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "2D 커널로 부동 소수점 16비트 planar 이미지를 컨볼루션하고 bias를 더합니다."
+      },
+      {
+        "id": "seg:list:see-also:0026:0001",
+        "ko": "[func vImageConvolveWithBias_PlanarF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, vImagePixelCount, vImagePixelCount, UnsafePointer<Float>!, UInt32, UInt32, Float, Pixel_F, vImage_Flags) -> vImage_Error](vimageconvolvewithbias_planarf(_:_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "2D 커널로 부동 소수점 32비트 planar 이미지를 컨볼루션하고 bias를 더합니다."
+      },
+      {
+        "id": "seg:list:see-also:0028:0001",
+        "ko": "[func vImageConvolveWithBias_ARGB8888(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, vImagePixelCount, vImagePixelCount, UnsafePointer<Int16>!, UInt32, UInt32, Int32, Int32, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageconvolvewithbias_argb8888(_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "채널당 8비트, 4채널 interleaved 이미지를 2D 커널로 컨볼루션하고 bias를 더합니다."
+      },
+      {
+        "id": "seg:list:see-also:0030:0001",
+        "ko": "[func vImageConvolveWithBias_ARGBFFFF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, vImagePixelCount, vImagePixelCount, UnsafePointer<Float>!, UInt32, UInt32, Float, UnsafePointer<Float>!, vImage_Flags) -> vImage_Error](vimageconvolvewithbias_argbffff(_:_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "부동 소수점 32비트 채널당 4채널 interleaved 이미지를 2D 커널로 컨볼루션하고 bias를 더합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/vimageconvolvewithbias_argb16f(_:_:_:_:_:_:_:_:_:_:_:))*"
+      },
+      {
+        "id": "seg:paragraph:vimagecvimageformatformatformat32bgra:0002:0001",
+        "ko": "채널당 8비트인 32비트 BGRA 픽셀 포맷입니다."
+      },
+      {
+        "id": "seg:list:vimagecvimageformatformatformat32bgra:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:list:vimagecvimageformatformatformat32bgra:0004:0006",
+        "ko": "visionOS ?+"
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "색상 채널당 5비트와 알파 1비트를 가지며 리틀 엔디언인 16비트 RGBA 픽셀 포맷입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "채널당 8비트인 32비트 ABGR 픽셀 포맷입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "채널당 8비트인 32비트 ARGB 픽셀 포맷입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "채널당 8비트인 32비트 RGBA 픽셀 포맷입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "채널당 8비트인 64비트 ARGB 픽셀 포맷입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "리틀 엔디언 64비트 RGBA 픽셀 포맷으로, 채널당 16비트입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "리틀 엔디언 128비트 RGBA 픽셀 포맷으로, 채널당 32비트입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "리틀 엔디언 ARGB2101010 풀 레인지 ARGB 픽셀 포맷입니다."
+      },
+      {
+        "id": "seg:paragraph:vimagecvimageformatformatformattwocomponent8:0002:0001",
+        "ko": "검정값이 0인 8비트 두 구성요소(two-component) 픽셀 포맷입니다."
+      },
+      {
+        "id": "seg:list:vimagecvimageformatformatformattwocomponent8:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:list:vimagecvimageformatformatformattwocomponent8:0004:0006",
+        "ko": "visionOS ?+"
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "리틀 엔디언 16비트 두 구성요소 픽셀 포맷입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "리틀 엔디언 32비트 두 구성요소 픽셀 포맷입니다."
+      },
+      {
+        "id": "seg:heading:vvpowf:0000:0001",
+        "ko": "vvpowf(_:_:_:_:)"
+      },
+      {
+        "id": "seg:paragraph:vvpowf:0002:0001",
+        "ko": "단일 정밀도 값 배열의 두 번째 배열 요소만큼 배열의 각 요소를 거듭제곱합니다."
+      },
+      {
+        "id": "seg:list:vvpowf:0004:0005",
+        "ko": "tvOS ?+"
+      },
+      {
+        "id": "seg:list:parameters:0009:0001",
+        "ko": "**매개변수 1**: 출력 배열, *z*."
+      },
+      {
+        "id": "seg:list:parameters:0009:0002",
+        "ko": "**매개변수 2**: 지수 입력 배열, *y*."
+      },
+      {
+        "id": "seg:list:parameters:0009:0003",
+        "ko": "**매개변수 3**: 밑 입력 배열, *x*."
+      },
+      {
+        "id": "seg:list:parameters:0009:0004",
+        "ko": "**매개변수 4**: 배열의 요소 수."
+      },
+      {
+        "id": "seg:paragraph:parameters:0010:0001",
+        "ko": "다음 코드는 [`vvpowf(_:_:_:_:)`](vvpowf(_:_:_:_:).md) 사용 예시를 보여줍니다."
+      },
+      {
+        "id": "seg:paragraph:parameters:0011:0001",
+        "ko": "**Swift**:"
+      },
+      {
+        "id": "seg:paragraph:parameters:0013:0001",
+        "ko": "**Objective-C**:"
+      },
+      {
+        "id": "seg:paragraph:parameters:0015:0001",
+        "ko": "주어진 `z` 값에 대응하는 `x`와 `y`의 특수 값은 다음과 같습니다."
+      },
+      {
+        "id": "seg:table:parameters:0016:0001",
+        "ko": "`x (밑)`"
+      },
+      {
+        "id": "seg:table:parameters:0016:0002",
+        "ko": "`y (지수)`"
+      },
+      {
+        "id": "seg:table:parameters:0016:0003",
+        "ko": "`z (결과)`"
+      },
+      {
+        "id": "seg:table:parameters:0016:0026",
+        "ko": "`"
+      },
+      {
+        "id": "seg:table:parameters:0016:0028",
+        "ko": "<1`"
+      },
+      {
+        "id": "seg:table:parameters:0016:0031",
+        "ko": "`"
+      },
+      {
+        "id": "seg:table:parameters:0016:0033",
+        "ko": ">1`"
+      },
+      {
+        "id": "seg:table:parameters:0016:0036",
+        "ko": "`"
+      },
+      {
+        "id": "seg:table:parameters:0016:0038",
+        "ko": "<1`"
+      },
+      {
+        "id": "seg:table:parameters:0016:0041",
+        "ko": "`"
+      },
+      {
+        "id": "seg:table:parameters:0016:0043",
+        "ko": ">1`"
+      },
+      {
+        "id": "seg:heading:see-also:0017:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[static func pow<U, V>(bases: U, exponents: V) -> [Double]](vforce/pow(bases:exponents:)-94dha.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "bases 벡터의 각 double-precision 요소를 exponents 벡터의 해당 요소만큼 거듭제곱한 값을 반환합니다."
+      }
+    ]
+  }
+}

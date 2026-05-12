@@ -1,0 +1,130 @@
+{
+  "batchIndex": 7,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:45.564Z",
+  "durationMs": 26621,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:blockquote:overview:0010:0001",
+        "ko": "❗ **중요**: 앱이 4K 동영상 캡처 또는 Apple ProRAW 또는 Deep Fusion 이미지 캡처처럼 리소스 집약적 기능을 사용하는 경우 멀티태스킹 카메라 액세스를 사용하도록 설정하지 않는 것이 좋습니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0010:0002",
+        "ko": "앱이 리소스 집약적 기능을 사용하지 않더라도 성능 문제가 있는지 확인하려면 다른 리소스 집약형 앱과 Stage Manager를 함께 테스트합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0011:0001",
+        "ko": "Split View 및 Slide Over 모드에 대한 자세한 내용은 [`Use multitasking on your iPad`](https://developer.apple.comhttps://support.apple.com/en-us/HT207582)에서 확인할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0011:0002",
+        "ko": "iPad의 Stage Manager에 대한 자세한 내용은 [`Move, resize, and organize windows with Stage Manager on iPad`](https://developer.apple.comhttps://support.apple.com/guide/ipad/move-resize-and-organize-windows-ipad1240f36f/ipados)에서 확인할 수 있습니다."
+      },
+      {
+        "id": "seg:heading:enable-camera-access-while-multitasking:0012:0001",
+        "ko": "멀티태스킹 동안 카메라 액세스 활성화"
+      },
+      {
+        "id": "seg:paragraph:enable-camera-access-while-multitasking:0013:0001",
+        "ko": "앱이 사진 또는 동영상을 캡처할 수 있도록 캡처 세션을 설정합니다."
+      },
+      {
+        "id": "seg:paragraph:enable-camera-access-while-multitasking:0013:0002",
+        "ko": "자세한 내용은 [`Setting up a capture session`](https://developer.apple.com/documentation/AVFoundation/setting-up-a-capture-session)에서 확인할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:enable-camera-access-while-multitasking:0013:0003",
+        "ko": "현재 환경이 지원하는 경우 캡처 세션을 구성하여 멀티태스킹 중에도 카메라를 사용하도록 설정할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:enable-camera-access-while-multitasking:0013:0004",
+        "ko": "이 기능을 캡처 세션이 지원하는지 확인하려면 [`isMultitaskingCameraAccessSupported`](https://developer.apple.com/documentation/AVFoundation/AVCaptureSession/isMultitaskingCameraAccessSupported)을 조회합니다."
+      },
+      {
+        "id": "seg:paragraph:enable-camera-access-while-multitasking:0013:0005",
+        "ko": "이 값이 `true`이면 아래 예제와 같이 [`isMultitaskingCameraAccessEnabled`](https://developer.apple.com/documentation/AVFoundation/AVCaptureSession/isMultitaskingCameraAccessEnabled)을 `true`로 설정하여 멀티태스킹 카메라 액세스를 활성화할 수 있습니다:\n\n```swift\nlet captureSession = AVCaptureSession()\n\n// Configure the capture session.\ncaptureSession.beginConfiguration()\n\nif captureSession.isMultitaskingCameraAccessSupported {\n    // Enable use of the camera in multitasking modes.\n    captureSession.isMultitaskingCameraAccessEnabled = true\n}\ncaptureSession.commitConfiguration()\n\n// Start the capture session.\ncaptureSession.startRunning()\n```"
+      },
+      {
+        "id": "seg:paragraph:enable-camera-access-while-multitasking:0015:0001",
+        "ko": "멀티태스킹 중에 앱의 카메라 사용을 허용하면 AVKit을 사용하는 비디오 통화의 Picture in Picture 모드로도 적용됩니다."
+      },
+      {
+        "id": "seg:paragraph:enable-camera-access-while-multitasking:0015:0002",
+        "ko": "자세한 내용은 [`Adopting Picture in Picture for video calls`](adopting-picture-in-picture-for-video-calls.md)에서 확인할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:enable-camera-access-while-multitasking:0016:0001",
+        "ko": "멀티태스킹 중 앱이 [`AVCaptureMovieFileOutput`](https://developer.apple.com/documentation/AVFoundation/AVCaptureMovieFileOutput) 또는 [`AVAssetWriter`](https://developer.apple.com/documentation/AVFoundation/AVAssetWriter)로 동영상 녹화를 완료하면 시스템은 낮은 품질 동영상이 생성될 가능성을 알려주기 위해 사용자에게 알림을 한 번만 표시합니다."
+      },
+      {
+        "id": "seg:blockquote:enable-camera-access-while-multitasking:0017:0001",
+        "ko": "❗ **중요**: iOS 16 이전의 배포 대상(deployment target)을 가진 앱은 멀티태스킹 중 카메라 액세스 허용을 위해 [`com.apple.developer.avfoundation.multitasking-camera-access`](https://developer.apple.com/documentation/BundleResources/Entitlements/com.apple.developer.avfoundation.multitasking-camera-access) 엔타이틀먼트가 필요합니다."
+      },
+      {
+        "id": "seg:heading:configure-your-app-for-split-view-or-slide-over-mode:0018:0001",
+        "ko": "Split View 또는 Slide Over 모드용 앱 구성"
+      },
+      {
+        "id": "seg:paragraph:configure-your-app-for-split-view-or-slide-over-mode:0019:0001",
+        "ko": "멀티태스킹 카메라 액세스를 활성화하면 카메라를 사용하기 위해 앱이 전체 화면 모드로 실행될 필요가 없습니다."
+      },
+      {
+        "id": "seg:paragraph:configure-your-app-for-split-view-or-slide-over-mode:0019:0002",
+        "ko": "전체 화면 모드로 실행되는 경우에도 시스템이 앱 위에 Picture in Picture 창을 표시할 때와 Slide Over 모드에서 카메라는 계속 동작합니다."
+      },
+      {
+        "id": "seg:paragraph:configure-your-app-for-split-view-or-slide-over-mode:0019:0003",
+        "ko": "앱을 Split View 또는 Slide Over 모드에서도 실행하려면 다음 단계를 수행합니다."
+      },
+      {
+        "id": "seg:list:configure-your-app-for-split-view-or-slide-over-mode:0020:0001",
+        "ko": "Xcode의 프로젝트 편집기에서 앱 대상을 선택합니다."
+      },
+      {
+        "id": "seg:list:configure-your-app-for-split-view-or-slide-over-mode:0020:0002",
+        "ko": "`General` 탭을 클릭합니다."
+      },
+      {
+        "id": "seg:list:configure-your-app-for-split-view-or-slide-over-mode:0020:0003",
+        "ko": "“Requires full screen” 확인란의 선택을 해제합니다."
+      },
+      {
+        "id": "seg:heading:respond-to-system-pressure:0021:0001",
+        "ko": "시스템 압력 대응"
+      },
+      {
+        "id": "seg:paragraph:respond-to-system-pressure:0022:0001",
+        "ko": "[`AVCaptureDevice`](https://developer.apple.com/documentation/AVFoundation/AVCaptureDevice)의 [`systemPressureState`](https://developer.apple.com/documentation/AVFoundation/AVCaptureDevice/systemPressureState-swift.property) 속성을 모니터링하여 시스템 압력 증가에 대비하고 영향을 줄이는 조치를 취합니다."
+      },
+      {
+        "id": "seg:paragraph:respond-to-system-pressure:0022:0002",
+        "ko": "압력이 과도한 수준에 도달하면 캡처 시스템이 종료되고 [`wasInterruptedNotification`](https://developer.apple.com/documentation/AVFoundation/AVCaptureSession/wasInterruptedNotification) 알림이 발행됩니다."
+      },
+      {
+        "id": "seg:paragraph:respond-to-system-pressure:0023:0001",
+        "ko": "앱은 프레임 속도를 낮추거나 저해상도, binned, 비 HDR 형식을 요청하여 시스템에 대한 부하를 줄일 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:respond-to-system-pressure:0023:0002",
+        "ko": "다음 코드는 샘플 앱 [`AVMultiCamPiP: Capturing from Multiple Cameras`](https://developer.apple.com/documentation/AVFoundation/avmulticampip-capturing-from-multiple-cameras)에서 가져온 것으로, 캡처 프레임 속도를 낮추는 방법을 보여줍니다:\n\n```swift\nlet systemPressureStateObservation = observe(\\\\.self.device.systemPressureState, \n                                             options: .new) { [weak self] _, change in\n    guard let self = self else { return }\n    guard let systemPressureState = change.newValue else { return }\n\n    // The frame rates here are for demonstrative purposes only.\n    // Frame rate throttling can differ depending on your app's camera configuration.\n    let pressureLevel = systemPressureState.level\n    if pressureLevel == .serious || pressureLevel == .critical {\n        do {\n            try self.device.lockForConfiguration()\n\n            print(\"WARNING: Reached elevated system pressure level: \\\\(\rpressureLevel). Throttling frame rate.\")\n\n            self.device.activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: 20)\n            self.device.activeVideoMaxFrameDuration = CMTimeMake(value: 1, timescale: 15)\n\n            self.device.unlockForConfiguration()\n        } catch {\n            print(\"Could not lock device for configuration: \\\\(error)\")\n        }\n    } else if pressureLevel == .shutdown {\n        print(\"Session stopped running due to system pressure level.\")\n    }\n}\n```"
+      },
+      {
+        "id": "seg:heading:handle-camera-use-interruptions:0025:0001",
+        "ko": "카메라 사용 중단 처리"
+      },
+      {
+        "id": "seg:paragraph:handle-camera-use-interruptions:0026:0001",
+        "ko": "시스템은 한 번에 하나의 앱만 장치의 카메라를 사용하도록 허용합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-camera-use-interruptions:0026:0002",
+        "ko": "다른 앱이 카메라 사용을 시작할 때 앱이 대응할 수 있도록 준비합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-camera-use-interruptions:0026:0003",
+        "ko": "예를 들어 앱이 Stage Manager에서 실행 중이고 다른 앱이 카메라를 사용하면 시스템은 다른 앱이 완료될 때까지 앱의 카메라 사용을 일시 중단합니다."
+      }
+    ]
+  }
+}
