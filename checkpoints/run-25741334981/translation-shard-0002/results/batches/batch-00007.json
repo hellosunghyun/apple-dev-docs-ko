@@ -1,0 +1,158 @@
+{
+  "batchIndex": 7,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:37.884Z",
+  "durationMs": 13398,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:see-also:0025:0002",
+        "ko": "이 값은 출력 버퍼를 설명하는 CMTag 객체의 이중 배열입니다."
+      },
+      {
+        "id": "seg:list:see-also:0026:0001",
+        "ko": "[var spatialVideoConfigurations: [AVSpatialVideoConfiguration]](avvideocomposition/spatialvideoconfigurations-80iab.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "비디오 구성 출력과 연결할 수 있는 공간 구성을 나타냅니다."
+      },
+      {
+        "id": "seg:heading:inittrackid:0000:0001",
+        "ko": "init(trackID:)"
+      },
+      {
+        "id": "seg:paragraph:inittrackid:0002:0001",
+        "ko": "지정된 track ID에 대한 새 비디오 조합 레이어 지시를 생성합니다."
+      },
+      {
+        "id": "seg:list:inittrackid:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0008:0001",
+        "ko": "[init(assetTrack: AVAssetTrack)](avvideocompositionlayerinstruction/configuration/init(assettrack:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "지정된 track에 대한 새 비디오 조합 레이어 지시를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avvideocompositionlayerinstruction/configuration/init(trackid:))*"
+      },
+      {
+        "id": "seg:heading:capturing-photos-with-depth:0000:0001",
+        "ko": "깊이 사진 촬영"
+      },
+      {
+        "id": "seg:paragraph:capturing-photos-with-depth:0001:0001",
+        "ko": "**프레임워크**: AVFoundation"
+      },
+      {
+        "id": "seg:paragraph:capturing-photos-with-depth:0002:0001",
+        "ko": "사진에 깊이 맵을 적용하면 시스템 카메라의 Portrait 모드와 같은 효과를 만들 수 있습니다(지원되는 기기)."
+      },
+      {
+        "id": "seg:paragraph:overview:0004:0001",
+        "ko": "후면 듀얼 카메라 또는 전면 TrueDepth 카메라가 있는 iOS 기기에서는 캡처 시스템이 깊이 정보를 기록할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0004:0002",
+        "ko": "깊이 맵은 이미지와 유사하지만, 각 픽셀이 색상을 제공하는 대신 카메라에서 해당 이미지 지점까지의 거리를 나타냅니다(절대값이거나 깊이 맵 내 다른 픽셀에 대한 상대값)."
+      },
+      {
+        "id": "seg:paragraph:overview:0005:0001",
+        "ko": "깊이 맵을 사진과 함께 사용하면 iOS 카메라 앱의 Portrait 모드처럼 전경과 배경 요소를 다르게 처리하는 이미지 처리 효과를 만들 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0005:0002",
+        "ko": "색상 데이터와 깊이 데이터를 분리해 저장하면 촬영이 완료된 후에도 이러한 효과를 적용하고 변경할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0001",
+        "ko": "![iOS가 색상 카메라 이미지와 깊이 맵을 사용해 Portrait 사진 효과를 생성하는 방법을 보여주는 그림](https://docs-assets.developer.apple.com/published/d06edb877980433bf589ec401cb91f66/media-2978410%402x.png)"
+      },
+      {
+        "id": "seg:paragraph:overview:0007:0001",
+        "ko": "[`Capturing still and Live Photos`](capturing-still-and-live-photos.md)에서 다루는 여러 촬영 워크플로우에 다음 단계를 추가하여 깊이 캡처를 통합할 수 있습니다."
+      },
+      {
+        "id": "seg:heading:prepare-for-depth-photo-capture:0008:0001",
+        "ko": "깊이 사진 캡처 준비"
+      },
+      {
+        "id": "seg:paragraph:prepare-for-depth-photo-capture:0009:0001",
+        "ko": "깊이 맵을 캡처하려면 먼저 [`builtInDualCamera`](avcapturedevice/devicetype-swift.struct/builtindualcamera.md) 또는 [`builtInTrueDepthCamera`](avcapturedevice/devicetype-swift.struct/builtintruedepthcamera.md) 캡처 장치를 세션의 비디오 입력으로 선택해야 합니다."
+      },
+      {
+        "id": "seg:paragraph:prepare-for-depth-photo-capture:0009:0002",
+        "ko": "iOS 기기에 듀얼 카메라 또는 TrueDepth 카메라가 있어도 기본 후면/전면 카메라를 선택하면 깊이 캡처가 활성화되지 않습니다."
+      },
+      {
+        "id": "seg:paragraph:prepare-for-depth-photo-capture:0010:0001",
+        "ko": "깊이 캡처에는 캡처 파이프라인의 내부 재구성이 추가로 필요하며, 이로 인해 캡처가 잠시 지연되고 진행 중인 캡처가 중단됩니다."
+      },
+      {
+        "id": "seg:paragraph:prepare-for-depth-photo-capture:0010:0002",
+        "ko": "첫 번째 깊이 사진을 촬영하기 전에 [`AVCapturePhotoOutput`](avcapturephotooutput.md) 객체에서 깊이 캡처를 활성화하여 파이프라인을 적절히 구성해야 합니다."
+      },
+      {
+        "id": "seg:blockquote:prepare-for-depth-photo-capture:0012:0001",
+        "ko": "**참고**: 듀얼 카메라에서 깊이 캡처를 활성화하면 광각 카메라와 망원 카메라의 줌 계수가 모두 고정됩니다."
+      },
+      {
+        "id": "seg:heading:choose-settings:0013:0001",
+        "ko": "설정 선택"
+      },
+      {
+        "id": "seg:paragraph:choose-settings:0014:0001",
+        "ko": "사진 출력이 깊이 캡처 준비가 되면 개별 사진마다 색상 이미지와 함께 깊이 맵 캡처를 요청할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:choose-settings:0014:0002",
+        "ko": "색상 이미지의 형식을 선택하여 [`AVCapturePhotoSettings`](avcapturephotosettings.md) 객체를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:choose-settings:0014:0003",
+        "ko": "그다음 해당 사진에 대해 필요한 다른 설정과 함께 깊이 캡처 및 깊이 출력을 활성화한 뒤 [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) 메서드를 호출합니다."
+      },
+      {
+        "id": "seg:heading:handle-results:0016:0001",
+        "ko": "결과 처리"
+      },
+      {
+        "id": "seg:paragraph:handle-results:0017:0001",
+        "ko": "캡처 후 사진 출력은 delegate의 [`photoOutput(_:didFinishProcessingPhoto:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishprocessingphoto:error:).md) 메서드를 호출해 사진과 캡처된 깊이 데이터를 [`AVCapturePhoto`](avcapturephoto.md) 객체로 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-results:0018:0001",
+        "ko": "캡처된 깊이 데이터를 즉시 사용할 계획이라면(예: 깊이 기반 이미지 처리 효과의 미리보기를 표시하려는 경우), 사진 객체의 [`depthData`](avcapturephoto/depthdata.md) 속성에서 확인할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:handle-results:0019:0001",
+        "ko": "그렇지 않으면 캡처 출력은 사진 저장을 위한 파일 데이터를 만들 때 [`fileDataRepresentation()`](avcapturephoto/filedatarepresentation().md) 메서드로 깊이 데이터와 깊이 관련 메타데이터를 포함합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-results:0019:0002",
+        "ko": "결과 파일을 사진 라이브러리에 추가하면 시스템 Photos 앱을 포함한 다른 앱이 깊이 데이터를 자동으로 인식해 깊이 기반 이미지 처리 효과를 적용할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:handle-results:0019:0003",
+        "ko": "(이 옵션을 비활성화해야 하는 경우 [`embedsDepthDataInPhoto`](avcapturephotosettings/embedsdepthdatainphoto.md) 설정을 확인합니다.)"
+      },
+      {
+        "id": "seg:heading:about-disparity-depth-and-accuracy:0020:0001",
+        "ko": "시차 깊이 및 정확도"
+      },
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0021:0001",
+        "ko": "호환되는 기기에서 후면 듀얼 카메라로 깊이 캡처를 활성화하면(참조: [`iOS Device Compatibility Reference`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599)), 시스템은 두 카메라를 모두 사용해 이미지를 캡처합니다."
+      }
+    ]
+  }
+}
