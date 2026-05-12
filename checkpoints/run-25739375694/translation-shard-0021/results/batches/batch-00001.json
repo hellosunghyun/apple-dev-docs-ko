@@ -1,0 +1,114 @@
+{
+  "batchIndex": 1,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:32.475Z",
+  "durationMs": 10850,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:blockquote:set-up-the-sample:0013:0001",
+        "ko": "**참고**: 시뮬레이터는 액세서리 추적을 지원하지 않으므로 샘플 앱을 실행하려면 물리 디바이스가 필요합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-the-sample:0015:0001",
+        "ko": "[`AccessoryTrackingProvider`](accessorytrackingprovider.md)가 실행 중인 [`ARKitSession`](arkitsession.md)은 권한 부여를 묵시적으로 요청합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-the-sample:0015:0002",
+        "ko": "앱은 [`ARKitSession.Event.authorizationChanged(type:status:)`](arkitsession/event/authorizationchanged(type:status:).md) 세션 이벤트로 이를 처리할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-the-sample:0015:0003",
+        "ko": "플레이어가 추적 권한을 허용하면, `authorizationChanged` 핸들러의 코드가 컨트롤러 추적을 시작합니다."
+      },
+      {
+        "id": "seg:heading:track-accessories:0017:0001",
+        "ko": "액세서리 추적"
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0018:0001",
+        "ko": "샘플의 추적 코드에서는 [`controllers()`](https://developer.apple.com/documentation/GameController/GCController/controllers())를 사용해 사용 가능한 모든 컨트롤러를 요청합니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0018:0002",
+        "ko": "반환된 [`GCController`](https://developer.apple.com/documentation/GameController/GCController) 디바이스에서 추적 가능한 ARKit [`Accessory`](accessory.md) 객체를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0018:0003",
+        "ko": "사용 가능한 액세서리를 [`AccessoryTrackingProvider`](accessorytrackingprovider.md)에 전달하면 샘플이 [`ARSession`](arsession.md) 객체에서 실행할 때 [`Anchor`](Anchor.md) 업데이트에 접근할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0018:0004",
+        "ko": "액세서리 이벤트는 [`anchorUpdates`](accessorytrackingprovider/anchorupdates.md)에서 비동기적으로 사용할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0018:0005",
+        "ko": "추적 중에 샘플은 볼륨 내 컨트롤러 존재 여부 확인, 테니스 공 위치와 컨트롤러 동기화, 플레이어의 던지기 또는 흔들기 동작 확인을 수행합니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0020:0001",
+        "ko": "시스템은 [`RealityView`](https://developer.apple.com/documentation/RealityKit/RealityView) 업데이트 클로저를 사용해 컨트롤러가 볼륨 내에 있는지 확인하고, 샘플은 볼륨이 정한 바운딩 박스를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0020:0002",
+        "ko": "적어도 하나 이상의 컨트롤러가 연결되어 볼륨 경계 내에 있으면 앱 상태가 그에 맞게 업데이트됩니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0020:0003",
+        "ko": "모든 컨트롤러가 경계 밖에 있으면 볼륨의 툴바에 Out of Bounds 메시지가 표시됩니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0021:0001",
+        "ko": "추적되는 각 액세서리에 대해 앱은 테니스 공 엔티티를 생성하고, 액세서리 추적 앵커 업데이트를 처리하면서 위치를 재배치합니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0021:0002",
+        "ko": "[`AccessoryAnchor`](accessoryanchor.md)의 `transform`은 [`WorldReferenceCoordinateSpace`](https://developer.apple.com/documentation/Spatial/WorldReferenceCoordinateSpace)에 상대적입니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0021:0003",
+        "ko": "앱은 `RealityView` 안의 볼륨에서 테니스 공 모델을 포함하며, 이는 월드 기준 좌표 공간과 정렬되지 않습니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0021:0004",
+        "ko": "추적된 액세서리 위치를 테니스 공 배치로 변환하는 과정은 복잡합니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0021:0005",
+        "ko": "샘플은 복잡성을 없애기 위해 앵커의 [`coordinateSpace(for:correction:)`](accessoryanchor/coordinatespace(for:correction:).md) 메서드로 액세서리가 볼륨 내부에 있는지 확인합니다."
+      },
+      {
+        "id": "seg:paragraph:track-accessories:0021:0006",
+        "ko": "액세서리가 볼륨 밖으로 이동하면 테니스 공 엔티티가 렌더링되지 않습니다."
+      },
+      {
+        "id": "seg:heading:create-throw-and-reset-gestures:0023:0001",
+        "ko": "던지기 및 재설정 제스처 생성"
+      },
+      {
+        "id": "seg:paragraph:create-throw-and-reset-gestures:0024:0001",
+        "ko": "앵커 업데이트 처리를 수행하는 동안 샘플은 테니스 공 던지기와 흔들기 동작에 대한 재설정 액션 확인을 처리합니다."
+      },
+      {
+        "id": "seg:paragraph:create-throw-and-reset-gestures:0024:0002",
+        "ko": "앱은 액세서리의 최대 속도를 추적해 현재 속도가 0.6 m/s 감소하는 시점을 감지함으로써 던지기를 트리거합니다."
+      },
+      {
+        "id": "seg:paragraph:create-throw-and-reset-gestures:0024:0003",
+        "ko": "앱은 액세서리 앵커의 로컬 좌표 공간에서 액세서리 속도를 3D 벡터로 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:create-throw-and-reset-gestures:0024:0004",
+        "ko": "정확한 속도를 얻기 위해 앱은 `convert(value:, to:)` 메서드를 사용해 벡터를 `gameRoot` 좌표 공간 기준으로 변환합니다."
+      },
+      {
+        "id": "seg:paragraph:create-throw-and-reset-gestures:0024:0005",
+        "ko": "캔을 맞히기 위해, 던지기 액세서리 앵커와 연결된 공은 앵커와 동일한 속도를 유지합니다."
+      },
+      {
+        "id": "seg:paragraph:create-throw-and-reset-gestures:0024:0006",
+        "ko": "시스템이 1초 안에 던지기를 등록하지 않으면 던지기 추적을 재설정합니다."
+      }
+    ]
+  }
+}
