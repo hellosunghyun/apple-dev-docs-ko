@@ -1,0 +1,1324 @@
+{
+  "generatedAt": "2026-05-12T16:04:15.587Z",
+  "updatedAt": "2026-05-12T16:05:11.795Z",
+  "reason": "paused",
+  "queue": "state/queue/shard-0008.json",
+  "shard": {
+    "index": 8,
+    "total": 256
+  },
+  "abortReason": "Paused after Codex usage limit; retry after 9:04 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM.",
+    "retryAfterText": "9:04 PM",
+    "retryAt": "2026-05-12T21:04:00.000Z"
+  },
+  "totals": {
+    "batches": 250,
+    "segments": 13909,
+    "completed": 14,
+    "failed": 2,
+    "processed": 16,
+    "active": 0,
+    "queued": 234,
+    "percent": 6.4
+  },
+  "batches": [
+    {
+      "index": 0,
+      "status": "success",
+      "segments": 32,
+      "completedAt": "2026-05-12T14:02:34.640Z",
+      "durationMs": 9053
+    },
+    {
+      "index": 1,
+      "status": "success",
+      "segments": 22,
+      "completedAt": "2026-05-12T14:02:37.897Z",
+      "durationMs": 12310
+    },
+    {
+      "index": 2,
+      "status": "success",
+      "segments": 23,
+      "completedAt": "2026-05-12T14:02:37.140Z",
+      "durationMs": 11553
+    },
+    {
+      "index": 3,
+      "status": "success",
+      "segments": 39,
+      "completedAt": "2026-05-12T14:02:54.556Z",
+      "durationMs": 19914
+    },
+    {
+      "index": 4,
+      "status": "success",
+      "segments": 48,
+      "completedAt": "2026-05-12T14:02:53.376Z",
+      "durationMs": 16234
+    },
+    {
+      "index": 5,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:02:53.060Z",
+      "durationMs": 15160
+    },
+    {
+      "index": 6,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:03:11.293Z",
+      "durationMs": 18231
+    },
+    {
+      "index": 7,
+      "status": "success",
+      "segments": 37,
+      "completedAt": "2026-05-12T14:03:09.104Z",
+      "durationMs": 15718
+    },
+    {
+      "index": 8,
+      "status": "success",
+      "segments": 34,
+      "startedAt": "2026-05-12T16:04:15.594Z",
+      "completedAt": "2026-05-12T16:04:31.237Z",
+      "durationMs": 15643
+    },
+    {
+      "index": 9,
+      "status": "success",
+      "segments": 33,
+      "startedAt": "2026-05-12T16:04:15.594Z",
+      "completedAt": "2026-05-12T16:04:29.754Z",
+      "durationMs": 14160
+    },
+    {
+      "index": 10,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:15.594Z",
+      "completedAt": "2026-05-12T16:04:30.702Z",
+      "durationMs": 15108
+    },
+    {
+      "index": 11,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:29.759Z",
+      "completedAt": "2026-05-12T16:04:50.619Z",
+      "durationMs": 20860
+    },
+    {
+      "index": 12,
+      "status": "success",
+      "segments": 42,
+      "startedAt": "2026-05-12T16:04:30.710Z",
+      "completedAt": "2026-05-12T16:04:48.682Z",
+      "durationMs": 17972
+    },
+    {
+      "index": 13,
+      "status": "success",
+      "segments": 29,
+      "startedAt": "2026-05-12T16:04:31.242Z",
+      "completedAt": "2026-05-12T16:04:49.382Z",
+      "durationMs": 18140
+    },
+    {
+      "index": 14,
+      "status": "failed",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:48.685Z",
+      "completedAt": "2026-05-12T16:05:11.788Z",
+      "durationMs": 23103,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1cef-3459-7190-aedd-157238cf372f\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment sourcePath and id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"sourcePath\":\"...\",\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"sourcePath\": \"documentation/AccountOrganizationalDataSharing/jwkset/jwksetkeys.md\",\n      \"id\": \"seg:list:properties:0010:0001\",\n      \"source\": \"`alg` (string): The encryption algorithm used to encrypt the token.\",\n      \"contextBefore\": \"Properties\",\n      \"contextAfter\": \"`e` (string): The exponent value for the RSA public key.\",\n      \"documentTitle\": \"JWKSet.Keys\",\n      \"framework\": \"AccountOrganizationalDataSharing\"\n    },\n    {\n      \"sourcePath\": \"documentation/AccountOrganizationalDataSharing/jwkset/jwksetkeys.md\",\n      \"id\": \"seg:list:properties:0010:0002\",\n      \"source\": \"`e` (string): The exponent value for the RSA public key.\",\n      \"contextBefore\": \"`alg` (string): The encryption algorithm used to encrypt the token.\",\n      \"contextAfter\": \"`kid` (string): A 10-character identifier key, obtained from your developer account.\",\n      \"documentTitle\": \"JWKSet.Keys\",\n      \"framework\": \"AccountOrganizationalDataSharing\"\n    },\n    {\n      \"sourcePath\": \"documentation/AccountOrganizationalDataSharing/jwkset/jwksetkeys.md\",\n      \"id\": \"seg:list:properties:0010:0003\",\n      \"source\": \"`kid` (string): A 10-character identifier key, obtained from your developer account.\",\n      \"contextBefore\": \"`e` (string): The exponent value for the RSA public key.\",\n      \"contextAfter\": \"`kty` (string): The key type parameter setting. Use the value `RSA`.\",\n      \"documentTitle\": \"JWKSet.Keys\",\n      \"framework\": \"AccountOrganizationalDataSharing\"\n    },\n    {\n      \"sourcePath\": \"documentation/AccountOrganizationalDataSharing/jwkset/jwksetkeys.md\",\n      \"id\": \"seg:list:properties:0010:0004\",\n      \"source\": \"`kty` (string): The key type parameter setting. Use the value `RSA`.\",\n      \"contextBefore\": \"`kid` (string): A 10-character identifier key, obtained from your developer account.\",\n      \"contextAfter\": \"`n` (string): The modulus value for the RSA public key.\",\n      \"documentTitle\": \"JWKSet.Keys\",\n      \"framework\": \"AccountOrganizationalDataSharing\"\n    },\n    {\n      \"sourcePath\": \"documentation/AccountOrganizationalDataSharing/jwkset/jwksetkeys.md\",\n      \"id\": \"seg:list:properties:0010:0005\",\n      \"source\": \"`n` (string): The modulus value for the RSA public key.\",\n      \"contextBefore\": \"`kty` (string): The key type parameter setting. Use the value `RSA`.\",\n      \"contextAfter\": \"`use` (string): The intended use for the public key.\",\n      \"documentTitle\": \"JWKSet.Keys\",\n      \"framework\": \"AccountOrganizationalDataSharing\"\n    },\n    {\n      \"sourcePath\": \"documentation/AccountOrganizationalDataSharing/jwkset/jwksetkeys.md\",\n      \"id\": \"seg:list:properties:0010:0006\",\n      \"source\": \"`use` (string): The intended use for the public key.\",\n      \"contextBefore\": \"`n` (string): The modulus value for the RSA public key.\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"JWKSet.Keys\",\n      \"framework\": \"AccountOrganizationalDataSharing\"\n    },\n    {\n      \"sourcePath\": \"documentation/ActivityKit/activityauthorizationerror/erroruserinfo.md\",\n      \"id\": \"seg:paragraph:erroruserinfo:0002:0001\",\n      \"source\": \"The default user-info dictionary.\",\n      \"contextBefore\": \"**Framework**: ActivityKit **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"errorUserInfo\",\n      \"framework\": \"ActivityKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdAttributionKit/appimpression/beginview.md\",\n      \"id\": \"seg:paragraph:beginview:0002:0001\",\n      \"source\": \"Begins recording a view-through impression when ad content corresponding to the impression becomes visible.\",\n      \"contextBefore\": \"**Framework**: AdAttributionKit **Kind**: method\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"beginView()\",\n      \"framework\": \"AdAttributionKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdAttributionKit/appimpression/beginview.md\",\n      \"id\": \"seg:list:beginview:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 17.4+\",\n      \"contextAfter\": \"Declaration\",\n      \"documentTitle\": \"beginView()\",\n      \"framework\": \"AdAttributionKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdAttributionKit/appimpression/beginview.md\",\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"Begin the view impression process by calling [`beginView()`](appimpression/beginview().md), as the following example shows:\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"```swift\\n   func handleAdAppeared(impression: AppImpression) async {\\n       do {\\n           try await impression.beginView()\\n       }\\n       catch {\\n           print(\\\"Failed to begin view-through impression: \\\\(error).\\\")\\n       }\\n   }\\n```\",\n      \"documentTitle\": \"beginView()\",\n      \"framework\": \"AdAttributionKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdAttributionKit/appimpression/beginview.md\",\n      \"id\": \"seg:heading:see-also:0010:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\n   func handleAdAppeared(impression: AppImpression) async {\\n       do {\\n           try await impression.beginView()\\n       }\\n       catch {\\n           print(\\\"Failed to begin view-through impression: \\\\(error).\\\")\\n       }\\n   }\\n```\",\n      \"contextAfter\": \"[func endView() async throws](appimpression/endview.md)\",\n      \"documentTitle\": \"beginView()\",\n      \"framework\": \"AdAttributionKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdAttributionKit/appimpression/beginview.md\",\n      \"id\": \"seg:paragraph:see-also:0012:0001\",\n      \"source\": \"Ends the view-through impression when the ad content corresponding to the impression disappears.\",\n      \"contextBefore\": \"[func endView() async throws](appimpression/endview.md)\",\n      \"contextAfter\": \"[func handleView() async throws](appimpression/handleview.md)\",\n      \"documentTitle\": \"beginView()\",\n      \"framework\": \"AdAttributionKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdAttributionKit/appimpression/beginview.md\",\n      \"id\": \"seg:paragraph:see-also:0014:0001\",\n      \"source\": \"Handles a view through ad impression.\",\n      \"contextBefore\": \"[func handleView() async throws](appimpression/handleview.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"beginView()\",\n      \"framework\": \"AdAttributionKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdAttributionKit/appimpression/beginview.md\",\n      \"id\": \"seg:paragraph:see-also:0016:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/adattributionkit/appimpression/beginview())*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"beginView()\",\n      \"framework\": \"AdAttributionKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:dependentsku:0002:0001\",\n      \"source\": \"The product identifier of a dependent SKU in a subscription price change.\",\n      \"contextBefore\": \"**Framework**: Advanced Commerce API **Kind**: typealias\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:dependentsku:0004:0001\",\n      \"source\": \"Advanced Commerce API 1.0+\",\n      \"contextBefore\": \"**Availability**:\",\n      \"contextAfter\": \"Declaration\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"A dependent SKU is a product identifier that represents an item that depends on another SKU in the context of subscription price changes.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"Dependent SKUs cannot be chained or shared between multiple parent SKUs.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:discussion:0008:0002\",\n      \"source\": \"Dependent SKUs cannot be chained or shared between multiple parent SKUs.\",\n      \"contextBefore\": \"A dependent SKU is a product identifier that represents an item that depends on another SKU in the context of subscription price changes.\",\n      \"contextAfter\": \"The dependentSKU value is a string with a maximum length of 128 characters.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:discussion:0009:0001\",\n      \"source\": \"The dependentSKU value is a string with a maximum length of 128 characters.\",\n      \"contextBefore\": \"Dependent SKUs cannot be chained or shared between multiple parent SKUs.\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:heading:see-also:0010:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"The dependentSKU value is a string with a maximum length of 128 characters.\",\n      \"contextAfter\": \"[type currency](currency.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0011:0001\",\n      \"source\": \"[type currency](currency.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"The three-letter ISO 4217 currency code for the price of a product.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0012:0001\",\n      \"source\": \"The three-letter ISO 4217 currency code for the price of a product.\",\n      \"contextBefore\": \"[type currency](currency.md)\",\n      \"contextAfter\": \"[type description](description.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0013:0001\",\n      \"source\": \"[type description](description.md)\",\n      \"contextBefore\": \"The three-letter ISO 4217 currency code for the price of a product.\",\n      \"contextAfter\": \"A string you provide that describes a SKU.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0014:0001\",\n      \"source\": \"A string you provide that describes a SKU.\",\n      \"contextBefore\": \"[type description](description.md)\",\n      \"contextAfter\": \"[type displayName](displayname.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0015:0001\",\n      \"source\": \"[type displayName](displayname.md)\",\n      \"contextBefore\": \"A string you provide that describes a SKU.\",\n      \"contextAfter\": \"A string with a product name that you can localize and is suitable for display to customers.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0016:0001\",\n      \"source\": \"A string with a product name that you can localize and is suitable for display to customers.\",\n      \"contextBefore\": \"[type displayName](displayname.md)\",\n      \"contextAfter\": \"[type effective](effective.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0017:0001\",\n      \"source\": \"[type effective](effective.md)\",\n      \"contextBefore\": \"A string with a product name that you can localize and is suitable for display to customers.\",\n      \"contextAfter\": \"A string value that indicates when a requested change to an auto-renewable subscription goes into effect.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0018:0001\",\n      \"source\": \"A string value that indicates when a requested change to an auto-renewable subscription goes into effect.\",\n      \"contextBefore\": \"[type effective](effective.md)\",\n      \"contextAfter\": \"[type period](period.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0019:0001\",\n      \"source\": \"[type period](period.md)\",\n      \"contextBefore\": \"A string value that indicates when a requested change to an auto-renewable subscription goes into effect.\",\n      \"contextAfter\": \"The duration of a single cycle of an auto-renewable subscription.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0020:0001\",\n      \"source\": \"The duration of a single cycle of an auto-renewable subscription.\",\n      \"contextBefore\": \"[type period](period.md)\",\n      \"contextAfter\": \"[type price](price.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0021:0001\",\n      \"source\": \"[type price](price.md)\",\n      \"contextBefore\": \"The duration of a single cycle of an auto-renewable subscription.\",\n      \"contextAfter\": \"A price, in milliunits of a currency, for an Advanced Commerce API SKU.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0022:0001\",\n      \"source\": \"A price, in milliunits of a currency, for an Advanced Commerce API SKU.\",\n      \"contextBefore\": \"[type price](price.md)\",\n      \"contextAfter\": \"[type proratedPrice](proratedprice.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0023:0001\",\n      \"source\": \"[type proratedPrice](proratedprice.md)\",\n      \"contextBefore\": \"A price, in milliunits of a currency, for an Advanced Commerce API SKU.\",\n      \"contextAfter\": \"A prorated price, in milliunits of a currency, for an Advanced Commerce API SKU.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0024:0001\",\n      \"source\": \"A prorated price, in milliunits of a currency, for an Advanced Commerce API SKU.\",\n      \"contextBefore\": \"[type proratedPrice](proratedprice.md)\",\n      \"contextAfter\": \"[type retainBillingCycle](retainbillingcycle.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0025:0001\",\n      \"source\": \"[type retainBillingCycle](retainbillingcycle.md)\",\n      \"contextBefore\": \"A prorated price, in milliunits of a currency, for an Advanced Commerce API SKU.\",\n      \"contextAfter\": \"A Boolean value that determines whether to keep the existing billing cycle with the change you request.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0026:0001\",\n      \"source\": \"A Boolean value that determines whether to keep the existing billing cycle with the change you request.\",\n      \"contextBefore\": \"[type retainBillingCycle](retainbillingcycle.md)\",\n      \"contextAfter\": \"[type refundAmount](refundamount.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0027:0001\",\n      \"source\": \"[type refundAmount](refundamount.md)\",\n      \"contextBefore\": \"A Boolean value that determines whether to keep the existing billing cycle with the change you request.\",\n      \"contextAfter\": \"A refund amount, in milliunits of the currency.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0028:0001\",\n      \"source\": \"A refund amount, in milliunits of the currency.\",\n      \"contextBefore\": \"[type refundAmount](refundamount.md)\",\n      \"contextAfter\": \"[type refundReason](refundreason.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0029:0001\",\n      \"source\": \"[type refundReason](refundreason.md)\",\n      \"contextBefore\": \"A refund amount, in milliunits of the currency.\",\n      \"contextAfter\": \"A reason to request a refund.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0030:0001\",\n      \"source\": \"A reason to request a refund.\",\n      \"contextBefore\": \"[type refundReason](refundreason.md)\",\n      \"contextAfter\": \"[type refundRiskingPreference](refundriskingpreference.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0031:0001\",\n      \"source\": \"[type refundRiskingPreference](refundriskingpreference.md)\",\n      \"contextBefore\": \"A reason to request a refund.\",\n      \"contextAfter\": \"A Boolean value that indicates whether the App Store asks you for consumption data to help inform the refund decision.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0032:0001\",\n      \"source\": \"A Boolean value that indicates whether the App Store asks you for consumption data to help inform the refund decision.\",\n      \"contextBefore\": \"[type refundRiskingPreference](refundriskingpreference.md)\",\n      \"contextAfter\": \"[type SKU](sku.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0033:0001\",\n      \"source\": \"[type SKU](sku.md)\",\n      \"contextBefore\": \"A Boolean value that indicates whether the App Store asks you for consumption data to help inform the refund decision.\",\n      \"contextAfter\": \"The product identifier of an in-app purchase product you manage in your own system.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0034:0001\",\n      \"source\": \"The product identifier of an in-app purchase product you manage in your own system.\",\n      \"contextBefore\": \"[type SKU](sku.md)\",\n      \"contextAfter\": \"[type storefront](storefront.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0035:0001\",\n      \"source\": \"[type storefront](storefront.md)\",\n      \"contextBefore\": \"The product identifier of an in-app purchase product you manage in your own system.\",\n      \"contextAfter\": \"A three-letter code that represents the country or region associated with the App Store storefront.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0036:0001\",\n      \"source\": \"A three-letter code that represents the country or region associated with the App Store storefront.\",\n      \"contextBefore\": \"[type storefront](storefront.md)\",\n      \"contextAfter\": \"[type taxCode](taxcode.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0037:0001\",\n      \"source\": \"[type taxCode](taxcode.md)\",\n      \"contextBefore\": \"A three-letter code that represents the country or region associated with the App Store storefront.\",\n      \"contextAfter\": \"A tax code that applies to a SKU.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0038:0001\",\n      \"source\": \"A tax code that applies to a SKU.\",\n      \"contextBefore\": \"[type taxCode](taxcode.md)\",\n      \"contextAfter\": \"[type targetProductId](targetproductid.md)\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:list:see-also:0039:0001\",\n      \"source\": \"[type targetProductId](targetproductid.md)\",\n      \"contextBefore\": \"A tax code that applies to a SKU.\",\n      \"contextAfter\": \"A generic product identifier that represents all Advanced Commerce API products to App Store Connect, which you use when you migrate a product.\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/dependentsku.md\",\n      \"id\": \"seg:paragraph:see-also:0040:0001\",\n      \"source\": \"A generic product identifier that represents all Advanced Commerce API products to App Store Connect, which you use when you migrate a product.\",\n      \"contextBefore\": \"[type targetProductId](targetproductid.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"dependentSKU\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppClip/apactivationpayloaderror.md\",\n      \"id\": \"seg:paragraph:apactivationpayloaderror:0002:0001\",\n      \"source\": \"An error that an App Clip activation payload returns.\",\n      \"contextBefore\": \"**Framework**: App Clips **Kind**: struct\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"APActivationPayloadError\",\n      \"framework\": \"AppClip\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppClip/apactivationpayloaderror.md\",\n      \"id\": \"seg:heading:getting-information-about-the-error:0008:0001\",\n      \"source\": \"Getting information about the error\",\n      \"contextBefore\": \"Topics\",\n      \"contextAfter\": \"[static var errorDomain: String](apactivationpayloaderror/errordomain.md)\",\n      \"documentTitle\": \"APActivationPayloadError\",\n      \"framework\": \"AppClip\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppClip/apactivationpayloaderror.md\",\n      \"id\": \"seg:list:getting-information-about-the-error:0009:0001\",\n      \"source\": \"[static var errorDomain: String](apactivationpayloaderror/errordomain.md)\",\n      \"contextBefore\": \"Getting information about the error\",\n      \"contextAfter\": \"Interpreting errors\",\n      \"documentTitle\": \"APActivationPayloadError\",\n      \"framework\": \"AppClip\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppClip/apactivationpayloaderror.md\",\n      \"id\": \"seg:heading:interpreting-errors:0010:0001\",\n      \"source\": \"Interpreting errors\",\n      \"contextBefore\": \"[static var errorDomain: String](apactivationpayloaderror/errordomain.md)\",\n      \"contextAfter\": \"[static var doesNotMatch: APActivationPayloadError.Code](apactivationpayloaderror/doesnotmatch.md)\",\n      \"documentTitle\": \"APActivationPayloadError\",\n      \"framework\": \"AppClip\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppClip/apactivationpayloaderror.md\",\n      \"id\": \"seg:list:interpreting-errors:0011:0001\",\n      \"source\": \"[static var doesNotMatch: APActivationPayloadError.Code](apactivationpayloaderror/doesnotmatch.md)\",\n      \"contextBefore\": \"Interpreting errors\",\n      \"contextAfter\": \"The provided URL doesn’t match the invocation URL you registered for the App Clip.\",\n      \"documentTitle\": \"APActivationPayloadError\",\n      \"framework\": \"AppClip\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppClip/apactivationpayloaderror.md\",\n      \"id\": \"seg:paragraph:interpreting-errors:0012:0001\",\n      \"source\": \"The provided URL doesn’t match the invocation URL you registered for the App Clip.\",\n      \"contextBefore\": \"[static var doesNotMatch: APActivationPayloadError.Code](apactivationpayloaderror/doesnotmatch.md)\",\n      \"contextAfter\": \"[static var disallowed: APActivationPayloadError.Code](apactivationpayloaderror/disallowed.md)\",\n      \"documentTitle\": \"APActivationPayloadError\",\n      \"framework\": \"AppClip\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppClip/apactivationpayloaderror.md\",\n      \"id\": \"seg:list:interpreting-errors:0013:0001\",\n      \"source\": \"[static var disallowed: APActivationPayloadError.Code](apactivationpayloaderror/disallowed.md)\",\n      \"contextBefore\": \"The provided URL doesn’t match the invocation URL you registered for the App Clip.\",\n      \"contextAfter\": \"The user denied location access, or the source of the App Clip invocation wasn’t an NFC tag or visual code.\",\n      \"documentTitle\": \"APActivationPayloadError\",\n      \"framework\": \"AppClip\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppClip/apactivationpayloaderror.md\",\n      \"id\": \"seg:paragraph:interpreting-errors:0014:0001\",\n      \"source\": \"The user denied location access, or the source of the App Clip invocation wasn’t an NFC tag or visual code.\",\n      \"contextBefore\": \"[static var disallowed: APActivationPayloadError.Code](apactivationpayloaderror/disallowed.md)\",\n      \"contextAfter\": \"[APActivationPayloadError.Code](apactivationpayloaderror/code.md)\",\n      \"documentTitle\": \"APActivationPayloadError\",\n      \"framework\": \"AppClip\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppClip/apactivationpayloaderror.md\",\n      \"id\": \"seg:paragraph:interpreting-errors:0016:0001\",\n      \"source\": \"Error codes that an App Clip activation payload returns.\",\n      \"contextBefore\": \"[APActivationPayloadError.Code](apactivationpayloaderror/code.md)\",\n      \"contextAfter\": \"Relationships\",\n      \"documentTitle\": \"APActivationPayloadError\",\n      \"framework\": \"AppClip\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppClip/apactivationpayloaderror.md\",\n      \"id\": \"seg:heading:conforms-to:0018:0001\",\n      \"source\": \"Conforms To\",\n      \"contextBefore\": \"Relationships\",\n      \"contextAfter\": \"[CustomNSError](../Foundation/CustomNSError.md)\",\n      \"documentTitle\": \"APActivationPayloadError\",\n      \"framework\": \"AppClip\"\n    }\n  ]\n}\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T16:05:03.495005Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:03.927589Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:04.438381Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T16:05:05.084080Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T16:05:06.138062Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T16:05:08.104442Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T16:05:11.600502Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: c3895433-63ad-4204-b178-2ee8fb7bb6e2\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: c3895433-63ad-4204-b178-2ee8fb7bb6e2"
+    },
+    {
+      "index": 15,
+      "status": "queued",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:49.393Z",
+      "completedAt": "2026-05-12T16:05:09.759Z",
+      "durationMs": 20366,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM."
+    },
+    {
+      "index": 16,
+      "status": "failed",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:50.623Z",
+      "completedAt": "2026-05-12T16:05:10.945Z",
+      "durationMs": 20322,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1cef-3c2e-7982-8558-77eda3d68ecf\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment sourcePath and id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"sourcePath\":\"...\",\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"The app intent conforms to the schema for undoing edits to an asset.\",\n      \"contextBefore\": \"[var cleanupPhoto: some AssistantSchemas.Intent](assistantschemas/photosintent/cleanupphoto.md)\",\n      \"contextAfter\": \"[var copyEdits: some AssistantSchemas.Intent](assistantschemas/photosintent/copyedits.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"The app intent conforms to the schema for copying edits to an asset.\",\n      \"contextBefore\": \"[var copyEdits: some AssistantSchemas.Intent](assistantschemas/photosintent/copyedits.md)\",\n      \"contextAfter\": \"[var createAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/createalbum.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"The app intent conforms to the schema for creating an album.\",\n      \"contextBefore\": \"[var createAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/createalbum.md)\",\n      \"contextAfter\": \"[var createAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/createassets.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"The app intent conforms to the schema for creating an asset.\",\n      \"contextBefore\": \"[var createAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/createassets.md)\",\n      \"contextAfter\": \"[var crop: some AssistantSchemas.Intent](assistantschemas/photosintent/crop.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"The app intent conforms to the schema for cropping an asset.\",\n      \"contextBefore\": \"[var crop: some AssistantSchemas.Intent](assistantschemas/photosintent/crop.md)\",\n      \"contextAfter\": \"[var deleteAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/deletealbum.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"The app intent conforms to the schema for deleting an album.\",\n      \"contextBefore\": \"[var deleteAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/deletealbum.md)\",\n      \"contextAfter\": \"[var deleteAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/deleteassets.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0027:0001\",\n      \"source\": \"The app intent conforms to the schema for deleting an asset.\",\n      \"contextBefore\": \"[var deleteAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/deleteassets.md)\",\n      \"contextAfter\": \"[var duplicateAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/duplicateassets.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"The app intent conforms to the schema for duplicating an asset.\",\n      \"contextBefore\": \"[var duplicateAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/duplicateassets.md)\",\n      \"contextAfter\": \"[var openAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/openalbum.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"The app intent conforms to the schema for opening an album.\",\n      \"contextBefore\": \"[var openAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/openalbum.md)\",\n      \"contextAfter\": \"[var pasteEdits: some AssistantSchemas.Intent](assistantschemas/photosintent/pasteedits.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"The app intent conforms to the schema for pasting edits to an asset.\",\n      \"contextBefore\": \"[var pasteEdits: some AssistantSchemas.Intent](assistantschemas/photosintent/pasteedits.md)\",\n      \"contextAfter\": \"[var postToSharedAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/posttosharedalbum.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0035:0001\",\n      \"source\": \"The app intent conforms to the schema for posting an asset to a shared album.\",\n      \"contextBefore\": \"[var postToSharedAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/posttosharedalbum.md)\",\n      \"contextAfter\": \"[var search: some AssistantSchemas.Intent](assistantschemas/photosintent/search.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0037:0001\",\n      \"source\": \"The app intent conforms to the schema for searching the content in the media library.\",\n      \"contextBefore\": \"[var search: some AssistantSchemas.Intent](assistantschemas/photosintent/search.md)\",\n      \"contextAfter\": \"[var setDepth: some AssistantSchemas.Intent](assistantschemas/photosintent/setdepth.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0039:0001\",\n      \"source\": \"The app intent conforms to the schema for setting the aperture of an asset.\",\n      \"contextBefore\": \"[var setDepth: some AssistantSchemas.Intent](assistantschemas/photosintent/setdepth.md)\",\n      \"contextAfter\": \"[var setExposure: some AssistantSchemas.Intent](assistantschemas/photosintent/setexposure.md)\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md\",\n      \"id\": \"seg:paragraph:see-also:0041:0001\",\n      \"source\": \"The app intent conforms to the schema for setting the exposure of an asset.\",\n      \"contextBefore\": \"[var setExposure: some AssistantSchemas.Intent](assistantschemas/photosintent/setexposure.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"removeAssetsFromAlbum\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/doubleresolver.md\",\n      \"id\": \"seg:paragraph:doubleresolver:0002:0001\",\n      \"source\": \"A resolver that validates a double is within the parameter’s inclusive range.\",\n      \"contextBefore\": \"**Framework**: App Intents **Kind**: struct\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"DoubleResolver\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/doubleresolver.md\",\n      \"id\": \"seg:list:doubleresolver:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 16.0+\",\n      \"contextAfter\": \"macOS 13.0+\",\n      \"documentTitle\": \"DoubleResolver\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/doubleresolver.md\",\n      \"id\": \"seg:list:doubleresolver:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS 16.0+\",\n      \"contextAfter\": \"watchOS 9.0+\",\n      \"documentTitle\": \"DoubleResolver\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/doubleresolver.md\",\n      \"id\": \"seg:heading:conforms-to:0008:0001\",\n      \"source\": \"Conforms To\",\n      \"contextBefore\": \"Relationships\",\n      \"contextAfter\": \"[Equatable](../Swift/Equatable.md)\",\n      \"documentTitle\": \"DoubleResolver\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/doubleresolver.md\",\n      \"id\": \"seg:heading:see-also:0010:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"[SendableMetatype](../Swift/SendableMetatype.md)\",\n      \"contextAfter\": \"[struct DoubleFromIntResolver](doublefromintresolver.md)\",\n      \"documentTitle\": \"DoubleResolver\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/doubleresolver.md\",\n      \"id\": \"seg:paragraph:see-also:0012:0001\",\n      \"source\": \"A resolver that converts a string into a double and validates the result is within the parameter’s inclusive range.\",\n      \"contextBefore\": \"[struct DoubleFromStringResolver](doublefromstringresolver.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"DoubleResolver\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-3uk2.md\",\n      \"id\": \"seg:heading:initidentifierasyncgetter:0000:0001\",\n      \"source\": \"init(identifier:asyncGetter:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: App Intents **Kind**: init\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-3uk2.md\",\n      \"id\": \"seg:paragraph:initidentifierasyncgetter:0002:0001\",\n      \"source\": \"Creates an app intent entity property.\",\n      \"contextBefore\": \"**Framework**: App Intents **Kind**: init\",\n      \"contextAfter\": \"Do not call this directly, use @ComputedProperty or @DeferredProperty\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-3uk2.md\",\n      \"id\": \"seg:paragraph:initidentifierasyncgetter:0002:0002\",\n      \"source\": \"Do not call this directly, use @ComputedProperty or @DeferredProperty\",\n      \"contextBefore\": \"Creates an app intent entity property.\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-3uk2.md\",\n      \"id\": \"seg:list:initidentifierasyncgetter:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 26.0+\",\n      \"contextAfter\": \"macOS 26.0+\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-3uk2.md\",\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`identifier`: The identifier of the property\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"`asyncGetter`: The getter reference for the property\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-3uk2.md\",\n      \"id\": \"seg:list:parameters:0008:0002\",\n      \"source\": \"`asyncGetter`: The getter reference for the property\",\n      \"contextBefore\": \"`identifier`: The identifier of the property\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-3uk2.md\",\n      \"id\": \"seg:paragraph:parameters:0010:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/appintents/entityproperty/init(identifier:asyncgetter:)-3uk2)*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-5xzle.md\",\n      \"id\": \"seg:heading:initidentifierasyncgetter:0000:0001\",\n      \"source\": \"init(identifier:asyncGetter:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: App Intents **Kind**: init\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-5xzle.md\",\n      \"id\": \"seg:paragraph:initidentifierasyncgetter:0002:0001\",\n      \"source\": \"Creates an app intent entity property.\",\n      \"contextBefore\": \"**Framework**: App Intents **Kind**: init\",\n      \"contextAfter\": \"Do not call this directly, use @ComputedProperty or @DeferredProperty\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-5xzle.md\",\n      \"id\": \"seg:paragraph:initidentifierasyncgetter:0002:0002\",\n      \"source\": \"Do not call this directly, use @ComputedProperty or @DeferredProperty\",\n      \"contextBefore\": \"Creates an app intent entity property.\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-5xzle.md\",\n      \"id\": \"seg:list:initidentifierasyncgetter:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 26.0+\",\n      \"contextAfter\": \"macOS 26.0+\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-5xzle.md\",\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`identifier`: The identifier of the property\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"`asyncGetter`: The getter reference for the property\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-5xzle.md\",\n      \"id\": \"seg:list:parameters:0008:0002\",\n      \"source\": \"`asyncGetter`: The getter reference for the property\",\n      \"contextBefore\": \"`identifier`: The identifier of the property\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifierasyncgetter-5xzle.md\",\n      \"id\": \"seg:paragraph:parameters:0010:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/appintents/entityproperty/init(identifier:asyncgetter:)-5xzle)*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"init(identifier:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifiertitleasyncgetter-ljxw.md\",\n      \"id\": \"seg:heading:initidentifiertitleasyncgetter:0000:0001\",\n      \"source\": \"init(identifier:title:asyncGetter:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: App Intents **Kind**: init\",\n      \"documentTitle\": \"init(identifier:title:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifiertitleasyncgetter-ljxw.md\",\n      \"id\": \"seg:paragraph:initidentifiertitleasyncgetter:0002:0001\",\n      \"source\": \"Creates an app intent entity property.\",\n      \"contextBefore\": \"**Framework**: App Intents **Kind**: init\",\n      \"contextAfter\": \"Do not call this directly, use @ComputedProperty or @DeferredProperty\",\n      \"documentTitle\": \"init(identifier:title:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifiertitleasyncgetter-ljxw.md\",\n      \"id\": \"seg:paragraph:initidentifiertitleasyncgetter:0002:0002\",\n      \"source\": \"Do not call this directly, use @ComputedProperty or @DeferredProperty\",\n      \"contextBefore\": \"Creates an app intent entity property.\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"init(identifier:title:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifiertitleasyncgetter-ljxw.md\",\n      \"id\": \"seg:list:initidentifiertitleasyncgetter:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 26.0+\",\n      \"contextAfter\": \"macOS 26.0+\",\n      \"documentTitle\": \"init(identifier:title:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifiertitleasyncgetter-ljxw.md\",\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`identifier`: The identifier of the property\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"`title`: A word or short phrase summarizing this property.\",\n      \"documentTitle\": \"init(identifier:title:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifiertitleasyncgetter-ljxw.md\",\n      \"id\": \"seg:list:parameters:0008:0002\",\n      \"source\": \"`title`: A word or short phrase summarizing this property.\",\n      \"contextBefore\": \"`identifier`: The identifier of the property\",\n      \"contextAfter\": \"`asyncGetter`: The getter reference for the property\",\n      \"documentTitle\": \"init(identifier:title:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifiertitleasyncgetter-ljxw.md\",\n      \"id\": \"seg:list:parameters:0008:0003\",\n      \"source\": \"`asyncGetter`: The getter reference for the property\",\n      \"contextBefore\": \"`title`: A word or short phrase summarizing this property.\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"init(identifier:title:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-identifiertitleasyncgetter-ljxw.md\",\n      \"id\": \"seg:paragraph:parameters:0010:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/appintents/entityproperty/init(identifier:title:asyncgetter:)-ljxw)*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"init(identifier:title:asyncGetter:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-title-1tc1v.md\",\n      \"id\": \"seg:heading:inittitle:0000:0001\",\n      \"source\": \"init(title:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: App Intents **Kind**: init\",\n      \"documentTitle\": \"init(title:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-title-1tc1v.md\",\n      \"id\": \"seg:paragraph:inittitle:0002:0001\",\n      \"source\": \"Creates an app intent entity property.\",\n      \"contextBefore\": \"**Framework**: App Intents **Kind**: init\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"init(title:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-title-1tc1v.md\",\n      \"id\": \"seg:list:inittitle:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 17.0+\",\n      \"contextAfter\": \"macOS 14.0+\",\n      \"documentTitle\": \"init(title:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-title-1tc1v.md\",\n      \"id\": \"seg:list:inittitle:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS 17.0+\",\n      \"contextAfter\": \"watchOS 10.0+\",\n      \"documentTitle\": \"init(title:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-title-1tc1v.md\",\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`title`: A word or short phrase summarizing this property.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"init(title:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-title-1tc1v.md\",\n      \"id\": \"seg:paragraph:parameters:0010:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/appintents/entityproperty/init(title:)-1tc1v)*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"init(title:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-titlecustomindexingkey-7wvtv.md\",\n      \"id\": \"seg:heading:inittitlecustomindexingkey:0000:0001\",\n      \"source\": \"init(title:customIndexingKey:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: App Intents **Kind**: init\",\n      \"documentTitle\": \"init(title:customIndexingKey:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-titlecustomindexingkey-7wvtv.md\",\n      \"id\": \"seg:paragraph:inittitlecustomindexingkey:0002:0001\",\n      \"source\": \"Creates an app intent entity property.\",\n      \"contextBefore\": \"**Framework**: App Intents **Kind**: init\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"init(title:customIndexingKey:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-titlecustomindexingkey-7wvtv.md\",\n      \"id\": \"seg:list:inittitlecustomindexingkey:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 18.4+\",\n      \"contextAfter\": \"macOS 15.4+\",\n      \"documentTitle\": \"init(title:customIndexingKey:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-titlecustomindexingkey-7wvtv.md\",\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`title`: A word or short phrase summarizing this property.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"`customIndexingKey`: A custom Spotlight attribute set key for this property.\",\n      \"documentTitle\": \"init(title:customIndexingKey:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-titlecustomindexingkey-7wvtv.md\",\n      \"id\": \"seg:list:parameters:0008:0002\",\n      \"source\": \"`customIndexingKey`: A custom Spotlight attribute set key for this property.\",\n      \"contextBefore\": \"`title`: A word or short phrase summarizing this property.\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"init(title:customIndexingKey:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/entityproperty/init-titlecustomindexingkey-7wvtv.md\",\n      \"id\": \"seg:paragraph:parameters:0010:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/appintents/entityproperty/init(title:customindexingkey:)-7wvtv)*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"init(title:customIndexingKey:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/intentparameter/init-descriptiondefaultvaluedefaultunitdefaultunitadjustforlocalesupportsnegativenumbersrequestvaluedialoginputconnectionbehaviorresolvers-8cr33.md\",\n      \"id\": \"seg:heading:initdescriptiondefaultvaluedefaultunitdefaultunitadjustforlocalesupportsnegativenumbersrequestvaluedialoginputconnectionbehaviorresolvers:0000:0001\",\n      \"source\": \"init(description:defaultValue:defaultUnit:defaultUnitAdjustForLocale:supportsNegativeNumbers:requestValueDialog:inputConnectionBehavior:resolvers:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: App Intents **Kind**: init\",\n      \"documentTitle\": \"init(description:defaultValue:defaultUnit:defaultUnitAdjustForLocale:supportsNegativeNumbers:requestValueDialog:inputConnectionBehavior:resolvers:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/intentparameter/init-descriptiondefaultvaluedefaultunitdefaultunitadjustforlocalesupportsnegativenumbersrequestvaluedialoginputconnectionbehaviorresolvers-8cr33.md\",\n      \"id\": \"seg:paragraph:initdescriptiondefaultvaluedefaultunitdefaultunitadjustforlocalesupportsnegativenumbersrequestvaluedialoginputconnectionbehaviorresolvers:0002:0001\",\n      \"source\": \"Creates an app intent parameter with a default unit for the measurement.\",\n      \"contextBefore\": \"**Framework**: App Intents **Kind**: init\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"init(description:defaultValue:defaultUnit:defaultUnitAdjustForLocale:supportsNegativeNumbers:requestValueDialog:inputConnectionBehavior:resolvers:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/intentparameter/init-descriptiondefaultvaluedefaultunitdefaultunitadjustforlocalesupportsnegativenumbersrequestvaluedialoginputconnectionbehaviorresolvers-8cr33.md\",\n      \"id\": \"seg:list:initdescriptiondefaultvaluedefaultunitdefaultunitadjustforlocalesupportsnegativenumbersrequestvaluedialoginputconnectionbehaviorresolvers:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 18.0+\",\n      \"contextAfter\": \"macOS 15.0+\",\n      \"documentTitle\": \"init(description:defaultValue:defaultUnit:defaultUnitAdjustForLocale:supportsNegativeNumbers:requestValueDialog:inputConnectionBehavior:resolvers:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/intentparameter/init-descriptiondefaultvaluedefaultunitdefaultunitadjustforlocalesupportsnegativenumbersrequestvaluedialoginputconnectionbehaviorresolvers-8cr33.md\",\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`description`: Additional details about this parameter.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"`defaultValue`: The default value for this parameter. People can specify a different value.\",\n      \"documentTitle\": \"init(description:defaultValue:defaultUnit:defaultUnitAdjustForLocale:supportsNegativeNumbers:requestValueDialog:inputConnectionBehavior:resolvers:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/intentparameter/init-descriptiondefaultvaluedefaultunitdefaultunitadjustforlocalesupportsnegativenumbersrequestvaluedialoginputconnectionbehaviorresolvers-8cr33.md\",\n      \"id\": \"seg:list:parameters:0008:0002\",\n      \"source\": \"`defaultValue`: The default value for this parameter. People can specify a different value.\",\n      \"contextBefore\": \"`description`: Additional details about this parameter.\",\n      \"contextAfter\": \"`defaultUnit`: The default unit that should be selected when this parameter is initially created.\",\n      \"documentTitle\": \"init(description:defaultValue:defaultUnit:defaultUnitAdjustForLocale:supportsNegativeNumbers:requestValueDialog:inputConnectionBehavior:resolvers:)\",\n      \"framework\": \"AppIntents\"\n    },\n    {\n      \"sourcePath\": \"documentation/AppIntents/intentparameter/init-descriptiondefaultvaluedefaultunitdefaultunitadjustforlocalesupportsnegativenumbersrequestvaluedialoginputconnectionbehaviorresolvers-8cr33.md\",\n      \"id\": \"seg:list:parameters:0008:0003\",\n      \"source\": \"`defaultUnit`: The default unit that should be selected when this parameter is initially created.\",\n      \"contextBefore\": \"`defaultValue`: The default value for this parameter. People can specify a different value.\",\n      \"contextAfter\": \"`defaultUnitAdjustForLocale`: Whether or not the default unit should adjust to match someone’s locale. Default value is `false`.\",\n      \"documentTitle\": \"init(description:defaultValue:defaultUnit:defaultUnitAdjustForLocale:supportsNegativeNumbers:requestValueDialog:inputConnectionBehavior:resolvers:)\",\n      \"framework\": \"AppIntents\"\n    }\n  ]\n}\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T16:05:02.691023Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:03.143679Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:03.600730Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T16:05:04.224105Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T16:05:05.311672Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T16:05:07.282393Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T16:05:10.764866Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: dc3542cc-fd2d-4d57-a588-340aad07e4a1\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: dc3542cc-fd2d-4d57-a588-340aad07e4a1"
+    },
+    {
+      "index": 17,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 18,
+      "status": "queued",
+      "segments": 33
+    },
+    {
+      "index": 19,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 20,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 21,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 22,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 23,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 24,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 25,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 26,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 27,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 28,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 29,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 30,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 31,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 32,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 33,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 34,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 35,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 36,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 37,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 38,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 39,
+      "status": "queued",
+      "segments": 38
+    },
+    {
+      "index": 40,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 41,
+      "status": "queued",
+      "segments": 42
+    },
+    {
+      "index": 42,
+      "status": "queued",
+      "segments": 37
+    },
+    {
+      "index": 43,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 44,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 45,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 46,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 47,
+      "status": "queued",
+      "segments": 35
+    },
+    {
+      "index": 48,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 49,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 50,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 51,
+      "status": "queued",
+      "segments": 36
+    },
+    {
+      "index": 52,
+      "status": "queued",
+      "segments": 37
+    },
+    {
+      "index": 53,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 54,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 55,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 56,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 57,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 58,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 59,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 60,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 61,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 62,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 63,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 64,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 65,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 66,
+      "status": "queued",
+      "segments": 36
+    },
+    {
+      "index": 67,
+      "status": "queued",
+      "segments": 34
+    },
+    {
+      "index": 68,
+      "status": "queued",
+      "segments": 37
+    },
+    {
+      "index": 69,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 70,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 71,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 72,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 73,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 74,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 75,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 76,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 77,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 78,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 79,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 80,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 81,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 82,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 83,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 84,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 85,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 86,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 87,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 88,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 89,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 90,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 91,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 92,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 93,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 94,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 95,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 96,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 97,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 98,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 99,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 100,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 101,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 102,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 103,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 104,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 105,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 106,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 107,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 108,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 109,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 110,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 111,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 112,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 113,
+      "status": "queued",
+      "segments": 45
+    },
+    {
+      "index": 114,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 115,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 116,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 117,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 118,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 119,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 120,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 121,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 122,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 123,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 124,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 125,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 126,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 127,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 128,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 129,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 130,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 131,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 132,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 133,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 134,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 135,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 136,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 137,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 138,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 139,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 140,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 141,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 142,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 143,
+      "status": "queued",
+      "segments": 42
+    },
+    {
+      "index": 144,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 145,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 146,
+      "status": "queued",
+      "segments": 32
+    },
+    {
+      "index": 147,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 148,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 149,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 150,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 151,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 152,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 153,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 154,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 155,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 156,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 157,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 158,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 159,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 160,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 161,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 162,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 163,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 164,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 165,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 166,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 167,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 168,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 169,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 170,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 171,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 172,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 173,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 174,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 175,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 176,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 177,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 178,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 179,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 180,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 181,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 182,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 183,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 184,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 185,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 186,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 187,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 188,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 189,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 190,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 191,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 192,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 193,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 194,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 195,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 196,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 197,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 198,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 199,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 200,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 201,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 202,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 203,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 204,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 205,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 206,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 207,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 208,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 209,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 210,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 211,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 212,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 213,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 214,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 215,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 216,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 217,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 218,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 219,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 220,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 221,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 222,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 223,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 224,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 225,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 226,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 227,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 228,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 229,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 230,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 231,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 232,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 233,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 234,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 235,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 236,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 237,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 238,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 239,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 240,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 241,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 242,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 243,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 244,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 245,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 246,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 247,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 248,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 249,
+      "status": "queued",
+      "segments": 26
+    }
+  ]
+}
