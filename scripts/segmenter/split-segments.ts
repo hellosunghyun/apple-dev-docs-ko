@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import { loadSourceConfig } from "../lib/config.js";
 import { filterChangedManifestFiles } from "../lib/changed-files.js";
+import { selectShardManifestFiles } from "../lib/shards.js";
 import { createMemoryFromParsed, mergeMemory, readMemory, writeMemory } from "../lib/memory.js";
 import { readJson, readText, resolveRoot, writeJson } from "../lib/fs.js";
 import { parseMarkdownDocument } from "../lib/markdown.js";
@@ -25,7 +26,7 @@ async function main(): Promise<void> {
   if (options.shard && options.shardTotal) {
     const index = Number(options.shard);
     const total = Number(options.shardTotal);
-    files = files.filter((_, i) => i % total === index);
+    files = await selectShardManifestFiles(files, index, total);
   }
 
   let count = 0;

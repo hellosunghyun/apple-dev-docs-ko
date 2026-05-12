@@ -12,7 +12,7 @@ on:
         description: Optional previous run id. Restores completed shard batch outputs from checkpoint branches.
       max_parallel:
         required: true
-        default: "20"
+        default: "64"
       llm_concurrency:
         required: true
         default: "3"
@@ -89,6 +89,8 @@ jobs:
             apple-dev-docs-source-${{ runner.os }}-
       - run: pnpm run upstream:sync
       - run: pnpm run manifest
+        env:
+          SHARD_TOTAL: ${{ inputs.shard_total }}
       - id: plan
         env:
           SHARD_TOTAL: ${{ inputs.shard_total }}
@@ -100,8 +102,17 @@ jobs:
             console.error('shard_total must be an integer from 1 to 256');
             process.exit(1);
           }
-          const shards = Array.from({ length: total }, (_, index) => index);
+          const plan = JSON.parse(fs.readFileSync('state/shard-plan.json', 'utf8'));
+          const shards = plan.shards
+            .filter((shard) => Array.isArray(shard.files) && shard.files.length > 0)
+            .map((shard) => shard.shardIndex)
+            .sort((a, b) => a - b);
+          if (!shards.length) {
+            console.error('shard plan did not produce active shards');
+            process.exit(1);
+          }
           fs.appendFileSync(process.env.GITHUB_OUTPUT, `shards=${JSON.stringify(shards)}\n`);
+          console.log(`Active shards: ${shards.length}/${total}`);
           NODE
       - uses: actions/upload-artifact@v4
         with:

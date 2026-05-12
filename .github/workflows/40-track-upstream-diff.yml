@@ -88,6 +88,8 @@ jobs:
       - run: pnpm run upstream:sync
       - run: pnpm tsx scripts/upstream/diff-files.ts
       - run: pnpm run manifest
+        env:
+          SHARD_TOTAL: ${{ inputs.shard_total || '256' }}
       - id: plan
         env:
           SHARD_TOTAL: ${{ inputs.shard_total || '256' }}
@@ -103,6 +105,7 @@ jobs:
 
           const manifest = JSON.parse(fs.readFileSync('state/manifest.json', 'utf8'));
           const changedState = JSON.parse(fs.readFileSync('state/changed-files.json', 'utf8'));
+          const shardPlan = JSON.parse(fs.readFileSync('state/shard-plan.json', 'utf8'));
           const sourceRoot = 'documentation';
           const rootPrefix = `${sourceRoot}/`;
 
@@ -119,14 +122,15 @@ jobs:
           }
 
           const changed = new Set(changedState.changes.map(sourcePathFromChange).filter(Boolean));
-          const shardCounts = new Map();
-          let matchingFiles = 0;
-          for (const [index, file] of manifest.files.entries()) {
-            if (!changed.has(file.sourcePath)) continue;
-            matchingFiles += 1;
-            const shardIndex = index % shardTotal;
-            shardCounts.set(shardIndex, (shardCounts.get(shardIndex) || 0) + 1);
-          }
+          const manifestPaths = new Set(manifest.files.map((file) => file.sourcePath));
+          const changedManifestFiles = Array.from(changed).filter((sourcePath) => manifestPaths.has(sourcePath));
+          const changedManifestSet = new Set(changedManifestFiles);
+          const shardCounts = new Map(
+            shardPlan.shards
+              .map((shard) => [shard.shardIndex, shard.files.filter((sourcePath) => changedManifestSet.has(sourcePath)).length])
+              .filter(([, count]) => count > 0)
+          );
+          const matchingFiles = changedManifestFiles.length;
 
           const shards = Array.from(shardCounts.keys()).sort((a, b) => a - b);
           const plannedShards = shards.length ? shards : [0];

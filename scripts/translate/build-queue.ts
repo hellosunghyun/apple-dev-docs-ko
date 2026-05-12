@@ -2,8 +2,9 @@ import { appendFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { Command } from "commander";
 import { loadGlossary, loadTranslationConfig } from "../lib/config.js";
-import { filterChangedSourcePaths } from "../lib/changed-files.js";
+import { filterChangedManifestFiles } from "../lib/changed-files.js";
 import { ensureDir, readJson, resolveRoot, writeJson } from "../lib/fs.js";
+import { selectShardManifestFiles } from "../lib/shards.js";
 import { readOverride } from "../lib/overrides.js";
 import { applyOverride, readMemory, segmentNeedsTranslation } from "../lib/memory.js";
 import type { Manifest, QueueBatchFileRef, QueueFile, TranslationBatchInput, TranslationMemorySegment } from "../lib/types.js";
@@ -31,14 +32,15 @@ const options = program.opts<{
 async function main(): Promise<void> {
   const translationConfig = await loadTranslationConfig();
   const manifest = await readJson<Manifest>(resolveRoot("state/manifest.json"));
-  let sourcePaths = manifest.files.map((file) => file.sourcePath);
-  if (options.changedOnly) sourcePaths = await filterChangedSourcePaths(sourcePaths);
-  if (options.limitFiles) sourcePaths = sourcePaths.slice(0, Number(options.limitFiles));
+  let files = manifest.files;
+  if (options.changedOnly) files = await filterChangedManifestFiles(files);
+  if (options.limitFiles) files = files.slice(0, Number(options.limitFiles));
   if (options.shard && options.shardTotal) {
     const index = Number(options.shard);
     const total = Number(options.shardTotal);
-    sourcePaths = sourcePaths.filter((_, i) => i % total === index);
+    files = await selectShardManifestFiles(files, index, total);
   }
+  const sourcePaths = files.map((file) => file.sourcePath);
 
   const candidates: TranslationMemorySegment[] = [];
   let preserved = 0;
