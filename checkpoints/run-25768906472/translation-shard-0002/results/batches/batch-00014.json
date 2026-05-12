@@ -1,0 +1,170 @@
+{
+  "batchIndex": 14,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:45.167Z",
+  "durationMs": 20845,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/Accelerate/vimagehorizontalsheard-cbcr16f.md",
+        "id": "seg:list:see-also:0025:0001",
+        "ko": "[func vImageHorizontalShearD_CbCr16S(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Double, Double, ResamplingFilter!, UnsafePointer<Int16>!, vImage_Flags) -> vImage_Error](vimagehorizontalsheard_cbcr16s(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimagehorizontalsheard-cbcr16f.md",
+        "id": "seg:list:see-also:0025:0002",
+        "ko": "[func vImageHorizontalShearD_CbCr16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Double, Double, ResamplingFilter!, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimagehorizontalsheard_cbcr16u(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimagehorizontalsheard-cbcr16f.md",
+        "id": "seg:list:see-also:0025:0003",
+        "ko": "[func vImageHorizontalShear_CbCr16S(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, UnsafePointer<Int16>!, vImage_Flags) -> vImage_Error](vimagehorizontalshear_cbcr16s(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimagehorizontalsheard-cbcr16f.md",
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/vimagehorizontalsheard_cbcr16f(_:_:_:_:_:_:_:_:_:))*"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:heading:vimageverticalshearargb16f:0000:0001",
+        "ko": "vImageVerticalShear_ARGB16F(_:_:_:_:_:_:_:_:_:)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:vimageverticalshearargb16f:0002:0001",
+        "ko": "부동 소수점 16비트 채널당 4채널 인터리브 이미지의 관심 영역에서 단정밀도 수직 전단 변환을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "[`kvImageNoError`](kvimagenoerror.md); 그렇지 않으면 [`Data Types and Constants`](data-types-and-constants.md)에서 설명하는 오류 코드 중 하나입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "이 함수는 사용자가 지정한 리샘플링 필터를 사용해 이미지를 한 차원에서 기울이기, 크기 조정 및 이동 변환합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "이미지 크기 조정에는 리샘플링 필터의 scale 속성을 사용하고, 대상 이미지의 위치 조정에는 translate 매개변수를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:discussion:0010:0003",
+        "ko": "이 함수는 대상 버퍼를 채우는 데 필요한 만큼 소스 이미지를 변환합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:discussion:0010:0004",
+        "ko": "따라서 관심 영역 밖의 픽셀도 변환할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "이 함수는 제자리(in-place)로 동작하지 않습니다. 즉, 소스 버퍼와 대상 버퍼는 서로 다른 메모리를 가리켜야 합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:parameters:0013:0001",
+        "ko": "`src`: 소스 이미지를 포함하는 vImage 버퍼 구조체에 대한 포인터입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:parameters:0013:0002",
+        "ko": "`dest`: 대상 vImage 버퍼 구조체에 대한 포인터입니다. 이 구조체의 `height`, `width`, `rowBytes` 필드를 채우고 적절한 크기의 데이터 버퍼를 할당할 책임이 있습니다. 반환 시 이 구조체가 가리키는 데이터 버퍼에는 대상 이미지 데이터가 포함됩니다. 더 이상 데이터 버퍼가 필요하지 않으면 메모리 누수를 방지하기 위해 메모리를 해제해야 합니다. 이 매개변수는 소스 이미지 내 관심 영역의 크기도 지정합니다. 관심 영역의 높이와 너비는 대상 이미지 버퍼와 동일합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:parameters:0013:0003",
+        "ko": "`srcOffsetToROI_X`: 소스 이미지 내에서 관심 영역 좌측 상단 픽셀을 기준으로 한 수평 오프셋(픽셀)입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:parameters:0013:0004",
+        "ko": "`srcOffsetToROI_Y`: 소스 이미지 내에서 관심 영역 좌측 상단 픽셀을 기준으로 한 수직 오프셋(픽셀)입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:parameters:0013:0005",
+        "ko": "`yTranslate`: 수직 방향의 이동 값입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:parameters:0013:0006",
+        "ko": "`shearSlope`: 시계 방향으로 측정한 전단된 이미지 전면 모서리의 기울기입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:parameters:0013:0007",
+        "ko": "`filter`: 함수가 사용하는 리샘플링 필터입니다. 자세한 내용은 [`Reducing artifacts with custom resampling filters`](reducing-artifacts-with-custom-resampling-filters.md)를 참조합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:parameters:0013:0008",
+        "ko": "`backColor`: 배경색입니다. `kvImageBackgroundColorFill` 플래그를 설정한 경우 픽셀 값을 전달합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:parameters:0013:0009",
+        "ko": "`flags`: 변환을 적용할 때 사용할 옵션입니다. 소스 이미지 가장자리 바깥의 픽셀 위치 처리 방식을 지정하려면 다음 플래그 중 하나를 설정합니다: [`kvImageBackgroundColorFill`](kvimagebackgroundcolorfill.md) 또는 [`kvImageEdgeExtend`](kvimageedgeextend.md). 더 높은 품질이지만 느린 리샘플링 필터를 사용하려면 [`kvImageHighQualityResampling`](kvimagehighqualityresampling.md) 플래그를 설정합니다. 코드에서 자체 타일링 또는 자체 멀티스레딩을 구현한 경우 [`kvImageDoNotTile`](kvimagedonottile.md)을 전달합니다. 이 함수는 [`kvImageLeaveAlphaUnchanged`](kvimageleavealphaunchanged.md) 플래그를 무시합니다. vImage가 더 빠르지만 정밀도가 낮은 내부 산술을 사용하도록 하려면 [`kvImageUseFP16Accumulator`](kvimageusefp16accumulator.md) 플래그를 설정합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:heading:see-also:0014:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:see-also:0015:0001",
+        "ko": "[Applying geometric transforms to images](applying-geometric-transforms-to-images.md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "vImage를 사용해 이미지 버퍼를 반사하고, 전단, 회전 및 스케일링합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:see-also:0017:0001",
+        "ko": "[func vImageVerticalShear_Planar16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, Pixel_16U, vImage_Flags) -> vImage_Error](vimageverticalshear_planar16u(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "부호 없는 16비트 평면 이미지의 관심 영역에서 단정밀도 수직 전단 변환을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:see-also:0019:0001",
+        "ko": "[func vImageVerticalShear_Planar16S(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, Pixel_16S, vImage_Flags) -> vImage_Error](vimageverticalshear_planar16s(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "부호 있는 16비트 평면 이미지의 관심 영역에서 단정밀도 수직 전단 변환을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:see-also:0021:0001",
+        "ko": "[func vImageVerticalShear_Planar16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, Pixel_16F, vImage_Flags) -> vImage_Error](vimageverticalshear_planar16f(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "부동 소수점 16비트 평면 이미지의 관심 영역에서 단정밀도 수직 전단 변환을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-argb16f.md",
+        "id": "seg:list:see-also:0023:0001",
+        "ko": "[func vImageVerticalShear_CbCr16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageverticalshear_cbcr16u(_:_:_:_:_:_:_:_:_:).md)"
+      }
+    ]
+  }
+}
