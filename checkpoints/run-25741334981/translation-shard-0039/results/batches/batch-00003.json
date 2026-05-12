@@ -1,0 +1,190 @@
+{
+  "batchIndex": 3,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:45.043Z",
+  "durationMs": 18693,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:handle-user-interaction:0051:0001",
+        "ko": "편집을 제어하기 위해 자체 탭 제스처 인식기를 구현하면 [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView)는 사용자가 기존 노트를 탭해 텍스트를 편집할 수 있게 합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-interaction:0051:0002",
+        "ko": "사용자가 노트를 편집할 때 알림을 받으려면 [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView)의 `textViewDidBeginEditing(_ textView:)` 델리게이트 콜백을 재정의합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-interaction:0053:0001",
+        "ko": "다음 코드는 화면을 팬 제스처로 이동해 노트를 이동할 수 있는 기능을 활성화합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-interaction:0055:0001",
+        "ko": "사용자가 스티커 노트를 재배치할 때, 화면 터치 위치를 [`raycast(from:allowing:alignment:)`](https://developer.apple.com/documentation/RealityKit/ARView/raycast(from:allowing:alignment:))를 사용해 3D 월드 위치로 변환합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-interaction:0055:0002",
+        "ko": "이후 사용자는 임의의 화면 위치로 주석을 단순히 이동하는 대신 실제 세계에서 스티커 노트의 앵커를 재배치할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-interaction:0055:0003",
+        "ko": "팬 제스처의 마지막 화면 위치에서 레이캐스트를 실행했을 때 3D 월드 위치와의 교차가 감지되지 않으면 해당 위치로 스티커 노트를 이동하지 않습니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-interaction:0057:0001",
+        "ko": "다음 pan 제스처 처리 부분은 사용자가 화면 상단의 \"delete\" 텍스트로 끌어올 때 스티커 노트를 삭제할 수 있는 기능을 지원합니다."
+      },
+      {
+        "id": "seg:heading:enhance-the-experience-with-animation:0059:0001",
+        "ko": "애니메이션으로 경험 향상"
+      },
+      {
+        "id": "seg:paragraph:enhance-the-experience-with-animation:0060:0001",
+        "ko": "화면 공간 주석을 최소화하면 AR 경험에서 사용자의 몰입도를 최대화할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:enhance-the-experience-with-animation:0060:0002",
+        "ko": "샘플 앱은 사용자가 텍스트를 편집하지 않을 때 스티커 노트를 작게 표시해 산만함을 줄이고 실제 환경에 집중할 수 있게 합니다."
+      },
+      {
+        "id": "seg:paragraph:enhance-the-experience-with-animation:0060:0003",
+        "ko": "그러나 같은 이유로 사용자가 텍스트를 편집할 때는 스티커 노트를 확대해야 합니다."
+      },
+      {
+        "id": "seg:paragraph:enhance-the-experience-with-animation:0060:0004",
+        "ko": "편집 상태와 비편집 상태 간 전환을 매끄럽게 만들려면 스티커 노트 크기를 갑작스럽게 바꾸지 말고 애니메이션으로 조정합니다."
+      },
+      {
+        "id": "seg:paragraph:enhance-the-experience-with-animation:0060:0005",
+        "ko": "`animateStickyViewToEditingFrame` 함수에서 해당 동작을 확인할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:enhance-the-experience-with-animation:0062:0001",
+        "ko": "배경을 어둡게 하고 사용자가 편집 중인 스티커 노트를 강조 표시하여 편집 경험을 더욱 집중되게 만듭니다."
+      },
+      {
+        "id": "seg:paragraph:enhance-the-experience-with-animation:0064:0001",
+        "ko": "사용자가 스티커 노트의 실제 위치를 잃지 않도록 노트를 한 위치에서 다음 위치로 부드럽게 애니메이션 처리합니다."
+      },
+      {
+        "id": "seg:paragraph:enhance-the-experience-with-animation:0064:0002",
+        "ko": "예를 들어 주석 재배치가 실패하면 스티커 노트를 원래 화면 위치로 되돌려 애니메이션합니다."
+      },
+      {
+        "id": "seg:paragraph:enhance-the-experience-with-animation:0064:0003",
+        "ko": "이렇게 하면 사용자가 다시 이동을 시도할 때 주석을 추적하기 쉬워집니다."
+      },
+      {
+        "id": "seg:paragraph:enhance-the-experience-with-animation:0066:0001",
+        "ko": "노트의 움직임을 애니메이트하려면 [`UIViewPropertyAnimator`](https://developer.apple.com/documentation/UIKit/UIViewPropertyAnimator)를 사용해 위치를 지속적으로 설정합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0068:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0069:0001",
+        "ko": "[Recognizing and Labeling Arbitrary Objects](recognizing-and-labeling-arbitrary-objects.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0070:0001",
+        "ko": "커스텀 광학 인식 알고리즘을 사용해 카메라 피드에서 인식한 객체를 추적하는 앵커를 생성합니다."
+      },
+      {
+        "id": "seg:heading:setprefersnointerruptionsfromsystemalerts:0000:0001",
+        "ko": "setPrefersNoInterruptionsFromSystemAlerts(_:)"
+      },
+      {
+        "id": "seg:paragraph:setprefersnointerruptionsfromsystemalerts:0002:0001",
+        "ko": "시스템 경고로 오디오 세션이 중단되지 않도록 하는 기본 설정을 설정합니다."
+      },
+      {
+        "id": "seg:list:mentions:0008:0001",
+        "ko": "[Handling audio interruptions](handling-audio-interruptions.md)"
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "iOS 14부터 사용자는 시스템이 수신 전화를 배너 방식 또는 전체 화면 방식으로 표시할지 지정하는 전역 기본 설정을 설정할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "배너 방식을 사용할 때 이 값을 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정하면 수신 통화 알림이 오디오 세션을 중단하는 것을 방지하고 사용자가 전화를 수락하거나 거절할 수 있는 기회를 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0003",
+        "ko": "시스템은 사용자가 전화를 수락한 경우에만 오디오 세션을 중단합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "이 기본 설정을 활성화하면 영상 및 오디오 미디어 녹음이나 음악 성능용 앱처럼 오디오 세션을 중단하고 싶지 않은 앱의 사용자 경험을 개선할 수 있습니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0012:0001",
+        "ko": "❗ **중요**: 이 기본 설정은 기기가 전체 화면 표시 스타일을 사용하는 경우에는 효과가 없습니다. 시스템은 수신 전화를 받을 때 오디오 세션을 중단합니다."
+      },
+      {
+        "id": "seg:list:parameters:0014:0001",
+        "ko": "`inValue`: 중단 기본 설정 값입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0015:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "시스템 경고로 세션이 중단되지 않도록 할지 나타내는 Boolean 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "현재 활성 경로가 분리될 때 시스템이 오디오 세션을 중단하는지 여부를 나타내는 Boolean 값입니다."
+      },
+      {
+        "id": "seg:list:see-also:0020:0001",
+        "ko": "[func setPrefersInterruptionOnRouteDisconnect(Bool) throws](avaudiosession/setprefersinterruptiononroutedisconnect(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "활성 경로가 분리될 때 오디오 세션을 중단하도록 기본 설정합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "오디오 중단이 발생할 때 시스템이 게시하는 알림입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/setprefersnointerruptionsfromsystemalerts(_:))*"
+      },
+      {
+        "id": "seg:paragraph:velocity:0002:0001",
+        "ko": "MDI velocity."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "목적지 오디오 유닛의 [`AVMusicTrack`](avmusictrack.md) 내 악기가 소수값을 지원하는 경우 이 값을 사용해 게인 및 기타 값의 정밀한 변경을 생성할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "값의 유효 범위는 대상 오디오 유닛에 따라 다르며 일반적으로 `0.0`에서 `127.0` 사이입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "MIDI 노트 번호입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "악기 식별자입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "이벤트를 처리하는 오디오 유닛 채널입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "이벤트의 지속 시간입니다. 단위는 beat입니다."
+      }
+    ]
+  }
+}
