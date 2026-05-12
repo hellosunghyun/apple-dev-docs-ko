@@ -1,0 +1,245 @@
+{
+  "batchIndex": 6,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:32.663Z",
+  "durationMs": 11168,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "Pointwise 형식은 `i,j` 위치에 대해 개별 값이 값 블록이 아닌 형태로 저장됨을 의미합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:discussion:0010:0003",
+        "ko": "블록 지원은 블록 생성 루틴을 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:discussion:0010:0004",
+        "ko": "이 행렬 객체에 항목을 삽입하는 자세한 내용은 다양한 삽입 루틴을 참조합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "행렬 사용이 끝나면 [`sparse_matrix_destroy(_:)`](sparse_matrix_destroy(_:).md)를 사용해 행렬에 할당된 메모리를 해제해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:blockquote:discussion:0012:0001",
+        "ko": "❗ **중요**: Apple은 Accelerate 프레임워크에서 BLAS 및 LAPACK 라이브러리를 LAPACK 3.9.1과 일치하도록 제공합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:blockquote:discussion:0012:0002",
+        "ko": "iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26, watchOS 26부터 라이브러리는 LAPACK 3.12.0과 일치합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:blockquote:discussion:0012:0003",
+        "ko": "이 새 인터페이스는 추가 기능과 함께 새 ILP64 인터페이스도 제공합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:blockquote:discussion:0012:0004",
+        "ko": "새 인터페이스를 사용하려면 Accelerate 또는 vecLib 헤더를 포함하기 전에 `ACCELERATE_NEW_LAPACK`을 정의합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:blockquote:discussion:0012:0005",
+        "ko": "ILP64 인터페이스의 경우 `ACCELERATE_LAPACK_ILP64`도 정의합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:blockquote:discussion:0012:0006",
+        "ko": "Swift 프로젝트의 경우 Xcode 빌드 설정에서 `ACCELERATE_NEW_LAPACK=1` 및 `ACCELERATE_LAPACK_ILP64=1`을 전처리기 매크로로 지정합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:parameters:0014:0001",
+        "ko": "`M`: 행렬의 행 개수입니다. 0보다 커야 합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:parameters:0014:0002",
+        "ko": "`N`: 행렬의 열 개수입니다. 0보다 커야 합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:heading:see-also:0015:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func sparse_matrix_create_float(sparse_dimension, sparse_dimension) -> sparse_matrix_float!](sparse_matrix_create_float(_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "단정밀도 희소 행렬 객체를 반환합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[func sparse_insert_entry_double(sparse_matrix_double!, Double, sparse_index, sparse_index) -> sparse_status](sparse_insert_entry_double(_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "단일 스칼라 항목을 배정밀도 희소 행렬에 삽입합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:see-also:0020:0001",
+        "ko": "[func sparse_insert_entry_float(sparse_matrix_float!, Float, sparse_index, sparse_index) -> sparse_status](sparse_insert_entry_float(_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "단일 스칼라 항목을 단정밀도 희소 행렬에 삽입합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:see-also:0022:0001",
+        "ko": "[func sparse_insert_entries_double(sparse_matrix_double!, sparse_dimension, UnsafePointer<Double>!, UnsafePointer<sparse_index>!, UnsafePointer<sparse_index>!) -> sparse_status](sparse_insert_entries_double(_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "배정밀도 희소 행렬에 스칼라 항목 목록을 삽입합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:see-also:0024:0001",
+        "ko": "[func sparse_insert_entries_float(sparse_matrix_float!, sparse_dimension, UnsafePointer<Float>!, UnsafePointer<sparse_index>!, UnsafePointer<sparse_index>!) -> sparse_status](sparse_insert_entries_float(_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "단정밀도 희소 행렬에 스칼라 항목 목록을 삽입합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:see-also:0026:0001",
+        "ko": "[func sparse_insert_col_double(sparse_matrix_double!, sparse_index, sparse_dimension, UnsafePointer<Double>!, UnsafePointer<sparse_index>!) -> sparse_status](sparse_insert_col_double(_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "배정밀도 희소 행렬의 단일 열에 스칼라 항목 목록을 삽입합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:see-also:0028:0001",
+        "ko": "[func sparse_insert_col_float(sparse_matrix_float!, sparse_index, sparse_dimension, UnsafePointer<Float>!, UnsafePointer<sparse_index>!) -> sparse_status](sparse_insert_col_float(_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "단정밀도 희소 행렬의 단일 열에 스칼라 항목 목록을 삽입합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:see-also:0030:0001",
+        "ko": "[func sparse_insert_row_double(sparse_matrix_double!, sparse_index, sparse_dimension, UnsafePointer<Double>!, UnsafePointer<sparse_index>!) -> sparse_status](sparse_insert_row_double(_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "배정밀도 희소 행렬의 단일 행에 스칼라 항목 목록을 삽입합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:list:see-also:0032:0001",
+        "ko": "[func sparse_insert_row_float(sparse_matrix_float!, sparse_index, sparse_dimension, UnsafePointer<Float>!, UnsafePointer<sparse_index>!) -> sparse_status](sparse_insert_row_float(_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "단정밀도 희소 행렬의 단일 행에 스칼라 항목 목록을 삽입합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparse-matrix-create-double.md",
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/sparse_matrix_create_double(_:_:))*"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:heading:sparserefactor:0000:0001",
+        "ko": "SparseRefactor(_:_:_:_:)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:paragraph:sparserefactor:0002:0001",
+        "ko": "이 호출은 갱신된 옵션을 사용하고 내부 할당 없이 제공된 복소수 배정밀도 행렬의 새로운 인수분해를 계산하기 위해 제공된 인수분해 객체의 저장소를 재사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "`Matrix`는 원래의 인수분해에 사용한 것과 동일한 non-zero 구조를 가져야 합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "이 호출은 `SparseFactor`에 `factorStorage` 인수로 전달된 명시적 저장소를 재사용해 얻을 수 있는 동작과 매우 유사한 동작을 제공합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "또한 단순화된 호출 시퀀스를 제공할 뿐만 아니라, 지연 피벗을 처리하기 위해 할당된 추가 저장소도 재사용할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "지연된 피벗이 발생하는 피벗드 인수분해의 경우 내부 메모리 할당이 발생할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "메모리 할당을 더 엄격하게 제어해야 하면, 필요한 동작을 구현하는 `sfoptions.malloc` 함수를 제공하거나 대체 비피벗 인수분해 반환값을 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:paragraph:discussion:0010:0003",
+        "ko": "`sfoptions.malloc`이 NULL을 반환하면 인수분해가 즉시 중단됩니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "기본 객체의 참조 카운트가 정확히 1이 아닌 경우(예: `SparseGetTranspose` 또는 `SparseCreateSubfactor()` 호출로 인해 생성된 암시적 복사본이 `SparseCleanup` 호출로 파괴되지 않은 경우), 새 저장소가 무조건 할당됩니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:list:parameters:0013:0001",
+        "ko": "`Matrix`: 인수분해할 행렬입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:list:parameters:0013:0002",
+        "ko": "`nfoptions`: 수치 인수분해 옵션입니다. 예를 들어 피벗 매개변수가 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:list:parameters:0013:0003",
+        "ko": "`workspace`: 최소 `Factorization->symbolicFactorization.workspaceSize_Double * 2`바이트 크기의 작업 공간 포인터입니다. 이 메모리는 16바이트 정렬이어야 합니다( `malloc`에서 반환된 할당은 모두 이 속성을 가집니다). 이 작업 공간은 함수가 반환되면 즉시 사용자가 재사용하거나 소멸시킬 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:heading:see-also:0014:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:list:see-also:0015:0001",
+        "ko": "[func SparseRefactor(SparseMatrix_Double, UnsafeMutablePointer<SparseOpaqueFactorization_Double>, UnsafeMutableRawPointer)](sparserefactor(_:_:_:)-9mqeq.md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/sparserefactor-20xqc.md",
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "기존 인수분해의 저장소를 사용해 지정된 배정밀도 행렬의 인수분해를 내부 메모리 할당 없이 계산합니다."
+      }
+    ]
+  }
+}
