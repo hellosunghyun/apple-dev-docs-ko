@@ -1,0 +1,110 @@
+{
+  "batchIndex": 4,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:53.410Z",
+  "durationMs": 17954,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:add-custom-parameters-to-your-audio-unit:0022:0001",
+        "ko": "`AUParameterTree` 인스턴스를 생성하고 이를 트리의 자식으로 설정하여 매개변수를 트리로 구성합니다."
+      },
+      {
+        "id": "seg:paragraph:add-custom-parameters-to-your-audio-unit:0024:0001",
+        "ko": "Next, you bind handlers to the parameter tree’s readable and writeable values by installing closures for its [`implementorValueObserver`](https://developer.apple.com/documentation/AudioToolbox/AUParameterNode/implementorValueObserver), [`implementorValueProvider`](https://developer.apple.com/documentation/AudioToolbox/AUParameterNode/implementorValueProvider), and [`implementorStringFromValueCallback`](https://developer.apple.com/documentation/AudioToolbox/AUParameterNode/implementorStringFromValueCallback) properties."
+      },
+      {
+        "id": "seg:paragraph:add-custom-parameters-to-your-audio-unit:0024:0002",
+        "ko": "이러한 클로저는 filter adapter 인스턴스로 위임되며, 이는 다시 하위 DSP 로직과 통신합니다."
+      },
+      {
+        "id": "seg:heading:connect-the-parameters-to-your-user-interface:0026:0001",
+        "ko": "매개변수를 사용자 인터페이스에 연결"
+      },
+      {
+        "id": "seg:paragraph:connect-the-parameters-to-your-user-interface:0027:0001",
+        "ko": "샘플 앱의 iOS 및 macOS 대상은 각각 플랫폼별 사용자 인터페이스를 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:connect-the-parameters-to-your-user-interface:0027:0002",
+        "ko": "사용자 인터페이스와 Audio Unit 간 통신을 조정하기 위해 `AUv3FilterDemoViewController`라는 공유 뷰 컨트롤러를 사용합니다."
+      },
+      {
+        "id": "seg:paragraph:connect-the-parameters-to-your-user-interface:0027:0003",
+        "ko": "`connectViewToAU()` 메서드에서 사용자 인터페이스를 Audio Unit의 매개변수에 연결합니다."
+      },
+      {
+        "id": "seg:paragraph:connect-the-parameters-to-your-user-interface:0029:0001",
+        "ko": "위의 코드에서처럼 `connectViewToAU()` 메서드에서는 Audio Unit의 매개변수 트리를 찾아 cutoff 및 resonance 매개변수를 검색합니다."
+      },
+      {
+        "id": "seg:paragraph:connect-the-parameters-to-your-user-interface:0029:0002",
+        "ko": "플러그인 매개변수 값이 변경될 때 사용자 인터페이스를 업데이트하도록 옵저버 클로저도 추가합니다."
+      },
+      {
+        "id": "seg:heading:add-factory-presets:0030:0001",
+        "ko": "팩토리 프리셋 추가"
+      },
+      {
+        "id": "seg:paragraph:add-factory-presets:0031:0001",
+        "ko": "대부분의 오디오 플러그인에는 *factory presets*이라고 하는 미리 정의된 값의 집합이 있습니다."
+      },
+      {
+        "id": "seg:paragraph:add-factory-presets:0031:0002",
+        "ko": "팩토리 프리셋은 플러그인의 매개변수 값을 미리 구성한 값으로, 추가 사용자 지정 작업을 위한 유용한 시작점을 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:add-factory-presets:0031:0003",
+        "ko": "호스트 앱은 이러한 프리셋을 사용자 인터페이스에 표시하여 사용자가 선택할 수 있게 합니다."
+      },
+      {
+        "id": "seg:paragraph:add-factory-presets:0032:0001",
+        "ko": "다음 코드 예시는 팩토리 프리셋과 해당 연결 값을 정의하는 방법을 보여줍니다."
+      },
+      {
+        "id": "seg:heading:support-user-presets:0034:0001",
+        "ko": "사용자 프리셋 지원"
+      },
+      {
+        "id": "seg:paragraph:support-user-presets:0035:0001",
+        "ko": "팩토리 프리셋은 추가 사용자 지정의 유용한 시작점을 제공하지만, 사용자는 변경 사항을 저장하고 자신만의 사용자 프리셋을 만들 수 있어야 합니다."
+      },
+      {
+        "id": "seg:paragraph:support-user-presets:0035:0002",
+        "ko": "`AUAudioUnit`은(는) 사용자 프리셋에 대한 기본 지원을 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:support-user-presets:0035:0003",
+        "ko": "이 지원을 Audio Unit에서 사용하려면 [`supportsUserPresets`](https://developer.apple.com/documentation/AudioToolbox/AUAudioUnit/supportsUserPresets) 속성을 재정의하여 `true`를 반환하도록 합니다."
+      },
+      {
+        "id": "seg:paragraph:support-user-presets:0037:0001",
+        "ko": "사용자 프리셋 지원을 활성화하면 Audio Unit이 사용자 프리셋을 자동으로 로드하고 저장 및 삭제할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:support-user-presets:0037:0002",
+        "ko": "[`userPresets`](https://developer.apple.com/documentation/AudioToolbox/AUAudioUnit/userPresets), [`saveUserPreset(_:)`](https://developer.apple.com/documentation/AudioToolbox/AUAudioUnit/saveUserPreset(_:)), [`deleteUserPreset(_:)`](https://developer.apple.com/documentation/AudioToolbox/AUAudioUnit/deleteUserPreset(_:)) API의 기본 구현은 내부 저장소에서 읽기와 쓰기를 수행하지만, 지속성 동작을 직접 관리하려는 경우 이 속성과 메서드를 재정의할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:support-user-presets:0037:0003",
+        "ko": "예를 들어, 기본 동작을 재정의하여 사용자 프리셋을 iCloud 컨테이너 또는 다른 원격 위치에 직접 영속화할 수 있습니다."
+      },
+      {
+        "id": "seg:heading:select-factory-and-user-presets:0038:0001",
+        "ko": "팩토리 및 사용자 프리셋 선택"
+      },
+      {
+        "id": "seg:paragraph:select-factory-and-user-presets:0039:0001",
+        "ko": "호스트 앱은 플러그인의 `currentPreset` 속성을 설정하여 팩토리 또는 사용자 프리셋을 선택합니다."
+      },
+      {
+        "id": "seg:paragraph:select-factory-and-user-presets:0039:0002",
+        "ko": "이 속성을 재정의하고 선택한 프리셋 유형에 따라 적절한 동작을 수행합니다."
+      },
+      {
+        "id": "seg:paragraph:select-factory-and-user-presets:0039:0003",
+        "ko": "사용자가 팩토리 프리셋(프리셋 `number`가 `0`보다 큰 값)을 선택한 경우, 해당 값 집합을 조회하여 매개변수 값을 그에 맞게 설정합니다."
+      }
+    ]
+  }
+}
