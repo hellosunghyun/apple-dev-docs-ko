@@ -441,13 +441,12 @@ jobs:
           echo "count=${paused_count}" >> "$GITHUB_OUTPUT"
           if [ "$paused_count" != "0" ]; then
             echo "paused=true" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Translation paused::${paused_count} shard(s) paused after Codex usage limits. Checkpoints and artifacts were saved; aggregate is skipped."
+            echo "::notice title=Translation paused::${paused_count} shard(s) paused after Codex usage limits. Completed AI outputs will still be applied and committed."
             find tmp/translation-shards -path '*/progress/pause.json' -type f -print | sort | head -n 20
           else
             echo "paused=false" >> "$GITHUB_OUTPUT"
           fi
       - name: Apply shard results
-        if: steps.paused.outputs.paused != 'true'
         run: |
           mkdir -p translation-memory/files
           find tmp/translation-shards -path '*/translation-memory/files/*.json' -print0 | while IFS= read -r -d '' file; do
@@ -458,7 +457,6 @@ jobs:
             pnpm tsx scripts/translate/apply-results.ts --queue "$shard_dir/queue.json" --results "$shard_dir/results.json"
           done
       - name: Render site content
-        if: steps.paused.outputs.paused != 'true'
         env:
           LIMIT_FILES: ${{ inputs.limit_files }}
         run: |
@@ -472,7 +470,6 @@ jobs:
             pnpm run site:build
           fi
       - run: pnpm run report
-        if: steps.paused.outputs.paused != 'true'
       - run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
@@ -480,4 +477,4 @@ jobs:
           git add state translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
           git commit -m "feat: 병렬 번역 샤드 결과 갱신" || echo "No changes"
           git push
-        if: steps.paused.outputs.paused != 'true' && inputs.commit_results == 'true' && inputs.mock_translation != 'true'
+        if: inputs.commit_results == 'true' && inputs.mock_translation != 'true'
