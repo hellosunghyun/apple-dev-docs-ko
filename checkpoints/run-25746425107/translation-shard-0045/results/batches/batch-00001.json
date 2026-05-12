@@ -1,0 +1,280 @@
+{
+  "batchIndex": 1,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:34.059Z",
+  "durationMs": 15689,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:overview:0006:0001",
+        "ko": "모든 AR 경험에서 ARKit는 오른손 좌표계 규칙을 따르는 월드 좌표계와 카메라 좌표계를 사용합니다. y축은 위쪽을 가리키며, (해당되는 경우) z축은 사용자 방향을 향하고 x축은 사용자의 오른쪽을 가리킵니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:overview:0007:0001",
+        "ko": "세션 구성은 실제 세계와의 관계에서 좌표계의 원점과 방향을 변경할 수 있습니다(자세한 내용은 [`worldAlignment`](arconfiguration/worldalignment-swift.property.md) 참조)."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:overview:0007:0002",
+        "ko": "AR 세션의 각 앵커는 오른손 좌표계, z축-뷰어 방향 규칙을 따르는 고유한 로컬 좌표계를 정의합니다. 예를 들어 [`ARFaceAnchor`](arfaceanchor.md) 클래스는 얼굴 특징의 위치를 찾기 위한 시스템을 정의합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:heading:combine-motion-sensing-and-scene-analysis:0008:0001",
+        "ko": "모션 센싱과 장면 분석 결합"
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:combine-motion-sensing-and-scene-analysis:0009:0001",
+        "ko": "실제 공간과 가상 공간의 대응을 만들기 위해 ARKit는 *visual-inertial odometry*라는 기법을 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:combine-motion-sensing-and-scene-analysis:0009:0002",
+        "ko": "이 과정은 iOS 기기의 모션 센싱 하드웨어 정보와 기기 카메라가 볼 수 있는 장면의 컴퓨터 비전 분석 정보를 결합합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:combine-motion-sensing-and-scene-analysis:0009:0003",
+        "ko": "ARKit는 장면 이미지에서 특징점을 인식하고 비디오 프레임 간 그 위치 차이를 추적한 다음 해당 정보를 모션 센싱 데이터와 비교합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:combine-motion-sensing-and-scene-analysis:0009:0004",
+        "ko": "그 결과로 기기의 위치와 동작에 대한 고정밀 모델이 생성됩니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:combine-motion-sensing-and-scene-analysis:0010:0001",
+        "ko": "월드 추적은 또한 장면의 내용을 분석하고 이해합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:combine-motion-sensing-and-scene-analysis:0010:0002",
+        "ko": "카메라 이미지의 특정 지점에 해당하는 실제 표면을 찾으려면 레이 캐스팅 방법(자세한 내용: `Raycasting and Hit-Testing`)을 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:combine-motion-sensing-and-scene-analysis:0010:0003",
+        "ko": "세션 구성에서 [`planeDetection`](arworldtrackingconfiguration/planedetection-swift.property.md) 설정을 활성화하면 ARKit가 카메라 이미지의 평면 표면을 감지하고 해당 위치와 크기를 보고합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:combine-motion-sensing-and-scene-analysis:0010:0004",
+        "ko": "레이 캐스트 결과나 감지된 평면을 사용하여 장면에 가상 콘텐츠를 배치하거나 상호작용할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:heading:craft-an-exceptional-ar-experience:0011:0001",
+        "ko": "탁월한 AR 경험 설계"
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0012:0001",
+        "ko": "월드 추적은 정확도와 정밀도로 사실적인 AR 경험을 구현할 수 있지만, 기기의 물리적 환경에 따라 달라지는 세부 항목에 의존하며 실시간으로 오류 없이 측정하기 어려운 경우가 있습니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0012:0002",
+        "ko": "고품질 AR 경험을 만들려면 다음 주의사항과 팁을 고려해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0013:0001",
+        "ko": "**예측 가능한 조명 조건에서 AR 경험을 설계합니다.** 월드 추적에는 명확한 이미지를 요구하는 이미지 분석이 포함됩니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0013:0002",
+        "ko": "카메라가 빈 벽을 바라보거나 장면이 너무 어두워 세부 사항을 확인할 수 없으면 추적 품질이 낮아집니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0014:0001",
+        "ko": "**추적 품질 정보를 사용해 사용자 피드백을 제공합니다.**"
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0014:0002",
+        "ko": "월드 추적은 이미지 분석을 기기 동작과 상호 연계합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0014:0003",
+        "ko": "기기가 움직이면, 미세한 이동만으로도 ARKit가 장면을 더 잘 이해합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0014:0004",
+        "ko": "과도한 움직임(너무 멀리, 너무 빠르거나, 흔들림이 심한 경우)은 이미지가 흐려지거나 비디오 프레임 간 추적 특징 간 거리가 커져 추적 품질이 감소합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0014:0005",
+        "ko": "[`ARCamera`](arcamera.md) 클래스는 추적 상태 사유 정보를 제공하며, 이를 사용해 낮은 추적 품질 상황에서 사용자가 해결 방법을 알 수 있도록 UI를 구성할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0015:0001",
+        "ko": "**평면 감지가 명확한 결과를 낼 때까지 기다린 뒤, 필요한 결과를 얻으면 planeDetection을 비활성화합니다.** 평면 감지 결과는 시간에 따라 달라집니다. 평면이 처음 감지되었을 때는 위치와 범위가 부정확할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0015:0002",
+        "ko": "평면이 장면에 지속적으로 유지되면 ARKit는 위치와 범위 추정을 점진적으로 정제합니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:craft-an-exceptional-ar-experience:0015:0003",
+        "ko": "장면에 넓은 평면 표면이 있을 때, 이미 해당 평면을 사용해 콘텐츠를 배치했더라도 ARKit는 plane anchor의 위치, 범위, 변환을 계속 변경할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:heading:see-also:0016:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "환경 내 객체에 대한 기기의 위치를 추적하는 구성입니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "GPS, 지도 데이터 및 기기 나침반으로 위치를 추적하는 구성입니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "후면 카메라를 사용해 기기의 방향만 추적하는 구성입니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/understanding-world-tracking.md",
+        "id": "seg:paragraph:see-also:0024:0001",
+        "ko": "3D 공간에서 기기의 위치만 추적하는 구성입니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/worldanchor/description.md",
+        "id": "seg:paragraph:description:0002:0001",
+        "ko": "이 앵커의 텍스트 표현입니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/worldanchor/description.md",
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/ARKit/worldanchor/description.md",
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "월드 앵커의 위치와 방향입니다."
+      },
+      {
+        "sourcePath": "documentation/ARKit/worldanchor/description.md",
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "ARKit가 현재 월드 앵커를 추적 중인지 나타내는 부울 값입니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioconverter/samplerateconverterquality.md",
+        "id": "seg:paragraph:samplerateconverterquality:0002:0001",
+        "ko": "샘플 레이트 변환기 알고리즘 키 값입니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioconverter/samplerateconverterquality.md",
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "가능한 키 값에 대한 자세한 내용은 [`AVSampleRateConverterAlgorithmKey`](avsamplerateconverteralgorithmkey.md)를 참조할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioconverter/samplerateconverterquality.md",
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioconverter/samplerateconverterquality.md",
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "샘플 레이트 변환기 또는 디코더가 사용하는 프라이밍 방식입니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioconverter/samplerateconverterquality.md",
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[var applicableEncodeSampleRates: [NSNumber]?](avaudioconverter/applicableencodesamplerates.md)"
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioconverter/samplerateconverterquality.md",
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "인코딩 시 현재 포맷과 설정에 따라 변환기가 적용하는 출력 샘플 레이트 배열입니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioconverter/samplerateconverterquality.md",
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[var availableEncodeSampleRates: [NSNumber]?](avaudioconverter/availableencodesamplerates.md)"
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioconverter/samplerateconverterquality.md",
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "인코딩 시 코덱에서 제공하는 모든 출력 샘플 레이트 배열입니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioplayer/settings.md",
+        "id": "seg:paragraph:settings:0002:0001",
+        "ko": "플레이어의 오디오 데이터에 대한 정보를 제공하는 사전입니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioplayer/settings.md",
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioplayer/settings.md",
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "오디오 파일의 URL입니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioplayer/settings.md",
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "플레이어와 연결된 오디오 데이터입니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudioplayer/settings.md",
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "플레이어 오디오 데이터의 포맷입니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudiounitcomponentmanager/components-passingtest.md",
+        "id": "seg:heading:componentspassingtest:0000:0001",
+        "ko": "components(passingTest:)"
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudiounitcomponentmanager/components-passingtest.md",
+        "id": "seg:paragraph:componentspassingtest:0002:0001",
+        "ko": "block 메서드를 통과한 오디오 구성 요소 배열을 가져옵니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudiounitcomponentmanager/components-passingtest.md",
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudiounitcomponentmanager/components-passingtest.md",
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "테스트를 통과한 오디오 구성 요소의 배열입니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudiounitcomponentmanager/components-passingtest.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "매니저가 오디오 구성 요소를 찾을 때마다 시스템에서 block 메서드를 호출합니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudiounitcomponentmanager/components-passingtest.md",
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "block이 [`true`](https://developer.apple.com/documentation/Swift/true)를 반환하면, 메서드가 `AVAudioComponent` 인스턴스를 배열에 추가합니다."
+      },
+      {
+        "sourcePath": "documentation/AVFAudio/avaudiounitcomponentmanager/components-passingtest.md",
+        "id": "seg:list:parameters:0012:0001",
+        "ko": "`testHandler`: 오디오 유닛 구성 요소에 적용할 block입니다. block은 두 개의 매개변수를 받습니다. - **comp**: 테스트할 block입니다."
+      }
+    ]
+  }
+}
