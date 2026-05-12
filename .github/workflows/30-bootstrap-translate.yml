@@ -5,28 +5,28 @@ on:
     inputs:
       shard_total:
         required: true
-        default: "200"
+        default: "256"
       max_parallel:
         required: true
-        default: "4"
+        default: "20"
       llm_concurrency:
         required: true
         default: "3"
       batch_segments:
         required: false
-        default: ""
-        description: Optional segments per LLM batch. Leave blank to use config.
+        default: "60"
+        description: Sentence segments per LLM batch. Segments are never split.
       batch_chars:
         required: false
-        default: ""
-        description: Optional character budget per LLM batch. Leave blank to use config.
+        default: "16000"
+        description: Character budget per LLM batch. Segments are never split.
       codex_timeout_seconds:
         required: true
-        default: "600"
+        default: "900"
         description: Timeout for each Codex translation attempt.
       codex_retries:
         required: true
-        default: "2"
+        default: "1"
         description: Retry count after a failed Codex translation attempt.
       max_translation_failures:
         required: true
@@ -46,7 +46,7 @@ on:
         description: Push each shard to a checkpoint branch while translation is running.
       checkpoint_interval_seconds:
         required: true
-        default: "120"
+        default: "300"
         description: Seconds between in-progress checkpoint pushes per shard.
       mock_translation:
         required: true
@@ -252,6 +252,7 @@ jobs:
 
           pnpm tsx scripts/translate/run-workers.ts \
             --queue "$queue_path" \
+            --concurrency "$LLM_CONCURRENCY" \
             --results "tmp/results/latest.json" \
             --progress "tmp/progress/latest.json" \
             --batch-dir "tmp/results/batches" \
