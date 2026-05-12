@@ -1,0 +1,250 @@
+{
+  "batchIndex": 0,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:30.240Z",
+  "durationMs": 13354,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:argeometryelement:0002:0001",
+        "ko": "면의 정점 인덱스와 같은 인덱스 데이터에 대한 컨테이너입니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0001",
+        "ko": "[`ARMeshGeometry`](armeshgeometry.md)는 면 데이터를 저장하기 위해 geometry-elements를 사용합니다(자세한 내용은 [`faces`](armeshgeometry/faces.md) 참조)."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0002",
+        "ko": "각 면은 primitive type으로 정의됩니다. 예를 들어 [`ARGeometryPrimitiveType.triangle`](argeometryprimitivetype/triangle.md)입니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0001",
+        "ko": "예시로, 삼각형 형식의 면 두 개를 가진 [`ARMeshGeometry`](armeshgeometry.md) 인스턴스는 다음 구성으로 표시됩니다."
+      },
+      {
+        "id": "seg:list:overview:0010:0001",
+        "ko": "`faces` [`count`](argeometryelement/count.md) `= 2`"
+      },
+      {
+        "id": "seg:list:overview:0010:0002",
+        "ko": "`faces` [`indexCountPerPrimitive`](argeometryelement/indexcountperprimitive.md) `= 3` (because [`primitiveType`](argeometryelement/primitivetype.md) is [`ARGeometryPrimitiveType.triangle`](argeometryprimitivetype/triangle.md))"
+      },
+      {
+        "id": "seg:list:overview:0010:0003",
+        "ko": "`faces` [`bytesPerIndex`](argeometryelement/bytesperindex.md) `= 4` (정점 인덱스가 [`UInt32`](https://developer.apple.com/documentation/Swift/UInt32) 유형이므로)"
+      },
+      {
+        "id": "seg:list:overview:0010:0004",
+        "ko": "버퍼의 총 바이트 크기 `=` [`count`](argeometryelement/count.md) `*` [`indexCountPerPrimitive`](argeometryelement/indexcountperprimitive.md) `*` [`bytesPerIndex`](argeometryelement/bytesperindex.md) (이 경우 `2 * 3 * 4 = 24` 바이트)"
+      },
+      {
+        "id": "seg:heading:accessing-index-data:0012:0001",
+        "ko": "인덱스 데이터 액세스"
+      },
+      {
+        "id": "seg:list:accessing-index-data:0013:0001",
+        "ko": "[subscript(Int) -> [Int32]](argeometryelement/subscript(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:accessing-index-data:0014:0001",
+        "ko": "지정한 하위 스크립트 인덱스의 기하 원시 요소를 나타내는 정점 인덱스 배열을 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:accessing-index-data:0016:0001",
+        "ko": "기하 원시 데이터를 포함하는 Metal 버퍼입니다."
+      },
+      {
+        "id": "seg:heading:getting-index-information:0017:0001",
+        "ko": "인덱스 정보 가져오기"
+      },
+      {
+        "id": "seg:paragraph:getting-index-information:0019:0001",
+        "ko": "각 인덱스의 바이트 수입니다."
+      },
+      {
+        "id": "seg:paragraph:getting-index-information:0021:0001",
+        "ko": "버퍼의 primitive 수입니다."
+      },
+      {
+        "id": "seg:paragraph:getting-index-information:0023:0001",
+        "ko": "각 primitive의 인덱스 수입니다."
+      },
+      {
+        "id": "seg:paragraph:getting-index-information:0025:0001",
+        "ko": "기하 데이터의 유형(삼각형 또는 선)입니다."
+      },
+      {
+        "id": "seg:paragraph:getting-index-information:0027:0001",
+        "ko": "정점 간 연결의 종류입니다."
+      },
+      {
+        "id": "seg:list:initializers:0029:0001",
+        "ko": "[init?(coder: NSCoder)](argeometryelement/init(coder:).md)"
+      },
+      {
+        "id": "seg:heading:inherits-from:0031:0001",
+        "ko": "상속"
+      },
+      {
+        "id": "seg:heading:conforms-to:0033:0001",
+        "ko": "준수"
+      },
+      {
+        "id": "seg:heading:see-also:0035:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0037:0001",
+        "ko": "메시의 각 면에 대한 분류입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0039:0001",
+        "ko": "ARKit이 식별할 수 있는 실제 객체의 다양한 클래스에 대한 열거입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0041:0001",
+        "ko": "기하면의 정점 인덱스 버퍼를 포함하는 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0043:0001",
+        "ko": "각 면의 바깥 방향을 정의하는 광선입니다."
+      },
+      {
+        "id": "seg:paragraph:layout:0002:0001",
+        "ko": "기본 오디오 채널 레이아웃입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0008:0001",
+        "ko": "[init(layout: UnsafePointer<AudioChannelLayout>)](avaudiochannellayout/init(layout:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "기존 오디오 채널 레이아웃에서 오디오 채널 레이아웃 객체를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "오디오 채널 수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "오디오 데이터의 채널 수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "오디오 채널의 기본 레이아웃 태그입니다."
+      },
+      {
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func isEqual(Any) -> Bool](avaudiochannellayout/isequal(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "다른 오디오 채널 레이아웃이 현재 레이아웃과 정확히 같은지 여부를 나타냅니다."
+      },
+      {
+        "id": "seg:heading:see-also:0006:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:heading:schedulebuffercompletioncallbacktypecompletionhandler:0000:0001",
+        "ko": "scheduleBuffer(_:completionCallbackType:completionHandler:)"
+      },
+      {
+        "id": "seg:paragraph:schedulebuffercompletioncallbacktypecompletionhandler:0002:0001",
+        "ko": "지정한 callback 옵션으로 오디오 버퍼의 샘플 재생을 예약합니다."
+      },
+      {
+        "id": "seg:list:parameters:0009:0001",
+        "ko": "`buffer`: 재생할 버퍼입니다."
+      },
+      {
+        "id": "seg:list:parameters:0009:0002",
+        "ko": "`callbackType`: 시스템이 completion handler를 호출해야 하는 시점을 지정하는 옵션입니다."
+      },
+      {
+        "id": "seg:list:parameters:0009:0003",
+        "ko": "`completionHandler`: 플레이어가 렌더 스레드에서 버퍼 재생을 예약한 뒤 또는 플레이어가 정지한 뒤 시스템이 호출하는 핸들러입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0010:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0011:0001",
+        "ko": "[func scheduleFile(AVAudioFile, at: AVAudioTime?, completionHandler: (() -> Void)?)](avaudioplayernode/schedulefile(_:at:completionhandler:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0012:0001",
+        "ko": "오디오 파일 전체 재생을 예약합니다."
+      },
+      {
+        "id": "seg:list:see-also:0013:0001",
+        "ko": "[func scheduleFile(AVAudioFile, at: AVAudioTime?, completionCallbackType: AVAudioPlayerNodeCompletionCallbackType, completionHandler: ((AVAudioPlayerNodeCompletionCallbackType) -> Void)?)](avaudioplayernode/schedulefile(_:at:completioncallbacktype:completionhandler:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0014:0001",
+        "ko": "지정한 callback 옵션으로 오디오 파일 전체 재생을 예약합니다."
+      },
+      {
+        "id": "seg:list:see-also:0015:0001",
+        "ko": "[func scheduleSegment(AVAudioFile, startingFrame: AVAudioFramePosition, frameCount: AVAudioFrameCount, at: AVAudioTime?, completionHandler: (() -> Void)?)](avaudioplayernode/schedulesegment(_:startingframe:framecount:at:completionhandler:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "오디오 파일 구간 재생을 예약합니다."
+      },
+      {
+        "id": "seg:list:see-also:0017:0001",
+        "ko": "[func scheduleSegment(AVAudioFile, startingFrame: AVAudioFramePosition, frameCount: AVAudioFrameCount, at: AVAudioTime?, completionCallbackType: AVAudioPlayerNodeCompletionCallbackType, completionHandler: ((AVAudioPlayerNodeCompletionCallbackType) -> Void)?)](avaudioplayernode/schedulesegment(_:startingframe:framecount:at:completioncallbacktype:completionhandler:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "지정한 callback 옵션으로 오디오 파일 구간 재생을 예약합니다."
+      },
+      {
+        "id": "seg:list:see-also:0019:0001",
+        "ko": "[func scheduleBuffer(AVAudioPCMBuffer, at: AVAudioTime?, options: AVAudioPlayerNodeBufferOptions, completionHandler: (() -> Void)?)](avaudioplayernode/schedulebuffer(_:at:options:completionhandler:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "지정한 시간과 재생 옵션으로 오디오 버퍼의 샘플 재생을 예약합니다."
+      },
+      {
+        "id": "seg:list:see-also:0021:0001",
+        "ko": "[func scheduleBuffer(AVAudioPCMBuffer, completionHandler: (() -> Void)?)](avaudioplayernode/schedulebuffer(_:completionhandler:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "오디오 버퍼의 샘플 재생을 예약합니다."
+      },
+      {
+        "id": "seg:list:see-also:0023:0001",
+        "ko": "[func scheduleBuffer(AVAudioPCMBuffer, at: AVAudioTime?, options: AVAudioPlayerNodeBufferOptions, completionCallbackType: AVAudioPlayerNodeCompletionCallbackType, completionHandler: ((AVAudioPlayerNodeCompletionCallbackType) -> Void)?)](avaudioplayernode/schedulebuffer(_:at:options:completioncallbacktype:completionhandler:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0024:0001",
+        "ko": "지정한 재생 옵션으로 오디오 버퍼의 샘플 재생을 예약합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0026:0001",
+        "ko": "재생 예약을 제어하는 버퍼 옵션입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0028:0001",
+        "ko": "프레임워크가 completion handler를 호출해야 하는 시점을 지정하는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0030:0001",
+        "ko": "버퍼 또는 파일 완료용 callback handler입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0032:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudioplayernode/schedulebuffer(_:completioncallbacktype:completionhandler:))*"
+      }
+    ]
+  }
+}
