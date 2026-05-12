@@ -1,0 +1,1298 @@
+{
+  "generatedAt": "2026-05-12T14:02:15.796Z",
+  "updatedAt": "2026-05-12T14:03:30.370Z",
+  "reason": "paused",
+  "queue": "state/queue/shard-0044.json",
+  "shard": {
+    "index": 44,
+    "total": 256
+  },
+  "abortReason": "Paused after Codex usage limit; retry after 7:02 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM.",
+    "retryAfterText": "7:02 PM",
+    "retryAt": "2026-05-12T19:02:00.000Z"
+  },
+  "totals": {
+    "batches": 248,
+    "segments": 13917,
+    "completed": 6,
+    "failed": 1,
+    "processed": 7,
+    "active": 0,
+    "queued": 241,
+    "percent": 2.82
+  },
+  "batches": [
+    {
+      "index": 0,
+      "status": "success",
+      "segments": 57,
+      "startedAt": "2026-05-12T14:02:15.801Z",
+      "completedAt": "2026-05-12T14:03:13.839Z",
+      "durationMs": 58038
+    },
+    {
+      "index": 1,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:15.801Z",
+      "completedAt": "2026-05-12T14:02:29.846Z",
+      "durationMs": 14045
+    },
+    {
+      "index": 2,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:15.801Z",
+      "completedAt": "2026-05-12T14:02:28.678Z",
+      "durationMs": 12877
+    },
+    {
+      "index": 3,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:28.680Z",
+      "completedAt": "2026-05-12T14:02:55.460Z",
+      "durationMs": 26780
+    },
+    {
+      "index": 4,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:29.849Z",
+      "completedAt": "2026-05-12T14:02:51.503Z",
+      "durationMs": 21654
+    },
+    {
+      "index": 5,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:51.506Z",
+      "completedAt": "2026-05-12T14:03:10.408Z",
+      "durationMs": 18902
+    },
+    {
+      "index": 6,
+      "status": "queued",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:55.463Z",
+      "completedAt": "2026-05-12T14:03:14.689Z",
+      "durationMs": 19226,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+    },
+    {
+      "index": 7,
+      "status": "queued",
+      "segments": 30,
+      "startedAt": "2026-05-12T14:03:10.411Z",
+      "completedAt": "2026-05-12T14:03:14.154Z",
+      "durationMs": 3743,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+    },
+    {
+      "index": 8,
+      "status": "failed",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:03:13.843Z",
+      "completedAt": "2026-05-12T14:03:30.366Z",
+      "durationMs": 16523,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1c7f-ca21-7562-aefe-b6cc7693e315\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"id\": \"seg:paragraph:handle-camera-use-interruptions:0026:0004\",\n      \"source\": \"When the system interrupts your app’s use of the camera, it notifies your app so you can update your user interface.\",\n      \"contextBefore\": \"For example, if your app is running in Stage Manager and another app utilizes the camera, the system suspends your app’s use of the camera until the other app finishes.\",\n      \"contextAfter\": \"To enable the system to notify you when your app’s camera access changes, observe the notifications [`wasInterruptedNotification`](https://developer.apple.com/documentation/AVFoundation/AVCaptureSession/wasInterruptedNotification) and [`interruptionEndedNotification`](https://developer.apple.com/documentation/AVFoundation/AVCaptureSession/interruptionEndedNotification), as the example below shows:\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:handle-camera-use-interruptions:0027:0001\",\n      \"source\": \"To enable the system to notify you when your app’s camera access changes, observe the notifications [`wasInterruptedNotification`](https://developer.apple.com/documentation/AVFoundation/AVCaptureSession/wasInterruptedNotification) and [`interruptionEndedNotification`](https://developer.apple.com/documentation/AVFoundation/AVCaptureSession/interruptionEndedNotification), as the example below shows:\",\n      \"contextBefore\": \"When the system interrupts your app’s use of the camera, it notifies your app so you can update your user interface.\",\n      \"contextAfter\": \"```swift\\nfunc addObservers() {\\n    let nc = NotificationCenter.default\\n\\n    // Observe when the system interrupts the capture session.\\n    nc.addObserver(self,\\n                   selector: #selector(handleInterruptionStarted),\\n                   name: .AVCaptureSessionWasInterrupted,\\n                   object: captureSession)\\n\\n    // Observe when the capture session interruption ends.\\n    nc.addObserver(self,\\n                   selector: #selector(handleInterruptionEnded),\\n                   name: .AVCaptureSessionInterruptionEnded,\\n                   object: captureSession)\\n}\\n```\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:handle-camera-use-interruptions:0029:0001\",\n      \"source\": \"The notification object’s user information dictionary contains the reason for an interruption.\",\n      \"contextBefore\": \"```swift\\nfunc addObservers() {\\n    let nc = NotificationCenter.default\\n\\n    // Observe when the system interrupts the capture session.\\n    nc.addObserver(self,\\n                   selector: #selector(handleInterruptionStarted),\\n                   name: .AVCaptureSessionWasInterrupted,\\n                   object: captureSession)\\n\\n    // Observe when the capture session interruption ends.\\n    nc.addObserver(self,\\n                   selector: #selector(handleInterruptionEnded),\\n                   name: .AVCaptureSessionInterruptionEnded,\\n                   object: captureSession)\\n}\\n```\",\n      \"contextAfter\": \"Determining the reason lets you configure your user interface as your camera access changes.\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:handle-camera-use-interruptions:0029:0002\",\n      \"source\": \"Determining the reason lets you configure your user interface as your camera access changes.\",\n      \"contextBefore\": \"The notification object’s user information dictionary contains the reason for an interruption.\",\n      \"contextAfter\": \"Use doc://com.apple.documentation/documentation/avfoundation/avcapturesessioninterruptionreasonkey to look up the value, as the example below shows:\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:handle-camera-use-interruptions:0029:0003\",\n      \"source\": \"Use doc://com.apple.documentation/documentation/avfoundation/avcapturesessioninterruptionreasonkey to look up the value, as the example below shows:\",\n      \"contextBefore\": \"Determining the reason lets you configure your user interface as your camera access changes.\",\n      \"contextAfter\": \"```swift\\n@objc func handleInterruptionStarted(notification: Notification) {\\n    guard let userInfo = notification.userInfo,\\n          let reasonValue = userInfo[AVCaptureSessionInterruptionReasonKey] as? Int,\\n          let reason = AVCaptureSession.InterruptionReason(rawValue: reasonValue) else {\\n        print(“Failed to parse the interruption reason.”)\\n        return\\n    }\\n\\n    switch reason {\\n    case .videoDeviceInUseByAnotherClient:\\n        // Show your app's interruption user interface.\\n    case .videoDeviceNotAvailableDueToSystemPressure:\\n        // Handle an interruption from increasing system pressure.\\n    default:\\n        // Handle other interruption reasons.\\n    }\\n}\\n```\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0031:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\n@objc func handleInterruptionStarted(notification: Notification) {\\n    guard let userInfo = notification.userInfo,\\n          let reasonValue = userInfo[AVCaptureSessionInterruptionReasonKey] as? Int,\\n          let reason = AVCaptureSession.InterruptionReason(rawValue: reasonValue) else {\\n        print(“Failed to parse the interruption reason.”)\\n        return\\n    }\\n\\n    switch reason {\\n    case .videoDeviceInUseByAnotherClient:\\n        // Show your app's interruption user interface.\\n    case .videoDeviceNotAvailableDueToSystemPressure:\\n        // Handle an interruption from increasing system pressure.\\n    default:\\n        // Handle other interruption reasons.\\n    }\\n}\\n```\",\n      \"contextAfter\": \"[Adopting Picture in Picture Playback in tvOS](adopting-picture-in-picture-playback-in-tvos.md)\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0032:0001\",\n      \"source\": \"[Adopting Picture in Picture Playback in tvOS](adopting-picture-in-picture-playback-in-tvos.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.\",\n      \"contextBefore\": \"[Adopting Picture in Picture Playback in tvOS](adopting-picture-in-picture-playback-in-tvos.md)\",\n      \"contextAfter\": \"[Adopting Picture in Picture in a Standard Player](adopting-picture-in-picture-in-a-standard-player.md)\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0034:0001\",\n      \"source\": \"[Adopting Picture in Picture in a Standard Player](adopting-picture-in-picture-in-a-standard-player.md)\",\n      \"contextBefore\": \"Add advanced multitasking capabilities to your video apps by using Picture in Picture playback in tvOS.\",\n      \"contextAfter\": \"Add Picture in Picture (PiP) playback to your app using a player view controller.\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0035:0001\",\n      \"source\": \"Add Picture in Picture (PiP) playback to your app using a player view controller.\",\n      \"contextBefore\": \"[Adopting Picture in Picture in a Standard Player](adopting-picture-in-picture-in-a-standard-player.md)\",\n      \"contextAfter\": \"[Adopting Picture in Picture in a Custom Player](adopting-picture-in-picture-in-a-custom-player.md)\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0036:0001\",\n      \"source\": \"[Adopting Picture in Picture in a Custom Player](adopting-picture-in-picture-in-a-custom-player.md)\",\n      \"contextBefore\": \"Add Picture in Picture (PiP) playback to your app using a player view controller.\",\n      \"contextAfter\": \"Add controls to your custom player user interface to invoke Picture in Picture (PiP) playback.\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0037:0001\",\n      \"source\": \"Add controls to your custom player user interface to invoke Picture in Picture (PiP) playback.\",\n      \"contextBefore\": \"[Adopting Picture in Picture in a Custom Player](adopting-picture-in-picture-in-a-custom-player.md)\",\n      \"contextAfter\": \"[Adopting Picture in Picture for video calls](adopting-picture-in-picture-for-video-calls.md)\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0038:0001\",\n      \"source\": \"[Adopting Picture in Picture for video calls](adopting-picture-in-picture-for-video-calls.md)\",\n      \"contextBefore\": \"Add controls to your custom player user interface to invoke Picture in Picture (PiP) playback.\",\n      \"contextAfter\": \"Add multitasking capability to your video-call apps by using Picture in Picture (PiP).\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0039:0001\",\n      \"source\": \"Add multitasking capability to your video-call apps by using Picture in Picture (PiP).\",\n      \"contextBefore\": \"[Adopting Picture in Picture for video calls](adopting-picture-in-picture-for-video-calls.md)\",\n      \"contextAfter\": \"[class AVPictureInPictureController](avpictureinpicturecontroller.md)\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0041:0001\",\n      \"source\": \"A controller that responds to user-initiated Picture in Picture playback of video in a floating, resizable window.\",\n      \"contextBefore\": \"[class AVPictureInPictureController](avpictureinpicturecontroller.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"Accessing the camera while multitasking on iPad\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:heading:coordinatewithsession:0000:0001\",\n      \"source\": \"coordinateWithSession(_:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: AVKit **Kind**: method\",\n      \"documentTitle\": \"coordinateWithSession(:)\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:coordinatewithsession:0002:0001\",\n      \"source\": \"Begins coordinating viewing environment state with a group session.\",\n      \"contextBefore\": \"**Framework**: AVKit **Kind**: method\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"coordinateWithSession(:)\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:paragraph:declaration:0008:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avgroupexperiencecoordinator/coordinatewithsession(_:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"coordinateWithSession(:)\",\n      \"framework\": \"AVKit\"\n    },\n    {\n      \"id\": \"seg:heading:appendsamples:0000:0001\",\n      \"source\": \"append(samples:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: Accelerate **Kind**: method\",\n      \"documentTitle\": \"append(samples:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:appendsamples:0002:0001\",\n      \"source\": \"Adds new sample data to a k-nearest neighbors object.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: method\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"append(samples:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:appendsamples:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 17.0+\",\n      \"contextAfter\": \"macOS 14.0+\",\n      \"documentTitle\": \"append(samples:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:appendsamples:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS 17.0+\",\n      \"contextAfter\": \"watchOS 10.0+\",\n      \"documentTitle\": \"append(samples:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`samples`: The new samples.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"append(samples:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:parameters:0010:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnns/nearestneighbors/append(samples:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"append(samples:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:bnnsreductionfunctionmin:0002:0001\",\n      \"source\": \"A reduction function that computes the minimum value.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: case\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:bnnsreductionfunctionmin:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 14.0+\",\n      \"contextAfter\": \"macOS 11.0+\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:bnnsreductionfunctionmin:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS 14.0+\",\n      \"contextAfter\": \"watchOS 7.0+\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\ncase min\\n```\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.max](bnns/reductionfunction/max.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"A reduction function that computes the maximum value.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.max](bnns/reductionfunction/max.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.argMax](bnns/reductionfunction/argmax.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"A reduction function that computes the index of the maximum value.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.argMax](bnns/reductionfunction/argmax.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.mean](bnns/reductionfunction/mean.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"A function for reduction that computes the mean value.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.mean](bnns/reductionfunction/mean.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.meanNonZero](bnns/reductionfunction/meannonzero.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"A reduction function that computes the mean value of nonzero elements.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.meanNonZero](bnns/reductionfunction/meannonzero.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.argMin](bnns/reductionfunction/argmin.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"A reduction function that computes the index of the minimum value.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.argMin](bnns/reductionfunction/argmin.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.sum](bnns/reductionfunction/sum.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"A reduction function that computes the sum of all values.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.sum](bnns/reductionfunction/sum.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.sumOfAbsolutes](bnns/reductionfunction/sumofabsolutes.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"A reduction function that computes the sum of all absolute values.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.sumOfAbsolutes](bnns/reductionfunction/sumofabsolutes.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.sumOfLogs(epsilon:)](bnns/reductionfunction/sumoflogs(epsilon:).md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0022:0001\",\n      \"source\": \"[BNNS.ReductionFunction.sumOfLogs(epsilon:)](bnns/reductionfunction/sumoflogs(epsilon:).md)\",\n      \"contextBefore\": \"A reduction function that computes the sum of all absolute values.\",\n      \"contextAfter\": \"A reduction function that computes the sum of the natural logarithm of all values.\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"A reduction function that computes the sum of the natural logarithm of all values.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.sumOfLogs(epsilon:)](bnns/reductionfunction/sumoflogs(epsilon:).md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.sumOfSquares](bnns/reductionfunction/sumofsquares.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"A reduction function that computes the sum of the square of all values.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.sumOfSquares](bnns/reductionfunction/sumofsquares.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.logicalAnd](bnns/reductionfunction/logicaland.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0027:0001\",\n      \"source\": \"A reduction function that computes the logical AND of all values.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.logicalAnd](bnns/reductionfunction/logicaland.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.all](bnns/reductionfunction/all.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"An alias of the logical AND reduction function.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.all](bnns/reductionfunction/all.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.logicalOr](bnns/reductionfunction/logicalor.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"A reduction function that computes the logical OR of all values.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.logicalOr](bnns/reductionfunction/logicalor.md)\",\n      \"contextAfter\": \"[BNNS.ReductionFunction.any](bnns/reductionfunction/any.md)\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"An alias of the logical OR reduction function.\",\n      \"contextBefore\": \"[BNNS.ReductionFunction.any](bnns/reductionfunction/any.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"BNNS.ReductionFunction.min\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:bnnsactivationfunctionintegerlinearsaturateperchannel:0002:0001\",\n      \"source\": \"An activation function that returns an arithmetic shift, preserving sign for each channel.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: case\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"This constant defines an activation function that returns values using the following operation:\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"```c\\nsaturate<output_type>((iscale_per_channel[channel] * x + ioffset_per_channel[channel]) >> ishift_per_channel[channel]) \\n```\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0010:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```c\\nsaturate<output_type>((iscale_per_channel[channel] * x + ioffset_per_channel[channel]) >> ishift_per_channel[channel]) \\n```\",\n      \"contextAfter\": \"[var BNNSActivationFunctionCELU: BNNSActivationFunction](bnnsactivationfunctioncelu.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0012:0001\",\n      \"source\": \"An activation function that evaluates the continuously differentiable exponential linear units (CELU) on its input.\",\n      \"contextBefore\": \"[var BNNSActivationFunctionCELU: BNNSActivationFunction](bnnsactivationfunctioncelu.md)\",\n      \"contextAfter\": \"[BNNSActivationFunctionClamp](bnnsactivationfunction/bnnsactivationfunctionclamp.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0014:0001\",\n      \"source\": \"An activation function that returns its input clamped to the specified range.\",\n      \"contextBefore\": \"[BNNSActivationFunctionClamp](bnnsactivationfunction/bnnsactivationfunctionclamp.md)\",\n      \"contextAfter\": \"[var BNNSActivationFunctionClampedLeakyRectifiedLinear: BNNSActivationFunction](bnnsactivationfunctionclampedleakyrectifiedlinear.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0016:0001\",\n      \"source\": \"An activation function that returns its input clamped to beta when that is greater than or equal to zero, otherwise it returns its input multiplied by alpha clamped to beta.\",\n      \"contextBefore\": \"[var BNNSActivationFunctionClampedLeakyRectifiedLinear: BNNSActivationFunction](bnnsactivationfunctionclampedleakyrectifiedlinear.md)\",\n      \"contextAfter\": \"[var BNNSActivationFunctionELU: BNNSActivationFunction](bnnsactivationfunctionelu.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0018:0001\",\n      \"source\": \"An activation function that evaluates the exponential linear units (ELU) on its input.\",\n      \"contextBefore\": \"[var BNNSActivationFunctionELU: BNNSActivationFunction](bnnsactivationfunctionelu.md)\",\n      \"contextAfter\": \"[var BNNSActivationFunctionErf: BNNSActivationFunction](bnnsactivationfunctionerf.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0020:0001\",\n      \"source\": \"An activation function that evaluates the Gaussian error linear units (GELU) approximation on its input.\",\n      \"contextBefore\": \"[var BNNSActivationFunctionGELUApproximation: BNNSActivationFunction](bnnsactivationfunctiongeluapproximation.md)\",\n      \"contextAfter\": \"[var BNNSActivationFunctionGELUApproximation2: BNNSActivationFunction](bnnsactivationfunctiongeluapproximation2.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0022:0001\",\n      \"source\": \"An activation function that provides a fast evaluation of the Gaussian error linear units (GELU) approximation on its input.\",\n      \"contextBefore\": \"[var BNNSActivationFunctionGELUApproximation2: BNNSActivationFunction](bnnsactivationfunctiongeluapproximation2.md)\",\n      \"contextAfter\": \"[var BNNSActivationFunctionGELUApproximationSigmoid: BNNSActivationFunction](bnnsactivationfunctiongeluapproximationsigmoid.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0024:0001\",\n      \"source\": \"An activation function that returns random numbers from the Gumbel distribution.\",\n      \"contextBefore\": \"[var BNNSActivationFunctionGumbel: BNNSActivationFunction](bnnsactivationfunctiongumbel.md)\",\n      \"contextAfter\": \"[var BNNSActivationFunctionGumbelMax: BNNSActivationFunction](bnnsactivationfunctiongumbelmax.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0026:0001\",\n      \"source\": \"An activation function that returns random numbers from the Gumbel distribution.\",\n      \"contextBefore\": \"[var BNNSActivationFunctionGumbelMax: BNNSActivationFunction](bnnsactivationfunctiongumbelmax.md)\",\n      \"contextAfter\": \"[var BNNSActivationFunctionHardShrink: BNNSActivationFunction](bnnsactivationfunctionhardshrink.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0028:0001\",\n      \"source\": \"An activation function that returns zero when the absolute input is less than alpha, otherwise it returns its input.\",\n      \"contextBefore\": \"[var BNNSActivationFunctionHardShrink: BNNSActivationFunction](bnnsactivationfunctionhardshrink.md)\",\n      \"contextAfter\": \"[var BNNSActivationFunctionHardSigmoid: BNNSActivationFunction](bnnsactivationfunctionhardsigmoid.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0030:0001\",\n      \"source\": \"An activation function that returns the hard sigmoid function of its input.\",\n      \"contextBefore\": \"[var BNNSActivationFunctionHardSigmoid: BNNSActivationFunction](bnnsactivationfunctionhardsigmoid.md)\",\n      \"contextAfter\": \"[var BNNSActivationFunctionHardSwish: BNNSActivationFunction](bnnsactivationfunctionhardswish.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0032:0001\",\n      \"source\": \"An activation function that returns the hard swish function of its input.\",\n      \"contextBefore\": \"[var BNNSActivationFunctionHardSwish: BNNSActivationFunction](bnnsactivationfunctionhardswish.md)\",\n      \"contextAfter\": \"[BNNSActivationFunctionIntegerLinearSaturate](bnnsactivationfunction/bnnsactivationfunctionintegerlinearsaturate.md)\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0034:0001\",\n      \"source\": \"An activation function that returns an arithmetic shift, preserving sign.\",\n      \"contextBefore\": \"[BNNSActivationFunctionIntegerLinearSaturate](bnnsactivationfunction/bnnsactivationfunctionintegerlinearsaturate.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"BNNSActivationFunctionIntegerLinearSaturatePerChannel\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:bnnsgraphcompileoptionssetoutputpath:0000:0001\",\n      \"source\": \"BNNSGraphCompileOptionsSetOutputPath(_:_:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: Accelerate **Kind**: func\",\n      \"documentTitle\": \"BNNSGraphCompileOptionsSetOutputPath(::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:bnnsgraphcompileoptionssetoutputpath:0002:0001\",\n      \"source\": \"Sets the option for graph compilation to generate the graph object directly to the specified file.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: func\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"BNNSGraphCompileOptionsSetOutputPath(::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"Use this option to specify that the graph [`BNNSGraphCompileFromFile(_:_:_:)`](bnnsgraphcompilefromfile(_:_:_:).md) returns is a read-only memory-mapped file.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"The option reduces the memory that compilation requires because BNNS doesn’t require the full set of graph weights to be memory resident.\",\n      \"documentTitle\": \"BNNSGraphCompileOptionsSetOutputPath(::)\",\n      \"framework\": \"Accelerate\"\n    }\n  ]\n}\n\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T14:03:17.994404Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:21.399499Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:22.256646Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T14:03:23.252184Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T14:03:24.555103Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T14:03:26.628321Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T14:03:30.130651Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: bcf090d6-40c0-4980-bbeb-d2b1c36c86f2\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: bcf090d6-40c0-4980-bbeb-d2b1c36c86f2"
+    },
+    {
+      "index": 9,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 10,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 11,
+      "status": "queued",
+      "segments": 28
+    },
+    {
+      "index": 12,
+      "status": "queued",
+      "segments": 25
+    },
+    {
+      "index": 13,
+      "status": "queued",
+      "segments": 24
+    },
+    {
+      "index": 14,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 15,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 16,
+      "status": "queued",
+      "segments": 23
+    },
+    {
+      "index": 17,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 18,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 19,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 20,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 21,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 22,
+      "status": "queued",
+      "segments": 30
+    },
+    {
+      "index": 23,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 24,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 25,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 26,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 27,
+      "status": "queued",
+      "segments": 38
+    },
+    {
+      "index": 28,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 29,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 30,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 31,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 32,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 33,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 34,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 35,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 36,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 37,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 38,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 39,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 40,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 41,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 42,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 43,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 44,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 45,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 46,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 47,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 48,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 49,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 50,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 51,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 52,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 53,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 54,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 55,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 56,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 57,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 58,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 59,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 60,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 61,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 62,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 63,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 64,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 65,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 66,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 67,
+      "status": "queued",
+      "segments": 42
+    },
+    {
+      "index": 68,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 69,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 70,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 71,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 72,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 73,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 74,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 75,
+      "status": "queued",
+      "segments": 45
+    },
+    {
+      "index": 76,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 77,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 78,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 79,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 80,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 81,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 82,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 83,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 84,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 85,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 86,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 87,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 88,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 89,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 90,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 91,
+      "status": "queued",
+      "segments": 42
+    },
+    {
+      "index": 92,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 93,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 94,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 95,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 96,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 97,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 98,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 99,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 100,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 101,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 102,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 103,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 104,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 105,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 106,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 107,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 108,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 109,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 110,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 111,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 112,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 113,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 114,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 115,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 116,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 117,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 118,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 119,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 120,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 121,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 122,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 123,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 124,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 125,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 126,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 127,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 128,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 129,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 130,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 131,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 132,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 133,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 134,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 135,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 136,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 137,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 138,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 139,
+      "status": "queued",
+      "segments": 33
+    },
+    {
+      "index": 140,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 141,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 142,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 143,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 144,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 145,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 146,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 147,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 148,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 149,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 150,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 151,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 152,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 153,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 154,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 155,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 156,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 157,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 158,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 159,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 160,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 161,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 162,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 163,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 164,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 165,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 166,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 167,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 168,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 169,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 170,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 171,
+      "status": "queued",
+      "segments": 33
+    },
+    {
+      "index": 172,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 173,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 174,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 175,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 176,
+      "status": "queued",
+      "segments": 41
+    },
+    {
+      "index": 177,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 178,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 179,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 180,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 181,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 182,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 183,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 184,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 185,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 186,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 187,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 188,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 189,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 190,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 191,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 192,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 193,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 194,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 195,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 196,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 197,
+      "status": "queued",
+      "segments": 41
+    },
+    {
+      "index": 198,
+      "status": "queued",
+      "segments": 19
+    },
+    {
+      "index": 199,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 200,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 201,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 202,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 203,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 204,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 205,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 206,
+      "status": "queued",
+      "segments": 36
+    },
+    {
+      "index": 207,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 208,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 209,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 210,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 211,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 212,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 213,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 214,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 215,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 216,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 217,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 218,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 219,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 220,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 221,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 222,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 223,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 224,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 225,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 226,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 227,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 228,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 229,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 230,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 231,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 232,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 233,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 234,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 235,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 236,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 237,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 238,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 239,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 240,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 241,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 242,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 243,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 244,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 245,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 246,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 247,
+      "status": "queued",
+      "segments": 14
+    }
+  ]
+}
