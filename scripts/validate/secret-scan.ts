@@ -27,6 +27,7 @@ const files = await fg(["**/*"], {
     "translations/**",
     "site/src/content/docs/**",
     "site/public/source-maps/**",
+    "site/public/segment-maps/**",
     "site/src/data/navigation.json",
     "site/public/navigation.json",
     "site/public/search/index.json"

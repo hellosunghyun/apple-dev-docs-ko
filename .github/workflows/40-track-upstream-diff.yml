@@ -498,7 +498,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
-          git add state/translation-progress.json translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
+          git add state/translation-progress.json translation-memory translations site/src/content site/src/data site/public/segment-maps site/public/search site/public/status reports
           git commit -m "feat: 업스트림 변경 병렬 번역 갱신" || echo "No changes"
           git push
         if: inputs.commit_results != 'false'
