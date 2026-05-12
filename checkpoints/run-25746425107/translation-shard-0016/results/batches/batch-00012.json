@@ -1,0 +1,305 @@
+{
+  "batchIndex": 12,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:48.723Z",
+  "durationMs": 30487,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-windows-per-ad-network:0028:0001",
+        "ko": "시간 범위는 global install dictionary와 동일합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-windows-per-ad-network:0028:0002",
+        "ko": "이 예시는 광고 네트워크 `test.adattributionkit`의 딕셔너리를 XML로 렌더링한 것으로, 클릭을 `23`일로 제한합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-windows-per-ad-network:0030:0001",
+        "ko": "또한 install dictionary 안에서 `ignoreInteractionType` 키를 지정할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-windows-per-ad-network:0030:0002",
+        "ko": "`ignoreInteractionType` 키를 `view` 또는 `click`으로 설정하면 어트리뷰션 시 특정 광고 네트워크의 `view` 또는 `click` 광고 상호작용 유형 노출을 무시하도록 시스템이 동작합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-windows-per-ad-network:0030:0003",
+        "ko": "이는 특정 광고 네트워크로 작업할 때 `view` 또는 `click` 어트리뷰션 중 하나를 우선 적용할 때 유용합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-windows-per-ad-network:0031:0001",
+        "ko": "다음 코드는 `global` 및 특정 광고 네트워크에 대한 `AttributionWindows` 설정이 모두 포함된 `AdAttributionKitConfigurations` 딕셔너리의 XML 렌더링입니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:blockquote:configure-attribution-windows-per-ad-network:0033:0001",
+        "ko": "❗ **중요**: 상호작용 유형은 광고 네트워크 구성에 대해서만 무시할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:blockquote:configure-attribution-windows-per-ad-network:0033:0002",
+        "ko": "시스템은 global 구성에서는 무시된 상호작용 유형을 인식하지 않습니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:heading:configure-attribution-cooldown:0034:0001",
+        "ko": "어트리뷰션 쿨다운 구성"
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0035:0001",
+        "ko": "구성 가능한 어트리뷰션 쿨다운을 사용하면 마지막 전환 후 시스템이 앱에 대해 새 전환을 생성하지 않을 기간을 지정할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0035:0002",
+        "ko": "다음은 한 가지 시나리오입니다. 사용자가 광고에서 앱을 설치한 뒤 2시간 이내에 다른 광고를 탭하고 앱으로 다시 참여합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0035:0003",
+        "ko": "기본적으로 시스템은 두 번째 탭에 대한 재참여 전환을 생성하지만, 비즈니스 모델에 따라 초기 전환이 더 중요한 신호가 될 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0035:0004",
+        "ko": "구성 가능한 어트리뷰션 쿨다운을 사용하면 시스템이 후속 재참여를 무시하는 기간을 지정할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0036:0001",
+        "ko": "설치 전환뿐만 아니라 재참여 전환에도 쿨다운 기간을 지정할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0036:0002",
+        "ko": "설치 전환 후 쿨다운 기간을 지정하려면 다음 단계를 따릅니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:list:configure-attribution-cooldown:0037:0001",
+        "ko": "`AdAttributionKitConfigurations` 딕셔너리 안에 `AttributionCooldown` 키를 가진 딕셔너리를 정의합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:list:configure-attribution-cooldown:0037:0002",
+        "ko": "`AttributionCooldown` 안에 `install-cooldown-hours`라는 이름의 새 요소를 추가합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:list:configure-attribution-cooldown:0037:0003",
+        "ko": "Type 메뉴에서 형식을 `Number`로 설정합니다. 이 값은 설치 전환 후 시스템이 새 전환을 받기 전에 대기하는 시간(시간 단위)입니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0038:0001",
+        "ko": "이 예시는 `AttributionCooldown`의 XML 렌더링을 보여주며 설치 쿨다운 기간을 24시간으로 설정합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0040:0001",
+        "ko": "또는 재참여 전환 후 쿨다운 기간을 지정할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0040:0002",
+        "ko": "이 경우 숫자 키의 이름을 `re-engagement-cooldown-hours`로 지정합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0040:0003",
+        "ko": "이 값은 재참여 전환 후 새 전환을 수락하기 전에 시스템이 대기하는 시간을 시간 단위로 나타냅니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:configure-attribution-cooldown:0041:0001",
+        "ko": "시스템은 설치 및 재참여 쿨다운 기간 모두에 대해 `0`에서 `720`시간 범위의 값을 허용합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:heading:see-also:0042:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:list:see-also:0043:0001",
+        "ko": "[Registering an ad network](registering-an-ad-network.md)"
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:see-also:0044:0001",
+        "ko": "Apple에 광고 네트워크를 등록한 후 AdAttributionKit API를 사용해 광고 캠페인을 실행합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:list:see-also:0045:0001",
+        "ko": "[Configuring a publisher app](configuring-a-publisher-app.md)"
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:see-also:0046:0001",
+        "ko": "게시자 앱을 설정해 광고 캠페인에 참여합니다."
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:list:see-also:0047:0001",
+        "ko": "[Configuring an advertised app](configuring-an-advertised-app.md)"
+      },
+      {
+        "sourcePath": "documentation/AdAttributionKit/configuring-attribution-rules-for-your-app.md",
+        "id": "seg:paragraph:see-also:0048:0001",
+        "ko": "광고 대상 앱을 광고 캠페인에 참여할 수 있도록 준비합니다."
+      },
+      {
+        "sourcePath": "documentation/AddressBook/abgroupref.md",
+        "id": "seg:paragraph:abgroupref:0002:0001",
+        "ko": "ABGroup 객체에 대한 참조입니다."
+      },
+      {
+        "sourcePath": "documentation/AddressBook/abgroupref.md",
+        "id": "seg:list:abgroupref:0004:0001",
+        "ko": "macOS ?+"
+      },
+      {
+        "sourcePath": "documentation/AddressBook/abgroupref.md",
+        "id": "seg:heading:conforms-to:0008:0001",
+        "ko": "준수 대상"
+      },
+      {
+        "sourcePath": "documentation/AddressBook/abgroupref.md",
+        "id": "seg:heading:see-also:0010:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/AddressBook/abgroupref.md",
+        "id": "seg:paragraph:see-also:0012:0001",
+        "ko": "ABPerson 객체에 대한 참조입니다."
+      },
+      {
+        "sourcePath": "documentation/AddressBook/abgroupref.md",
+        "id": "seg:paragraph:see-also:0014:0001",
+        "ko": "`ABMultiValue` 또는 `ABMutableMultiValueobject`에 대한 참조입니다."
+      },
+      {
+        "sourcePath": "documentation/AddressBook/abgroupref.md",
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "ABMutableMultiValue 객체에 대한 참조입니다."
+      },
+      {
+        "sourcePath": "documentation/AlarmKit/alarmpresentation/countdown-swiftproperty.md",
+        "id": "seg:paragraph:countdown:0002:0001",
+        "ko": "알람의 스누즈 또는 카운트다운 모드에 대한 내용입니다."
+      },
+      {
+        "sourcePath": "documentation/AlarmKit/alarmpresentation/countdown-swiftproperty.md",
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "알람이 카운트다운 모드를 지원하지 않으면 이 값은 `nil`이 될 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AlarmKit/alarmpresentation/countdown-swiftproperty.md",
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/AlarmKit/alarmpresentation/countdown-swiftproperty.md",
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[init(alert: AlarmPresentation.Alert, countdown: AlarmPresentation.Countdown?, paused: AlarmPresentation.Paused?)](alarmpresentation/init(alert:countdown:paused:).md)"
+      },
+      {
+        "sourcePath": "documentation/AlarmKit/alarmpresentation/countdown-swiftproperty.md",
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "선택적 카운트다운과 일시중지 상태가 포함된 알림을 구성합니다."
+      },
+      {
+        "sourcePath": "documentation/AlarmKit/alarmpresentation/countdown-swiftproperty.md",
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "알람의 alert 모드에 대한 내용입니다."
+      },
+      {
+        "sourcePath": "documentation/AlarmKit/alarmpresentation/countdown-swiftproperty.md",
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "알람의 pause 모드에 대한 내용입니다."
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appintenterror/restartperform.md",
+        "id": "seg:list:restartperform:0003:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appintenterror/restartperform.md",
+        "id": "seg:list:restartperform:0003:0006",
+        "ko": "visionOS ?+"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:list:appshortcutoptionscollectionspecificationbuilder:0003:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:list:appshortcutoptionscollectionspecificationbuilder:0003:0006",
+        "ko": "visionOS ?+"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:heading:type-methods:0007:0001",
+        "ko": "타입 메서드"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:list:type-methods:0008:0001",
+        "ko": "[static func buildBlock<C0>(C0) -> some AppShortcutOptionsCollectionSpecification<Value>](appshortcutoptionscollectionspecificationbuilder/buildblock(_:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:paragraph:type-methods:0009:0001",
+        "ko": "](appshortcutoptionscollectionspecificationbuilder/buildblock(_:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:list:type-methods:0010:0001",
+        "ko": "[static func buildBlock<C0, C1>(C0, C1) -> some AppShortcutOptionsCollectionSpecification<Value>](appshortcutoptionscollectionspecificationbuilder/buildblock(_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:paragraph:type-methods:0011:0001",
+        "ko": "](appshortcutoptionscollectionspecificationbuilder/buildblock(_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:list:type-methods:0012:0001",
+        "ko": "[static func buildBlock<C0, C1, C2>(C0, C1, C2) -> some AppShortcutOptionsCollectionSpecification<Value>](appshortcutoptionscollectionspecificationbuilder/buildblock(_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:paragraph:type-methods:0013:0001",
+        "ko": "](appshortcutoptionscollectionspecificationbuilder/buildblock(_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:list:type-methods:0014:0001",
+        "ko": "[static func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> some AppShortcutOptionsCollectionSpecification<Value>](appshortcutoptionscollectionspecificationbuilder/buildblock(_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:paragraph:type-methods:0015:0001",
+        "ko": "](appshortcutoptionscollectionspecificationbuilder/buildblock(_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:list:type-methods:0016:0001",
+        "ko": "[static func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> some AppShortcutOptionsCollectionSpecification<Value>](appshortcutoptionscollectionspecificationbuilder/buildblock(_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppIntents/appshortcutoptionscollectionspecificationbuilder.md",
+        "id": "seg:paragraph:type-methods:0017:0001",
+        "ko": "](appshortcutoptionscollectionspecificationbuilder/buildblock(_:_:_:_:_:).md)"
+      }
+    ]
+  }
+}
