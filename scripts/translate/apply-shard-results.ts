@@ -20,6 +20,8 @@ type BatchResultFile = {
   output?: TranslationBatchOutput;
 };
 
+let skippedInvalidJsonFiles = 0;
+
 async function main(): Promise<void> {
   const shardsDir = resolveRoot(options.shardsDir);
   const shardNames = (await readdir(shardsDir)).filter((name) => /^translation-shard-\d{4}$/.test(name)).sort();
@@ -31,12 +33,18 @@ async function main(): Promise<void> {
 
   for (const shardName of shardNames) {
     const shardDir = path.join(shardsDir, shardName);
-    const queue = await readJson<QueueFile>(path.join(shardDir, "queue.json"));
+    const queue = await readJsonOrWarn<QueueFile>(path.join(shardDir, "queue.json"), "queue");
+    if (!queue) {
+      continue;
+    }
     const batchFiles = await successfulBatchFiles(path.join(shardDir, "results", "batches"));
     let legacyBatches: Map<number, Candidate[]> | undefined;
 
     for (const filePath of batchFiles) {
-      const result = await readJson<BatchResultFile>(filePath);
+      const result = await readJsonOrWarn<BatchResultFile>(filePath, "batch result");
+      if (!result) {
+        continue;
+      }
       if (result.status !== "success" || !result.output) continue;
       const batchIndex = result.batchIndex ?? batchIndexFromPath(filePath);
       if (batchIndex === undefined) continue;
@@ -88,6 +96,7 @@ async function main(): Promise<void> {
   console.log(`Applied translated segments: ${appliedSegments}`);
   console.log(`Skipped translated segments: ${skippedSegments}`);
   console.log(`Legacy mapped batches: ${legacyMappedBatches}`);
+  console.log(`Skipped invalid JSON files: ${skippedInvalidJsonFiles}`);
 }
 
 async function successfulBatchFiles(batchDir: string): Promise<string[]> {
@@ -154,7 +163,7 @@ function matchLegacyCandidate(
 async function readArtifactMemory(shardDir: string, sourcePath: string): Promise<TranslationMemoryFile | undefined> {
   const filePath = path.join(shardDir, "translation-memory", "files", `${pathKey(sourcePath)}.json`);
   if (!(await fileExists(filePath))) return undefined;
-  return readJson<TranslationMemoryFile>(filePath);
+  return readJsonOrWarn<TranslationMemoryFile>(filePath, "artifact memory");
 }
 
 async function readArtifactMemoryForSourcePath(shardsDir: string, sourcePath: string): Promise<TranslationMemoryFile | undefined> {
@@ -164,6 +173,17 @@ async function readArtifactMemoryForSourcePath(shardsDir: string, sourcePath: st
     if (memory) return memory;
   }
   return undefined;
+}
+
+async function readJsonOrWarn<T>(filePath: string, kind: string): Promise<T | undefined> {
+  try {
+    return await readJson<T>(filePath);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    skippedInvalidJsonFiles += 1;
+    console.warn(`Skipping invalid ${kind} JSON: ${filePath}: ${message}`);
+    return undefined;
+  }
 }
 
 await main();
