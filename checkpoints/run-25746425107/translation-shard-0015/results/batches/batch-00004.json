@@ -1,0 +1,250 @@
+{
+  "batchIndex": 4,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:35.694Z",
+  "durationMs": 12240,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:overview:0011:0002",
+        "ko": "인물 분할 및 portrait effects matte를 생성하는 신경망은 사람을 감지하고 분할하도록 학습되었습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0011:0003",
+        "ko": "이미지 장면에 사람이 없다면 해당 이미지에는 portrait effects matte의 이점이 없어 전달되지 않습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0011:0004",
+        "ko": "이 [`AVCapturePhoto`](avcapturephoto.md) 객체에는 iOS 12에서 이미지의 [`portraitEffectsMatte`](avcapturephoto/portraiteffectsmatte.md)에 접근하기 위한 새 읽기 전용 접근자 속성이 추가되었습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0011:0005",
+        "ko": "이 속성을 읽었을 때 반환값이 `nil`이면 해당 이미지에 대해 portrait effects matte가 필요하지 않아 생성되지 않았음을 의미합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0011:0006",
+        "ko": "카메라는 matte 이미지를 후처리 단계로 생성하므로 사진 촬영 전에 matte가 생성될지 확인할 수 없습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0011:0007",
+        "ko": "현재 가능한 최선은 [`AVMetadataFaceObject`](avmetadatafaceobject.md)를 사용해 감지된 얼굴을 확인하고 깊이와 portrait effects matte를 활성화하는 것입니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0012:0001",
+        "ko": "portrait effects matte 알고리즘은 사람 분할과 깊이를 정밀화 단계로 함께 사용하므로, matte 전달은 깊이를 지원하는 카메라와 카메라 형식에서만 지원됩니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0012:0002",
+        "ko": "portrait effects matte 이미지는 깊이 이미지가 없는 이미지 파일에 포함해서는 안 되며, 두 항목은 함께 전달되어야 합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0012:0003",
+        "ko": "이 규칙은 [`AVCapturePhotoOutput`](avcapturephotooutput.md) 단계에서 적용됩니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0012:0004",
+        "ko": "portrait effects matte 전달을 선택하고 이를 [`AVCapturePhotoOutput`](avcapturephotooutput.md) 컨테이너에 임베드하도록 요청하면, 임베드 깊이 데이터 전달도 함께 선택해야 합니다."
+      },
+      {
+        "id": "seg:heading:write-a-captured-portrait-effects-matte-to-disk:0013:0001",
+        "ko": "캡처한 Portrait Effects Matte를 디스크에 쓰기"
+      },
+      {
+        "id": "seg:paragraph:write-a-captured-portrait-effects-matte-to-disk:0014:0001",
+        "ko": "[`AVCapturePhoto`](avcapturephoto.md)는 [`fileDataRepresentation()`](avcapturephoto/filedatarepresentation().md)을 사용해 기본 인메모리 파일 컨테이너에 대한 클라이언트 접근을 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:write-a-captured-portrait-effects-matte-to-disk:0014:0002",
+        "ko": "결과 [`NSData`](https://developer.apple.com/documentation/Foundation/NSData)는 HEIC 또는 JPEG 파일로 디스크에 쓰기에 적합합니다."
+      },
+      {
+        "id": "seg:paragraph:write-a-captured-portrait-effects-matte-to-disk:0014:0003",
+        "ko": "이미지 파일에서 portrait effects matte를 대체하거나 제거하려면 [`fileDataRepresentation(with:)`](avcapturephoto/filedatarepresentation(with:).md)를 호출합니다. 이 메서드는 이미지를 디스크 기록용 컨테이너로 패키징하기 전에 커스터마이저 객체를 통해 이미지의 여러 요소를 수정, 교체 또는 제거합니다."
+      },
+      {
+        "id": "seg:paragraph:write-a-captured-portrait-effects-matte-to-disk:0015:0001",
+        "ko": "JPEG와 HEIC 파일 모두에 임베드된 portrait effects matte 데이터를 저장할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:write-a-captured-portrait-effects-matte-to-disk:0015:0002",
+        "ko": "JFIF/JPEG로 저장할 때 matte는 JPEG 방식으로 압축됩니다."
+      },
+      {
+        "id": "seg:paragraph:write-a-captured-portrait-effects-matte-to-disk:0015:0003",
+        "ko": "HEIC 파일로 저장할 때는 HEVC 코덱으로 압축됩니다."
+      },
+      {
+        "id": "seg:paragraph:write-a-captured-portrait-effects-matte-to-disk:0015:0004",
+        "ko": "매팅 이미지에는 넓은 평탄한 검정 또는 흰색 영역이 포함되는 경향이 있어 iOS 11 사진보다 파일 크기가 더 작습니다."
+      },
+      {
+        "id": "seg:heading:see-also:0016:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0017:0001",
+        "ko": "[convenience init(fromDictionaryRepresentation: [AnyHashable : Any]) throws](avportraiteffectsmatte/init(fromdictionaryrepresentation:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "이미지 파일의 보조 이미지 정보를 사용해 portrait effects matte 인스턴스를 초기화합니다."
+      },
+      {
+        "id": "seg:list:see-also:0019:0001",
+        "ko": "[func applyingExifOrientation(CGImagePropertyOrientation) -> Self](avportraiteffectsmatte/applyingexiforientation(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "지정한 EXIF 방향을 적용한 파생 portrait effects matte를 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0021:0001",
+        "ko": "[func replacingPortraitEffectsMatte(with: CVPixelBuffer) throws -> Self](avportraiteffectsmatte/replacingportraiteffectsmatte(with:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "교체된 픽셀 버퍼를 래핑하여 portrait effects matte를 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:magnification:0002:0001",
+        "ko": "비디오 보기의 현재 확대 배율을 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "지원되는 확대 배율 범위는 `1.0`에서 `64.0`입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "시스템은 콘텐츠를 특정 배율보다 크게 스케일링한 뒤 최근접 이웃 보간으로 줌을 수행합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "기본값은 `1.0`입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0010:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0012:0001",
+        "ko": "확대 제스처가 비디오 보기 배율을 변경할지 여부를 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:list:see-also:0013:0001",
+        "ko": "[func setMagnification(CGFloat, centeredAt: CGPoint)](avplayerview/setmagnification(_:centeredat:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0014:0001",
+        "ko": "지정한 계수만큼 비디오 보기의 배율을 조정하고 결과를 지정한 지점에 중심 정렬합니다."
+      },
+      {
+        "id": "seg:paragraph:bnnsdatalayouttensor4dlastmajor:0002:0001",
+        "ko": "4D last-major 텐서를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:list:bnnsdatalayouttensor4dlastmajor:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:list:bnnsdatalayouttensor4dlastmajor:0004:0006",
+        "ko": "visionOS ?+"
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "1D 벡터를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "2D 열 우선(matrix column-major) 행렬을 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "2D 행 우선(row-major) 행렬을 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "2D first-major 행렬을 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "2D last-major 행렬을 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "3D 이미지 스택을 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "임베딩 차원, 시퀀스 길이, 배치 크기 순으로 크기가 정렬된 3D 텐서를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "임베딩 차원, 배치 크기, 시퀀스 길이 순으로 크기가 정렬된 3D 텐서를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "컨볼루션 가중치의 4D 배열을 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "4D first-major 텐서를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "5D first-major 텐서를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "5D last-major 텐서를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "6D first-major 텐서를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "6D first-major 텐서를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0037:0001",
+        "ko": "6D first-major 텐서를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0007:0001",
+        "ko": "저장 데이터 타입"
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "부동 소수점 타입에서의 공통 비트 폭에 대해 이 상수는 유효한 타입이 아닙니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "16비트 반 정밀도 부동 소수점"
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "32비트 단정도 부동 소수점"
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "16비트 Brain Floating Point"
+      },
+      {
+        "id": "seg:paragraph:discussion:0012:0001",
+        "ko": "부호 있는 정수 타입의 공통 비트 폭에서 이 상수는 유효한 타입이 아닙니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0013:0001",
+        "ko": "8비트 부호 있는 정수"
+      },
+      {
+        "id": "seg:paragraph:discussion:0014:0001",
+        "ko": "16비트 부호 있는 정수"
+      }
+    ]
+  }
+}
