@@ -1,0 +1,1380 @@
+{
+  "generatedAt": "2026-05-12T14:02:30.216Z",
+  "updatedAt": "2026-05-12T14:03:38.195Z",
+  "reason": "paused",
+  "queue": "state/queue/shard-0005.json",
+  "shard": {
+    "index": 5,
+    "total": 256
+  },
+  "abortReason": "Paused after Codex usage limit; retry after 7:02 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM.",
+    "retryAfterText": "7:02 PM",
+    "retryAt": "2026-05-12T19:02:00.000Z"
+  },
+  "totals": {
+    "batches": 265,
+    "segments": 14885,
+    "completed": 5,
+    "failed": 1,
+    "processed": 6,
+    "active": 0,
+    "queued": 259,
+    "percent": 2.26
+  },
+  "batches": [
+    {
+      "index": 0,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:30.225Z",
+      "completedAt": "2026-05-12T14:02:52.276Z",
+      "durationMs": 22051
+    },
+    {
+      "index": 1,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:30.225Z",
+      "completedAt": "2026-05-12T14:02:49.723Z",
+      "durationMs": 19498
+    },
+    {
+      "index": 2,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:30.225Z",
+      "completedAt": "2026-05-12T14:02:51.196Z",
+      "durationMs": 20971
+    },
+    {
+      "index": 3,
+      "status": "queued",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:49.725Z",
+      "completedAt": "2026-05-12T14:03:14.357Z",
+      "durationMs": 24632,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+    },
+    {
+      "index": 4,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:51.199Z",
+      "completedAt": "2026-05-12T14:03:09.071Z",
+      "durationMs": 17872
+    },
+    {
+      "index": 5,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:52.279Z",
+      "completedAt": "2026-05-12T14:03:10.076Z",
+      "durationMs": 17797
+    },
+    {
+      "index": 6,
+      "status": "failed",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:03:09.073Z",
+      "completedAt": "2026-05-12T14:03:38.191Z",
+      "durationMs": 29118,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1c7f-f200-7660-a08a-33cd92448302\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"Constants that specify which pointer the BNNS get filter function returns.\",\n      \"contextBefore\": \"[struct BNNSPointerSpecifier](bnnspointerspecifier.md)\",\n      \"contextAfter\": \"[class GramLayer](bnns/gramlayer.md)\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"A layer object that wraps a Gram matrix filter and manages its deinitialization.\",\n      \"contextBefore\": \"[class GramLayer](bnns/gramlayer.md)\",\n      \"contextAfter\": \"[struct BNNSLayerParametersGram](bnnslayerparametersgram.md)\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0027:0001\",\n      \"source\": \"A set of parameters that define a Gram matrix layer.\",\n      \"contextBefore\": \"[struct BNNSLayerParametersGram](bnnslayerparametersgram.md)\",\n      \"contextAfter\": \"[func BNNSFilterCreateLayerGram(UnsafePointer<BNNSLayerParametersGram>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayergram(_:_:).md)\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0028:0001\",\n      \"source\": \"[func BNNSFilterCreateLayerGram(UnsafePointer<BNNSLayerParametersGram>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayergram(_:_:).md)\",\n      \"contextBefore\": \"A set of parameters that define a Gram matrix layer.\",\n      \"contextAfter\": \"Returns a new Gram matrix layer.\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"Returns a new Gram matrix layer.\",\n      \"contextBefore\": \"[func BNNSFilterCreateLayerGram(UnsafePointer<BNNSLayerParametersGram>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayergram(_:_:).md)\",\n      \"contextAfter\": \"[static func clip(to: ClosedRange<Float>, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor) throws](bnns/clip(to:input:output:).md)\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0030:0001\",\n      \"source\": \"[static func clip(to: ClosedRange<Float>, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor) throws](bnns/clip(to:input:output:).md)\",\n      \"contextBefore\": \"Returns a new Gram matrix layer.\",\n      \"contextAfter\": \"Clips the input tensor to a closed range and writes the result to the output tensor.\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"Clips the input tensor to a closed range and writes the result to the output tensor.\",\n      \"contextBefore\": \"[static func clip(to: ClosedRange<Float>, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor) throws](bnns/clip(to:input:output:).md)\",\n      \"contextAfter\": \"[static func clipByNorm(threshold: Float, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, axes: [Int]?) throws](bnns/clipbynorm(threshold:input:output:axes:).md)\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0032:0001\",\n      \"source\": \"[static func clipByNorm(threshold: Float, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, axes: [Int]?) throws](bnns/clipbynorm(threshold:input:output:axes:).md)\",\n      \"contextBefore\": \"Clips the input tensor to a closed range and writes the result to the output tensor.\",\n      \"contextAfter\": \"Clips the input tensor to a Euclidean norm and writes the result to the output tensor.\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"Clips the input tensor to a Euclidean norm and writes the result to the output tensor.\",\n      \"contextBefore\": \"[static func clipByNorm(threshold: Float, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, axes: [Int]?) throws](bnns/clipbynorm(threshold:input:output:axes:).md)\",\n      \"contextAfter\": \"[static func clipByGlobalNorm(threshold: Float, inputs: [BNNSNDArrayDescriptor], outputs: [BNNSNDArrayDescriptor], globalNorm: Float) throws](bnns/clipbyglobalnorm(threshold:inputs:outputs:globalnorm:).md)\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0034:0001\",\n      \"source\": \"[static func clipByGlobalNorm(threshold: Float, inputs: [BNNSNDArrayDescriptor], outputs: [BNNSNDArrayDescriptor], globalNorm: Float) throws](bnns/clipbyglobalnorm(threshold:inputs:outputs:globalnorm:).md)\",\n      \"contextBefore\": \"Clips the input tensor to a Euclidean norm and writes the result to the output tensor.\",\n      \"contextAfter\": \"Clips the input tensors to a global Euclidean norm and writes the result to the output tensors.\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0035:0001\",\n      \"source\": \"Clips the input tensors to a global Euclidean norm and writes the result to the output tensors.\",\n      \"contextBefore\": \"[static func clipByGlobalNorm(threshold: Float, inputs: [BNNSNDArrayDescriptor], outputs: [BNNSNDArrayDescriptor], globalNorm: Float) throws](bnns/clipbyglobalnorm(threshold:inputs:outputs:globalnorm:).md)\",\n      \"contextAfter\": \"[func BNNSClipByValue(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, Float, Float) -> Int32](bnnsclipbyvalue(_:_:_:_:).md)\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0036:0001\",\n      \"source\": \"[func BNNSClipByValue(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, Float, Float) -> Int32](bnnsclipbyvalue(_:_:_:_:).md)\",\n      \"contextBefore\": \"Clips the input tensors to a global Euclidean norm and writes the result to the output tensors.\",\n      \"contextAfter\": \"Clips a tensor’s values to the specified minimum and maximum values.\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0037:0001\",\n      \"source\": \"Clips a tensor’s values to the specified minimum and maximum values.\",\n      \"contextBefore\": \"[func BNNSClipByValue(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, Float, Float) -> Int32](bnnsclipbyvalue(_:_:_:_:).md)\",\n      \"contextAfter\": \"[func BNNSClipByNorm(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, Float, UInt32) -> Int32](bnnsclipbynorm(_:_:_:_:).md)\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0038:0001\",\n      \"source\": \"[func BNNSClipByNorm(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, Float, UInt32) -> Int32](bnnsclipbynorm(_:_:_:_:).md)\",\n      \"contextBefore\": \"Clips a tensor’s values to the specified minimum and maximum values.\",\n      \"contextAfter\": \"Clips a tensor’s values to a maximum Euclidean norm.\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0039:0001\",\n      \"source\": \"Clips a tensor’s values to a maximum Euclidean norm.\",\n      \"contextBefore\": \"[func BNNSClipByNorm(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, Float, UInt32) -> Int32](bnnsclipbynorm(_:_:_:_:).md)\",\n      \"contextAfter\": \"[func BNNSClipByGlobalNorm(UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>>, UnsafeMutablePointer<UnsafePointer<BNNSNDArrayDescriptor>>, Int, Float, Float) -> Int32](bnnsclipbyglobalnorm(_:_:_:_:_:).md)\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0040:0001\",\n      \"source\": \"[func BNNSClipByGlobalNorm(UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>>, UnsafeMutablePointer<UnsafePointer<BNNSNDArrayDescriptor>>, Int, Float, Float) -> Int32](bnnsclipbyglobalnorm(_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Clips a tensor’s values to a maximum Euclidean norm.\",\n      \"contextAfter\": \"Clips a tensor’s values to a maximum global Euclidean norm.\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0041:0001\",\n      \"source\": \"Clips a tensor’s values to a maximum global Euclidean norm.\",\n      \"contextBefore\": \"[func BNNSClipByGlobalNorm(UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>>, UnsafeMutablePointer<UnsafePointer<BNNSNDArrayDescriptor>>, Int, Float, Float) -> Int32](bnnsclipbyglobalnorm(_:_:_:_:_:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0043:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnns/tilebackward(outputgradient:generatinginputgradient:filterparameters:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"tileBackward(outputGradient:generatingInputGradient:filterParameters:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:init:0003:0001\",\n      \"source\": \"iOS ?+\",\n      \"contextBefore\": \"**Availability**:\",\n      \"contextAfter\": \"iPadOS ?+\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:init:0003:0002\",\n      \"source\": \"iPadOS ?+\",\n      \"contextBefore\": \"iOS ?+\",\n      \"contextAfter\": \"Mac Catalyst ?+\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:init:0003:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS ?+\",\n      \"contextAfter\": \"macOS ?+\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:init:0003:0004\",\n      \"source\": \"macOS ?+\",\n      \"contextBefore\": \"Mac Catalyst ?+\",\n      \"contextAfter\": \"tvOS ?+\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:init:0003:0005\",\n      \"source\": \"tvOS ?+\",\n      \"contextBefore\": \"macOS ?+\",\n      \"contextAfter\": \"visionOS ?+\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:init:0003:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS ?+\",\n      \"contextAfter\": \"watchOS ?+\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:init:0003:0007\",\n      \"source\": \"watchOS ?+\",\n      \"contextBefore\": \"visionOS ?+\",\n      \"contextAfter\": \"Declaration\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0006:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\ninit()\\n```\",\n      \"contextAfter\": \"[init(options: BNNSFlags, threadCount: Int, allocator: BNNSAlloc?, deallocator: BNNSFree?)](bnnsfilterparameters/init(options:threadcount:allocator:deallocator:).md)\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0001\",\n      \"source\": \"[init(options: BNNSFlags, threadCount: Int, allocator: BNNSAlloc?, deallocator: BNNSFree?)](bnnsfilterparameters/init(options:threadcount:allocator:deallocator:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"Returns a new common filter parameters structure using the specified options.\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0008:0001\",\n      \"source\": \"Returns a new common filter parameters structure using the specified options.\",\n      \"contextBefore\": \"[init(options: BNNSFlags, threadCount: Int, allocator: BNNSAlloc?, deallocator: BNNSFree?)](bnnsfilterparameters/init(options:threadcount:allocator:deallocator:).md)\",\n      \"contextAfter\": \"[init(flags: UInt32, n_threads: Int, alloc_memory: BNNSAlloc?, free_memory: BNNSFree?)](bnnsfilterparameters/init(flags:n_threads:alloc_memory:free_memory:).md)\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0009:0001\",\n      \"source\": \"[init(flags: UInt32, n_threads: Int, alloc_memory: BNNSAlloc?, free_memory: BNNSFree?)](bnnsfilterparameters/init(flags:n_threads:alloc_memory:free_memory:).md)\",\n      \"contextBefore\": \"Returns a new common filter parameters structure using the specified options.\",\n      \"contextAfter\": \"Returns a new common filter parameters structure.\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0010:0001\",\n      \"source\": \"Returns a new common filter parameters structure.\",\n      \"contextBefore\": \"[init(flags: UInt32, n_threads: Int, alloc_memory: BNNSAlloc?, free_memory: BNNSFree?)](bnnsfilterparameters/init(flags:n_threads:alloc_memory:free_memory:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0012:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsfilterparameters/init())*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"init()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:bnnsgraphbuilderceilingmode:0002:0001\",\n      \"source\": \"The pooling ceiling mode.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: enum\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"BNNSGraph.Builder.CeilingMode\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:bnnsgraphbuilderceilingmode:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 26.0+\",\n      \"contextAfter\": \"macOS 26.0+\",\n      \"documentTitle\": \"BNNSGraph.Builder.CeilingMode\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:enumeration-cases:0008:0001\",\n      \"source\": \"Enumeration Cases\",\n      \"contextBefore\": \"Topics\",\n      \"contextAfter\": \"[BNNSGraph.Builder.CeilingMode.ceiling](bnnsgraph/builder/ceilingmode/ceiling.md)\",\n      \"documentTitle\": \"BNNSGraph.Builder.CeilingMode\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:enumeration-cases:0010:0001\",\n      \"source\": \"The operation calculates the output size using ceiling division.\",\n      \"contextBefore\": \"[BNNSGraph.Builder.CeilingMode.ceiling](bnnsgraph/builder/ceilingmode/ceiling.md)\",\n      \"contextAfter\": \"[BNNSGraph.Builder.CeilingMode.floor](bnnsgraph/builder/ceilingmode/floor.md)\",\n      \"documentTitle\": \"BNNSGraph.Builder.CeilingMode\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:enumeration-cases:0012:0001\",\n      \"source\": \"The operation calculates the output size using floor division.\",\n      \"contextBefore\": \"[BNNSGraph.Builder.CeilingMode.floor](bnnsgraph/builder/ceilingmode/floor.md)\",\n      \"contextAfter\": \"Relationships\",\n      \"documentTitle\": \"BNNSGraph.Builder.CeilingMode\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:conforms-to:0014:0001\",\n      \"source\": \"Conforms To\",\n      \"contextBefore\": \"Relationships\",\n      \"contextAfter\": \"[Equatable](../Swift/Equatable.md)\",\n      \"documentTitle\": \"BNNSGraph.Builder.CeilingMode\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:bias:0002:0001\",\n      \"source\": \"The descriptor of the bias.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"bias\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nvar bias: BNNSNDArrayDescriptor\\n```\",\n      \"contextAfter\": \"[var i_desc: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/i_desc.md)\",\n      \"documentTitle\": \"bias\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"The descriptor of the input.\",\n      \"contextBefore\": \"[var i_desc: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/i_desc.md)\",\n      \"contextAfter\": \"[var w_desc: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/w_desc.md)\",\n      \"documentTitle\": \"bias\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"The descriptor of the weights.\",\n      \"contextBefore\": \"[var w_desc: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/w_desc.md)\",\n      \"contextAfter\": \"[var o_desc: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/o_desc.md)\",\n      \"documentTitle\": \"bias\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"The descriptor of the output.\",\n      \"contextBefore\": \"[var o_desc: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/o_desc.md)\",\n      \"contextAfter\": \"[var activation: BNNSActivation](bnnslayerparametersfullyconnected/activation.md)\",\n      \"documentTitle\": \"bias\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"The activation function that the layer applies to the output.\",\n      \"contextBefore\": \"[var activation: BNNSActivation](bnnslayerparametersfullyconnected/activation.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"bias\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:idesc:0002:0001\",\n      \"source\": \"The descriptor of the input.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"idesc\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nvar i_desc: BNNSNDArrayDescriptor\\n```\",\n      \"contextAfter\": \"[var w_desc: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/w_desc.md)\",\n      \"documentTitle\": \"idesc\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"The descriptor of the weights.\",\n      \"contextBefore\": \"[var w_desc: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/w_desc.md)\",\n      \"contextAfter\": \"[var o_desc: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/o_desc.md)\",\n      \"documentTitle\": \"idesc\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"The descriptor of the output.\",\n      \"contextBefore\": \"[var o_desc: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/o_desc.md)\",\n      \"contextAfter\": \"[var bias: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/bias.md)\",\n      \"documentTitle\": \"idesc\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"The descriptor of the bias.\",\n      \"contextBefore\": \"[var bias: BNNSNDArrayDescriptor](bnnslayerparametersfullyconnected/bias.md)\",\n      \"contextAfter\": \"[var activation: BNNSActivation](bnnslayerparametersfullyconnected/activation.md)\",\n      \"documentTitle\": \"idesc\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"The activation function that the layer applies to the output.\",\n      \"contextBefore\": \"[var activation: BNNSActivation](bnnslayerparametersfullyconnected/activation.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"idesc\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:bnnslayerparameterslosssoftmaxcrossentropy:0002:0001\",\n      \"source\": \"A structure that contains the parameters of a softmax cross entropy loss layer.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: struct\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:initializers:0009:0001\",\n      \"source\": \"[init(function: BNNSLossFunction, i_desc: BNNSNDArrayDescriptor, o_desc: BNNSNDArrayDescriptor, reduction: BNNSLossReductionFunction, label_smooth: Float)](bnnslayerparameterslosssoftmaxcrossentropy/init(function:i_desc:o_desc:reduction:label_smooth:).md)\",\n      \"contextBefore\": \"Initializers\",\n      \"contextAfter\": \"Returns a new softmax cross entropy loss layer parameters structure from the specified parameters.\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:initializers:0010:0001\",\n      \"source\": \"Returns a new softmax cross entropy loss layer parameters structure from the specified parameters.\",\n      \"contextBefore\": \"[init(function: BNNSLossFunction, i_desc: BNNSNDArrayDescriptor, o_desc: BNNSNDArrayDescriptor, reduction: BNNSLossReductionFunction, label_smooth: Float)](bnnslayerparameterslosssoftmaxcrossentropy/init(function:i_desc:o_desc:reduction:label_smooth:).md)\",\n      \"contextAfter\": \"[init()](bnnslayerparameterslosssoftmaxcrossentropy/init.md)\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:initializers:0012:0001\",\n      \"source\": \"Returns a new softmax cross entropy loss layer parameters structure.\",\n      \"contextBefore\": \"[init()](bnnslayerparameterslosssoftmaxcrossentropy/init.md)\",\n      \"contextAfter\": \"Instance Properties\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:instance-properties:0013:0001\",\n      \"source\": \"Instance Properties\",\n      \"contextBefore\": \"Returns a new softmax cross entropy loss layer parameters structure.\",\n      \"contextAfter\": \"[var function: BNNSLossFunction](bnnslayerparameterslosssoftmaxcrossentropy/function.md)\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:instance-properties:0015:0001\",\n      \"source\": \"The function that’s used to compute loss.\",\n      \"contextBefore\": \"[var function: BNNSLossFunction](bnnslayerparameterslosssoftmaxcrossentropy/function.md)\",\n      \"contextAfter\": \"[var i_desc: BNNSNDArrayDescriptor](bnnslayerparameterslosssoftmaxcrossentropy/i_desc.md)\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:instance-properties:0017:0001\",\n      \"source\": \"The descriptor of the input.\",\n      \"contextBefore\": \"[var i_desc: BNNSNDArrayDescriptor](bnnslayerparameterslosssoftmaxcrossentropy/i_desc.md)\",\n      \"contextAfter\": \"[var o_desc: BNNSNDArrayDescriptor](bnnslayerparameterslosssoftmaxcrossentropy/o_desc.md)\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:instance-properties:0019:0001\",\n      \"source\": \"The descriptor of the output.\",\n      \"contextBefore\": \"[var o_desc: BNNSNDArrayDescriptor](bnnslayerparameterslosssoftmaxcrossentropy/o_desc.md)\",\n      \"contextAfter\": \"[var reduction: BNNSLossReductionFunction](bnnslayerparameterslosssoftmaxcrossentropy/reduction.md)\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:instance-properties:0021:0001\",\n      \"source\": \"The function that’s used to reduce the computed loss.\",\n      \"contextBefore\": \"[var reduction: BNNSLossReductionFunction](bnnslayerparameterslosssoftmaxcrossentropy/reduction.md)\",\n      \"contextAfter\": \"[var label_smooth: Float](bnnslayerparameterslosssoftmaxcrossentropy/label_smooth.md)\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:instance-properties:0023:0001\",\n      \"source\": \"A value that defines the smoothing that the loss function applies to the labels.\",\n      \"contextBefore\": \"[var label_smooth: Float](bnnslayerparameterslosssoftmaxcrossentropy/label_smooth.md)\",\n      \"contextAfter\": \"Relationships\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:conforms-to:0025:0001\",\n      \"source\": \"Conforms To\",\n      \"contextBefore\": \"Relationships\",\n      \"contextAfter\": \"[BitwiseCopyable](../Swift/BitwiseCopyable.md)\",\n      \"documentTitle\": \"BNNSLayerParametersLossSoftmaxCrossEntropy\",\n      \"framework\": \"Accelerate\"\n    }\n  ]\n}\n\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T14:03:29.344734Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:29.778010Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:30.259264Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T14:03:30.953630Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T14:03:32.112380Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T14:03:34.509751Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T14:03:37.979020Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 0b7bf41c-7f01-4490-9e11-88958800c064\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 0b7bf41c-7f01-4490-9e11-88958800c064"
+    },
+    {
+      "index": 7,
+      "status": "queued",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:03:10.079Z",
+      "completedAt": "2026-05-12T14:03:16.999Z",
+      "durationMs": 6920,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+    },
+    {
+      "index": 8,
+      "status": "queued",
+      "segments": 30
+    },
+    {
+      "index": 9,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 10,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 11,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 12,
+      "status": "queued",
+      "segments": 28
+    },
+    {
+      "index": 13,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 14,
+      "status": "queued",
+      "segments": 23
+    },
+    {
+      "index": 15,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 16,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 17,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 18,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 19,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 20,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 21,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 22,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 23,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 24,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 25,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 26,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 27,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 28,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 29,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 30,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 31,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 32,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 33,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 34,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 35,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 36,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 37,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 38,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 39,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 40,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 41,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 42,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 43,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 44,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 45,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 46,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 47,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 48,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 49,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 50,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 51,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 52,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 53,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 54,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 55,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 56,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 57,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 58,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 59,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 60,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 61,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 62,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 63,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 64,
+      "status": "queued",
+      "segments": 45
+    },
+    {
+      "index": 65,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 66,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 67,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 68,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 69,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 70,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 71,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 72,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 73,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 74,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 75,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 76,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 77,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 78,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 79,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 80,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 81,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 82,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 83,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 84,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 85,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 86,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 87,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 88,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 89,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 90,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 91,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 92,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 93,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 94,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 95,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 96,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 97,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 98,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 99,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 100,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 101,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 102,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 103,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 104,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 105,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 106,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 107,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 108,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 109,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 110,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 111,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 112,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 113,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 114,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 115,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 116,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 117,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 118,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 119,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 120,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 121,
+      "status": "queued",
+      "segments": 42
+    },
+    {
+      "index": 122,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 123,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 124,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 125,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 126,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 127,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 128,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 129,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 130,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 131,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 132,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 133,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 134,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 135,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 136,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 137,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 138,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 139,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 140,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 141,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 142,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 143,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 144,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 145,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 146,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 147,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 148,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 149,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 150,
+      "status": "queued",
+      "segments": 42
+    },
+    {
+      "index": 151,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 152,
+      "status": "queued",
+      "segments": 38
+    },
+    {
+      "index": 153,
+      "status": "queued",
+      "segments": 37
+    },
+    {
+      "index": 154,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 155,
+      "status": "queued",
+      "segments": 42
+    },
+    {
+      "index": 156,
+      "status": "queued",
+      "segments": 37
+    },
+    {
+      "index": 157,
+      "status": "queued",
+      "segments": 42
+    },
+    {
+      "index": 158,
+      "status": "queued",
+      "segments": 38
+    },
+    {
+      "index": 159,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 160,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 161,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 162,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 163,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 164,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 165,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 166,
+      "status": "queued",
+      "segments": 36
+    },
+    {
+      "index": 167,
+      "status": "queued",
+      "segments": 32
+    },
+    {
+      "index": 168,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 169,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 170,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 171,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 172,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 173,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 174,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 175,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 176,
+      "status": "queued",
+      "segments": 37
+    },
+    {
+      "index": 177,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 178,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 179,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 180,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 181,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 182,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 183,
+      "status": "queued",
+      "segments": 32
+    },
+    {
+      "index": 184,
+      "status": "queued",
+      "segments": 30
+    },
+    {
+      "index": 185,
+      "status": "queued",
+      "segments": 45
+    },
+    {
+      "index": 186,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 187,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 188,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 189,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 190,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 191,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 192,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 193,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 194,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 195,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 196,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 197,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 198,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 199,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 200,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 201,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 202,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 203,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 204,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 205,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 206,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 207,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 208,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 209,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 210,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 211,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 212,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 213,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 214,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 215,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 216,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 217,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 218,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 219,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 220,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 221,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 222,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 223,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 224,
+      "status": "queued",
+      "segments": 32
+    },
+    {
+      "index": 225,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 226,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 227,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 228,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 229,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 230,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 231,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 232,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 233,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 234,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 235,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 236,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 237,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 238,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 239,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 240,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 241,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 242,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 243,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 244,
+      "status": "queued",
+      "segments": 41
+    },
+    {
+      "index": 245,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 246,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 247,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 248,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 249,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 250,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 251,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 252,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 253,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 254,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 255,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 256,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 257,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 258,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 259,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 260,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 261,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 262,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 263,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 264,
+      "status": "queued",
+      "segments": 35
+    }
+  ]
+}
