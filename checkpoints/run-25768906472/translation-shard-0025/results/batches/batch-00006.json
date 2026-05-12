@@ -1,0 +1,170 @@
+{
+  "batchIndex": 6,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:33.207Z",
+  "durationMs": 14902,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:heading:define-the-core-video-and-core-graphics-image-formats:0011:0001",
+        "ko": "Core Video 및 Core Graphics 이미지 형식 정의"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:define-the-core-video-and-core-graphics-image-formats:0012:0001",
+        "ko": "[`CVPixelBuffer`](https://developer.apple.com/documentation/CoreVideo/cvpixelbuffer-q2e) 객체를 사용하는 경우, vImage 라이브러리는 Core Video 픽셀 버퍼에서 [`vImageCVImageFormat`](vimagecvimageformat.md) 구조체를 생성하는 [`vImageCVImageFormat_CreateWithCVPixelBuffer(_:)`](vimagecvimageformat_createwithcvpixelbuffer(_:).md) 및 [`make(buffer:)`](vimagecvimageformat/make(buffer:).md) 함수를 제공합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:define-the-core-video-and-core-graphics-image-formats:0012:0002",
+        "ko": "하지만 이 문서의 코드는 YpCbCr 이미지를 설명하는 [`vImageCVImageFormat.Format.format420YpCbCr8PlanarFullRange`](vimagecvimageformat/format/format420ypcbcr8planarfullrange.md) Core Video 이미지 형식을 정의합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:define-the-core-video-and-core-graphics-image-formats:0012:0003",
+        "ko": "아래 코드는 채널당 8비트 RGB Core Graphics 이미지 형식도 정의합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:heading:perform-the-core-graphics-to-core-video-conversion:0014:0001",
+        "ko": "Core Graphics에서 Core Video로의 변환 수행"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0015:0001",
+        "ko": "Core Video 및 Core Graphics 이미지 형식 설명을 사용해 Core Graphics에서 Core Video 이미지 형식으로 변환하는 any-to-any [`vImageConverter`](vimageconverter.md) 인스턴스를 생성합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0017:0001",
+        "ko": "변환기는 대상 버퍼 수를 올바르게 생성하는 데 사용하는 [`destinationBufferCount`](vimageconverter/destinationbuffercount.md) 속성을 제공합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0017:0002",
+        "ko": "색차 크기는 휘도 크기의 1/4이지만, 세 개의 픽셀 버퍼 모두의 크기는 소스 이미지 크기로 선언합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:blockquote:perform-the-core-graphics-to-core-video-conversion:0019:0001",
+        "ko": "❗ **중요**: any-to-any 변환에 전달하는 소스 및 대상 vImage 버퍼는 모두 동일한 크기를 공유해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0020:0001",
+        "ko": "아래 코드에서 `rgbSourceBuffer`는 위의 [`vImage_CGImageFormat`](vimage_cgimageformat.md) 구조와 일치하는 형식의 [`vImage.Interleaved8x3`](vimage/interleaved8x3.md) [`vImage.PixelBuffer`](vimage/pixelbuffer.md)로, 소스 이미지를 포함합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0020:0002",
+        "ko": "대상 버퍼를 채우려면 [`convert(from:to:)`](vimageconverter/convert(from:to:)-587gc.md) 메서드를 호출합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0022:0001",
+        "ko": "반환되면 `ypCbCr8PlanarBuffers` 배열의 세 픽셀 버퍼에 휘도와 두 개의 크로마 채널이 들어 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0022:0002",
+        "ko": "아래 이미지는 휘도 채널(왼쪽), Cb 채널(중간), Cr 채널(오른쪽)을 보여줍니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0023:0001",
+        "ko": "![꽃 사진의 YpCrCb 표현에서 서로 다른 평면을 보여주는 세 개의 그레이스케일 이미지."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0023:0002",
+        "ko": "첫 번째 이미지에는 휘도 정보가 포함되어 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0023:0003",
+        "ko": "두 번째와 세 번째 이미지는 크로마 정보가 포함되어 있으며, 이미지의 왼쪽 위 1/4 영역만 채우도록 크기가 조정됩니다.](https://docs-assets.developer.apple.com/published/05210844d773d099f3ddea68afb37de1/media-4264989%402x.png)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:heading:apply-an-operation-to-the-subsampled-chrominance-channels:0024:0001",
+        "ko": "하위 샘플링된 크로마 채널에 연산 적용"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:apply-an-operation-to-the-subsampled-chrominance-channels:0025:0001",
+        "ko": "두 크로마 채널은 전체 크기의 휘도 채널과 같은 크기이지만 데이터는 1/4만 포함합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:apply-an-operation-to-the-subsampled-chrominance-channels:0025:0002",
+        "ko": "Cb 및 Cr 채널에 이미지 처리 연산을 적용하는 경우 [`withUnsafeRegionOfInterest(_:_:)`](vimage/pixelbuffer/withunsaferegionofinterest(_:_:).md) 메서드를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:apply-an-operation-to-the-subsampled-chrominance-channels:0025:0003",
+        "ko": "이렇게 하면 사용되지 않는 픽셀이 처리되지 않습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:apply-an-operation-to-the-subsampled-chrominance-channels:0025:0004",
+        "ko": "아래 코드는 [`Adjusting saturation and applying tone mapping`](adjusting-saturation-and-applying-tone-mapping.md)에서 다룬 방법을 사용해 이미지의 채도를 감소시킵니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:apply-an-operation-to-the-subsampled-chrominance-channels:0027:0001",
+        "ko": "사각형 관심 영역에서만 vImage 연산을 제한하는 방법에 대한 자세한 내용은 [`Applying vImage operations to regions of interest`](applying-vimage-operations-to-regions-of-interest.md)를 참고하십시오."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:heading:perform-the-core-video-to-core-graphics-conversion:0028:0001",
+        "ko": "Core Video에서 Core Graphics로의 변환 수행"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-video-to-core-graphics-conversion:0029:0001",
+        "ko": "YpCbCr 버퍼를 RGB 버퍼로 변환하려면 소스가 Core Video 이미지 형식이고 대상은 Core Graphics 이미지 형식인 컨버터를 생성합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-video-to-core-graphics-conversion:0029:0002",
+        "ko": "위와 동일하게 [`convert(from:to:)`](vimageconverter/convert(from:to:)-587gc.md) 메서드를 호출하되, 소스는 `ypCbCr8PlanarBuffers` 배열로, 대상은 채널당 8비트 인터리브 버퍼로 지정합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-video-to-core-graphics-conversion:0031:0001",
+        "ko": "반환되면 `rgbDestinationBuffer`에 원본 이미지(왼쪽)의 채도 감소 버전(오른쪽)이 들어 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:perform-the-core-video-to-core-graphics-conversion:0032:0001",
+        "ko": "![꽃의 원본 사진과 동일한 사진의 채도 감소 버전을 나란히 비교한 이미지입니다.](https://docs-assets.developer.apple.com/published/1df1b26d502a07d2261f0ac6c69daf84/media-4264990%402x.png)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:heading:see-also:0033:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:list:see-also:0034:0001",
+        "ko": "[Building a basic image conversion workflow](building-a-basic-image-conversion-workflow.md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "CMYK 이미지를 RGB 이미지로 변환하여 any-to-any 함수의 기본 동작을 익힐 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:list:see-also:0036:0001",
+        "ko": "[Functions that perform any-to-any conversion](functions-that-perform-any-to-any-conversion.md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+        "id": "seg:paragraph:see-also:0037:0001",
+        "ko": "임의의 색 공간과 비트 심도를 가진 Core Video 또는 Core Graphics 이미지 데이터 간을 변환합니다."
+      }
+    ]
+  }
+}

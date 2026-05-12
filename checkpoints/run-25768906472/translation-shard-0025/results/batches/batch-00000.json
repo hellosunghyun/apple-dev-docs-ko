@@ -1,0 +1,250 @@
+{
+  "batchIndex": 0,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:37.658Z",
+  "durationMs": 12400,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:heading:displaytransformforviewportsize:0000:0001",
+        "ko": "displayTransform(for:viewportSize:)"
+      },
+      {
+        "id": "seg:paragraph:displaytransformforviewportsize:0002:0001",
+        "ko": "캡처된 이미지의 정규화된 좌표를 화면에서 카메라 이미지를 렌더링하기에 적절한 좌표 공간으로 변환하는 아핀 변환을 반환합니다."
+      },
+      {
+        "id": "seg:list:mentions:0008:0001",
+        "ko": "[Displaying an AR Experience with Metal](displaying-an-ar-experience-with-metal.md)"
+      },
+      {
+        "id": "seg:heading:return-value:0009:0001",
+        "ko": "반환 값"
+      },
+      {
+        "id": "seg:paragraph:return-value:0010:0001",
+        "ko": "캡처된 이미지의 정규화 좌표를 지정된 매개변수를 반영한 정규화 좌표로 변환하는 변환 행렬입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0012:0001",
+        "ko": "정규화된 이미지 좌표는 이미지의 왼쪽 위가 `(0,0)`이고 오른쪽 아래가 `(1,1)`입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0013:0001",
+        "ko": "이 메서드는 지정된 방향과 지정된 뷰포트의 종횡비에 맞추기 위해 카메라 이미지를 조정하는 데 필요한 회전 및 aspect-fit crop 연산을 나타내는 아핀 변환을 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0013:0002",
+        "ko": "아핀 변환은 뷰포트의 픽셀 크기에 맞춰 스케일링되지 않습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0014:0001",
+        "ko": "[`capturedImage`](arframe/capturedimage.md) 픽셀 버퍼는 장치 카메라가 캡처한 원본 이미지이므로 장치 방향이나 뷰의 종횡비에 맞게 조정되지 않습니다."
+      },
+      {
+        "id": "seg:list:parameters:0016:0001",
+        "ko": "`orientation`: 뷰를 표시하기 위한 방향입니다."
+      },
+      {
+        "id": "seg:list:parameters:0016:0002",
+        "ko": "`viewportSize`: 카메라 이미지를 렌더링하려는 뷰의 크기(포인트 단위)입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0017:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "카메라 이미지를 기반으로 조명 조건을 추정한 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "ARKit가 월드 트래킹을 수행하기 위해 사용하는 장면 분석의 현재 중간 결과입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "전면 카메라 경험에서 캡처된 깊이 데이터입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "해당 프레임의 깊이 데이터(있는 경우)가 캡처된 시점입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "AR 경험에서 장치의 후면 카메라와 실제 세계 객체 사이의 거리 데이터입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "AR 경험에서 장치의 후면 카메라와 실제 세계 객체 간 거리 측정값의 평균으로, 더 부드러운 시각 효과를 만듭니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arframe/displaytransform(for:viewportsize:))*"
+      },
+      {
+        "id": "seg:paragraph:defaultbody2d:0002:0001",
+        "ko": "2D에서 정의된 body의 기본 스켈레톤 정의입니다."
+      },
+      {
+        "id": "seg:heading:viewwillupdatefor:0000:0001",
+        "ko": "view(_:willUpdate:for:)"
+      },
+      {
+        "id": "seg:paragraph:viewwillupdatefor:0002:0001",
+        "ko": "이 메서드는 delegate에 대해 SpriteKit 노드의 속성이 해당 앵커의 현재 상태와 일치하도록 업데이트될 예정임을 알립니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "세션 구성에 따라 ARKit는 세션의 앵커를 자동으로 업데이트할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "뷰는 업데이트된 각 앵커에 대해 이 메서드를 한 번 호출합니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0001",
+        "ko": "`view`: 씬을 렌더링하는 [`ARSKView`](arskview.md) 객체입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0002",
+        "ko": "`node`: 업데이트된 SpriteKit 노드입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0003",
+        "ko": "`anchor`: 노드에 해당하는 AR 앵커입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0011:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[func view(ARSKView, nodeFor: ARAnchor) -> SKNode?](arskviewdelegate/view(_:nodefor:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "새로 추가된 앵커에 해당하는 SpriteKit 노드를 delegate가 제공하도록 요청합니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[func view(ARSKView, didAdd: SKNode, for: ARAnchor)](arskviewdelegate/view(_:didadd:for:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "새로운 AR 앵커에 해당하는 SpriteKit 노드가 씬에 추가되었음을 delegate에 알립니다."
+      },
+      {
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func view(ARSKView, didUpdate: SKNode, for: ARAnchor)](arskviewdelegate/view(_:didupdate:for:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "SpriteKit 노드의 속성이 해당 앵커의 현재 상태와 일치하도록 업데이트되었음을 delegate에 알립니다."
+      },
+      {
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[func view(ARSKView, didRemove: SKNode, for: ARAnchor)](arskviewdelegate/view(_:didremove:for:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "AR 앵커에 해당하는 SpriteKit 노드가 씬에서 제거되었음을 delegate에 알립니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arskviewdelegate/view(_:willupdate:for:))*"
+      },
+      {
+        "id": "seg:paragraph:barcodeanchorsymbologycode39checksum:0002:0001",
+        "ko": "Code 39 체크섬 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "Aztec 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "Codabar 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "Code 128 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "Code 39 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "Code 39 풀 ASCII 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "Code 39 풀 ASCII 체크섬 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "Code 93 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "Code 93i 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "Data Matrix 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "EAN13 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "EAN8 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "GS1 DataBar 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "GS1 DataBar Expanded 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "GS1 DataBar Limited 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0037:0001",
+        "ko": "ITF 바코드 심볼리지를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:componentspervector:0002:0001",
+        "ko": "지오메트리 소스의 각 벡터에 있는 스칼라 구성요소 수입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "지오메트리 소스의 벡터별 데이터를 포함하는 Metal 버퍼입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "지오메트리 소스의 벡터 개수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "지오메트리 소스의 버퍼에 있는 데이터의 버텍스 형식입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "지오메트리 소스의 버퍼 시작점에서 바이트 단위 오프셋입니다."
+      }
+    ]
+  }
+}
