@@ -1,0 +1,230 @@
+{
+  "batchIndex": 28,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:45.928Z",
+  "durationMs": 17893,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "지정한 간격 동안 업스트림 퍼블리셔의 요소를 선택적으로 다시 게시하려면 [`throttle(for:scheduler:latest:)`](publisher/throttle(for:scheduler:latest:).md)을 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "스로틀링 간격에서 업스트림 퍼블리셔로부터 수신한 다른 요소는 다시 게시되지 않습니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "다음 예제에서는 [`Timer.TimerPublisher`](https://developer.apple.com/documentation/Foundation/Timer/TimerPublisher)가 1초 간격으로 요소를 생성합니다. [`throttle(for:scheduler:latest:)`](publisher/throttle(for:scheduler:latest:).md) 연산자는 첫 번째 이벤트를 전달한 뒤, 이어지는 10초 간격에서 가장 최근 이벤트만 다시 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:list:parameters:0014:0001",
+        "ko": "`interval`: scheduler의 시간 체계로 표현되는, 가장 최근 또는 첫 번째 요소를 찾아 발행할 간격입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:list:parameters:0014:0002",
+        "ko": "`scheduler`: 요소를 발행할 스케줄러입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:list:parameters:0014:0003",
+        "ko": "`latest`: 가장 최근 요소를 발행할지 나타내는 Boolean 값입니다. false인 경우 퍼블리셔는 간격 동안 수신한 첫 번째 요소를 방출합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:heading:see-also:0015:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func measureInterval<S>(using: S, options: S.SchedulerOptions?) -> Publishers.MeasureInterval<Self, S>](publishers/merge/measureinterval(using:options:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "상위 퍼블리셔로부터 수신한 이벤트 간의 시간 간격을 측정해 출력합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[func debounce<S>(for: S.SchedulerTimeType.Stride, scheduler: S, options: S.SchedulerOptions?) -> Publishers.Debounce<Self, S>](publishers/merge/debounce(for:scheduler:options:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "이벤트 간에 지정한 시간 간격이 경과한 후에만 요소를 발행합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:list:see-also:0020:0001",
+        "ko": "[func delay<S>(for: S.SchedulerTimeType.Stride, tolerance: S.SchedulerTimeType.Stride?, scheduler: S, options: S.SchedulerOptions?) -> Publishers.Delay<Self, S>](publishers/merge/delay(for:tolerance:scheduler:options:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "특정 스케줄러에서 모든 출력을 다운스트림 수신자에게 지정된 시간만큼 지연해 전달합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:list:see-also:0022:0001",
+        "ko": "[func timeout<S>(S.SchedulerTimeType.Stride, scheduler: S, options: S.SchedulerOptions?, customError: (() -> Self.Failure)?) -> Publishers.Timeout<Self, S>](publishers/merge/timeout(_:scheduler:options:customerror:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "업스트림 퍼블리셔가 지정한 시간 간격 내에 요소를 생성하지 않으면 발행을 종료합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge/throttle-forschedulerlatest.md",
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/combine/publishers/merge/throttle(for:scheduler:latest:))*"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:heading:setfailuretypeto:0000:0001",
+        "ko": "setFailureType(to:)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:setfailuretypeto:0002:0001",
+        "ko": "상위 퍼블리셔에 선언된 실패 유형을 변경합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "지정한 실패 유형을 보내는 것으로 표시되는 퍼블리셔입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "Use [`setFailureType(to:)`](publisher/setfailuretype(to:).md) when you need set the error type of a publisher that cannot fail."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "반대로 업스트림이 실패할 수 있는 경우, 하류 퍼블리셔의 입력에 필요한 오류 유형으로 변환하는 지침을 제공하려면 [`mapError(_:)`](publisher/maperror(_:).md)를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:discussion:0012:0001",
+        "ko": "다음 예제에는 오류 유형이 일치하지 않는 두 퍼블리셔가 있습니다. `pub1`의 오류 유형은 [`Never`](https://developer.apple.com/documentation/Swift/Never)이고, `pub2`의 오류 유형은 [`Error`](https://developer.apple.com/documentation/Swift/Error)입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:discussion:0012:0002",
+        "ko": "불일치로 인해 [`combineLatest(_:)`](publisher/combinelatest(_:).md) 연산자는 `pub1`이 `pub2`와 같이 [`Error`](https://developer.apple.com/documentation/Swift/Error) 유형을 생성할 수 있는 것처럼 표시되도록 [`setFailureType(to:)`](publisher/setfailuretype(to:).md)를 사용해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:list:parameters:0015:0001",
+        "ko": "`failureType`: 이 퍼블리셔가 나타내는 유형입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:heading:see-also:0016:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:list:see-also:0017:0001",
+        "ko": "[func map<T>((Self.Output) -> T) -> Publishers.Map<Self, T>](publishers/merge4/map(_:)-4vpem.md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "업스트림 퍼블리셔의 모든 요소를 제공된 클로저로 변환합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:list:see-also:0019:0001",
+        "ko": "[func tryMap<T>((Self.Output) throws -> T) -> Publishers.TryMap<Self, T>](publishers/merge4/trymap(_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "업스트림 퍼블리셔의 모든 요소를 오류를 throw하는 클로저로 변환합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:list:see-also:0021:0001",
+        "ko": "[func mapError<E>((Self.Failure) -> E) -> Publishers.MapError<Self, E>](publishers/merge4/maperror(_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "업스트림 퍼블리셔의 모든 실패를 새 오류로 변환합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:list:see-also:0023:0001",
+        "ko": "[func replaceNil<T>(with: T) -> Publishers.Map<Self, T>](publishers/merge4/replacenil(with:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:see-also:0024:0001",
+        "ko": "스트림에서 nil 요소를 제공된 요소로 교체합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:list:see-also:0025:0001",
+        "ko": "[func scan<T>(T, (T, Self.Output) -> T) -> Publishers.Scan<Self, T>](publishers/merge4/scan(_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:see-also:0026:0001",
+        "ko": "업스트림 퍼블리셔의 요소를 클로저의 현재 요소와 클로저가 마지막으로 반환한 값과 함께 제공해 변환합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:list:see-also:0027:0001",
+        "ko": "[func tryScan<T>(T, (T, Self.Output) throws -> T) -> Publishers.TryScan<Self, T>](publishers/merge4/tryscan(_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:see-also:0028:0001",
+        "ko": "업스트림 퍼블리셔의 요소를 클로저의 현재 요소와 클로저가 마지막으로 반환한 값을 함께 제공하고, 오류를 throw할 수 있는 클로저로 변환합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge4/setfailuretype-to.md",
+        "id": "seg:paragraph:see-also:0030:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/combine/publishers/merge4/setfailuretype(to:))*"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge5/values-7v7nx.md",
+        "id": "seg:paragraph:values:0002:0001",
+        "ko": "비동기 시퀀스로 제공되는 퍼블리셔의 요소입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge5/values-7v7nx.md",
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 속성은 [`AsyncPublisher`](asyncpublisher.md)을 제공하며, 이를 통해 Swift의 `async`-`await` 구문을 사용해 퍼블리셔의 요소를 수신할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge5/values-7v7nx.md",
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "[`AsyncPublisher`](asyncpublisher.md)는 [`AsyncSequence`](https://developer.apple.com/documentation/Swift/AsyncSequence)를 준수하므로, 구독자를 연결하지 않고 `for`-`await`-`in` 루프로 요소를 반복합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge5/values-7v7nx.md",
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "다음 예제는 `values` 속성을 사용해 요소를 비동기적으로 수신하는 방법을 보여줍니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge5/values-7v7nx.md",
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "이 예제는 시퀀스를 짝수 정수만 방출하도록 필터링하는 [`filter(_:)`](publisher/filter(_:).md) 연산자 문서의 코드 조각을 기반으로 합니다."
+      }
+    ]
+  }
+}

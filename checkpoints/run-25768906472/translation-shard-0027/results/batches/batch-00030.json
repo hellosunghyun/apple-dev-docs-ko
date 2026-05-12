@@ -1,0 +1,260 @@
+{
+  "batchIndex": 30,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:59.703Z",
+  "durationMs": 27735,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "여러 개의 하위 구독자가 있을 때 상위 게시자가 이벤트당 [`receive(_:)`](subscriber/receive(_:).md) 호출을 한 번만 처리하도록 하려면 멀티캐스트 게시자를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "이는 네트워크 요청 수행처럼 중복하고 싶지 않은 비용이 큰 상위 작업이 있을 때 유용합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "[`multicast(subject:)`](publisher/multicast(subject:).md)와 달리 이 메서드는 각 구독자마다 별도의 [`Subject`](subject.md)로 구성된 게시자를 생성합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "다음 예제는 시퀀스 게시자를 카운터로 사용해 [`map(_:)`](publisher/map(_:)-99evh.md) 연산자가 생성한 임의의 숫자 3개를 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "이 예제는 두 구독자에게 동일한 임의의 숫자를 공유하기 위해, 클로저가 [`PassthroughSubject`](passthroughsubject.md)를 생성하는 [`multicast(_:)`](publisher/multicast(_:).md) 연산자를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:discussion:0010:0003",
+        "ko": "멀티캐스트 게시자는 [`ConnectablePublisher`](connectablepublisher.md)이므로 [`connect()`](connectablepublisher/connect().md) 호출 후에만 게시가 시작됩니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:discussion:0012:0001",
+        "ko": "이 예제의 출력은 [`print(_:to:)`](publisher/print(_:to:).md) 연산자가 각 임의 값을 한 번만 수신한 뒤 두 구독자 모두에게 값을 전송함을 보여줍니다.\n```swift\nlet pub = [\"First\", \"Second\", \"Third\"].publisher\n    .map( { return ($0, Int.random(in: 0...100)) } )\n    .print(\"Random\")\n    .multicast { PassthroughSubject<(String, Int), Never>() }\n\ncancellable1 = pub\n   .sink { print (\"Stream 1 received: \\\\($0)\")}\ncancellable2 = pub\n   .sink { print (\"Stream 2 received: \\\\($0)\")}\npub.connect()\n\n// Prints:\n// Random: receive value: ((\"First\", 9))\n// Stream 2 received: (\"First\", 9)\n// Stream 1 received: (\"First\", 9)\n// Random: receive value: ((\"Second\", 46))\n// Stream 2 received: (\"Second\", 46)\n// Stream 1 received: (\"Second\", 46)\n// Random: receive value: ((\"Third\", 26))\n// Stream 2 received: (\"Third\", 26)\n// Stream 1 received: (\"Third\", 26)\n```"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:list:parameters:0014:0001",
+        "ko": "`createSubject`: 구독자가 멀티캐스트 게시자에 연결될 때마다 새 `Subject`를 생성하는 클로저입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:heading:see-also:0015:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func multicast<S>(subject: S) -> Publishers.Multicast<Self, S>](publishers/multicast/multicast(subject:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "요소를 여러 구독자에게 전달하기 위한 `Subject`를 제공합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "상위 게시자의 출력을 여러 구독자와 공유합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/combine/publishers/multicast/multicast(_:))*"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:heading:trycontainswhere:0000:0001",
+        "ko": "tryContains(where:)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:trycontainswhere:0002:0001",
+        "ko": "오류를 던질 수 있는 predicate 클로저를 만족하는 요소를 수신하면 `Boolean` 값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "상위 게시자가 일치하는 값을 게시하면 `true`인 `Boolean` 값을 방출하는 게시자입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "[`tryContains(where:)`](publisher/trycontains(where:).md) 메서드는 제공한 오류 발생 클로저를 만족하는 상위의 첫 번째 요소를 찾는 데 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "이 연산자는 상위 게시자가 다음 중 하나에 도달할 때까지 상위 게시자가 생성한 요소를 소비합니다:"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:list:discussion:0012:0001",
+        "ko": "일치하는 요소를 생성한 후 `true`를 방출하고 게시자가 정상적으로 완료됩니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:list:discussion:0012:0002",
+        "ko": "일치하는 요소가 없으면 `false`를 방출하고 게시자가 정상적으로 완료됩니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:discussion:0013:0001",
+        "ko": "클로저가 오류를 던지면 게시자가 실패하고 해당 오류를 하위로 전달합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:discussion:0014:0001",
+        "ko": "아래 예제에서 [`tryContains(where:)`](publisher/trycontains(where:).md) 연산자는 값을 검사해 `10`보다 작은 요소를 찾습니다. 클로저가 `3`처럼 홀수 값을 만나면 게시자가 `IllegalValueError`로 종료됩니다.\n```swift\nstruct IllegalValueError: Error {}\n\nlet numbers = [3, 2, 10, 5, 0, 9]\nnumbers.publisher\n    .tryContains {\n        if ($0 % 2 != 0) {\n            throw IllegalValueError()\n        }\n       return $0 < 10\n    }\n    .sink(\n        receiveCompletion: { print (\"completion: \\\\($0)\") },\n        receiveValue: { print (\"value: \\\\($0)\") }\n    )\n\n// Prints: \"completion: failure(IllegalValueError())\"\n```"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:list:parameters:0017:0001",
+        "ko": "`predicate`: 요소를 매개변수로 받아 요소가 클로저의 비교 로직을 만족하는지 나타내는 `Boolean` 값을 반환하는 클로저입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:heading:see-also:0018:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:list:see-also:0019:0001",
+        "ko": "[func contains(Self.Output) -> Publishers.Contains<Self>](publishers/multicast/contains(_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "인수와 동일한 요소를 수신하면 `Boolean` 값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:list:see-also:0021:0001",
+        "ko": "[func contains(where: (Self.Output) -> Bool) -> Publishers.ContainsWhere<Self>](publishers/multicast/contains(where:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "predicate 클로저를 만족하는 요소를 수신하면 `Boolean` 값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:list:see-also:0023:0001",
+        "ko": "[func allSatisfy((Self.Output) -> Bool) -> Publishers.AllSatisfy<Self>](publishers/multicast/allsatisfy(_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:see-also:0024:0001",
+        "ko": "주어진 predicate를 모든 수신 요소가 통과했는지 나타내는 단일 `Boolean` 값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:list:see-also:0025:0001",
+        "ko": "[func tryAllSatisfy((Self.Output) throws -> Bool) -> Publishers.TryAllSatisfy<Self>](publishers/multicast/tryallsatisfy(_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:see-also:0026:0001",
+        "ko": "주어진 오류를 던지는 predicate를 모든 수신 요소가 통과했는지 나타내는 단일 `Boolean` 값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/trycontains-where.md",
+        "id": "seg:paragraph:see-also:0028:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/combine/publishers/multicast/trycontains(where:))*"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:heading:compactmap:0000:0001",
+        "ko": "compactMap(_:)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:paragraph:compactmap:0002:0001",
+        "ko": "수신된 각 요소로 클로저를 호출하고 값이 있는 반환 optional을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "공급된 클로저를 호출했을 때 `nil`이 아닌 `optional` 결과를 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "Combine의 [`compactMap(_:)`](publisher/compactmap(_:).md) 연산자는 Swift 표준 라이브러리의 [`compactMap(_:)`](https://developer.apple.com/documentation/Swift/Sequence/compactMap(_:))와 유사한 동작을 수행합니다. 즉, Combine의 [`compactMap(_:)`](publisher/compactmap(_:).md) 연산자는 게시자 스트림에서 `nil` 요소를 제거하고 `nil`이 아닌 요소를 하위 구독자에게 다시 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "다음 예제는 숫자 범위를 컬렉션 기반 게시자의 소스로 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:paragraph:discussion:0011:0002",
+        "ko": "[`compactMap(_:)`](publisher/compactmap(_:).md) 연산자는 `numbers` 게시자의 각 요소를 사용해 키로 딕셔너리에 접근하려고 시도합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:paragraph:discussion:0011:0003",
+        "ko": "예제의 딕셔너리가 존재하지 않는 키로 인해 `nil`을 반환하면 [`compactMap(_:)`](publisher/compactmap(_:).md)에서 `nil`(누락) 요소를 필터링합니다.\n```swift\nlet numbers = (0...5)\nlet romanNumeralDict: [Int : String] =\n    [1: \"I\", 2: \"II\", 3: \"III\", 5: \"V\"]\n\ncancellable = numbers.publisher\n    .compactMap { romanNumeralDict[$0] }\n    .sink { print(\"\\\\($0)\", terminator: \" \") }\n\n// Prints: \"I II III V\"\n```"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:list:parameters:0014:0001",
+        "ko": "`transform`: 값을 받고 optional 값을 반환하는 클로저입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:heading:see-also:0015:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func filter((Self.Output) -> Bool) -> Publishers.Filter<Self>](publishers/prefixwhile/filter(_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "제공된 클로저에 맞는 모든 요소를 다시 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[func tryFilter((Self.Output) throws -> Bool) -> Publishers.TryFilter<Self>](publishers/prefixwhile/tryfilter(_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "제공된 오류를 던질 수 있는 클로저에 맞는 모든 요소를 다시 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:list:see-also:0020:0001",
+        "ko": "[func tryCompactMap<T>((Self.Output) throws -> T?) -> Publishers.TryCompactMap<Self, T>](publishers/prefixwhile/trycompactmap(_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/prefixwhile/compactmap.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "수신된 각 요소에 대해 오류를 던지는 클로저를 호출하고 값이 있는 반환 optional을 게시합니다."
+      }
+    ]
+  }
+}
