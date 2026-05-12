@@ -1,0 +1,250 @@
+{
+  "batchIndex": 5,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:22.806Z",
+  "durationMs": 10700,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:create-the-multidimensional-lookup:0019:0001",
+        "ko": "아래 코드는 다차원 룩업 테이블 구조를 생성하고, 세 개의 소스 평면 버퍼에 룩업 테이블을 적용한 다음, 결과를 세 개의 대상 버퍼에 기록합니다."
+      },
+      {
+        "id": "seg:paragraph:create-the-multidimensional-lookup:0021:0001",
+        "ko": "세 개의 대상 평면 버퍼에는 변환된 이미지가 들어 있습니다."
+      },
+      {
+        "id": "seg:heading:create-a-core-graphics-image:0022:0001",
+        "ko": "Core Graphics 이미지 생성"
+      },
+      {
+        "id": "seg:paragraph:create-a-core-graphics-image:0023:0001",
+        "ko": "아래 코드는 세 개의 평면 버퍼를 단일 RGB 버퍼로 인터리브합니다."
+      },
+      {
+        "id": "seg:paragraph:create-a-core-graphics-image:0023:0002",
+        "ko": "마지막으로 [`makeCGImage(cgImageFormat:)`](vimage/pixelbuffer/makecgimage(cgimageformat:).md) 함수는 앱이 사용자 인터페이스에 표시하는 Core Graphics 이미지를 반환합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0025:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:list:see-also:0026:0001",
+        "ko": "[Applying color transforms to images with a multidimensional lookup table](applying-color-transforms-to-images-with-a-multidimensional-lookup-table.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "색상 공간 변환 및 기타 점별 연산을 최적화하기 위해 변환 값을 미리 계산합니다."
+      },
+      {
+        "id": "seg:list:see-also:0028:0001",
+        "ko": "[Cropping to the subject in a chroma-keyed image](cropping-to-the-subject-in-a-chroma-keyed-image.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "chroma-key 색상을 알파 값으로 변환하고 Accelerate를 사용해 투명 픽셀을 잘라냅니다."
+      },
+      {
+        "id": "seg:list:see-also:0030:0001",
+        "ko": "[func vImageMultidimensionalTable_Create(UnsafePointer<UInt16>, UInt32, UInt32, UnsafePointer<UInt8>, vImageMDTableUsageHint, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> vImage_MultidimensionalTable!](vimagemultidimensionaltable_create(_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "다차원 룩업 테이블을 생성합니다."
+      },
+      {
+        "id": "seg:list:see-also:0032:0001",
+        "ko": "[func vImageMultiDimensionalInterpolatedLookupTable_PlanarF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, vImage_MultidimensionalTable, vImage_InterpolationMethod, vImage_Flags) -> vImage_Error](vimagemultidimensionalinterpolatedlookuptable_planarf(_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "32비트 평면 이미지를 변환하기 위해 다차원 룩업 테이블을 사용합니다."
+      },
+      {
+        "id": "seg:list:see-also:0034:0001",
+        "ko": "[func vImageMultiDimensionalInterpolatedLookupTable_Planar16Q12(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, vImage_MultidimensionalTable, vImage_InterpolationMethod, vImage_Flags) -> vImage_Error](vimagemultidimensionalinterpolatedlookuptable_planar16q12(_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "16Q12 평면 이미지를 변환하기 위해 다차원 룩업 테이블을 사용합니다."
+      },
+      {
+        "id": "seg:list:see-also:0036:0001",
+        "ko": "[func vImageMultidimensionalTable_Retain(vImage_MultidimensionalTable!) -> vImage_Error](vimagemultidimensionaltable_retain(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0037:0001",
+        "ko": "다차원 테이블을 유지합니다."
+      },
+      {
+        "id": "seg:list:see-also:0038:0001",
+        "ko": "[func vImageMultidimensionalTable_Release(vImage_MultidimensionalTable!) -> vImage_Error](vimagemultidimensionaltable_release(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0039:0001",
+        "ko": "다차원 테이블을 해제합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0041:0001",
+        "ko": "다차원 룩업 테이블을 나타내는 불투명 포인터입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0043:0001",
+        "ko": "다차원 룩업 테이블의 사용 용도를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0045:0001",
+        "ko": "서로 다른 보간 메서드를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:momentum:0002:0001",
+        "ko": "0에서 1 사이의 값으로, 정규화 작업에서 학습 중 이동 평균과 이동 분산을 갱신할 때 사용합니다."
+      },
+      {
+        "id": "seg:list:momentum:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:list:momentum:0004:0006",
+        "ko": "visionOS ?+"
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "정규화 유형을 지정하는 열거형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "beta의 디스크립터입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "gamma의 디스크립터입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "표준 편차 계산에 사용되는 epsilon입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "레이어가 출력에 적용하는 활성화 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:bnnsreductionfunctionany:0002:0001",
+        "ko": "논리 OR 축소 함수의 별칭입니다."
+      },
+      {
+        "id": "seg:list:bnnsreductionfunctionany:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:list:bnnsreductionfunctionany:0004:0006",
+        "ko": "visionOS ?+"
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "최대값을 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "최대값의 인덱스를 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "평균값을 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "0이 아닌 요소의 평균값을 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "최소값을 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "최소값의 인덱스를 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "모든 값의 합을 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "모든 절대값의 합을 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:list:see-also:0024:0001",
+        "ko": "[BNNS.ReductionFunction.sumOfLogs(epsilon:)](bnns/reductionfunction/sumoflogs(epsilon:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "모든 값의 자연 로그 합을 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "모든 값의 제곱 합을 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "모든 값의 논리 AND를 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "논리 AND 축소 함수의 별칭입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "모든 값의 논리 OR 연산을 계산하는 축소 함수입니다."
+      },
+      {
+        "id": "seg:heading:bnnsapplymultiheadattention:0000:0001",
+        "ko": "BNNSApplyMultiheadAttention(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:)"
+      },
+      {
+        "id": "seg:paragraph:bnnsapplymultiheadattention:0002:0001",
+        "ko": "입력 객체 집합에 멀티헤드 어텐션 필터를 적용하고, 결과를 출력 객체 집합에 기록합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "`key_mask`는 `source_length`개의 요소를 포함하는 1D 텐서로 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "요소가 true로 평가되면 어텐션 연산에서 key 행렬의 해당 요소를 무시합니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0001",
+        "ko": "`F`: 적용할 필터입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0002",
+        "ko": "`batch_size`: 입력-출력 쌍의 수입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0003",
+        "ko": "`query`: query 입력 행렬 데이터에 대한 포인터입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0004",
+        "ko": "`query_stride`: query의 배치 스트라이드입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0005",
+        "ko": "`key`: key 입력 행렬 데이터에 대한 포인터입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0006",
+        "ko": "`key_stride`: key의 배치 스트라이드입니다."
+      }
+    ]
+  }
+}
