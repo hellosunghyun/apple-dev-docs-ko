@@ -1,0 +1,2323 @@
+{
+  "generatedAt": "2026-05-12T14:02:26.444Z",
+  "updatedAt": "2026-05-12T14:03:15.362Z",
+  "queue": "state/queue/shard-0015.json",
+  "abortReason": "Paused after Codex usage limit; retry after 7:02 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM.",
+    "retryAfterText": "7:02 PM",
+    "retryAt": "2026-05-12T19:02:00.000Z"
+  },
+  "outputs": [
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:jointmodeltransforms:0002:0001",
+          "ko": "각 조인트의 모델 공간 변환입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "The necessary parameters for this type are [`frequency`](avaudiouniteqfilterparameters/frequency.md) (center) and [`bandwidth`](avaudiouniteqfilterparameters/bandwidth.md)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "It resets the node’s sample time to `0`, and doesn’t proceed until the node starts again through [`play()`](avaudioplayernode/play().md) or [`play(at:)`](avaudioplayernode/play(at:).md)."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[var jointLocalTransforms: [simd_float4x4]](arskeleton3d/jointlocaltransforms-66gbm.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "각 조인트의 로컬 공간 변환입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func localTransform(for: ARSkeleton.JointName) -> simd_float4x4?](arskeleton3d/localtransform(for:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "지정한 이름을 가진 조인트에 대한 로컬 변환을 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func modelTransform(for: ARSkeleton.JointName) -> simd_float4x4?](arskeleton3d/modeltransform(for:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "지정한 이름을 가진 조인트에 대한 모델 변환을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:dataproviderstateinitialized:0002:0001",
+          "ko": "데이터 제공자가 생성되었습니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "데이터 제공자는 실행 중입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "데이터 제공자는 중지되었습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "데이터 제공자는 일시 중지되었습니다."
+        },
+        {
+          "id": "seg:paragraph:avaudiobitratestrategyconstant:0002:0001",
+          "ko": "고정 비트 레이트 전략을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "평균 비트 레이트 전략을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "제한된 가변 비트 레이트 전략을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "가변 비트 레이트 전략을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0006:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:stop:0002:0001",
+          "ko": "예약한 노드의 이벤트를 모두 삭제하고 재생을 중지합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "The necessary parameters for this type are [`frequency`](avaudiouniteqfilterparameters/frequency.md) (center) and [`bandwidth`](avaudiouniteqfilterparameters/bandwidth.md)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "노드의 샘플 시간을 `0`으로 재설정하고, 노드가 [`play()`](avaudioplayernode/play().md) 또는 [`play(at:)`](avaudioplayernode/play(at:).md)를 통해 다시 시작될 때까지 진행되지 않습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "엔진에 연결한 모든 플레이어를 일시 중지하거나 중지해도 엔진이나 하드웨어는 일시 중지되거나 중지되지 않습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0002",
+          "ko": "하드웨어를 정지하려면 엔진을 명시적으로 일시 중지하거나 중지해야 합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0003",
+          "ko": "앱에서 오디오 재생이 필요하지 않을 때 전력 소비를 최소화하려면 엔진을 일시 중지하거나 중지해야 합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0010:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0011:0001",
+          "ko": "[func prepare(withFrameCount: AVAudioFrameCount)](avaudioplayernode/prepare(withframecount:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0012:0001",
+          "ko": "재생을 위해 예약한 파일 영역 또는 버퍼를 준비합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "즉시 재생을 시작하거나 재개합니다."
+        },
+        {
+          "id": "seg:list:see-also:0015:0001",
+          "ko": "[func play(at: AVAudioTime?)](avaudioplayernode/play(at:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "지정한 시점에서 재생을 시작하거나 재개합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "플레이어가 재생 중인지 나타내는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "노드의 재생을 일시 중지합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudioplayernode/stop())*"
+        },
+        {
+          "id": "seg:paragraph:avaudiouniteqfiltertypebandstop:0002:0001",
+          "ko": "노치 필터로도 알려진 밴드 스톱 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:list:avaudiouniteqfiltertypebandstop:0004:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 유형에 필요한 매개변수는 [`frequency`](avaudiouniteqfilterparameters/frequency.md) (center) 및 [`bandwidth`](avaudiouniteqfilterparameters/bandwidth.md)입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "Butterworth 아날로그 프로토타입에서 파생된 파라메트릭 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "단순한 Butterworth 2차 저역 통과 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "단순한 Butterworth 2차 고역 통과 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "대역폭 매개변수를 사용해 공진 지원이 포함된 저역 통과 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "대역폭 매개변수를 사용해 공진 지원이 포함된 고역 통과 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "밴드패스 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "로우 셸프 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "하이 셸프 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "대역폭 매개변수를 사용해 공진 지원이 포함된 로우 셸프 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "대역폭 매개변수를 사용해 공진 지원이 포함된 하이 셸프 필터를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:avmidicontrolchangeeventmessagetypevibratodepth:0002:0001",
+          "ko": "비브라토 깊이를 제어하는 이벤트 타입입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "밴크 선택을 전환하는 이벤트 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "비브라토 효과를 변조하는 이벤트 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "브레스 컨트롤러를 위한 이벤트 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "풋 컨트롤러 사용 시 값의 연속 스트림을 전송하는 이벤트 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "포르타멘토 속도를 제어하는 이벤트 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "데이터 입력 매개변수를 제어하는 이벤트 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "채널 볼륨을 제어하는 이벤트 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "좌우 채널 밸런스를 제어하는 이벤트 타입입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "좌우 채널의 팬(pan)을 제어하기 위한 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "표현(expression) 컨트롤러를 나타내는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "댐퍼 페달을 켜거나 끄기 위한 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "포르타멘토를 켜거나 끄기 위한 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "소스테누토를 켜거나 끄기 위한 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "노트의 볼륨을 낮추는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "레가토 페달을 켜거나 끄기 위한 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:macros:0001:0001",
+          "ko": "**프레임워크**: AVFAudio"
+        },
+        {
+          "id": "seg:paragraph:primarycontentconfiguration:0002:0001",
+          "ko": "작업이 다운로드하는 기본 콘텐츠의 구성입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "자산의 아트워크를 나타내는 데이터 값입니다."
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[var auxiliaryContentConfigurations: [AVAssetDownloadContentConfiguration]](avassetdownloadconfiguration/auxiliarycontentconfigurations.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "작업이 다운로드하는 보조 콘텐츠의 구성입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "변형 한정자와 미디어 옵션을 포함하는 구성 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "작업이 보조 콘텐츠 선택을 최적화하는지 나타내는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "인덱스 파일에 나열된 인터스티셜 자산을 다운로드합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0002",
+          "ko": "기본값은 false입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[func setInterstitialMediaSelectionCriteria([AVPlayerMediaSelectionCriteria], forMediaCharacteristic: AVMediaCharacteristic)](avassetdownloadconfiguration/setinterstitialmediaselectioncriteria(_:formediacharacteristic:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "이 자산의 인터스티셜에서 미디어 선택을 설정합니다."
+        },
+        {
+          "id": "seg:heading:append:0000:0001",
+          "ko": "append(_:)"
+        },
+        {
+          "id": "seg:paragraph:append:0002:0001",
+          "ko": "입력이 추가 미디어 데이터를 받을 준비가 될 때까지 일시 중단한 다음 캡션을 추가합니다."
+        },
+        {
+          "id": "seg:list:append:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:blockquote:discussion:0008:0001",
+          "ko": "**참고**: 기본 writer가 실패하면 오류가 발생합니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`caption`: 추가할 캡션입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func append(AVCaptionGroup) async throws](avassetwriterinput/captionreceiver/append(_:)-4opbd.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "입력이 추가 미디어 데이터를 받을 준비가 될 때까지 대기한 뒤 캡션 그룹을 추가합니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func appendImmediately(AVCaptionGroup) throws -> Bool](avassetwriterinput/captionreceiver/appendimmediately(_:)-7q21r.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "입력이 추가 미디어 데이터를 받을 준비가 되면 캡션 그룹을 동기적으로 추가합니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[func appendImmediately(AVCaption) throws -> Bool](avassetwriterinput/captionreceiver/appendimmediately(_:)-9uy14.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "입력이 추가 미디어 데이터를 받을 준비가 되면 캡션을 동기적으로 추가합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "이 receiver에 더 이상 버퍼가 추가되지 않음을 AVAssetWriter에 알립니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avassetwriterinput/captionreceiver/append(_:)-4wpi2)*"
+        },
+        {
+          "id": "seg:paragraph:rangeofcaptions:0002:0001",
+          "ko": "시스템이 경고를 발행한 자막의 범위입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 객체는 동일한 시간 범위의 자막만 참조합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "시작 시간과 길이가 다른 자막들이 동일한 문제를 갖거나 개별 자막에 여러 문제가 있는 경우, 검증기는 각 문제 케이스마다 이 클래스의 별도 인스턴스를 생성합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "검증 경고의 성격을 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "변환기가 자막을 특정 형식으로 변환할 때 수행하는 수정입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "자막 변환 검증 중에 발견된 문제를 수정하기 위한 조정을 설명하는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "자막 변환 경고의 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:activedepthdataminframeduration:0002:0001",
+          "ko": "깊이 데이터의 최소 프레임 지속 시간입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 속성은 시스템이 깊이 데이터를 생성하는 프레임 속도의 상한을 설정할 때 사용합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "깊이 데이터 프레임 속도를 낮추면 일반적으로 전력 소비가 감소하여 카메라가 시스템 압력 상태가 높아지기 전까지 더 오래 동작합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0003",
+          "ko": "활성 깊이 데이터 형식이 지원하는 프레임 속도 범위를 벗어난 값을 설정하면 예외가 발생합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "이 속성을 [`invalid`](https://developer.apple.com/documentation/CoreMedia/CMTime/invalid)로 설정하면 활성 깊이 데이터 형식의 기본 최소 프레임 지속 시간으로 재설정됩니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0002",
+          "ko": "이 속성을 [`positiveInfinity`](https://developer.apple.com/documentation/CoreMedia/CMTime/positiveInfinity)로 설정하면 깊이 데이터 프레임 속도가 `0`이 됩니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "이 값은 활성 비디오 형식 또는 활성 깊이 데이터 형식이 변경될 때마다 재설정됩니다."
+        },
+        {
+          "id": "seg:blockquote:discussion:0011:0001",
+          "ko": "❗ **중요**: 이 속성의 값을 변경하기 전에 장치의 구성 속성에 대한 독점 접근 권한을 얻으려면 [`lockForConfiguration()`](avcapturedevice/lockforconfiguration().md) 를 호출해야 합니다."
+        },
+        {
+          "id": "seg:blockquote:discussion:0011:0002",
+          "ko": "반대로 이 속성의 값을 설정하면 예외가 발생합니다."
+        },
+        {
+          "id": "seg:blockquote:discussion:0011:0003",
+          "ko": "장치 설정이 끝나면 [`unlockForConfiguration()`](avcapturedevice/unlockforconfiguration().md)을 호출해 잠금을 해제합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0012:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "현재 활성화된 최소 프레임 지속 시간입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "현재 활성화된 최대 프레임 지속 시간입니다."
+        },
+        {
+          "id": "seg:paragraph:canprovidesamplecursors:0002:0001",
+          "ko": "이 트랙이 미디어 샘플을 순회하고 정보를 검색하기 위해 샘플 커서 인스턴스를 제공할 수 있는지 나타내는 부울 값입니다."
+        },
+        {
+          "id": "seg:heading:initrawvalue:0000:0001",
+          "ko": "init(rawValue:)"
+        },
+        {
+          "id": "seg:paragraph:initrawvalue:0002:0001",
+          "ko": "문자열로 재생률 변경 옵션을 생성합니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0001",
+          "ko": "`rawValue`: 원시 문자열 값입니다."
+        },
+        {
+          "id": "seg:paragraph:parameters:0010:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avdelegatingplaybackcoordinatorseekoptions/init(rawvalue:))*"
+        },
+        {
+          "id": "seg:paragraph:signalcompensationdelay:0002:0001",
+          "ko": "프레임 캡처를 시작하기 전에 대기하는 지연 시간입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "The size of each step depends on the receiver’s enabled `AVPlayerItemTrack` objects (see [`tracks`](avplayeritem/tracks.md))."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "Files of this type have an `.itt` extension."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0003",
+          "ko": "신호 보상 지연은 카메라의 readout을 프레임 내부 수준에서 오프셋하는 데 사용할 수 있습니다."
+        },
+        {
+          "id": "seg:blockquote:discussion:0009:0001",
+          "ko": "❗ **중요**: 이 속성은 카메라가 동작 중인 프레임 지속 시간보다 작은 값으로 항상 설정해야 합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0010:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0012:0001",
+          "ko": "외부 동기화 장치의 시간 소스를 나타내는 clock입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "외부 동기화 장치와 연결된 USB 제품 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "외부에 연결된 장치의 상태입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "외부 동기화 장치의 고유 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "외부 동기화 장치와 연결된 USB 공급업체 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:appleitt:0002:0001",
+          "ko": "Apple iTT 캡션 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "The size of each step depends on the receiver’s enabled `AVPlayerItemTrack` objects (see [`tracks`](avplayeritem/tracks.md))."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "이 형식의 파일은 `.itt` 확장자를 가집니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let AHAP: AVFileType](avfiletype/ahap.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "Apple Haptics Audio Pattern 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let SCC: AVFileType](avfiletype/scc.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "Scenarist 클로즈드 캡션 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let ac3: AVFileType](avfiletype/ac3.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "AC3 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let aifc: AVFileType](avfiletype/aifc.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "AIFC 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let aiff: AVFileType](avfiletype/aiff.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "AIFF 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let amr: AVFileType](avfiletype/amr.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "적응형 멀티레이트 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let au: AVFileType](avfiletype/au.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "Sun/NeXT 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let avci: AVFileType](avfiletype/avci.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "H.264 압축 이미지를 포함하는 고효율 이미지 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let caf: AVFileType](avfiletype/caf.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "Core Audio 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[static let dcm: AVFileType](avfiletype/dcm.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "디지털 의료 영상 및 통신(DICOM) 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[static let dng: AVFileType](avfiletype/dng.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "Adobe Digital Negative 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static let eac3: AVFileType](avfiletype/eac3.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "향상된 AC3 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static let heic: AVFileType](avfiletype/heic.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "HEVC 압축 이미지를 포함하는 고효율 이미지 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0036:0001",
+          "ko": "[static let heif: AVFileType](avfiletype/heif.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "모든 코덱의 압축 이미지를 포함하는 고효율 이미지 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0038:0001",
+          "ko": "[static let jpg: AVFileType](avfiletype/jpg.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0039:0001",
+          "ko": "JPEG (JFIF) 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:paragraph:url:0002:0001",
+          "ko": "수신자의 초기화를 위해 사용되는 URL을 반환합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "수신자를 초기화하는 데 사용된 [`NSURL`](https://developer.apple.com/documentation/Foundation/NSURL) 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0002",
+          "ko": "이 값은 `nil`일 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:return-value:0010:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avmediadatastorage/url())*"
+        },
+        {
+          "id": "seg:heading:stepbycount:0000:0001",
+          "ko": "step(byCount:)"
+        },
+        {
+          "id": "seg:paragraph:stepbycount:0002:0001",
+          "ko": "player item의 현재 시간을 지정된 스텝 수만큼 앞으로 또는 뒤로 이동합니다."
+        },
+        {
+          "id": "seg:list:stepbycount:0004:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:stepbycount:0004:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:stepbycount:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:stepbycount:0004:0004",
+          "ko": "macOS ?+"
+        },
+        {
+          "id": "seg:list:stepbycount:0004:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:stepbycount:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:stepbycount:0004:0007",
+          "ko": "watchOS ?+"
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "각 스텝의 크기는 수신자의 활성화된 `AVPlayerItemTrack` 객체에 따라 달라집니다([`tracks`](avplayeritem/tracks.md) 참조)."
+        },
+        {
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`stepCount`: 이동할 스텝 수입니다. 양수는 앞으로 이동하고, 음수는 뒤로 이동합니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "항목이 앞으로 스텝 이동을 지원하는지 나타내는 `Boolean` 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "항목이 뒤로 스텝 이동을 지원하는지 나타내는 `Boolean` 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayeritem/step(bycount:))*"
+        },
+        {
+          "id": "seg:heading:initplayertemplateitem:0000:0001",
+          "ko": "init(player:templateItem:)"
+        },
+        {
+          "id": "seg:paragraph:initplayertemplateitem:0002:0001",
+          "ko": "플레이어 항목의 전체 기간을 연속으로 반복 재생하는 플레이어 루퍼를 생성합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "`AVPlayerLooper`의 새 인스턴스입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "이 메서드를 사용하여 이 클래스의 인스턴스를 생성하는 것은 [`init(player:templateItem:timeRange:)`](avplayerlooper/init(player:templateitem:timerange:).md)를 호출하고 `timeRange` 매개변수에 [`invalid`](https://developer.apple.com/documentation/CoreMedia/CMTimeRange/invalid) 값을 전달하는 것과 같습니다."
+        },
+        {
+          "id": "seg:list:parameters:0012:0001",
+          "ko": "`player`: 재생에 사용할 큐 플레이어입니다. 플레이어는 `nil`이면 안 됩니다."
+        },
+        {
+          "id": "seg:list:parameters:0012:0002",
+          "ko": "`itemToLoop`: 반복할 플레이어 항목으로, `nil`이면 안 됩니다."
+        },
+        {
+          "id": "seg:heading:see-also:0013:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[init(player: AVQueuePlayer, templateItem: AVPlayerItem, timeRange: CMTimeRange, existingItemsOrdering: AVPlayerLooper.ItemOrdering)](avplayerlooper/init(player:templateitem:timerange:existingitemsordering:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "기존 큐 항목의 지정된 순서를 준수하면서 플레이어 항목의 전체 기간을 연속적으로 재생하는 플레이어 루퍼를 생성합니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[convenience init(player: AVQueuePlayer, templateItem: AVPlayerItem, timeRange: CMTimeRange)](avplayerlooper/init(player:templateitem:timerange:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "플레이어 항목의 지정된 시간 범위를 연속적으로 재생하는 플레이어 루퍼를 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayerlooper/init(player:templateitem:))*"
+        },
+        {
+          "id": "seg:paragraph:avplayerlooperstatusunknown:0002:0001",
+          "ko": "상태를 알 수 없습니다."
+        },
+        {
+          "id": "seg:list:avplayerlooperstatusunknown:0004:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:avplayerlooperstatusunknown:0004:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:avplayerlooperstatusunknown:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:avplayerlooperstatusunknown:0004:0004",
+          "ko": "macOS ?+"
+        },
+        {
+          "id": "seg:list:avplayerlooperstatusunknown:0004:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:avplayerlooperstatusunknown:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "루퍼가 반복 재생을 수행할 준비가 되어 있습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "오류로 인해 루퍼가 반복 재생을 수행할 수 없습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "앱이 플레이어에서 루핑을 취소했습니다."
+        },
+        {
+          "id": "seg:paragraph:avvideoycbcrmatrixitur6014:0002:0001",
+          "ko": "ITU-R BT.601 변환을 위한 Y’CbCr 색상 행렬입니다."
+        },
+        {
+          "id": "seg:list:mentions:0008:0001",
+          "ko": "[Setting color properties for a specific resolution](setting-color-properties-for-a-specific-resolution.md)"
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[Setting color properties for a specific resolution](setting-color-properties-for-a-specific-resolution.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "원하는 색상 범위에 맞는 적절한 색상 속성 키를 선택합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "클라이언트가 와이드 컬러를 처리할 수 있는지 나타내는 딕셔너리 키입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "색상 기본값을 식별하는 색상 속성 딕셔너리 키입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "색상 기본값은 EBU Tech."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0002",
+          "ko": "3213 색 공간입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "색상 기본값은 초고해상도 텔레비전용 ITU_R BT.2020 색상 공간에 있습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "색상 기본값은 ITU_R BT.709 색상 공간에 해당합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "색상 기본값은 DCI-P3 D65 색상 공간을 사용합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "색상 기본값은 SMPTE C 색상 공간을 사용합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "비디오 색상을 지정하는 속성을 포함하는 딕셔너리의 키입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "색상 속성 딕셔너리에서 전송 함수를 식별하는 키입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "IEC sRGB 색상 공간의 전송 함수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "ITU_R BT.2100 색상 공간의 전송 함수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "ITU_R BT.709 색상 공간의 전송 함수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "선형 색상 공간의 전송 함수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0039:0001",
+          "ko": "SMPTE 240M 색상 공간의 전송 함수입니다."
+        },
+        {
+          "id": "seg:heading:configuring-camera-capture-to-collect-a-portrait-effects-matte:0000:0001",
+          "ko": "Portrait Effects matte를 수집하도록 카메라 캡처 구성하기"
+        },
+        {
+          "id": "seg:paragraph:configuring-camera-capture-to-collect-a-portrait-effects-matte:0001:0001",
+          "ko": "**프레임워크**: AVFoundation"
+        },
+        {
+          "id": "seg:paragraph:configuring-camera-capture-to-collect-a-portrait-effects-matte:0002:0001",
+          "ko": "사진 촬영 시 Portrait Effects matte를 캡처할 수 있도록 앱을 준비합니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0004:0001",
+          "ko": "iOS Camera 앱에서 사진을 촬영할 때 Portrait 모드로 전환하고 얼굴을 감지하면 portrait effects matte가 생성됩니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0004:0002",
+          "ko": "뷰파인더에서 노란색 괄호 4개를 확인하면 카메라가 얼굴을 찾았는지 판단할 수 있습니다. Portrait 모드에서 감지된 얼굴을 촬영한다고 해서 matte가 항상 생성되는 것은 아니지만, 이 조건이 선행되어야 합니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0005:0001",
+          "ko": "iOS Camera 앱과 마찬가지로 앱에서도 Portrait effects matte를 생성하여 캡처한 사진에 포함하도록 선택할 수 있으며, 최종적으로 HEIC 및 JPEG 이미지로 저장됩니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0005:0002",
+          "ko": "AVFoundation의 [`AVCapturePhotoOutput`](avcapturephotooutput.md)를 사용하면 특정 카메라 구성이 정지 이미지에 portrait effects matte 전달을 지원하는지 확인하고, 사진 요청별로 전달되도록 선택할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0005:0003",
+          "ko": "[`AVCapturePhotoOutput`](avcapturephotooutput.md)는 [`AVCapturePhoto`](avcapturephoto.md)라는 인메모리 래퍼 객체를 사용해 사진 결과를 전달합니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0006:0001",
+          "ko": "**Swift**:"
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0001",
+          "ko": "**Objective-C**:"
+        },
+        {
+          "id": "seg:paragraph:overview:0010:0001",
+          "ko": "portrait effects matte 전달을 선택한 경우, [`AVCapturePhotoCaptureDelegate`](avcapturephotocapturedelegate.md)로 전달되는 [`AVCaptureResolvedPhotoSettings`](avcaptureresolvedphotosettings.md)를 검사하고, [`portraitEffectsMatteDimensions`](avcaptureresolvedphotosettings/portraiteffectsmattedimensions.md) 속성을 읽어 전달될 매팅 이미지 크기를 확인할 수 있습니다. 크기를 하드코딩해 가정할 필요가 없습니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0011:0001",
+          "ko": "앱이 매팅 전달을 선택했더라도 결과 [`AVCapturePhoto`](avcapturephoto.md)에 매팅 이미지가 항상 포함된다는 보장은 없습니다."
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "progress": {
+    "generatedAt": "2026-05-12T14:02:26.444Z",
+    "updatedAt": "2026-05-12T14:03:15.362Z",
+    "reason": "paused",
+    "queue": "state/queue/shard-0015.json",
+    "shard": {
+      "index": 15,
+      "total": 256
+    },
+    "abortReason": "Paused after Codex usage limit; retry after 7:02 PM",
+    "pause": {
+      "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM.",
+      "retryAfterText": "7:02 PM",
+      "retryAt": "2026-05-12T19:02:00.000Z"
+    },
+    "totals": {
+      "batches": 257,
+      "segments": 14340,
+      "completed": 4,
+      "failed": 0,
+      "processed": 4,
+      "active": 0,
+      "queued": 253,
+      "percent": 1.56
+    },
+    "batches": [
+      {
+        "index": 0,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:26.448Z",
+        "completedAt": "2026-05-12T14:02:51.864Z",
+        "durationMs": 25416
+      },
+      {
+        "index": 1,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:26.448Z",
+        "completedAt": "2026-05-12T14:03:15.359Z",
+        "durationMs": 48911
+      },
+      {
+        "index": 2,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:26.448Z",
+        "completedAt": "2026-05-12T14:02:45.156Z",
+        "durationMs": 18708
+      },
+      {
+        "index": 3,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:45.159Z",
+        "completedAt": "2026-05-12T14:03:05.206Z",
+        "durationMs": 20047
+      },
+      {
+        "index": 4,
+        "status": "queued",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:51.867Z",
+        "completedAt": "2026-05-12T14:03:10.530Z",
+        "durationMs": 18663,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+      },
+      {
+        "index": 5,
+        "status": "queued",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:03:05.209Z",
+        "completedAt": "2026-05-12T14:03:12.073Z",
+        "durationMs": 6864,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+      },
+      {
+        "index": 6,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 7,
+        "status": "queued",
+        "segments": 22
+      },
+      {
+        "index": 8,
+        "status": "queued",
+        "segments": 22
+      },
+      {
+        "index": 9,
+        "status": "queued",
+        "segments": 26
+      },
+      {
+        "index": 10,
+        "status": "queued",
+        "segments": 43
+      },
+      {
+        "index": 11,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 12,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 13,
+        "status": "queued",
+        "segments": 37
+      },
+      {
+        "index": 14,
+        "status": "queued",
+        "segments": 25
+      },
+      {
+        "index": 15,
+        "status": "queued",
+        "segments": 47
+      },
+      {
+        "index": 16,
+        "status": "queued",
+        "segments": 36
+      },
+      {
+        "index": 17,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 18,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 19,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 20,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 21,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 22,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 23,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 24,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 25,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 26,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 27,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 28,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 29,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 30,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 31,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 32,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 33,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 34,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 35,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 36,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 37,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 38,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 39,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 40,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 41,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 42,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 43,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 44,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 45,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 46,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 47,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 48,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 49,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 50,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 51,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 52,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 53,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 54,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 55,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 56,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 57,
+        "status": "queued",
+        "segments": 45
+      },
+      {
+        "index": 58,
+        "status": "queued",
+        "segments": 45
+      },
+      {
+        "index": 59,
+        "status": "queued",
+        "segments": 42
+      },
+      {
+        "index": 60,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 61,
+        "status": "queued",
+        "segments": 47
+      },
+      {
+        "index": 62,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 63,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 64,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 65,
+        "status": "queued",
+        "segments": 46
+      },
+      {
+        "index": 66,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 67,
+        "status": "queued",
+        "segments": 50
+      },
+      {
+        "index": 68,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 69,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 70,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 71,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 72,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 73,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 74,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 75,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 76,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 77,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 78,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 79,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 80,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 81,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 82,
+        "status": "queued",
+        "segments": 50
+      },
+      {
+        "index": 83,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 84,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 85,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 86,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 87,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 88,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 89,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 90,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 91,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 92,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 93,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 94,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 95,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 96,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 97,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 98,
+        "status": "queued",
+        "segments": 38
+      },
+      {
+        "index": 99,
+        "status": "queued",
+        "segments": 38
+      },
+      {
+        "index": 100,
+        "status": "queued",
+        "segments": 46
+      },
+      {
+        "index": 101,
+        "status": "queued",
+        "segments": 41
+      },
+      {
+        "index": 102,
+        "status": "queued",
+        "segments": 38
+      },
+      {
+        "index": 103,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 104,
+        "status": "queued",
+        "segments": 42
+      },
+      {
+        "index": 105,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 106,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 107,
+        "status": "queued",
+        "segments": 30
+      },
+      {
+        "index": 108,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 109,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 110,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 111,
+        "status": "queued",
+        "segments": 31
+      },
+      {
+        "index": 112,
+        "status": "queued",
+        "segments": 46
+      },
+      {
+        "index": 113,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 114,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 115,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 116,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 117,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 118,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 119,
+        "status": "queued",
+        "segments": 42
+      },
+      {
+        "index": 120,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 121,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 122,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 123,
+        "status": "queued",
+        "segments": 45
+      },
+      {
+        "index": 124,
+        "status": "queued",
+        "segments": 34
+      },
+      {
+        "index": 125,
+        "status": "queued",
+        "segments": 29
+      },
+      {
+        "index": 126,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 127,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 128,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 129,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 130,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 131,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 132,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 133,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 134,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 135,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 136,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 137,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 138,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 139,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 140,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 141,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 142,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 143,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 144,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 145,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 146,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 147,
+        "status": "queued",
+        "segments": 31
+      },
+      {
+        "index": 148,
+        "status": "queued",
+        "segments": 15
+      },
+      {
+        "index": 149,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 150,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 151,
+        "status": "queued",
+        "segments": 38
+      },
+      {
+        "index": 152,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 153,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 154,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 155,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 156,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 157,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 158,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 159,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 160,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 161,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 162,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 163,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 164,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 165,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 166,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 167,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 168,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 169,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 170,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 171,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 172,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 173,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 174,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 175,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 176,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 177,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 178,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 179,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 180,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 181,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 182,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 183,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 184,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 185,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 186,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 187,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 188,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 189,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 190,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 191,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 192,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 193,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 194,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 195,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 196,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 197,
+        "status": "queued",
+        "segments": 22
+      },
+      {
+        "index": 198,
+        "status": "queued",
+        "segments": 47
+      },
+      {
+        "index": 199,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 200,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 201,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 202,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 203,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 204,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 205,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 206,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 207,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 208,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 209,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 210,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 211,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 212,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 213,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 214,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 215,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 216,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 217,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 218,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 219,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 220,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 221,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 222,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 223,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 224,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 225,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 226,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 227,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 228,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 229,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 230,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 231,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 232,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 233,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 234,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 235,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 236,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 237,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 238,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 239,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 240,
+        "status": "queued",
+        "segments": 43
+      },
+      {
+        "index": 241,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 242,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 243,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 244,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 245,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 246,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 247,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 248,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 249,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 250,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 251,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 252,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 253,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 254,
+        "status": "queued",
+        "segments": 27
+      },
+      {
+        "index": 255,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 256,
+        "status": "queued",
+        "segments": 10
+      }
+    ]
+  }
+}
