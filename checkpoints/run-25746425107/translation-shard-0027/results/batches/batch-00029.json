@@ -1,0 +1,310 @@
+{
+  "batchIndex": 29,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:51.015Z",
+  "durationMs": 20558,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/Combine/publishers/merge5/values-7v7nx.md",
+        "id": "seg:paragraph:discussion:0009:0003",
+        "ko": "이 예시에서는 [`Subscribers.Sink`](subscribers/sink.md) 구독자를 `values` 프로퍼티가 제공하는 [`AsyncPublisher`](asyncpublisher.md) 위를 순회하는 `for`-`await`-`in` 루프로 대체합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:heading:tryfirstwhere:0000:0001",
+        "ko": "tryFirst(where:)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:tryfirstwhere:0002:0001",
+        "ko": "스트림에서 오류를 발생시킬 수 있는 술어(predicate) 클로저를 만족하는 첫 번째 요소를 게시한 뒤 정상적으로 완료합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "술어를 만족하는 스트림의 첫 번째 요소만 게시하는 게시자입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "지정한 오류를 던질 수 있는 클로저를 만족하는 스트림의 첫 번째 요소만 다시 게시해야 할 때 [`tryFirst(where:)`](publisher/tryfirst(where:).md)를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "게시자는 첫 번째 요소 이후의 모든 요소를 무시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:discussion:0010:0003",
+        "ko": "이 게시자가 요소를 하나도 받지 못하면 게시하지 않고 종료됩니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:discussion:0010:0004",
+        "ko": "술어 클로저가 오류를 던지면 게시자가 실패합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "아래 예시에서 range publisher는 범위의 첫 번째 요소를 게시한 다음 정상적으로 완료됩니다:"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:list:parameters:0014:0001",
+        "ko": "`predicate`: 요소를 매개변수로 받아 해당 요소를 게시할지 여부를 나타내는 Boolean 값을 반환하는 클로저입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:heading:see-also:0015:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "스트림의 첫 번째 요소를 게시하고 종료합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[func first(where: (Self.Output) -> Bool) -> Publishers.FirstWhere<Self>](publishers/merge6/first(where:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "술어 클로저를 만족하는 스트림의 첫 번째 요소를 게시한 뒤 정상적으로 완료합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "스트림이 완료된 후 스트림의 마지막 요소를 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:list:see-also:0022:0001",
+        "ko": "[func last(where: (Self.Output) -> Bool) -> Publishers.LastWhere<Self>](publishers/merge6/last(where:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "상위 스트림(upstream) 완료 후, 술어(predicate) 클로저를 만족하는 스트림의 마지막 요소를 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:list:see-also:0024:0001",
+        "ko": "[func tryLast(where: (Self.Output) throws -> Bool) -> Publishers.TryLastWhere<Self>](publishers/merge6/trylast(where:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "오류를 던질 수 있는 술어 클로저를 만족하는 스트림의 마지막 요소를 스트림 완료 후 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:list:see-also:0026:0001",
+        "ko": "[func output(at: Int) -> Publishers.Output<Self>](publishers/merge6/output(at:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "게시된 요소 시퀀스의 인덱스로 지정된 특정 요소를 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:list:see-also:0028:0001",
+        "ko": "[func output<R>(in: R) -> Publishers.Output<Self>](publishers/merge6/output(in:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "게시된 요소 시퀀스의 범위로 지정된 요소들을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge6/tryfirst-where.md",
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/combine/publishers/merge6/tryfirst(where:))*"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:heading:map:0000:0001",
+        "ko": "map(_:)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:paragraph:map:0002:0001",
+        "ko": "키 경로의 값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "키 경로의 값을 게시하는 게시자입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "다음 예시에서 [`map(_:)`](publisher/map(_:)-6sm0a.md) 연산자는 Swift 키 경로 구문을 사용해 [`Just`](just.md) 게시자가 게시한 `DiceRoll` 구조체의 `die` 멤버에 접근합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "하위 sink 구독자는 전체 `DiceRoll`이 아니라 이 `Int` 값만 받습니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:list:parameters:0014:0001",
+        "ko": "`keyPath`: 속성의 키 경로입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:heading:see-also:0015:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func map<T0, T1>(KeyPath<Self.Output, T0>, KeyPath<Self.Output, T1>) -> Publishers.MapKeyPath2<Self, T0, T1>](publishers/merge8/map(_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "두 개의 키 경로 값을 튜플로 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[func map<T0, T1, T2>(KeyPath<Self.Output, T0>, KeyPath<Self.Output, T1>, KeyPath<Self.Output, T2>) -> Publishers.MapKeyPath3<Self, T0, T1, T2>](publishers/merge8/map(_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "세 개 키 경로의 값을 튜플로 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/merge8/map-1x70.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/combine/publishers/merge8/map(_:)-1x70)*"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:heading:tryminby:0000:0001",
+        "ko": "tryMin(by:)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:tryminby:0002:0001",
+        "ko": "제공된 오류를 던질 수 있는 클로저를 사용해 업스트림 게시자로부터 수신한 값을 정렬하고 최소값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "업스트림 게시자가 완료된 뒤 수신한 최소값을 게시하는 게시자입니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "지정한 오류 발생 클로저를 사용해 업스트림 게시자가 수신한 요소의 최소값을 판별하려면 [`tryMin(by:)`](publisher/trymin(by:).md)를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "아래 예시에서 배열이 요소를 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:discussion:0011:0002",
+        "ko": "아래 예시에서 [`tryMin(by:)`](publisher/trymin(by:).md) 연산자는 `first` 요소가 홀수일 때 오류를 던지는 클로저를 실행해 게시자를 종료합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:discussion:0013:0001",
+        "ko": "이 게시자가 0개 초과의 항목 요청을 받으면 업스트림 게시자에 무제한 항목을 요청합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:list:parameters:0015:0001",
+        "ko": "`areInIncreasingOrder`: 두 요소를 받아 증가 순서인지 판단해 반환하는 오류 발생 클로저입니다. 이 클로저가 오류를 던지면 게시자는 `failure`로 종료됩니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:heading:see-also:0016:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "업스트림 게시자가 수신한 요소 개수를 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "업스트림 게시자가 완료된 뒤 수신한 최대값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:list:see-also:0021:0001",
+        "ko": "[func max(by: (Self.Output, Self.Output) -> Bool) -> Publishers.Comparison<Self>](publishers/mergemany/max(by:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "제공된 정렬(closing) 클로저를 사용해 업스트림 게시자가 수신한 최대값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:list:see-also:0023:0001",
+        "ko": "[func tryMax(by: (Self.Output, Self.Output) throws -> Bool) -> Publishers.TryComparison<Self>](publishers/mergemany/trymax(by:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:see-also:0024:0001",
+        "ko": "제공된 오류 발생 클로저로 항목 순서를 판단해 업스트림 게시자가 수신한 최대값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:see-also:0026:0001",
+        "ko": "업스트림 게시자가 완료된 뒤 수신한 최소값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:list:see-also:0027:0001",
+        "ko": "[func min(by: (Self.Output, Self.Output) -> Bool) -> Publishers.Comparison<Self>](publishers/mergemany/min(by:).md)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:see-also:0028:0001",
+        "ko": "업스트림 게시자가 완료된 뒤 수신한 최소값을 게시합니다."
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/mergemany/trymin-by.md",
+        "id": "seg:paragraph:see-also:0030:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/combine/publishers/mergemany/trymin(by:))*"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:heading:multicast:0000:0001",
+        "ko": "multicast(_:)"
+      },
+      {
+        "sourcePath": "documentation/Combine/publishers/multicast/multicast.md",
+        "id": "seg:paragraph:multicast:0002:0001",
+        "ko": "요소를 구독자에게 전달하는 subject를 생성하는 클로저를 적용합니다."
+      }
+    ]
+  }
+}

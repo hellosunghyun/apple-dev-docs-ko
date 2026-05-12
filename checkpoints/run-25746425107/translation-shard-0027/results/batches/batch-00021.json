@@ -1,0 +1,250 @@
+{
+  "batchIndex": 21,
+  "status": "success",
+  "completedAt": "2026-05-12T14:38:05.814Z",
+  "durationMs": 23543,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "앱이 곧 표시되기 시작함을 나타내기 위해 [`unhideWithoutActivation()`](nsapplication/unhidewithoutactivation().md) 메서드 시작 시점에 게시됩니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "앱이 창을 업데이트하려는 시점을 나타내기 위해 [`updateWindows()`](nsapplication/updatewindows().md) 메서드 시작 시점에 게시됩니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0037:0001",
+        "ko": "앱이 창 복원을 완료했을 때 게시됩니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0039:0001",
+        "ko": "앱의 `occlusion` 상태가 변경될 때 게시됩니다."
+      },
+      {
+        "id": "seg:heading:applicationprintfileswithsettingsshowprintpanels:0000:0001",
+        "ko": "application(_:printFiles:withSettings:showPrintPanels:)"
+      },
+      {
+        "id": "seg:paragraph:applicationprintfileswithsettingsshowprintpanels:0002:0001",
+        "ko": "지정된 파일을 앱이 인쇄하는지 여부를 나타내는 값을 반환합니다."
+      },
+      {
+        "id": "seg:list:applicationprintfileswithsettingsshowprintpanels:0004:0001",
+        "ko": "macOS ?+"
+      },
+      {
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "인쇄가 성공했는지 여부를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:return-value:0008:0002",
+        "ko": "가능한 값 목록은 [`NSApplication.PrintReply`](nsapplication/printreply.md)를 참조합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "예를 들어 인쇄로 인해 시트가 표시될 수 있는 경우처럼 인쇄 결과를 즉시 반환할 수 없으면 `NSPrintingReplyLater`를 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "메서드가 `NSPrintingReplyLater`를 반환하면 전체 인쇄 작업이 성공했든 실패했든 완료 시점에 `NSApplication`의 [`reply(toOpenOrPrint:)`](nsapplication/reply(toopenorprint:).md)] 메서드를 항상 호출해야 합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "이 대리자 메서드는 더 이상 사용되지 않는 `application:printFiles:`를 대체합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0002",
+        "ko": "애플리케이션 대리자가 사용되지 않는 메서드만 구현한 경우에도 해당 메서드는 호출되며, `NSApplication`은 비공개 기능을 사용해 인쇄 설정이 적용되도록 처리합니다."
+      },
+      {
+        "id": "seg:list:parameters:0013:0001",
+        "ko": "`application`: 인쇄를 처리하는 application 객체입니다."
+      },
+      {
+        "id": "seg:list:parameters:0013:0002",
+        "ko": "`fileNames`: 인쇄할 파일 이름을 각 항목으로 포함하는 [`NSString`](https://developer.apple.com/documentation/Foundation/NSString) 객체의 배열입니다."
+      },
+      {
+        "id": "seg:list:parameters:0013:0003",
+        "ko": "`printSettings`: `NSPrintInfo`와 호환되는 인쇄 작업 속성을 포함하는 사전입니다."
+      },
+      {
+        "id": "seg:list:parameters:0013:0004",
+        "ko": "`showPrintPanels`: 각 파일을 인쇄할 때 인쇄 패널을 표시할지 여부를 지정하는 Boolean 값입니다. 이 값이 [`false`](https://developer.apple.com/documentation/Swift/false)인 경우에도 인쇄 진행 표시기는 표시됩니다."
+      },
+      {
+        "id": "seg:heading:see-also:0014:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:list:see-also:0015:0001",
+        "ko": "[func application(NSApplication, printFile: String) -> Bool](nsapplicationdelegate/application(_:printfile:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "지정된 파일을 앱이 완전히 인쇄했는지 여부를 나타내는 Boolean 값을 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "인쇄 요청의 결과를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/appkit/nsapplicationdelegate/application(_:printfiles:withsettings:showprintpanels:))*"
+      },
+      {
+        "id": "seg:heading:applicationwillunhide:0000:0001",
+        "ko": "applicationWillUnhide(_:)"
+      },
+      {
+        "id": "seg:paragraph:applicationwillunhide:0002:0001",
+        "ko": "앱이 곧 표시되려는 것을 대리자에게 알립니다."
+      },
+      {
+        "id": "seg:list:parameters:0008:0001",
+        "ko": "`notification`: [`willUnhideNotification`](nsapplication/willunhidenotification.md)이라는 이름의 알림입니다. 이 알림의 [`object`](https://developer.apple.com/documentation/Foundation/NSNotification/object) 메서드를 호출하면 `NSApplication` 객체 자체가 반환됩니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[func unhide(Any?)](nscell/calcdrawinfo(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "숨겨진 창을 화면으로 복원하고 수신자를 활성 상태로 만듭니다."
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[func applicationWillHide(Notification)](nscell/cellsize(forbounds:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "앱이 곧 숨겨질 것을 대리자에게 알립니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[func applicationDidHide(Notification)](nscell/drawingrect(forbounds:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "앱이 이제 숨김 상태임을 대리자에게 알립니다."
+      },
+      {
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func applicationDidUnhide(Notification)](nscell/imagerect(forbounds:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "앱이 이제 표시됨을 대리자에게 알립니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/appkit/nsapplicationdelegate/applicationwillunhide(_:))*"
+      },
+      {
+        "id": "seg:list:nsboxboxtypeseparator:0003:0001",
+        "ko": "macOS ?+"
+      },
+      {
+        "id": "seg:paragraph:discussion:0007:0001",
+        "ko": "박스가 구분선임을 지정합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0008:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:list:see-also:0009:0002",
+        "ko": "[static var secondary: NSBox.BoxType](nsbox/boxtype-swift.enum/secondary.md)"
+      },
+      {
+        "id": "seg:list:see-also:0009:0003",
+        "ko": "[static var oldStyle: NSBox.BoxType](nsbox/boxtype-swift.enum/oldstyle.md)"
+      },
+      {
+        "id": "seg:paragraph:cellsize:0002:0001",
+        "ko": "셀을 표시하는 데 필요한 최소 크기입니다."
+      },
+      {
+        "id": "seg:list:cellsize:0004:0001",
+        "ko": "macOS ?+"
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 property는 셀 내용을 그리는데 필요한 최소 크기(포인트)를 포함합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "셀의 유형이 텍스트 셀이나 이미지 셀이 아닌 경우 셀 크기는 (`10000`, `10000`)로 설정됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0003",
+        "ko": "이미지 셀에 아직 연관 이미지가 없으면 셀 크기는 [`NSZeroSize`](https://developer.apple.com/documentation/Foundation/NSZeroSize)입니다. 이 메서드는 셀의 테두리에 필요한 여백 영역이 있는 경우 셀의 이미지 또는 텍스트 크기를 함께 고려합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[func calcDrawInfo(NSRect)](nscell/calcdrawinfo(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "셀 기하를 다시 계산합니다."
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[func cellSize(forBounds: NSRect) -> NSSize](nscell/cellsize(forbounds:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "수신자를 표시하는 데 필요한 최소 크기를 지정된 사각형으로 제한해 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[func drawingRect(forBounds: NSRect) -> NSRect](nscell/drawingrect(forbounds:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "수신자가 자신을 그리는 사각형을 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func imageRect(forBounds: NSRect) -> NSRect](nscell/imagerect(forbounds:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "수신자가 이미지를 그리는 사각형을 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[func titleRect(forBounds: NSRect) -> NSRect](nscell/titlerect(forbounds:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "수신자가 제목 텍스트를 그리는 사각형을 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "[var controlSize: NSControl.ControlSize](nscell/controlsize.md)"
+      },
+      {
+        "id": "seg:paragraph:magenta:0002:0001",
+        "ko": "RGB 값이 `1.0`, `0.0`, `1.0`이고 알파 값이 `1.0`인 색상 객체를 반환합니다."
+      },
+      {
+        "id": "seg:list:magenta:0004:0001",
+        "ko": "macOS ?+"
+      }
+    ]
+  }
+}
