@@ -25,7 +25,10 @@ const files = await fg(["**/*"], {
     "translation-memory/**",
     "translations/**",
     "site/src/content/docs/**",
-    "site/public/source-maps/**"
+    "site/public/source-maps/**",
+    "site/src/data/navigation.json",
+    "site/public/navigation.json",
+    "site/public/search/index.json"
   ]
 });
 
