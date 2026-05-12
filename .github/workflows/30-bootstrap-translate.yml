@@ -465,7 +465,10 @@ jobs:
           else
             pnpm tsx scripts/render/render-markdown.ts --file-list tmp/changed-source-paths.txt
             pnpm tsx scripts/render/build-source-maps.ts --file-list tmp/changed-source-paths.txt
-            pnpm run site:build
+            pnpm tsx scripts/site/build-site-content.ts --file-list tmp/changed-source-paths.txt
+            pnpm tsx scripts/site/build-search-index.ts --file-list tmp/changed-source-paths.txt
+            pnpm tsx scripts/site/build-status-data.ts
+            pnpm --dir site run build
           fi
       - run: pnpm run report
       - run: |
