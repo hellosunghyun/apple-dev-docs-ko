@@ -1,0 +1,300 @@
+{
+  "batchIndex": 12,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:26.324Z",
+  "durationMs": 14130,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:discussion:0008:0004",
+        "ko": "다른 경우에는 최종 저장 대상 URL과 동일하지 않을 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:discussion:0008:0005",
+        "ko": "마찬가지로 `absoluteOriginalContentsURL`는 종종 `[self fileURL]`과 동일한 값이 아닙니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:discussion:0008:0006",
+        "ko": "`absoluteOriginalContentsURL`가 `nil`인 경우 문서가 아직 저장되지 않았거나, 문서를 연 뒤 사용자가 문서 파일을 삭제한 것입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "OS X v10.3 및 이전 버전과의 하위 호환성을 위해, [`writeToFile:ofType:originalFile:saveOperation:`](nsdocument/writetofile:oftype:originalfile:saveoperation:.md)를 재정의하고 두 URL이 모두 `file:` 스킴을 사용하는 경우, 이 메서드의 기본 구현은 다음을 호출합니다:"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "이 경우 사용되는 저장 작업은 `NSAutosaveOperation`이 아니며, 대신 `NSSaveToOperation`이 사용됩니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:blockquote:discussion:0012:0001",
+        "ko": "**참고**: Swift에서 이 메서드는 실패 시 오류를 던진다는 의미로 `throws` 키워드로 표시됩니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:blockquote:discussion:0012:0002",
+        "ko": "이 메서드를 재정의할 때는 [`Error Handling`](https://developer.apple.comhttps://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html) 및 [`The Swift Programming Language`](https://developer.apple.comhttps://docs.swift.org/swift-book/)의 설명과 `About Imported Cocoa Error Parameters`에서와 같이 `NSError`를 던리기 위해 `throw` 문을 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:parameters:0014:0001",
+        "ko": "`url`: 문서 내용이 기록되는 위치입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:parameters:0014:0002",
+        "ko": "`typeName`: 문서 형식을 식별하는 문자열입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:parameters:0014:0003",
+        "ko": "`saveOperation`: 저장 작업의 유형입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:parameters:0014:0004",
+        "ko": "`absoluteOriginalContentsURL`: 문서의 이전 저장본 위치입니다(`nil`이 아닌 경우)."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:heading:see-also:0015:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func canAsynchronouslyWrite(to: URL, ofType: String, for: NSDocument.SaveOperationType) -> Bool](nsdocument/canasynchronouslywrite(to:oftype:for:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "수신자가 특정 저장 작업 유형에 대해 특정 형식으로 포맷된 URL에 위치한 파일 또는 파일 패키지에 대해 동시에 쓸 수 있는지 여부를 반환합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "비동기 저장 중에 메인 스레드의 차단을 해제합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:see-also:0020:0001",
+        "ko": "[func write(to: URL, ofType: String) throws](nsdocument/write(to:oftype:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "문서의 내용을 지정한 형식으로 포맷된 URL에 위치한 파일 또는 파일 패키지에 씁니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:see-also:0022:0001",
+        "ko": "[func writeSafely(to: URL, ofType: String, for: NSDocument.SaveOperationType) throws](nsdocument/writesafely(to:oftype:for:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "문서의 내용을 지정한 형식으로 포맷된 URL에 위치한 파일 또는 파일 패키지에 씁니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:see-also:0024:0001",
+        "ko": "[func fileWrapper(ofType: String) throws -> FileWrapper](nsdocument/filewrapper(oftype:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "지정한 형식으로 포맷된 문서 내용을 포함하는 파일 래퍼를 생성해 반환합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:see-also:0026:0001",
+        "ko": "[func data(ofType: String) throws -> Data](nsdocument/data(oftype:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "지정한 형식으로 포맷된 문서 내용을 포함하는 데이터 객체를 생성해 반환합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:see-also:0028:0001",
+        "ko": "[func save(to: URL, ofType: String, for: NSDocument.SaveOperationType, delegate: Any?, didSave: Selector?, contextInfo: UnsafeMutableRawPointer?)](nsdocument/save(to:oftype:for:delegate:didsave:contextinfo:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "문서 내용을 지정한 형식으로 포맷된 URL에 위치한 파일 또는 파일 패키지에, 특정 저장 작업 유형으로 저장합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:see-also:0030:0001",
+        "ko": "[func save(to: URL, ofType: String, for: NSDocument.SaveOperationType, completionHandler: ((any Error)?) -> Void)](nsdocument/save(to:oftype:for:completionhandler:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "문서 내용을 지정한 형식으로 포맷된 URL에 위치한 파일 또는 파일 패키지에, 특정 저장 작업 유형으로 저장하고 전달된 completion handler를 호출합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:list:see-also:0032:0001",
+        "ko": "[func fileAttributesToWrite(to: URL, ofType: String, for: NSDocument.SaveOperationType, originalContentsURL: URL?) throws -> [String : Any]](nsdocument/fileattributestowrite(to:oftype:for:originalcontentsurl:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "지정된 URL의 파일 또는 파일 패키지에 쓸 속성을 반환하며, 지정된 저장 작업 유형을 대상으로 합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "수행할 문서 저장 작업 유형을 지정하기 위한 상수입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsdocument/write-tooftypefororiginalcontentsurl.md",
+        "id": "seg:paragraph:see-also:0037:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nsdocument/write(to:oftype:for:originalcontentsurl:))*"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nseditor/commitediting-withdelegatedidcommitcontextinfo.md",
+        "id": "seg:heading:commiteditingwithdelegatedidcommitcontextinfo:0000:0001",
+        "ko": "commitEditing(withDelegate:didCommit:contextInfo:)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nseditor/commitediting-withdelegatedidcommitcontextinfo.md",
+        "id": "seg:paragraph:commiteditingwithdelegatedidcommitcontextinfo:0001:0001",
+        "ko": "**Framework**: AppKit **Kind**: method **Required**: 예"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nseditor/commitediting-withdelegatedidcommitcontextinfo.md",
+        "id": "seg:heading:see-also:0006:0001",
+        "ko": "참고"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nseditor/commitediting-withdelegatedidcommitcontextinfo.md",
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nseditor/commitediting(withdelegate:didcommit:contextinfo:))*"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/eventtype/changemode.md",
+        "id": "seg:paragraph:nseventeventtypechangemode:0002:0001",
+        "ko": "연결된 장치의 모드가 변경되었습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/eventtype/changemode.md",
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "macOS 10.15 및 이후 버전에서는 iPad를 macOS 장치의 보조 화면으로 사용할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/eventtype/changemode.md",
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "해당 iPad와 페어링된 Apple Pencil의 측면을 두 번 탭하면 이러한 이벤트가 발생합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/eventtype/changemode.md",
+        "id": "seg:paragraph:discussion:0008:0003",
+        "ko": "AppKit은 최상위 프로세스의 키 창에서 첫 번째 responder로 이 이벤트를 라우팅하기 위해 [`changeMode(with:)`](nsresponder/changemode(with:).md) 메서드를 호출합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/eventtype/changemode.md",
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "이벤트 처리 대상 객체는 항상 첫 번째 responder가 아니거나 활성 responder chain에 없을 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/eventtype/changemode.md",
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "이벤트가 올바른 위치에서 처리되도록 하려면 [`addLocalMonitorForEvents(matching:handler:)`](nsevent/addlocalmonitorforevents(matching:handler:).md) 메서드를 호출하고, 핸들러 블록에서 이벤트를 처리하거나 리디렉션하세요."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/eventtype/changemode.md",
+        "id": "seg:heading:see-also:0010:0001",
+        "ko": "참고"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/eventtype/changemode.md",
+        "id": "seg:paragraph:see-also:0012:0001",
+        "ko": "스크롤 휠 위치가 변경되었습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:paragraph:menu:0002:0001",
+        "ko": "메뉴 키입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 키는 대부분의 Macintosh 키보드에서 사용할 수 없습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[static let begin: NSEvent.SpecialKey](nsevent/specialkey-swift.struct/begin.md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "시작 키입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[static let `break`: NSEvent.SpecialKey](nsevent/specialkey-swift.struct/break.md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "중단 키입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[static let clearDisplay: NSEvent.SpecialKey](nsevent/specialkey-swift.struct/cleardisplay.md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "화면 지우기 키입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[static let clearLine: NSEvent.SpecialKey](nsevent/specialkey-swift.struct/clearline.md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "줄 지우기 키입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[static let deleteCharacter: NSEvent.SpecialKey](nsevent/specialkey-swift.struct/deletecharacter.md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "문자 삭제 키입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:list:see-also:0020:0001",
+        "ko": "[static let deleteLine: NSEvent.SpecialKey](nsevent/specialkey-swift.struct/deleteline.md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsevent/specialkey-swift.struct/menu.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "줄 삭제 키입니다."
+      }
+    ]
+  }
+}
