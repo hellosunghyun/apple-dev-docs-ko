@@ -1,0 +1,1270 @@
+{
+  "generatedAt": "2026-05-12T16:04:36.099Z",
+  "updatedAt": "2026-05-12T16:05:12.977Z",
+  "reason": "paused",
+  "queue": "state/queue/shard-0046.json",
+  "shard": {
+    "index": 46,
+    "total": 256
+  },
+  "abortReason": "Paused after Codex usage limit; retry after 9:04 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM.",
+    "retryAfterText": "9:04 PM",
+    "retryAt": "2026-05-12T21:04:00.000Z"
+  },
+  "totals": {
+    "batches": 246,
+    "segments": 14168,
+    "completed": 0,
+    "failed": 2,
+    "processed": 2,
+    "active": 0,
+    "queued": 244,
+    "percent": 0.81
+  },
+  "batches": [
+    {
+      "index": 0,
+      "status": "failed",
+      "segments": 45,
+      "startedAt": "2026-05-12T16:04:36.102Z",
+      "completedAt": "2026-05-12T16:05:12.826Z",
+      "durationMs": 36724,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1cef-3643-7343-92cc-699b73643f9c\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment sourcePath and id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"sourcePath\":\"...\",\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"sourcePath\": \"documentation/ARKit/accessorytrackingprovider/description.md\",\n      \"id\": \"seg:paragraph:description:0002:0001\",\n      \"source\": \"A textual representation of this accessory tracking provider.\",\n      \"contextBefore\": \"**Framework**: ARKit **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"description\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:heading:adding-visual-effects-in-ar-quick-look-and-realitykit:0000:0001\",\n      \"source\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: ARKit\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:adding-visual-effects-in-ar-quick-look-and-realitykit:0001:0001\",\n      \"source\": \"**Framework**: ARKit\",\n      \"contextBefore\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"contextAfter\": \"Balance the appearance and performance of your AR experiences with modeling strategies.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:adding-visual-effects-in-ar-quick-look-and-realitykit:0002:0001\",\n      \"source\": \"Balance the appearance and performance of your AR experiences with modeling strategies.\",\n      \"contextBefore\": \"**Framework**: ARKit\",\n      \"contextAfter\": \"Overview\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:overview:0004:0001\",\n      \"source\": \"AR Quick Look supports modeling features you can use to present your app’s virtual content at its most vivid and compelling.\",\n      \"contextBefore\": \"Overview\",\n      \"contextAfter\": \"Make sure to optimize the performance of your AR experience by managing and testing the features you incorporate.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:overview:0004:0002\",\n      \"source\": \"Make sure to optimize the performance of your AR experience by managing and testing the features you incorporate.\",\n      \"contextBefore\": \"AR Quick Look supports modeling features you can use to present your app’s virtual content at its most vivid and compelling.\",\n      \"contextAfter\": \"AR Quick Look uses RealityKit to display AR experiences, and you can design your models to take advantage of features in RealityKit available on iOS 13 and later.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:overview:0005:0001\",\n      \"source\": \"AR Quick Look uses RealityKit to display AR experiences, and you can design your models to take advantage of features in RealityKit available on iOS 13 and later.\",\n      \"contextBefore\": \"Make sure to optimize the performance of your AR experience by managing and testing the features you incorporate.\",\n      \"contextAfter\": \"Roughness, for instance, is a property that affects how light diffuses on matte surfaces.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:overview:0005:0002\",\n      \"source\": \"Roughness, for instance, is a property that affects how light diffuses on matte surfaces.\",\n      \"contextBefore\": \"AR Quick Look uses RealityKit to display AR experiences, and you can design your models to take advantage of features in RealityKit available on iOS 13 and later.\",\n      \"contextAfter\": \"RealityKit implements roughness using a multiscattering algorithm, enhancing the texture and realism of virtual content.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:overview:0005:0003\",\n      \"source\": \"RealityKit implements roughness using a multiscattering algorithm, enhancing the texture and realism of virtual content.\",\n      \"contextBefore\": \"Roughness, for instance, is a property that affects how light diffuses on matte surfaces.\",\n      \"contextAfter\": \"Additionally, you can use the clearcoat option to add a glossy shine to your virtual content.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:overview:0005:0004\",\n      \"source\": \"Additionally, you can use the clearcoat option to add a glossy shine to your virtual content.\",\n      \"contextBefore\": \"RealityKit implements roughness using a multiscattering algorithm, enhancing the texture and realism of virtual content.\",\n      \"contextAfter\": \"![Screenshot of two wooden toys side-by-side to demonstrate the effect of adding the model features.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:overview:0006:0001\",\n      \"source\": \"![Screenshot of two wooden toys side-by-side to demonstrate the effect of adding the model features.\",\n      \"contextBefore\": \"Additionally, you can use the clearcoat option to add a glossy shine to your virtual content.\",\n      \"contextAfter\": \"The image of the toy on the left is pictured without multiscattering roughtness and clearcoat; the image of the toy on the right uses multiscattering roughness and clearcoat.](https://docs-assets.developer.apple.com/published/71c3befe9fb3fe94167a95a906ab9629/media-3418297%402x.png)\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:overview:0006:0002\",\n      \"source\": \"The image of the toy on the left is pictured without multiscattering roughtness and clearcoat; the image of the toy on the right uses multiscattering roughness and clearcoat.](https://docs-assets.developer.apple.com/published/71c3befe9fb3fe94167a95a906ab9629/media-3418297%402x.png)\",\n      \"contextBefore\": \"![Screenshot of two wooden toys side-by-side to demonstrate the effect of adding the model features.\",\n      \"contextAfter\": \"Add Gloss to Your 3d Content with Clearcoat\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:heading:add-gloss-to-your-3d-content-with-clearcoat:0007:0001\",\n      \"source\": \"Add Gloss to Your 3d Content with Clearcoat\",\n      \"contextBefore\": \"The image of the toy on the left is pictured without multiscattering roughtness and clearcoat; the image of the toy on the right uses multiscattering roughness and clearcoat.](https://docs-assets.developer.apple.com/published/71c3befe9fb3fe94167a95a906ab9629/media-3418297%402x.png)\",\n      \"contextAfter\": \"You can add shine and highlights to the models in your AR experience with the clearcoat option.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:add-gloss-to-your-3d-content-with-clearcoat:0008:0001\",\n      \"source\": \"You can add shine and highlights to the models in your AR experience with the clearcoat option.\",\n      \"contextBefore\": \"Add Gloss to Your 3d Content with Clearcoat\",\n      \"contextAfter\": \"![Screenshot of two marbles side-by-side that demonstrate the effect of applying clearcoat.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:add-gloss-to-your-3d-content-with-clearcoat:0009:0001\",\n      \"source\": \"![Screenshot of two marbles side-by-side that demonstrate the effect of applying clearcoat.\",\n      \"contextBefore\": \"You can add shine and highlights to the models in your AR experience with the clearcoat option.\",\n      \"contextAfter\": \"The image of the marble on the right shows a glossier finish and reflective highlights at the top.](https://docs-assets.developer.apple.com/published/dfec9ace6bd883183bb75f5b81395154/media-3405897%402x.png)\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:add-gloss-to-your-3d-content-with-clearcoat:0009:0002\",\n      \"source\": \"The image of the marble on the right shows a glossier finish and reflective highlights at the top.](https://docs-assets.developer.apple.com/published/dfec9ace6bd883183bb75f5b81395154/media-3405897%402x.png)\",\n      \"contextBefore\": \"![Screenshot of two marbles side-by-side that demonstrate the effect of applying clearcoat.\",\n      \"contextAfter\": \"RealityKit renders clearcoat by adding a second specular lobe.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:add-gloss-to-your-3d-content-with-clearcoat:0010:0001\",\n      \"source\": \"RealityKit renders clearcoat by adding a second specular lobe.\",\n      \"contextBefore\": \"The image of the marble on the right shows a glossier finish and reflective highlights at the top.](https://docs-assets.developer.apple.com/published/dfec9ace6bd883183bb75f5b81395154/media-3405897%402x.png)\",\n      \"contextAfter\": \"To enable a clearcoat layer on your app’s virtual content, use the following inputs when designing your model:\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:add-gloss-to-your-3d-content-with-clearcoat:0010:0002\",\n      \"source\": \"To enable a clearcoat layer on your app’s virtual content, use the following inputs when designing your model:\",\n      \"contextBefore\": \"RealityKit renders clearcoat by adding a second specular lobe.\",\n      \"contextAfter\": \"**`clearcoat`**: A scalar float normalized between 0 and 1 that indicates the intensity of the clearcoat specular lobe.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:list:add-gloss-to-your-3d-content-with-clearcoat:0011:0001\",\n      \"source\": \"**`clearcoat`**: A scalar float normalized between 0 and 1 that indicates the intensity of the clearcoat specular lobe.\",\n      \"contextBefore\": \"To enable a clearcoat layer on your app’s virtual content, use the following inputs when designing your model:\",\n      \"contextAfter\": \"**`clearcoatRoughness`**: A float normalized between 0 and 1 that indicates the perceived roughness of the clearcoat surface.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:list:add-gloss-to-your-3d-content-with-clearcoat:0011:0002\",\n      \"source\": \"**`clearcoatRoughness`**: A float normalized between 0 and 1 that indicates the perceived roughness of the clearcoat surface.\",\n      \"contextBefore\": \"**`clearcoat`**: A scalar float normalized between 0 and 1 that indicates the intensity of the clearcoat specular lobe.\",\n      \"contextAfter\": \"The following figure shows the `clearcoat` parameter varying between 0 and 1 vertically, and `clearcoatRoughness` varying between 0 and 1 horizontally, with (0, 0) at the bottom left.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:add-gloss-to-your-3d-content-with-clearcoat:0012:0001\",\n      \"source\": \"The following figure shows the `clearcoat` parameter varying between 0 and 1 vertically, and `clearcoatRoughness` varying between 0 and 1 horizontally, with (0, 0) at the bottom left.\",\n      \"contextBefore\": \"**`clearcoatRoughness`**: A float normalized between 0 and 1 that indicates the perceived roughness of the clearcoat surface.\",\n      \"contextAfter\": \"![Screenshot showing an array of 3D models, each with varying clearcoat parameters. clearcoat varys between 0 and 1 vertically, and clearcoatRoughness varys between 0 and 1 horizontally.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:add-gloss-to-your-3d-content-with-clearcoat:0013:0001\",\n      \"source\": \"![Screenshot showing an array of 3D models, each with varying clearcoat parameters. clearcoat varys between 0 and 1 vertically, and clearcoatRoughness varys between 0 and 1 horizontally.\",\n      \"contextBefore\": \"The following figure shows the `clearcoat` parameter varying between 0 and 1 vertically, and `clearcoatRoughness` varying between 0 and 1 horizontally, with (0, 0) at the bottom left.\",\n      \"contextAfter\": \"The bottom-right model is dark and matte in appearance, whereas the upper-left model is glossy in appearance.](https://docs-assets.developer.apple.com/published/153f49c3e4caa0f7f6533dc47c513b48/media-3405896%402x.png)\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:add-gloss-to-your-3d-content-with-clearcoat:0013:0002\",\n      \"source\": \"The bottom-right model is dark and matte in appearance, whereas the upper-left model is glossy in appearance.](https://docs-assets.developer.apple.com/published/153f49c3e4caa0f7f6533dc47c513b48/media-3405896%402x.png)\",\n      \"contextBefore\": \"![Screenshot showing an array of 3D models, each with varying clearcoat parameters. clearcoat varys between 0 and 1 vertically, and clearcoatRoughness varys between 0 and 1 horizontally.\",\n      \"contextAfter\": \"Design for Lighting and Reflection Accuracy\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:heading:design-for-lighting-and-reflection-accuracy:0014:0001\",\n      \"source\": \"Design for Lighting and Reflection Accuracy\",\n      \"contextBefore\": \"The bottom-right model is dark and matte in appearance, whereas the upper-left model is glossy in appearance.](https://docs-assets.developer.apple.com/published/153f49c3e4caa0f7f6533dc47c513b48/media-3405896%402x.png)\",\n      \"contextAfter\": \"RealityKit’s multiscattering roughness affects how light reflects from––or diffuses on––the surface of models with a matte finish.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0015:0001\",\n      \"source\": \"RealityKit’s multiscattering roughness affects how light reflects from––or diffuses on––the surface of models with a matte finish.\",\n      \"contextBefore\": \"Design for Lighting and Reflection Accuracy\",\n      \"contextAfter\": \"By displaying virtual content using RealityKit, AR Quick Look realistically honors the roughness, metallic, and specular components of a model.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0015:0002\",\n      \"source\": \"By displaying virtual content using RealityKit, AR Quick Look realistically honors the roughness, metallic, and specular components of a model.\",\n      \"contextBefore\": \"RealityKit’s multiscattering roughness affects how light reflects from––or diffuses on––the surface of models with a matte finish.\",\n      \"contextAfter\": \"Configure your 3D assets’ roughness, metallic, and specular inputs to create the right blend of reflection and diffusion.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0015:0003\",\n      \"source\": \"Configure your 3D assets’ roughness, metallic, and specular inputs to create the right blend of reflection and diffusion.\",\n      \"contextBefore\": \"By displaying virtual content using RealityKit, AR Quick Look realistically honors the roughness, metallic, and specular components of a model.\",\n      \"contextAfter\": \"The roughness component controls the texture of a surface.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0016:0001\",\n      \"source\": \"The roughness component controls the texture of a surface.\",\n      \"contextBefore\": \"Configure your 3D assets’ roughness, metallic, and specular inputs to create the right blend of reflection and diffusion.\",\n      \"contextAfter\": \"A roughness value of 0 (smooth) results in a mirror reflection, while a roughness value of 1 (rough) diffuses light to create a surface without shine.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0016:0002\",\n      \"source\": \"A roughness value of 0 (smooth) results in a mirror reflection, while a roughness value of 1 (rough) diffuses light to create a surface without shine.\",\n      \"contextBefore\": \"The roughness component controls the texture of a surface.\",\n      \"contextAfter\": \"The following figure shows the `roughness` parameter varying between 0 and 1, with 0 on the left.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0016:0003\",\n      \"source\": \"The following figure shows the `roughness` parameter varying between 0 and 1, with 0 on the left.\",\n      \"contextBefore\": \"A roughness value of 0 (smooth) results in a mirror reflection, while a roughness value of 1 (rough) diffuses light to create a surface without shine.\",\n      \"contextAfter\": \"![Screenshot showing an array of virtual objects with roughness varying from 0 to 1, with 0 on the left. ](https://docs-assets.developer.apple.com/published/902080f1c7ae1d48df0b95e412bd4a55/media-3425157%402x.png)\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0017:0001\",\n      \"source\": \"![Screenshot showing an array of virtual objects with roughness varying from 0 to 1, with 0 on the left. ](https://docs-assets.developer.apple.com/published/902080f1c7ae1d48df0b95e412bd4a55/media-3425157%402x.png)\",\n      \"contextBefore\": \"The following figure shows the `roughness` parameter varying between 0 and 1, with 0 on the left.\",\n      \"contextAfter\": \"The metallic component defines whether your model appears dielectric (0) or metallic (1).\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0018:0001\",\n      \"source\": \"The metallic component defines whether your model appears dielectric (0) or metallic (1).\",\n      \"contextBefore\": \"![Screenshot showing an array of virtual objects with roughness varying from 0 to 1, with 0 on the left. ](https://docs-assets.developer.apple.com/published/902080f1c7ae1d48df0b95e412bd4a55/media-3425157%402x.png)\",\n      \"contextAfter\": \"The following figure shows the `metallic` parameter varying from 0-1, with 0 on the left.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0018:0002\",\n      \"source\": \"The following figure shows the `metallic` parameter varying from 0-1, with 0 on the left.\",\n      \"contextBefore\": \"The metallic component defines whether your model appears dielectric (0) or metallic (1).\",\n      \"contextAfter\": \"![Screenshot showing an array of virtual objects with metallic varying from 0 to 1, with 0 on the left. ](https://docs-assets.developer.apple.com/published/327025069d364bb1ce76b2498e646917/media-3425159%402x.png)\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0019:0001\",\n      \"source\": \"![Screenshot showing an array of virtual objects with metallic varying from 0 to 1, with 0 on the left. ](https://docs-assets.developer.apple.com/published/327025069d364bb1ce76b2498e646917/media-3425159%402x.png)\",\n      \"contextBefore\": \"The following figure shows the `metallic` parameter varying from 0-1, with 0 on the left.\",\n      \"contextAfter\": \"For dielectrics, the specular component enables you to control the reflectiveness of a surface, ranging from 0 (nonreflective) to 1 (fully reflective).\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0020:0001\",\n      \"source\": \"For dielectrics, the specular component enables you to control the reflectiveness of a surface, ranging from 0 (nonreflective) to 1 (fully reflective).\",\n      \"contextBefore\": \"![Screenshot showing an array of virtual objects with metallic varying from 0 to 1, with 0 on the left. ](https://docs-assets.developer.apple.com/published/327025069d364bb1ce76b2498e646917/media-3425159%402x.png)\",\n      \"contextAfter\": \"The following figure shows a roughness with the `specular` parameter varying from 0-1, with 0 on the left.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0020:0002\",\n      \"source\": \"The following figure shows a roughness with the `specular` parameter varying from 0-1, with 0 on the left.\",\n      \"contextBefore\": \"For dielectrics, the specular component enables you to control the reflectiveness of a surface, ranging from 0 (nonreflective) to 1 (fully reflective).\",\n      \"contextAfter\": \"![Screenshot showing an array of virtual objects with specular varying from 0 to 1, with 0 on the left. ](https://docs-assets.developer.apple.com/published/042ab492123ec827309f9733bde09f08/media-3425158%402x.png)\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:design-for-lighting-and-reflection-accuracy:0021:0001\",\n      \"source\": \"![Screenshot showing an array of virtual objects with specular varying from 0 to 1, with 0 on the left. ](https://docs-assets.developer.apple.com/published/042ab492123ec827309f9733bde09f08/media-3425158%402x.png)\",\n      \"contextBefore\": \"The following figure shows a roughness with the `specular` parameter varying from 0-1, with 0 on the left.\",\n      \"contextAfter\": \"**Note**: Environment lighting in AR Quick Look supports multiple models in iOS 13.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:blockquote:design-for-lighting-and-reflection-accuracy:0022:0001\",\n      \"source\": \"**Note**: Environment lighting in AR Quick Look supports multiple models in iOS 13.\",\n      \"contextBefore\": \"![Screenshot showing an array of virtual objects with specular varying from 0 to 1, with 0 on the left. ](https://docs-assets.developer.apple.com/published/042ab492123ec827309f9733bde09f08/media-3425158%402x.png)\",\n      \"contextAfter\": \"To ensure your virtual content displays with the most realistic reflections in your app, check the iOS version at runtime and load multiple models only in iOS 13.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:blockquote:design-for-lighting-and-reflection-accuracy:0022:0002\",\n      \"source\": \"To ensure your virtual content displays with the most realistic reflections in your app, check the iOS version at runtime and load multiple models only in iOS 13.\",\n      \"contextBefore\": \"**Note**: Environment lighting in AR Quick Look supports multiple models in iOS 13.\",\n      \"contextAfter\": \"Optimize Model Geometry and Transparency\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:heading:optimize-model-geometry-and-transparency:0023:0001\",\n      \"source\": \"Optimize Model Geometry and Transparency\",\n      \"contextBefore\": \"To ensure your virtual content displays with the most realistic reflections in your app, check the iOS version at runtime and load multiple models only in iOS 13.\",\n      \"contextAfter\": \"While utilizing features to present virtual content effectively, take steps to keep the AR experience responsive.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:optimize-model-geometry-and-transparency:0024:0001\",\n      \"source\": \"While utilizing features to present virtual content effectively, take steps to keep the AR experience responsive.\",\n      \"contextBefore\": \"Optimize Model Geometry and Transparency\",\n      \"contextAfter\": \"Because each model mesh results in a draw call, for best results, limit the number of meshes in a USDZ file to around 50.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:optimize-model-geometry-and-transparency:0024:0002\",\n      \"source\": \"Because each model mesh results in a draw call, for best results, limit the number of meshes in a USDZ file to around 50.\",\n      \"contextBefore\": \"While utilizing features to present virtual content effectively, take steps to keep the AR experience responsive.\",\n      \"contextAfter\": \"To reduce draw calls while maintaining the same amount of geometry, merge objects that share a material.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:optimize-model-geometry-and-transparency:0024:0003\",\n      \"source\": \"To reduce draw calls while maintaining the same amount of geometry, merge objects that share a material.\",\n      \"contextBefore\": \"Because each model mesh results in a draw call, for best results, limit the number of meshes in a USDZ file to around 50.\",\n      \"contextAfter\": \"However, be aware that merging may not afford performance gains in situations where the result prevents the renderer from culling.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:optimize-model-geometry-and-transparency:0024:0004\",\n      \"source\": \"However, be aware that merging may not afford performance gains in situations where the result prevents the renderer from culling.\",\n      \"contextBefore\": \"To reduce draw calls while maintaining the same amount of geometry, merge objects that share a material.\",\n      \"contextAfter\": \"The cost of projective and raytraced shadows depends on the complexity of your model’s geometry.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/adding-visual-effects-in-ar-quick-look-and-realitykit.md\",\n      \"id\": \"seg:paragraph:optimize-model-geometry-and-transparency:0025:0001\",\n      \"source\": \"The cost of projective and raytraced shadows depends on the complexity of your model’s geometry.\",\n      \"contextBefore\": \"However, be aware that merging may not afford performance gains in situations where the result prevents the renderer from culling.\",\n      \"contextAfter\": \"To enhance performance and prevent excessive memory use relating to lighting, keep the polygon count of your 3D asset’s geometry below 100,000 polygons.\",\n      \"documentTitle\": \"Adding Visual Effects in AR Quick Look and RealityKit\",\n      \"framework\": \"ARKit\"\n    }\n  ]\n}\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T16:05:01.718844Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:02.540712Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:03.372910Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T16:05:04.510601Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T16:05:06.250081Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T16:05:08.678140Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T16:05:12.520158Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 3a2caa04-32ab-48fa-befb-0be8245852a4\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 3a2caa04-32ab-48fa-befb-0be8245852a4"
+    },
+    {
+      "index": 1,
+      "status": "queued",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:36.102Z",
+      "completedAt": "2026-05-12T16:05:06.881Z",
+      "durationMs": 30779,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM."
+    },
+    {
+      "index": 2,
+      "status": "failed",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:36.102Z",
+      "completedAt": "2026-05-12T16:05:12.792Z",
+      "durationMs": 36690,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1cef-394b-7d41-820d-ef268356b662\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment sourcePath and id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"sourcePath\":\"...\",\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:paragraph:getting-furniture-classifications:0031:0001\",\n      \"source\": \"A table.\",\n      \"contextBefore\": \"[MeshAnchor.MeshClassification.table](meshanchor/meshclassification/table.md)\",\n      \"contextAfter\": \"Getting decoration classifications\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:heading:getting-decoration-classifications:0032:0001\",\n      \"source\": \"Getting decoration classifications\",\n      \"contextBefore\": \"A table.\",\n      \"contextAfter\": \"[MeshAnchor.MeshClassification.plant](meshanchor/meshclassification/plant.md)\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:paragraph:getting-decoration-classifications:0034:0001\",\n      \"source\": \"A plant.\",\n      \"contextBefore\": \"[MeshAnchor.MeshClassification.plant](meshanchor/meshclassification/plant.md)\",\n      \"contextAfter\": \"[MeshAnchor.MeshClassification.tv](meshanchor/meshclassification/tv.md)\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:paragraph:getting-decoration-classifications:0036:0001\",\n      \"source\": \"A television.\",\n      \"contextBefore\": \"[MeshAnchor.MeshClassification.tv](meshanchor/meshclassification/tv.md)\",\n      \"contextAfter\": \"Getting unknown classifications\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:heading:getting-unknown-classifications:0037:0001\",\n      \"source\": \"Getting unknown classifications\",\n      \"contextBefore\": \"A television.\",\n      \"contextAfter\": \"[MeshAnchor.MeshClassification.none](meshanchor/meshclassification/none.md)\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:paragraph:getting-unknown-classifications:0039:0001\",\n      \"source\": \"An unknown classification.\",\n      \"contextBefore\": \"[MeshAnchor.MeshClassification.none](meshanchor/meshclassification/none.md)\",\n      \"contextAfter\": \"Relationships\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:heading:conforms-to:0041:0001\",\n      \"source\": \"Conforms To\",\n      \"contextBefore\": \"Relationships\",\n      \"contextAfter\": \"[Copyable](../Swift/Copyable.md)\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:heading:see-also:0043:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"[SendableMetatype](../Swift/SendableMetatype.md)\",\n      \"contextAfter\": \"[var originFromAnchorTransform: simd_float4x4](meshanchor/originfromanchortransform.md)\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:paragraph:see-also:0045:0001\",\n      \"source\": \"The location and orientation of a mesh in world space.\",\n      \"contextBefore\": \"[var originFromAnchorTransform: simd_float4x4](meshanchor/originfromanchortransform.md)\",\n      \"contextAfter\": \"[var geometry: MeshAnchor.Geometry](meshanchor/geometry-swift.property.md)\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:paragraph:see-also:0047:0001\",\n      \"source\": \"The shape of a mesh anchor.\",\n      \"contextBefore\": \"[var geometry: MeshAnchor.Geometry](meshanchor/geometry-swift.property.md)\",\n      \"contextAfter\": \"[MeshAnchor.Geometry](meshanchor/geometry-swift.struct.md)\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/ARKit/meshanchor/meshclassification.md\",\n      \"id\": \"seg:paragraph:see-also:0049:0001\",\n      \"source\": \"The shapes that make up a mesh anchor.\",\n      \"contextBefore\": \"[MeshAnchor.Geometry](meshanchor/geometry-swift.struct.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"MeshAnchor.MeshClassification\",\n      \"framework\": \"ARKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioconverter/contentsource.md\",\n      \"id\": \"seg:paragraph:discussion:0007:0001\",\n      \"source\": \"Index to select a pre-defined content source type that describes the content type and how it was generated.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"Note: This is only supported when compressing audio to formats which support it.\",\n      \"documentTitle\": \"contentSource\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioconverter/contentsource.md\",\n      \"id\": \"seg:paragraph:discussion:0007:0002\",\n      \"source\": \"Note: This is only supported when compressing audio to formats which support it.\",\n      \"contextBefore\": \"Index to select a pre-defined content source type that describes the content type and how it was generated.\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"contentSource\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioconverter/contentsource.md\",\n      \"id\": \"seg:heading:see-also:0008:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"Note: This is only supported when compressing audio to formats which support it.\",\n      \"contextAfter\": \"[var audioSyncPacketFrequency: Int](avaudioconverter/audiosyncpacketfrequency.md)\",\n      \"documentTitle\": \"contentSource\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:heading:inputconnectionpointforinputbus:0000:0001\",\n      \"source\": \"inputConnectionPoint(for:inputBus:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: AVFAudio **Kind**: method\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:paragraph:inputconnectionpointforinputbus:0002:0001\",\n      \"source\": \"Returns connection information about a node’s input bus.\",\n      \"contextBefore\": \"**Framework**: AVFAudio **Kind**: method\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:heading:return-value:0007:0001\",\n      \"source\": \"Return Value\",\n      \"contextBefore\": \"```swift\\nfunc inputConnectionPoint(for node: AVAudioNode, inputBus bus: AVAudioNodeBus) -> AVAudioConnectionPoint?\\n```\",\n      \"contextAfter\": \"An `AVAudioConnectionPoint` object with connection information on the node’s input bus.\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:paragraph:return-value:0008:0001\",\n      \"source\": \"An `AVAudioConnectionPoint` object with connection information on the node’s input bus.\",\n      \"contextBefore\": \"Return Value\",\n      \"contextAfter\": \"Discussion\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:paragraph:discussion:0010:0001\",\n      \"source\": \"Connections are always one-to-one or one-to-many.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"This method returns `nil` if there’s no connection on the node’s specified input bus.\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:paragraph:discussion:0010:0002\",\n      \"source\": \"This method returns `nil` if there’s no connection on the node’s specified input bus.\",\n      \"contextBefore\": \"Connections are always one-to-one or one-to-many.\",\n      \"contextAfter\": \"Parameters\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:list:parameters:0012:0001\",\n      \"source\": \"`node`: The node with the input connection you’re querying.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"`bus`: The node’s input bus for the connection you’re querying.\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:list:parameters:0012:0002\",\n      \"source\": \"`bus`: The node’s input bus for the connection you’re querying.\",\n      \"contextBefore\": \"`node`: The node with the input connection you’re querying.\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:heading:see-also:0013:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"`bus`: The node’s input bus for the connection you’re querying.\",\n      \"contextAfter\": \"[class AVAudioConnectionPoint](avaudioconnectionpoint.md)\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"A representation of either a source or destination connection point in the audio engine.\",\n      \"contextBefore\": \"[class AVAudioConnectionPoint](avaudioconnectionpoint.md)\",\n      \"contextAfter\": \"[func connect(AVAudioNode, to: [AVAudioConnectionPoint], fromBus: AVAudioNodeBus, format: AVAudioFormat?)](avaudioengine/connect(_:to:frombus:format:).md)\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:list:see-also:0016:0001\",\n      \"source\": \"[func connect(AVAudioNode, to: [AVAudioConnectionPoint], fromBus: AVAudioNodeBus, format: AVAudioFormat?)](avaudioengine/connect(_:to:frombus:format:).md)\",\n      \"contextBefore\": \"A representation of either a source or destination connection point in the audio engine.\",\n      \"contextAfter\": \"Establishes a connection between a source node and multiple destination nodes.\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"Establishes a connection between a source node and multiple destination nodes.\",\n      \"contextBefore\": \"[func connect(AVAudioNode, to: [AVAudioConnectionPoint], fromBus: AVAudioNodeBus, format: AVAudioFormat?)](avaudioengine/connect(_:to:frombus:format:).md)\",\n      \"contextAfter\": \"[func outputConnectionPoints(for: AVAudioNode, outputBus: AVAudioNodeBus) -> [AVAudioConnectionPoint]](avaudioengine/outputconnectionpoints(for:outputbus:).md)\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:list:see-also:0018:0001\",\n      \"source\": \"[func outputConnectionPoints(for: AVAudioNode, outputBus: AVAudioNodeBus) -> [AVAudioConnectionPoint]](avaudioengine/outputconnectionpoints(for:outputbus:).md)\",\n      \"contextBefore\": \"Establishes a connection between a source node and multiple destination nodes.\",\n      \"contextAfter\": \"Returns connection information about a node’s output bus.\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"Returns connection information about a node’s output bus.\",\n      \"contextBefore\": \"[func outputConnectionPoints(for: AVAudioNode, outputBus: AVAudioNodeBus) -> [AVAudioConnectionPoint]](avaudioengine/outputconnectionpoints(for:outputbus:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioengine/inputconnectionpoint-forinputbus.md\",\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudioengine/inputconnectionpoint(for:inputbus:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"inputConnectionPoint(for:inputBus:)\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioplayer/numberofchannels.md\",\n      \"id\": \"seg:paragraph:numberofchannels:0002:0001\",\n      \"source\": \"The number of audio channels in the player’s audio.\",\n      \"contextBefore\": \"**Framework**: AVFAudio **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"numberOfChannels\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioplayer/numberofchannels.md\",\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nvar numberOfChannels: Int { get }\\n```\",\n      \"contextAfter\": \"[var channelAssignments: [AVAudioSessionChannelDescription]?](avaudioplayer/channelassignments.md)\",\n      \"documentTitle\": \"numberOfChannels\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioplayer/numberofchannels.md\",\n      \"id\": \"seg:list:see-also:0008:0001\",\n      \"source\": \"[var channelAssignments: [AVAudioSessionChannelDescription]?](avaudioplayer/channelassignments.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"An array of channel descriptions for the audio player.\",\n      \"documentTitle\": \"numberOfChannels\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudioplayer/numberofchannels.md\",\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"An array of channel descriptions for the audio player.\",\n      \"contextBefore\": \"[var channelAssignments: [AVAudioSessionChannelDescription]?](avaudioplayer/channelassignments.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"numberOfChannels\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiosequencer/preparetoplay.md\",\n      \"id\": \"seg:paragraph:preparetoplay:0002:0001\",\n      \"source\": \"Gets ready to play the sequence by prerolling all events.\",\n      \"contextBefore\": \"**Framework**: AVFAudio **Kind**: method\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"prepareToPlay()\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiosequencer/preparetoplay.md\",\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"The framework invokes this method automatically on play if you don’t call it, but it may delay startup.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"prepareToPlay()\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiosequencer/preparetoplay.md\",\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"The framework invokes this method automatically on play if you don’t call it, but it may delay startup.\",\n      \"contextAfter\": \"[func start() throws](avaudiosequencer/start.md)\",\n      \"documentTitle\": \"prepareToPlay()\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiosequencer/preparetoplay.md\",\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"Starts the sequencer’s player.\",\n      \"contextBefore\": \"[func start() throws](avaudiosequencer/start.md)\",\n      \"contextAfter\": \"[func stop()](avaudiosequencer/stop.md)\",\n      \"documentTitle\": \"prepareToPlay()\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiosequencer/preparetoplay.md\",\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"Stops the sequencer’s player.\",\n      \"contextBefore\": \"[func stop()](avaudiosequencer/stop.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"prepareToPlay()\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiosequencer/preparetoplay.md\",\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosequencer/preparetoplay())*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"prepareToPlay()\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:paragraph:avaudiounittypepanner:0002:0001\",\n      \"source\": \"An audio unit type that represents a panner.\",\n      \"contextBefore\": \"**Framework**: AVFAudio **Kind**: var\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nlet AVAudioUnitTypePanner: String\\n```\",\n      \"contextAfter\": \"[let AVAudioUnitTypeOutput: String](avaudiounittypeoutput.md)\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"An audio unit type that represents an output.\",\n      \"contextBefore\": \"[let AVAudioUnitTypeOutput: String](avaudiounittypeoutput.md)\",\n      \"contextAfter\": \"[let AVAudioUnitTypeMusicDevice: String](avaudiounittypemusicdevice.md)\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"An audio unit type that represents a music device.\",\n      \"contextBefore\": \"[let AVAudioUnitTypeMusicDevice: String](avaudiounittypemusicdevice.md)\",\n      \"contextAfter\": \"[let AVAudioUnitTypeMusicEffect: String](avaudiounittypemusiceffect.md)\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"An audio unit type that represents a music effect.\",\n      \"contextBefore\": \"[let AVAudioUnitTypeMusicEffect: String](avaudiounittypemusiceffect.md)\",\n      \"contextAfter\": \"[let AVAudioUnitTypeFormatConverter: String](avaudiounittypeformatconverter.md)\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"An audio unit type that represents a format converter.\",\n      \"contextBefore\": \"[let AVAudioUnitTypeFormatConverter: String](avaudiounittypeformatconverter.md)\",\n      \"contextAfter\": \"[let AVAudioUnitTypeEffect: String](avaudiounittypeeffect.md)\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"An audio unit type that represents an effect.\",\n      \"contextBefore\": \"[let AVAudioUnitTypeEffect: String](avaudiounittypeeffect.md)\",\n      \"contextAfter\": \"[let AVAudioUnitTypeMixer: String](avaudiounittypemixer.md)\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"An audio unit type that represents a mixer.\",\n      \"contextBefore\": \"[let AVAudioUnitTypeMixer: String](avaudiounittypemixer.md)\",\n      \"contextAfter\": \"[let AVAudioUnitTypeGenerator: String](avaudiounittypegenerator.md)\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"An audio unit type that represents a generator.\",\n      \"contextBefore\": \"[let AVAudioUnitTypeGenerator: String](avaudiounittypegenerator.md)\",\n      \"contextAfter\": \"[let AVAudioUnitTypeOfflineEffect: String](avaudiounittypeofflineeffect.md)\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"An audio unit type that represents an offline effect.\",\n      \"contextBefore\": \"[let AVAudioUnitTypeOfflineEffect: String](avaudiounittypeofflineeffect.md)\",\n      \"contextAfter\": \"[let AVAudioUnitTypeMIDIProcessor: String](avaudiounittypemidiprocessor.md)\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFAudio/avaudiounittypepanner.md\",\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"An audio unit type that represents a MIDI processor.\",\n      \"contextBefore\": \"[let AVAudioUnitTypeMIDIProcessor: String](avaudiounittypemidiprocessor.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"AVAudioUnitTypePanner\",\n      \"framework\": \"AVFAudio\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFoundation/avassetimagegenerator/dynamicrangepolicy-swift.struct/forcesdr.md\",\n      \"id\": \"seg:paragraph:forcesdr:0002:0001\",\n      \"source\": \"A policy that forces conversion to standard dynamic range.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"forceSDR\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFoundation/avassetimagegenerator/dynamicrangepolicy-swift.struct/forcesdr.md\",\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"This policy converts PQ or HLG transfer functions to 709, while maintaining color primaries and matrix.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"forceSDR\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFoundation/avassetimagegenerator/dynamicrangepolicy-swift.struct/forcesdr.md\",\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"This policy converts PQ or HLG transfer functions to 709, while maintaining color primaries and matrix.\",\n      \"contextAfter\": \"[static let matchSource: AVAssetImageGenerator.DynamicRangePolicy](avassetimagegenerator/dynamicrangepolicy-swift.struct/matchsource.md)\",\n      \"documentTitle\": \"forceSDR\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFoundation/avassetimagegenerator/dynamicrangepolicy-swift.struct/forcesdr.md\",\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[static let matchSource: AVAssetImageGenerator.DynamicRangePolicy](avassetimagegenerator/dynamicrangepolicy-swift.struct/matchsource.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"A policy that preserves the color parameters of the source media.\",\n      \"documentTitle\": \"forceSDR\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFoundation/avassetimagegenerator/dynamicrangepolicy-swift.struct/forcesdr.md\",\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"A policy that preserves the color parameters of the source media.\",\n      \"contextBefore\": \"[static let matchSource: AVAssetImageGenerator.DynamicRangePolicy](avassetimagegenerator/dynamicrangepolicy-swift.struct/matchsource.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"forceSDR\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFoundation/avassetresourceloadingdatarequest/requestedlength.md\",\n      \"id\": \"seg:paragraph:requestedlength:0002:0001\",\n      \"source\": \"The length, in bytes, of the data requested.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"requestedLength\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFoundation/avassetresourceloadingdatarequest/requestedlength.md\",\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"If the content length of the resource is unknown, the sum of the [`requestedLength`](avassetresourceloadingdatarequest/requestedlength.md) and [`requestedOffset`](avassetresourceloadingdatarequest/requestedoffset.md) properties may be greater than the actual content length.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"When this situation occurs, an application must attempt to provide as much of the requested data beginning at the [`requestedOffset`](avassetresourceloadingdatarequest/requestedoffset.md) property as the resource contains.\",\n      \"documentTitle\": \"requestedLength\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFoundation/avassetresourceloadingdatarequest/requestedlength.md\",\n      \"id\": \"seg:paragraph:discussion:0008:0002\",\n      \"source\": \"When this situation occurs, an application must attempt to provide as much of the requested data beginning at the [`requestedOffset`](avassetresourceloadingdatarequest/requestedoffset.md) property as the resource contains.\",\n      \"contextBefore\": \"If the content length of the resource is unknown, the sum of the [`requestedLength`](avassetresourceloadingdatarequest/requestedlength.md) and [`requestedOffset`](avassetresourceloadingdatarequest/requestedoffset.md) properties may be greater than the actual content length.\",\n      \"contextAfter\": \"The application must then invoke either the [`AVAssetResourceLoadingRequest`](avassetresourceloadingrequest.md) instance’s [`finishLoading()`](avassetresourceloadingrequest/finishloading().md) method upon success, or the [`finishLoading(with:)`](avassetresourceloadingrequest/finishloading(with:).md) method if an error is encountered during the loading.\",\n      \"documentTitle\": \"requestedLength\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFoundation/avassetresourceloadingdatarequest/requestedlength.md\",\n      \"id\": \"seg:paragraph:discussion:0008:0003\",\n      \"source\": \"The application must then invoke either the [`AVAssetResourceLoadingRequest`](avassetresourceloadingrequest.md) instance’s [`finishLoading()`](avassetresourceloadingrequest/finishloading().md) method upon success, or the [`finishLoading(with:)`](avassetresourceloadingrequest/finishloading(with:).md) method if an error is encountered during the loading.\",\n      \"contextBefore\": \"When this situation occurs, an application must attempt to provide as much of the requested data beginning at the [`requestedOffset`](avassetresourceloadingdatarequest/requestedoffset.md) property as the resource contains.\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"requestedLength\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"sourcePath\": \"documentation/AVFoundation/avassetresourceloadingdatarequest/requestedlength.md\",\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"The application must then invoke either the [`AVAssetResourceLoadingRequest`](avassetresourceloadingrequest.md) instance’s [`finishLoading()`](avassetresourceloadingrequest/finishloading().md) method upon success, or the [`finishLoading(with:)`](avassetresourceloadingrequest/finishloading(with:).md) method if an error is encountered during the loading.\",\n      \"contextAfter\": \"[func respond(with: Data)](avassetresourceloadingdatarequest/respond(with:).md)\",\n      \"documentTitle\": \"requestedLength\",\n      \"framework\": \"AVFoundation\"\n    }\n  ]\n}\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T16:05:01.936613Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:02.782477Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:03.641314Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T16:05:04.669398Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T16:05:06.069530Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T16:05:08.485946Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T16:05:12.489470Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 8cc32ab8-88c1-4770-ac7f-5c3d156d0d92\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 8cc32ab8-88c1-4770-ac7f-5c3d156d0d92"
+    },
+    {
+      "index": 3,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 4,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 5,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 6,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 7,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 8,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 9,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 10,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 11,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 12,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 13,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 14,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 15,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 16,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 17,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 18,
+      "status": "queued",
+      "segments": 29
+    },
+    {
+      "index": 19,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 20,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 21,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 22,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 23,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 24,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 25,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 26,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 27,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 28,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 29,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 30,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 31,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 32,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 33,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 34,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 35,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 36,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 37,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 38,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 39,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 40,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 41,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 42,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 43,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 44,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 45,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 46,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 47,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 48,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 49,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 50,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 51,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 52,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 53,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 54,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 55,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 56,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 57,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 58,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 59,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 60,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 61,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 62,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 63,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 64,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 65,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 66,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 67,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 68,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 69,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 70,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 71,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 72,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 73,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 74,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 75,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 76,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 77,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 78,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 79,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 80,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 81,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 82,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 83,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 84,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 85,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 86,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 87,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 88,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 89,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 90,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 91,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 92,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 93,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 94,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 95,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 96,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 97,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 98,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 99,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 100,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 101,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 102,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 103,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 104,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 105,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 106,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 107,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 108,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 109,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 110,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 111,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 112,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 113,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 114,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 115,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 116,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 117,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 118,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 119,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 120,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 121,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 122,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 123,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 124,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 125,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 126,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 127,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 128,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 129,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 130,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 131,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 132,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 133,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 134,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 135,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 136,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 137,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 138,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 139,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 140,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 141,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 142,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 143,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 144,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 145,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 146,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 147,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 148,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 149,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 150,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 151,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 152,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 153,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 154,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 155,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 156,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 157,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 158,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 159,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 160,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 161,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 162,
+      "status": "queued",
+      "segments": 45
+    },
+    {
+      "index": 163,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 164,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 165,
+      "status": "queued",
+      "segments": 45
+    },
+    {
+      "index": 166,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 167,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 168,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 169,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 170,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 171,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 172,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 173,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 174,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 175,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 176,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 177,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 178,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 179,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 180,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 181,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 182,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 183,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 184,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 185,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 186,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 187,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 188,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 189,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 190,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 191,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 192,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 193,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 194,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 195,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 196,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 197,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 198,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 199,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 200,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 201,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 202,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 203,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 204,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 205,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 206,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 207,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 208,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 209,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 210,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 211,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 212,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 213,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 214,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 215,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 216,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 217,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 218,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 219,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 220,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 221,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 222,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 223,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 224,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 225,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 226,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 227,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 228,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 229,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 230,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 231,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 232,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 233,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 234,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 235,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 236,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 237,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 238,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 239,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 240,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 241,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 242,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 243,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 244,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 245,
+      "status": "queued",
+      "segments": 1
+    }
+  ]
+}
