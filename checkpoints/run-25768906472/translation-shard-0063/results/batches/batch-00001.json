@@ -1,0 +1,250 @@
+{
+  "batchIndex": 1,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:34.399Z",
+  "durationMs": 15083,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:overview:0005:0001",
+        "ko": "ARKit를 앱에서 사용하는 방식에 따라 기기 호환성 지원 처리 방법이 달라집니다."
+      },
+      {
+        "id": "seg:list:overview:0006:0001",
+        "ko": "**앱의 기본 기능이 AR(후면 카메라 사용)를 필요로 하는 경우:** 앱의 `Info.plist` 파일에서 [`UIRequiredDeviceCapabilities`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW3) 섹션에 `arkit` 키를 추가합니다. 이 키를 사용하면 앱이 ARKit와 호환되는 기기에서만 사용할 수 있습니다."
+      },
+      {
+        "id": "seg:list:overview:0006:0002",
+        "ko": "**앱에서 증강 현실이 보조 기능인 경우:** 사용하려는 AR 구성에 대한 현재 기기 지원 여부를 적절한 [`ARConfiguration`](arconfiguration.md) 하위 클래스의 [`isSupported`](arconfiguration/issupported.md) 속성을 테스트하여 확인합니다."
+      },
+      {
+        "id": "seg:list:overview:0006:0003",
+        "ko": "**앱이 face-tracking AR을 사용하는 경우:** 얼굴 추적은 iPhone X의 전면 TrueDepth 카메라가 필요합니다. 앱은 다른 기기에서도 사용 가능하므로 현재 기기에서 얼굴 추적 지원 여부를 확인하려면 [`ARFaceTrackingConfiguration`](arfacetrackingconfiguration.md).[`isSupported`](arconfiguration/issupported.md) 속성을 테스트해야 합니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0007:0001",
+        "ko": "💡 **팁**: 앱 UI에서 AR 기능을 제공하기 전에 [`isSupported`](arconfiguration/issupported.md) 속성을 확인하여, 지원되지 않는 기기의 사용자가 해당 기능에 접근하다가 실망하지 않도록 합니다."
+      },
+      {
+        "id": "seg:heading:handle-user-consent-and-privacy:0008:0001",
+        "ko": "사용자 동의 및 개인정보 보호 처리"
+      },
+      {
+        "id": "seg:paragraph:handle-user-consent-and-privacy:0009:0001",
+        "ko": "앱이 ARKit를 사용하려면 사용자가 앱에 카메라 접근 권한을 명시적으로 부여해야 합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-consent-and-privacy:0009:0002",
+        "ko": "ARKit는 앱이 AR 세션을 처음 실행할 때 사용자에게 자동으로 권한을 요청합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-consent-and-privacy:0010:0001",
+        "ko": "iOS는 시스템이 카메라 또는 마이크 권한을 요청할 때 표시할 정적 메시지를 앱에서 제공하도록 요구합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-consent-and-privacy:0010:0002",
+        "ko": "앱의 `Info.plist` 파일에는 [`NSCameraUsageDescription`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/plist/info/NSCameraUsageDescription) 키가 포함되어야 합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-consent-and-privacy:0010:0003",
+        "ko": "해당 키에는 앱이 카메라 접근이 필요한 이유를 설명하여 사용자가 앱에 대한 권한을 신뢰하고 허용할 수 있도록 하는 텍스트를 제공합니다."
+      },
+      {
+        "id": "seg:blockquote:handle-user-consent-and-privacy:0011:0001",
+        "ko": "**참고**: Xcode 템플릿으로 새 ARKit 앱을 만들면 기본 카메라 사용 설명 메시지가 제공됩니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-consent-and-privacy:0012:0001",
+        "ko": "앱에서 [`ARFaceTrackingConfiguration`](arfacetrackingconfiguration.md)을(를) 사용하면 ARKit는 개인 얼굴 정보를 앱에 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-consent-and-privacy:0012:0002",
+        "ko": "ARKit 얼굴 추적 기능을 사용하는 경우, 앱에는 얼굴 추적 및 얼굴 데이터를 사용하려는 방식에 대해 사용자에게 설명하는 개인정보 처리방침이 포함되어야 합니다."
+      },
+      {
+        "id": "seg:paragraph:handle-user-consent-and-privacy:0012:0003",
+        "ko": "자세한 내용은 [`Apple Developer Program License Agreement`](https://developer.apple.comhttps://developer.apple.com/terms/)를 참조하세요."
+      },
+      {
+        "id": "seg:heading:see-also:0013:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "움직임 추적, 카메라 패스스루, 이미지 분석과 같은 AR 경험과 관련된 주요 작업을 관리하는 개체입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "물리적 환경에서 항목의 위치와 방향을 지정하는 개체입니다."
+      },
+      {
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[ARKit in iOS](avspeechsynthesisprovidervoice/supportedlanguages.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "앱이나 게임에서 iOS 기기 카메라와 모션 기능을 통합해 증강 현실 경험을 만듭니다."
+      },
+      {
+        "id": "seg:paragraph:gender:0002:0001",
+        "ko": "음성의 성별입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "음성의 연령(세)입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "음성의 성별입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "음성의 고유 식별자입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "음성의 로컬라이즈된 이름입니다."
+      },
+      {
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[var primaryLanguages: [String]](avspeechsynthesisprovidervoice/primarylanguages.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "음성 합성기가 사용하는 언어를 식별하는 BCP 47 코드 목록입니다."
+      },
+      {
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[var supportedLanguages: [String]](avspeechsynthesisprovidervoice/supportedlanguages.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "음성이 지원하는 언어를 식별하는 BCP 47 코드 목록입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "음성의 버전입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "디스크 상의 음성 패키지 크기(바이트 단위)입니다."
+      },
+      {
+        "id": "seg:heading:initrawvalue:0000:0001",
+        "ko": "init(rawValue:)"
+      },
+      {
+        "id": "seg:list:initrawvalue:0003:0001",
+        "ko": "iOS ?+"
+      },
+      {
+        "id": "seg:list:initrawvalue:0003:0002",
+        "ko": "iPadOS ?+"
+      },
+      {
+        "id": "seg:list:initrawvalue:0003:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:list:initrawvalue:0003:0004",
+        "ko": "macOS ?+"
+      },
+      {
+        "id": "seg:list:initrawvalue:0003:0005",
+        "ko": "tvOS ?+"
+      },
+      {
+        "id": "seg:list:initrawvalue:0003:0006",
+        "ko": "visionOS ?+"
+      },
+      {
+        "id": "seg:paragraph:declaration:0007:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avcapturedevice/autofocusrangerestriction-swift.enum/init(rawvalue:))*"
+      },
+      {
+        "id": "seg:paragraph:avcaptionconversionwarningwarningtype:0002:0001",
+        "ko": "캡션 변환 경고의 유형입니다."
+      },
+      {
+        "id": "seg:heading:warning-types:0008:0001",
+        "ko": "경고 유형"
+      },
+      {
+        "id": "seg:list:warning-types:0009:0001",
+        "ko": "[static let excessMediaData: AVCaptionConversionWarning.WarningType](avcaptionconversionwarning/warningtype-swift.struct/excessmediadata.md)"
+      },
+      {
+        "id": "seg:paragraph:warning-types:0010:0001",
+        "ko": "변환 설정에서 지정한 미디어의 유형 및 하위유형에 대해 하나 이상의 캡션이 미디어 데이터 용량을 초과했음을 나타내는 유형입니다."
+      },
+      {
+        "id": "seg:list:initializers:0012:0001",
+        "ko": "[init(rawValue: String)](avcaptionconversionwarning/warningtype-swift.struct/init(rawvalue:).md)"
+      },
+      {
+        "id": "seg:paragraph:initializers:0013:0001",
+        "ko": "문자열로 경고 유형을 생성합니다."
+      },
+      {
+        "id": "seg:heading:conforms-to:0015:0001",
+        "ko": "준수 대상"
+      },
+      {
+        "id": "seg:heading:see-also:0017:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "검증 경고의 성격을 나타내는 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "시스템이 경고를 발행한 캡션의 범위입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "변환기가 캡션을 특정 형식으로 변환할 때 수행하는 수정입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "캡션 변환 유효성 검사 중 발견된 문제를 수정하기 위한 보정을 설명하는 개체입니다."
+      },
+      {
+        "id": "seg:paragraph:isvideomirroringsupported:0002:0001",
+        "ko": "연결이 비디오 미러링을 지원하는지 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "연결을 통해 흐르는 비디오를 수평으로 뒤집는지 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "세션 구성에 따라 미러링을 활성화할 수 있는지 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:heading:initrawvalue:0000:0001",
+        "ko": "init(rawValue:)"
+      },
+      {
+        "id": "seg:paragraph:declaration:0007:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avcapturedevice/autofocusrangerestriction-swift.enum/init(rawvalue:))*"
+      },
+      {
+        "id": "seg:heading:addoutputwithnoconnections:0000:0001",
+        "ko": "addOutputWithNoConnections(_:)"
+      },
+      {
+        "id": "seg:paragraph:addoutputwithnoconnections:0002:0001",
+        "ko": "연결을 만들지 않고 세션에 캡처 출력을 추가합니다."
+      }
+    ]
+  }
+}
