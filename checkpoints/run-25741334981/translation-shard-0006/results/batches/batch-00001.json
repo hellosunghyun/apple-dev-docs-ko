@@ -1,0 +1,250 @@
+{
+  "batchIndex": 1,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:44.898Z",
+  "durationMs": 19075,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:avaudiounitcomponentmanager:0002:0001",
+        "ko": "시스템이 등록한 오디오 컴포넌트를 검색하고 질의할 수 있는 방법을 제공하는 개체입니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0001",
+        "ko": "컴포넌트 매니저는 오디오 컴포넌트를 열지 않고도 다양한 정보를 찾을 수 있는 메서드를 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0002",
+        "ko": "현재는 오디오 유닛인 오디오 컴포넌트만 검색할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0001",
+        "ko": "이 클래스는 시스템 태그와 임의 사용자 태그를 지원합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0002",
+        "ko": "각 오디오 유닛을 정의의 일부로 태그할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0003",
+        "ko": "Logic 또는 GarageBand와 같은 오디오 유닛 호스트는 태그에 따라 오디오 유닛 그룹을 표시할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0010:0001",
+        "ko": "오디오 유닛은 다음과 같은 방식으로 검색할 수 있습니다:"
+      },
+      {
+        "id": "seg:list:overview:0011:0001",
+        "ko": "태그 또는 설명 문자열을 포함하는 `NSPredicate` 인스턴스를 사용합니다."
+      },
+      {
+        "id": "seg:list:overview:0011:0002",
+        "ko": "사용자 지정 기준을 충족하는 블록을 사용합니다."
+      },
+      {
+        "id": "seg:list:overview:0011:0003",
+        "ko": "`AudioComponentDescription`를 사용합니다."
+      },
+      {
+        "id": "seg:heading:getting-the-unit-audio-component-manager:0013:0001",
+        "ko": "오디오 컴포넌트 매니저 가져오기"
+      },
+      {
+        "id": "seg:paragraph:getting-the-unit-audio-component-manager:0015:0001",
+        "ko": "공유 컴포넌트 매니저 인스턴스를 가져옵니다."
+      },
+      {
+        "id": "seg:heading:getting-matching-audio-components:0016:0001",
+        "ko": "일치하는 오디오 컴포넌트 가져오기"
+      },
+      {
+        "id": "seg:list:getting-matching-audio-components:0017:0001",
+        "ko": "[func components(matching: AudioComponentDescription) -> [AVAudioUnitComponent]](avaudiounitcomponentmanager/components(matching:)-9qt94.md)"
+      },
+      {
+        "id": "seg:paragraph:getting-matching-audio-components:0018:0001",
+        "ko": "설명과 일치하는 오디오 컴포넌트 객체 배열을 가져옵니다."
+      },
+      {
+        "id": "seg:list:getting-matching-audio-components:0019:0001",
+        "ko": "[func components(matching: NSPredicate) -> [AVAudioUnitComponent]](avaudiounitcomponentmanager/components(matching:)-96l2c.md)"
+      },
+      {
+        "id": "seg:paragraph:getting-matching-audio-components:0020:0001",
+        "ko": "검색 predicate와 일치하는 오디오 컴포넌트 객체의 배열을 가져옵니다."
+      },
+      {
+        "id": "seg:list:getting-matching-audio-components:0021:0001",
+        "ko": "[func components(passingTest: (AVAudioUnitComponent, UnsafeMutablePointer<ObjCBool>) -> Bool) -> [AVAudioUnitComponent]](avaudiounitcomponentmanager/components(passingtest:).md)"
+      },
+      {
+        "id": "seg:paragraph:getting-matching-audio-components:0022:0001",
+        "ko": "블록 메서드를 통과하는 오디오 컴포넌트의 배열을 가져옵니다."
+      },
+      {
+        "id": "seg:heading:getting-audio-unit-tags:0023:0001",
+        "ko": "오디오 유닛 태그 가져오기"
+      },
+      {
+        "id": "seg:list:getting-audio-unit-tags:0024:0001",
+        "ko": "[var standardLocalizedTagNames: [String]](avaudiounitcomponentmanager/standardlocalizedtagnames.md)"
+      },
+      {
+        "id": "seg:paragraph:getting-audio-unit-tags:0025:0001",
+        "ko": "오디오 유닛이 정의하는 로컬라이즈된 표준 시스템 태그 배열입니다."
+      },
+      {
+        "id": "seg:list:getting-audio-unit-tags:0026:0001",
+        "ko": "[var tagNames: [String]](avaudiounitcomponentmanager/tagnames.md)"
+      },
+      {
+        "id": "seg:paragraph:getting-audio-unit-tags:0027:0001",
+        "ko": "오디오 유닛이 현재 사용자와 연결한 모든 태그와 오디오 유닛이 정의한 시스템 태그의 배열입니다."
+      },
+      {
+        "id": "seg:heading:observing-registration-changes:0028:0001",
+        "ko": "등록 변경 사항 관찰"
+      },
+      {
+        "id": "seg:paragraph:observing-registration-changes:0030:0001",
+        "ko": "컴포넌트 매니저가 컴포넌트 목록을 갱신할 때 생성하는 알림입니다."
+      },
+      {
+        "id": "seg:heading:inherits-from:0032:0001",
+        "ko": "상속"
+      },
+      {
+        "id": "seg:heading:conforms-to:0034:0001",
+        "ko": "준수"
+      },
+      {
+        "id": "seg:heading:see-also:0036:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:paragraph:see-also:0038:0001",
+        "ko": "오디오 유닛에 대한 세부 정보를 제공하는 개체입니다."
+      },
+      {
+        "id": "seg:paragraph:avmidicontrolchangeeventmessagetypesoft:0002:0001",
+        "ko": "음표의 볼륨을 낮추는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "밴크 선택을 전환하는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "비브라토 효과를 변조하는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "브레스 컨트롤러에 대한 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "풋 컨트롤러 사용 시 연속적인 값 스트림을 전송하는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "포르타멘토 속도를 제어하는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "데이터 입력 매개변수를 제어하는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "채널 볼륨을 제어하는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "좌우 채널 밸런스를 제어하는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "좌우 채널 패닝을 제어하는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "표현 컨트롤러를 나타내는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "댐퍼 페달을 켜거나 끄는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "포르타멘토를 켜거나 끄는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "소스텐투를 켜거나 끄는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "레가토 페달을 켜거나 끄는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0037:0001",
+        "ko": "음표를 유지하는 이벤트 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:lengthinbeats:0002:0001",
+        "ko": "트랙의 총 길이를 박자 단위로 표시한 값입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 속성은 트랙의 마지막 이벤트 박자와 끝나는 음표를 페이드 아웃하거나 루프 지점을 마디 단위로 반올림하는 데 필요한 추가 시간을 더한 값을 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "사용자가 이 값을 설정하지 않으면 트랙 길이는 마지막 활성 이벤트의 끝으로 항상 조정되며, 사용자가 이벤트를 추가하거나 제거하면 동적으로 조정됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "이 속성은 사용자가 설정한 트랙 길이와 계산된 길이 중 더 큰 값을 반환합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0011:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "트랙의 총 길이를 초 단위로 표시한 값입니다."
+      },
+      {
+        "id": "seg:paragraph:avassetexportsessionstatuswaiting:0002:0001",
+        "ko": "세션이 추가 데이터를 더 내보내기 위해 대기 중입니다."
+      },
+      {
+        "id": "seg:list:avassetexportsessionstatuswaiting:0004:0001",
+        "ko": "iOS ?+"
+      },
+      {
+        "id": "seg:list:avassetexportsessionstatuswaiting:0004:0002",
+        "ko": "iPadOS ?+"
+      },
+      {
+        "id": "seg:list:avassetexportsessionstatuswaiting:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:list:avassetexportsessionstatuswaiting:0004:0004",
+        "ko": "macOS ?+"
+      },
+      {
+        "id": "seg:list:avassetexportsessionstatuswaiting:0004:0005",
+        "ko": "tvOS ?+"
+      },
+      {
+        "id": "seg:list:avassetexportsessionstatuswaiting:0004:0006",
+        "ko": "visionOS ?+"
+      }
+    ]
+  }
+}
