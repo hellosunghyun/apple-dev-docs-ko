@@ -1,0 +1,250 @@
+{
+  "batchIndex": 2,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:29.569Z",
+  "durationMs": 10683,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[var inputs: [AVAudioSessionPortDescription]](avaudiosessionroutedescription/inputs.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "오디오 입력 포트 설명의 배열입니다."
+      },
+      {
+        "id": "seg:paragraph:avspeechsynthesizer:0002:0001",
+        "ko": "텍스트 발화에서 합성 음성을 생성하고 진행 중인 음성 합성을 모니터링하거나 제어할 수 있게 하는 객체입니다."
+      },
+      {
+        "id": "seg:list:avspeechsynthesizer:0004:0005",
+        "ko": "tvOS ?+"
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0001",
+        "ko": "텍스트를 말하게 하려면 텍스트를 포함하는 [`AVSpeechUtterance`](avspeechutterance.md) 인스턴스를 생성한 다음 음성 합성기 인스턴스의 [`speak(_:)`](avspeechsynthesizer/speak(_:).md)에 전달합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0002",
+        "ko": "선택적으로 [`AVSpeechSynthesisVoice`](avspeechsynthesisvoice.md)를 가져와 발화의 [`voice`](avspeechutterance/voice.md) 속성에 설정하면 음성 합성기가 발화 텍스트를 말할 때 해당 음성을 사용합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0001",
+        "ko": "음성 합성기는 발화하는 항목들의 큐를 유지합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0002",
+        "ko": "음성 합성기가 말하고 있지 않으면, 필요한 경우 해당 발화의 [`preUtteranceDelay`](avspeechutterance/preutterancedelay.md) 동안 일시 정지 후 또는 즉시 [`speak(_:)`](avspeechsynthesizer/speak(_:).md)를 호출하면 해당 발화가 시작됩니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0003",
+        "ko": "음성 합성기가 말하고 있는 경우, 발화를 큐에 추가하고 수신한 순서대로 재생합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0010:0001",
+        "ko": "음성 합성이 시작되면 음성 합성기 객체를 사용해 음성 합성을 일시 중단하거나 중지할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0010:0002",
+        "ko": "일시 중단 후에는 중단 지점에서 다시 재개하거나 음성 합성을 완전히 중지하고 큐의 나머지 발화 항목을 모두 제거할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0011:0001",
+        "ko": "음성 합성기는 [`isSpeaking`](avspeechsynthesizer/isspeaking.md) 및 [`isPaused`](avspeechsynthesizer/ispaused.md) 속성을 확인하거나 [`AVSpeechSynthesizerDelegate`](avspeechsynthesizerdelegate.md)를 준수하는 delegate를 설정하여 모니터링할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0011:0002",
+        "ko": "delegate는 음성 합성 중에 발생하는 주요 이벤트를 수신합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0012:0001",
+        "ko": "`AVSpeechSynthesizer`는 음성이 재생되는 경로도 제어합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0012:0002",
+        "ko": "자세한 내용은 음성 출력 제어를 참조합니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0013:0001",
+        "ko": "**Note**: 시스템은 음성 합성기를 자동으로 유지하지 않으므로 음성 합성이 종료될 때까지 수동으로 유지해야 합니다."
+      },
+      {
+        "id": "seg:heading:controlling-speech:0015:0001",
+        "ko": "음성 제어"
+      },
+      {
+        "id": "seg:list:controlling-speech:0016:0001",
+        "ko": "[func speak(AVSpeechUtterance)](avspeechsynthesizer/speak(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:controlling-speech:0017:0001",
+        "ko": "지정한 발화를 음성 합성기의 큐에 추가합니다."
+      },
+      {
+        "id": "seg:paragraph:controlling-speech:0019:0001",
+        "ko": "일시 중단 지점에서 음성 합성을 재개합니다."
+      },
+      {
+        "id": "seg:list:controlling-speech:0020:0001",
+        "ko": "[func pauseSpeaking(at: AVSpeechBoundary) -> Bool](avspeechsynthesizer/pausespeaking(at:).md)"
+      },
+      {
+        "id": "seg:paragraph:controlling-speech:0021:0001",
+        "ko": "지정한 경계에서 음성 합성을 일시 중단합니다."
+      },
+      {
+        "id": "seg:list:controlling-speech:0022:0001",
+        "ko": "[func stopSpeaking(at: AVSpeechBoundary) -> Bool](avspeechsynthesizer/stopspeaking(at:).md)"
+      },
+      {
+        "id": "seg:paragraph:controlling-speech:0023:0001",
+        "ko": "지정한 경계에서 음성 합성을 중지합니다."
+      },
+      {
+        "id": "seg:paragraph:controlling-speech:0025:0001",
+        "ko": "음성 합성에서 일시 중단 또는 중지 시점을 지정합니다."
+      },
+      {
+        "id": "seg:heading:inspecting-a-speech-synthesizer:0026:0001",
+        "ko": "음성 합성기 검사"
+      },
+      {
+        "id": "seg:paragraph:inspecting-a-speech-synthesizer:0028:0001",
+        "ko": "음성 합성기가 현재 발화 중인지 또는 일시 중단 상태이면서 발화할 항목이 남아 있는지를 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:paragraph:inspecting-a-speech-synthesizer:0030:0001",
+        "ko": "음성 합성기가 일시 중단 상태인지 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:heading:managing-the-delegate:0031:0001",
+        "ko": "대리자 관리"
+      },
+      {
+        "id": "seg:paragraph:managing-the-delegate:0033:0001",
+        "ko": "음성 합성기의 delegate 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:managing-the-delegate:0035:0001",
+        "ko": "음성 합성 중 발생하는 이벤트에 응답하도록 구현할 수 있는 선택적 메서드를 포함하는 delegate 프로토콜입니다."
+      },
+      {
+        "id": "seg:heading:directing-speech-output:0036:0001",
+        "ko": "음성 출력 제어"
+      },
+      {
+        "id": "seg:paragraph:directing-speech-output:0038:0001",
+        "ko": "앱이 오디오 세션을 관리하는지 지정하는 부울 값입니다."
+      },
+      {
+        "id": "seg:paragraph:directing-speech-output:0040:0001",
+        "ko": "합성된 음성을 활성 통화로 전송할지 지정하는 부울 값입니다."
+      },
+      {
+        "id": "seg:list:directing-speech-output:0041:0001",
+        "ko": "[var outputChannels: [AVAudioSessionChannelDescription]?](avspeechsynthesizer/outputchannels.md)"
+      },
+      {
+        "id": "seg:paragraph:directing-speech-output:0042:0001",
+        "ko": "생성된 음성을 라우팅할 오디오 세션 채널의 배열입니다."
+      },
+      {
+        "id": "seg:list:directing-speech-output:0043:0001",
+        "ko": "[func write(AVSpeechUtterance, toBufferCallback: AVSpeechSynthesizer.BufferCallback)](avspeechsynthesizer/write(_:tobuffercallback:).md)"
+      },
+      {
+        "id": "seg:paragraph:directing-speech-output:0044:0001",
+        "ko": "발화에 대한 음성을 생성하고 오디오 버퍼와 함께 콜백을 호출합니다."
+      },
+      {
+        "id": "seg:paragraph:directing-speech-output:0046:0001",
+        "ko": "생성된 음성을 수신하는 버퍼를 받는 콜백을 정의하는 타입입니다."
+      },
+      {
+        "id": "seg:list:directing-speech-output:0047:0001",
+        "ko": "[func write(AVSpeechUtterance, toBufferCallback: AVSpeechSynthesizer.BufferCallback, toMarkerCallback: AVSpeechSynthesizer.MarkerCallback)](avspeechsynthesizer/write(_:tobuffercallback:tomarkercallback:).md)"
+      },
+      {
+        "id": "seg:paragraph:directing-speech-output:0048:0001",
+        "ko": "저장 또는 추가 음성 합성 처리를 위해 오디오 버퍼와 관련 메타데이터를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:directing-speech-output:0050:0001",
+        "ko": "음성 마커를 수신하는 콜백을 정의하는 타입입니다."
+      },
+      {
+        "id": "seg:heading:enabling-personal-voices:0051:0001",
+        "ko": "개인 음성 사용"
+      },
+      {
+        "id": "seg:paragraph:enabling-personal-voices:0053:0001",
+        "ko": "개인 음성을 사용하기 위해 앱에 부여된 권한 부여입니다."
+      },
+      {
+        "id": "seg:paragraph:enabling-personal-voices:0055:0001",
+        "ko": "음성 합성에서 사용 가능한 음성 변경을 나타내는 알림입니다."
+      },
+      {
+        "id": "seg:list:enabling-personal-voices:0056:0001",
+        "ko": "[class func requestPersonalVoiceAuthorization(completionHandler: (AVSpeechSynthesizer.PersonalVoiceAuthorizationStatus) -> Void)](avspeechsynthesizer/requestpersonalvoiceauthorization(completionhandler:).md)"
+      },
+      {
+        "id": "seg:paragraph:enabling-personal-voices:0057:0001",
+        "ko": "사용자에게 앱이 개인 음성을 사용하도록 권한 부여를 요청하도록 프롬프트합니다."
+      },
+      {
+        "id": "seg:paragraph:enabling-personal-voices:0059:0001",
+        "ko": "개인 음성 권한 부여 상태를 모델링하는 열거형입니다."
+      },
+      {
+        "id": "seg:heading:inherits-from:0061:0001",
+        "ko": "상속"
+      },
+      {
+        "id": "seg:heading:conforms-to:0063:0001",
+        "ko": "준수"
+      },
+      {
+        "id": "seg:paragraph:avassetexportpresetmediumquality:0002:0001",
+        "ko": "중간 품질 영화 파일을 내보내는 사전 설정입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 사전 설정은 비디오를 H.264 형식으로, 오디오를 AAC 형식으로 압축합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "저품질 영화 파일을 내보내는 사전 설정입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "고품질 영화 파일을 내보내는 사전 설정입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "최고로 사용 가능한 동영상 품질과 HEVC 동영상 압축으로 영화를 내보내는 사전 설정입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "알파 채널이 포함된 최고 사용 가능한 동영상 품질과 HEVC 동영상 압축으로 영화를 내보내는 사전 설정입니다."
+      },
+      {
+        "id": "seg:paragraph:avassetreaderstatusfailed:0002:0001",
+        "ko": "자산 리더는 오류로 인해 더 이상 자산에서 샘플을 읽을 수 없습니다."
+      },
+      {
+        "id": "seg:list:avassetreaderstatusfailed:0004:0001",
+        "ko": "iOS ?+"
+      },
+      {
+        "id": "seg:list:avassetreaderstatusfailed:0004:0002",
+        "ko": "iPadOS ?+"
+      }
+    ]
+  }
+}
