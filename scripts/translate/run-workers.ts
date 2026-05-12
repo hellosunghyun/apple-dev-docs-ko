@@ -63,6 +63,9 @@ async function main(): Promise<void> {
   await flushState("initialized");
 
   queueFile.batches.forEach((batch, batchIndex) => {
+    if (batchStates[batchIndex].status === "success") {
+      return;
+    }
     workerQueue.add(async () => {
       if (abortReason) return;
       const batchState = batchStates[batchIndex];
