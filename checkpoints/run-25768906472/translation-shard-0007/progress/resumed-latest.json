@@ -1,0 +1,1302 @@
+{
+  "generatedAt": "2026-05-12T16:04:14.627Z",
+  "updatedAt": "2026-05-12T16:05:37.482Z",
+  "reason": "paused",
+  "queue": "state/queue/shard-0007.json",
+  "shard": {
+    "index": 7,
+    "total": 256
+  },
+  "abortReason": "Paused after Codex usage limit; retry after 9:04 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM.",
+    "retryAfterText": "9:04 PM",
+    "retryAt": "2026-05-12T21:04:00.000Z"
+  },
+  "totals": {
+    "batches": 245,
+    "segments": 13600,
+    "completed": 14,
+    "failed": 1,
+    "processed": 15,
+    "active": 0,
+    "queued": 230,
+    "percent": 6.12
+  },
+  "batches": [
+    {
+      "index": 0,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:02:26.676Z",
+      "durationMs": 10537
+    },
+    {
+      "index": 1,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:02:25.511Z",
+      "durationMs": 9372
+    },
+    {
+      "index": 2,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:02:24.316Z",
+      "durationMs": 8177
+    },
+    {
+      "index": 3,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:02:50.278Z",
+      "durationMs": 25960
+    },
+    {
+      "index": 4,
+      "status": "success",
+      "segments": 23,
+      "completedAt": "2026-05-12T14:02:33.800Z",
+      "durationMs": 8287
+    },
+    {
+      "index": 5,
+      "status": "success",
+      "segments": 22,
+      "completedAt": "2026-05-12T14:02:35.677Z",
+      "durationMs": 8998
+    },
+    {
+      "index": 6,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:02:52.048Z",
+      "durationMs": 18245
+    },
+    {
+      "index": 7,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:03:10.053Z",
+      "durationMs": 34371
+    },
+    {
+      "index": 8,
+      "status": "success",
+      "segments": 59,
+      "completedAt": "2026-05-12T14:03:13.897Z",
+      "durationMs": 23617
+    },
+    {
+      "index": 9,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:14.634Z",
+      "completedAt": "2026-05-12T16:04:32.214Z",
+      "durationMs": 17580
+    },
+    {
+      "index": 10,
+      "status": "success",
+      "segments": 46,
+      "startedAt": "2026-05-12T16:04:14.634Z",
+      "completedAt": "2026-05-12T16:04:31.699Z",
+      "durationMs": 17065
+    },
+    {
+      "index": 11,
+      "status": "success",
+      "segments": 52,
+      "startedAt": "2026-05-12T16:04:14.634Z",
+      "completedAt": "2026-05-12T16:04:27.100Z",
+      "durationMs": 12466
+    },
+    {
+      "index": 12,
+      "status": "success",
+      "segments": 50,
+      "startedAt": "2026-05-12T16:04:27.104Z",
+      "completedAt": "2026-05-12T16:04:56.789Z",
+      "durationMs": 29685
+    },
+    {
+      "index": 13,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:31.702Z",
+      "completedAt": "2026-05-12T16:04:55.419Z",
+      "durationMs": 23717
+    },
+    {
+      "index": 14,
+      "status": "failed",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:32.238Z",
+      "completedAt": "2026-05-12T16:05:10.017Z",
+      "durationMs": 37779,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1cef-2efe-7332-b27a-b69f379f43e2\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment sourcePath and id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"sourcePath\":\"...\",\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:constants:0008:0001\",\n      \"source\": \"AOL Instant Messenger instant message service.\",\n      \"contextBefore\": \"[let kABInstantMessageServiceAIM: String](kabinstantmessageserviceaim.md)\",\n      \"contextAfter\": \"[let kABInstantMessageServiceFacebook: String](kabinstantmessageservicefacebook.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:constants:0010:0001\",\n      \"source\": \"Facebook instant message service.\",\n      \"contextBefore\": \"[let kABInstantMessageServiceFacebook: String](kabinstantmessageservicefacebook.md)\",\n      \"contextAfter\": \"[let kABInstantMessageServiceGaduGadu: String](kabinstantmessageservicegadugadu.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:constants:0012:0001\",\n      \"source\": \"Gadu-Gadu instant message service.\",\n      \"contextBefore\": \"[let kABInstantMessageServiceGaduGadu: String](kabinstantmessageservicegadugadu.md)\",\n      \"contextAfter\": \"[let kABInstantMessageServiceGoogleTalk: String](kabinstantmessageservicegoogletalk.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:constants:0014:0001\",\n      \"source\": \"Google Talk instant message service.\",\n      \"contextBefore\": \"[let kABInstantMessageServiceGoogleTalk: String](kabinstantmessageservicegoogletalk.md)\",\n      \"contextAfter\": \"[let kABInstantMessageServiceICQ: String](kabinstantmessageserviceicq.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:constants:0016:0001\",\n      \"source\": \"ICQ instant message service.\",\n      \"contextBefore\": \"[let kABInstantMessageServiceICQ: String](kabinstantmessageserviceicq.md)\",\n      \"contextAfter\": \"[let kABInstantMessageServiceJabber: String](kabinstantmessageservicejabber.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:constants:0018:0001\",\n      \"source\": \"Jabber instant message service.\",\n      \"contextBefore\": \"[let kABInstantMessageServiceJabber: String](kabinstantmessageservicejabber.md)\",\n      \"contextAfter\": \"[let kABInstantMessageServiceMSN: String](kabinstantmessageservicemsn.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:constants:0020:0001\",\n      \"source\": \"MSN instant message service.\",\n      \"contextBefore\": \"[let kABInstantMessageServiceMSN: String](kabinstantmessageservicemsn.md)\",\n      \"contextAfter\": \"[let kABInstantMessageServiceQQ: String](kabinstantmessageserviceqq.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:constants:0022:0001\",\n      \"source\": \"QQ instant message service.\",\n      \"contextBefore\": \"[let kABInstantMessageServiceQQ: String](kabinstantmessageserviceqq.md)\",\n      \"contextAfter\": \"[let kABInstantMessageServiceSkype: String](kabinstantmessageserviceskype.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:constants:0024:0001\",\n      \"source\": \"Skype instant message service.\",\n      \"contextBefore\": \"[let kABInstantMessageServiceSkype: String](kabinstantmessageserviceskype.md)\",\n      \"contextAfter\": \"[let kABInstantMessageServiceYahoo: String](kabinstantmessageserviceyahoo.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:constants:0026:0001\",\n      \"source\": \"Yahoo! instant message service.\",\n      \"contextBefore\": \"[let kABInstantMessageServiceYahoo: String](kabinstantmessageserviceyahoo.md)\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:heading:see-also:0027:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"Yahoo! instant message service.\",\n      \"contextAfter\": \"[Instant Messaging Keys](instant-messaging-keys.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:list:see-also:0028:0001\",\n      \"source\": \"[Instant Messaging Keys](instant-messaging-keys.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"The keys used to specify the different fields in a [`kABInstantMessageProperty`](kabinstantmessageproperty.md) property.\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"The keys used to specify the different fields in a [`kABInstantMessageProperty`](kabinstantmessageproperty.md) property.\",\n      \"contextBefore\": \"[Instant Messaging Keys](instant-messaging-keys.md)\",\n      \"contextAfter\": \"[Social Profile Services](social-profile-services.md)\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:list:see-also:0030:0001\",\n      \"source\": \"[Social Profile Services](social-profile-services.md)\",\n      \"contextBefore\": \"The keys used to specify the different fields in a [`kABInstantMessageProperty`](kabinstantmessageproperty.md) property.\",\n      \"contextAfter\": \"The predefined constants are used to identify social networking services.\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/instant-messaging-services.md\",\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"The predefined constants are used to identify social networking services.\",\n      \"contextBefore\": \"[Social Profile Services](social-profile-services.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"Instant Messaging Services\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nlet kABPersonAddressStateKey: CFString!\\n```\",\n      \"contextAfter\": \"[let kABPersonAddressCityKey: CFString!](kabpersonaddresscitykey.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"Country code.\",\n      \"contextBefore\": \"[let kABPersonAddressCountryCodeKey: CFString!](kabpersonaddresscountrycodekey.md)\",\n      \"contextAfter\": \"The value is an ISO country code.\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0011:0002\",\n      \"source\": \"The value is an ISO country code.\",\n      \"contextBefore\": \"Country code.\",\n      \"contextAfter\": \"[let kABPersonAddressCountryKey: CFString!](kabpersonaddresscountrykey.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"Country or region.\",\n      \"contextBefore\": \"[let kABPersonAddressCountryKey: CFString!](kabpersonaddresscountrykey.md)\",\n      \"contextAfter\": \"[let kABPersonAddressProperty: ABPropertyID](kabpersonaddressproperty.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"Identifier for the address multivalue property.\",\n      \"contextBefore\": \"[let kABPersonAddressProperty: ABPropertyID](kabpersonaddressproperty.md)\",\n      \"contextAfter\": \"[let kABPersonAddressStreetKey: CFString!](kabpersonaddressstreetkey.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"Zip code.\",\n      \"contextBefore\": \"[let kABPersonAddressZIPKey: CFString!](kabpersonaddresszipkey.md)\",\n      \"contextAfter\": \"[let kABPersonAlternateBirthdayCalendarIdentifierKey: CFString!](kabpersonalternatebirthdaycalendaridentifierkey.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"The associated value is a string representing the calendar identifier for a [`CFCalendar`](https://developer.apple.com/documentation/CoreFoundation/CFCalendar).\",\n      \"contextBefore\": \"[let kABPersonAlternateBirthdayCalendarIdentifierKey: CFString!](kabpersonalternatebirthdaycalendaridentifierkey.md)\",\n      \"contextAfter\": \"[let kABPersonAlternateBirthdayDayKey: CFString!](kabpersonalternatebirthdaydaykey.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"The associated value is a [`CFNumber`](https://developer.apple.com/documentation/CoreFoundation/CFNumber) of type [`CFNumberType.nsIntegerType`](https://developer.apple.com/documentation/CoreFoundation/CFNumberType/nsIntegerType) whose value is the day for the birthday.\",\n      \"contextBefore\": \"[let kABPersonAlternateBirthdayDayKey: CFString!](kabpersonalternatebirthdaydaykey.md)\",\n      \"contextAfter\": \"[let kABPersonAlternateBirthdayEraKey: CFString!](kabpersonalternatebirthdayerakey.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"The associated value is a [`CFNumber`](https://developer.apple.com/documentation/CoreFoundation/CFNumber) of type [`CFNumberType.nsIntegerType`](https://developer.apple.com/documentation/CoreFoundation/CFNumberType/nsIntegerType) whose value is the era for the birthday.\",\n      \"contextBefore\": \"[let kABPersonAlternateBirthdayEraKey: CFString!](kabpersonalternatebirthdayerakey.md)\",\n      \"contextAfter\": \"[let kABPersonAlternateBirthdayIsLeapMonthKey: CFString!](kabpersonalternatebirthdayisleapmonthkey.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0027:0001\",\n      \"source\": \"The associated value is a [`CFNumber`](https://developer.apple.com/documentation/CoreFoundation/CFNumber) of type [`CFNumberType.charType`](https://developer.apple.com/documentation/CoreFoundation/CFNumberType/charType).\",\n      \"contextBefore\": \"[let kABPersonAlternateBirthdayIsLeapMonthKey: CFString!](kabpersonalternatebirthdayisleapmonthkey.md)\",\n      \"contextAfter\": \"[let kABPersonAlternateBirthdayMonthKey: CFString!](kabpersonalternatebirthdaymonthkey.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"The associated value is a [`CFNumber`](https://developer.apple.com/documentation/CoreFoundation/CFNumber) of type [`CFNumberType.nsIntegerType`](https://developer.apple.com/documentation/CoreFoundation/CFNumberType/nsIntegerType) whose value is the month for the birthday.\",\n      \"contextBefore\": \"[let kABPersonAlternateBirthdayMonthKey: CFString!](kabpersonalternatebirthdaymonthkey.md)\",\n      \"contextAfter\": \"[let kABPersonAlternateBirthdayProperty: ABPropertyID](kabpersonalternatebirthdayproperty.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"The associated value is a [`kABDictionaryPropertyType`](kabdictionarypropertytype.md) with keys specified by the other constants listed here.\",\n      \"contextBefore\": \"[let kABPersonAlternateBirthdayProperty: ABPropertyID](kabpersonalternatebirthdayproperty.md)\",\n      \"contextAfter\": \"[let kABPersonAlternateBirthdayYearKey: CFString!](kabpersonalternatebirthdayyearkey.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AddressBook/kabpersonaddressstatekey.md\",\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"The associated value is a [`CFNumber`](https://developer.apple.com/documentation/CoreFoundation/CFNumber) of type [`CFNumberType.nsIntegerType`](https://developer.apple.com/documentation/CoreFoundation/CFNumberType/nsIntegerType) whose value is the year for the birthday.\",\n      \"contextBefore\": \"[let kABPersonAlternateBirthdayYearKey: CFString!](kabpersonalternatebirthdayyearkey.md)\",\n      \"contextAfter\": \"[let kABPersonAnniversaryLabel: CFString!](kabpersonanniversarylabel.md)\",\n      \"documentTitle\": \"kABPersonAddressStateKey\",\n      \"framework\": \"AddressBook\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:productalreadyexistserror:0003:0001\",\n      \"source\": \"Advanced Commerce API 1.0+\",\n      \"contextBefore\": \"**Availability**:\",\n      \"contextAfter\": \"Declaration\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:properties:0007:0001\",\n      \"source\": \"`errorCode` (number)\",\n      \"contextBefore\": \"Properties\",\n      \"contextAfter\": \"`errorMessage` (string)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:properties:0007:0002\",\n      \"source\": \"`errorMessage` (string)\",\n      \"contextBefore\": \"`errorCode` (number)\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:heading:see-also:0008:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"`errorMessage` (string)\",\n      \"contextAfter\": \"[object ACAPriceIncreaseIsNotCurrentlySupportedInIndiaError](acapriceincreaseisnotcurrentlysupportedinindiaerror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0001\",\n      \"source\": \"[object ACAPriceIncreaseIsNotCurrentlySupportedInIndiaError](acapriceincreaseisnotcurrentlysupportedinindiaerror.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"[object AlreadyRefundedError](alreadyrefundederror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0002\",\n      \"source\": \"[object AlreadyRefundedError](alreadyrefundederror.md)\",\n      \"contextBefore\": \"[object ACAPriceIncreaseIsNotCurrentlySupportedInIndiaError](acapriceincreaseisnotcurrentlysupportedinindiaerror.md)\",\n      \"contextAfter\": \"[object AtLeastOneItemError](atleastoneitemerror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0003\",\n      \"source\": \"[object AtLeastOneItemError](atleastoneitemerror.md)\",\n      \"contextBefore\": \"[object AlreadyRefundedError](alreadyrefundederror.md)\",\n      \"contextAfter\": \"[object AtLeastOneOfDisplayNameOrDescriptionError](atleastoneofdisplaynameordescriptionerror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0004\",\n      \"source\": \"[object AtLeastOneOfDisplayNameOrDescriptionError](atleastoneofdisplaynameordescriptionerror.md)\",\n      \"contextBefore\": \"[object AtLeastOneItemError](atleastoneitemerror.md)\",\n      \"contextAfter\": \"[object BillingCycleResetWithEffectiveLaterError](billingcycleresetwitheffectivelatererror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0005\",\n      \"source\": \"[object BillingCycleResetWithEffectiveLaterError](billingcycleresetwitheffectivelatererror.md)\",\n      \"contextBefore\": \"[object AtLeastOneOfDisplayNameOrDescriptionError](atleastoneofdisplaynameordescriptionerror.md)\",\n      \"contextAfter\": \"[object ChangeItemNotFoundError](changeitemnotfounderror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0006\",\n      \"source\": \"[object ChangeItemNotFoundError](changeitemnotfounderror.md)\",\n      \"contextBefore\": \"[object BillingCycleResetWithEffectiveLaterError](billingcycleresetwitheffectivelatererror.md)\",\n      \"contextAfter\": \"[object CurrentSKULengthExceededError](currentskulengthexceedederror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0007\",\n      \"source\": \"[object CurrentSKULengthExceededError](currentskulengthexceedederror.md)\",\n      \"contextBefore\": \"[object ChangeItemNotFoundError](changeitemnotfounderror.md)\",\n      \"contextAfter\": \"[object DependentSKUsCannotBeChainedError](dependentskuscannotbechainederror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0008\",\n      \"source\": \"[object DependentSKUsCannotBeChainedError](dependentskuscannotbechainederror.md)\",\n      \"contextBefore\": \"[object CurrentSKULengthExceededError](currentskulengthexceedederror.md)\",\n      \"contextAfter\": \"[object DependentSKUsCannotBeSharedError](dependentskuscannotbesharederror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0009\",\n      \"source\": \"[object DependentSKUsCannotBeSharedError](dependentskuscannotbesharederror.md)\",\n      \"contextBefore\": \"[object DependentSKUsCannotBeChainedError](dependentskuscannotbechainederror.md)\",\n      \"contextAfter\": \"[object DescriptionLengthExceededError](descriptionlengthexceedederror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0010\",\n      \"source\": \"[object DescriptionLengthExceededError](descriptionlengthexceedederror.md)\",\n      \"contextBefore\": \"[object DependentSKUsCannotBeSharedError](dependentskuscannotbesharederror.md)\",\n      \"contextAfter\": \"[object DisplayNameLengthExceededError](displaynamelengthexceedederror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0011\",\n      \"source\": \"[object DisplayNameLengthExceededError](displaynamelengthexceedederror.md)\",\n      \"contextBefore\": \"[object DescriptionLengthExceededError](descriptionlengthexceedederror.md)\",\n      \"contextAfter\": \"[object EmptyAddChangeItemsError](emptyaddchangeitemserror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0012\",\n      \"source\": \"[object EmptyAddChangeItemsError](emptyaddchangeitemserror.md)\",\n      \"contextBefore\": \"[object DisplayNameLengthExceededError](displaynamelengthexceedederror.md)\",\n      \"contextAfter\": \"[object FreeTrialOfferMustUsePeriodCountOfOneError](freetrialoffermustuseperiodcountofoneerror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0013\",\n      \"source\": \"[object FreeTrialOfferMustUsePeriodCountOfOneError](freetrialoffermustuseperiodcountofoneerror.md)\",\n      \"contextBefore\": \"[object EmptyAddChangeItemsError](emptyaddchangeitemserror.md)\",\n      \"contextAfter\": \"[object GeneralInternalError](generalinternalerror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0014\",\n      \"source\": \"[object GeneralInternalError](generalinternalerror.md)\",\n      \"contextBefore\": \"[object FreeTrialOfferMustUsePeriodCountOfOneError](freetrialoffermustuseperiodcountofoneerror.md)\",\n      \"contextAfter\": \"[object GeneralInternalRetryableError](generalinternalretryableerror.md)\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AdvancedCommerceAPI/productalreadyexistserror.md\",\n      \"id\": \"seg:list:see-also:0009:0015\",\n      \"source\": \"[object GeneralInternalRetryableError](generalinternalretryableerror.md)\",\n      \"contextBefore\": \"[object GeneralInternalError](generalinternalerror.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"ProductAlreadyExistsError\",\n      \"framework\": \"AdvancedCommerceAPI\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmbutton/init-from.md\",\n      \"id\": \"seg:heading:initfrom:0000:0001\",\n      \"source\": \"init(from:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: AlarmKit **Kind**: init\",\n      \"documentTitle\": \"init(from:)\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmbutton/init-from.md\",\n      \"id\": \"seg:paragraph:initfrom:0002:0001\",\n      \"source\": \"Creates an alarm button from a decoder.\",\n      \"contextBefore\": \"**Framework**: AlarmKit **Kind**: init\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"init(from:)\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmbutton/init-from.md\",\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`decoder`: The decoder to read from.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"init(from:)\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmbutton/init-from.md\",\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"`decoder`: The decoder to read from.\",\n      \"contextAfter\": \"[func encode(to: any Encoder) throws](alarmbutton/encode(to:).md)\",\n      \"documentTitle\": \"init(from:)\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmbutton/init-from.md\",\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[func encode(to: any Encoder) throws](alarmbutton/encode(to:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"Performs encoding to a given encoder.\",\n      \"documentTitle\": \"init(from:)\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmbutton/init-from.md\",\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"Performs encoding to a given encoder.\",\n      \"contextBefore\": \"[func encode(to: any Encoder) throws](alarmbutton/encode(to:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"init(from:)\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmbutton/init-from.md\",\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/alarmkit/alarmbutton/init(from:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"init(from:)\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmmanager/alarmauthorizationstateupdates.md\",\n      \"id\": \"seg:paragraph:alarmmanageralarmauthorizationstateupdates:0002:0001\",\n      \"source\": \"An asynchronous sequence that publishes a new value when authorization for the alarms and timers system changes.\",\n      \"contextBefore\": \"**Framework**: AlarmKit **Kind**: struct\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"AlarmManager.AlarmAuthorizationStateUpdates\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmmanager/alarmauthorizationstateupdates.md\",\n      \"id\": \"seg:heading:iterating-an-update:0008:0001\",\n      \"source\": \"Iterating an update\",\n      \"contextBefore\": \"Topics\",\n      \"contextAfter\": \"[AlarmManager.AlarmAuthorizationStateUpdates.Iterator](alarmmanager/alarmauthorizationstateupdates/iterator.md)\",\n      \"documentTitle\": \"AlarmManager.AlarmAuthorizationStateUpdates\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmmanager/alarmauthorizationstateupdates.md\",\n      \"id\": \"seg:paragraph:iterating-an-update:0010:0001\",\n      \"source\": \"A nested type that iterates over the elements of this sequence.\",\n      \"contextBefore\": \"[AlarmManager.AlarmAuthorizationStateUpdates.Iterator](alarmmanager/alarmauthorizationstateupdates/iterator.md)\",\n      \"contextAfter\": \"[func makeAsyncIterator() -> AlarmManager.AlarmAuthorizationStateUpdates.Iterator](alarmmanager/alarmauthorizationstateupdates/makeasynciterator.md)\",\n      \"documentTitle\": \"AlarmManager.AlarmAuthorizationStateUpdates\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmmanager/alarmauthorizationstateupdates.md\",\n      \"id\": \"seg:paragraph:iterating-an-update:0012:0001\",\n      \"source\": \"Returns an asynchronous iterator over the elements of this sequence.\",\n      \"contextBefore\": \"[func makeAsyncIterator() -> AlarmManager.AlarmAuthorizationStateUpdates.Iterator](alarmmanager/alarmauthorizationstateupdates/makeasynciterator.md)\",\n      \"contextAfter\": \"[AlarmManager.AlarmAuthorizationStateUpdates.Element](alarmmanager/alarmauthorizationstateupdates/element.md)\",\n      \"documentTitle\": \"AlarmManager.AlarmAuthorizationStateUpdates\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmmanager/alarmauthorizationstateupdates.md\",\n      \"id\": \"seg:paragraph:iterating-an-update:0014:0001\",\n      \"source\": \"A type representing the sequence’s elements.\",\n      \"contextBefore\": \"[AlarmManager.AlarmAuthorizationStateUpdates.Element](alarmmanager/alarmauthorizationstateupdates/element.md)\",\n      \"contextAfter\": \"Relationships\",\n      \"documentTitle\": \"AlarmManager.AlarmAuthorizationStateUpdates\",\n      \"framework\": \"AlarmKit\"\n    },\n    {\n      \"sourcePath\": \"documentation/AlarmKit/alarmmanager/alarmauthorizationstateupdates.md\",\n      \"id\": \"seg:heading:conforms-to:0016:0001\",\n      \"source\": \"Conforms To\",\n      \"contextBefore\": \"Relationships\",\n      \"contextAfter\": \"[AsyncSequence](../Swift/AsyncSequence.md)\",\n      \"documentTitle\": \"AlarmManager.AlarmAuthorizationStateUpdates\",\n      \"framework\": \"AlarmKit\"\n    }\n  ]\n}\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T16:04:59.407710Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:00.192779Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:01.058609Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T16:05:01.991806Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T16:05:03.356115Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T16:05:05.614101Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T16:05:09.564118Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: bf6f743a-4406-47c7-9915-ec9739707c91\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: bf6f743a-4406-47c7-9915-ec9739707c91"
+    },
+    {
+      "index": 15,
+      "status": "queued",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:55.422Z",
+      "completedAt": "2026-05-12T16:05:14.477Z",
+      "durationMs": 19055,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM."
+    },
+    {
+      "index": 16,
+      "status": "queued",
+      "segments": 47,
+      "startedAt": "2026-05-12T16:04:56.792Z",
+      "completedAt": "2026-05-12T16:05:13.678Z",
+      "durationMs": 16886,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM."
+    },
+    {
+      "index": 17,
+      "status": "queued",
+      "segments": 25,
+      "startedAt": "2026-05-12T16:05:10.023Z",
+      "completedAt": "2026-05-12T16:05:37.479Z",
+      "durationMs": 27456,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM."
+    },
+    {
+      "index": 18,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 19,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 20,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 21,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 22,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 23,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 24,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 25,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 26,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 27,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 28,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 29,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 30,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 31,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 32,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 33,
+      "status": "queued",
+      "segments": 42
+    },
+    {
+      "index": 34,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 35,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 36,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 37,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 38,
+      "status": "queued",
+      "segments": 36
+    },
+    {
+      "index": 39,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 40,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 41,
+      "status": "queued",
+      "segments": 35
+    },
+    {
+      "index": 42,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 43,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 44,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 45,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 46,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 47,
+      "status": "queued",
+      "segments": 34
+    },
+    {
+      "index": 48,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 49,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 50,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 51,
+      "status": "queued",
+      "segments": 30
+    },
+    {
+      "index": 52,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 53,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 54,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 55,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 56,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 57,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 58,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 59,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 60,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 61,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 62,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 63,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 64,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 65,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 66,
+      "status": "queued",
+      "segments": 33
+    },
+    {
+      "index": 67,
+      "status": "queued",
+      "segments": 30
+    },
+    {
+      "index": 68,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 69,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 70,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 71,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 72,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 73,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 74,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 75,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 76,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 77,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 78,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 79,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 80,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 81,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 82,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 83,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 84,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 85,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 86,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 87,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 88,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 89,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 90,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 91,
+      "status": "queued",
+      "segments": 45
+    },
+    {
+      "index": 92,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 93,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 94,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 95,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 96,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 97,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 98,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 99,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 100,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 101,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 102,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 103,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 104,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 105,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 106,
+      "status": "queued",
+      "segments": 41
+    },
+    {
+      "index": 107,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 108,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 109,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 110,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 111,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 112,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 113,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 114,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 115,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 116,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 117,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 118,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 119,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 120,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 121,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 122,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 123,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 124,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 125,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 126,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 127,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 128,
+      "status": "queued",
+      "segments": 41
+    },
+    {
+      "index": 129,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 130,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 131,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 132,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 133,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 134,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 135,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 136,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 137,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 138,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 139,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 140,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 141,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 142,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 143,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 144,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 145,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 146,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 147,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 148,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 149,
+      "status": "queued",
+      "segments": 34
+    },
+    {
+      "index": 150,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 151,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 152,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 153,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 154,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 155,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 156,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 157,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 158,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 159,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 160,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 161,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 162,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 163,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 164,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 165,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 166,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 167,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 168,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 169,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 170,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 171,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 172,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 173,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 174,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 175,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 176,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 177,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 178,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 179,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 180,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 181,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 182,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 183,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 184,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 185,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 186,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 187,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 188,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 189,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 190,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 191,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 192,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 193,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 194,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 195,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 196,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 197,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 198,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 199,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 200,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 201,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 202,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 203,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 204,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 205,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 206,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 207,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 208,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 209,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 210,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 211,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 212,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 213,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 214,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 215,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 216,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 217,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 218,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 219,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 220,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 221,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 222,
+      "status": "queued",
+      "segments": 23
+    },
+    {
+      "index": 223,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 224,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 225,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 226,
+      "status": "queued",
+      "segments": 45
+    },
+    {
+      "index": 227,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 228,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 229,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 230,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 231,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 232,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 233,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 234,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 235,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 236,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 237,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 238,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 239,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 240,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 241,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 242,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 243,
+      "status": "queued",
+      "segments": 38
+    },
+    {
+      "index": 244,
+      "status": "queued",
+      "segments": 24
+    }
+  ]
+}
