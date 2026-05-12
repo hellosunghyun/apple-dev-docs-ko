@@ -1,0 +1,122 @@
+{
+  "batchIndex": 4,
+  "status": "success",
+  "completedAt": "2026-05-12T14:03:08.443Z",
+  "durationMs": 19134,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0022:0002",
+        "ko": "캡처 세션의 [`photo`](avcapturesession/preset/photo.md) 프리셋을 설정하면 고해상도 사진 화질 출력용 파이프라인이 최적화됩니다."
+      },
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0022:0003",
+        "ko": "마지막으로 앱에서 사진을 촬영할 수 있도록 세션에 [`AVCapturePhotoOutput`](avcapturephotooutput.md) 인스턴스를 추가합니다."
+      },
+      {
+        "id": "seg:heading:set-up-a-capture-preview:0024:0001",
+        "ko": "캡처 미리보기 설정"
+      },
+      {
+        "id": "seg:paragraph:set-up-a-capture-preview:0025:0001",
+        "ko": "카메라가 캡처하는 콘텐츠를 미리보려면 AVFoundation은 [`AVCaptureVideoPreviewLayer`](avcapturevideopreviewlayer.md)라는 Core Animation 레이어 하위 클래스를 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-capture-preview:0025:0002",
+        "ko": "SwiftUI는 레이어를 직접 사용할 수 없으므로 앱에서는 이 레이어를 `PreviewView`라는 [`UIView`](https://developer.apple.com/documentation/UIKit/UIView) 하위 클래스에 호스팅합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-capture-preview:0025:0003",
+        "ko": "[`layerClass`](https://developer.apple.com/documentation/UIKit/UIView/layerClass) 속성을 오버라이드해 미리보기 레이어를 뷰의 백킹 레이어로 설정합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-capture-preview:0027:0001",
+        "ko": "이 뷰를 SwiftUI에서 사용할 수 있도록 앱은 `CameraPreview`라는 [`UIViewRepresentable`](https://developer.apple.com/documentation/SwiftUI/UIViewRepresentable) 타입으로 래핑합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-capture-preview:0029:0001",
+        "ko": "미리보기를 캡처 세션에 연결하면서 캡처 서비스의 보호 상태를 직접 노출하지 않기 위해, 샘플은 앱 전용 `PreviewSource`와 `PreviewTarget` 프로토콜을 정의합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-capture-preview:0029:0002",
+        "ko": "앱은 캡처 세션에 대한 참조를 제공하는 `PreviewSource`를 `CameraPreview`에 전달합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-capture-preview:0029:0003",
+        "ko": "`PreviewSource`의 `connect(to:)` 메서드를 호출하면 `PreviewView` 인스턴스에 캡처 세션이 설정됩니다."
+      },
+      {
+        "id": "seg:heading:request-authorization:0030:0001",
+        "ko": "권한 부여 요청"
+      },
+      {
+        "id": "seg:paragraph:request-authorization:0031:0001",
+        "ko": "초기 캡처 구성이 완료되었지만 앱이 캡처 세션을 성공적으로 시작하려면 장치 입력을 사용할 권한이 있는지 판정해야 합니다."
+      },
+      {
+        "id": "seg:paragraph:request-authorization:0031:0002",
+        "ko": "시스템은 카메라와 마이크의 입력을 캡처하려면 사용자가 앱에 대해 명시적으로 권한을 부여해야 한다고 요구합니다."
+      },
+      {
+        "id": "seg:paragraph:request-authorization:0031:0003",
+        "ko": "앱의 상태를 판정하기 위해 캡처 서비스는 다음과 같이 비동기 `isAuthorized` 속성을 정의합니다."
+      },
+      {
+        "id": "seg:paragraph:request-authorization:0033:0001",
+        "ko": "이 속성의 구현은 [`AVCaptureDevice`](avcapturedevice.md) 메서드를 사용해 현재 상태를 확인하고, 앱이 아직 판정되지 않은 경우 사용자에게 권한 부여를 요청합니다."
+      },
+      {
+        "id": "seg:paragraph:request-authorization:0033:0002",
+        "ko": "앱에 권한이 있으면 데이터 흐름을 시작하기 위해 캡처 세션을 시작합니다."
+      },
+      {
+        "id": "seg:paragraph:request-authorization:0033:0003",
+        "ko": "권한이 없으면 사용자 인터페이스에 오류 메시지를 표시합니다."
+      },
+      {
+        "id": "seg:paragraph:request-authorization:0034:0001",
+        "ko": "카메라와 마이크 접근에 필요한 구성에 대한 자세한 내용은 [`Requesting authorization to capture and save media`](requesting-authorization-to-capture-and-save-media.md)를 참조합니다."
+      },
+      {
+        "id": "seg:heading:change-the-capture-mode:0035:0001",
+        "ko": "캡처 모드 변경"
+      },
+      {
+        "id": "seg:paragraph:change-the-capture-mode:0036:0001",
+        "ko": "앱은 사진 캡처 모드로 시작합니다."
+      },
+      {
+        "id": "seg:paragraph:change-the-capture-mode:0036:0002",
+        "ko": "모드를 변경하려면 캡처 세션을 다음과 같이 다시 구성해야 합니다."
+      },
+      {
+        "id": "seg:paragraph:change-the-capture-mode:0038:0001",
+        "ko": "사진 캡처 모드에서는 캡처 세션에 [`photo`](avcapturesession/preset/photo.md) 프리셋을 설정해 캡처 파이프라인을 고해상도 사진 출력에 맞게 최적화합니다."
+      },
+      {
+        "id": "seg:paragraph:change-the-capture-mode:0038:0002",
+        "ko": "또한 동영상 캡처 출력도 제거해 사진 출력이 Live Photo 캡처를 수행하지 않도록 합니다."
+      },
+      {
+        "id": "seg:paragraph:change-the-capture-mode:0038:0003",
+        "ko": "비디오 캡처 모드에서는 세션 프리셋을 [`high`](avcapturesession/preset/high.md)로 설정하고 동영상 파일 캡처 출력을 세션에 추가합니다."
+      },
+      {
+        "id": "seg:heading:select-a-new-camera:0039:0001",
+        "ko": "새 카메라 선택"
+      },
+      {
+        "id": "seg:paragraph:select-a-new-camera:0040:0001",
+        "ko": "앱은 사용자가 전면 카메라와 후면 카메라를 전환하고, iPadOS에서는 연결된 외부 카메라도 전환할 수 있도록 버튼을 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:select-a-new-camera:0040:0002",
+        "ko": "활성 카메라를 변경하려면 앱이 다음과 같이 세션을 재구성합니다."
+      },
+      {
+        "id": "seg:paragraph:select-a-new-camera:0042:0001",
+        "ko": "[`AVCaptureSession`](avcapturesession.md)은 한 번에 단일 카메라 입력만 허용하므로, 이 메서드는 기존 카메라의 입력을 제거하는 것으로 시작합니다."
+      }
+    ]
+  }
+}

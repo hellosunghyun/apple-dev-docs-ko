@@ -1,0 +1,170 @@
+{
+  "batchIndex": 5,
+  "status": "success",
+  "completedAt": "2026-05-12T14:03:12.688Z",
+  "durationMs": 23183,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:select-a-new-camera:0042:0002",
+        "ko": "그다음 새 장치에 대한 입력 추가를 시도한 뒤, 성공하면 장치 변경을 반영하도록 일부 내부 구성을 수행합니다."
+      },
+      {
+        "id": "seg:paragraph:select-a-new-camera:0042:0003",
+        "ko": "캡처 세션이 새 장치를 추가할 수 없으면 제거된 입력을 다시 연결합니다."
+      },
+      {
+        "id": "seg:blockquote:select-a-new-camera:0043:0001",
+        "ko": "**Note**: 앱에서 여러 카메라를 동시에 캡처해야 하는 경우에는 [`AVCaptureMultiCamSession`](avcapturemulticamsession.md) 대신 사용합니다."
+      },
+      {
+        "id": "seg:heading:capture-a-photo:0044:0001",
+        "ko": "사진 촬영"
+      },
+      {
+        "id": "seg:paragraph:capture-a-photo:0045:0001",
+        "ko": "캡처 서비스는 앱의 사진 촬영 기능 처리를 `PhotoCapture` 객체에 위임하며, 이 객체는 [`AVCapturePhotoOutput`](avcapturephotooutput.md)와의 상호작용과 수명 주기를 관리합니다."
+      },
+      {
+        "id": "seg:paragraph:capture-a-photo:0045:0002",
+        "ko": "앱은 이 객체의 [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) 메서드를 호출하여 사진을 캡처합니다. 이때 캡처 설정을 설명하는 객체와 캡처 진행 중 시스템이 호출할 델리게이트를 전달합니다."
+      },
+      {
+        "id": "seg:paragraph:capture-a-photo:0045:0003",
+        "ko": "이 델리게이트 기반 API를 `async` 컨텍스트에서 사용하려면, 앱은 다음과 같이 checked throwing continuation으로 이 호출을 래핑합니다."
+      },
+      {
+        "id": "seg:paragraph:capture-a-photo:0047:0001",
+        "ko": "시스템이 사진 캡처를 마치면 델리게이트의 [`photoOutput(_:didFinishCaptureFor:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishcapturefor:error:).md) 메서드를 호출합니다."
+      },
+      {
+        "id": "seg:paragraph:capture-a-photo:0047:0002",
+        "ko": "이 메서드의 델리게이트 객체 구현은 continuation을 사용해 사진을 반환하거나 오류를 발생시켜 실행을 재개합니다."
+      },
+      {
+        "id": "seg:paragraph:capture-a-photo:0049:0001",
+        "ko": "AVFoundation으로 사진을 캡처하는 자세한 내용은 [`Capturing still and Live Photos`](capturing-still-and-live-photos.md)를 참조하십시오."
+      },
+      {
+        "id": "seg:heading:record-a-movie:0050:0001",
+        "ko": "동영상 녹화"
+      },
+      {
+        "id": "seg:paragraph:record-a-movie:0051:0001",
+        "ko": "캡처 서비스는 앱의 비디오 캡처 기능 처리를 `MovieCapture` 객체에 위임하며, 이 객체는 [`AVCaptureMovieFileOutput`](avcapturemoviefileoutput.md)와의 상호작용과 수명 주기를 관리합니다."
+      },
+      {
+        "id": "seg:paragraph:record-a-movie:0051:0002",
+        "ko": "동영상 녹화를 시작하려면 앱은 영화 파일 출력의 [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md) 메서드를 호출합니다. 이 메서드는 영상을 저장할 URL과, 녹화가 완료되면 시스템이 호출할 델리게이트를 받습니다."
+      },
+      {
+        "id": "seg:paragraph:record-a-movie:0053:0001",
+        "ko": "동영상 녹화를 마치려면 앱은 영화 파일 출력의 [`stopRecording()`](avcapturefileoutput/stoprecording().md) 메서드를 호출하며, 이때 시스템이 델리게이트를 호출해 캡처된 출력을 처리합니다."
+      },
+      {
+        "id": "seg:paragraph:record-a-movie:0053:0002",
+        "ko": "이 델리게이트 기반 콜백을 사용하려면 앱은 다음과 같이 해당 상호작용을 checked throwing continuation으로 감쌉니다."
+      },
+      {
+        "id": "seg:paragraph:record-a-movie:0055:0001",
+        "ko": "앱이 영화 파일 출력의 [`stopRecording()`](avcapturefileoutput/stoprecording().md) 메서드를 호출하면 시스템이 델리게이트를 호출하고, 델리게이트는 동영상을 반환하거나 오류를 발생시켜 실행을 재개합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0057:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0058:0001",
+        "ko": "[캡처 세션 설정](setting-up-a-capture-session.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0059:0001",
+        "ko": "사진 또는 동영상을 캡처하기 전에 입력 장치, 출력 미디어, 미리보기 뷰, 기본 설정을 구성합니다."
+      },
+      {
+        "id": "seg:list:see-also:0060:0001",
+        "ko": "[iPad에서 멀티태스킹 중 카메라 접근](../AVKit/accessing-the-camera-while-multitasking-on-ipad.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0061:0001",
+        "ko": "카메라를 Split View, Slide Over, Picture in Picture, Stage Manager 모드에서 작동합니다."
+      },
+      {
+        "id": "seg:list:see-also:0062:0001",
+        "ko": "[시네마틱 동영상 캡처](capturing-cinematic-video.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0063:0001",
+        "ko": "심도와 초점점을 조정할 수 있는 동영상을 캡처합니다."
+      },
+      {
+        "id": "seg:list:see-also:0064:0001",
+        "ko": "[AVMultiCamPiP: 여러 카메라에서 캡처](avmulticampip-capturing-from-multiple-cameras.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0065:0001",
+        "ko": "다중 카메라 캡처 세션을 사용해 전면 카메라와 후면 카메라의 출력을 하나의 동영상 파일로 동시에 녹화합니다."
+      },
+      {
+        "id": "seg:list:see-also:0066:0001",
+        "ko": "[AVCamBarcode: 바코드 및 얼굴 감지](avcambarcode-detecting-barcodes-and-faces.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0067:0001",
+        "ko": "카메라를 사용해 기계 판독 가능한 코드나 얼굴을 식별합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0069:0001",
+        "ko": "캡처 동작을 구성하고 입력 장치에서 캡처 출력으로의 데이터 흐름을 조정하는 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0071:0001",
+        "ko": "동일한 미디어 유형의 여러 입력에서 동시 캡처를 지원하는 캡처 세션입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0073:0001",
+        "ko": "캡처 세션에 입력 데이터를 제공하는 객체의 추상 슈퍼클래스입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0075:0001",
+        "ko": "캡처 세션에 미디어 출력 대상을 제공하는 객체의 추상 슈퍼클래스입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0077:0001",
+        "ko": "캡처 입력에서 캡처 출력으로의 연결을 나타내는 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:external:0002:0001",
+        "ko": "외부 장치 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "iPad에서 외부 장치는 UVC(USB Video Class) 사양을 준수하는 장치입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[`static let externalUnknown: AVCaptureDevice.DeviceType`](avcapturedevice/devicetype-swift.struct/externalunknown.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "알 수 없는 외부 장치 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:isinusebyanotherapplication:0002:0001",
+        "ko": "다른 앱이 장치를 사용 중인지 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 속성은 key-value 관찰이 가능합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      }
+    ]
+  }
+}
