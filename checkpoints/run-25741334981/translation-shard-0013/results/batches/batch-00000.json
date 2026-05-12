@@ -1,0 +1,250 @@
+{
+  "batchIndex": 0,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:27.222Z",
+  "durationMs": 18413,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:anchorupdateeventremoved:0002:0001",
+        "ko": "ARKit가 앵커 추적을 중단할 때 발생하는 이벤트입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "ARKit가 앵커 추적을 시작할 때 발생하는 이벤트입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "기존 앵커가 데이터를 업데이트할 때 발생하는 이벤트입니다."
+      },
+      {
+        "id": "seg:heading:inittransformextent:0000:0001",
+        "ko": "init(transform:extent:)"
+      },
+      {
+        "id": "seg:paragraph:inittransformextent:0002:0001",
+        "ko": "새 환경 프로브 앵커를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "`add(anchor:)` 메서드를 사용해 AR 세션에서 사용자 지정 앵커 추적을 시작합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "장면에 환경 프로브 앵커를 추가하면 ARKit가 해당 앵커의 환경 텍스처 생성을 시작합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0003",
+        "ko": "앵커에 새 [`environmentTexture`](arenvironmentprobeanchor/environmenttexture.md)가 있는 경우 알림을 받으려면 [`session(_:didUpdate:)`](arsessiondelegate/session(_:didupdate:)-3qtt8.md), [`renderer(_:didUpdate:for:)`](arscnviewdelegate/renderer(_:didupdate:for:).md), [`view(_:didUpdate:for:)`](arskviewdelegate/view(_:didupdate:for:).md) 중 하나의 델리게이트 메서드를 구현해야 합니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0001",
+        "ko": "`transform`: 앵커의 위치, 방향, 스케일을 인코딩하는 행렬로, 앵커를 배치한 AR 세션의 월드 좌표계에 상대적으로 지정됩니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0002",
+        "ko": "`extent`: 프로브 앵커의 범위(*bounds*)입니다. ARKit의 세계 좌표계는 항상 오른손 좌표 규칙을 따르지만 세션 구성에 따라 방향이 결정됩니다. 자세한 내용은 [`Understanding World Tracking`](understanding-world-tracking.md)을(를) 참고합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0011:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[init(name: String, transform: simd_float4x4, extent: simd_float3)](avaudiorecorderdelegate/audiorecorderendinterruption(_:withoptions:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "설명적 이름이 포함된 새 앵커 객체를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arenvironmentprobeanchor/init(transform:extent:))*"
+      },
+      {
+        "id": "seg:paragraph:detectionobjects:0002:0001",
+        "ko": "프레임워크가 사용자 환경에서 감지하려고 시도하는 3D 객체의 집합입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 속성을 사용하면 ARKit가 사용자 환경에서 알려진 3D 객체를 찾아 [`ARObjectAnchor`](arobjectanchor.md)로 표시하고 AR 경험에서 사용할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "감지를 위한 참조 객체를 만들려면 월드 트래킹 세션에서 스캔한 다음 [`ARWorldMap`](arworldmap.md)를 사용해 [`ARReferenceObject`](arreferenceobject.md) 인스턴스를 추출합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "그런 다음 참조 객체를 파일로 저장하고 Xcode asset catalog를 사용해 만들기 원하는 ARKit 앱에 패키징할 수 있습니다."
+      },
+      {
+        "id": "seg:heading:raycastqueryfromallowingalignment:0000:0001",
+        "ko": "raycastQuery(from:allowing:alignment:)"
+      },
+      {
+        "id": "seg:paragraph:raycastqueryfromallowingalignment:0002:0001",
+        "ko": "뷰의 한 지점에서 시작되고 카메라 시야의 중심과 정렬되는 raycast 쿼리를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 함수를 호출하면 ARKit는 인수로 지정한 화면 공간 지점에서 양의 z축 방향으로 확장되는 광선을 생성해, 물리적 환경에서 광선 상에 인수로 지정한 대상이 있는지 확인합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "대상이 존재하면 ARKit는 광선이 대상과 교차하는 3D 위치를 반환합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[func hitTest(CGPoint, types: ARHitTestResult.ResultType) -> [ARHitTestResult]](avaudiorecorderdelegate/audiorecorderendinterruption(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "SceneKit 뷰의 한 점에 해당하는 캡처된 카메라 이미지에서 실제 환경 객체 또는 AR 앵커를 검색합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arscnview/raycastquery(from:allowing:alignment:))*"
+      },
+      {
+        "id": "seg:paragraph:meshanchormeshclassificationseat:0002:0001",
+        "ko": "의자입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "침대입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "캐비닛입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "가전제품입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "테이블입니다."
+      },
+      {
+        "id": "seg:paragraph:recoverysuggestion:0002:0001",
+        "ko": "실패로부터 복구하는 방법을 설명하는 지역화 메시지입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "소스가 번들인 경우 로드에 실패한 모델의 번들입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "소스가 번들인 경우 로드에 실패한 모델의 이름입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "소스가 URL인 경우 로드에 실패한 모델의 URL입니다."
+      },
+      {
+        "id": "seg:heading:initformatpacketcapacity:0000:0001",
+        "ko": "init(format:packetCapacity:)"
+      },
+      {
+        "id": "seg:paragraph:initformatpacketcapacity:0002:0001",
+        "ko": "패킷당 바이트 수가 일정한 오디오 데이터의 압축 버퍼를 생성합니다."
+      },
+      {
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "새 [`AVAudioCompressedBuffer`](avaudiocompressedbuffer.md) 인스턴스입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "형식이 PCM이거나 패킷당 바이트 수가 가변형인 경우(예: `format.streamDescription->mBytesPerPacket == 0`) 실패합니다."
+      },
+      {
+        "id": "seg:list:parameters:0012:0001",
+        "ko": "`format`: 버퍼에 포함되는 오디오의 형식입니다."
+      },
+      {
+        "id": "seg:list:parameters:0012:0002",
+        "ko": "`packetCapacity`: 버퍼의 용량(패킷 단위)입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0013:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[init(format: AVAudioFormat, packetCapacity: AVAudioPacketCount, maximumPacketSize: Int)](avaudiorecorderdelegate/audiorecorderendinterruption(_:withflags:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "오디오 데이터가 압축 상태로 포함된 버퍼를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiorecorderdelegate/audiorecorderbegininterruption(_:))*"
+      },
+      {
+        "id": "seg:heading:audiorecorderbegininterruption:0000:0001",
+        "ko": "audioRecorderBeginInterruption(_:)"
+      },
+      {
+        "id": "seg:paragraph:audiorecorderbegininterruption:0002:0001",
+        "ko": "시스템이 오디오 녹음을 중단했음을 델리게이트에 알립니다."
+      },
+      {
+        "id": "seg:list:parameters:0008:0001",
+        "ko": "`recorder`: 중단된 오디오 녹음기입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[func audioRecorderEndInterruption(AVAudioRecorder)](avaudiorecorderdelegate/audiorecorderendinterruption(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "오디오 세션 중단이 종료되었음을 델리게이트에 알립니다."
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[func audioRecorderEndInterruption(AVAudioRecorder, withOptions: Int)](avaudiorecorderdelegate/audiorecorderendinterruption(_:withoptions:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "오디오 세션 중단이 옵션과 함께 종료되었음을 델리게이트에 알립니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[func audioRecorderEndInterruption(AVAudioRecorder, withFlags: Int)](avaudiorecorderdelegate/audiorecorderendinterruption(_:withflags:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "오디오 세션 중단이 플래그와 함께 종료되었음을 델리게이트에 알립니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiorecorderdelegate/audiorecorderbegininterruption(_:))*"
+      }
+    ]
+  }
+}
