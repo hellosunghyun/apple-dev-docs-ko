@@ -1,0 +1,2482 @@
+{
+  "generatedAt": "2026-05-12T23:49:24.598Z",
+  "updatedAt": "2026-05-12T23:49:33.171Z",
+  "queue": "state/queue/shard-0038.json",
+  "abortReason": "Paused after Codex usage limit; retry after May 19th, 2026 5:27 AM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM.",
+    "retryAfterText": "May 19th, 2026 5:27 AM"
+  },
+  "outputs": [
+    {
+      "segments": [
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:heading:initnametransform:0000:0001",
+          "ko": "init(name:transform:)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:paragraph:initnametransform:0002:0001",
+          "ko": "지정된 transform 및 설명 이름으로 새 앵커 객체를 생성합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "ARKit의 월드 좌표 공간은 항상 오른손 좌표계 규칙을 따르지만, 세션 구성에 따라 방향이 결정됩니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "자세한 내용은 [`Understanding World Tracking`](understanding-world-tracking.md)에서 확인합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:paragraph:discussion-1:0010:0001",
+          "ko": "AR 세션에서 사용자 정의 앵커 추적을 시작하려면 [`add(anchor:)`](arsession/add(anchor:).md) 메서드를 사용합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:list:parameters:0012:0001",
+          "ko": "`name`: 앵커의 설명 이름입니다. ARKit은 사용자에게 이 이름을 표시하지 않지만, 앱에서는 디버깅할 때 앵커를 식별하는 데 사용할 수 있습니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:list:parameters:0012:0002",
+          "ko": "`transform`: 앵커를 배치한 AR 세션의 월드 좌표 공간을 기준으로, 앵커의 위치, 방향 및 크기를 인코딩하는 행렬입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:heading:see-also:0013:0001",
+          "ko": "참고"
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[init(transform: simd_float4x4)](aranchor/init(transform:).md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "지정한 transform으로 새 앵커 객체를 생성합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "앵커를 설명하는 이름입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/aranchor/init-nametransform.md",
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/arkit/aranchor/init(name:transform:))*"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:jawopen:0002:0001",
+          "ko": "아래턱 개방을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "아래 그림은 [`ARSCNFaceGeometry`](arscnfacegeometry.md)를 참고한 얼굴 메시의 두 상태를 보여주며, 이 계수의 값이 `0.0`과 `1.0`인 예시입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "두 상태 모두에서 다른 모든 [`ARFaceAnchor.BlendShapeLocation`](arfaceanchor/blendshapelocation.md) 계수의 값은 `0.0`으로 설정됩니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "![None](https://docs-assets.developer.apple.com/published/dc2783ff64cd74e92daa7d950e28a6de/media-2930044%402x.png)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:heading:see-also:0010:0001",
+          "ko": "참고"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0011:0001",
+          "ko": "[static let jawForward: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/jawforward.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0012:0001",
+          "ko": "아래턱의 전방 이동을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0013:0001",
+          "ko": "[static let jawLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/jawleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "아래턱의 왼쪽 이동을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0015:0001",
+          "ko": "[static let jawRight: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/jawright.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "아래턱의 오른쪽 이동을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0017:0001",
+          "ko": "[static let mouthClose: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthclose.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "입술 닫힘을 나타내는 계수로, 아래턱 위치와는 독립적입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0019:0001",
+          "ko": "[static let mouthFunnel: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthfunnel.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "양쪽 입술이 열린 형태로 수축되는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0021:0001",
+          "ko": "[static let mouthPucker: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthpucker.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "양쪽 입술이 닫힌 상태에서 수축하고 압축되는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0023:0001",
+          "ko": "[static let mouthLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0024:0001",
+          "ko": "양쪽 입술이 함께 왼쪽으로 이동하는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0025:0001",
+          "ko": "[static let mouthRight: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthright.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0026:0001",
+          "ko": "양쪽 입술이 함께 오른쪽으로 이동하는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0027:0001",
+          "ko": "[static let mouthSmileLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthsmileleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0028:0001",
+          "ko": "입의 왼쪽 모서리가 위로 이동하는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0029:0001",
+          "ko": "[static let mouthSmileRight: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthsmileright.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0030:0001",
+          "ko": "입의 오른쪽 모서리가 위로 이동하는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0031:0001",
+          "ko": "[static let mouthFrownLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthfrownleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0032:0001",
+          "ko": "입의 왼쪽 모서리가 아래로 이동하는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0033:0001",
+          "ko": "[static let mouthFrownRight: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthfrownright.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0034:0001",
+          "ko": "입의 오른쪽 모서리가 아래로 이동하는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0035:0001",
+          "ko": "[static let mouthDimpleLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthdimpleleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0036:0001",
+          "ko": "입의 왼쪽 모서리가 뒤로 이동하는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0037:0001",
+          "ko": "[static let mouthDimpleRight: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthdimpleright.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0038:0001",
+          "ko": "입의 오른쪽 모서리가 뒤로 이동하는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:list:see-also:0039:0001",
+          "ko": "[static let mouthStretchLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthstretchleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/jawopen.md",
+          "id": "seg:paragraph:see-also:0040:0001",
+          "ko": "입의 왼쪽 모서리가 왼쪽으로 이동하는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:mouthpucker:0002:0001",
+          "ko": "양쪽 입술이 닫힌 상태에서 수축하고 압축되는 정도를 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "아래 그림은 [`ARSCNFaceGeometry`](arscnfacegeometry.md)를 참고한 얼굴 메시의 두 상태를 보여주며, 이 계수의 값이 `0.0`과 `1.0`인 예시입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "두 상태 모두에서 다른 모든 [`ARFaceAnchor.BlendShapeLocation`](arfaceanchor/blendshapelocation.md) 계수 값은 `0.0`으로 설정됩니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "![None](https://docs-assets.developer.apple.com/published/a0f8ffd20bc148bba761a2f4dde31636/media-2930070%402x.png)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:heading:see-also:0010:0001",
+          "ko": "참고"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0011:0001",
+          "ko": "[static let jawForward: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/jawforward.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0012:0001",
+          "ko": "아래턱의 전방 이동을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0013:0001",
+          "ko": "[static let jawLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/jawleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "아래턱의 왼쪽 이동을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0015:0001",
+          "ko": "[static let jawRight: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/jawright.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "아래턱의 오른쪽 이동을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0017:0001",
+          "ko": "[static let jawOpen: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/jawopen.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "아래턱의 개방을 나타내는 계수입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0019:0001",
+          "ko": "[static let mouthClose: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthclose.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "입술이 닫힘을 나타내는 계수이며, 턱 위치와 무관합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0021:0001",
+          "ko": "[static let mouthFunnel: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthfunnel.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "입술 둘 다를 벌린 모양으로 수축하는 것을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0023:0001",
+          "ko": "[static let mouthLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0024:0001",
+          "ko": "두 입술이 함께 좌측으로 움직임을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0025:0001",
+          "ko": "[static let mouthRight: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthright.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0026:0001",
+          "ko": "두 입술이 함께 우측으로 움직임을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0027:0001",
+          "ko": "[static let mouthSmileLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthsmileleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0028:0001",
+          "ko": "입술 왼쪽 모서리가 위로 움직임을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0029:0001",
+          "ko": "[static let mouthSmileRight: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthsmileright.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0030:0001",
+          "ko": "입술 오른쪽 모서리가 위로 움직임을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0031:0001",
+          "ko": "[static let mouthFrownLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthfrownleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0032:0001",
+          "ko": "입술 왼쪽 모서리가 아래로 움직임을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0033:0001",
+          "ko": "[static let mouthFrownRight: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthfrownright.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0034:0001",
+          "ko": "입술 오른쪽 모서리가 아래로 움직임을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0035:0001",
+          "ko": "[static let mouthDimpleLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthdimpleleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0036:0001",
+          "ko": "입술 왼쪽 모서리가 뒤쪽으로 움직임을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0037:0001",
+          "ko": "[static let mouthDimpleRight: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthdimpleright.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0038:0001",
+          "ko": "입술 오른쪽 모서리가 뒤쪽으로 움직임을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:list:see-also:0039:0001",
+          "ko": "[static let mouthStretchLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/mouthstretchleft.md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/arfaceanchor/blendshapelocation/mouthpucker.md",
+          "id": "seg:paragraph:see-also:0040:0001",
+          "ko": "입술 왼쪽 모서리가 좌측으로 움직임을 나타내는 계수입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/argeoanchor/altitudesource-swift.enum/precise.md",
+          "id": "seg:paragraph:argeoanchoraltitudesourceprecise:0002:0001",
+          "ko": "이 프레임워크는 고해상도 디지털 고도 모델을 사용해 고도를 설정합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/argeoanchor/altitudesource-swift.enum/precise.md",
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/ARKit/argeoanchor/altitudesource-swift.enum/precise.md",
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "이 프레임워크는 저해상도 디지털 고도 모델을 사용해 고도를 설정합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/argeoanchor/altitudesource-swift.enum/precise.md",
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "앱에서 고도를 정의합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/argeoanchor/altitudesource-swift.enum/precise.md",
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "아직 고도가 설정되지 않았습니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/armeshclassification/ceiling.md",
+          "id": "seg:paragraph:armeshclassificationceiling:0002:0001",
+          "ko": "이 면은 실제 세계의 천장 일부입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/armeshclassification/ceiling.md",
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/ARKit/armeshclassification/ceiling.md",
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "이 면은 실제 세계의 문 일부입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/armeshclassification/ceiling.md",
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "이 면은 실제 세계의 바닥 일부입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/armeshclassification/ceiling.md",
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "ARKit에서 분류할 수 없는 면입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/armeshclassification/ceiling.md",
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "이 면은 실제 세계의 좌석 일부입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/armeshclassification/ceiling.md",
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "이 면은 실제 세계의 탁자 일부입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/armeshclassification/ceiling.md",
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "이 면은 실제 세계의 벽 일부입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/armeshclassification/ceiling.md",
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "이 면은 실제 세계의 창문 일부입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/roomanchor/contains.md",
+          "id": "seg:heading:contains:0000:0001",
+          "ko": "contains(_:)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/roomanchor/contains.md",
+          "id": "seg:paragraph:contains:0002:0001",
+          "ko": "주어진 포인트가 방에 포함되어 있는지를 나타내는 Boolean 값을 반환합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/roomanchor/contains.md",
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "sourcePath": "documentation/ARKit/roomanchor/contains.md",
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "방이 포인트를 포함하면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/roomanchor/contains.md",
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`point`: 검색할 포인트입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/roomanchor/contains.md",
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/ARKit/roomanchor/contains.md",
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func geometries(of: MeshAnchor.MeshClassification) -> [MeshAnchor.Geometry]](roomanchor/geometries(of:).md)"
+        },
+        {
+          "sourcePath": "documentation/ARKit/roomanchor/contains.md",
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "주어진 분류의 분리된 메시 기하를 반환합니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/roomanchor/contains.md",
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "이 앵커의 텍스트 표현입니다."
+        },
+        {
+          "sourcePath": "documentation/ARKit/roomanchor/contains.md",
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/arkit/roomanchor/contains(_:))*"
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/infodictionarykey/sourceencoder.md",
+          "id": "seg:paragraph:sourceencoder:0002:0001",
+          "ko": "소스가 사용하는 인코더를 나타내는 키입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/infodictionarykey/sourceencoder.md",
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/infodictionarykey/sourceencoder.md",
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[static let encodingApplication: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/encodingapplication.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/infodictionarykey/sourceencoder.md",
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "인코딩 애플리케이션을 나타내는 키입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/infodictionarykey/sourceencoder.md",
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let nominalBitRate: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/nominalbitrate.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/infodictionarykey/sourceencoder.md",
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "명목 비트율을 나타내는 키입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/infodictionarykey/sourceencoder.md",
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let sourceBitDepth: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/sourcebitdepth.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/infodictionarykey/sourceencoder.md",
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "소스의 비트 깊이를 나타내는 키입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/infodictionarykey/sourceencoder.md",
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let keySignature: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/keysignature.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/infodictionarykey/sourceencoder.md",
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "조표를 나타내는 키입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/rate.md",
+          "id": "seg:paragraph:rate:0002:0001",
+          "ko": "시퀀서 플레이어의 재생 속도입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/rate.md",
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "기본 재생률은 `1.0`이며 `0.0`보다 커야 합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/rate.md",
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/AVFAudio/avaudiosequencer/rate.md",
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "시퀀서의 플레이어가 재생 상태인지 나타내는 Boolean 값입니다."
+        }
+      ]
+    },
+    null,
+    {
+      "segments": [
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func attach(AVSpatialVideoConfiguration, to: inout CVMutablePixelBuffer) throws](avasynchronousvideocompositionrequest/attach(_:to:).md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "지정된 공간 구성과 픽셀 버퍼를 연결합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func sourceFrame(byTrackID: CMPersistentTrackID) -> CVPixelBuffer?](avasynchronousvideocompositionrequest/sourceframe(bytrackid:).md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "지정한 식별자가 있는 트랙의 소스 픽셀 버퍼를 반환합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[func sourceReadOnlyPixelBuffer(byTrackID: CMPersistentTrackID) -> CVReadOnlyPixelBuffer?](avasynchronousvideocompositionrequest/sourcereadonlypixelbuffer(bytrackid:).md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "지정한 트랙 ID에 대한 소스 CVReadOnlyPixelBuffer를 반환합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0017:0002",
+          "ko": "트랙에 태그 지정 버퍼가 포함되어 있으면, 태그된 버퍼 중 하나의 픽셀 버퍼가 반환됩니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[func sourceReadySampleBuffer(byTrackID: CMPersistentTrackID) -> CMReadySampleBuffer<CMSampleBuffer.DynamicContent>?](avasynchronousvideocompositionrequest/sourcereadysamplebuffer(bytrackid:).md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "지정한 트랙 ID에 대한 소스 CMReadySampleBuffer를 반환합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[func sourceSampleBuffer(byTrackID: CMPersistentTrackID) -> CMSampleBuffer?](avasynchronousvideocompositionrequest/sourcesamplebuffer(bytrackid:).md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "지정한 식별자가 포함된 트랙의 소스 샘플 버퍼를 반환합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[var sourceSampleDataTrackIDs: [CMPersistentTrackID]](avasynchronousvideocompositionrequest/sourcesampledatatrackids-3yiab.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "소스 샘플 데이터를 포함하는 트랙의 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[func sourceTaggedDynamicBuffers(byTrackID: CMPersistentTrackID) -> [CMTaggedDynamicBuffer]?](avasynchronousvideocompositionrequest/sourcetaggeddynamicbuffers(bytrackid:).md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "지정한 트랙 ID의 소스 태그 지정 동적 버퍼를 반환합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0025:0002",
+          "ko": "비디오 트랙에 태그 지정 버퍼가 없거나 트랙에 비디오가 포함되지 않은 경우 `nil`을 반환합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0025:0003",
+          "ko": "이 함수는 `supportsSourceTaggedBuffers`가 `YES`일 때만 호출해야 합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[var sourceTrackIDs: [NSNumber]](avasynchronousvideocompositionrequest/sourcetrackids.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "소스 비디오가 포함된 트랙의 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata-bytrackid.md",
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avasynchronousvideocompositionrequest/sourcetimedmetadata(bytrackid:))*"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:activedepthdataformat:0002:0001",
+          "ko": "캡처 장치의 현재 활성 깊이 데이터 형식입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:list:mentions:0008:0001",
+          "ko": "[Capturing photos with depth](capturing-photos-with-depth.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "You must obtain exclusive access to the device by calling [`lockForConfiguration()`](avcapturedevice/lockforconfiguration().md) before setting this property value."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:discussion:0011:0001",
+          "ko": "이 속성은 활성 형식의 [`supportedDepthDataFormats`](avcapturedevice/format/supporteddepthdataformats.md) 배열에 있는 형식으로만 설정할 수 있습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:discussion:0011:0002",
+          "ko": "지원되지 않는 형식을 설정하려고 하면 예외가 발생합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:discussion:0012:0001",
+          "ko": "깊이 데이터의 프레임 속도를 직접 설정할 수 없습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:discussion:0012:0002",
+          "ko": "대신 시스템은 깊이 데이터 프레임 속도를 장치의 [`activeVideoMinFrameDuration`](avcapturedevice/activevideominframeduration.md) 및 [`activeVideoMaxFrameDuration`](avcapturedevice/activevideomaxframeduration.md) 값에 맞춰 동기화합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:discussion:0012:0003",
+          "ko": "시스템이 활성 비디오 프레임 속도에 맞춰 깊이 데이터를 충분히 빠르게 생성하지 못하면, 장치의 현재 프레임 속도와 같거나 더 낮을 수 있습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:discussion:0013:0001",
+          "ko": "[`AVCaptureDepthDataOutput`](avcapturedepthdataoutput.md)로 깊이 데이터를 전달하면 시스템 부하가 증가해 열 안정성 유지를 위해 비디오 프레임 속도가 낮아질 수 있습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:discussion:0014:0001",
+          "ko": "깊이 데이터가 지원되지 않는 장치에서는 이 속성 값이 `nil`입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:discussion:0015:0001",
+          "ko": "이 속성은 키-값 관측 가능합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:heading:see-also:0016:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:list:see-also:0017:0001",
+          "ko": "[var formats: [AVCaptureDevice.Format]](avcapturedevice/formats.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "장치가 지원하는 캡처 형식입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "장치에서 사용 중인 캡처 형식입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/activedepthdataformat.md",
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "캡처 장치가 지원하는 미디어 형식과 캡처 설정을 정의하는 클래스입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/transportcontrolsspeed-swifttypealias.md",
+          "id": "seg:paragraph:avcapturedevicetransportcontrolsspeed:0002:0001",
+          "ko": "transport control의 속도를 지정하는 상수입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/transportcontrolsspeed-swifttypealias.md",
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/transportcontrolsspeed-swifttypealias.md",
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "장치가 transport control 명령을 지원하는지 나타내는 부울 값입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/transportcontrolsspeed-swifttypealias.md",
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "현재 재생 모드입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/transportcontrolsspeed-swifttypealias.md",
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func setTransportControlsPlaybackMode(AVCaptureDevice.TransportControlsPlaybackMode, speed: AVCaptureDevice.TransportControlsSpeed)](avcapturedevice/settransportcontrolsplaybackmode(_:speed:).md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/transportcontrolsspeed-swifttypealias.md",
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "transport control의 재생 모드와 속도를 설정합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/transportcontrolsspeed-swifttypealias.md",
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "현재 존재하는 경우 transport control의 현재 재생 모드를 나타내는 상수입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturedevice/transportcontrolsspeed-swifttypealias.md",
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "현재 재생 속도입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor.md",
+          "id": "seg:paragraph:automaticallyconfigurescapturedeviceforwidecolor:0002:0001",
+          "ko": "세션이 사용 가능한 경우 와이드갬마 색상을 자동으로 사용할지 여부를 지정하는 부울 값입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor.md",
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "모든 장치와 형식은 sRGB 색 공간에서 캡처를 지원합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor.md",
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "일부 장치와 형식은 훨씬 넓은 색 영역을 포함하는 P3 색 공간에서도 캡처할 수 있습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor.md",
+          "id": "seg:paragraph:discussion:0008:0003",
+          "ko": "와이드갬마 캡처는 특정 캡처 워크플로우에서만 적절하므로 이 속성이 해당 워크플로우의 자동 구성을 제어합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor.md",
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "이 속성이 [`true`](https://developer.apple.com/documentation/Swift/true) (기본값)이고 세션 구성이 와이드갬마 캡처에 적합한 경우에는 다음과 같습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor.md",
+          "id": "seg:list:discussion:0010:0001",
+          "ko": "세션 프리셋을 [`inputPriority`](avcapturesession/preset/inputpriority.md) 이외로 사용하면, 세션이 장치의 [`activeFormat`](avcapturedevice/activeformat.md) 속성을 와이드갬마 캡처를 지원하는 형식으로 자동 설정하고 장치의 [`activeColorSpace`](avcapturedevice/activecolorspace.md) 속성을 와이드갬마 색 공간으로 설정합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor.md",
+          "id": "seg:list:discussion:0010:0002",
+          "ko": "캡처 형식을 수동으로 선택하면(이로 인해 세션이 input priority로 설정됨) 세션은 선택한 형식이 와이드갬마 캡처를 지원할 때만 장치의 [`activeColorSpace`](avcapturedevice/activecolorspace.md) 속성을 와이드갬마 색 공간으로 자동 설정합니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor.md",
+          "id": "seg:paragraph:discussion:0011:0001",
+          "ko": "와이드 색역 캡처가 자동으로 활성화되는 기기와 세션 구성에 대한 자세한 내용은 [`iOS Device Compatibility Reference`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599)의 Wide-Gamut Capture를 참조합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor.md",
+          "id": "seg:blockquote:discussion:0012:0001",
+          "ko": "**참고**: 이 속성이 [`true`](https://developer.apple.com/documentation/Swift/true)이고 세션 구성이 와이드 색역 캡처에 적합하지 않으면 [`inputPriority`](avcapturesession/preset/inputpriority.md)가 아닌 세션 프리셋이 와이드 색역 캡처를 지원하지 않는 캡처 포맷을 선택할 수 있습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avcapturesession/automaticallyconfigurescapturedeviceforwidecolor.md",
+          "id": "seg:paragraph:discussion:0013:0001",
+          "ko": "세션 프리셋이나 캡처 포맷을 직접 설정하여 장치를 구성했는지와 관계없이 캡처 디바이스의 [`activeColorSpace`](avcapturedevice/activecolorspace.md) 값을 직접 변경하려면 이 속성을 [`false`](https://developer.apple.com/documentation/Swift/false)로 설정합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:averrorcodeoperationcancelled:0002:0001",
+          "ko": "에셋이 속성 값을 비동기적으로 로드 취소하는 요청을 처리했습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "AirPlay 컨트롤러가 동작하려면 인터넷 연결이 필요합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "AirPlay 수신기가 동작하려면 인터넷 연결이 필요합니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "AirPlay 수신기를 일시적으로 사용할 수 없습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "이 앱은 미디어를 재생할 수 있는 권한이 없습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "사용자가 이 앱의 미디어 캡처 권한을 거부했습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "구성은 공백이 포함되어 있어 소스 미디어를 추가할 수 없습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "사용자는 미디어를 재생할 권한이 없습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "이 앱은 미디어를 열 권한이 없습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "캡처한 콘텐츠를 사용할 수 없습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "앱이 콘텐츠 키를 검색하는 요청을 취소했습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "시스템이 캡처한 콘텐츠를 업데이트하지 못했습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "앱이 콘텐츠 키 요청을 생성하지 못했습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "시스템이 미디어 디코딩에 실패했습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/averror-swift.struct/code/operationcancelled.md",
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "시스템이 미디어에 적합한 디코더를 찾지 못했습니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avfragmentedmovietrack.md",
+          "id": "seg:paragraph:avfragmentedmovietrack:0002:0001",
+          "ko": "분할된 영화에서 트랙을 나타내는 객체입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avfragmentedmovietrack.md",
+          "id": "seg:heading:inherits-from:0008:0001",
+          "ko": "상속"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avfragmentedmovietrack.md",
+          "id": "seg:heading:conforms-to:0010:0001",
+          "ko": "준수"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avfragmentedmovietrack.md",
+          "id": "seg:heading:see-also:0012:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avfragmentedmovietrack.md",
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "분할된 영화 파일을 나타내는 객체입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avfragmentedmovietrack.md",
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "분할된 영화가 추가 영화 조각을 덧붙이는지 확인하는 객체입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avfragmentedmovietrack.md",
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "에셋이 fragment minding을 지원하는지 여부를 정의하는 protocol입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmediaextensionproperties/extensionidentifier.md",
+          "id": "seg:heading:see-also:0006:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmediaextensionproperties/extensionidentifier.md",
+          "id": "seg:paragraph:see-also:0008:0001",
+          "ko": "Media Extension의 이름입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmediaextensionproperties/extensionidentifier.md",
+          "id": "seg:paragraph:see-also:0010:0001",
+          "ko": "포함하는 앱 번들의 이름입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmediaextensionproperties/extensionidentifier.md",
+          "id": "seg:paragraph:see-also:0012:0001",
+          "ko": "Media Extension 번들의 파일 URL입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmediaextensionproperties/extensionidentifier.md",
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "Media Extension에 대한 호스트 앱의 파일 URL입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:quicktimeuserdatalocationiso6709:0002:0001",
+          "ko": "ISO 6709:2008에서 정의한 좌표 기반 지리적 지점 위치를 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[static let quickTimeUserDataAccessibilityDescription: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdataaccessibilitydescription.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "영화 파일 콘텐츠의 접근성 설명을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let quickTimeUserDataAlbum: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdataalbum.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "QuickTime의 앨범 또는 컬렉션 이름을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let quickTimeUserDataArranger: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdataarranger.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "영화 파일 콘텐츠의 편곡자 이름을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let quickTimeUserDataArtist: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdataartist.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "영화 파일 콘텐츠의 아티스트 이름을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let quickTimeUserDataAuthor: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdataauthor.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "영화 파일 콘텐츠의 작가 이름을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let quickTimeUserDataChapter: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdatachapter.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "챕터 이름을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let quickTimeUserDataComment: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdatacomment.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "영화 파일 콘텐츠에 대한 코멘트를 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let quickTimeUserDataComposer: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdatacomposer.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "영화 파일 콘텐츠의 작곡가 이름을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let quickTimeUserDataCopyright: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdatacopyright.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "QuickTime의 저작권 고지문을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let quickTimeUserDataCreationDate: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdatacreationdate.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "영화 파일 콘텐츠의 생성일을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[static let quickTimeUserDataCredits: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdatacredits.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "영화 원본 콘텐츠의 크레딧을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[static let quickTimeUserDataDescription: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdatadescription.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "영화 파일 콘텐츠의 설명을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static let quickTimeUserDataDirector: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdatadirector.md)"
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "영화 파일 콘텐츠의 감독 이름을 나타내는 식별자입니다."
+        },
+        {
+          "sourcePath": "documentation/AVFoundation/avmetadataidentifier/quicktimeuserdatalocationiso6709.md",
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static let quickTimeUserDataDisclaimer: AVMetadataIdentifier](avmetadataidentifier/quicktimeuserdatadisclaimer.md)"
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "progress": {
+    "generatedAt": "2026-05-12T23:49:24.598Z",
+    "updatedAt": "2026-05-12T23:49:33.171Z",
+    "reason": "paused",
+    "queue": "state/queue/shard-0038.json",
+    "shard": {
+      "index": 38,
+      "total": 256
+    },
+    "abortReason": "Paused after Codex usage limit; retry after May 19th, 2026 5:27 AM",
+    "pause": {
+      "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM.",
+      "retryAfterText": "May 19th, 2026 5:27 AM"
+    },
+    "totals": {
+      "batches": 249,
+      "segments": 13544,
+      "completed": 4,
+      "failed": 0,
+      "processed": 4,
+      "active": 0,
+      "queued": 245,
+      "percent": 1.61
+    },
+    "batches": [
+      {
+        "index": 0,
+        "status": "success",
+        "segments": 60,
+        "completedAt": "2026-05-12T16:04:26.389Z",
+        "durationMs": 13155
+      },
+      {
+        "index": 1,
+        "status": "success",
+        "segments": 60,
+        "completedAt": "2026-05-12T16:04:22.866Z",
+        "durationMs": 9632
+      },
+      {
+        "index": 2,
+        "status": "queued",
+        "segments": 60,
+        "startedAt": "2026-05-12T23:49:24.603Z",
+        "completedAt": "2026-05-12T23:49:33.169Z",
+        "durationMs": 8566,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM."
+      },
+      {
+        "index": 3,
+        "status": "success",
+        "segments": 52,
+        "completedAt": "2026-05-12T16:04:49.116Z",
+        "durationMs": 26247
+      },
+      {
+        "index": 4,
+        "status": "success",
+        "segments": 60,
+        "completedAt": "2026-05-12T16:04:54.355Z",
+        "durationMs": 27964
+      },
+      {
+        "index": 5,
+        "status": "queued",
+        "segments": 60,
+        "startedAt": "2026-05-12T23:49:24.603Z",
+        "completedAt": "2026-05-12T23:49:31.441Z",
+        "durationMs": 6838,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM."
+      },
+      {
+        "index": 6,
+        "status": "queued",
+        "segments": 60,
+        "startedAt": "2026-05-12T23:49:24.604Z",
+        "completedAt": "2026-05-12T23:49:31.945Z",
+        "durationMs": 7341,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM."
+      },
+      {
+        "index": 7,
+        "status": "queued",
+        "segments": 45
+      },
+      {
+        "index": 8,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 9,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 10,
+        "status": "queued",
+        "segments": 39
+      },
+      {
+        "index": 11,
+        "status": "queued",
+        "segments": 34
+      },
+      {
+        "index": 12,
+        "status": "queued",
+        "segments": 22
+      },
+      {
+        "index": 13,
+        "status": "queued",
+        "segments": 26
+      },
+      {
+        "index": 14,
+        "status": "queued",
+        "segments": 22
+      },
+      {
+        "index": 15,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 16,
+        "status": "queued",
+        "segments": 33
+      },
+      {
+        "index": 17,
+        "status": "queued",
+        "segments": 41
+      },
+      {
+        "index": 18,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 19,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 20,
+        "status": "queued",
+        "segments": 50
+      },
+      {
+        "index": 21,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 22,
+        "status": "queued",
+        "segments": 24
+      },
+      {
+        "index": 23,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 24,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 25,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 26,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 27,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 28,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 29,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 30,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 31,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 32,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 33,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 34,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 35,
+        "status": "queued",
+        "segments": 50
+      },
+      {
+        "index": 36,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 37,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 38,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 39,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 40,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 41,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 42,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 43,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 44,
+        "status": "queued",
+        "segments": 29
+      },
+      {
+        "index": 45,
+        "status": "queued",
+        "segments": 10
+      },
+      {
+        "index": 46,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 47,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 48,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 49,
+        "status": "queued",
+        "segments": 39
+      },
+      {
+        "index": 50,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 51,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 52,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 53,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 54,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 55,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 56,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 57,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 58,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 59,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 60,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 61,
+        "status": "queued",
+        "segments": 47
+      },
+      {
+        "index": 62,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 63,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 64,
+        "status": "queued",
+        "segments": 59
+      },
+      {
+        "index": 65,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 66,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 67,
+        "status": "queued",
+        "segments": 46
+      },
+      {
+        "index": 68,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 69,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 70,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 71,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 72,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 73,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 74,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 75,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 76,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 77,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 78,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 79,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 80,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 81,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 82,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 83,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 84,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 85,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 86,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 87,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 88,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 89,
+        "status": "queued",
+        "segments": 42
+      },
+      {
+        "index": 90,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 91,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 92,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 93,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 94,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 95,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 96,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 97,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 98,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 99,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 100,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 101,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 102,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 103,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 104,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 105,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 106,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 107,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 108,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 109,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 110,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 111,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 112,
+        "status": "queued",
+        "segments": 50
+      },
+      {
+        "index": 113,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 114,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 115,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 116,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 117,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 118,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 119,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 120,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 121,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 122,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 123,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 124,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 125,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 126,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 127,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 128,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 129,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 130,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 131,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 132,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 133,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 134,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 135,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 136,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 137,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 138,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 139,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 140,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 141,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 142,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 143,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 144,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 145,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 146,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 147,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 148,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 149,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 150,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 151,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 152,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 153,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 154,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 155,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 156,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 157,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 158,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 159,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 160,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 161,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 162,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 163,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 164,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 165,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 166,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 167,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 168,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 169,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 170,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 171,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 172,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 173,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 174,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 175,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 176,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 177,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 178,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 179,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 180,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 181,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 182,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 183,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 184,
+        "status": "queued",
+        "segments": 28
+      },
+      {
+        "index": 185,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 186,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 187,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 188,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 189,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 190,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 191,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 192,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 193,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 194,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 195,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 196,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 197,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 198,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 199,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 200,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 201,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 202,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 203,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 204,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 205,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 206,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 207,
+        "status": "queued",
+        "segments": 41
+      },
+      {
+        "index": 208,
+        "status": "queued",
+        "segments": 16
+      },
+      {
+        "index": 209,
+        "status": "queued",
+        "segments": 1
+      },
+      {
+        "index": 210,
+        "status": "queued",
+        "segments": 9
+      },
+      {
+        "index": 211,
+        "status": "queued",
+        "segments": 34
+      },
+      {
+        "index": 212,
+        "status": "queued",
+        "segments": 21
+      },
+      {
+        "index": 213,
+        "status": "queued",
+        "segments": 3
+      },
+      {
+        "index": 214,
+        "status": "queued",
+        "segments": 3
+      },
+      {
+        "index": 215,
+        "status": "queued",
+        "segments": 14
+      },
+      {
+        "index": 216,
+        "status": "queued",
+        "segments": 1
+      },
+      {
+        "index": 217,
+        "status": "queued",
+        "segments": 7
+      },
+      {
+        "index": 218,
+        "status": "queued",
+        "segments": 18
+      },
+      {
+        "index": 219,
+        "status": "queued",
+        "segments": 14
+      },
+      {
+        "index": 220,
+        "status": "queued",
+        "segments": 37
+      },
+      {
+        "index": 221,
+        "status": "queued",
+        "segments": 31
+      },
+      {
+        "index": 222,
+        "status": "queued",
+        "segments": 32
+      },
+      {
+        "index": 223,
+        "status": "queued",
+        "segments": 36
+      },
+      {
+        "index": 224,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 225,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 226,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 227,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 228,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 229,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 230,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 231,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 232,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 233,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 234,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 235,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 236,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 237,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 238,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 239,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 240,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 241,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 242,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 243,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 244,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 245,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 246,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 247,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 248,
+        "status": "queued",
+        "segments": 54
+      }
+    ]
+  }
+}
