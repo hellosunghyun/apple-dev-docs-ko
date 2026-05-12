@@ -1,0 +1,250 @@
+{
+  "batchIndex": 23,
+  "status": "success",
+  "completedAt": "2026-05-12T14:38:47.623Z",
+  "durationMs": 48147,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "Note that if you are using the `NSDocument` default undo/redo features, setting the document’s edited status by updating the change count happens automatically."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "예를 들어, [`save(to:ofType:for:completionHandler:)`](nsdocument/save(to:oftype:for:completionhandler:).md) 메서드는 비동기 저장 중 파일 쓰기가 실제로 완료된 직후에 이 메서드를 사용하며, 저장 작업을 완료하려면 메인 스레드에서 [`updateChangeCount(withToken:for:)`](nsdocument/updatechangecount(withtoken:for:).md) 및 기타 메서드를 호출해야 합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "이 메서드는 임의의 스레드에서 호출할 수 있습니다."
+      },
+      {
+        "id": "seg:list:parameters:0012:0001",
+        "ko": "`block`: 호출할 블록입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0013:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[func performSynchronousFileAccess(() -> Void)](nsfontdescriptor/traitkey/slant.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "예약된 파일 액세스 작업이 모두 완료될 때까지 기다린 후 전달된 블록을 호출합니다."
+      },
+      {
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func performAsynchronousFileAccess((() -> Void) -> Void)](nsdocument/performasynchronousfileaccess(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "예약된 파일 액세스가 완료될 때까지 기다리되 메인 스레드를 차단하지 않고, 이어서 전달된 블록을 호출합니다."
+      },
+      {
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[func performActivity(withSynchronousWaiting: Bool, using: (() -> Void) -> Void)](nsdocument/performactivity(withsynchronouswaiting:using:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "이 메서드의 이전 호출로 예약된 모든 작업이 완료될 때까지 기다린 후 전달된 블록을 호출합니다."
+      },
+      {
+        "id": "seg:list:see-also:0020:0001",
+        "ko": "[func continueActivity(() -> Void)](nsdocument/continueactivity(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "다른 블록을 사용하여 사용자 활동 객체에 대한 작업을 계속 수행합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nsdocument/continueasynchronousworkonmainthread(_:))*"
+      },
+      {
+        "id": "seg:heading:updatechangecount:0000:0001",
+        "ko": "updateChangeCount(_:)"
+      },
+      {
+        "id": "seg:paragraph:updatechangecount:0002:0001",
+        "ko": "수신자의 변경 횟수를 지정된 변경 유형에 따라 업데이트합니다."
+      },
+      {
+        "id": "seg:list:updatechangecount:0004:0001",
+        "ko": "macOS ?+"
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "The value of this key is an [`NSNumber`](https://developer.apple.com/documentation/Foundation/NSNumber) object."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "앱에서 실행 취소 및 다시 실행을 구현하는 경우, 실행 취소 그룹을 생성할 때마다 변경 횟수를 증가시키고 실행 취소 또는 다시 실행 작업이 수행될 때 변경 횟수를 감소시켜야 합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "`NSDocument`의 기본 실행 취소/다시 실행 기능을 사용하는 경우, 변경 횟수를 업데이트하여 문서의 편집 상태를 설정하는 작업은 자동으로 수행됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "이 기능을 사용하지 않는 경우에만 이 메서드를 호출하면 됩니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0001",
+        "ko": "`change`: 문서에 수행된 변경 유형입니다. 값 목록은 [`NSDocument.ChangeType`](nsdocument/changetype.md)를 참조합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0012:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0013:0001",
+        "ko": "[func updateChangeCount(withToken: Any, for: NSDocument.SaveOperationType)](nsdocument/updatechangecount(withtoken:for:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0014:0001",
+        "ko": "저장 작업이 성공적으로 완료된 뒤 문서의 변경 횟수 설정을 업데이트합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "문서의 편집 상태를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:list:see-also:0017:0001",
+        "ko": "[func changeCountToken(for: NSDocument.SaveOperationType) -> Any](nsdocument/changecounttoken(for:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "저장 작업 시작 시점의 문서 변경 기록을 캡슐화한 개체를 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nsdocument/updatechangecount(_:))*"
+      },
+      {
+        "id": "seg:paragraph:nsf2functionkey:0002:0001",
+        "ko": "F2 키입니다."
+      },
+      {
+        "id": "seg:list:nsf2functionkey:0004:0001",
+        "ko": "macOS ?+"
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "F1 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "F3 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "F4 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "F5 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "F6 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "F7 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "F8 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "F9 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "F10 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "F11 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "F12 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "F13 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "F14 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "F15 키입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0037:0001",
+        "ko": "F16 키입니다."
+      },
+      {
+        "id": "seg:paragraph:symbolic:0002:0001",
+        "ko": "숫자 객체로 표현된 symbolic traits 값입니다."
+      },
+      {
+        "id": "seg:list:symbolic:0004:0001",
+        "ko": "macOS ?+"
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 키의 값은 [`NSNumber`](https://developer.apple.com/documentation/Foundation/NSNumber) 객체입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[static let weight: NSFontDescriptor.TraitKey](nsfontdescriptor/traitkey/weight.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "정규화된 가중치 값의 숫자 객체입니다."
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[static let width: NSFontDescriptor.TraitKey](nsfontdescriptor/traitkey/width.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "글리프 간 상대 간격 값의 숫자 객체입니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[static let slant: NSFontDescriptor.TraitKey](nsfontdescriptor/traitkey/slant.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "상대적인 기울기 각도 값의 숫자 객체입니다."
+      },
+      {
+        "id": "seg:heading:setfontmanagerfactory:0000:0001",
+        "ko": "setFontManagerFactory(_:)"
+      },
+      {
+        "id": "seg:paragraph:setfontmanagerfactory:0002:0001",
+        "ko": "공유 font manager 객체를 생성하는 클래스를 설정합니다."
+      },
+      {
+        "id": "seg:list:setfontmanagerfactory:0004:0001",
+        "ko": "macOS ?+"
+      }
+    ]
+  }
+}
