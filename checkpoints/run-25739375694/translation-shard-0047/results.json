@@ -1,0 +1,2420 @@
+{
+  "generatedAt": "2026-05-12T14:02:28.522Z",
+  "updatedAt": "2026-05-12T14:03:28.055Z",
+  "queue": "state/queue/shard-0047.json",
+  "abortReason": "Paused after Codex usage limit; retry after 7:02 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM.",
+    "retryAfterText": "7:02 PM",
+    "retryAt": "2026-05-12T19:02:00.000Z"
+  },
+  "outputs": [
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:eyelookdownleft:0002:0001",
+          "ko": "왼쪽 눈꺼풀이 아래쪽 시선 방향에 일치하는 움직임을 나타내는 계수입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "아래 그림은 이 계수의 값이 `0.0` 및 `1.0`인 두 상태의 얼굴 기하학을 보여주며, 이 계수의 값을 각각 표시합니다([`ARSCNFaceGeometry`](arscnfacegeometry.md) 참조)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "두 상태 모두에서 다른 [`ARFaceAnchor.BlendShapeLocation`](arfaceanchor/blendshapelocation.md) 계수는 `0.0`으로 설정됩니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "Identify the anchors you want to react to by calling [`id`](anchor/id.md)."
+        },
+        {
+          "id": "seg:heading:see-also:0010:0001",
+          "ko": "참고"
+        },
+        {
+          "id": "seg:list:see-also:0011:0001",
+          "ko": "[static let eyeBlinkLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/eyeblinkleft.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0012:0001",
+          "ko": "왼쪽 눈 위의 눈꺼풀이 닫힘을 나타내는 계수입니다."
+        },
+        {
+          "id": "seg:list:see-also:0013:0001",
+          "ko": "[static let eyeLookInLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/eyelookinleft.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "왼쪽 눈꺼풀이 오른쪽 시선 방향으로 움직이는 것을 나타내는 계수입니다."
+        },
+        {
+          "id": "seg:list:see-also:0015:0001",
+          "ko": "[static let eyeLookOutLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/eyelookoutleft.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "왼쪽 눈꺼풀이 왼쪽 시선 방향으로 움직이는 것을 나타내는 계수입니다."
+        },
+        {
+          "id": "seg:list:see-also:0017:0001",
+          "ko": "[static let eyeLookUpLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/eyelookupleft.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "왼쪽 눈꺼풀이 위쪽 시선 방향으로 움직이는 것을 나타내는 계수입니다."
+        },
+        {
+          "id": "seg:list:see-also:0019:0001",
+          "ko": "[static let eyeSquintLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/eyesquintleft.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "왼쪽 눈 주변의 얼굴 수축을 나타내는 계수입니다."
+        },
+        {
+          "id": "seg:list:see-also:0021:0001",
+          "ko": "[static let eyeWideLeft: ARFaceAnchor.BlendShapeLocation](arfaceanchor/blendshapelocation/eyewideleft.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "왼쪽 눈 주변의 눈꺼풀이 넓어지는 것을 나타내는 계수입니다."
+        },
+        {
+          "id": "seg:paragraph:righteyetransform:0002:0001",
+          "ko": "얼굴의 오른쪽 눈 위치와 방향을 나타내는 변환 행렬입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 행렬의 translation 구성 요소는 앵커의 [`transform`](aranchor/transform.md)으로 표시되는 위치를 기준으로 눈알 중심의 위치를 나타냅니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "양의 z축은 눈알 중심에서 동공 방향으로 향합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "Identify the anchors you want to react to by calling [`id`](anchor/id.md)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0002",
+          "ko": "눈은 z축을 기준으로 회전하지 않습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "![Diagram showing the coordinate axis origin defined by the rightEyeTransform, representing both the position and rotation of the eye relative to the face anchor.](https://docs-assets.developer.apple.com/published/3a144016a0f37954454fcd4e6c20a9c3/media-3001544%402x.png)"
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "얼굴의 왼쪽 눈 위치와 방향을 나타내는 변환 행렬입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "얼굴 좌표 공간에서 얼굴의 시선 방향을 추정하는 위치입니다."
+        },
+        {
+          "id": "seg:paragraph:arkitsessionauthorizationtypeaccessorytracking:0002:0001",
+          "ko": "액세서리 추적"
+        },
+        {
+          "id": "seg:paragraph:arkitsessioneventselement:0002:0001",
+          "ko": "시퀀스의 요소를 나타내는 타입입니다."
+        },
+        {
+          "id": "seg:paragraph:anchorupdates:0002:0001",
+          "ko": "공급자가 추적하는 앵커 업데이트의 시퀀스입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "모든 앵커 업데이트를 제공하는 비동기 시퀀스입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "공급자는 앵커 업데이트가 사용 가능해지면 시퀀스를 통해 새로 생성되거나 갱신된 월드 앵커를 제공합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "반응할 앵커는 [`id`](anchor/id.md)를 호출하여 지정합니다."
+        },
+        {
+          "id": "seg:blockquote:discussion:0010:0001",
+          "ko": "**참고**: 공급자는 앱의 이전 실행에서 영구 저장된 월드 앵커에 대한 업데이트도 월드 추적 공급자가 실행되는 즉시 시퀀스로 제공합니다."
+        },
+        {
+          "id": "seg:blockquote:discussion:0010:0002",
+          "ko": "월드 앵커는 사용자가 명시적으로 제거할 때까지 기기 재시작 시에도 유지됩니다."
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "월드 추적 공급자를 생성합니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static var requiredAuthorizations: [ARKitSession.AuthorizationType]](avaudiosequencer/infodictionarykey/composer.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "월드 앵커 추적에 필요한 권한 부여 유형입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static var isSupported: Bool](avaudiosequencer/infodictionarykey/copyright.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "현재 런타임 환경에서 월드 추적 공급자를 지원하는지 나타내는 부울 값입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[var allAnchors: [WorldAnchor]?](avaudiosequencer/infodictionarykey/genre.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "월드 추적 공급자가 알고 있는 모든 월드 앵커의 배열입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[func addAnchor(WorldAnchor) async throws](avaudiosequencer/infodictionarykey/lyricist.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "제공한 월드 앵커를 현재 추적 중인 앵커 집합에 추가합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "월드 추적 세션에서 발생할 수 있는 오류입니다."
+        },
+        {
+          "id": "seg:paragraph:year:0002:0001",
+          "ko": "연도를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고"
+        },
+        {
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[static let album: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/album.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "앨범을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let artist: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/artist.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "아티스트를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let comments: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/comments.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "주석을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let composer: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/composer.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "작곡가를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let copyright: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/copyright.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "저작권 문구를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let genre: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/genre.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "장르를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let lyricist: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/lyricist.md)"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "작사가를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let title: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/title.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "제목을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let trackNumber: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/tracknumber.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "트랙 번호를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let subTitle: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/subtitle.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "부제목을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:paragraph:avaudiosessioninterruptiontype:0002:0001",
+          "ko": "오디오 인터럽션의 유형을 설명하는 상수입니다."
+        },
+        {
+          "id": "seg:list:avaudiosessioninterruptiontype:0004:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:avaudiosessioninterruptiontype:0004:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:avaudiosessioninterruptiontype:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:avaudiosessioninterruptiontype:0004:0004",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:avaudiosessioninterruptiontype:0004:0005",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:avaudiosessioninterruptiontype:0004:0006",
+          "ko": "watchOS ?+"
+        },
+        {
+          "id": "seg:list:mentions:0008:0001",
+          "ko": "[Handling audio interruptions](handling-audio-interruptions.md)"
+        },
+        {
+          "id": "seg:heading:interruption-types:0010:0001",
+          "ko": "인터럽션 유형"
+        },
+        {
+          "id": "seg:paragraph:interruption-types:0012:0001",
+          "ko": "운영 체제가 오디오 세션의 오디오 인터럽션을 시작했음을 나타내는 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:interruption-types:0014:0001",
+          "ko": "운영 체제가 오디오 세션의 오디오 인터럽션을 종료했음을 나타내는 유형입니다."
+        },
+        {
+          "id": "seg:list:initializers:0016:0001",
+          "ko": "[init?(rawValue: UInt)](avaudiosession/interruptiontype/init(rawvalue:).md)"
+        },
+        {
+          "id": "seg:heading:conforms-to:0018:0001",
+          "ko": "준수"
+        },
+        {
+          "id": "seg:heading:see-also:0020:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "오디오 세션이 인터럽트 후 어떤 상태인지 나타내는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0024:0001",
+          "ko": "오디오 세션 인터럽트의 원인을 정의하는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:avaudiosessionroutechangereasonunknown:0002:0001",
+          "ko": "변경 이유를 알 수 없음을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:list:avaudiosessionroutechangereasonunknown:0004:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:avaudiosessionroutechangereasonunknown:0004:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:avaudiosessionroutechangereasonunknown:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:avaudiosessionroutechangereasonunknown:0004:0004",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:avaudiosessionroutechangereasonunknown:0004:0005",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:avaudiosessionroutechangereasonunknown:0004:0006",
+          "ko": "watchOS ?+"
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "헤드셋을 연결하는 등 사용자 동작으로 선호 오디오 경로가 사용 가능해졌음을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "이전 오디오 출력 경로를 더 이상 사용할 수 없음을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "세션 객체의 카테고리가 변경되었음을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "출력 경로가 앱에 의해 덮어쓰기되었음을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "기기가 수면에서 깨어날 때 경로가 변경되었음을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "지정된 카테고리에 더 이상 적절한 경로가 없어 경로가 변경되었음을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "I/O 포트 집합의 구성 변경을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:avaudiosessionrouteselectionlocal:0002:0001",
+          "ko": "로컬 장치가 선택되었음을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "경로가 선택되지 않았음을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "외부 장치가 선택되었음을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:avmusictimestamp:0002:0001",
+          "ko": "분수 형태의 박자 수입니다."
+        },
+        {
+          "id": "seg:list:avmusictimestamp:0004:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:avmusictimestamp:0004:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:avmusictimestamp:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:avmusictimestamp:0004:0004",
+          "ko": "macOS ?+"
+        },
+        {
+          "id": "seg:list:avmusictimestamp:0004:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:avmusictimestamp:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:avmusictimestamp:0004:0007",
+          "ko": "watchOS ?+"
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "시퀀서 타임라인 관련 메서드에는 이 값을 사용합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "시퀀스의 템포가 이 값과 시간(초) 사이의 관계를 결정합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[func hostTime(forBeats: AVMusicTimeStamp, error: NSErrorPointer) -> UInt64](avaudiosequencer/hosttime(forbeats:error:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "시퀀스가 지정된 위치에서 재생하는 호스트 시간을 가져옵니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func seconds(forBeats: AVMusicTimeStamp) -> TimeInterval](avaudiosequencer/seconds(forbeats:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "트랙에서 지정된 박자 위치(타임스탬프)에 대한 시간을 초 단위로 가져옵니다."
+        },
+        {
+          "id": "seg:paragraph:allexportpresets:0002:0001",
+          "ko": "사용 가능한 모든 내보내기 프리셋 이름을 반환합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "에셋 내보내기 세션이 지원하는 값은 [`Export presets`](export-presets.md)에서 확인합니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "모든 프리셋이 모든 에셋과 호환되는 것은 아닙니다."
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "에셋 내보내기 세션이 사용하는 프리셋의 이름입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func determineCompatibleFileTypes(completionHandler: ([AVFileType]) -> Void)](avasynchronousvideocompositionrequest/sourcereadonlypixelbuffer(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "에셋 내보내기 세션이 현재 구성에서 작성할 수 있는 출력 파일 형식을 결정합니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[class func determineCompatibility(ofExportPreset: String, with: AVAsset, outputFileType: AVFileType?, completionHandler: (Bool) -> Void)](avassetwriter/inputcaptionreceiverrequestingmultipass(for:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "출력 파일 형식의 컨테이너에서 에셋을 내보낼 수 있는지에 대한 export preset의 호환성을 결정합니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[class func exportPresets(compatibleWith: AVAsset) -> [String]](avassetwriter/inputmetadatareceiver(for:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "에셋에 대해 호환되는 내보내기 프리셋을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetexportsession/allexportpresets())*"
+        },
+        {
+          "id": "seg:heading:inputpixelbufferreceiverrequestingmultipassforpixelbufferattributes:0000:0001",
+          "ko": "inputPixelBufferReceiverRequestingMultiPass(for:pixelBufferAttributes:)"
+        },
+        {
+          "id": "seg:paragraph:inputpixelbufferreceiverrequestingmultipassforpixelbufferattributes:0002:0001",
+          "ko": "입력을 writer에 연결하고 픽셀 버퍼를 작성할 수 있는 입력 수신기와 연결된 다중 패스 컨트롤러가 포함된 튜플을 반환합니다."
+        },
+        {
+          "id": "seg:list:inputpixelbufferreceiverrequestingmultipassforpixelbufferattributes:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "픽셀 버퍼를 작성할 수 있는 입력 수신기와 연결된 다중 패스 컨트롤러가 있는 튜플입니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`input`: writer에 연결할 입력입니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0002",
+          "ko": "`attributes`: 입력 공급자의 픽셀 버퍼 풀에서 제공될 픽셀 버퍼의 속성입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func inputReceiver(for: AVAssetWriterInput) -> sending AVAssetWriterInput.SampleBufferReceiver](avasynchronousvideocompositionrequest/sourceframe(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "입력을 writer에 연결하고 샘플 버퍼를 작성할 수 있는 입력 수신기를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func inputCaptionReceiver(for: AVAssetWriterInput) -> sending AVAssetWriterInput.CaptionReceiver](avasynchronousvideocompositionrequest/sourcereadonlypixelbuffer(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "입력을 writer에 연결하고 캡션 데이터를 작성할 수 있는 입력 수신기를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[func inputCaptionReceiverRequestingMultiPass(for: AVAssetWriterInput) -> sending (AVAssetWriterInput.CaptionReceiver, AVAssetWriterInput.MultiPassController)](avassetwriter/inputcaptionreceiverrequestingmultipass(for:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "입력을 writer에 연결하고 캡션 데이터를 작성할 수 있는 입력 수신기와 관련된 다중 패스 컨트롤러가 포함된 튜플을 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[func inputMetadataReceiver(for: AVAssetWriterInput) -> sending AVAssetWriterInput.MetadataReceiver](avassetwriter/inputmetadatareceiver(for:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "입력을 writer에 연결하고 타임드 메타데이터 그룹을 작성할 수 있는 입력 수신기를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[func inputMetadataReceiverRequestingMultiPass(for: AVAssetWriterInput) -> sending (AVAssetWriterInput.MetadataReceiver, AVAssetWriterInput.MultiPassController)](avassetwriter/inputmetadatareceiverrequestingmultipass(for:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "입력을 writer에 연결하고 타임드 메타데이터 그룹을 작성할 수 있는 입력 수신기와 연결된 다중 패스 컨트롤러가 포함된 튜플을 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[func inputPixelBufferReceiver(for: AVAssetWriterInput, pixelBufferAttributes: CVPixelBufferCreationAttributes?) -> sending AVAssetWriterInput.PixelBufferReceiver](avassetwriter/inputpixelbufferreceiver(for:pixelbufferattributes:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "입력을 writer에 연결하고 픽셀 버퍼를 작성할 수 있는 입력 수신기를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[func inputReceiverRequestingMultiPass(for: AVAssetWriterInput) -> sending (AVAssetWriterInput.SampleBufferReceiver, AVAssetWriterInput.MultiPassController)](avassetwriter/inputreceiverrequestingmultipass(for:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "입력을 writer에 연결하고 샘플 버퍼를 작성할 수 있는 입력 수신기와 다중 패스 컨트롤러가 포함된 튜플을 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[func inputTaggedPixelBufferGroupReceiver(for: AVAssetWriterInput, pixelBufferAttributes: CVPixelBufferCreationAttributes?) -> sending AVAssetWriterInput.TaggedPixelBufferGroupReceiver](avassetwriter/inputtaggedpixelbuffergroupreceiver(for:pixelbufferattributes:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "입력을 writer에 연결하고 태그된 픽셀 버퍼를 작성할 수 있는 입력 수신기를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[func inputTaggedPixelBufferGroupReceiverRequestingMultiPass(for: AVAssetWriterInput, pixelBufferAttributes: CVPixelBufferCreationAttributes?) -> sending (AVAssetWriterInput.TaggedPixelBufferGroupReceiver, AVAssetWriterInput.MultiPassController)](avassetwriter/inputtaggedpixelbuffergroupreceiverrequestingmultipass(for:pixelbufferattributes:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "입력을 writer에 연결하고 태그된 픽셀 버퍼를 작성할 수 있는 입력 수신기와 관련된 다중 패스 컨트롤러가 포함된 튜플을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetwriter/inputpixelbufferreceiverrequestingmultipass(for:pixelbufferattributes:))*"
+        },
+        {
+          "id": "seg:heading:sourcetaggeddynamicbuffersbytrackid:0000:0001",
+          "ko": "sourceTaggedDynamicBuffers(byTrackID:)"
+        },
+        {
+          "id": "seg:paragraph:sourcetaggeddynamicbuffersbytrackid:0002:0001",
+          "ko": "지정된 트랙 ID에 대한 소스 태그 동적 버퍼를 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:sourcetaggeddynamicbuffersbytrackid:0002:0002",
+          "ko": "비디오 트랙이 tagged buffers를 포함하지 않거나 트랙에 비디오가 없는 경우 nil을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:sourcetaggeddynamicbuffersbytrackid:0002:0003",
+          "ko": "이 함수는 supportsSourceTaggedBuffers가 YES일 때만 호출해야 합니다."
+        },
+        {
+          "id": "seg:list:sourcetaggeddynamicbuffersbytrackid:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "지정된 트랙 ID에 대한 소스 CMTaggedBuffer 배열입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[func attach(AVSpatialVideoConfiguration, to: inout CVMutablePixelBuffer) throws](avasynchronousvideocompositionrequest/attach(_:to:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "픽셀 버퍼를 지정된 spatial 구성에 연결합니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func sourceFrame(byTrackID: CMPersistentTrackID) -> CVPixelBuffer?](avasynchronousvideocompositionrequest/sourceframe(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "지정된 식별자가 포함된 트랙의 소스 픽셀 버퍼를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func sourceReadOnlyPixelBuffer(byTrackID: CMPersistentTrackID) -> CVReadOnlyPixelBuffer?](avasynchronousvideocompositionrequest/sourcereadonlypixelbuffer(bytrackid:).md)"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "지정된 트랙 ID의 원본 CVReadOnlyPixelBuffer를 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0002",
+          "ko": "트랙에 태그가 지정된 버퍼가 포함된 경우 태그가 지정된 버퍼 중 하나의 픽셀 버퍼가 반환됩니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[func sourceReadySampleBuffer(byTrackID: CMPersistentTrackID) -> CMReadySampleBuffer<CMSampleBuffer.DynamicContent>?](avasynchronousvideocompositionrequest/sourcereadysamplebuffer(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "지정된 트랙 ID의 원본 CMReadySampleBuffer를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[func sourceSampleBuffer(byTrackID: CMPersistentTrackID) -> CMSampleBuffer?](avasynchronousvideocompositionrequest/sourcesamplebuffer(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "지정한 식별자를 포함하는 트랙의 원본 샘플 버퍼를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[var sourceSampleDataTrackIDs: [CMPersistentTrackID]](avasynchronousvideocompositionrequest/sourcesampledatatrackids-3yiab.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "원본 샘플 데이터를 포함하는 트랙의 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[func sourceTimedMetadata(byTrackID: CMPersistentTrackID) -> AVTimedMetadataGroup?](avasynchronousvideocompositionrequest/sourcetimedmetadata(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "지정한 식별자를 포함하는 트랙에 대한 원본 타임드 메타데이터 그룹을 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[var sourceTrackIDs: [NSNumber]](avasynchronousvideocompositionrequest/sourcetrackids.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "원본 비디오를 포함하는 트랙의 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avasynchronousvideocompositionrequest/sourcetaggeddynamicbuffers(bytrackid:))*"
+        },
+        {
+          "id": "seg:heading:avcam-building-a-camera-app:0000:0001",
+          "ko": "AVCam: 카메라 앱 만들기"
+        },
+        {
+          "id": "seg:paragraph:avcam-building-a-camera-app:0001:0001",
+          "ko": "**프레임워크**: AVFoundation"
+        },
+        {
+          "id": "seg:paragraph:avcam-building-a-camera-app:0002:0001",
+          "ko": "전면 및 후면 iPhone, iPad 카메라를 사용해 사진을 캡처하고 동영상을 녹화합니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0006:0001",
+          "ko": "이 AVCam 샘플은 iOS용 기본 카메라 앱을 빌드하는 방법을 보여줍니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0006:0002",
+          "ko": "이 샘플은 AVFoundation을 사용해 장치 카메라와 마이크에 접근하고 캡처 세션을 구성하며, 사진과 동영상을 캡처하는 방법 등 다양한 방법을 보여줍니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0006:0003",
+          "ko": "또한 [`PhotoKit`](https://developer.apple.com/documentation/PhotoKit) 프레임워크를 사용해 캡처한 미디어를 Photos 라이브러리에 저장하는 방법도 보여줍니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0007:0001",
+          "ko": "이 샘플은 SwiftUI와 Swift 동시성 기능을 사용해 반응형 카메라 앱을 빌드합니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0007:0002",
+          "ko": "다음 다이어그램은 앱의 설계를 설명합니다:"
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0001",
+          "ko": "![앱 객체 간의 관계를 설명하는 다이어그램입니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0002",
+          "ko": "앱이 시작되면 `CameraModel` 인스턴스를 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0003",
+          "ko": "카메라 모델은 필수 기능 수행에 사용하는 `CaptureService`와 `MediaLibrary` 타입의 인스턴스를 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0004",
+          "ko": "마지막으로 앱은 기본 사용자 인터페이스를 제공하는 `CameraView` 인스턴스를 생성하고 `CameraModel` 객체에 대한 참조를 전달합니다.](https://docs-assets.developer.apple.com/published/099e27ca35a3de0fc5aaadb24152517d/app-assembly-overview.png)"
+        },
+        {
+          "id": "seg:paragraph:overview:0009:0001",
+          "ko": "이 앱에서 핵심적으로 정의된 타입은 AVFoundation 캡처 API와의 상호작용을 관리하는 actor인 `CaptureService`입니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0009:0002",
+          "ko": "이 객체는 캡처 파이프라인을 구성하고 수명을 관리하며, 사진과 동영상을 캡처하는 비동기 인터페이스를 정의합니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0009:0003",
+          "ko": "해당 동작은 앱의 `PhotoCapture` 및 `MovieCapture` 객체에 각각 위임됩니다."
+        },
+        {
+          "id": "seg:blockquote:overview:0010:0001",
+          "ko": "**참고**: 캡처 세션을 구성하고 시작하는 작업은 완료까지 시간이 걸릴 수 있는 블로킹 연산입니다."
+        },
+        {
+          "id": "seg:blockquote:overview:0010:0002",
+          "ko": "UI 반응성을 유지하기 위해 앱은 `CaptureService`를 actor 타입으로 정의해 AVFoundation 캡처 API 호출이 메인 스레드에서 실행되지 않도록 합니다."
+        },
+        {
+          "id": "seg:heading:configure-the-sample-code-project:0011:0001",
+          "ko": "샘플 코드 프로젝트 구성"
+        },
+        {
+          "id": "seg:paragraph:configure-the-sample-code-project:0012:0001",
+          "ko": "시뮬레이터는 장치 카메라에 접근할 수 없으므로 앱 실행에 적합하지 않으므로, 실제 기기에서 실행해야 합니다."
+        },
+        {
+          "id": "seg:paragraph:configure-the-sample-code-project:0012:0002",
+          "ko": "이 샘플을 실행하려면 다음이 필요합니다:"
+        },
+        {
+          "id": "seg:list:configure-the-sample-code-project:0013:0001",
+          "ko": "iOS 26 이상이 탑재된 iOS 기기"
+        },
+        {
+          "id": "seg:paragraph:configure-the-sample-code-project:0014:0001",
+          "ko": "AVCam은 [`LockedCameraCapture`](https://developer.apple.com/documentation/LockedCameraCapture) 프레임워크를 채택해 앱이 잠금 화면, Control Center, 액션 버튼, Camera Control에서 실행될 수 있는 자격을 갖추게 합니다."
+        },
+        {
+          "id": "seg:paragraph:configure-the-sample-code-project:0014:0002",
+          "ko": "이 프레임워크를 지원하기 위해 샘플은 기본 앱 대상에 캡처 확장 대상과 Control Center 확장 대상을 추가합니다."
+        },
+        {
+          "id": "seg:paragraph:configure-the-sample-code-project:0014:0003",
+          "ko": "샘플을 빌드하고 실행하려면 각 대상에 서명 자격 증명을 설정합니다."
+        },
+        {
+          "id": "seg:heading:configure-a-capture-session:0015:0001",
+          "ko": "캡처 세션 구성"
+        },
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0016:0001",
+          "ko": "모든 캡처 앱의 중심 객체는 [`AVCaptureSession`](AVCaptureSession.md) 인스턴스입니다."
+        },
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0016:0002",
+          "ko": "캡처 세션은 앱이 카메라와 마이크 장치의 입력을 연결하고, 이를 사진 및 동영상을 캡처하는 출력에 연결하는 중앙 허브입니다."
+        },
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0016:0003",
+          "ko": "세션을 구성한 후 앱은 이를 통해 캡처 파이프라인으로 데이터 흐름을 제어합니다."
+        },
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0017:0001",
+          "ko": "![캡처 세션 구성을 설명하는 다이어그램입니다."
+        },
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0017:0002",
+          "ko": "이 다이어그램은 카메라 및 마이크 장치의 입력을 사진 또는 동영상을 캡처하거나 비디오 미리보기를 표시할 수 있는 호환 출력에 연결하는 방법을 보여줍니다.](https://docs-assets.developer.apple.com/published/5bffa1d94c052514c5b1f45adc09649b/avcapturesession-overview.png)"
+        },
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0018:0001",
+          "ko": "캡처 서비스는 `setUpSession()` 메서드에서 세션 구성을 수행합니다."
+        },
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0018:0002",
+          "ko": "호스트 장치의 기본 카메라와 마이크를 검색한 다음 이를 캡처 세션의 입력으로 추가합니다."
+        },
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0020:0001",
+          "ko": "입력을 추가하기 위해 이 메서드는 지정한 카메라 또는 마이크 장치에 대한 새 [`AVCaptureDeviceInput`](avcapturedeviceinput.md) 인스턴스를 생성하고, 가능한 경우 캡처 세션에 추가하는 헬퍼 메서드를 사용합니다."
+        },
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0022:0001",
+          "ko": "장치 입력을 추가한 후, 해당 메서드는 앱의 기본 사진 캡처 모드에 맞게 캡처 세션을 구성합니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0022:0002",
+          "ko": "캡처 세션의 [`photo`](avcapturesession/preset/photo.md) 프리셋을 설정하면 고해상도 사진 화질 출력용 파이프라인이 최적화됩니다."
+        },
+        {
+          "id": "seg:paragraph:configure-a-capture-session:0022:0003",
+          "ko": "마지막으로 앱에서 사진을 촬영할 수 있도록 세션에 [`AVCapturePhotoOutput`](avcapturephotooutput.md) 인스턴스를 추가합니다."
+        },
+        {
+          "id": "seg:heading:set-up-a-capture-preview:0024:0001",
+          "ko": "캡처 미리보기 설정"
+        },
+        {
+          "id": "seg:paragraph:set-up-a-capture-preview:0025:0001",
+          "ko": "카메라가 캡처하는 콘텐츠를 미리보려면 AVFoundation은 [`AVCaptureVideoPreviewLayer`](avcapturevideopreviewlayer.md)라는 Core Animation 레이어 하위 클래스를 제공합니다."
+        },
+        {
+          "id": "seg:paragraph:set-up-a-capture-preview:0025:0002",
+          "ko": "SwiftUI는 레이어를 직접 사용할 수 없으므로 앱에서는 이 레이어를 `PreviewView`라는 [`UIView`](https://developer.apple.com/documentation/UIKit/UIView) 하위 클래스에 호스팅합니다."
+        },
+        {
+          "id": "seg:paragraph:set-up-a-capture-preview:0025:0003",
+          "ko": "[`layerClass`](https://developer.apple.com/documentation/UIKit/UIView/layerClass) 속성을 오버라이드해 미리보기 레이어를 뷰의 백킹 레이어로 설정합니다."
+        },
+        {
+          "id": "seg:paragraph:set-up-a-capture-preview:0027:0001",
+          "ko": "이 뷰를 SwiftUI에서 사용할 수 있도록 앱은 `CameraPreview`라는 [`UIViewRepresentable`](https://developer.apple.com/documentation/SwiftUI/UIViewRepresentable) 타입으로 래핑합니다."
+        },
+        {
+          "id": "seg:paragraph:set-up-a-capture-preview:0029:0001",
+          "ko": "미리보기를 캡처 세션에 연결하면서 캡처 서비스의 보호 상태를 직접 노출하지 않기 위해, 샘플은 앱 전용 `PreviewSource`와 `PreviewTarget` 프로토콜을 정의합니다."
+        },
+        {
+          "id": "seg:paragraph:set-up-a-capture-preview:0029:0002",
+          "ko": "앱은 캡처 세션에 대한 참조를 제공하는 `PreviewSource`를 `CameraPreview`에 전달합니다."
+        },
+        {
+          "id": "seg:paragraph:set-up-a-capture-preview:0029:0003",
+          "ko": "`PreviewSource`의 `connect(to:)` 메서드를 호출하면 `PreviewView` 인스턴스에 캡처 세션이 설정됩니다."
+        },
+        {
+          "id": "seg:heading:request-authorization:0030:0001",
+          "ko": "권한 부여 요청"
+        },
+        {
+          "id": "seg:paragraph:request-authorization:0031:0001",
+          "ko": "초기 캡처 구성이 완료되었지만 앱이 캡처 세션을 성공적으로 시작하려면 장치 입력을 사용할 권한이 있는지 판정해야 합니다."
+        },
+        {
+          "id": "seg:paragraph:request-authorization:0031:0002",
+          "ko": "시스템은 카메라와 마이크의 입력을 캡처하려면 사용자가 앱에 대해 명시적으로 권한을 부여해야 한다고 요구합니다."
+        },
+        {
+          "id": "seg:paragraph:request-authorization:0031:0003",
+          "ko": "앱의 상태를 판정하기 위해 캡처 서비스는 다음과 같이 비동기 `isAuthorized` 속성을 정의합니다."
+        },
+        {
+          "id": "seg:paragraph:request-authorization:0033:0001",
+          "ko": "이 속성의 구현은 [`AVCaptureDevice`](avcapturedevice.md) 메서드를 사용해 현재 상태를 확인하고, 앱이 아직 판정되지 않은 경우 사용자에게 권한 부여를 요청합니다."
+        },
+        {
+          "id": "seg:paragraph:request-authorization:0033:0002",
+          "ko": "앱에 권한이 있으면 데이터 흐름을 시작하기 위해 캡처 세션을 시작합니다."
+        },
+        {
+          "id": "seg:paragraph:request-authorization:0033:0003",
+          "ko": "권한이 없으면 사용자 인터페이스에 오류 메시지를 표시합니다."
+        },
+        {
+          "id": "seg:paragraph:request-authorization:0034:0001",
+          "ko": "카메라와 마이크 접근에 필요한 구성에 대한 자세한 내용은 [`Requesting authorization to capture and save media`](requesting-authorization-to-capture-and-save-media.md)를 참조합니다."
+        },
+        {
+          "id": "seg:heading:change-the-capture-mode:0035:0001",
+          "ko": "캡처 모드 변경"
+        },
+        {
+          "id": "seg:paragraph:change-the-capture-mode:0036:0001",
+          "ko": "앱은 사진 캡처 모드로 시작합니다."
+        },
+        {
+          "id": "seg:paragraph:change-the-capture-mode:0036:0002",
+          "ko": "모드를 변경하려면 캡처 세션을 다음과 같이 다시 구성해야 합니다."
+        },
+        {
+          "id": "seg:paragraph:change-the-capture-mode:0038:0001",
+          "ko": "사진 캡처 모드에서는 캡처 세션에 [`photo`](avcapturesession/preset/photo.md) 프리셋을 설정해 캡처 파이프라인을 고해상도 사진 출력에 맞게 최적화합니다."
+        },
+        {
+          "id": "seg:paragraph:change-the-capture-mode:0038:0002",
+          "ko": "또한 동영상 캡처 출력도 제거해 사진 출력이 Live Photo 캡처를 수행하지 않도록 합니다."
+        },
+        {
+          "id": "seg:paragraph:change-the-capture-mode:0038:0003",
+          "ko": "비디오 캡처 모드에서는 세션 프리셋을 [`high`](avcapturesession/preset/high.md)로 설정하고 동영상 파일 캡처 출력을 세션에 추가합니다."
+        },
+        {
+          "id": "seg:heading:select-a-new-camera:0039:0001",
+          "ko": "새 카메라 선택"
+        },
+        {
+          "id": "seg:paragraph:select-a-new-camera:0040:0001",
+          "ko": "앱은 사용자가 전면 카메라와 후면 카메라를 전환하고, iPadOS에서는 연결된 외부 카메라도 전환할 수 있도록 버튼을 제공합니다."
+        },
+        {
+          "id": "seg:paragraph:select-a-new-camera:0040:0002",
+          "ko": "활성 카메라를 변경하려면 앱이 다음과 같이 세션을 재구성합니다."
+        },
+        {
+          "id": "seg:paragraph:select-a-new-camera:0042:0001",
+          "ko": "[`AVCaptureSession`](avcapturesession.md)은 한 번에 단일 카메라 입력만 허용하므로, 이 메서드는 기존 카메라의 입력을 제거하는 것으로 시작합니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:select-a-new-camera:0042:0002",
+          "ko": "그다음 새 장치에 대한 입력 추가를 시도한 뒤, 성공하면 장치 변경을 반영하도록 일부 내부 구성을 수행합니다."
+        },
+        {
+          "id": "seg:paragraph:select-a-new-camera:0042:0003",
+          "ko": "캡처 세션이 새 장치를 추가할 수 없으면 제거된 입력을 다시 연결합니다."
+        },
+        {
+          "id": "seg:blockquote:select-a-new-camera:0043:0001",
+          "ko": "**Note**: 앱에서 여러 카메라를 동시에 캡처해야 하는 경우에는 [`AVCaptureMultiCamSession`](avcapturemulticamsession.md) 대신 사용합니다."
+        },
+        {
+          "id": "seg:heading:capture-a-photo:0044:0001",
+          "ko": "사진 촬영"
+        },
+        {
+          "id": "seg:paragraph:capture-a-photo:0045:0001",
+          "ko": "캡처 서비스는 앱의 사진 촬영 기능 처리를 `PhotoCapture` 객체에 위임하며, 이 객체는 [`AVCapturePhotoOutput`](avcapturephotooutput.md)와의 상호작용과 수명 주기를 관리합니다."
+        },
+        {
+          "id": "seg:paragraph:capture-a-photo:0045:0002",
+          "ko": "앱은 이 객체의 [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) 메서드를 호출하여 사진을 캡처합니다. 이때 캡처 설정을 설명하는 객체와 캡처 진행 중 시스템이 호출할 델리게이트를 전달합니다."
+        },
+        {
+          "id": "seg:paragraph:capture-a-photo:0045:0003",
+          "ko": "이 델리게이트 기반 API를 `async` 컨텍스트에서 사용하려면, 앱은 다음과 같이 checked throwing continuation으로 이 호출을 래핑합니다."
+        },
+        {
+          "id": "seg:paragraph:capture-a-photo:0047:0001",
+          "ko": "시스템이 사진 캡처를 마치면 델리게이트의 [`photoOutput(_:didFinishCaptureFor:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishcapturefor:error:).md) 메서드를 호출합니다."
+        },
+        {
+          "id": "seg:paragraph:capture-a-photo:0047:0002",
+          "ko": "이 메서드의 델리게이트 객체 구현은 continuation을 사용해 사진을 반환하거나 오류를 발생시켜 실행을 재개합니다."
+        },
+        {
+          "id": "seg:paragraph:capture-a-photo:0049:0001",
+          "ko": "AVFoundation으로 사진을 캡처하는 자세한 내용은 [`Capturing still and Live Photos`](capturing-still-and-live-photos.md)를 참조하십시오."
+        },
+        {
+          "id": "seg:heading:record-a-movie:0050:0001",
+          "ko": "동영상 녹화"
+        },
+        {
+          "id": "seg:paragraph:record-a-movie:0051:0001",
+          "ko": "캡처 서비스는 앱의 비디오 캡처 기능 처리를 `MovieCapture` 객체에 위임하며, 이 객체는 [`AVCaptureMovieFileOutput`](avcapturemoviefileoutput.md)와의 상호작용과 수명 주기를 관리합니다."
+        },
+        {
+          "id": "seg:paragraph:record-a-movie:0051:0002",
+          "ko": "동영상 녹화를 시작하려면 앱은 영화 파일 출력의 [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md) 메서드를 호출합니다. 이 메서드는 영상을 저장할 URL과, 녹화가 완료되면 시스템이 호출할 델리게이트를 받습니다."
+        },
+        {
+          "id": "seg:paragraph:record-a-movie:0053:0001",
+          "ko": "동영상 녹화를 마치려면 앱은 영화 파일 출력의 [`stopRecording()`](avcapturefileoutput/stoprecording().md) 메서드를 호출하며, 이때 시스템이 델리게이트를 호출해 캡처된 출력을 처리합니다."
+        },
+        {
+          "id": "seg:paragraph:record-a-movie:0053:0002",
+          "ko": "이 델리게이트 기반 콜백을 사용하려면 앱은 다음과 같이 해당 상호작용을 checked throwing continuation으로 감쌉니다."
+        },
+        {
+          "id": "seg:paragraph:record-a-movie:0055:0001",
+          "ko": "앱이 영화 파일 출력의 [`stopRecording()`](avcapturefileoutput/stoprecording().md) 메서드를 호출하면 시스템이 델리게이트를 호출하고, 델리게이트는 동영상을 반환하거나 오류를 발생시켜 실행을 재개합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0057:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0058:0001",
+          "ko": "[캡처 세션 설정](setting-up-a-capture-session.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0059:0001",
+          "ko": "사진 또는 동영상을 캡처하기 전에 입력 장치, 출력 미디어, 미리보기 뷰, 기본 설정을 구성합니다."
+        },
+        {
+          "id": "seg:list:see-also:0060:0001",
+          "ko": "[iPad에서 멀티태스킹 중 카메라 접근](../AVKit/accessing-the-camera-while-multitasking-on-ipad.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0061:0001",
+          "ko": "카메라를 Split View, Slide Over, Picture in Picture, Stage Manager 모드에서 작동합니다."
+        },
+        {
+          "id": "seg:list:see-also:0062:0001",
+          "ko": "[시네마틱 동영상 캡처](capturing-cinematic-video.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0063:0001",
+          "ko": "심도와 초점점을 조정할 수 있는 동영상을 캡처합니다."
+        },
+        {
+          "id": "seg:list:see-also:0064:0001",
+          "ko": "[AVMultiCamPiP: 여러 카메라에서 캡처](avmulticampip-capturing-from-multiple-cameras.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0065:0001",
+          "ko": "다중 카메라 캡처 세션을 사용해 전면 카메라와 후면 카메라의 출력을 하나의 동영상 파일로 동시에 녹화합니다."
+        },
+        {
+          "id": "seg:list:see-also:0066:0001",
+          "ko": "[AVCamBarcode: 바코드 및 얼굴 감지](avcambarcode-detecting-barcodes-and-faces.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0067:0001",
+          "ko": "카메라를 사용해 기계 판독 가능한 코드나 얼굴을 식별합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0069:0001",
+          "ko": "캡처 동작을 구성하고 입력 장치에서 캡처 출력으로의 데이터 흐름을 조정하는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0071:0001",
+          "ko": "동일한 미디어 유형의 여러 입력에서 동시 캡처를 지원하는 캡처 세션입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0073:0001",
+          "ko": "캡처 세션에 입력 데이터를 제공하는 객체의 추상 슈퍼클래스입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0075:0001",
+          "ko": "캡처 세션에 미디어 출력 대상을 제공하는 객체의 추상 슈퍼클래스입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0077:0001",
+          "ko": "캡처 입력에서 캡처 출력으로의 연결을 나타내는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:external:0002:0001",
+          "ko": "외부 장치 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "iPad에서 외부 장치는 UVC(USB Video Class) 사양을 준수하는 장치입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[`static let externalUnknown: AVCaptureDevice.DeviceType`](avcapturedevice/devicetype-swift.struct/externalunknown.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "알 수 없는 외부 장치 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:isinusebyanotherapplication:0002:0001",
+          "ko": "다른 앱이 장치를 사용 중인지 나타내는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 속성은 key-value 관찰이 가능합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        }
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "batchIndex": 6,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1c7f-bbd8-7113-a5df-4182366c4ff2\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"A Boolean value that indicates whether a device is currently connected to the system and available for use.\",\n      \"contextBefore\": \"[var isConnected: Bool](avcapturedevice/isconnected.md)\",\n      \"contextAfter\": \"[var isSuspended: Bool](avcapturedevice/issuspended.md)\",\n      \"documentTitle\": \"isInUseByAnotherApplication\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"A Boolean value that indicates whether the device is in a suspended state.\",\n      \"contextBefore\": \"[var isSuspended: Bool](avcapturedevice/issuspended.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"isInUseByAnotherApplication\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:aspectratio:0002:0001\",\n      \"source\": \"An aspect ratio.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"aspectRatio\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"One of the enumerated aspect ratios suitable for use with the [`AVCaptureDevice`](avcapturedevice.md) dynamic aspect ratio APIs.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"aspectRatio\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"One of the enumerated aspect ratios suitable for use with the [`AVCaptureDevice`](avcapturedevice.md) dynamic aspect ratio APIs.\",\n      \"contextAfter\": \"[var zoomFactor: Float](avcaptureframing/zoomfactor.md)\",\n      \"documentTitle\": \"aspectRatio\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"A zoom factor.\",\n      \"contextBefore\": \"[var zoomFactor: Float](avcaptureframing/zoomfactor.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"aspectRatio\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:isautodeferredphotodeliverysupported:0002:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output supports deferred photo delivery.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nvar isAutoDeferredPhotoDeliverySupported: Bool { get }\\n```\",\n      \"contextAfter\": \"[var captureReadiness: AVCapturePhotoOutput.CaptureReadiness](avcapturephotooutput/capturereadiness-swift.property.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"A value that specifies whether the photo output is ready to respond to new capture requests in a timely manner.\",\n      \"contextBefore\": \"[var captureReadiness: AVCapturePhotoOutput.CaptureReadiness](avcapturephotooutput/capturereadiness-swift.property.md)\",\n      \"contextAfter\": \"[AVCapturePhotoOutput.CaptureReadiness](avcapturephotooutput/capturereadiness-swift.enum.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"Constants that indicate whether the output is ready to receive capture requests.\",\n      \"contextBefore\": \"[AVCapturePhotoOutput.CaptureReadiness](avcapturephotooutput/capturereadiness-swift.enum.md)\",\n      \"contextAfter\": \"[var isAutoDeferredPhotoDeliveryEnabled: Bool](avcapturephotooutput/isautodeferredphotodeliveryenabled.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"A Boolean value that indicates the enabled state of automatic deferred photo delivery.\",\n      \"contextBefore\": \"[var isAutoDeferredPhotoDeliveryEnabled: Bool](avcapturephotooutput/isautodeferredphotodeliveryenabled.md)\",\n      \"contextAfter\": \"[var isFastCapturePrioritizationSupported: Bool](avcapturephotooutput/isfastcaptureprioritizationsupported.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output supports fast capture prioritization.\",\n      \"contextBefore\": \"[var isFastCapturePrioritizationSupported: Bool](avcapturephotooutput/isfastcaptureprioritizationsupported.md)\",\n      \"contextAfter\": \"[var isFastCapturePrioritizationEnabled: Bool](avcapturephotooutput/isfastcaptureprioritizationenabled.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"A Boolean value that indicates whether the output enables fast capture prioritization.\",\n      \"contextBefore\": \"[var isFastCapturePrioritizationEnabled: Bool](avcapturephotooutput/isfastcaptureprioritizationenabled.md)\",\n      \"contextAfter\": \"[var isResponsiveCaptureSupported: Bool](avcapturephotooutput/isresponsivecapturesupported.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output supports responsive capture.\",\n      \"contextBefore\": \"[var isResponsiveCaptureSupported: Bool](avcapturephotooutput/isresponsivecapturesupported.md)\",\n      \"contextAfter\": \"[var isResponsiveCaptureEnabled: Bool](avcapturephotooutput/isresponsivecaptureenabled.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output configuration enables responsive capture.\",\n      \"contextBefore\": \"[var isResponsiveCaptureEnabled: Bool](avcapturephotooutput/isresponsivecaptureenabled.md)\",\n      \"contextAfter\": \"[var isZeroShutterLagSupported: Bool](avcapturephotooutput/iszeroshutterlagsupported.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output supports zero shutter lag.\",\n      \"contextBefore\": \"[var isZeroShutterLagSupported: Bool](avcapturephotooutput/iszeroshutterlagsupported.md)\",\n      \"contextAfter\": \"[var isZeroShutterLagEnabled: Bool](avcapturephotooutput/iszeroshutterlagenabled.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output configuration enables zero shutter lag.\",\n      \"contextBefore\": \"[var isZeroShutterLagEnabled: Bool](avcapturephotooutput/iszeroshutterlagenabled.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:timecodegeneratortransitionedtofor:0000:0001\",\n      \"source\": \"timecodeGenerator(_:transitionedTo:for:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: AVFoundation **Kind**: method **Required**: Yes\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:timecodegeneratortransitionedtofor:0001:0001\",\n      \"source\": \"**Framework**: AVFoundation **Kind**: method **Required**: Yes\",\n      \"contextBefore\": \"timecodeGenerator(_:transitionedTo:for:)\",\n      \"contextAfter\": \"Notifies the delegate when the synchronization status of a timecode source changes.\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:timecodegeneratortransitionedtofor:0002:0001\",\n      \"source\": \"Notifies the delegate when the synchronization status of a timecode source changes.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: method **Required**: Yes\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`generator`: The [`AVCaptureTimecodeGenerator`](avcapturetimecodegenerator.md) instance providing the status update.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"`synchronizationStatus`: The updated synchronization state.\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0008:0002\",\n      \"source\": \"`synchronizationStatus`: The updated synchronization state.\",\n      \"contextBefore\": \"`generator`: The [`AVCaptureTimecodeGenerator`](avcapturetimecodegenerator.md) instance providing the status update.\",\n      \"contextAfter\": \"`source`: The internal or external source to which the generator synchronizes.\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0008:0003\",\n      \"source\": \"`source`: The internal or external source to which the generator synchronizes.\",\n      \"contextBefore\": \"`synchronizationStatus`: The updated synchronization state.\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"`source`: The internal or external source to which the generator synchronizes.\",\n      \"contextAfter\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didReceiveUpdate: AVCaptureTimecode, from: AVCaptureTimecode.Source)](avcapturetimecodegeneratordelegate/timecodegenerator(_:didreceiveupdate:from:).md)\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didReceiveUpdate: AVCaptureTimecode, from: AVCaptureTimecode.Source)](avcapturetimecodegeneratordelegate/timecodegenerator(_:didreceiveupdate:from:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"Notifies the delegate when new, unaligned timecodes are parsed from the specified source.\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"Notifies the delegate when new, unaligned timecodes are parsed from the specified source.\",\n      \"contextBefore\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didReceiveUpdate: AVCaptureTimecode, from: AVCaptureTimecode.Source)](avcapturetimecodegeneratordelegate/timecodegenerator(_:didreceiveupdate:from:).md)\",\n      \"contextAfter\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didUpdateAvailableSources: [AVCaptureTimecode.Source])](avcapturetimecodegeneratordelegate/timecodegenerator(_:didupdateavailablesources:).md)\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0012:0001\",\n      \"source\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didUpdateAvailableSources: [AVCaptureTimecode.Source])](avcapturetimecodegeneratordelegate/timecodegenerator(_:didupdateavailablesources:).md)\",\n      \"contextBefore\": \"Notifies the delegate when new, unaligned timecodes are parsed from the specified source.\",\n      \"contextAfter\": \"Notifies the delegate when the list of available timecode synchronization sources is updated.\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"Notifies the delegate when the list of available timecode synchronization sources is updated.\",\n      \"contextBefore\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didUpdateAvailableSources: [AVCaptureTimecode.Source])](avcapturetimecodegeneratordelegate/timecodegenerator(_:didupdateavailablesources:).md)\",\n      \"contextAfter\": \"[AVCaptureTimecodeGenerator.SynchronizationStatus](avcapturetimecodegenerator/synchronizationstatus.md)\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"Constants defining the synchronization status of a timecode generator .\",\n      \"contextBefore\": \"[AVCaptureTimecodeGenerator.SynchronizationStatus](avcapturetimecodegenerator/synchronizationstatus.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturetimecodegeneratordelegate/timecodegenerator(_:transitionedto:for:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:shouldbufferinanticipationofplayback:0002:0001\",\n      \"source\": \"A Boolean value that indicates whether the player starts buffering in preparation for a request to begin playback.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"shouldBufferInAnticipationOfPlayback\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"A [`true`](https://developer.apple.com/documentation/Swift/true) value indicates that a participant player requests starting playback at the [`anticipatedPlaybackRate`](avdelegatingplaybackcoordinatorpausecommand/anticipatedplaybackrate.md) value.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"shouldBufferInAnticipationOfPlayback\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"A [`true`](https://developer.apple.com/documentation/Swift/true) value indicates that a participant player requests starting playback at the [`anticipatedPlaybackRate`](avdelegatingplaybackcoordinatorpausecommand/anticipatedplaybackrate.md) value.\",\n      \"contextAfter\": \"[var anticipatedPlaybackRate: Float](avdelegatingplaybackcoordinatorpausecommand/anticipatedplaybackrate.md)\",\n      \"documentTitle\": \"shouldBufferInAnticipationOfPlayback\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"The rate at which the coordinator expects the current item to play.\",\n      \"contextBefore\": \"[var anticipatedPlaybackRate: Float](avdelegatingplaybackcoordinatorpausecommand/anticipatedplaybackrate.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"shouldBufferInAnticipationOfPlayback\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:invalidcompositiontracksegmentsourceduration:0002:0001\",\n      \"source\": \"You can’t add the source media because it has no duration.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0001\",\n      \"source\": \"iOS ?+\",\n      \"contextBefore\": \"**Availability**:\",\n      \"contextAfter\": \"iPadOS ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0002\",\n      \"source\": \"iPadOS ?+\",\n      \"contextBefore\": \"iOS ?+\",\n      \"contextAfter\": \"Mac Catalyst ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS ?+\",\n      \"contextAfter\": \"macOS ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0004\",\n      \"source\": \"macOS ?+\",\n      \"contextBefore\": \"Mac Catalyst ?+\",\n      \"contextAfter\": \"tvOS ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0005\",\n      \"source\": \"tvOS ?+\",\n      \"contextBefore\": \"macOS ?+\",\n      \"contextAfter\": \"visionOS ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS ?+\",\n      \"contextAfter\": \"watchOS ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0007\",\n      \"source\": \"watchOS ?+\",\n      \"contextBefore\": \"visionOS ?+\",\n      \"contextAfter\": \"Declaration\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nstatic var invalidCompositionTrackSegmentSourceDuration: AVError.Code { get }\\n```\",\n      \"contextAfter\": \"[AVError.Code](averror-swift.struct/code.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"An enumeration that defines the errors that framework operations can generate.\",\n      \"contextBefore\": \"[AVError.Code](averror-swift.struct/code.md)\",\n      \"contextAfter\": \"[static var airPlayControllerRequiresInternet: AVError.Code](averror-swift.struct/airplaycontrollerrequiresinternet.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[static var airPlayControllerRequiresInternet: AVError.Code](averror-swift.struct/airplaycontrollerrequiresinternet.md)\",\n      \"contextBefore\": \"An enumeration that defines the errors that framework operations can generate.\",\n      \"contextAfter\": \"The AirPlay controller requires an internet connection to function.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"The AirPlay controller requires an internet connection to function.\",\n      \"contextBefore\": \"[static var airPlayControllerRequiresInternet: AVError.Code](averror-swift.struct/airplaycontrollerrequiresinternet.md)\",\n      \"contextAfter\": \"[static var airPlayReceiverRequiresInternet: AVError.Code](averror-swift.struct/airplayreceiverrequiresinternet.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0012:0001\",\n      \"source\": \"[static var airPlayReceiverRequiresInternet: AVError.Code](averror-swift.struct/airplayreceiverrequiresinternet.md)\",\n      \"contextBefore\": \"The AirPlay controller requires an internet connection to function.\",\n      \"contextAfter\": \"The AirPlay receiver requires an internet connection to function.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"The AirPlay receiver requires an internet connection to function.\",\n      \"contextBefore\": \"[static var airPlayReceiverRequiresInternet: AVError.Code](averror-swift.struct/airplayreceiverrequiresinternet.md)\",\n      \"contextAfter\": \"[static var airPlayReceiverTemporarilyUnavailable: AVError.Code](averror-swift.struct/airplayreceivertemporarilyunavailable.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0014:0001\",\n      \"source\": \"[static var airPlayReceiverTemporarilyUnavailable: AVError.Code](averror-swift.struct/airplayreceivertemporarilyunavailable.md)\",\n      \"contextBefore\": \"The AirPlay receiver requires an internet connection to function.\",\n      \"contextAfter\": \"An AirPlay receiver is temporarily unavailable.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"An AirPlay receiver is temporarily unavailable.\",\n      \"contextBefore\": \"[static var airPlayReceiverTemporarilyUnavailable: AVError.Code](averror-swift.struct/airplayreceivertemporarilyunavailable.md)\",\n      \"contextAfter\": \"[static var applicationIsNotAuthorizedToUseDevice: AVError.Code](averror-swift.struct/applicationisnotauthorizedtousedevice.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0016:0001\",\n      \"source\": \"[static var applicationIsNotAuthorizedToUseDevice: AVError.Code](averror-swift.struct/applicationisnotauthorizedtousedevice.md)\",\n      \"contextBefore\": \"An AirPlay receiver is temporarily unavailable.\",\n      \"contextAfter\": \"The user denied this app permission to capture media.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"The user denied this app permission to capture media.\",\n      \"contextBefore\": \"[static var applicationIsNotAuthorizedToUseDevice: AVError.Code](averror-swift.struct/applicationisnotauthorizedtousedevice.md)\",\n      \"contextAfter\": \"[static var applicationIsNotAuthorized: AVError.Code](averror-swift.struct/applicationisnotauthorized.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0018:0001\",\n      \"source\": \"[static var applicationIsNotAuthorized: AVError.Code](averror-swift.struct/applicationisnotauthorized.md)\",\n      \"contextBefore\": \"The user denied this app permission to capture media.\",\n      \"contextAfter\": \"The app isn’t authorized to play media.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"The app isn’t authorized to play media.\",\n      \"contextBefore\": \"[static var applicationIsNotAuthorized: AVError.Code](averror-swift.struct/applicationisnotauthorized.md)\",\n      \"contextAfter\": \"[static var autoWhiteBalanceNotLocked: AVError.Code](averror-swift.struct/autowhitebalancenotlocked.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0020:0001\",\n      \"source\": \"[static var autoWhiteBalanceNotLocked: AVError.Code](averror-swift.struct/autowhitebalancenotlocked.md)\",\n      \"contextBefore\": \"The app isn’t authorized to play media.\",\n      \"contextAfter\": \"[static var compositionTrackSegmentsNotContiguous: AVError.Code](averror-swift.struct/compositiontracksegmentsnotcontiguous.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0020:0002\",\n      \"source\": \"[static var compositionTrackSegmentsNotContiguous: AVError.Code](averror-swift.struct/compositiontracksegmentsnotcontiguous.md)\",\n      \"contextBefore\": \"[static var autoWhiteBalanceNotLocked: AVError.Code](averror-swift.struct/autowhitebalancenotlocked.md)\",\n      \"contextAfter\": \"The composition can’t add the source media because it contains gaps.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"The composition can’t add the source media because it contains gaps.\",\n      \"contextBefore\": \"[static var compositionTrackSegmentsNotContiguous: AVError.Code](averror-swift.struct/compositiontracksegmentsnotcontiguous.md)\",\n      \"contextAfter\": \"[static var contentIsNotAuthorized: AVError.Code](averror-swift.struct/contentisnotauthorized.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0022:0001\",\n      \"source\": \"[static var contentIsNotAuthorized: AVError.Code](averror-swift.struct/contentisnotauthorized.md)\",\n      \"contextBefore\": \"The composition can’t add the source media because it contains gaps.\",\n      \"contextAfter\": \"The user isn’t authorized to play the media.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"The user isn’t authorized to play the media.\",\n      \"contextBefore\": \"[static var contentIsNotAuthorized: AVError.Code](averror-swift.struct/contentisnotauthorized.md)\",\n      \"contextAfter\": \"[static var contentIsProtected: AVError.Code](averror-swift.struct/contentisprotected.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0024:0001\",\n      \"source\": \"[static var contentIsProtected: AVError.Code](averror-swift.struct/contentisprotected.md)\",\n      \"contextBefore\": \"The user isn’t authorized to play the media.\",\n      \"contextAfter\": \"The app isn’t authorized to open the media.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    }\n  ]\n}\n\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T14:03:16.335355Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:17.125973Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:17.997249Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T14:03:19.091887Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T14:03:20.576883Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T14:03:22.777416Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T14:03:26.414405Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 1f69846c-2904-45f4-929a-36ebb23f62d6\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 1f69846c-2904-45f4-929a-36ebb23f62d6"
+    },
+    {
+      "batchIndex": 8,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1c7f-c440-7c33-aa4f-b66ad77b1ac9\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"id\": \"seg:list:initrawvalue:0004:0005\",\n      \"source\": \"tvOS ?+\",\n      \"contextBefore\": \"macOS ?+\",\n      \"contextAfter\": \"visionOS ?+\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:initrawvalue:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS ?+\",\n      \"contextAfter\": \"watchOS ?+\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:initrawvalue:0004:0007\",\n      \"source\": \"watchOS ?+\",\n      \"contextBefore\": \"visionOS ?+\",\n      \"contextAfter\": \"Declaration\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`rawValue`: A raw string value.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"`rawValue`: A raw string value.\",\n      \"contextAfter\": \"[init(String)](avmediatype/init(_:).md)\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[init(String)](avmediatype/init(_:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"Creates a media type with a string.\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"Creates a media type with a string.\",\n      \"contextBefore\": \"[init(String)](avmediatype/init(_:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmediatype/init(rawvalue:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:keyspace:0002:0001\",\n      \"source\": \"The key space for the metadata item’s key.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0001\",\n      \"source\": \"iOS ?+\",\n      \"contextBefore\": \"**Availability**:\",\n      \"contextAfter\": \"iPadOS ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0002\",\n      \"source\": \"iPadOS ?+\",\n      \"contextBefore\": \"iOS ?+\",\n      \"contextAfter\": \"Mac Catalyst ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS ?+\",\n      \"contextAfter\": \"macOS ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0004\",\n      \"source\": \"macOS ?+\",\n      \"contextBefore\": \"Mac Catalyst ?+\",\n      \"contextAfter\": \"tvOS ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0005\",\n      \"source\": \"tvOS ?+\",\n      \"contextBefore\": \"macOS ?+\",\n      \"contextAfter\": \"visionOS ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS ?+\",\n      \"contextAfter\": \"watchOS ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0007\",\n      \"source\": \"watchOS ?+\",\n      \"contextBefore\": \"visionOS ?+\",\n      \"contextAfter\": \"Declaration\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"The key space that this property value specifies is typically the default key space for the metadata container that stores the metadata item.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"AVFoundation uses key spaces to group related sets of keys.\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0009:0001\",\n      \"source\": \"AVFoundation uses key spaces to group related sets of keys.\",\n      \"contextBefore\": \"The key space that this property value specifies is typically the default key space for the metadata container that stores the metadata item.\",\n      \"contextAfter\": \"For example, the framework defines different key spaces for common keys, iTunes keys, ID3 keys, and QuickTime keys.\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0009:0002\",\n      \"source\": \"For example, the framework defines different key spaces for common keys, iTunes keys, ID3 keys, and QuickTime keys.\",\n      \"contextBefore\": \"AVFoundation uses key spaces to group related sets of keys.\",\n      \"contextAfter\": \"Key spaces aid in filtering arrays of metadata items.\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0009:0003\",\n      \"source\": \"Key spaces aid in filtering arrays of metadata items.\",\n      \"contextBefore\": \"For example, the framework defines different key spaces for common keys, iTunes keys, ID3 keys, and QuickTime keys.\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0010:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"Key spaces aid in filtering arrays of metadata items.\",\n      \"contextAfter\": \"[var key: (any NSCopying & NSObjectProtocol)?](avmetadataitem/key.md)\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0012:0001\",\n      \"source\": \"The key of the metadata item.\",\n      \"contextBefore\": \"[var key: (any NSCopying & NSObjectProtocol)?](avmetadataitem/key.md)\",\n      \"contextAfter\": \"[var commonKey: AVMetadataKey?](avmetadataitem/commonkey.md)\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0014:0001\",\n      \"source\": \"The common key of the metadata item.\",\n      \"contextBefore\": \"[var commonKey: AVMetadataKey?](avmetadataitem/commonkey.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:id3metadatakeyplaylistdelay:0002:0001\",\n      \"source\": \"A key that represents the number of milliseconds of silence between every song in a playlist.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nstatic let id3MetadataKeyPlaylistDelay: AVMetadataKey\\n```\",\n      \"contextAfter\": \"[static let id3MetadataKeyAlbumSortOrder: AVMetadataKey](avmetadatakey/id3metadatakeyalbumsortorder.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0008:0001\",\n      \"source\": \"[static let id3MetadataKeyAlbumSortOrder: AVMetadataKey](avmetadatakey/id3metadatakeyalbumsortorder.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"A key that represents how to sort the album.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"A key that represents how to sort the album.\",\n      \"contextBefore\": \"[static let id3MetadataKeyAlbumSortOrder: AVMetadataKey](avmetadatakey/id3metadatakeyalbumsortorder.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyAlbumTitle: AVMetadataKey](avmetadatakey/id3metadatakeyalbumtitle.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[static let id3MetadataKeyAlbumTitle: AVMetadataKey](avmetadatakey/id3metadatakeyalbumtitle.md)\",\n      \"contextBefore\": \"A key that represents how to sort the album.\",\n      \"contextAfter\": \"A key that represents the title of the recording.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"A key that represents the title of the recording.\",\n      \"contextBefore\": \"[static let id3MetadataKeyAlbumTitle: AVMetadataKey](avmetadatakey/id3metadatakeyalbumtitle.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyAttachedPicture: AVMetadataKey](avmetadatakey/id3metadatakeyattachedpicture.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0012:0001\",\n      \"source\": \"[static let id3MetadataKeyAttachedPicture: AVMetadataKey](avmetadatakey/id3metadatakeyattachedpicture.md)\",\n      \"contextBefore\": \"A key that represents the title of the recording.\",\n      \"contextAfter\": \"A key that represents an image relating to the audio file.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"A key that represents an image relating to the audio file.\",\n      \"contextBefore\": \"[static let id3MetadataKeyAttachedPicture: AVMetadataKey](avmetadatakey/id3metadatakeyattachedpicture.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyAudioEncryption: AVMetadataKey](avmetadatakey/id3metadatakeyaudioencryption.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0014:0001\",\n      \"source\": \"[static let id3MetadataKeyAudioEncryption: AVMetadataKey](avmetadatakey/id3metadatakeyaudioencryption.md)\",\n      \"contextBefore\": \"A key that represents an image relating to the audio file.\",\n      \"contextAfter\": \"A key that represents the encryption details of the audio stream.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"A key that represents the encryption details of the audio stream.\",\n      \"contextBefore\": \"[static let id3MetadataKeyAudioEncryption: AVMetadataKey](avmetadatakey/id3metadatakeyaudioencryption.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyAudioSeekPointIndex: AVMetadataKey](avmetadatakey/id3metadatakeyaudioseekpointindex.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0016:0001\",\n      \"source\": \"[static let id3MetadataKeyAudioSeekPointIndex: AVMetadataKey](avmetadatakey/id3metadatakeyaudioseekpointindex.md)\",\n      \"contextBefore\": \"A key that represents the encryption details of the audio stream.\",\n      \"contextAfter\": \"A key that represents the list of seek points within the audio file.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"A key that represents the list of seek points within the audio file.\",\n      \"contextBefore\": \"[static let id3MetadataKeyAudioSeekPointIndex: AVMetadataKey](avmetadatakey/id3metadatakeyaudioseekpointindex.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyBand: AVMetadataKey](avmetadatakey/id3metadatakeyband.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0018:0001\",\n      \"source\": \"[static let id3MetadataKeyBand: AVMetadataKey](avmetadatakey/id3metadatakeyband.md)\",\n      \"contextBefore\": \"A key that represents the list of seek points within the audio file.\",\n      \"contextAfter\": \"A key that represents additional information about the performers in the recording.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"A key that represents additional information about the performers in the recording.\",\n      \"contextBefore\": \"[static let id3MetadataKeyBand: AVMetadataKey](avmetadatakey/id3metadatakeyband.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyBeatsPerMinute: AVMetadataKey](avmetadatakey/id3metadatakeybeatsperminute.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0020:0001\",\n      \"source\": \"[static let id3MetadataKeyBeatsPerMinute: AVMetadataKey](avmetadatakey/id3metadatakeybeatsperminute.md)\",\n      \"contextBefore\": \"A key that represents additional information about the performers in the recording.\",\n      \"contextAfter\": \"A key that represents the beats per minute of the audio.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"A key that represents the beats per minute of the audio.\",\n      \"contextBefore\": \"[static let id3MetadataKeyBeatsPerMinute: AVMetadataKey](avmetadatakey/id3metadatakeybeatsperminute.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyComments: AVMetadataKey](avmetadatakey/id3metadatakeycomments.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0022:0001\",\n      \"source\": \"[static let id3MetadataKeyComments: AVMetadataKey](avmetadatakey/id3metadatakeycomments.md)\",\n      \"contextBefore\": \"A key that represents the beats per minute of the audio.\",\n      \"contextAfter\": \"A key that represents additional text information for the media.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"A key that represents additional text information for the media.\",\n      \"contextBefore\": \"[static let id3MetadataKeyComments: AVMetadataKey](avmetadatakey/id3metadatakeycomments.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyCommercial: AVMetadataKey](avmetadatakey/id3metadatakeycommercial.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0024:0001\",\n      \"source\": \"[static let id3MetadataKeyCommercial: AVMetadataKey](avmetadatakey/id3metadatakeycommercial.md)\",\n      \"contextBefore\": \"A key that represents additional text information for the media.\",\n      \"contextAfter\": \"A key that represents the commercial details for the media.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"A key that represents the commercial details for the media.\",\n      \"contextBefore\": \"[static let id3MetadataKeyCommercial: AVMetadataKey](avmetadatakey/id3metadatakeycommercial.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyCommercialInformation: AVMetadataKey](avmetadatakey/id3metadatakeycommercialinformation.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0026:0001\",\n      \"source\": \"[static let id3MetadataKeyCommercialInformation: AVMetadataKey](avmetadatakey/id3metadatakeycommercialinformation.md)\",\n      \"contextBefore\": \"A key that represents the commercial details for the media.\",\n      \"contextAfter\": \"A key that represents the webpage containing purchasing information.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0027:0001\",\n      \"source\": \"A key that represents the webpage containing purchasing information.\",\n      \"contextBefore\": \"[static let id3MetadataKeyCommercialInformation: AVMetadataKey](avmetadatakey/id3metadatakeycommercialinformation.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyComposer: AVMetadataKey](avmetadatakey/id3metadatakeycomposer.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0028:0001\",\n      \"source\": \"[static let id3MetadataKeyComposer: AVMetadataKey](avmetadatakey/id3metadatakeycomposer.md)\",\n      \"contextBefore\": \"A key that represents the webpage containing purchasing information.\",\n      \"contextAfter\": \"A key that represents the name of the composer.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"A key that represents the name of the composer.\",\n      \"contextBefore\": \"[static let id3MetadataKeyComposer: AVMetadataKey](avmetadatakey/id3metadatakeycomposer.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyConductor: AVMetadataKey](avmetadatakey/id3metadatakeyconductor.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0030:0001\",\n      \"source\": \"[static let id3MetadataKeyConductor: AVMetadataKey](avmetadatakey/id3metadatakeyconductor.md)\",\n      \"contextBefore\": \"A key that represents the name of the composer.\",\n      \"contextAfter\": \"A key that represents the name of the conductor.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"A key that represents the name of the conductor.\",\n      \"contextBefore\": \"[static let id3MetadataKeyConductor: AVMetadataKey](avmetadatakey/id3metadatakeyconductor.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyContentGroupDescription: AVMetadataKey](avmetadatakey/id3metadatakeycontentgroupdescription.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0032:0001\",\n      \"source\": \"[static let id3MetadataKeyContentGroupDescription: AVMetadataKey](avmetadatakey/id3metadatakeycontentgroupdescription.md)\",\n      \"contextBefore\": \"A key that represents the name of the conductor.\",\n      \"contextAfter\": \"A key that indicates the sound belongs to a larger category of sounds or music.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"A key that indicates the sound belongs to a larger category of sounds or music.\",\n      \"contextBefore\": \"[static let id3MetadataKeyContentGroupDescription: AVMetadataKey](avmetadatakey/id3metadatakeycontentgroupdescription.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyContentType: AVMetadataKey](avmetadatakey/id3metadatakeycontenttype.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0034:0001\",\n      \"source\": \"[static let id3MetadataKeyContentType: AVMetadataKey](avmetadatakey/id3metadatakeycontenttype.md)\",\n      \"contextBefore\": \"A key that indicates the sound belongs to a larger category of sounds or music.\",\n      \"contextAfter\": \"A key that represents the media content type.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0035:0001\",\n      \"source\": \"A key that represents the media content type.\",\n      \"contextBefore\": \"[static let id3MetadataKeyContentType: AVMetadataKey](avmetadatakey/id3metadatakeycontenttype.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyCopyright: AVMetadataKey](avmetadatakey/id3metadatakeycopyright.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0036:0001\",\n      \"source\": \"[static let id3MetadataKeyCopyright: AVMetadataKey](avmetadatakey/id3metadatakeycopyright.md)\",\n      \"contextBefore\": \"A key that represents the media content type.\",\n      \"contextAfter\": \"A key that represents the copyright statement.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0037:0001\",\n      \"source\": \"A key that represents the copyright statement.\",\n      \"contextBefore\": \"[static let id3MetadataKeyCopyright: AVMetadataKey](avmetadatakey/id3metadatakeycopyright.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:dogbody:0002:0001\",\n      \"source\": \"A constant that identifies dog body metadata.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"dogBody\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nstatic let dogBody: AVMetadataObject.ObjectType\\n```\",\n      \"contextAfter\": \"[static let humanBody: AVMetadataObject.ObjectType](avmetadataobject/objecttype/humanbody.md)\",\n      \"documentTitle\": \"dogBody\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0008:0001\",\n      \"source\": \"[static let humanBody: AVMetadataObject.ObjectType](avmetadataobject/objecttype/humanbody.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"A constant that identifies human body metadata.\",\n      \"documentTitle\": \"dogBody\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"A constant that identifies human body metadata.\",\n      \"contextBefore\": \"[static let humanBody: AVMetadataObject.ObjectType](avmetadataobject/objecttype/humanbody.md)\",\n      \"contextAfter\": \"[static let humanFullBody: AVMetadataObject.ObjectType](avmetadataobject/objecttype/humanfullbody.md)\",\n      \"documentTitle\": \"dogBody\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[static let humanFullBody: AVMetadataObject.ObjectType](avmetadataobject/objecttype/humanfullbody.md)\",\n      \"contextBefore\": \"A constant that identifies human body metadata.\",\n      \"contextAfter\": \"A constant that identifies human full body metadata.\",\n      \"documentTitle\": \"dogBody\",\n      \"framework\": \"AVFoundation\"\n    }\n  ]\n}\n\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T14:03:16.710852Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:17.789300Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:18.674797Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T14:03:19.740282Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T14:03:21.228204Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T14:03:23.649476Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T14:03:27.617473Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: e4057baa-8ec8-4261-acff-bb4a33a39140\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: e4057baa-8ec8-4261-acff-bb4a33a39140"
+    }
+  ],
+  "progress": {
+    "generatedAt": "2026-05-12T14:02:28.522Z",
+    "updatedAt": "2026-05-12T14:03:28.055Z",
+    "reason": "paused",
+    "queue": "state/queue/shard-0047.json",
+    "shard": {
+      "index": 47,
+      "total": 256
+    },
+    "abortReason": "Paused after Codex usage limit; retry after 7:02 PM",
+    "pause": {
+      "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM.",
+      "retryAfterText": "7:02 PM",
+      "retryAt": "2026-05-12T19:02:00.000Z"
+    },
+    "totals": {
+      "batches": 235,
+      "segments": 13050,
+      "completed": 6,
+      "failed": 2,
+      "processed": 8,
+      "active": 0,
+      "queued": 227,
+      "percent": 3.4
+    },
+    "batches": [
+      {
+        "index": 0,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:28.526Z",
+        "completedAt": "2026-05-12T14:02:49.307Z",
+        "durationMs": 20781
+      },
+      {
+        "index": 1,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:28.526Z",
+        "completedAt": "2026-05-12T14:02:47.589Z",
+        "durationMs": 19063
+      },
+      {
+        "index": 2,
+        "status": "success",
+        "segments": 50,
+        "startedAt": "2026-05-12T14:02:28.526Z",
+        "completedAt": "2026-05-12T14:02:49.496Z",
+        "durationMs": 20970
+      },
+      {
+        "index": 3,
+        "status": "success",
+        "segments": 47,
+        "startedAt": "2026-05-12T14:02:47.591Z",
+        "completedAt": "2026-05-12T14:03:08.147Z",
+        "durationMs": 20556
+      },
+      {
+        "index": 4,
+        "status": "success",
+        "segments": 28,
+        "startedAt": "2026-05-12T14:02:49.309Z",
+        "completedAt": "2026-05-12T14:03:08.443Z",
+        "durationMs": 19134
+      },
+      {
+        "index": 5,
+        "status": "success",
+        "segments": 40,
+        "startedAt": "2026-05-12T14:02:49.505Z",
+        "completedAt": "2026-05-12T14:03:12.688Z",
+        "durationMs": 23183
+      },
+      {
+        "index": 6,
+        "status": "failed",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:03:08.150Z",
+        "completedAt": "2026-05-12T14:03:26.787Z",
+        "durationMs": 18637,
+        "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1c7f-bbd8-7113-a5df-4182366c4ff2\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"A Boolean value that indicates whether a device is currently connected to the system and available for use.\",\n      \"contextBefore\": \"[var isConnected: Bool](avcapturedevice/isconnected.md)\",\n      \"contextAfter\": \"[var isSuspended: Bool](avcapturedevice/issuspended.md)\",\n      \"documentTitle\": \"isInUseByAnotherApplication\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"A Boolean value that indicates whether the device is in a suspended state.\",\n      \"contextBefore\": \"[var isSuspended: Bool](avcapturedevice/issuspended.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"isInUseByAnotherApplication\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:aspectratio:0002:0001\",\n      \"source\": \"An aspect ratio.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"aspectRatio\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"One of the enumerated aspect ratios suitable for use with the [`AVCaptureDevice`](avcapturedevice.md) dynamic aspect ratio APIs.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"aspectRatio\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"One of the enumerated aspect ratios suitable for use with the [`AVCaptureDevice`](avcapturedevice.md) dynamic aspect ratio APIs.\",\n      \"contextAfter\": \"[var zoomFactor: Float](avcaptureframing/zoomfactor.md)\",\n      \"documentTitle\": \"aspectRatio\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"A zoom factor.\",\n      \"contextBefore\": \"[var zoomFactor: Float](avcaptureframing/zoomfactor.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"aspectRatio\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:isautodeferredphotodeliverysupported:0002:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output supports deferred photo delivery.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nvar isAutoDeferredPhotoDeliverySupported: Bool { get }\\n```\",\n      \"contextAfter\": \"[var captureReadiness: AVCapturePhotoOutput.CaptureReadiness](avcapturephotooutput/capturereadiness-swift.property.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"A value that specifies whether the photo output is ready to respond to new capture requests in a timely manner.\",\n      \"contextBefore\": \"[var captureReadiness: AVCapturePhotoOutput.CaptureReadiness](avcapturephotooutput/capturereadiness-swift.property.md)\",\n      \"contextAfter\": \"[AVCapturePhotoOutput.CaptureReadiness](avcapturephotooutput/capturereadiness-swift.enum.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"Constants that indicate whether the output is ready to receive capture requests.\",\n      \"contextBefore\": \"[AVCapturePhotoOutput.CaptureReadiness](avcapturephotooutput/capturereadiness-swift.enum.md)\",\n      \"contextAfter\": \"[var isAutoDeferredPhotoDeliveryEnabled: Bool](avcapturephotooutput/isautodeferredphotodeliveryenabled.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"A Boolean value that indicates the enabled state of automatic deferred photo delivery.\",\n      \"contextBefore\": \"[var isAutoDeferredPhotoDeliveryEnabled: Bool](avcapturephotooutput/isautodeferredphotodeliveryenabled.md)\",\n      \"contextAfter\": \"[var isFastCapturePrioritizationSupported: Bool](avcapturephotooutput/isfastcaptureprioritizationsupported.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output supports fast capture prioritization.\",\n      \"contextBefore\": \"[var isFastCapturePrioritizationSupported: Bool](avcapturephotooutput/isfastcaptureprioritizationsupported.md)\",\n      \"contextAfter\": \"[var isFastCapturePrioritizationEnabled: Bool](avcapturephotooutput/isfastcaptureprioritizationenabled.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"A Boolean value that indicates whether the output enables fast capture prioritization.\",\n      \"contextBefore\": \"[var isFastCapturePrioritizationEnabled: Bool](avcapturephotooutput/isfastcaptureprioritizationenabled.md)\",\n      \"contextAfter\": \"[var isResponsiveCaptureSupported: Bool](avcapturephotooutput/isresponsivecapturesupported.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output supports responsive capture.\",\n      \"contextBefore\": \"[var isResponsiveCaptureSupported: Bool](avcapturephotooutput/isresponsivecapturesupported.md)\",\n      \"contextAfter\": \"[var isResponsiveCaptureEnabled: Bool](avcapturephotooutput/isresponsivecaptureenabled.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output configuration enables responsive capture.\",\n      \"contextBefore\": \"[var isResponsiveCaptureEnabled: Bool](avcapturephotooutput/isresponsivecaptureenabled.md)\",\n      \"contextAfter\": \"[var isZeroShutterLagSupported: Bool](avcapturephotooutput/iszeroshutterlagsupported.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output supports zero shutter lag.\",\n      \"contextBefore\": \"[var isZeroShutterLagSupported: Bool](avcapturephotooutput/iszeroshutterlagsupported.md)\",\n      \"contextAfter\": \"[var isZeroShutterLagEnabled: Bool](avcapturephotooutput/iszeroshutterlagenabled.md)\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"A Boolean value that indicates whether the photo output configuration enables zero shutter lag.\",\n      \"contextBefore\": \"[var isZeroShutterLagEnabled: Bool](avcapturephotooutput/iszeroshutterlagenabled.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"isAutoDeferredPhotoDeliverySupported\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:timecodegeneratortransitionedtofor:0000:0001\",\n      \"source\": \"timecodeGenerator(_:transitionedTo:for:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: AVFoundation **Kind**: method **Required**: Yes\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:timecodegeneratortransitionedtofor:0001:0001\",\n      \"source\": \"**Framework**: AVFoundation **Kind**: method **Required**: Yes\",\n      \"contextBefore\": \"timecodeGenerator(_:transitionedTo:for:)\",\n      \"contextAfter\": \"Notifies the delegate when the synchronization status of a timecode source changes.\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:timecodegeneratortransitionedtofor:0002:0001\",\n      \"source\": \"Notifies the delegate when the synchronization status of a timecode source changes.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: method **Required**: Yes\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`generator`: The [`AVCaptureTimecodeGenerator`](avcapturetimecodegenerator.md) instance providing the status update.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"`synchronizationStatus`: The updated synchronization state.\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0008:0002\",\n      \"source\": \"`synchronizationStatus`: The updated synchronization state.\",\n      \"contextBefore\": \"`generator`: The [`AVCaptureTimecodeGenerator`](avcapturetimecodegenerator.md) instance providing the status update.\",\n      \"contextAfter\": \"`source`: The internal or external source to which the generator synchronizes.\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0008:0003\",\n      \"source\": \"`source`: The internal or external source to which the generator synchronizes.\",\n      \"contextBefore\": \"`synchronizationStatus`: The updated synchronization state.\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"`source`: The internal or external source to which the generator synchronizes.\",\n      \"contextAfter\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didReceiveUpdate: AVCaptureTimecode, from: AVCaptureTimecode.Source)](avcapturetimecodegeneratordelegate/timecodegenerator(_:didreceiveupdate:from:).md)\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didReceiveUpdate: AVCaptureTimecode, from: AVCaptureTimecode.Source)](avcapturetimecodegeneratordelegate/timecodegenerator(_:didreceiveupdate:from:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"Notifies the delegate when new, unaligned timecodes are parsed from the specified source.\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"Notifies the delegate when new, unaligned timecodes are parsed from the specified source.\",\n      \"contextBefore\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didReceiveUpdate: AVCaptureTimecode, from: AVCaptureTimecode.Source)](avcapturetimecodegeneratordelegate/timecodegenerator(_:didreceiveupdate:from:).md)\",\n      \"contextAfter\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didUpdateAvailableSources: [AVCaptureTimecode.Source])](avcapturetimecodegeneratordelegate/timecodegenerator(_:didupdateavailablesources:).md)\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0012:0001\",\n      \"source\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didUpdateAvailableSources: [AVCaptureTimecode.Source])](avcapturetimecodegeneratordelegate/timecodegenerator(_:didupdateavailablesources:).md)\",\n      \"contextBefore\": \"Notifies the delegate when new, unaligned timecodes are parsed from the specified source.\",\n      \"contextAfter\": \"Notifies the delegate when the list of available timecode synchronization sources is updated.\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"Notifies the delegate when the list of available timecode synchronization sources is updated.\",\n      \"contextBefore\": \"[func timecodeGenerator(AVCaptureTimecodeGenerator, didUpdateAvailableSources: [AVCaptureTimecode.Source])](avcapturetimecodegeneratordelegate/timecodegenerator(_:didupdateavailablesources:).md)\",\n      \"contextAfter\": \"[AVCaptureTimecodeGenerator.SynchronizationStatus](avcapturetimecodegenerator/synchronizationstatus.md)\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"Constants defining the synchronization status of a timecode generator .\",\n      \"contextBefore\": \"[AVCaptureTimecodeGenerator.SynchronizationStatus](avcapturetimecodegenerator/synchronizationstatus.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturetimecodegeneratordelegate/timecodegenerator(_:transitionedto:for:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"timecodeGenerator(:transitionedTo:for:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:shouldbufferinanticipationofplayback:0002:0001\",\n      \"source\": \"A Boolean value that indicates whether the player starts buffering in preparation for a request to begin playback.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"shouldBufferInAnticipationOfPlayback\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"A [`true`](https://developer.apple.com/documentation/Swift/true) value indicates that a participant player requests starting playback at the [`anticipatedPlaybackRate`](avdelegatingplaybackcoordinatorpausecommand/anticipatedplaybackrate.md) value.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"shouldBufferInAnticipationOfPlayback\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"A [`true`](https://developer.apple.com/documentation/Swift/true) value indicates that a participant player requests starting playback at the [`anticipatedPlaybackRate`](avdelegatingplaybackcoordinatorpausecommand/anticipatedplaybackrate.md) value.\",\n      \"contextAfter\": \"[var anticipatedPlaybackRate: Float](avdelegatingplaybackcoordinatorpausecommand/anticipatedplaybackrate.md)\",\n      \"documentTitle\": \"shouldBufferInAnticipationOfPlayback\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"The rate at which the coordinator expects the current item to play.\",\n      \"contextBefore\": \"[var anticipatedPlaybackRate: Float](avdelegatingplaybackcoordinatorpausecommand/anticipatedplaybackrate.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"shouldBufferInAnticipationOfPlayback\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:invalidcompositiontracksegmentsourceduration:0002:0001\",\n      \"source\": \"You can’t add the source media because it has no duration.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0001\",\n      \"source\": \"iOS ?+\",\n      \"contextBefore\": \"**Availability**:\",\n      \"contextAfter\": \"iPadOS ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0002\",\n      \"source\": \"iPadOS ?+\",\n      \"contextBefore\": \"iOS ?+\",\n      \"contextAfter\": \"Mac Catalyst ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS ?+\",\n      \"contextAfter\": \"macOS ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0004\",\n      \"source\": \"macOS ?+\",\n      \"contextBefore\": \"Mac Catalyst ?+\",\n      \"contextAfter\": \"tvOS ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0005\",\n      \"source\": \"tvOS ?+\",\n      \"contextBefore\": \"macOS ?+\",\n      \"contextAfter\": \"visionOS ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS ?+\",\n      \"contextAfter\": \"watchOS ?+\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:invalidcompositiontracksegmentsourceduration:0004:0007\",\n      \"source\": \"watchOS ?+\",\n      \"contextBefore\": \"visionOS ?+\",\n      \"contextAfter\": \"Declaration\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nstatic var invalidCompositionTrackSegmentSourceDuration: AVError.Code { get }\\n```\",\n      \"contextAfter\": \"[AVError.Code](averror-swift.struct/code.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"An enumeration that defines the errors that framework operations can generate.\",\n      \"contextBefore\": \"[AVError.Code](averror-swift.struct/code.md)\",\n      \"contextAfter\": \"[static var airPlayControllerRequiresInternet: AVError.Code](averror-swift.struct/airplaycontrollerrequiresinternet.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[static var airPlayControllerRequiresInternet: AVError.Code](averror-swift.struct/airplaycontrollerrequiresinternet.md)\",\n      \"contextBefore\": \"An enumeration that defines the errors that framework operations can generate.\",\n      \"contextAfter\": \"The AirPlay controller requires an internet connection to function.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"The AirPlay controller requires an internet connection to function.\",\n      \"contextBefore\": \"[static var airPlayControllerRequiresInternet: AVError.Code](averror-swift.struct/airplaycontrollerrequiresinternet.md)\",\n      \"contextAfter\": \"[static var airPlayReceiverRequiresInternet: AVError.Code](averror-swift.struct/airplayreceiverrequiresinternet.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0012:0001\",\n      \"source\": \"[static var airPlayReceiverRequiresInternet: AVError.Code](averror-swift.struct/airplayreceiverrequiresinternet.md)\",\n      \"contextBefore\": \"The AirPlay controller requires an internet connection to function.\",\n      \"contextAfter\": \"The AirPlay receiver requires an internet connection to function.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"The AirPlay receiver requires an internet connection to function.\",\n      \"contextBefore\": \"[static var airPlayReceiverRequiresInternet: AVError.Code](averror-swift.struct/airplayreceiverrequiresinternet.md)\",\n      \"contextAfter\": \"[static var airPlayReceiverTemporarilyUnavailable: AVError.Code](averror-swift.struct/airplayreceivertemporarilyunavailable.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0014:0001\",\n      \"source\": \"[static var airPlayReceiverTemporarilyUnavailable: AVError.Code](averror-swift.struct/airplayreceivertemporarilyunavailable.md)\",\n      \"contextBefore\": \"The AirPlay receiver requires an internet connection to function.\",\n      \"contextAfter\": \"An AirPlay receiver is temporarily unavailable.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"An AirPlay receiver is temporarily unavailable.\",\n      \"contextBefore\": \"[static var airPlayReceiverTemporarilyUnavailable: AVError.Code](averror-swift.struct/airplayreceivertemporarilyunavailable.md)\",\n      \"contextAfter\": \"[static var applicationIsNotAuthorizedToUseDevice: AVError.Code](averror-swift.struct/applicationisnotauthorizedtousedevice.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0016:0001\",\n      \"source\": \"[static var applicationIsNotAuthorizedToUseDevice: AVError.Code](averror-swift.struct/applicationisnotauthorizedtousedevice.md)\",\n      \"contextBefore\": \"An AirPlay receiver is temporarily unavailable.\",\n      \"contextAfter\": \"The user denied this app permission to capture media.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"The user denied this app permission to capture media.\",\n      \"contextBefore\": \"[static var applicationIsNotAuthorizedToUseDevice: AVError.Code](averror-swift.struct/applicationisnotauthorizedtousedevice.md)\",\n      \"contextAfter\": \"[static var applicationIsNotAuthorized: AVError.Code](averror-swift.struct/applicationisnotauthorized.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0018:0001\",\n      \"source\": \"[static var applicationIsNotAuthorized: AVError.Code](averror-swift.struct/applicationisnotauthorized.md)\",\n      \"contextBefore\": \"The user denied this app permission to capture media.\",\n      \"contextAfter\": \"The app isn’t authorized to play media.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"The app isn’t authorized to play media.\",\n      \"contextBefore\": \"[static var applicationIsNotAuthorized: AVError.Code](averror-swift.struct/applicationisnotauthorized.md)\",\n      \"contextAfter\": \"[static var autoWhiteBalanceNotLocked: AVError.Code](averror-swift.struct/autowhitebalancenotlocked.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0020:0001\",\n      \"source\": \"[static var autoWhiteBalanceNotLocked: AVError.Code](averror-swift.struct/autowhitebalancenotlocked.md)\",\n      \"contextBefore\": \"The app isn’t authorized to play media.\",\n      \"contextAfter\": \"[static var compositionTrackSegmentsNotContiguous: AVError.Code](averror-swift.struct/compositiontracksegmentsnotcontiguous.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0020:0002\",\n      \"source\": \"[static var compositionTrackSegmentsNotContiguous: AVError.Code](averror-swift.struct/compositiontracksegmentsnotcontiguous.md)\",\n      \"contextBefore\": \"[static var autoWhiteBalanceNotLocked: AVError.Code](averror-swift.struct/autowhitebalancenotlocked.md)\",\n      \"contextAfter\": \"The composition can’t add the source media because it contains gaps.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"The composition can’t add the source media because it contains gaps.\",\n      \"contextBefore\": \"[static var compositionTrackSegmentsNotContiguous: AVError.Code](averror-swift.struct/compositiontracksegmentsnotcontiguous.md)\",\n      \"contextAfter\": \"[static var contentIsNotAuthorized: AVError.Code](averror-swift.struct/contentisnotauthorized.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0022:0001\",\n      \"source\": \"[static var contentIsNotAuthorized: AVError.Code](averror-swift.struct/contentisnotauthorized.md)\",\n      \"contextBefore\": \"The composition can’t add the source media because it contains gaps.\",\n      \"contextAfter\": \"The user isn’t authorized to play the media.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"The user isn’t authorized to play the media.\",\n      \"contextBefore\": \"[static var contentIsNotAuthorized: AVError.Code](averror-swift.struct/contentisnotauthorized.md)\",\n      \"contextAfter\": \"[static var contentIsProtected: AVError.Code](averror-swift.struct/contentisprotected.md)\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0024:0001\",\n      \"source\": \"[static var contentIsProtected: AVError.Code](averror-swift.struct/contentisprotected.md)\",\n      \"contextBefore\": \"The user isn’t authorized to play the media.\",\n      \"contextAfter\": \"The app isn’t authorized to open the media.\",\n      \"documentTitle\": \"invalidCompositionTrackSegmentSourceDuration\",\n      \"framework\": \"AVFoundation\"\n    }\n  ]\n}\n\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T14:03:16.335355Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:17.125973Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:17.997249Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T14:03:19.091887Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T14:03:20.576883Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T14:03:22.777416Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T14:03:26.414405Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 1f69846c-2904-45f4-929a-36ebb23f62d6\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 1f69846c-2904-45f4-929a-36ebb23f62d6"
+      },
+      {
+        "index": 7,
+        "status": "queued",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:03:08.447Z",
+        "completedAt": "2026-05-12T14:03:14.240Z",
+        "durationMs": 5793,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+      },
+      {
+        "index": 8,
+        "status": "failed",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:03:12.690Z",
+        "completedAt": "2026-05-12T14:03:28.050Z",
+        "durationMs": 15360,
+        "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1c7f-c440-7c33-aa4f-b66ad77b1ac9\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"id\": \"seg:list:initrawvalue:0004:0005\",\n      \"source\": \"tvOS ?+\",\n      \"contextBefore\": \"macOS ?+\",\n      \"contextAfter\": \"visionOS ?+\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:initrawvalue:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS ?+\",\n      \"contextAfter\": \"watchOS ?+\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:initrawvalue:0004:0007\",\n      \"source\": \"watchOS ?+\",\n      \"contextBefore\": \"visionOS ?+\",\n      \"contextAfter\": \"Declaration\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0008:0001\",\n      \"source\": \"`rawValue`: A raw string value.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0009:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"`rawValue`: A raw string value.\",\n      \"contextAfter\": \"[init(String)](avmediatype/init(_:).md)\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[init(String)](avmediatype/init(_:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"Creates a media type with a string.\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"Creates a media type with a string.\",\n      \"contextBefore\": \"[init(String)](avmediatype/init(_:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmediatype/init(rawvalue:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"init(rawValue:)\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:keyspace:0002:0001\",\n      \"source\": \"The key space for the metadata item’s key.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0001\",\n      \"source\": \"iOS ?+\",\n      \"contextBefore\": \"**Availability**:\",\n      \"contextAfter\": \"iPadOS ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0002\",\n      \"source\": \"iPadOS ?+\",\n      \"contextBefore\": \"iOS ?+\",\n      \"contextAfter\": \"Mac Catalyst ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS ?+\",\n      \"contextAfter\": \"macOS ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0004\",\n      \"source\": \"macOS ?+\",\n      \"contextBefore\": \"Mac Catalyst ?+\",\n      \"contextAfter\": \"tvOS ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0005\",\n      \"source\": \"tvOS ?+\",\n      \"contextBefore\": \"macOS ?+\",\n      \"contextAfter\": \"visionOS ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS ?+\",\n      \"contextAfter\": \"watchOS ?+\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:keyspace:0004:0007\",\n      \"source\": \"watchOS ?+\",\n      \"contextBefore\": \"visionOS ?+\",\n      \"contextAfter\": \"Declaration\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0008:0001\",\n      \"source\": \"The key space that this property value specifies is typically the default key space for the metadata container that stores the metadata item.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"AVFoundation uses key spaces to group related sets of keys.\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0009:0001\",\n      \"source\": \"AVFoundation uses key spaces to group related sets of keys.\",\n      \"contextBefore\": \"The key space that this property value specifies is typically the default key space for the metadata container that stores the metadata item.\",\n      \"contextAfter\": \"For example, the framework defines different key spaces for common keys, iTunes keys, ID3 keys, and QuickTime keys.\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0009:0002\",\n      \"source\": \"For example, the framework defines different key spaces for common keys, iTunes keys, ID3 keys, and QuickTime keys.\",\n      \"contextBefore\": \"AVFoundation uses key spaces to group related sets of keys.\",\n      \"contextAfter\": \"Key spaces aid in filtering arrays of metadata items.\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:discussion:0009:0003\",\n      \"source\": \"Key spaces aid in filtering arrays of metadata items.\",\n      \"contextBefore\": \"For example, the framework defines different key spaces for common keys, iTunes keys, ID3 keys, and QuickTime keys.\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0010:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"Key spaces aid in filtering arrays of metadata items.\",\n      \"contextAfter\": \"[var key: (any NSCopying & NSObjectProtocol)?](avmetadataitem/key.md)\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0012:0001\",\n      \"source\": \"The key of the metadata item.\",\n      \"contextBefore\": \"[var key: (any NSCopying & NSObjectProtocol)?](avmetadataitem/key.md)\",\n      \"contextAfter\": \"[var commonKey: AVMetadataKey?](avmetadataitem/commonkey.md)\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0014:0001\",\n      \"source\": \"The common key of the metadata item.\",\n      \"contextBefore\": \"[var commonKey: AVMetadataKey?](avmetadataitem/commonkey.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"keySpace\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:id3metadatakeyplaylistdelay:0002:0001\",\n      \"source\": \"A key that represents the number of milliseconds of silence between every song in a playlist.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nstatic let id3MetadataKeyPlaylistDelay: AVMetadataKey\\n```\",\n      \"contextAfter\": \"[static let id3MetadataKeyAlbumSortOrder: AVMetadataKey](avmetadatakey/id3metadatakeyalbumsortorder.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0008:0001\",\n      \"source\": \"[static let id3MetadataKeyAlbumSortOrder: AVMetadataKey](avmetadatakey/id3metadatakeyalbumsortorder.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"A key that represents how to sort the album.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"A key that represents how to sort the album.\",\n      \"contextBefore\": \"[static let id3MetadataKeyAlbumSortOrder: AVMetadataKey](avmetadatakey/id3metadatakeyalbumsortorder.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyAlbumTitle: AVMetadataKey](avmetadatakey/id3metadatakeyalbumtitle.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[static let id3MetadataKeyAlbumTitle: AVMetadataKey](avmetadatakey/id3metadatakeyalbumtitle.md)\",\n      \"contextBefore\": \"A key that represents how to sort the album.\",\n      \"contextAfter\": \"A key that represents the title of the recording.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"A key that represents the title of the recording.\",\n      \"contextBefore\": \"[static let id3MetadataKeyAlbumTitle: AVMetadataKey](avmetadatakey/id3metadatakeyalbumtitle.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyAttachedPicture: AVMetadataKey](avmetadatakey/id3metadatakeyattachedpicture.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0012:0001\",\n      \"source\": \"[static let id3MetadataKeyAttachedPicture: AVMetadataKey](avmetadatakey/id3metadatakeyattachedpicture.md)\",\n      \"contextBefore\": \"A key that represents the title of the recording.\",\n      \"contextAfter\": \"A key that represents an image relating to the audio file.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"A key that represents an image relating to the audio file.\",\n      \"contextBefore\": \"[static let id3MetadataKeyAttachedPicture: AVMetadataKey](avmetadatakey/id3metadatakeyattachedpicture.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyAudioEncryption: AVMetadataKey](avmetadatakey/id3metadatakeyaudioencryption.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0014:0001\",\n      \"source\": \"[static let id3MetadataKeyAudioEncryption: AVMetadataKey](avmetadatakey/id3metadatakeyaudioencryption.md)\",\n      \"contextBefore\": \"A key that represents an image relating to the audio file.\",\n      \"contextAfter\": \"A key that represents the encryption details of the audio stream.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"A key that represents the encryption details of the audio stream.\",\n      \"contextBefore\": \"[static let id3MetadataKeyAudioEncryption: AVMetadataKey](avmetadatakey/id3metadatakeyaudioencryption.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyAudioSeekPointIndex: AVMetadataKey](avmetadatakey/id3metadatakeyaudioseekpointindex.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0016:0001\",\n      \"source\": \"[static let id3MetadataKeyAudioSeekPointIndex: AVMetadataKey](avmetadatakey/id3metadatakeyaudioseekpointindex.md)\",\n      \"contextBefore\": \"A key that represents the encryption details of the audio stream.\",\n      \"contextAfter\": \"A key that represents the list of seek points within the audio file.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"A key that represents the list of seek points within the audio file.\",\n      \"contextBefore\": \"[static let id3MetadataKeyAudioSeekPointIndex: AVMetadataKey](avmetadatakey/id3metadatakeyaudioseekpointindex.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyBand: AVMetadataKey](avmetadatakey/id3metadatakeyband.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0018:0001\",\n      \"source\": \"[static let id3MetadataKeyBand: AVMetadataKey](avmetadatakey/id3metadatakeyband.md)\",\n      \"contextBefore\": \"A key that represents the list of seek points within the audio file.\",\n      \"contextAfter\": \"A key that represents additional information about the performers in the recording.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"A key that represents additional information about the performers in the recording.\",\n      \"contextBefore\": \"[static let id3MetadataKeyBand: AVMetadataKey](avmetadatakey/id3metadatakeyband.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyBeatsPerMinute: AVMetadataKey](avmetadatakey/id3metadatakeybeatsperminute.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0020:0001\",\n      \"source\": \"[static let id3MetadataKeyBeatsPerMinute: AVMetadataKey](avmetadatakey/id3metadatakeybeatsperminute.md)\",\n      \"contextBefore\": \"A key that represents additional information about the performers in the recording.\",\n      \"contextAfter\": \"A key that represents the beats per minute of the audio.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"A key that represents the beats per minute of the audio.\",\n      \"contextBefore\": \"[static let id3MetadataKeyBeatsPerMinute: AVMetadataKey](avmetadatakey/id3metadatakeybeatsperminute.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyComments: AVMetadataKey](avmetadatakey/id3metadatakeycomments.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0022:0001\",\n      \"source\": \"[static let id3MetadataKeyComments: AVMetadataKey](avmetadatakey/id3metadatakeycomments.md)\",\n      \"contextBefore\": \"A key that represents the beats per minute of the audio.\",\n      \"contextAfter\": \"A key that represents additional text information for the media.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"A key that represents additional text information for the media.\",\n      \"contextBefore\": \"[static let id3MetadataKeyComments: AVMetadataKey](avmetadatakey/id3metadatakeycomments.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyCommercial: AVMetadataKey](avmetadatakey/id3metadatakeycommercial.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0024:0001\",\n      \"source\": \"[static let id3MetadataKeyCommercial: AVMetadataKey](avmetadatakey/id3metadatakeycommercial.md)\",\n      \"contextBefore\": \"A key that represents additional text information for the media.\",\n      \"contextAfter\": \"A key that represents the commercial details for the media.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"A key that represents the commercial details for the media.\",\n      \"contextBefore\": \"[static let id3MetadataKeyCommercial: AVMetadataKey](avmetadatakey/id3metadatakeycommercial.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyCommercialInformation: AVMetadataKey](avmetadatakey/id3metadatakeycommercialinformation.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0026:0001\",\n      \"source\": \"[static let id3MetadataKeyCommercialInformation: AVMetadataKey](avmetadatakey/id3metadatakeycommercialinformation.md)\",\n      \"contextBefore\": \"A key that represents the commercial details for the media.\",\n      \"contextAfter\": \"A key that represents the webpage containing purchasing information.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0027:0001\",\n      \"source\": \"A key that represents the webpage containing purchasing information.\",\n      \"contextBefore\": \"[static let id3MetadataKeyCommercialInformation: AVMetadataKey](avmetadatakey/id3metadatakeycommercialinformation.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyComposer: AVMetadataKey](avmetadatakey/id3metadatakeycomposer.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0028:0001\",\n      \"source\": \"[static let id3MetadataKeyComposer: AVMetadataKey](avmetadatakey/id3metadatakeycomposer.md)\",\n      \"contextBefore\": \"A key that represents the webpage containing purchasing information.\",\n      \"contextAfter\": \"A key that represents the name of the composer.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"A key that represents the name of the composer.\",\n      \"contextBefore\": \"[static let id3MetadataKeyComposer: AVMetadataKey](avmetadatakey/id3metadatakeycomposer.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyConductor: AVMetadataKey](avmetadatakey/id3metadatakeyconductor.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0030:0001\",\n      \"source\": \"[static let id3MetadataKeyConductor: AVMetadataKey](avmetadatakey/id3metadatakeyconductor.md)\",\n      \"contextBefore\": \"A key that represents the name of the composer.\",\n      \"contextAfter\": \"A key that represents the name of the conductor.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"A key that represents the name of the conductor.\",\n      \"contextBefore\": \"[static let id3MetadataKeyConductor: AVMetadataKey](avmetadatakey/id3metadatakeyconductor.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyContentGroupDescription: AVMetadataKey](avmetadatakey/id3metadatakeycontentgroupdescription.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0032:0001\",\n      \"source\": \"[static let id3MetadataKeyContentGroupDescription: AVMetadataKey](avmetadatakey/id3metadatakeycontentgroupdescription.md)\",\n      \"contextBefore\": \"A key that represents the name of the conductor.\",\n      \"contextAfter\": \"A key that indicates the sound belongs to a larger category of sounds or music.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"A key that indicates the sound belongs to a larger category of sounds or music.\",\n      \"contextBefore\": \"[static let id3MetadataKeyContentGroupDescription: AVMetadataKey](avmetadatakey/id3metadatakeycontentgroupdescription.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyContentType: AVMetadataKey](avmetadatakey/id3metadatakeycontenttype.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0034:0001\",\n      \"source\": \"[static let id3MetadataKeyContentType: AVMetadataKey](avmetadatakey/id3metadatakeycontenttype.md)\",\n      \"contextBefore\": \"A key that indicates the sound belongs to a larger category of sounds or music.\",\n      \"contextAfter\": \"A key that represents the media content type.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0035:0001\",\n      \"source\": \"A key that represents the media content type.\",\n      \"contextBefore\": \"[static let id3MetadataKeyContentType: AVMetadataKey](avmetadatakey/id3metadatakeycontenttype.md)\",\n      \"contextAfter\": \"[static let id3MetadataKeyCopyright: AVMetadataKey](avmetadatakey/id3metadatakeycopyright.md)\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0036:0001\",\n      \"source\": \"[static let id3MetadataKeyCopyright: AVMetadataKey](avmetadatakey/id3metadatakeycopyright.md)\",\n      \"contextBefore\": \"A key that represents the media content type.\",\n      \"contextAfter\": \"A key that represents the copyright statement.\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0037:0001\",\n      \"source\": \"A key that represents the copyright statement.\",\n      \"contextBefore\": \"[static let id3MetadataKeyCopyright: AVMetadataKey](avmetadatakey/id3metadatakeycopyright.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"id3MetadataKeyPlaylistDelay\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:dogbody:0002:0001\",\n      \"source\": \"A constant that identifies dog body metadata.\",\n      \"contextBefore\": \"**Framework**: AVFoundation **Kind**: property\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"dogBody\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nstatic let dogBody: AVMetadataObject.ObjectType\\n```\",\n      \"contextAfter\": \"[static let humanBody: AVMetadataObject.ObjectType](avmetadataobject/objecttype/humanbody.md)\",\n      \"documentTitle\": \"dogBody\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0008:0001\",\n      \"source\": \"[static let humanBody: AVMetadataObject.ObjectType](avmetadataobject/objecttype/humanbody.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"A constant that identifies human body metadata.\",\n      \"documentTitle\": \"dogBody\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"A constant that identifies human body metadata.\",\n      \"contextBefore\": \"[static let humanBody: AVMetadataObject.ObjectType](avmetadataobject/objecttype/humanbody.md)\",\n      \"contextAfter\": \"[static let humanFullBody: AVMetadataObject.ObjectType](avmetadataobject/objecttype/humanfullbody.md)\",\n      \"documentTitle\": \"dogBody\",\n      \"framework\": \"AVFoundation\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0010:0001\",\n      \"source\": \"[static let humanFullBody: AVMetadataObject.ObjectType](avmetadataobject/objecttype/humanfullbody.md)\",\n      \"contextBefore\": \"A constant that identifies human body metadata.\",\n      \"contextAfter\": \"A constant that identifies human full body metadata.\",\n      \"documentTitle\": \"dogBody\",\n      \"framework\": \"AVFoundation\"\n    }\n  ]\n}\n\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T14:03:16.710852Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:17.789300Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:18.674797Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T14:03:19.740282Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T14:03:21.228204Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T14:03:23.649476Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T14:03:27.617473Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: e4057baa-8ec8-4261-acff-bb4a33a39140\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: e4057baa-8ec8-4261-acff-bb4a33a39140"
+      },
+      {
+        "index": 9,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 10,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 11,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 12,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 13,
+        "status": "queued",
+        "segments": 59
+      },
+      {
+        "index": 14,
+        "status": "queued",
+        "segments": 30
+      },
+      {
+        "index": 15,
+        "status": "queued",
+        "segments": 40
+      },
+      {
+        "index": 16,
+        "status": "queued",
+        "segments": 31
+      },
+      {
+        "index": 17,
+        "status": "queued",
+        "segments": 40
+      },
+      {
+        "index": 18,
+        "status": "queued",
+        "segments": 29
+      },
+      {
+        "index": 19,
+        "status": "queued",
+        "segments": 22
+      },
+      {
+        "index": 20,
+        "status": "queued",
+        "segments": 23
+      },
+      {
+        "index": 21,
+        "status": "queued",
+        "segments": 46
+      },
+      {
+        "index": 22,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 23,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 24,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 25,
+        "status": "queued",
+        "segments": 45
+      },
+      {
+        "index": 26,
+        "status": "queued",
+        "segments": 41
+      },
+      {
+        "index": 27,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 28,
+        "status": "queued",
+        "segments": 59
+      },
+      {
+        "index": 29,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 30,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 31,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 32,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 33,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 34,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 35,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 36,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 37,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 38,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 39,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 40,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 41,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 42,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 43,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 44,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 45,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 46,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 47,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 48,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 49,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 50,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 51,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 52,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 53,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 54,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 55,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 56,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 57,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 58,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 59,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 60,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 61,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 62,
+        "status": "queued",
+        "segments": 47
+      },
+      {
+        "index": 63,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 64,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 65,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 66,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 67,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 68,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 69,
+        "status": "queued",
+        "segments": 45
+      },
+      {
+        "index": 70,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 71,
+        "status": "queued",
+        "segments": 40
+      },
+      {
+        "index": 72,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 73,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 74,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 75,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 76,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 77,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 78,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 79,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 80,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 81,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 82,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 83,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 84,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 85,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 86,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 87,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 88,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 89,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 90,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 91,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 92,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 93,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 94,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 95,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 96,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 97,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 98,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 99,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 100,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 101,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 102,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 103,
+        "status": "queued",
+        "segments": 40
+      },
+      {
+        "index": 104,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 105,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 106,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 107,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 108,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 109,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 110,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 111,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 112,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 113,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 114,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 115,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 116,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 117,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 118,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 119,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 120,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 121,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 122,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 123,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 124,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 125,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 126,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 127,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 128,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 129,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 130,
+        "status": "queued",
+        "segments": 59
+      },
+      {
+        "index": 131,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 132,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 133,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 134,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 135,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 136,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 137,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 138,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 139,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 140,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 141,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 142,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 143,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 144,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 145,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 146,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 147,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 148,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 149,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 150,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 151,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 152,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 153,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 154,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 155,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 156,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 157,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 158,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 159,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 160,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 161,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 162,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 163,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 164,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 165,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 166,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 167,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 168,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 169,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 170,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 171,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 172,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 173,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 174,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 175,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 176,
+        "status": "queued",
+        "segments": 59
+      },
+      {
+        "index": 177,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 178,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 179,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 180,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 181,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 182,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 183,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 184,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 185,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 186,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 187,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 188,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 189,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 190,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 191,
+        "status": "queued",
+        "segments": 43
+      },
+      {
+        "index": 192,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 193,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 194,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 195,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 196,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 197,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 198,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 199,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 200,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 201,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 202,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 203,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 204,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 205,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 206,
+        "status": "queued",
+        "segments": 50
+      },
+      {
+        "index": 207,
+        "status": "queued",
+        "segments": 3
+      },
+      {
+        "index": 208,
+        "status": "queued",
+        "segments": 1
+      },
+      {
+        "index": 209,
+        "status": "queued",
+        "segments": 3
+      },
+      {
+        "index": 210,
+        "status": "queued",
+        "segments": 6
+      },
+      {
+        "index": 211,
+        "status": "queued",
+        "segments": 1
+      },
+      {
+        "index": 212,
+        "status": "queued",
+        "segments": 1
+      },
+      {
+        "index": 213,
+        "status": "queued",
+        "segments": 21
+      },
+      {
+        "index": 214,
+        "status": "queued",
+        "segments": 13
+      },
+      {
+        "index": 215,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 216,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 217,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 218,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 219,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 220,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 221,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 222,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 223,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 224,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 225,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 226,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 227,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 228,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 229,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 230,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 231,
+        "status": "queued",
+        "segments": 59
+      },
+      {
+        "index": 232,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 233,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 234,
+        "status": "queued",
+        "segments": 23
+      }
+    ]
+  }
+}
