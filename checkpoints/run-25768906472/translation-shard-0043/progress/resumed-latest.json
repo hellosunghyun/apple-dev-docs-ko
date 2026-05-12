@@ -1,0 +1,1213 @@
+{
+  "generatedAt": "2026-05-12T16:04:20.022Z",
+  "updatedAt": "2026-05-12T16:05:15.047Z",
+  "reason": "paused",
+  "queue": "state/queue/shard-0043.json",
+  "shard": {
+    "index": 43,
+    "total": 256
+  },
+  "abortReason": "Paused after Codex usage limit; retry after 9:04 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM.",
+    "retryAfterText": "9:04 PM",
+    "retryAt": "2026-05-12T21:04:00.000Z"
+  },
+  "totals": {
+    "batches": 231,
+    "segments": 12981,
+    "completed": 7,
+    "failed": 1,
+    "processed": 8,
+    "active": 0,
+    "queued": 223,
+    "percent": 3.46
+  },
+  "batches": [
+    {
+      "index": 0,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:36:52.311Z",
+      "durationMs": 23776
+    },
+    {
+      "index": 1,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:36:51.175Z",
+      "durationMs": 22640
+    },
+    {
+      "index": 2,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:36:53.632Z",
+      "durationMs": 25097
+    },
+    {
+      "index": 3,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:20.028Z",
+      "completedAt": "2026-05-12T16:04:48.551Z",
+      "durationMs": 28523
+    },
+    {
+      "index": 4,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:20.028Z",
+      "completedAt": "2026-05-12T16:04:30.810Z",
+      "durationMs": 10783
+    },
+    {
+      "index": 5,
+      "status": "success",
+      "segments": 39,
+      "startedAt": "2026-05-12T16:04:20.028Z",
+      "completedAt": "2026-05-12T16:04:40.285Z",
+      "durationMs": 20257
+    },
+    {
+      "index": 6,
+      "status": "success",
+      "segments": 24,
+      "startedAt": "2026-05-12T16:04:30.814Z",
+      "completedAt": "2026-05-12T16:04:44.895Z",
+      "durationMs": 14081
+    },
+    {
+      "index": 7,
+      "status": "queued",
+      "segments": 22,
+      "startedAt": "2026-05-12T16:04:40.288Z",
+      "completedAt": "2026-05-12T16:05:15.045Z",
+      "durationMs": 34757,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM."
+    },
+    {
+      "index": 8,
+      "status": "queued",
+      "segments": 23,
+      "startedAt": "2026-05-12T16:04:44.897Z",
+      "completedAt": "2026-05-12T16:05:04.596Z",
+      "durationMs": 19699,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM."
+    },
+    {
+      "index": 9,
+      "status": "failed",
+      "segments": 27,
+      "startedAt": "2026-05-12T16:04:48.554Z",
+      "completedAt": "2026-05-12T16:05:10.589Z",
+      "durationMs": 22035,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1cef-36c1-71d1-80da-8ca85f64377e\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment sourcePath and id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"sourcePath\":\"...\",\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgeqrfp.md\",\n      \"id\": \"seg:list:see-also:0007:0015\",\n      \"source\": \"[func cher_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<Float>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher_(_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cher2k_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, UnsafePointer<Float>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher2k_(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"dgeqrfp(::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgeqrfp.md\",\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/dgeqrfp_(_:_:_:_:_:_:_:_:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"dgeqrfp(::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:heading:dgetsls:0000:0001\",\n      \"source\": \"dgetsls_(_:_:_:_:_:_:_:_:_:_:_:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: Accelerate **Kind**: func\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:heading:see-also:0006:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nfunc dgetsls_(_ trans: UnsafePointer<CChar>, _ m: UnsafePointer<__LAPACK_int>, _ n: UnsafePointer<__LAPACK_int>, _ nrhs: UnsafePointer<__LAPACK_int>, _ a: UnsafeMutablePointer<Double>?, _ lda: UnsafePointer<__LAPACK_int>, _ b: UnsafeMutablePointer<Double>?, _ ldb: UnsafePointer<__LAPACK_int>, _ work: UnsafeMutablePointer<Double>, _ lwork: UnsafePointer<__LAPACK_int>, _ info: UnsafeMutablePointer<__LAPACK_int>)\\n```\",\n      \"contextAfter\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0001\",\n      \"source\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0002\",\n      \"source\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0003\",\n      \"source\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0004\",\n      \"source\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0005\",\n      \"source\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemm_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0006\",\n      \"source\": \"[func cgemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemm_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemv_(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0007\",\n      \"source\": \"[func cgemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemv_(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cgemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemm_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgerc_(UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgerc_(_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0008\",\n      \"source\": \"[func cgerc_(UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgerc_(_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cgemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemv_(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgeru_(UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgeru_(_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0009\",\n      \"source\": \"[func cgeru_(UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgeru_(_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cgerc_(UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgerc_(_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func chbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chbmv_(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0010\",\n      \"source\": \"[func chbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chbmv_(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cgeru_(UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgeru_(_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func chemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chemm_(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0011\",\n      \"source\": \"[func chemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chemm_(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func chbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chbmv_(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func chemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chemv_(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0012\",\n      \"source\": \"[func chemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chemv_(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func chemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chemm_(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cher2_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher2_(_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0013\",\n      \"source\": \"[func cher2_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher2_(_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func chemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chemv_(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cher2k_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, UnsafePointer<Float>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher2k_(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0014\",\n      \"source\": \"[func cher2k_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, UnsafePointer<Float>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher2k_(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cher2_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher2_(_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cher_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<Float>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher_(_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:list:see-also:0007:0015\",\n      \"source\": \"[func cher_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<Float>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher_(_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cher2k_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, UnsafePointer<Float>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher2k_(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dgetsls.md\",\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/dgetsls_(_:_:_:_:_:_:_:_:_:_:_:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"dgetsls(:::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dlamc5.md\",\n      \"id\": \"seg:heading:dlamc5:0000:0001\",\n      \"source\": \"dlamc5_(_:_:_:_:_:_:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: Accelerate **Kind**: func\",\n      \"documentTitle\": \"dlamc5(::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dlamc5.md\",\n      \"id\": \"seg:heading:see-also:0006:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nfunc dlamc5_(_ beta: UnsafePointer<__LAPACK_int>, _ p: UnsafePointer<__LAPACK_int>, _ emin: UnsafePointer<__LAPACK_int>, _ ieee: UnsafePointer<__LAPACK_bool>, _ emax: UnsafeMutablePointer<__LAPACK_int>, _ rmax: UnsafeMutablePointer<Double>)\\n```\",\n      \"contextAfter\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dlamc5(::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dlamc5.md\",\n      \"id\": \"seg:list:see-also:0007:0001\",\n      \"source\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dlamc5(::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dlamc5.md\",\n      \"id\": \"seg:list:see-also:0007:0002\",\n      \"source\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dlamc5(::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dlamc5.md\",\n      \"id\": \"seg:list:see-also:0007:0003\",\n      \"source\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dlamc5(::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dlamc5.md\",\n      \"id\": \"seg:list:see-also:0007:0004\",\n      \"source\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dlamc5(::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/dlamc5.md\",\n      \"id\": \"seg:list:see-also:0007:0005\",\n      \"source\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemm_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"dlamc5(::::::)\",\n      \"framework\": \"Accelerate\"\n    }\n  ]\n}\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T16:05:02.631850Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:03.043902Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:03.549324Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T16:05:04.158697Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T16:05:05.208247Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T16:05:07.074503Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T16:05:10.375245Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: d03da65a-8d36-48f9-9953-e41ecb0066af\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: d03da65a-8d36-48f9-9953-e41ecb0066af"
+    },
+    {
+      "index": 10,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 11,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 12,
+      "status": "queued",
+      "segments": 18
+    },
+    {
+      "index": 13,
+      "status": "queued",
+      "segments": 27
+    },
+    {
+      "index": 14,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 15,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 16,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 17,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 18,
+      "status": "queued",
+      "segments": 32
+    },
+    {
+      "index": 19,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 20,
+      "status": "queued",
+      "segments": 38
+    },
+    {
+      "index": 21,
+      "status": "queued",
+      "segments": 32
+    },
+    {
+      "index": 22,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 23,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 24,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 25,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 26,
+      "status": "queued",
+      "segments": 41
+    },
+    {
+      "index": 27,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 28,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 29,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 30,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 31,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 32,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 33,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 34,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 35,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 36,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 37,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 38,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 39,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 40,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 41,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 42,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 43,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 44,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 45,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 46,
+      "status": "queued",
+      "segments": 23
+    },
+    {
+      "index": 47,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 48,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 49,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 50,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 51,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 52,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 53,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 54,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 55,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 56,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 57,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 58,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 59,
+      "status": "queued",
+      "segments": 31
+    },
+    {
+      "index": 60,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 61,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 62,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 63,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 64,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 65,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 66,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 67,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 68,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 69,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 70,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 71,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 72,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 73,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 74,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 75,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 76,
+      "status": "queued",
+      "segments": 38
+    },
+    {
+      "index": 77,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 78,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 79,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 80,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 81,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 82,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 83,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 84,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 85,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 86,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 87,
+      "status": "queued",
+      "segments": 34
+    },
+    {
+      "index": 88,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 89,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 90,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 91,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 92,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 93,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 94,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 95,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 96,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 97,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 98,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 99,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 100,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 101,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 102,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 103,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 104,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 105,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 106,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 107,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 108,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 109,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 110,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 111,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 112,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 113,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 114,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 115,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 116,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 117,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 118,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 119,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 120,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 121,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 122,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 123,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 124,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 125,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 126,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 127,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 128,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 129,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 130,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 131,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 132,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 133,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 134,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 135,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 136,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 137,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 138,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 139,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 140,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 141,
+      "status": "queued",
+      "segments": 38
+    },
+    {
+      "index": 142,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 143,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 144,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 145,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 146,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 147,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 148,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 149,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 150,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 151,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 152,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 153,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 154,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 155,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 156,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 157,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 158,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 159,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 160,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 161,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 162,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 163,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 164,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 165,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 166,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 167,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 168,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 169,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 170,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 171,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 172,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 173,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 174,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 175,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 176,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 177,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 178,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 179,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 180,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 181,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 182,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 183,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 184,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 185,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 186,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 187,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 188,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 189,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 190,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 191,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 192,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 193,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 194,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 195,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 196,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 197,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 198,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 199,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 200,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 201,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 202,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 203,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 204,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 205,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 206,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 207,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 208,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 209,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 210,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 211,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 212,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 213,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 214,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 215,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 216,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 217,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 218,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 219,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 220,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 221,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 222,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 223,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 224,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 225,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 226,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 227,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 228,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 229,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 230,
+      "status": "queued",
+      "segments": 26
+    }
+  ]
+}
