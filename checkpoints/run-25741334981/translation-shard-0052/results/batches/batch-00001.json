@@ -1,0 +1,246 @@
+{
+  "batchIndex": 1,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:46.147Z",
+  "durationMs": 20669,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:list:parameters:0011:0003",
+        "ko": "**altitude**: 고도입니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0004",
+        "ko": "**error**: 변환이 실패할 경우 이유입니다."
+      },
+      {
+        "id": "seg:paragraph:parameters:0013:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/arkit/arsession/getgeolocation(forpoint:completionhandler:))*"
+      },
+      {
+        "id": "seg:heading:sessionwasinterrupted:0000:0001",
+        "ko": "sessionWasInterrupted(_:)"
+      },
+      {
+        "id": "seg:paragraph:sessionwasinterrupted:0002:0001",
+        "ko": "delegate에 세션이 임시로 프레임 처리를 중지하고 장치 위치 추적을 멈췄음을 알립니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "세션은 카메라 또는 모션 센싱 데이터 수신에 실패하면 중단됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "세션 중단은 카메라 캡처를 사용할 수 없을 때마다 발생합니다. 예를 들어 앱이 백그라운드에 있거나 여러 개의 포그라운드 앱이 있는 경우, 또는 기기가 모션 센서 데이터 처리를 수행하기에 너무 바쁠 때입니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0009:0001",
+        "ko": "❗ **중요**: 중단은 세션을 수동으로 일시 중지한 것과 동일합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0009:0002",
+        "ko": "이 콜백에 대해 [`pause()`](arsession/pause().md)를 호출하면 중단 종료 시 앱이 알림을 받지 못할 수 있으므로 호출하면 안 됩니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0001",
+        "ko": "`session`: 정보를 제공하는 세션입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0012:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0013:0001",
+        "ko": "[func sessionInterruptionEnded(ARSession)](arsessionobserver/sessioninterruptionended(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0014:0001",
+        "ko": "delegate에 세션이 프레임 처리를 다시 시작하고 장치 위치 추적을 재개했음을 알립니다."
+      },
+      {
+        "id": "seg:list:see-also:0015:0001",
+        "ko": "[func sessionShouldAttemptRelocalization(ARSession) -> Bool](arsessionobserver/sessionshouldattemptrelocalization(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "delegate에 중단 후 world-tracking 상태 복구를 시도할지 여부를 묻습니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/arkit/arsessionobserver/sessionwasinterrupted(_:))*"
+      },
+      {
+        "id": "seg:paragraph:artrackable:0002:0001",
+        "ko": "실제 세계 객체 또는 위치를 추적하는 객체를 위한 인터페이스입니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0001",
+        "ko": "이 프로토콜은 씬에서 이동 객체를 나타내는 [`ARFaceAnchor`](arfaceanchor.md) 클래스와 같은 ARKit 클래스에서 채택됩니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0001",
+        "ko": "ARKit은 활성 AR 세션에서 이러한 객체의 표현을 자동으로 관리하여, 실제 객체의 위치와 방향 변경(앵커의 [`transform`](aranchor/transform.md) 속성)이 해당 ARKit 객체에 반영되도록 보장합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0002",
+        "ko": "[`isTracked`](artrackable/istracked.md) 속성은 실제 객체의 움직임에 대해 현재 transform이 유효한지 여부를 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0010:0001",
+        "ko": "Trackable anchor 클래스는 다른 ARKit 동작에 영향을 줍니다."
+      },
+      {
+        "id": "seg:list:overview:0011:0001",
+        "ko": "[`getCurrentWorldMap(completionHandler:)`](arsession/getcurrentworldmap(completionhandler:).md) 메서드는 생성하는 [`ARWorldMap`](arworldmap.md)에 추적 불가 anchor만 자동으로 포함합니다. (world map을 만든 후에는 필요에 따라 다른 anchor를 추가할 수 있습니다.)"
+      },
+      {
+        "id": "seg:list:overview:0011:0002",
+        "ko": "[`ARSCNView`](arscnview.md) 및 [`ARSKView`](arskview.md)는 [`isTracked`](artrackable/istracked.md) 속성이 [`false`](https://developer.apple.com/documentation/Swift/false)인 anchor의 노드를 자동으로 숨깁니다."
+      },
+      {
+        "id": "seg:list:overview:0011:0003",
+        "ko": "world-tracking 세션은 각 anchor 주변의 추적 품질을 최적화하기 위해 추적 불가 anchor를 사용합니다. trackable anchor는 world tracking에 영향을 주지 않습니다."
+      },
+      {
+        "id": "seg:heading:monitoring-tracking-state:0013:0001",
+        "ko": "추적 상태 모니터링"
+      },
+      {
+        "id": "seg:paragraph:monitoring-tracking-state:0015:0001",
+        "ko": "객체의 transform이 유효한지를 나타내는 Boolean 값입니다."
+      },
+      {
+        "id": "seg:heading:inherits-from:0017:0001",
+        "ko": "상속"
+      },
+      {
+        "id": "seg:heading:conforming-types:0019:0001",
+        "ko": "준수 타입"
+      },
+      {
+        "id": "seg:heading:see-also:0021:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "물리적 환경에서 항목의 위치와 방향을 지정하는 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "커스텀 anchor 하위 클래스에 대한 지원입니다."
+      },
+      {
+        "id": "seg:paragraph:code:0002:0001",
+        "ko": "오류 코드입니다."
+      },
+      {
+        "id": "seg:paragraph:boundingbox:0002:0001",
+        "ko": "앵커의 경계 상자입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "축 정렬 경계 상자를 설명하는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "이 anchor의 텍스트 표현입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "프레임워크가 현재 객체 anchor를 추적하고 있는지 나타내는 Boolean 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "객체 anchor에서 원점 좌표계로의 transform입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "anchor에 해당하는 참조 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "프레임워크가 참조 객체를 로드할 때 사용하는 입력 파일입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "참조 객체에 USDZ 파일이 포함되어 있는 경우의 훈련된 USDZ 파일입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "프레임워크가 추적할 수 있는 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:trackingconfiguration:0002:0001",
+        "ko": "현재 객체 추적 구성에 사용되는 매개변수를 반환합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "객체 추적 동작을 변경하기 위한 매개변수입니다."
+      },
+      {
+        "id": "seg:heading:streaming-an-ar-experience:0000:0001",
+        "ko": "AR 경험 스트리밍"
+      },
+      {
+        "id": "seg:paragraph:streaming-an-ar-experience:0001:0001",
+        "ko": "**프레임워크**: ARKit"
+      },
+      {
+        "id": "seg:paragraph:streaming-an-ar-experience:0002:0001",
+        "ko": "네트워크를 통해 센서 데이터와 사용자 입력을 전송하여 AR 경험을 원격으로 제어합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0001",
+        "ko": "샘플 앱 AR Stream은 증강 카메라 피드를 피어 장치와 공유하고, 원격 AR 경험에 대한 상호작용을 통해 피어가 제어할 수 있게 합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0002",
+        "ko": "예를 들어 사용자가 물리적 환경을 보여 주는 화면을 하드웨어 문제를 진단해 주는 컴퓨터 기술자와 공유할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0003",
+        "ko": "사용자가 테이블 위에 놓인 고장난 장치를 여러 각도에서 보는 동안, 원격 기술자는 사용자의 카메라 피드에 텍스트 주석을 추가해 기기 수리 단계에 필요한 작업을 설명함으로써 상호작용합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0007:0001",
+        "ko": "![실제 컴퓨터 타워 앞에서 사용자의 장치가 실제 환경의 AR 경험을 보는 모습을 보여 주는 삽화."
+      },
+      {
+        "id": "seg:paragraph:overview:0007:0002",
+        "ko": "화면은 기기의 카메라 피드를 통해 타워를 표시하며, 앱은 원격 기술자가 생성한 설명 텍스트로 이를 증강합니다.](https://docs-assets.developer.apple.com/published/e0bb1908e2ec930a83a07e11d1f863f6/ar-streaming-hero.png)"
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0001",
+        "ko": "원격 사용자가 사용자의 물리적 환경을 볼 수 있도록 AR Stream은 네트워크를 통해 장치 센서 정보를 공유합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0002",
+        "ko": "[`Video Toolbox`](https://developer.apple.com/documentation/VideoToolbox)로 카메라 프레임을 압축해 앱은 고프레임률로 원격 경험을 표시하고 피어가 사용자의 화면을 선명하게 볼 수 있도록 합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0001",
+        "ko": "AR Stream은 또한 사용자의 실제 자세에 대한 수학적 세부 정보를 원격 사용자에게 전달해 피어의 터치 입력을 처리합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0002",
+        "ko": "샘플 앱은 세션의 역 뷰 행렬과 역 투영 행렬을 원격 장치로 전송해 원격 사용자가 탭한 사용자의 환경 내 위치를 계산할 수 있게 합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0003",
+        "ko": "원격 사용자가 화면을 탭했음을 표시하기 위해 AR Stream은 탭 위치에 유용한 가상 표시기를 배치합니다."
+      },
+      {
+        "id": "seg:heading:display-a-camera-feed-and-monitor-the-session:0010:0001",
+        "ko": "카메라 피드 표시 및 세션 모니터링"
+      }
+    ]
+  }
+}
