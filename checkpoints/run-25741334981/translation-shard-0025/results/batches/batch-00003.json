@@ -1,0 +1,226 @@
+{
+  "batchIndex": 3,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:59.636Z",
+  "durationMs": 23754,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:see-also:0039:0001",
+        "ko": "카메라 전환을 제한할 조건을 정의하는 구조체입니다."
+      },
+      {
+        "id": "seg:list:see-also:0040:0001",
+        "ko": "[var supportedFallbackPrimaryConstituentDevices: [AVCaptureDevice]](avcapturedevice/supportedfallbackprimaryconstituentdevices.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0041:0001",
+        "ko": "긴 초점 길이 기본 구성 요소 디바이스의 대체 선택으로 사용할 수 있는 구성 요소 디바이스입니다."
+      },
+      {
+        "id": "seg:list:see-also:0042:0001",
+        "ko": "[var fallbackPrimaryConstituentDevices: [AVCaptureDevice]](avcapturedevice/fallbackprimaryconstituentdevices.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0043:0001",
+        "ko": "긴 초점 길이 구성 요소 디바이스가 빛 민감도 또는 최소 초점 거리 제한을 받는 경우 사용할 대체 장치입니다."
+      },
+      {
+        "id": "seg:paragraph:iscinematicvideocapturesupported:0002:0001",
+        "ko": "Cinematic Video capture를 지원하는지 지정하는 `BOOL` 값입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "Cinematic Video 캡처를 사용하면 피사체(사람, 반려동물 등)가 선명하게 초점이 맞춰진 상태를 유지하면서 배경(또는 전경)에 보기 좋은 블러를 적용하는 시뮬레이션된 심도 효과를 얻을 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "This message will be sent regardless of whether the session’s [`automaticallyRunsDeferredStart`](avcapturesession/automaticallyrunsdeferredstart.md) property is set."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0003",
+        "ko": "See [`setDeferredStartDelegate(_:deferredStartDelegateCallbackQueue:)`](avcapturesession/setdeferredstartdelegate(_:deferredstartdelegatecallbackqueue:).md) documentation for more information."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "`[`simulatedAperture`](avcapturedeviceinput/simulatedaperture.md)` 속성을 사용해 녹화를 시작하기 전에 비디오의 시뮬레이션 조리개를 조정할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "[`AVCaptureDevice`](avcapturedevice.md)에서 Cinematic Video 전용 초점 메서드를 사용하면 초점 전환을 동적으로 제어할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "A capture device’s [`focusPointOfInterest`](avcapturedevice/focuspointofinterest.md) and [`exposurePointOfInterest`](avcapturedevice/exposurepointofinterest.md) properties provide a [`CGPoint`](https://developer.apple.com/documentation/CoreFoundation/CGPoint) value where `{0,0}` represents the top-left and `{1,1}` represents the bottom-right of the unrotated image."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "The system takes the layer’s frame size and its [`videoGravity`](avcapturevideopreviewlayer/videogravity.md) into consideration when making the conversion."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0002",
+        "ko": "Use the [`fileDataRepresentation()`](avcapturephoto/filedatarepresentation().md) or [`cgImageRepresentation()`](avcapturephoto/cgimagerepresentation().md) method to obtain compressed image data."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0003",
+        "ko": "이 속성이 `true`에서 `false`로 변경되면 [`isCinematicVideoCaptureEnabled`](avcapturedeviceinput/iscinematicvideocaptureenabled.md)도 `false`로 다시 바뀝니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0004",
+        "ko": "이전에 Cinematic Video 캡처를 사용 설정한 상태에서 구성을 변경한 경우 [`isCinematicVideoCaptureEnabled`](avcapturedeviceinput/iscinematicvideocaptureenabled.md)를 다시 `true`로 설정해야 할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0005",
+        "ko": "이 속성은 키-값 관찰이 가능합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0012:0001",
+        "ko": "**참고**: [`AVCaptureDepthDataOutput`](avcapturedepthdataoutput.md)는 [`isCinematicVideoCaptureEnabled`](avcapturedeviceinput/iscinematicvideocaptureenabled.md)가 `true`로 설정된 경우 지원되지 않습니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0012:0002",
+        "ko": "이 두 기능을 모두 사용해 [`AVCaptureSession`](avcapturesession.md)를 실행하면 `NSInvalidArgumentException`이 발생합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0013:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesessiondeferredstartdelegate/sessionwillrundeferredstart(_:))*"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "얕은 심도의 시뮬레이션 조리개입니다."
+      },
+      {
+        "id": "seg:paragraph:avcaptureoutputdatadroppedreasonlatedata:0002:0001",
+        "ko": "델리게이트 큐가 차단된 상태에서 전달할 데이터가 존재하도록 capture output을 데이터 드롭 상태로 구성했기 때문에 시스템이 데이터를 버렸습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "`AVCaptureVideoDataOutput`의 [`alwaysDiscardsLateVideoFrames`](avcapturevideodataoutput/alwaysdiscardslatevideoframes.md) 속성 또는 `AVCaptureDepthDataOutput`의 [`alwaysDiscardsLateDepthData`](avcapturedepthdataoutput/alwaysdiscardslatedepthdata.md) 속성을 사용해 capture output이 데이터를 버릴지 여부를 선택합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "시스템이 데이터를 버리지 않았습니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "시스템은 capture output이 내부 메모리 버퍼 풀이 소진되어 데이터가 버려졌습니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesessiondeferredstartdelegate/sessionwillrundeferredstart(_:))*"
+      },
+      {
+        "id": "seg:paragraph:pixelbuffer:0002:0001",
+        "ko": "요청한 경우 사진의 비압축 또는 RAW 이미지 샘플 버퍼입니다."
+      },
+      {
+        "id": "seg:list:mentions:0008:0001",
+        "ko": "[Capturing uncompressed image data](capturing-uncompressed-image-data.md)"
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "A capture device’s [`focusPointOfInterest`](avcapturedevice/focuspointofinterest.md) and [`exposurePointOfInterest`](avcapturedevice/exposurepointofinterest.md) properties provide a [`CGPoint`](https://developer.apple.com/documentation/CoreFoundation/CGPoint) value where `{0,0}` represents the top-left and `{1,1}` represents the bottom-right of the unrotated image."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "The system takes the layer’s frame size and its [`videoGravity`](avcapturevideopreviewlayer/videogravity.md) into consideration when making the conversion."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0002",
+        "ko": "압축된 이미지 데이터를 얻으려면 [`fileDataRepresentation()`](avcapturephoto/filedatarepresentation().md) 또는 [`cgImageRepresentation()`](avcapturephoto/cgimagerepresentation().md) 메서드를 사용합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0012:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0014:0001",
+        "ko": "이 사진 객체에 RAW 형식 데이터가 포함되어 있는지 나타내는 Boolean 값입니다."
+      },
+      {
+        "id": "seg:heading:sessionwillrundeferredstart:0000:0001",
+        "ko": "sessionWillRunDeferredStart(_:)"
+      },
+      {
+        "id": "seg:paragraph:sessionwillrundeferredstart:0001:0001",
+        "ko": "**Framework**: AVFoundation **Kind**: method **Required**: Yes"
+      },
+      {
+        "id": "seg:paragraph:sessionwillrundeferredstart:0002:0001",
+        "ko": "이 메서드는 세션에서 지연 시작이 곧 실행되기 직전에 호출됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "세션이 지연 시작을 완료하면 delegate는 이 메시지를 받습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "이 메시지는 세션의 [`automaticallyRunsDeferredStart`](avcapturesession/automaticallyrunsdeferredstart.md) 속성 설정 여부와 상관없이 전송됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0003",
+        "ko": "자세한 내용은 [`setDeferredStartDelegate(_:deferredStartDelegateCallbackQueue:)`](avcapturesession/setdeferredstartdelegate(_:deferredstartdelegatecallbackqueue:).md) 문서를 참조합니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0001",
+        "ko": "`session`: 지연 시작을 실행하는 [`AVCaptureSession`](avcapturesession.md) 인스턴스입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0011:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[func sessionDidRunDeferredStart(AVCaptureSession)](avcapturesessiondeferredstartdelegate/sessiondidrundeferredstart(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "이 메서드는 세션에서 지연 시작 실행이 완료되면 호출됩니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesessiondeferredstartdelegate/sessionwillrundeferredstart(_:))*"
+      },
+      {
+        "id": "seg:heading:layerpointconvertedfromcapturedevicepoint:0000:0001",
+        "ko": "layerPointConverted(fromCaptureDevicePoint:)"
+      },
+      {
+        "id": "seg:paragraph:layerpointconvertedfromcapturedevicepoint:0002:0001",
+        "ko": "캡처 장치의 좌표 공간에서 레이어 좌표 공간으로 점을 변환합니다."
+      },
+      {
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "레이어 좌표의 점입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "캡처 장치의 [`focusPointOfInterest`](avcapturedevice/focuspointofinterest.md) 및 [`exposurePointOfInterest`](avcapturedevice/exposurepointofinterest.md) 속성은 회전되지 않은 이미지에서 `{0,0}`이 좌상단, `{1,1}`이 우하단을 나타내는 [`CGPoint`](https://developer.apple.com/documentation/CoreFoundation/CGPoint) 값을 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "시스템은 변환 시 layer의 프레임 크기와 해당 [`videoGravity`](avcapturevideopreviewlayer/videogravity.md)를 고려합니다."
+      },
+      {
+        "id": "seg:list:parameters:0013:0001",
+        "ko": "`captureDevicePointOfInterest`: 변환할 캡처 장치 좌표의 점입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0014:0001",
+        "ko": "참고 항목"
+      }
+    ]
+  }
+}
