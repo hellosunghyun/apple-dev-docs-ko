@@ -1,0 +1,250 @@
+{
+  "batchIndex": 0,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:33.113Z",
+  "durationMs": 12417,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:projectionmatrix:0002:0001",
+        "ko": "카메라로 캡처한 이미지와 일치하도록 3D 콘텐츠를 렌더링하기에 적합한 변환 행렬입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 속성의 값을 읽으면 카메라의 [`imageResolution`](arcamera/imageresolution.md) 및 [`intrinsics`](arcamera/intrinsics.md) 속성을 사용해 크기와 방향을 유도하고, 근거리 및 원거리 클리핑 평면의 기본값으로 `0.001`, `1000.0`을 전달한 다음 `projectionMatrix(withViewportSize:orientation:zNear:zFar:)` 메서드를 호출한 것과 동일합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[func projectionMatrix(for: UIInterfaceOrientation, viewportSize: CGSize, zNear: CGFloat, zFar: CGFloat) -> simd_float4x4](arcamera/projectionmatrix(for:viewportsize:znear:zfar:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "지정한 매개변수를 사용해 카메라로 캡처한 이미지와 일치하도록 3D 콘텐츠를 렌더링하기 위한 변환 행렬을 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[func viewMatrix(for: UIInterfaceOrientation) -> simd_float4x4](referenceimage/init(cgimage:physicalsize:orientation:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "월드 공간에서 카메라 공간으로 변환하는 변환 행렬을 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[func projectPoint(simd_float3, orientation: UIInterfaceOrientation, viewportSize: CGSize) -> CGPoint](referenceimage/init(pixelbuffer:physicalsize:orientation:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "ARKit이 감지한 3D 월드 공간의 점을 장면을 렌더링하는 보기의 2D 공간으로 투영한 결과를 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func unprojectPoint(CGPoint, ontoPlane: simd_float4x4, orientation: UIInterfaceOrientation, viewportSize: CGSize) -> simd_float3?](arcamera/unprojectpoint(_:ontoplane:orientation:viewportsize:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/referenceimage/loadreferenceimages(ingroupnamed:bundle:))*"
+      },
+      {
+        "id": "seg:paragraph:planedetection:0002:0001",
+        "ko": "이 값은 세션이 카메라 캡처 이미지에서 평면을 자동으로 감지하려는지와 감지 방식을 지정합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "기본적으로 이 구성은 평면 감지를 비활성화합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "When ARKit observes a matching image, the framework creates an [`ARImageAnchor`](arimageanchor.md) object and adds it to the session."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "캡처된 이미지에서 평평한 표면을 감지할지와 감지 방식을 지정하는 옵션입니다."
+      },
+      {
+        "id": "seg:paragraph:trackingimages:0002:0001",
+        "ko": "ARKit이 사용자 환경에서 검색하고 추적하는 이미지 집합입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 집합에 사용자 환경에서 ARKit이 검색할 각 이미지를 추가합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "ARKit이 일치하는 이미지를 감지하면 프레임워크가 [`ARImageAnchor`](arimageanchor.md) 객체를 생성해 세션에 추가합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0003",
+        "ko": "[`maximumNumberOfTrackedImages`](arworldtrackingconfiguration/maximumnumberoftrackedimages.md) 값을 `1`보다 크게 설정하면 ARKit는 세션 진행 중 최대 4개까지 여러 이미지를 추적합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "이 속성이 포함하는 참조 이미지를 정의하려면 Xcode에서 에셋 카탈로그를 생성하거나 [`ARReferenceImage`](arreferenceimage.md) 객체를 프로그래밍 방식으로 생성하면 됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "예시는 [`Tracking and altering images`](tracking-and-altering-images.md)에서 확인할 수 있습니다."
+      },
+      {
+        "id": "seg:heading:see-also:0010:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0012:0001",
+        "ko": "위치 및 방향 업데이트를 면밀히 모니터링할 이미지 앵커 수입니다."
+      },
+      {
+        "id": "seg:paragraph:description:0002:0001",
+        "ko": "AuthorizationStatus의 텍스트 표현입니다."
+      },
+      {
+        "id": "seg:paragraph:arplaneanchorclassificationtable:0002:0001",
+        "ko": "평면 앵커는 실제 세계의 테이블, 책상, 바 또는 유사한 평평한 표면을 나타냅니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "평면 앵커는 실제 세계의 벽 또는 유사한 큰 수직 표면을 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "평면 앵커는 실제 세계의 바닥, 지면 또는 유사한 넓은 수평 표면을 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "평면 앵커는 실제 세계의 천장 또는 유사한 상단 수평 표면을 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "평면 앵커는 실제 세계의 의자, 스툴, 벤치 등 유사한 평평한 표면을 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/referenceimage/loadreferenceimages(ingroupnamed:bundle:))*"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "평면 앵커는 실제 세계의 창문 또는 유사한 수직 표면을 나타냅니다."
+      },
+      {
+        "id": "seg:heading:nodefor:0000:0001",
+        "ko": "node(for:)"
+      },
+      {
+        "id": "seg:paragraph:nodefor:0002:0001",
+        "ko": "지정된 AR 앵커와 연결된 SpriteKit 노드가 있으면 반환합니다."
+      },
+      {
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "앵커가 AR 씬에서 추적하는 위치에 해당하는 노드입니다. 앵커에 연결된 노드가 없거나 해당 뷰의 AR 세션에 없으면 `nil`입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0001",
+        "ko": "`groupName`: The name of the group of assets in an asset catalog."
+      },
+      {
+        "id": "seg:heading:see-also:0011:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[func anchor(for: SKNode) -> ARAnchor?](referenceimage/init(cgimage:physicalsize:orientation:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "지정한 SpriteKit 노드와 연결된 AR 앵커가 있으면 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/arkit/arskview/node(for:))*"
+      },
+      {
+        "id": "seg:paragraph:vertices:0002:0001",
+        "ko": "메시의 정점입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "메시의 면입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "메시의 법선입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "메시의 각 면에 대한 분류입니다."
+      },
+      {
+        "id": "seg:heading:loadreferenceimagesingroupnamedbundle:0000:0001",
+        "ko": "loadReferenceImages(inGroupNamed:bundle:)"
+      },
+      {
+        "id": "seg:paragraph:loadreferenceimagesingroupnamedbundle:0002:0001",
+        "ko": "에셋 카탈로그의 그룹 이름을 사용해 여러 참조 이미지를 생성합니다."
+      },
+      {
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "지정한 그룹에서 로드한 참조 이미지 배열입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0001",
+        "ko": "`groupName`: 에셋 카탈로그에서 에셋 그룹의 이름입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0002",
+        "ko": "`bundle`: 이미지 에셋을 포함하는 번들입니다. `nil`이면 이 메서드는 기본 번들에서 참조 이미지를 로드합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0011:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[init(cgimage: CGImage, physicalSize: CGSize, orientation: CGImagePropertyOrientation)](referenceimage/init(cgimage:physicalsize:orientation:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "Core Graphics 이미지에서 참조 이미지를 생성합니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[init(pixelBuffer: CVPixelBuffer, physicalSize: CGSize, orientation: CGImagePropertyOrientation)](referenceimage/init(pixelbuffer:physicalsize:orientation:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "픽셀 버퍼에서 참조 이미지를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/arkit/referenceimage/loadreferenceimages(ingroupnamed:bundle:))*"
+      },
+      {
+        "id": "seg:paragraph:distanceattenuationmodel:0002:0001",
+        "ko": "소스가 리스너에서 멀어질수록 이득이 감소하는 정도를 설명하는 거리 감쇠 모델입니다."
+      }
+    ]
+  }
+}
