@@ -1,0 +1,186 @@
+{
+  "batchIndex": 8,
+  "status": "success",
+  "completedAt": "2026-05-12T14:37:17.728Z",
+  "durationMs": 50502,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0021:0002",
+        "ko": "기기 후면의 두 평행 카메라는 간격이 매우 짧기 때문에 두 이미지에 모두 나타나는 유사한 특징에서 시차 이동이 발생합니다. 카메라에 가까운 객체일수록 두 이미지 간 이동 거리가 더 큽니다."
+      },
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0021:0003",
+        "ko": "캡처 시스템은 아래에 표시된 바와 같이 이 차이, 즉 *disparity*를 사용해 이미지의 객체와 카메라 사이의 상대 거리를 추론합니다."
+      },
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0022:0001",
+        "ko": "![두 장의 사진에서 시차 차이가 깊이 맵을 만드는 방식](https://docs-assets.developer.apple.com/published/94f213d5be82fedf7626347d3b221af4/media-2978411%402x.png)"
+      },
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0023:0001",
+        "ko": "듀얼 카메라 장치로 캡처한 깊이 맵의 각 지점은 1/미터 단위의 disparity 값을 측정하며, [`AVDepthData.Accuracy.relative`](avdepthdata/accuracy/relative.md) 정확도를 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0023:0002",
+        "ko": "개별 포인트는 실제 거리의 정확한 추정치가 아니지만, 포인트 간의 변화는 깊이 기반 이미지 처리 효과에 사용할 만큼 충분히 일관적입니다."
+      },
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0024:0001",
+        "ko": "TrueDepth 카메라는 카메라 앞에 적외선 패턴을 투사하고 적외선 카메라로 그 패턴을 촬영합니다."
+      },
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0024:0002",
+        "ko": "장면의 객체가 패턴을 왜곡하는 방식을 관찰함으로써 캡처 시스템은 이미지 내 각 지점까지의 카메라 거리를 계산할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0025:0001",
+        "ko": "TrueDepth 카메라는 기본적으로 disparity 맵을 생성하여, 결과 깊이 데이터가 듀얼 카메라 장치에서 생성된 데이터와 유사해지도록 합니다."
+      },
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0025:0002",
+        "ko": "그러나 듀얼 카메라 장치와 달리 TrueDepth 카메라는 [`AVDepthData.Accuracy.absolute`](avdepthdata/accuracy/absolute.md) 정확도로 미터 단위의 깊이를 직접 측정할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:about-disparity-depth-and-accuracy:0025:0003",
+        "ko": "disparity가 아닌 depth를 캡처하려면 캡처 세션을 시작하기 전에 capture 장치의 [`activeDepthDataFormat`](avcapturedevice/activedepthdataformat.md)을 설정합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0027:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0028:0001",
+        "ko": "[Creating auxiliary depth data manually](creating-auxiliary-depth-data-manually.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "자체 이미지에 깊이 이미지를 생성해 첨부합니다."
+      },
+      {
+        "id": "seg:list:see-also:0030:0001",
+        "ko": "[Capturing depth using the LiDAR camera](capturing-depth-using-the-lidar-camera.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "지원 기기에서 LiDAR 카메라에 접근해 정밀한 깊이 데이터를 캡처합니다."
+      },
+      {
+        "id": "seg:list:see-also:0032:0001",
+        "ko": "[AVCamFilter: Applying filters to a capture stream](avcamfilter-applying-filters-to-a-capture-stream.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "전면 TrueDepth 카메라에서 스트리밍되는 캡처 스트림에 로즈 톤 필터링과 깊이 효과를 적용해 렌더링합니다."
+      },
+      {
+        "id": "seg:list:see-also:0034:0001",
+        "ko": "[Streaming depth data from the TrueDepth camera](streaming-depth-data-from-the-truedepth-camera.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "TrueDepth 카메라에서 2D 및 3D로 깊이 데이터를 시각화합니다."
+      },
+      {
+        "id": "seg:list:see-also:0036:0001",
+        "ko": "[Enhancing live video by leveraging TrueDepth camera data](enhancing-live-video-by-leveraging-truedepth-camera-data.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0037:0001",
+        "ko": "전면 TrueDepth 카메라에서 스트리밍되는 라이브 캡처 피드에 사용자 배경을 적용합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0039:0001",
+        "ko": "호환되는 카메라 장치에서 장면 깊이 정보를 기록하는 캡처 출력입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0041:0001",
+        "ko": "호환되는 카메라 장치가 캡처한 픽셀 단위 거리 또는 시차 정보의 컨테이너입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0043:0001",
+        "ko": "이미지와 깊이 데이터 캡처에 사용되는 카메라 특성에 대한 정보입니다."
+      },
+      {
+        "id": "seg:heading:adopting-picture-in-picture-in-a-standard-player:0000:0001",
+        "ko": "표준 플레이어에서 Picture in Picture 사용하기"
+      },
+      {
+        "id": "seg:paragraph:adopting-picture-in-picture-in-a-standard-player:0001:0001",
+        "ko": "**프레임워크**: AVKit"
+      },
+      {
+        "id": "seg:paragraph:adopting-picture-in-picture-in-a-standard-player:0002:0001",
+        "ko": "플레이어 뷰 컨트롤러를 사용해 앱에 Picture in Picture(PiP) 재생을 추가합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0004:0001",
+        "ko": "[`AVPlayerViewController`](avplayerviewcontroller.md)는 iOS, iPadOS, tvOS 전반에 걸쳐 표준 동영상 재생 경험을 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0004:0002",
+        "ko": "tvOS에서는 다양한 원격 제어, 건너뛰기, 탐색, 스크러빙, Siri 명령, 인터스티셜 지원 등 여러 기능을 지원합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0004:0003",
+        "ko": "`[`Configuring your app for media playback`]`(https://developer.apple.com/documentation/AVFoundation/configuring-your-app-for-media-playback)에서 설명한 대로 오디오 세션을 구성하고 프로젝트 기능을 설정하면 플레이어가 자동으로 PiP 재생을 지원합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0004:0004",
+        "ko": "앱이 지원 기기에서 실행되면 사용자가 표준 플레이어에서 PiP를 관리할 수 있습니다."
+      },
+      {
+        "id": "seg:heading:familiarize-yourself-with-the-pip-controls:0005:0001",
+        "ko": "PiP 제어 기능 익히기"
+      },
+      {
+        "id": "seg:paragraph:familiarize-yourself-with-the-pip-controls:0006:0001",
+        "ko": "PiP 재생은 사용자 인터페이스에서 PiP 버튼을 선택하면 시작됩니다."
+      },
+      {
+        "id": "seg:paragraph:familiarize-yourself-with-the-pip-controls:0006:0002",
+        "ko": "iOS와 iPadOS에서는 비디오가 전체 화면 모드에서 재생되고 사용자가 앱을 종료하면 PiP 재생이 자동으로 시작됩니다."
+      },
+      {
+        "id": "seg:paragraph:familiarize-yourself-with-the-pip-controls:0006:0003",
+        "ko": "동영상이 너비 전체를 채우지 않을 때는 [`canStartPictureInPictureAutomaticallyFromInline`](avplayerviewcontroller/canstartpictureinpictureautomaticallyfrominline.md)을 사용하여 해당 동영상이 기본 초점인지 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:familiarize-yourself-with-the-pip-controls:0006:0004",
+        "ko": "어떤 경우든 플레이어 창은 이동 가능한 플로팅 창으로 축소됩니다."
+      },
+      {
+        "id": "seg:paragraph:familiarize-yourself-with-the-pip-controls:0006:0005",
+        "ko": "일반적으로 시스템은 장면이 백그라운드로 전환될 때 비디오를 자동으로 일시 정지하므로 활성 상태에 따라 비디오를 별도로 일시 정지할 필요가 없습니다."
+      },
+      {
+        "id": "seg:blockquote:familiarize-yourself-with-the-pip-controls:0007:0001",
+        "ko": "💡 **Tip**: iOS와 iPadOS에서는 설정 > 일반 > Picture in Picture에서 Picture in Picture의 자동 호출을 비활성화할 수 있습니다."
+      },
+      {
+        "id": "seg:blockquote:familiarize-yourself-with-the-pip-controls:0007:0002",
+        "ko": "모든 설정이 올바르게 완료된 것으로 보이는데도 홈 화면으로 돌아갈 때 비디오가 PiP 모드로 진입하지 않으면 이 설정을 확인합니다."
+      },
+      {
+        "id": "seg:paragraph:familiarize-yourself-with-the-pip-controls:0008:0001",
+        "ko": "PiP 인터페이스에서 정지 버튼을 선택하면 PiP가 종료되고 앱에서 비디오 재생이 복원됩니다."
+      },
+      {
+        "id": "seg:paragraph:familiarize-yourself-with-the-pip-controls:0008:0002",
+        "ko": "AVKit은 앱의 설계를 추측할 수 없으므로 비디오 재생 인터페이스를 적절히 복원하는 방법을 알지 못합니다."
+      },
+      {
+        "id": "seg:paragraph:familiarize-yourself-with-the-pip-controls:0008:0003",
+        "ko": "대신 그 책임은 사용자에게 위임됩니다."
+      },
+      {
+        "id": "seg:paragraph:familiarize-yourself-with-the-pip-controls:0009:0001",
+        "ko": "iOS 14부터 PiP 사용자 인터페이스는 사용자가 동영상 내에서 앞뒤로 건너뛸 수 있는 제어 장치를 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:familiarize-yourself-with-the-pip-controls:0009:0002",
+        "ko": "시스템은 iOS 14 이상을 대상으로 링크된 앱에 대해 기본적으로 이러한 제어를 활성화합니다."
+      }
+    ]
+  }
+}
