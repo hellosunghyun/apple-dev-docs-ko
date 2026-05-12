@@ -21,9 +21,12 @@ export async function translateBatch(input: TranslationBatchInput): Promise<Tran
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
+      const args = ["exec", "--ephemeral", "--output-schema", resolveRoot("schemas/translation-output.schema.json")];
+      if (process.env.CODEX_MODEL) args.push("--model", process.env.CODEX_MODEL);
+      args.push("-");
       const { stdout } = await execa(
         "codex",
-        ["exec", "--ephemeral", "--output-schema", resolveRoot("schemas/translation-output.schema.json"), "-"],
+        args,
         {
           input: prompt,
           timeout,

@@ -16,6 +16,10 @@ on:
       llm_concurrency:
         required: true
         default: "3"
+      codex_model:
+        required: true
+        default: "gpt-5.3-codex-spark"
+        description: Codex CLI model used for translation batches.
       batch_segments:
         required: false
         default: "60"
@@ -253,6 +257,7 @@ jobs:
           LLM_CONCURRENCY: ${{ inputs.llm_concurrency || '3' }}
           CHECKPOINT_RESULTS: ${{ inputs.checkpoint_results || 'true' }}
           CHECKPOINT_INTERVAL_SECONDS: ${{ inputs.checkpoint_interval_seconds || '300' }}
+          CODEX_MODEL: ${{ inputs.codex_model || 'gpt-5.3-codex-spark' }}
           CODEX_TIMEOUT_SECONDS: ${{ inputs.codex_timeout_seconds || '900' }}
           CODEX_RETRIES: ${{ inputs.codex_retries || '1' }}
           MAX_TRANSLATION_FAILURES: ${{ inputs.max_translation_failures || '8' }}
