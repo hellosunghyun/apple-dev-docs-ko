@@ -1,0 +1,2482 @@
+{
+  "generatedAt": "2026-05-12T14:36:24.370Z",
+  "updatedAt": "2026-05-12T14:37:16.406Z",
+  "queue": "state/queue/shard-0060.json",
+  "abortReason": "Paused after Codex usage limit; retry after 3:27 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 3:27 PM.",
+    "retryAfterText": "3:27 PM",
+    "retryAt": "2026-05-12T15:27:00.000Z"
+  },
+  "outputs": [
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:issupported:0002:0001",
+          "ko": "현재 기기가 이 세션 구성 클래스를 지원하는지 나타내는 부울 값입니다."
+        },
+        {
+          "id": "seg:list:mentions:0008:0001",
+          "ko": "[Verifying Device Support and User Permission](managing-session-life-cycle-and-tracking-quality.md)"
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "An [`ARWorldMap`](arworldmap.md) encapsulates the state of a running [`ARSession`](arsession.md)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0001",
+          "ko": "AR 구성을 생성하기 전에 해당 구성 클래스의 [`isSupported`](arconfiguration/issupported.md) 속성을 확인해 사용하려는 구성이 사용자 기기에서 지원되는지 검증합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0002",
+          "ko": "이 속성 값이 [`false`](https://developer.apple.com/documentation/Swift/false)이면, 현재 기기는 요청한 구성을 지원하지 않습니다."
+        },
+        {
+          "id": "seg:blockquote:discussion:0012:0001",
+          "ko": "❗ **중요**: 모든 ARKit 구성은 A9 이상 프로세서를 갖춘 iOS 기기가 필요합니다."
+        },
+        {
+          "id": "seg:blockquote:discussion:0012:0002",
+          "ko": "앱이 다른 기기를 지원하고 AR을 보조 기능으로 제공한다면, 이 속성을 사용해 사용자에게 AR 기반 기능을 제공할지 결정합니다."
+        },
+        {
+          "id": "seg:blockquote:discussion:0012:0003",
+          "ko": "앱의 핵심 기능에 ARKit가 필요하다면 앱의 Info.plist에서 [`UIRequiredDeviceCapabilities`](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIRequiredDeviceCapabilities) 섹션의 `arkit` 키를 사용해 ARKit을 지원하는 기기에서만 앱을 사용할 수 있게 해야 합니다."
+        },
+        {
+          "id": "seg:paragraph:extent:0002:0001",
+          "ko": "텍스처를 포함하는 앵커 위치 주변 영역입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "Each 16-bit integer value in this array represents an index into the [`vertices`](arplanegeometry/vertices-43kle.md) and [`textureCoordinates`](arplanegeometry/texturecoordinates-p801.md) arrays."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "Each set of three indices forms a triangle, so the number of indices in the [`triangleIndices`](arplanegeometry/triangleindices-64epx.md) array is three times the [`triangleCount`](arplanegeometry/trianglecount.md) value."
+        },
+        {
+          "id": "seg:paragraph:next:0002:0001",
+          "ko": "시퀀스의 다음 요소를 반환합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "[`ARKitSession.Events.Element`](arkitsession/events-swift.struct/element.md)을 반환하며, 추가 요소가 없으면 `nil`을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:return-value:0010:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arkitsession/events-swift.struct/iterator/next())*"
+        },
+        {
+          "id": "seg:paragraph:triangleindices:0002:0001",
+          "ko": "평면 메시의 정점 데이터로 구성된 삼각형 메시를 설명하는 인덱스 배열입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 배열의 각 16비트 정수 값은 [`vertices`](arplanegeometry/vertices-43kle.md)와 [`textureCoordinates`](arplanegeometry/texturecoordinates-p801.md) 배열에 대한 인덱스를 나타냅니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "세 개의 인덱스 집합은 메시에서 단일 삼각형을 구성하는 정점을 식별합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0003",
+          "ko": "이 배열은 GPU 기반 렌더링에서 삼각형 메시의 인덱스 버퍼로 사용하거나 3D 모델 에셋 파일을 만들 때 사용할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "세 개의 인덱스가 하나의 삼각형을 구성하므로, [`triangleIndices`](arplanegeometry/triangleindices-64epx.md) 배열의 인덱스 수는 [`triangleCount`](arplanegeometry/trianglecount.md) 값의 세 배입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0010:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0011:0001",
+          "ko": "[var vertices: [simd_float3]](arplanegeometry/vertices-43kle.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0012:0001",
+          "ko": "평면 메시의 각 점에 대한 정점 위치 배열입니다."
+        },
+        {
+          "id": "seg:list:see-also:0013:0001",
+          "ko": "[var textureCoordinates: [vector_float2]](arplanegeometry/texturecoordinates-p801.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "평면 메시의 각 점에 대한 텍스처 좌표 값 배열입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "[`triangleIndices`](arplanegeometry/triangleindices-1azi3.md) 버퍼로 설명되는 삼각형 개수입니다."
+        },
+        {
+          "id": "seg:paragraph:initialworldmap:0002:0001",
+          "ko": "이 세션 구성으로 다시 시작하려는 이전 AR 세션의 상태입니다."
+        },
+        {
+          "id": "seg:list:mentions:0008:0001",
+          "ko": "[Managing Session Life Cycle and Tracking Quality](managing-session-life-cycle-and-tracking-quality.md)"
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "[`ARWorldMap`](arworldmap.md)는 실행 중인 [`ARSession`](arsession.md)의 상태를 캡슐화합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0002",
+          "ko": "이 상태에는 사용자가 기기를 이동시키는 물리적 공간에 대한 ARKit의 인식(ARKit가 기기의 위치와 방향을 결정할 때 사용하는 정보)뿐 아니라 세션에 추가된 모든 [`ARAnchor`](aranchor.md) 객체가 포함됩니다. 이 객체는 감지된 실제 세계 특성이나 앱이 배치한 가상 콘텐츠를 나타낼 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0003",
+          "ko": "[`getCurrentWorldMap(completionHandler:)`](arsession/getcurrentworldmap(completionhandler:).md)로 세션의 월드맵을 저장한 뒤 해당 맵을 구성의 [`initialWorldMap`](arworldtrackingconfiguration/initialworldmap.md) 속성에 할당하고, [`run(_:options:)`](arsession/run(_:options:).md)로 동일한 공간 인식 및 앵커를 가진 다른 세션을 시작할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0001",
+          "ko": "월드맵을 저장하고 이를 사용해 새 세션을 시작하면 앱에서 새로운 AR 기능을 추가할 수 있습니다."
+        },
+        {
+          "id": "seg:list:discussion:0012:0001",
+          "ko": "**다중 사용자 AR 경험.** 보관된 [`ARWorldMap`](arworldmap.md) 객체를 인근 사용자의 기기로 전송해 공유 기준 프레임을 만듭니다. 두 장치가 같은 월드맵을 추적하면 두 사용자가 동일한 가상 콘텐츠를 보고 상호 작용할 수 있는 네트워크형 경험을 구성할 수 있습니다."
+        },
+        {
+          "id": "seg:list:discussion:0012:0002",
+          "ko": "**지속적인 AR 경험.** 앱이 비활성화되면 월드맵을 저장한 다음, 다음 실행 시 동일한 물리적 환경에서 복원합니다. 복원된 월드맵의 앵커를 사용해 저장된 세션과 동일한 위치에 동일한 가상 콘텐츠를 배치할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0013:0001",
+          "ko": "초기 월드맵으로 세션을 실행하면, ARKit이 기록된 월드맵을 현재 환경과 정합하려고 시도하는 동안 세션은 [`ARCamera.TrackingState.limited(_:)`](arcamera/trackingstate-swift.enum/limited(_:).md) ([`ARCamera.TrackingState.Reason.relocalizing`](arcamera/trackingstate-swift.enum/reason/relocalizing.md)) 추적 상태로 시작됩니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0013:0002",
+          "ko": "성공하면 짧은 시간 후 추적 상태가 [`ARCamera.TrackingState.normal`](arcamera/trackingstate-swift.enum/normal.md)으로 전환되어 현재 월드 좌표계와 앵커가 기록된 월드맵의 값과 일치함을 나타냅니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0014:0001",
+          "ko": "ARKit가 기록된 월드맵을 현재 환경과 정합하지 못하면(예: 기기가 월드맵이 기록된 장소와 완전히 다른 곳에 있는 경우), 세션은 [`ARCamera.TrackingState.Reason.relocalizing`](arcamera/trackingstate-swift.enum/reason/relocalizing.md) 상태에 무기한 머뭅니다."
+        },
+        {
+          "id": "seg:heading:see-also:0015:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "새로운 월드 트래킹 구성을 초기화합니다."
+        },
+        {
+          "id": "seg:paragraph:barcodeanchorsymbologyitf:0002:0001",
+          "ko": "ITF 바코드 심볼로 식별되는 값입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "Aztec 바코드 심볼로 식별되는 값입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "Codabar 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "Code 128 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "Code 39 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "Code 39 체크섬 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "Code 39 전체 ASCII 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "Code 39 전체 ASCII 체크섬 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "Code 93 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "Code 93i 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "Data Matrix 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "EAN13 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "EAN8 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "GS1 DataBar 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "GS1 DataBar Expanded 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "GS1 DataBar Limited 바코드 심볼로지를 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:description:0002:0001",
+          "ko": "PlaneAnchor.Classification의 텍스트 표현입니다."
+        },
+        {
+          "id": "seg:paragraph:planeanchorclassificationdoor:0002:0001",
+          "ko": "문입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "천장입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "바닥입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "의자입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "테이블입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "벽입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "창문입니다."
+        },
+        {
+          "id": "seg:list:avaudioenginehavemusicplayer:0003:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:avaudioenginehavemusicplayer:0003:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:avaudioenginehavemusicplayer:0003:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:avaudioenginehavemusicplayer:0003:0004",
+          "ko": "macOS ?+"
+        },
+        {
+          "id": "seg:list:avaudioenginehavemusicplayer:0003:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:avaudioenginehavemusicplayer:0003:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:heading:see-also:0006:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:avaudioenginemanualrenderingmoderealtime:0002:0001",
+          "ko": "렌더링 중에 블로킹 호출을 수행하지 않고 실시간 제약 조건 하에서 동작하는 엔진입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "The system uses the instrument loaded on the channel [`groupID`](avextendednoteonevent/groupid.md)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "[`manualRenderingBlock`](avaudioengine/manualrenderingblock.md)를 참조합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "오프라인 모드에서 작동하는 엔진입니다."
+        },
+        {
+          "id": "seg:heading:initrawvalue:0000:0001",
+          "ko": "init(rawValue:)"
+        },
+        {
+          "id": "seg:list:initrawvalue:0003:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:initrawvalue:0003:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:initrawvalue:0003:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:initrawvalue:0003:0004",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:initrawvalue:0003:0005",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:initrawvalue:0003:0006",
+          "ko": "watchOS ?+"
+        },
+        {
+          "id": "seg:paragraph:declaration:0007:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfaudio/avaudiosession/recordpermission-swift.enum/init(rawvalue:))*"
+        },
+        {
+          "id": "seg:paragraph:audiocomponentdescription:0002:0001",
+          "ko": "기반 Core Audio 오디오 유닛을 나타내는 오디오 컴포넌트 설명입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "기반 Core Audio 오디오 유닛입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "오디오 유닛의 제조사 이름입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "오디오 유닛의 이름입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "오디오 유닛의 버전 번호입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "구현의 오디오 유닛을 감싸거나 기반이 되는 오디오 유닛 클래스입니다."
+        },
+        {
+          "id": "seg:paragraph:localizedtypename:0002:0001",
+          "ko": "컴포넌트의 로컬라이즈된 타입 이름입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "오디오 유닛 컴포넌트를 나타내는 아이콘의 URL입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "컴포넌트를 나타내는 아이콘입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[var allTagNames: [String]](avaudiounitcomponent/alltagnames.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "오디오 유닛 컴포넌트의 태그 이름 배열입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[var userTagNames: [String]](avaudiounitcomponent/usertagnames.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "사용자가 생성한 태그 배열입니다."
+        },
+        {
+          "id": "seg:paragraph:defaultinstrument:0002:0001",
+          "ko": "기본 악기 식별자를 나타내는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "시스템은 채널 [`groupID`](avextendednoteonevent/groupid.md)에 로드된 악기를 사용합니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:avassetdownloadtaskminimumrequiredpresentationsizekey:0002:0001",
+          "ko": "다운로드할 변형의 최소 프레젠테이션 크기를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "기본적으로 다운로드 작업은 가장 큰 미디어 프레젠테이션 크기의 variant를 선택합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "특정 크기의 변형을 다운로드하려면 이 키에 대해 [`CGSize`](https://developer.apple.com/documentation/CoreFoundation/CGSize) 값을 지정합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "다운로드할 변형의 최소 비트 전송률을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "다운로드할 미디어 선택 항목을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "지원되는 경우 멀티채널 재생을 지원하는 미디어 선택을 작업에서 다운로드하는지 나타내는 키입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "지원되는 경우 SDR 비디오 대신 HDR 비디오를 작업이 다운로드할지 나타내는 키입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "지원되는 경우 작업이 무손실 오디오 형식으로 미디어 선택을 다운로드하는지 나타내는 키입니다."
+        },
+        {
+          "id": "seg:heading:metadataforformat:0000:0001",
+          "ko": "metadata(forFormat:)"
+        },
+        {
+          "id": "seg:paragraph:metadataforformat:0002:0001",
+          "ko": "지정한 형식에 대해 트랙이 포함하는 메타데이터 항목을 반환합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "지정한 형식과 일치하는 메타데이터 항목의 배열이며, 일치하는 항목이 없으면 빈 배열을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "Apple은 iOS 15, tvOS 15 및 macOS 12 이상에서 이 메서드 사용을 권장하지 않습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0002",
+          "ko": "대신 [`loadMetadata(for:completionHandler:)`](avassettrack/loadmetadata(for:completionhandler:).md)로 트랙 메타데이터를 비동기적으로 로드합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0001",
+          "ko": "[`availableMetadataFormats`](avassettrack/availablemetadataformats.md) 속성을 로드한 후에는 현재 스레드를 차단하지 않고 이 메서드를 호출할 수 있습니다."
+        },
+        {
+          "id": "seg:list:parameters:0013:0001",
+          "ko": "`format`: 검색할 메타데이터 항목의 형식입니다."
+        },
+        {
+          "id": "seg:paragraph:parameters:0015:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassettrack/metadata(forformat:))*"
+        },
+        {
+          "id": "seg:heading:attachto:0000:0001",
+          "ko": "attach(_:to:)"
+        },
+        {
+          "id": "seg:paragraph:attachto:0002:0001",
+          "ko": "지정한 공간 구성에 픽셀 버퍼를 연결합니다."
+        },
+        {
+          "id": "seg:list:attachto:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:parameters:0008:0001",
+          "ko": "`spatialVideoConfiguration`: 픽셀 버퍼와 연결할 공간 구성입니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0002",
+          "ko": "`pixelBuffer`: 공간 구성과 연결할 픽셀 버퍼입니다. 참고: 공간 구성은 `AVVideoComposition`의 `spatialConfigurations` 속성에 지정된 공간 구성 중 하나여야 합니다. 그렇지 않으면 예외가 발생합니다. 참고: 사용자 지정 컴포지터의 모든 픽셀 버퍼는 동일한 공간 구성에 연결되어 있어야 합니다. 그렇지 않으면 예외가 발생합니다. 영상이 비공간임을 나타내려면 `spatialVideoConfiguration`에 `.nonSpatial` 값을 지정합니다. 단, `.nonSpatial` 구성은 `AVVideoComposition/spatialConfigurations` 속성에 있어야 하며, 그렇지 않으면 예외가 발생합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[func sourceFrame(byTrackID: CMPersistentTrackID) -> CVPixelBuffer?](avasynchronousvideocompositionrequest/sourceframe(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "지정된 식별자를 포함하는 트랙의 소스 픽셀 버퍼를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func sourceReadOnlyPixelBuffer(byTrackID: CMPersistentTrackID) -> CVReadOnlyPixelBuffer?](avasynchronousvideocompositionrequest/sourcereadonlypixelbuffer(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "주어진 트랙 ID에 대한 소스 `CVReadOnlyPixelBuffer`를 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0002",
+          "ko": "트랙에 태그된 버퍼가 포함된 경우 태그 버퍼 중 하나의 픽셀 버퍼가 반환됩니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func sourceReadySampleBuffer(byTrackID: CMPersistentTrackID) -> CMReadySampleBuffer<CMSampleBuffer.DynamicContent>?](avasynchronousvideocompositionrequest/sourcereadysamplebuffer(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "주어진 트랙 ID에 대한 소스 `CMReadySampleBuffer`를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[func sourceSampleBuffer(byTrackID: CMPersistentTrackID) -> CMSampleBuffer?](avasynchronousvideocompositionrequest/sourcesamplebuffer(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "지정된 식별자를 포함하는 트랙의 소스 샘플 버퍼를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[var sourceSampleDataTrackIDs: [CMPersistentTrackID]](avasynchronousvideocompositionrequest/sourcesampledatatrackids-3yiab.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "소스 샘플 데이터를 포함하는 트랙의 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[func sourceTaggedDynamicBuffers(byTrackID: CMPersistentTrackID) -> [CMTaggedDynamicBuffer]?](avasynchronousvideocompositionrequest/sourcetaggeddynamicbuffers(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "주어진 트랙 ID에 대한 소스 태그된 동적 버퍼를 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0002",
+          "ko": "비디오 트랙에 태그된 버퍼가 없거나 트랙에 비디오가 없는 경우 `nil`을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0003",
+          "ko": "이 함수는 `supportsSourceTaggedBuffers`가 `YES`인 경우에만 호출해야 합니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[func sourceTimedMetadata(byTrackID: CMPersistentTrackID) -> AVTimedMetadataGroup?](avasynchronousvideocompositionrequest/sourcetimedmetadata(bytrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "지정된 식별자를 포함하는 트랙의 소스 타임드 메타데이터 그룹을 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[var sourceTrackIDs: [NSNumber]](avasynchronousvideocompositionrequest/sourcetrackids.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "소스 비디오를 포함하는 트랙의 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avasynchronousvideocompositionrequest/attach(_:to:))*"
+        },
+        {
+          "id": "seg:paragraph:avcapturedevicemicrophonemodevoiceisolation:0002:0001",
+          "ko": "마이크로폰 오디오를 처리하여 음성을 분리하고 다른 신호를 감쇠시키는 모드입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "표준 음성 DSP를 사용해 마이크로폰 오디오를 처리하는 모드입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "방의 모든 소리를 캡처하기 위해 마이크로폰 오디오 처리를 최소화하는 모드입니다."
+        },
+        {
+          "id": "seg:paragraph:interruptionendednotification:0002:0001",
+          "ko": "캡처 세션의 인터럽트가 끝나면 시스템이 게시하는 알림입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "캡처 세션이 실행 중인지 여부를 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "캡처 세션이 인터럽트된 상태인지 여부를 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "캡처 세션이 시작될 때 시스템이 게시하는 알림입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "캡처 세션이 중지될 때 시스템이 게시하는 알림입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "시스템이 캡처 세션을 인터럽트할 때 게시하는 알림입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "캡처 세션에서 오류가 발생할 때 시스템이 게시하는 알림입니다."
+        },
+        {
+          "id": "seg:paragraph:avcapturesynchronizedmetadataobjectdata:0002:0001",
+          "ko": "동기화 캡처를 사용해 수집한 메타데이터 객체를 보관하는 컨테이너입니다."
+        },
+        {
+          "id": "seg:heading:accessing-synchronized-data:0008:0001",
+          "ko": "동기화된 데이터 액세스"
+        },
+        {
+          "id": "seg:list:accessing-synchronized-data:0009:0001",
+          "ko": "[var metadataObjects: [AVMetadataObject]](avcapturesynchronizedmetadataobjectdata/metadataobjects.md)"
+        },
+        {
+          "id": "seg:paragraph:accessing-synchronized-data:0010:0001",
+          "ko": "이 동기화 타임스탬프에서 캡처된 메타데이터 객체 목록입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:heading:inherits-from:0012:0001",
+          "ko": "상속"
+        },
+        {
+          "id": "seg:heading:conforms-to:0014:0001",
+          "ko": "준수"
+        },
+        {
+          "id": "seg:heading:see-also:0016:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "여러 캡처 출력에서 시간 동기화된 데이터의 전달을 조정하는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "여러 캡처 출력에서 동시에 수집한 데이터 샘플 집합입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "동기화된 캡처로 수집한 비디오 또는 오디오 샘플을 위한 컨테이너입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0024:0001",
+          "ko": "동기화된 캡처로 수집한 장면 깊이 정보용 컨테이너입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0026:0001",
+          "ko": "동기화된 캡처로 수집한 미디어 샘플의 추상 슈퍼클래스입니다."
+        },
+        {
+          "id": "seg:paragraph:availablemetadataformats:0002:0001",
+          "ko": "이 자산에 포함된 메타데이터 형식입니다."
+        },
+        {
+          "id": "seg:list:availablemetadataformats:0004:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:availablemetadataformats:0004:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:availablemetadataformats:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:availablemetadataformats:0004:0004",
+          "ko": "macOS ?+"
+        },
+        {
+          "id": "seg:list:availablemetadataformats:0004:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:availablemetadataformats:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:availablemetadataformats:0004:0007",
+          "ko": "watchOS ?+"
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "메타데이터 형식에는 ID3, iTunes 메타데이터 등이 포함될 수 있습니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[var metadata: [AVMetadataItem]](averror-swift.struct/airplaycontrollerrequiresinternet.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "값을 사용할 수 있는 모든 메타데이터 식별자에 대한 메타데이터 항목 배열입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[var commonMetadata: [AVMetadataItem]](averror-swift.struct/airplayreceiverrequiresinternet.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "값을 제공하는 공통 메타데이터 식별자에 대해 이 자산이 보유한 메타데이터 항목입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func metadata(forFormat: AVMetadataFormat) -> [AVMetadataItem]](averror-swift.struct/airplayreceivertemporarilyunavailable.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "지정된 형식으로 컨테이너에서 메타데이터 항목 배열을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "자산의 생성 날짜를 나타내는 메타데이터 항목입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "현재 로케일에 적합한 언어로 제공되는 자산의 가사입니다."
+        },
+        {
+          "id": "seg:paragraph:devicenotconnected:0002:0001",
+          "ko": "이 앱은 장치가 연결되지 않아 해당 장치에 액세스할 수 없습니다."
+        },
+        {
+          "id": "seg:list:devicenotconnected:0004:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:devicenotconnected:0004:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:devicenotconnected:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:devicenotconnected:0004:0004",
+          "ko": "macOS ?+"
+        },
+        {
+          "id": "seg:list:devicenotconnected:0004:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:devicenotconnected:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:devicenotconnected:0004:0007",
+          "ko": "watchOS ?+"
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "프레임워크 작업에서 발생할 수 있는 오류를 정의하는 열거형입니다."
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static var airPlayControllerRequiresInternet: AVError.Code](averror-swift.struct/airplaycontrollerrequiresinternet.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "AirPlay 컨트롤러는 동작하기 위해 인터넷 연결이 필요합니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static var airPlayReceiverRequiresInternet: AVError.Code](averror-swift.struct/airplayreceiverrequiresinternet.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "AirPlay 수신기는 동작하기 위해 인터넷 연결이 필요합니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static var airPlayReceiverTemporarilyUnavailable: AVError.Code](averror-swift.struct/airplayreceivertemporarilyunavailable.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "AirPlay 수신기가 일시적으로 사용할 수 없습니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static var applicationIsNotAuthorizedToUseDevice: AVError.Code](averror-swift.struct/applicationisnotauthorizedtousedevice.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "사용자가 이 앱의 미디어 캡처 권한을 거부했습니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static var applicationIsNotAuthorized: AVError.Code](averror-swift.struct/applicationisnotauthorized.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "이 앱은 미디어를 재생할 권한이 없습니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static var autoWhiteBalanceNotLocked: AVError.Code](averror-swift.struct/autowhitebalancenotlocked.md)"
+        },
+        {
+          "id": "seg:list:see-also:0020:0002",
+          "ko": "[static var compositionTrackSegmentsNotContiguous: AVError.Code](averror-swift.struct/compositiontracksegmentsnotcontiguous.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "소스 미디어에 공백이 있어 합성에서 원본 미디어를 추가할 수 없습니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static var contentIsNotAuthorized: AVError.Code](averror-swift.struct/contentisnotauthorized.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "사용자는 미디어를 재생할 권한이 없습니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static var contentIsProtected: AVError.Code](averror-swift.struct/contentisprotected.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "이 앱은 미디어를 열 권한이 없습니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static var contentIsUnavailable: AVError.Code](averror-swift.struct/contentisunavailable.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "캡처된 콘텐츠를 사용할 수 없습니다."
+        },
+        {
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[static var contentKeyRequestCancelled: AVError.Code](averror-swift.struct/contentkeyrequestcancelled.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "앱이 콘텐츠 키 검색 요청을 취소했습니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[static var contentNotUpdated: AVError.Code](averror-swift.struct/contentnotupdated.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "시스템이 캡처된 콘텐츠를 업데이트할 수 없습니다."
+        },
+        {
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static var createContentKeyRequestFailed: AVError.Code](averror-swift.struct/createcontentkeyrequestfailed.md)"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "앱이 콘텐츠 키 요청을 생성하지 못했습니다."
+        },
+        {
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static var decodeFailed: AVError.Code](avmetadataidentifier/commonidentifierlastmodifieddate.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "시스템이 미디어 디코딩에 실패했습니다."
+        },
+        {
+          "id": "seg:paragraph:indicateshorizontalfieldofview:0002:0001",
+          "ko": "비디오 트랙에 수평 시야각과 관련된 정보가 포함되어 있음을 나타내는 미디어 특성입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 미디어 특성은 [`CMVideoFormatDescription`](https://developer.apple.com/documentation/CoreMedia/CMVideoFormatDescription)에 [`kCMFormatDescriptionExtension_HorizontalFieldOfView`](https://developer.apple.com/documentation/CoreMedia/kCMFormatDescriptionExtension_HorizontalFieldOfView) 확장자가 포함된 경우에 나타납니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "이는 시야각이 일반적인 수평 시야각보다 넓어지거나 더 좁아졌다는 뜻이 아닙니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "이 특성의 값은 `public.indicates-horizontal-field-of-view`입니다."
+        },
+        {
+          "id": "seg:blockquote:discussion:0010:0001",
+          "ko": "**Note**: 이 특성의 존재는 연관된 트랙의 형식 설명에서 엄격하게 유추됩니다."
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let visual: AVMediaCharacteristic](avmetadataidentifier/commonidentifierartist.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "트랙 또는 미디어 선택 옵션에 시각적 콘텐츠가 포함되어 있음을 나타내는 미디어 특성입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let containsAlphaChannel: AVMediaCharacteristic](avmetadataidentifier/commonidentifierartwork.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "트랙에 알파 채널이 포함되어 있음을 나타내는 미디어 특성입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let containsHDRVideo: AVMediaCharacteristic](avmetadataidentifier/commonidentifierassetidentifier.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "트랙에 HDR 비디오가 포함되어 있음을 나타내는 미디어 특성입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let frameBased: AVMediaCharacteristic](avmetadataidentifier/commonidentifierauthor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "트랙 또는 미디어 선택 옵션에 프레임 기반 콘텐츠가 포함되어 있음을 나타내는 미디어 특성입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let usesWideGamutColorSpace: AVMediaCharacteristic](avmetadataidentifier/commonidentifiercontributor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "트랙이 와이드 감마 색 공간을 사용하는지를 나타내는 미디어 특성입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let containsStereoMultiviewVideo: AVMediaCharacteristic](avmetadataidentifier/commonidentifiercopyrights.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "트랙에 멀티뷰 압축 형식으로 캡처한 입체 비디오가 포함되어 있음을 나타내는 미디어 특성입니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let carriesVideoStereoMetadata: AVMediaCharacteristic](avmetadataidentifier/commonidentifiercreationdate.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "입체 비디오 트랙이 입체 비디오와 관련된 추가 정보를 보유함을 나타내는 미디어 특성입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let indicatesNonRectilinearProjection: AVMediaCharacteristic](avmetadataidentifier/commonidentifiercreator.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "비디오 트랙이 표시 시 어떻게 투영되어야 하는지와 관련된 정보를 포함함을 나타내는 미디어 특성입니다."
+        },
+        {
+          "id": "seg:paragraph:commonidentifierpublisher:0002:0001",
+          "ko": "게시자의 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[static let commonIdentifierAccessibilityDescription: AVMetadataIdentifier](avmetadataidentifier/id3metadataalbumsortorder.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "미디어의 접근성 설명을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let commonIdentifierAlbumName: AVMetadataIdentifier](avmetadataidentifier/commonidentifieralbumname.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "앨범 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let commonIdentifierArtist: AVMetadataIdentifier](avmetadataidentifier/commonidentifierartist.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "아티스트 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let commonIdentifierArtwork: AVMetadataIdentifier](avmetadataidentifier/commonidentifierartwork.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "앨범과 관련된 이미지를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let commonIdentifierAssetIdentifier: AVMetadataIdentifier](avmetadataidentifier/commonidentifierassetidentifier.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "미디어의 자산 ID를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let commonIdentifierAuthor: AVMetadataIdentifier](avmetadataidentifier/commonidentifierauthor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "저자의 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let commonIdentifierContributor: AVMetadataIdentifier](avmetadataidentifier/commonidentifiercontributor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "기여자 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let commonIdentifierCopyrights: AVMetadataIdentifier](avmetadataidentifier/commonidentifiercopyrights.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "저작권 문구를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let commonIdentifierCreationDate: AVMetadataIdentifier](avmetadataidentifier/commonidentifiercreationdate.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "원본 녹음 날짜를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let commonIdentifierCreator: AVMetadataIdentifier](avmetadataidentifier/commonidentifiercreator.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "제작자의 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[static let commonIdentifierDescription: AVMetadataIdentifier](avmetadataidentifier/commonidentifierdescription.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "미디어 설명을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[static let commonIdentifierFormat: AVMetadataIdentifier](avmetadataidentifier/commonidentifierformat.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "미디어 콘텐츠의 파일 형식을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static let commonIdentifierLanguage: AVMetadataIdentifier](avmetadataidentifier/commonidentifierlanguage.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "오디오에서 발화되거나 노래되는 텍스트 또는 가사의 언어를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static let commonIdentifierLastModifiedDate: AVMetadataIdentifier](avmetadataidentifier/commonidentifierlastmodifieddate.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "미디어의 최종 수정 날짜를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0036:0001",
+          "ko": "[static let commonIdentifierLocation: AVMetadataIdentifier](avmetadataidentifier/commonidentifierlocation.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "미디어의 위치 정보를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:id3metadataeventtimingcodes:0002:0001",
+          "ko": "노래나 음원의 주요 이벤트와 동기화를 위해 사용되는 타이밍 코드를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[static let id3MetadataAlbumSortOrder: AVMetadataIdentifier](avmetadataidentifier/id3metadataalbumsortorder.md)"
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "progress": {
+    "generatedAt": "2026-05-12T14:36:24.370Z",
+    "updatedAt": "2026-05-12T14:37:16.406Z",
+    "reason": "paused",
+    "queue": "state/queue/shard-0060.json",
+    "shard": {
+      "index": 60,
+      "total": 256
+    },
+    "abortReason": "Paused after Codex usage limit; retry after 3:27 PM",
+    "pause": {
+      "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 3:27 PM.",
+      "retryAfterText": "3:27 PM",
+      "retryAt": "2026-05-12T15:27:00.000Z"
+    },
+    "totals": {
+      "batches": 253,
+      "segments": 14209,
+      "completed": 5,
+      "failed": 0,
+      "processed": 5,
+      "active": 0,
+      "queued": 248,
+      "percent": 1.98
+    },
+    "batches": [
+      {
+        "index": 0,
+        "status": "success",
+        "segments": 42,
+        "startedAt": "2026-05-12T14:36:24.373Z",
+        "completedAt": "2026-05-12T14:36:39.425Z",
+        "durationMs": 15052
+      },
+      {
+        "index": 1,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:36:24.373Z",
+        "completedAt": "2026-05-12T14:36:47.342Z",
+        "durationMs": 22969
+      },
+      {
+        "index": 2,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:36:24.374Z",
+        "completedAt": "2026-05-12T14:36:36.251Z",
+        "durationMs": 11877
+      },
+      {
+        "index": 3,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:36:36.254Z",
+        "completedAt": "2026-05-12T14:36:53.289Z",
+        "durationMs": 17035
+      },
+      {
+        "index": 4,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:36:39.427Z",
+        "completedAt": "2026-05-12T14:37:09.753Z",
+        "durationMs": 30326
+      },
+      {
+        "index": 5,
+        "status": "queued",
+        "segments": 57,
+        "startedAt": "2026-05-12T14:36:47.346Z",
+        "completedAt": "2026-05-12T14:37:12.284Z",
+        "durationMs": 24938,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 3:27 PM."
+      },
+      {
+        "index": 6,
+        "status": "queued",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:36:53.292Z",
+        "completedAt": "2026-05-12T14:37:13.663Z",
+        "durationMs": 20371,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 3:27 PM."
+      },
+      {
+        "index": 7,
+        "status": "queued",
+        "segments": 45,
+        "startedAt": "2026-05-12T14:37:09.757Z",
+        "completedAt": "2026-05-12T14:37:16.403Z",
+        "durationMs": 6646,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 3:27 PM."
+      },
+      {
+        "index": 8,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 9,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 10,
+        "status": "queued",
+        "segments": 34
+      },
+      {
+        "index": 11,
+        "status": "queued",
+        "segments": 23
+      },
+      {
+        "index": 12,
+        "status": "queued",
+        "segments": 26
+      },
+      {
+        "index": 13,
+        "status": "queued",
+        "segments": 22
+      },
+      {
+        "index": 14,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 15,
+        "status": "queued",
+        "segments": 22
+      },
+      {
+        "index": 16,
+        "status": "queued",
+        "segments": 23
+      },
+      {
+        "index": 17,
+        "status": "queued",
+        "segments": 26
+      },
+      {
+        "index": 18,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 19,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 20,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 21,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 22,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 23,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 24,
+        "status": "queued",
+        "segments": 37
+      },
+      {
+        "index": 25,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 26,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 27,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 28,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 29,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 30,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 31,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 32,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 33,
+        "status": "queued",
+        "segments": 47
+      },
+      {
+        "index": 34,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 35,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 36,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 37,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 38,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 39,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 40,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 41,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 42,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 43,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 44,
+        "status": "queued",
+        "segments": 42
+      },
+      {
+        "index": 45,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 46,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 47,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 48,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 49,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 50,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 51,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 52,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 53,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 54,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 55,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 56,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 57,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 58,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 59,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 60,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 61,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 62,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 63,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 64,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 65,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 66,
+        "status": "queued",
+        "segments": 46
+      },
+      {
+        "index": 67,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 68,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 69,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 70,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 71,
+        "status": "queued",
+        "segments": 45
+      },
+      {
+        "index": 72,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 73,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 74,
+        "status": "queued",
+        "segments": 46
+      },
+      {
+        "index": 75,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 76,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 77,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 78,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 79,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 80,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 81,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 82,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 83,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 84,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 85,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 86,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 87,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 88,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 89,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 90,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 91,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 92,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 93,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 94,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 95,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 96,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 97,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 98,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 99,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 100,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 101,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 102,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 103,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 104,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 105,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 106,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 107,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 108,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 109,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 110,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 111,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 112,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 113,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 114,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 115,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 116,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 117,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 118,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 119,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 120,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 121,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 122,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 123,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 124,
+        "status": "queued",
+        "segments": 42
+      },
+      {
+        "index": 125,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 126,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 127,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 128,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 129,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 130,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 131,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 132,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 133,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 134,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 135,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 136,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 137,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 138,
+        "status": "queued",
+        "segments": 34
+      },
+      {
+        "index": 139,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 140,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 141,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 142,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 143,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 144,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 145,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 146,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 147,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 148,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 149,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 150,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 151,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 152,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 153,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 154,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 155,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 156,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 157,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 158,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 159,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 160,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 161,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 162,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 163,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 164,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 165,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 166,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 167,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 168,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 169,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 170,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 171,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 172,
+        "status": "queued",
+        "segments": 42
+      },
+      {
+        "index": 173,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 174,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 175,
+        "status": "queued",
+        "segments": 40
+      },
+      {
+        "index": 176,
+        "status": "queued",
+        "segments": 41
+      },
+      {
+        "index": 177,
+        "status": "queued",
+        "segments": 47
+      },
+      {
+        "index": 178,
+        "status": "queued",
+        "segments": 40
+      },
+      {
+        "index": 179,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 180,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 181,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 182,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 183,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 184,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 185,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 186,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 187,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 188,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 189,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 190,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 191,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 192,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 193,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 194,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 195,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 196,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 197,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 198,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 199,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 200,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 201,
+        "status": "queued",
+        "segments": 36
+      },
+      {
+        "index": 202,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 203,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 204,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 205,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 206,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 207,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 208,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 209,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 210,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 211,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 212,
+        "status": "queued",
+        "segments": 45
+      },
+      {
+        "index": 213,
+        "status": "queued",
+        "segments": 40
+      },
+      {
+        "index": 214,
+        "status": "queued",
+        "segments": 34
+      },
+      {
+        "index": 215,
+        "status": "queued",
+        "segments": 27
+      },
+      {
+        "index": 216,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 217,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 218,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 219,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 220,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 221,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 222,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 223,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 224,
+        "status": "queued",
+        "segments": 35
+      },
+      {
+        "index": 225,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 226,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 227,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 228,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 229,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 230,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 231,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 232,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 233,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 234,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 235,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 236,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 237,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 238,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 239,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 240,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 241,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 242,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 243,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 244,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 245,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 246,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 247,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 248,
+        "status": "queued",
+        "segments": 29
+      },
+      {
+        "index": 249,
+        "status": "queued",
+        "segments": 40
+      },
+      {
+        "index": 250,
+        "status": "queued",
+        "segments": 39
+      },
+      {
+        "index": 251,
+        "status": "queued",
+        "segments": 31
+      },
+      {
+        "index": 252,
+        "status": "queued",
+        "segments": 55
+      }
+    ]
+  }
+}
