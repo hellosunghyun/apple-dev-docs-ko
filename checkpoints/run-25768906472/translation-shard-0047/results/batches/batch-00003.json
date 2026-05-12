@@ -1,0 +1,198 @@
+{
+  "batchIndex": 3,
+  "status": "success",
+  "completedAt": "2026-05-12T14:03:08.147Z",
+  "durationMs": 20556,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "지정된 트랙 ID의 원본 CVReadOnlyPixelBuffer를 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0002",
+        "ko": "트랙에 태그가 지정된 버퍼가 포함된 경우 태그가 지정된 버퍼 중 하나의 픽셀 버퍼가 반환됩니다."
+      },
+      {
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func sourceReadySampleBuffer(byTrackID: CMPersistentTrackID) -> CMReadySampleBuffer<CMSampleBuffer.DynamicContent>?](avasynchronousvideocompositionrequest/sourcereadysamplebuffer(bytrackid:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "지정된 트랙 ID의 원본 CMReadySampleBuffer를 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[func sourceSampleBuffer(byTrackID: CMPersistentTrackID) -> CMSampleBuffer?](avasynchronousvideocompositionrequest/sourcesamplebuffer(bytrackid:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "지정한 식별자를 포함하는 트랙의 원본 샘플 버퍼를 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0020:0001",
+        "ko": "[var sourceSampleDataTrackIDs: [CMPersistentTrackID]](avasynchronousvideocompositionrequest/sourcesampledatatrackids-3yiab.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "원본 샘플 데이터를 포함하는 트랙의 식별자입니다."
+      },
+      {
+        "id": "seg:list:see-also:0022:0001",
+        "ko": "[func sourceTimedMetadata(byTrackID: CMPersistentTrackID) -> AVTimedMetadataGroup?](avasynchronousvideocompositionrequest/sourcetimedmetadata(bytrackid:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "지정한 식별자를 포함하는 트랙에 대한 원본 타임드 메타데이터 그룹을 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0024:0001",
+        "ko": "[var sourceTrackIDs: [NSNumber]](avasynchronousvideocompositionrequest/sourcetrackids.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "원본 비디오를 포함하는 트랙의 식별자입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avasynchronousvideocompositionrequest/sourcetaggeddynamicbuffers(bytrackid:))*"
+      },
+      {
+        "id": "seg:heading:avcam-building-a-camera-app:0000:0001",
+        "ko": "AVCam: 카메라 앱 만들기"
+      },
+      {
+        "id": "seg:paragraph:avcam-building-a-camera-app:0001:0001",
+        "ko": "**프레임워크**: AVFoundation"
+      },
+      {
+        "id": "seg:paragraph:avcam-building-a-camera-app:0002:0001",
+        "ko": "전면 및 후면 iPhone, iPad 카메라를 사용해 사진을 캡처하고 동영상을 녹화합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0001",
+        "ko": "이 AVCam 샘플은 iOS용 기본 카메라 앱을 빌드하는 방법을 보여줍니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0002",
+        "ko": "이 샘플은 AVFoundation을 사용해 장치 카메라와 마이크에 접근하고 캡처 세션을 구성하며, 사진과 동영상을 캡처하는 방법 등 다양한 방법을 보여줍니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0003",
+        "ko": "또한 [`PhotoKit`](https://developer.apple.com/documentation/PhotoKit) 프레임워크를 사용해 캡처한 미디어를 Photos 라이브러리에 저장하는 방법도 보여줍니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0007:0001",
+        "ko": "이 샘플은 SwiftUI와 Swift 동시성 기능을 사용해 반응형 카메라 앱을 빌드합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0007:0002",
+        "ko": "다음 다이어그램은 앱의 설계를 설명합니다:"
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0001",
+        "ko": "![앱 객체 간의 관계를 설명하는 다이어그램입니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0002",
+        "ko": "앱이 시작되면 `CameraModel` 인스턴스를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0003",
+        "ko": "카메라 모델은 필수 기능 수행에 사용하는 `CaptureService`와 `MediaLibrary` 타입의 인스턴스를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0004",
+        "ko": "마지막으로 앱은 기본 사용자 인터페이스를 제공하는 `CameraView` 인스턴스를 생성하고 `CameraModel` 객체에 대한 참조를 전달합니다.](https://docs-assets.developer.apple.com/published/099e27ca35a3de0fc5aaadb24152517d/app-assembly-overview.png)"
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0001",
+        "ko": "이 앱에서 핵심적으로 정의된 타입은 AVFoundation 캡처 API와의 상호작용을 관리하는 actor인 `CaptureService`입니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0002",
+        "ko": "이 객체는 캡처 파이프라인을 구성하고 수명을 관리하며, 사진과 동영상을 캡처하는 비동기 인터페이스를 정의합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0003",
+        "ko": "해당 동작은 앱의 `PhotoCapture` 및 `MovieCapture` 객체에 각각 위임됩니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0010:0001",
+        "ko": "**참고**: 캡처 세션을 구성하고 시작하는 작업은 완료까지 시간이 걸릴 수 있는 블로킹 연산입니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0010:0002",
+        "ko": "UI 반응성을 유지하기 위해 앱은 `CaptureService`를 actor 타입으로 정의해 AVFoundation 캡처 API 호출이 메인 스레드에서 실행되지 않도록 합니다."
+      },
+      {
+        "id": "seg:heading:configure-the-sample-code-project:0011:0001",
+        "ko": "샘플 코드 프로젝트 구성"
+      },
+      {
+        "id": "seg:paragraph:configure-the-sample-code-project:0012:0001",
+        "ko": "시뮬레이터는 장치 카메라에 접근할 수 없으므로 앱 실행에 적합하지 않으므로, 실제 기기에서 실행해야 합니다."
+      },
+      {
+        "id": "seg:paragraph:configure-the-sample-code-project:0012:0002",
+        "ko": "이 샘플을 실행하려면 다음이 필요합니다:"
+      },
+      {
+        "id": "seg:list:configure-the-sample-code-project:0013:0001",
+        "ko": "iOS 26 이상이 탑재된 iOS 기기"
+      },
+      {
+        "id": "seg:paragraph:configure-the-sample-code-project:0014:0001",
+        "ko": "AVCam은 [`LockedCameraCapture`](https://developer.apple.com/documentation/LockedCameraCapture) 프레임워크를 채택해 앱이 잠금 화면, Control Center, 액션 버튼, Camera Control에서 실행될 수 있는 자격을 갖추게 합니다."
+      },
+      {
+        "id": "seg:paragraph:configure-the-sample-code-project:0014:0002",
+        "ko": "이 프레임워크를 지원하기 위해 샘플은 기본 앱 대상에 캡처 확장 대상과 Control Center 확장 대상을 추가합니다."
+      },
+      {
+        "id": "seg:paragraph:configure-the-sample-code-project:0014:0003",
+        "ko": "샘플을 빌드하고 실행하려면 각 대상에 서명 자격 증명을 설정합니다."
+      },
+      {
+        "id": "seg:heading:configure-a-capture-session:0015:0001",
+        "ko": "캡처 세션 구성"
+      },
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0016:0001",
+        "ko": "모든 캡처 앱의 중심 객체는 [`AVCaptureSession`](AVCaptureSession.md) 인스턴스입니다."
+      },
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0016:0002",
+        "ko": "캡처 세션은 앱이 카메라와 마이크 장치의 입력을 연결하고, 이를 사진 및 동영상을 캡처하는 출력에 연결하는 중앙 허브입니다."
+      },
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0016:0003",
+        "ko": "세션을 구성한 후 앱은 이를 통해 캡처 파이프라인으로 데이터 흐름을 제어합니다."
+      },
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0017:0001",
+        "ko": "![캡처 세션 구성을 설명하는 다이어그램입니다."
+      },
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0017:0002",
+        "ko": "이 다이어그램은 카메라 및 마이크 장치의 입력을 사진 또는 동영상을 캡처하거나 비디오 미리보기를 표시할 수 있는 호환 출력에 연결하는 방법을 보여줍니다.](https://docs-assets.developer.apple.com/published/5bffa1d94c052514c5b1f45adc09649b/avcapturesession-overview.png)"
+      },
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0018:0001",
+        "ko": "캡처 서비스는 `setUpSession()` 메서드에서 세션 구성을 수행합니다."
+      },
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0018:0002",
+        "ko": "호스트 장치의 기본 카메라와 마이크를 검색한 다음 이를 캡처 세션의 입력으로 추가합니다."
+      },
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0020:0001",
+        "ko": "입력을 추가하기 위해 이 메서드는 지정한 카메라 또는 마이크 장치에 대한 새 [`AVCaptureDeviceInput`](avcapturedeviceinput.md) 인스턴스를 생성하고, 가능한 경우 캡처 세션에 추가하는 헬퍼 메서드를 사용합니다."
+      },
+      {
+        "id": "seg:paragraph:configure-a-capture-session:0022:0001",
+        "ko": "장치 입력을 추가한 후, 해당 메서드는 앱의 기본 사진 캡처 모드에 맞게 캡처 세션을 구성합니다."
+      }
+    ]
+  }
+}
