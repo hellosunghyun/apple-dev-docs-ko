@@ -1,0 +1,3215 @@
+{
+  "generatedAt": "2026-05-12T14:02:21.712Z",
+  "updatedAt": "2026-05-12T14:03:28.249Z",
+  "queue": "state/queue/shard-0053.json",
+  "abortReason": "Paused after Codex usage limit; retry after 7:02 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM.",
+    "retryAfterText": "7:02 PM",
+    "retryAt": "2026-05-12T19:02:00.000Z"
+  },
+  "outputs": [
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:recommendedvideoformatfor4kresolution:0002:0001",
+          "ko": "기기와 구성이 이를 지원하는 경우 4K 비디오 형식을 제공합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "기기와 구성이 4K를 지원하면, 반환된 비디오 형식이 구성의 [`supportedVideoFormats`](arconfiguration/supportedvideoformats.md) 배열에도 존재합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "이 함수는 기기 또는 구성에서 4K를 지원하지 않으면 `nil`을 반환하므로, 세션에서 4K를 활성화할지 판단할 때 이 함수를 호출할 수 있습니다."
+        },
+        {
+          "id": "seg:heading:see-also:0010:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0012:0001",
+          "ko": "세션 출력의 비디오 형식입니다."
+        },
+        {
+          "id": "seg:list:see-also:0013:0001",
+          "ko": "[class var supportedVideoFormats: [ARConfiguration.VideoFormat]](arconfiguration/supportedvideoformats.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "현재 기기에서 사용할 수 있는 비디오 캡처 형식 집합입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "AR 세션에서 사용할 비디오 크기와 프레임 속도 사양입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arreferenceobject/applyingtransform(_:))*"
+        },
+        {
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "프레임의 캡처 이미지 모양을 변경할 수 있게 해주는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "프레임워크에서 고해상도 정지 이미지 캡처를 위해 권장하는 비디오 형식을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:init:0002:0001",
+          "ko": "새 이미지 추적 구성을 초기화합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "AR 세션에서 이 구성을 사용하려면 [`ARSession`](arsession.md) [`run(_:options:)`](arsession/run(_:options:).md) 메서드에 전달합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "You define the local coordinate space of a reference object when you extract it from an [`ARWorldMap`](arworldmap.md)."
+        },
+        {
+          "id": "seg:heading:applyingtransform:0000:0001",
+          "ko": "applyingTransform(_:)"
+        },
+        {
+          "id": "seg:paragraph:applyingtransform:0002:0001",
+          "ko": "이 참조 객체의 기하학적 데이터에 지정된 변환을 적용해 새로 생성된 참조 객체를 반환합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "변환된 참조 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "참조 객체를 [`ARWorldMap`](arworldmap.md)에서 추출할 때 해당 객체의 로컬 좌표계를 정의합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0002",
+          "ko": "기존 참조 객체의 로컬 좌표 원점이 객체의 의도된 사용에 적합하지 않은 경우, 이 메서드를 호출해 물리적 객체를 기준으로 참조 객체의 원점을 변경할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0001",
+          "ko": "ARKit가 참조 객체를 감지하면, 결과 [`ARObjectAnchor`](arobjectanchor.md)의 [`transform`](aranchor/transform.md)은 참조 객체 좌표계의 원점을 기준으로 합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0002",
+          "ko": "예를 들어, 참조 객체가 수평면 위에 놓인 실제 항목을 나타내는 경우 가상 콘텐츠는 실제 객체가 놓인 면 위에 있는 것처럼 표시되어야 합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0003",
+          "ko": "따라서 일반적으로 참조 객체의 좌표 원점을 실제 객체의 하단에 맞추는 것이 유용합니다."
+        },
+        {
+          "id": "seg:list:parameters:0013:0001",
+          "ko": "`transform`: 참조 객체의 로컬 좌표계에 있는 변환 행렬입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0014:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0015:0001",
+          "ko": "[func merging(ARReferenceObject) throws -> ARReferenceObject](arreferenceobject/merging(_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "이 참조 객체와 다른 참조 객체의 공간 정보를 결합한 새 참조 객체를 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arreferenceobject/applyingtransform(_:))*"
+        },
+        {
+          "id": "seg:paragraph:state:0002:0001",
+          "ko": "이 카메라 영역 제공자의 상태입니다."
+        },
+        {
+          "id": "seg:paragraph:description:0002:0001",
+          "ko": "이 앵커의 텍스트 표현입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "앵커의 바운딩 박스입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "축 정렬된 바운딩 박스의 값을 나타냅니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "프레임워크가 현재 객체 앵커를 추적 중인지 나타내는 불리언 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "객체 앵커에서 원점 좌표계로의 변환입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "앵커에 해당하는 참조 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "프레임워크가 참조 객체를 로드할 때 사용하는 입력 파일입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "참조 객체에 학습용 USDZ 파일이 포함되어 있는 경우의 파일입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "프레임워크가 추적할 수 있는 객체입니다."
+        },
+        {
+          "id": "seg:heading:initreferenceobjectstrackingconfiguration:0000:0001",
+          "ko": "init(referenceObjects:trackingConfiguration:)"
+        },
+        {
+          "id": "seg:paragraph:initreferenceobjectstrackingconfiguration:0002:0001",
+          "ko": "객체 추적 제공자를 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "메서드는 추적 구성을 위해 지정한 숫자 매개변수 값이 지원 범위를 벗어나면 해당 값을 범위 내로 클램핑합니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`referenceObjects`: 찾을 참조 객체입니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0002",
+          "ko": "`trackingConfiguration`: 객체 추적 구성을 위한 선택적 매개변수입니다. 지정되지 않으면 프레임워크에서 기본값 세트를 적용합니다."
+        },
+        {
+          "id": "seg:paragraph:parameters:0012:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/objecttrackingprovider/init(referenceobjects:trackingconfiguration:))*"
+        },
+        {
+          "id": "seg:paragraph:manualrenderingsampletime:0002:0001",
+          "ko": "수동 렌더링 모드에서 엔진 렌더 타임라인의 현재 위치를 나타내는 지표입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "수동 렌더링 모드에서 엔진을 렌더링할 때 사용되는 블록을 나타내는 형식입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "수동 렌더링 모드에서 엔진을 렌더링하는 블록입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "수동 렌더링 모드에서의 엔진 렌더 형식입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "수동 렌더링 모드에서 엔진이 단일 렌더 호출 시 생성하는 PCM 샘플 프레임의 최대 개수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "엔진에서 구성된 수동 렌더링 모드입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "자동 종료가 활성화 상태인지 나타내는 불리언 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "엔진이 수동 렌더링 모드로 동작 중인지 나타내는 불리언 값입니다."
+        },
+        {
+          "id": "seg:paragraph:avaudiosessionbypassedspatialexperience:0002:0001",
+          "ko": "시스템이 제공하는 오디오 공간화를 우회하는 경험입니다."
+        },
+        {
+          "id": "seg:heading:conforms-to:0008:0001",
+          "ko": "준수"
+        },
+        {
+          "id": "seg:paragraph:avaudiovoiceprocessingotheraudioduckingconfiguration:0002:0001",
+          "ko": "비음성 오디오의 다킹 구성입니다."
+        },
+        {
+          "id": "seg:heading:configuring-ducking:0008:0001",
+          "ko": "다킹 구성"
+        },
+        {
+          "id": "seg:paragraph:configuring-ducking:0010:0001",
+          "ko": "로컬 및 원격 채팅 참가자의 음성 활동 유무에 따라 다른 오디오를 다킹하는 고급 다킹을 활성화합니다."
+        },
+        {
+          "id": "seg:paragraph:configuring-ducking:0012:0001",
+          "ko": "다른 오디오의 다킹 레벨입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:configuring-ducking:0014:0001",
+          "ko": "지원되는 ducking 수준을 정의하는 상수입니다."
+        },
+        {
+          "id": "seg:list:initializers:0016:0002",
+          "ko": "[init(enableAdvancedDucking: ObjCBool, duckingLevel: AVAudioVoiceProcessingOtherAudioDuckingConfiguration.Level)](avaudiovoiceprocessingotheraudioduckingconfiguration/init(enableadvancedducking:duckinglevel:).md)"
+        },
+        {
+          "id": "seg:heading:conforms-to:0018:0001",
+          "ko": "준수"
+        },
+        {
+          "id": "seg:heading:see-also:0020:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "음성 처리 유닛의 입력이 음소거 상태인지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0024:0001",
+          "ko": "음성 처리 유닛의 마이크 업링크 처리를 모두 우회하는지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0026:0001",
+          "ko": "처리된 마이크 업링크 신호에서 자동 이득 제어가 활성 상태인지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0028:0001",
+          "ko": "비음성 오디오의 덕킹 구성입니다."
+        },
+        {
+          "id": "seg:paragraph:tempo:0002:0001",
+          "ko": "분당 박자 수(BPM)로, 양수 값입니다."
+        },
+        {
+          "id": "seg:paragraph:isexportable:0002:0001",
+          "ko": "이 자산을 내보내기 세션을 사용해 내보낼 수 있는지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "The delegate is an object conforming to the [`AVCaptureFileOutputDelegate`](avcapturefileoutputdelegate.md) protocol that will be able to monitor and control recording along exact sample boundaries."
+        },
+        {
+          "id": "seg:paragraph:avassetexportpresetlowquality:0002:0001",
+          "ko": "저화질 동영상 파일을 내보내기 위한 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "The delegate is an object conforming to the [`AVCaptureFileOutputDelegate`](avcapturefileoutputdelegate.md) protocol that will be able to monitor and control recording along exact sample boundaries."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "중간 화질 동영상 파일을 내보내기 위한 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "고화질 동영상 파일을 내보내기 위한 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "최고 사용 가능 비디오 품질과 HEVC 비디오 압축을 사용해 내보내는 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "최고 사용 가능 비디오 품질과 알파 채널이 포함된 HEVC 비디오 압축을 사용해 내보내는 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:automaticallyadjustsfacedrivenautoexposureenabled:0002:0001",
+          "ko": "기기가 얼굴 기반 autoexposure을 자동으로 조정하는지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "The delegate is an object conforming to the [`AVCaptureFileOutputDelegate`](avcapturefileoutputdelegate.md) protocol that will be able to monitor and control recording along exact sample boundaries."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "앱에서 [`isFaceDrivenAutoExposureEnabled`](avcapturedevice/isfacedrivenautoexposureenabled.md)의 상태를 명시적으로 설정해야 하는 경우 이 값을 [`false`](https://developer.apple.com/documentation/Swift/false)로 설정합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "The system normalizes gain values to the minimum channel value to avoid brightness changes (for example, `R:2 G:2 B:4` normalizes to `R:1 G:1 B:2`)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0002",
+          "ko": "그렇지 않으면 값을 설정하려고 할 때 예외가 발생합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0003",
+          "ko": "장치 구성을 완료하면 [`unlockForConfiguration()`](avcapturedevice/unlockforconfiguration().md)로 잠금을 해제합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0010:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0012:0001",
+          "ko": "기기가 얼굴 기반 autoexposure을 활성화했는지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:heading:setwhitebalancemodelockedwithcompletionhandler:0000:0001",
+          "ko": "setWhiteBalanceModeLocked(with:completionHandler:)"
+        },
+        {
+          "id": "seg:paragraph:setwhitebalancemodelockedwithcompletionhandler:0002:0001",
+          "ko": "지정한 화이트 밸런스 게인으로 화이트 밸런스를 잠금 모드로 설정합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "The delegate is an object conforming to the [`AVCaptureFileOutputDelegate`](avcapturefileoutputdelegate.md) protocol that will be able to monitor and control recording along exact sample boundaries."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "이 범위를 벗어난 채널 값을 설정하면 예외가 발생합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "시스템은 밝기 변화를 방지하기 위해 게인 값을 최소 채널 값으로 정규화합니다(예: `R:2 G:2 B:4`는 `R:1 G:1 B:2`로 정규화됨)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "화이트 밸런스 게인 값을 변경하기 전에 장치 구성 속성에 대한 독점 액세스를 얻으려면 [`lockForConfiguration()`](avcapturedevice/lockforconfiguration().md)을 호출해야 합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0002",
+          "ko": "그렇지 않으면 이 프로퍼티 값을 설정할 때 예외가 발생합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0003",
+          "ko": "장치 구성을 마치면 [`unlockForConfiguration()`](avcapturedevice/unlockforconfiguration().md)을 호출해 잠금을 해제하고 다른 장치가 설정을 구성할 수 있도록 합니다."
+        },
+        {
+          "id": "seg:list:parameters:0012:0001",
+          "ko": "`whiteBalanceGains`: 설정할 화이트 밸런스 게인입니다. 현재 화이트 밸런스를 유지하려면 [`currentWhiteBalanceGains`](avcapturedevice/currentwhitebalancegains.md) 값을 전달합니다."
+        },
+        {
+          "id": "seg:list:parameters:0012:0002",
+          "ko": "`handler`: 화이트 밸런스 조정이 완료되고 [`whiteBalanceMode`](avcapturedevice/whitebalancemode-swift.property.md)가 잠금 상태로 설정되면 시스템이 호출하는 콜백입니다. 이 메서드를 여러 번 호출하면 시스템이 완료 핸들러를 FIFO 순서로 호출합니다. 시스템은 모든 설정이 적용된 첫 번째 버퍼의 시간 값과 일치하는 시간을 전달합니다. 시스템은 이 타임스탬프를 장치 클럭으로 동기화하고, [`AVCaptureVideoDataOutput`](avcapturevideodataoutput.md)를 통해 전달되는 버퍼 타임스탬프와 비교하려면 해당 타임스탬프를 [`synchronizationClock`](avcapturesession/synchronizationclock.md)로 변환해야 합니다. 이 정보가 필요 없다면 이 매개변수에 `nil`을 전달할 수 있습니다."
+        },
+        {
+          "id": "seg:heading:white-balance-constants:0014:0001",
+          "ko": "화이트 밸런스 상수"
+        },
+        {
+          "id": "seg:paragraph:white-balance-constants:0016:0001",
+          "ko": "현재 화이트 밸런스 설정을 나타내는 특수 상수입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0017:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "기기가 특정 게인 값으로 화이트 밸런스 잠금을 지원하는지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[func setWhiteBalanceModeLocked(whiteBalanceTemperatureAndTintValues: AVCaptureDevice.WhiteBalanceTemperatureAndTintValues, handler: ((CMTime) -> Void)?)](avcapturedevice/setwhitebalancemodelocked(whitebalancetemperatureandtintvalues:handler:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "특정 온도 및 틴트 값으로 화이트 밸런스를 잠금 모드로 설정합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/setwhitebalancemodelocked(with:completionhandler:))*"
+        },
+        {
+          "id": "seg:paragraph:delegate:0002:0001",
+          "ko": "capture file output의 delegate 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 delegate는 [`AVCaptureFileOutputDelegate`](avcapturefileoutputdelegate.md) 프로토콜을 준수하는 객체로, 정확한 샘플 경계에서 녹화를 모니터링하고 제어할 수 있습니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "녹화에 허용되는 최대 기간입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "수신자가 녹화해야 할 데이터의 최대 크기(바이트)입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "지정된 볼륨에서 녹화를 계속 진행하려면 필요한 최소 여유 공간(바이트)입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "출력이 전달되는 URL입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "현재 출력 파일에 녹음된 미디어의 길이를 나타냅니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "현재 출력 파일에 녹음된 데이터의 크기를 바이트 단위로 나타냅니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "녹화가 진행 중인지 나타냅니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "현재 출력 파일에 대한 녹화가 일시 중지되었는지 나타냅니다."
+        },
+        {
+          "id": "seg:heading:setrecordsvideoorientationandmirroringchangesasmetadatatrackfor:0000:0001",
+          "ko": "setRecordsVideoOrientationAndMirroringChangesAsMetadataTrack(_:for:)"
+        },
+        {
+          "id": "seg:paragraph:setrecordsvideoorientationandmirroringchangesasmetadatatrackfor:0002:0001",
+          "ko": "이 메서드는 연결의 비디오 방향 및 미러링 변경사항을 캡처하기 위해 movie file output이 타임드 메타데이터 트랙을 생성할지 설정합니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0001",
+          "ko": "`doRecordChanges`: 방향 및 미러링 정보를 캡처할지 나타내는 Boolean 값입니다. 시스템은 이 값을 녹화 시작 시에만 관찰합니다. 다른 값을 설정하더라도 새 녹화를 시작할 때까지는 효과가 없습니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0002",
+          "ko": "`connection`: 동영상 미디어를 movie file output으로 전달하는 연결입니다. 값이 비디오 연결이 아니거나 연결이 movie file output에서 종료되지 않으면 이 메서드는 잘못된 인수 예외를 throw합니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[func recordsVideoOrientationAndMirroringChangesAsMetadataTrack(for: AVCaptureConnection) -> Bool](avcapturemoviefileoutput/recordsvideoorientationandmirroringchangesasmetadatatrack(for:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "동영상 파일 출력이 비디오 방향 및 미러링 정보를 메타데이터 트랙으로 기록하는지 여부를 나타내는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturemoviefileoutput/setrecordsvideoorientationandmirroringchangesasmetadatatrack(_:for:))*"
+        },
+        {
+          "id": "seg:paragraph:sourcedevicetype:0002:0001",
+          "ko": "사진을 캡처한 장치의 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "By default, `AVCaptureScreenInput` captures the video buffers from the display at a scale factor of 1.0 (no scaling)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "This property defaults to the smallest dimensions returned by [`supportedMaxPhotoDimensions`](avcapturedevice/format/supportedmaxphotodimensions.md)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "You must enable this option before initiating a photo capture with the [`isHighResolutionPhotoEnabled`](avcapturephotosettings/ishighresolutionphotoenabled.md) property of your photo settings object set to [`true`](https://developer.apple.com/documentation/Swift/true)."
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "사진과 함께 캡처된 깊이 또는 시차 맵 데이터입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "사진을 캡처한 카메라 장치의 보정 정보입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[var metadata: [String : Any]](avcapturephoto/metadata.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "캡처된 이미지를 설명하는 메타데이터 사전입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "사진과 함께 캡처된 portrait effects matte입니다."
+        },
+        {
+          "id": "seg:paragraph:ishighresolutioncaptureenabled:0002:0001",
+          "ko": "정지 이미지의 고해상도 캡처를 위해 캡처 파이프라인을 구성할지 여부를 지정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "By default, `AVCaptureScreenInput` captures the video buffers from the display at a scale factor of 1.0 (no scaling)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "Set this property to scale the buffers by a given factor; for example a 320x240 capture area with a scaleFactor of `2.0` produces video buffers at 640x480."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "This property defaults to the smallest dimensions returned by [`supportedMaxPhotoDimensions`](avcapturedevice/format/supportedmaxphotodimensions.md)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0002",
+          "ko": "세션이 실행 중일 때 이 속성을 변경하면 캡처 렌더링 파이프라인을 오랜 시간 다시 구성해야 하므로, 진행 중인 Live Photo 캡처가 즉시 종료되고 완료되지 않은 사진 요청이 중단되며 비디오 미리보기가 일시적으로 멈춥니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "사진 설정 객체의 [`isHighResolutionPhotoEnabled`](avcapturephotosettings/ishighresolutionphotoenabled.md) 속성을 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정해 사진 캡처를 시작하려면 먼저 이 옵션을 사용 설정해야 합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0002",
+          "ko": "그러나 이 옵션을 사용 설정한 후에는 [`isHighResolutionPhotoEnabled`](avcapturephotosettings/ishighresolutionphotoenabled.md) 설정 값에 상관없이 자유롭게 사진 캡처 요청을 발행할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:maxphotodimensions:0002:0001",
+          "ko": "캡처할 사진의 최대 해상도입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "By default, `AVCaptureScreenInput` captures the video buffers from the display at a scale factor of 1.0 (no scaling)."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "Set this property to scale the buffers by a given factor; for example a 320x240 capture area with a scaleFactor of `2.0` produces video buffers at 640x480."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "이 속성의 기본값은 [`supportedMaxPhotoDimensions`](avcapturedevice/format/supportedmaxphotodimensions.md)에서 반환되는 가장 작은 치수입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0010:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0012:0001",
+          "ko": "사진 촬영 시 플래시를 발사할지 여부를 나타내는 설정입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0014:0001",
+          "ko": "플래시 캡처에서 자동 적목 감쇄를 사용할지 여부를 나타내는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "사진 품질과 사진 전달 속도 중 어느 쪽을 우선할지 지정하는 설정입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "듀얼 사진 캡처 시 카메라 캘리브레이션 데이터도 함께 전달할지 여부를 결정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "사진 출력이 필요에 따라 이 사진 요청에서 콘텐츠 인식 왜곡 보정을 사용할지 여부를 지정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "자동 가상 장치 이미지 퓨전을 사용할지 여부를 지정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:list:see-also:0023:0001",
+          "ko": "[var virtualDeviceConstituentPhotoDeliveryEnabledDevices: [AVCaptureDevice]](avcapturephotosettings/virtualdeviceconstituentphotodeliveryenableddevices.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0024:0001",
+          "ko": "가상 장치가 사진을 전달해야 하는 구성 장치입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0026:0001",
+          "ko": "듀얼 카메라 장치가 두 카메라 모두의 이미지를 전달할지 여부를 결정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0028:0001",
+          "ko": "듀얼 카메라 장치의 데이터를 캡처가 자동으로 결합할지 여부를 지정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0030:0001",
+          "ko": "캡처에서 자동 이미지 안정화를 사용할지 여부를 지정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0032:0001",
+          "ko": "활성 장치와 형식에서 지원되는 최상위 해상도로 정지 이미지를 캡처할지 여부를 지정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:scalefactor:0002:0001",
+          "ko": "화면에서 캡처한 비디오 버퍼를 스케일링할 비율을 나타냅니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "기본적으로 `AVCaptureScreenInput`은 화면에서 비디오 버퍼를 배율 `1.0`(스케일링 없음)으로 캡처합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "이 속성을 사용해 버퍼를 지정된 배율로 스케일링할 수 있습니다. 예를 들어 `320x240` 캡처 영역에서 `scaleFactor`가 `2.0`이면 `640x480` 크기의 비디오 버퍼가 생성됩니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "화면 입력의 최소 프레임 지속 시간입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "캡처할 화면 영역의 경계 사각형을 픽셀 단위로 나타냅니다."
+        },
+        {
+          "id": "seg:paragraph:avcontentkeyrecipient:0002:0001",
+          "ko": "미디어 데이터에 대한 복호화 키가 필요함을 요구하는 프로토콜입니다."
+        },
+        {
+          "id": "seg:heading:verifying-decryption-key-requirements:0008:0001",
+          "ko": "복호화 키 요구사항 확인"
+        },
+        {
+          "id": "seg:paragraph:verifying-decryption-key-requirements:0010:0001",
+          "ko": "수신자가 미디어 데이터 처리를 위해 복호화 키가 필요한지 여부를 나타내는 부울 값입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:list:verifying-decryption-key-requirements:0011:0001",
+          "ko": "[func contentKeySession(AVContentKeySession, didProvide: AVContentKey)](avcontentkeyrecipient/contentkeysession(_:didprovide:).md)"
+        },
+        {
+          "id": "seg:paragraph:verifying-decryption-key-requirements:0012:0001",
+          "ko": "수신자에게 콘텐츠 키를 사용할 수 있다는 정보를 전달합니다."
+        },
+        {
+          "id": "seg:heading:conforming-types:0014:0001",
+          "ko": "준수 유형"
+        },
+        {
+          "id": "seg:heading:see-also:0016:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0017:0001",
+          "ko": "[var contentKeyRecipients: [any AVContentKeyRecipient]](avcontentkeysession/contentkeyrecipients.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "콘텐츠 키 수신자의 배열입니다."
+        },
+        {
+          "id": "seg:list:see-also:0019:0001",
+          "ko": "[func addContentKeyRecipient(any AVContentKeyRecipient)](avcontentkeysession/addcontentkeyrecipient(_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "지정된 수신자가 세션에서 로드한 복호화 키에 액세스할 수 있어야 함을 델리게이트에 알립니다."
+        },
+        {
+          "id": "seg:list:see-also:0021:0001",
+          "ko": "[func removeContentKeyRecipient(any AVContentKeyRecipient)](avcontentkeysession/removecontentkeyrecipient(_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "지정한 수신자를 제거하도록 델리게이트에 알립니다."
+        },
+        {
+          "id": "seg:heading:initfairplaystreamingkeyresponsedata:0000:0001",
+          "ko": "init(fairPlayStreamingKeyResponseData:)"
+        },
+        {
+          "id": "seg:paragraph:initfairplaystreamingkeyresponsedata:0002:0001",
+          "ko": "FairPlay Streaming이 키 전달 방식으로 사용될 때, 암호화된 키 응답 데이터 블롭으로 콘텐츠 키 응답을 생성합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "콘텐츠를 복호화할 새 [`AVContentKeyResponse`](avcontentkeyresponse.md) 객체를 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "이 이니셜라이저의 결과는 콘텐츠 키 세션이 [`fairPlayStreaming`](avcontentkeysystem/fairplaystreaming.md) 매개변수를 사용해 키 요청을 생성할 때 사용합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0002",
+          "ko": "그 결과는 [`processContentKeyResponse(_:)`](avcontentkeyrequest/processcontentkeyresponse(_:).md) 메서드에 전달되어 복호화기에 키 데이터를 제공합니다."
+        },
+        {
+          "id": "seg:list:parameters:0012:0001",
+          "ko": "`keyResponseData`: FairPlay Streaming 키 서버에서 제공하는 키 데이터입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0013:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[convenience init(clearKeyData: Data, initializationVector: Data?)](avmetadataidentifier/id3metadataaudioencryption.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "평문으로 전송된 키 데이터와 초기화 벡터용 새 키 응답 객체를 생성합니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[convenience init(authorizationTokenData: Data)](avmetadataidentifier/id3metadataaudioseekpointindex.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "권한 부여 토큰이 포함된 콘텐츠 키 응답을 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcontentkeyresponse/init(fairplaystreamingkeyresponsedata:))*"
+        },
+        {
+          "id": "seg:paragraph:avdelegatingplaybackcoordinatorseekoptions:0002:0001",
+          "ko": "탐색 옵션을 정의하는 상수입니다."
+        },
+        {
+          "id": "seg:heading:seek-options:0008:0001",
+          "ko": "탐색 옵션"
+        },
+        {
+          "id": "seg:list:seek-options:0009:0001",
+          "ko": "[static var resumeImmediately: AVDelegatingPlaybackCoordinatorSeekOptions](avdelegatingplaybackcoordinatorseekoptions/resumeimmediately.md)"
+        },
+        {
+          "id": "seg:paragraph:seek-options:0010:0001",
+          "ko": "조정자가 다른 참가자의 준비 상태나 일시 중단 여부와 상관없이 가능한 한 빨리 재생을 재개해야 함을 나타내는 옵션입니다."
+        },
+        {
+          "id": "seg:list:initializers:0012:0001",
+          "ko": "[init(rawValue: UInt)](avdelegatingplaybackcoordinatorseekoptions/init(rawvalue:).md)"
+        },
+        {
+          "id": "seg:paragraph:initializers:0013:0001",
+          "ko": "문자열로 속도 변경 옵션을 생성합니다."
+        },
+        {
+          "id": "seg:heading:conforms-to:0015:0001",
+          "ko": "준수 대상"
+        },
+        {
+          "id": "seg:heading:see-also:0017:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[func coordinateRateChange(to: Float, options: AVDelegatingPlaybackCoordinatorRateChangeOptions)](avmetadataidentifier/id3metadataband.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "필요한 경우 다른 참가자가 준비될 때까지 대기하면서 모든 참가자의 속도 변경을 조정합니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[func coordinateSeek(to: CMTime, options: AVDelegatingPlaybackCoordinatorSeekOptions)](avmetadataidentifier/id3metadatabeatsperminute.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "지정된 시간으로의 탐색을 모든 연결된 참가자에서 조정합니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[func transitionToItem(withIdentifier: String?, proposingInitialTimingBasedOn: CMTimebase?)](avmetadataidentifier/id3metadatacomments.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "조정자에게 새 항목으로 전환하라고 알립니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "현재 항목을 다른 참가자들의 상태와 동기화하기 위해 현재 재생 상태 명령을 다시 발행하도록 조정자에 알립니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "속도 변경 옵션을 정의하는 상수입니다."
+        },
+        {
+          "id": "seg:heading:displaynameforlocaleidentifier:0000:0001",
+          "ko": "displayName(forLocaleIdentifier:)"
+        },
+        {
+          "id": "seg:paragraph:displaynameforlocaleidentifier:0002:0001",
+          "ko": "지정한 로케일 식별자와 가장 잘 일치하는 선택 가능한 설정의 표시 이름을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:declaration:0008:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmediapresentationsetting/displayname(forlocaleidentifier:))*"
+        },
+        {
+          "id": "seg:paragraph:id3metadatatime:0002:0001",
+          "ko": "녹음 시간을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[static let id3MetadataAlbumSortOrder: AVMetadataIdentifier](avmetadataidentifier/id3metadataalbumsortorder.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "앨범 정렬 방식을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let id3MetadataAlbumTitle: AVMetadataIdentifier](avmetadataidentifier/id3metadataalbumtitle.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "녹음 제목을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let id3MetadataAttachedPicture: AVMetadataIdentifier](avmetadataidentifier/id3metadataattachedpicture.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "오디오 파일과 관련된 이미지를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let id3MetadataAudioEncryption: AVMetadataIdentifier](avmetadataidentifier/id3metadataaudioencryption.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "오디오 스트림의 암호화 세부 정보를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let id3MetadataAudioSeekPointIndex: AVMetadataIdentifier](avmetadataidentifier/id3metadataaudioseekpointindex.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "오디오 파일 내 탐색 지점 목록을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let id3MetadataBand: AVMetadataIdentifier](avmetadataidentifier/id3metadataband.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "녹음의 연주자에 대한 추가 정보를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let id3MetadataBeatsPerMinute: AVMetadataIdentifier](avmetadataidentifier/id3metadatabeatsperminute.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "오디오의 분당 비트 수를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let id3MetadataComments: AVMetadataIdentifier](avmetadataidentifier/id3metadatacomments.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "미디어의 추가 텍스트 정보를 나타내는 식별자입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let id3MetadataCommercial: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataautolivephoto.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "미디어의 상업적 세부 정보를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let id3MetadataCommercialInformation: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacamerafocallength35mmequivalent.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "미디어의 구매 정보가 포함된 웹페이지를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[static let id3MetadataComposer: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraframereadouttime.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "작곡가의 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[static let id3MetadataConductor: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraisosensitivity.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "지휘자의 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static let id3MetadataContentGroupDescription: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraidentifier.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "소리나 음악이 더 큰 범주의 사운드 또는 음악에 속함을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static let id3MetadataContentType: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameralensirisfnumber.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "미디어 콘텐츠 유형을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0036:0001",
+          "ko": "[static let id3MetadataCopyright: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameralensmodel.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "저작권 진술을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:quicktimemetadatafullframerateplaybackintent:0002:0001",
+          "ko": "이 동영상이 전체 프레임 속도로 재생되어야 하는지 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "일부 앱은 120fps 이상으로 녹화된 동영상을 슬로 모션으로 재생합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "앱에서 고프레임 동영상을 녹화하는 경우, 이 영화 레벨 메타데이터를 추가하여 동영상이 전체 프레임 속도(1)로 재생되는지 슬로 모션 속도(0)로 재생되는지를 지정할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0003",
+          "ko": "동영상을 재생하는 앱은 이 메타데이터가 존재할 때 이를 사용해 동작을 제어할 수 있습니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let quickTimeMetadataAIMEData: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataaimedata.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "값의 형식은 kCMMetadataBaseDataType_RawData입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let quickTimeMetadataAccessibilityDescription: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataaccessibilitydescription.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "영화 파일 콘텐츠의 접근성 설명을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let quickTimeMetadataAlbum: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataalbum.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "QuickTime에서 앨범 또는 컬렉션의 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let quickTimeMetadataArranger: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataarranger.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "영화 파일 콘텐츠의 편곡자 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let quickTimeMetadataArtist: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataartist.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "영화 파일 콘텐츠의 아티스트 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let quickTimeMetadataArtwork: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataartwork.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "영화 파일 콘텐츠와 관련된 이미지를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let quickTimeMetadataAuthor: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataauthor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "영화 파일 콘텐츠의 작성자 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let quickTimeMetadataAutoLivePhoto: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataautolivephoto.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "라이브 포토 동영상에서 자동 모드가 사용되었는지 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let quickTimeMetadataCameraFocalLength35mmEquivalent: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacamerafocallength35mmequivalent.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "35mm 필름 상응값으로 정규화된 초점 거리를 나타내는 kCMMetadataBaseDataType_UTF8 형식의 값입니다(예: “50.00mm”)."
+        },
+        {
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[static let quickTimeMetadataCameraFrameReadoutTime: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraframereadouttime.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "QuickTime에서 카메라 프레임 읽기 시간을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[static let quickTimeMetadataCameraISOSensitivity: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraisosensitivity.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "카메라의 ISO 노출 지수 기준 감도를 나타내는 kCMMetadataBaseDataType_UTF8 형식의 값입니다(예: “800”)."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0002",
+          "ko": "SMPTE RDD 18을 참조합니다."
+        },
+        {
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static let quickTimeMetadataCameraIdentifier: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraidentifier.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "QuickTime의 카메라 식별자를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static let quickTimeMetadataCameraLensIrisFNumber: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameralensirisfnumber.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "렌즈를 통과하는 빛의 양을 나타내는 kCMMetadataBaseDataType_UTF8 형식의 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0002",
+          "ko": "이는 유효 렌즈 개구 직경으로 나눈 초점 거리입니다(예: “F2.8” 또는 “2.8”)."
+        },
+        {
+          "id": "seg:list:see-also:0036:0001",
+          "ko": "[static let quickTimeMetadataCameraLensModel: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameralensmodel.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "렌즈 모델을 나타내는 kCMMetadataBaseDataType_UTF8 형식의 값입니다(예: “iPhone 16 Pro back camera 6.765mm f/1.78”)."
+        },
+        {
+          "id": "seg:list:see-also:0038:0001",
+          "ko": "[static let quickTimeMetadataCameraShutterSpeedAngle: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacamerashutterspeedangle.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0039:0001",
+          "ko": "노출 기간을 각도(1/60도)로 나타낸 값을 뜻하며, kCMMetadataBaseDataType_UTF8 형식의 값입니다(예: “21600” 또는 “360.00deg””)."
+        },
+        {
+          "id": "seg:heading:metadataitemsfromwith:0000:0001",
+          "ko": "metadataItems(from:with:)"
+        },
+        {
+          "id": "seg:paragraph:metadataitemsfromwith:0002:0001",
+          "ko": "지정된 로케일과 일치하는 메타데이터 항목을 반환합니다."
+        },
+        {
+          "id": "seg:list:metadataitemsfromwith:0004:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:metadataitemsfromwith:0004:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:metadataitemsfromwith:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:metadataitemsfromwith:0004:0004",
+          "ko": "macOS ?+"
+        },
+        {
+          "id": "seg:list:metadataitemsfromwith:0004:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:metadataitemsfromwith:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:metadataitemsfromwith:0004:0007",
+          "ko": "watchOS ?+"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "지정된 키와 키 공간이 일치하는 메타데이터 항목의 배열입니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`volume`: The volume. The value must be between `0.0` and `1.0`."
+        },
+        {
+          "id": "seg:list:parameters:0010:0002",
+          "ko": "`time`: The start time at which to set the volume."
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[class func metadataItems(from: [AVMetadataItem], filteredByIdentifier: AVMetadataIdentifier) -> [AVMetadataItem]](avmutableaudiomixinputparameters/setvolumeramp(fromstartvolume:toendvolume:timerange:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "지정된 식별자에 대한 메타데이터 항목을 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[class func metadataItems(from: [AVMetadataItem], withKey: Any?, keySpace: AVMetadataKeySpace?) -> [AVMetadataItem]](avmetadatakey/id3metadatakeyaudioencryption.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutableaudiomixinputparameters/setvolume(_:at:))*"
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[class func metadataItems(from: [AVMetadataItem], filteredAndSortedAccordingToPreferredLanguages: [String]) -> [AVMetadataItem]](avmetadatakey/id3metadatakeyaudioseekpointindex.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "지정된 언어 식별자 중 하나와 일치하는 로케일의 메타데이터 항목을 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[class func metadataItems(from: [AVMetadataItem], filteredBy: AVMetadataItemFilter) -> [AVMetadataItem]](avmetadatakey/id3metadatakeyband.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "필터링된 메타데이터 항목을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmetadataitem/metadataitems(from:with:))*"
+        },
+        {
+          "id": "seg:paragraph:icymetadatakeystreamurl:0002:0001",
+          "ko": "스트림의 웹 주소를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[static let icyMetadataKeyStreamTitle: AVMetadataKey](avmetadatakey/id3metadatakeyalbumsortorder.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "스트림 제목을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:paragraph:id3metadatakeysynchronizedlyric:0002:0001",
+          "ko": "오디오와 동기화되어 오디오 파일의 단어를 텍스트로 나타내는 키입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[static let id3MetadataKeyAlbumSortOrder: AVMetadataKey](avmetadatakey/id3metadatakeyalbumsortorder.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "앨범 정렬 방식을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let id3MetadataKeyAlbumTitle: AVMetadataKey](avmetadatakey/id3metadatakeyalbumtitle.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "레코딩 제목을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let id3MetadataKeyAttachedPicture: AVMetadataKey](avmutableaudiomixinputparameters/setvolumeramp(fromstartvolume:toendvolume:timerange:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "오디오 파일과 관련된 이미지를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let id3MetadataKeyAudioEncryption: AVMetadataKey](avmetadatakey/id3metadatakeyaudioencryption.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutableaudiomixinputparameters/setvolume(_:at:))*"
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let id3MetadataKeyAudioSeekPointIndex: AVMetadataKey](avmetadatakey/id3metadatakeyaudioseekpointindex.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "오디오 파일 내 탐색 지점 목록을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let id3MetadataKeyBand: AVMetadataKey](avmetadatakey/id3metadatakeyband.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "레코딩의 연주자에 대한 추가 정보를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let id3MetadataKeyBeatsPerMinute: AVMetadataKey](avmetadatakey/id3metadatakeybeatsperminute.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "오디오의 분당 박자 수를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let id3MetadataKeyComments: AVMetadataKey](avmetadatakey/id3metadatakeycomments.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "미디어의 추가 텍스트 정보를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let id3MetadataKeyCommercial: AVMetadataKey](avmetadatakey/id3metadatakeycommercial.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "미디어의 상업적 세부 정보를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let id3MetadataKeyCommercialInformation: AVMetadataKey](avmetadatakey/id3metadatakeycommercialinformation.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "구매 정보를 포함하는 웹페이지를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[static let id3MetadataKeyComposer: AVMetadataKey](avmetadatakey/id3metadatakeycomposer.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "작곡가 이름을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[static let id3MetadataKeyConductor: AVMetadataKey](avmetadatakey/id3metadatakeyconductor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "지휘자 이름을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static let id3MetadataKeyContentGroupDescription: AVMetadataKey](avmetadatakey/id3metadatakeycontentgroupdescription.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "사운드가 더 넓은 소리 또는 음악 범주에 속함을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static let id3MetadataKeyContentType: AVMetadataKey](avmetadatakey/id3metadatakeycontenttype.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "미디어 콘텐츠 유형을 나타내는 키입니다."
+        },
+        {
+          "id": "seg:list:see-also:0036:0001",
+          "ko": "[static let id3MetadataKeyCopyright: AVMetadataKey](avmetadatakey/id3metadatakeycopyright.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "저작권 문구를 나타내는 키입니다."
+        },
+        {
+          "id": "seg:heading:setvolumeat:0000:0001",
+          "ko": "setVolume(_:at:)"
+        },
+        {
+          "id": "seg:paragraph:setvolumeat:0002:0001",
+          "ko": "지정된 시간부터 오디오 볼륨 값을 설정합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 메서드는 `time`에서 시작되는 볼륨 램프를 추가합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "나중에 다른 볼륨 레벨의 시작 시간을 지정하지 않는 한, 이 볼륨 설정은 트랙 끝까지 유지됩니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`volume`: 볼륨입니다. 값은 `0.0`에서 `1.0` 사이여야 합니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0002",
+          "ko": "`time`: 볼륨을 설정할 시작 시간입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func setVolumeRamp(fromStartVolume: Float, toEndVolume: Float, timeRange: CMTimeRange)](avmutableaudiomixinputparameters/setvolumeramp(fromstartvolume:toendvolume:timerange:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "지정된 시간 범위에서 적용할 볼륨 램프를 설정합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutableaudiomixinputparameters/setvolume(_:at:))*"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:startsonfirsteligiblevariant:0002:0001",
+          "ko": "스트림의 주 재생 목록에 표시되는 첫 번째 유효한 variant로 재생을 시작하는지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "플레이어 항목이 variant 재생 목록을 선택할 때 사용하는 기본 설정입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "플레이어 항목이 variant 재생 목록을 선택할 때 사용할 기본 설정을 정의합니다."
+        },
+        {
+          "id": "seg:paragraph:translatesplayerinterstitialevents:0002:0001",
+          "ko": "플레이어가 interstitial 이벤트를 interstitial 시간 범위로 변환하는지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "Regardless of how Picture in Picture stops, the controller calls the delegate’s [`pictureInPictureControllerWillStopPictureInPicture(_:)`](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerwillstoppictureinpicture(_:).md) method."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "예약된 interstitial 이벤트를 포함해 플레이어 항목 타이밍을 나타내는 통합 타임라인입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "플레이어 항목이 서버 측 지침에 따라 interstitial 이벤트를 자동으로 재생하는지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[var interstitialTimeRanges: [AVInterstitialTimeRange]](avplayeritem/interstitialtimeranges.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "interstitial 콘텐츠를 식별하는 시간 범위 배열입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/stoppictureinpicture())*"
+        },
+        {
+          "id": "seg:paragraph:instructions:0002:0001",
+          "ko": "비디오 구성 지침입니다."
+        },
+        {
+          "id": "seg:list:instructions:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "비디오 구성이 렌더링되어야 하는 크기입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "비디오 구성이 렌더링되어야 하는 배율입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "비디오 구성에서 합성된 비디오 프레임을 렌더링해야 하는 시간 간격입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "오프라인 렌더링에서 Core Animation과 함께 사용할 비디오 구성 도구입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/stoppictureinpicture())*"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "비디오 구성에 사용되는 전송 함수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "비디오 구성에 사용되는 YCbCr 매트릭스입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "사용할 사용자 지정 compositor 클래스입니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[var outputBufferDescription: [[CMTag]]?](avvideocomposition/configuration/outputbufferdescription.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "비디오 구성의 출력 버퍼는 outputBufferDescription으로 지정할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0002",
+          "ko": "이 값은 출력 버퍼를 설명하는 CMTag 객체의 배열의 배열입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[var spatialVideoConfigurations: [AVSpatialVideoConfiguration]](avvideocomposition/configuration/spatialvideoconfigurations.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "비디오 구성의 출력과 연결할 수 있는 spatial configuration을 나타냅니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "렌더링된 프레임에서 HDR 표시 메타데이터를 표시하는 정책입니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[var sourceSampleDataTrackIDs: [CMPersistentTrackID]](avvideocomposition/configuration/sourcesampledatatrackids.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "객체가 프레임을 구성하는 데 필요한 구성 내의 원본 샘플 데이터 트랙의 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "비디오 구성이 프레임 타이밍을 가져오는 원본 트랙의 식별자입니다."
+        },
+        {
+          "id": "seg:heading:initpostprocessingasvideolayerin:0000:0001",
+          "ko": "init(postProcessingAsVideoLayer:in:)"
+        },
+        {
+          "id": "seg:paragraph:initpostprocessingasvideolayerin:0002:0001",
+          "ko": "합성된 비디오 프레임을 Core Animation 레이어와 합성합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "구성용 새 애니메이션 도구입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "합성된 비디오 프레임을 `videoLayer`에 배치하고 `animationLayer`를 렌더링하여 최종 프레임을 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0001",
+          "ko": "`videoLayer`는 `animationLayer` 하위 레이어 트리에 있어야 합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0002",
+          "ko": "`animationLayer`는 다른 레이어 트리에서 가져오거나 다른 레이어 트리에 추가된 상태여서는 안 됩니다."
+        },
+        {
+          "id": "seg:list:parameters:0013:0001",
+          "ko": "`videoLayer`: 비디오 레이어입니다."
+        },
+        {
+          "id": "seg:list:parameters:0013:0002",
+          "ko": "`animationLayer`: 애니메이션 레이어입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0014:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0015:0001",
+          "ko": "[convenience init(additionalLayer: sending CALayer, asTrackID: CMPersistentTrackID)](avvideocompositioncoreanimationtool/init(additionallayer:astrackid:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0016:0001",
+          "ko": "비디오 구성에 Core Animation 레이어를 추가합니다."
+        },
+        {
+          "id": "seg:list:see-also:0017:0001",
+          "ko": "[convenience init(postProcessingAsVideoLayers: [CALayer], in: CALayer)](avvideocompositioncoreanimationtool/init(postprocessingasvideolayers:in:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0018:0001",
+          "ko": "합성된 비디오 프레임을 Core Animation 레이어와 합성합니다."
+        },
+        {
+          "id": "seg:list:see-also:0019:0001",
+          "ko": "[convenience init(configuration: sending AVVideoCompositionCoreAnimationTool.Configuration)](avvideocompositioncoreanimationtool/init(configuration:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0020:0001",
+          "ko": "합성된 비디오 프레임을 Core Animation 레이어와 합성합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "새 AVVideoCompositionCoreAnimationTool 인스턴스를 초기화하기 위한 구성 가능한 속성입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0024:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avvideocompositioncoreanimationtool/init(postprocessingasvideolayer:in:))*"
+        },
+        {
+          "id": "seg:paragraph:stoppictureinpicture:0002:0001",
+          "ko": "활성화되어 있으면 Picture in Picture를 중지합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "Picture in Picture가 어떤 방식으로 중지되더라도 컨트롤러는 대리자의 [`pictureInPictureControllerWillStopPictureInPicture(_:)`](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerwillstoppictureinpicture(_:).md) 메서드를 호출합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "PiP 애니메이션이 완료되면 컨트롤러는 세션을 마무리하기 위해 대리자의 [`pictureInPictureControllerDidStopPictureInPicture(_:)`](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerdidstoppictureinpicture(_:).md) 메서드를 호출합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "Picture in Picture가 활성 상태이고 중지할 수 있는지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "컨트롤러가 콘텐츠를 인라인으로 임베드하고 앱이 백그라운드로 전환할 때 Picture in Picture가 자동으로 시작되는지 나타내는 Boolean 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "가능하면 Picture in Picture를 시작합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/stoppictureinpicture())*"
+        },
+        {
+          "id": "seg:heading:initratelocalizedname:0000:0001",
+          "ko": "init(rate:localizedName:)"
+        },
+        {
+          "id": "seg:paragraph:initratelocalizedname:0002:0001",
+          "ko": "`rate`와 `localizedName` 값으로 재생 속도와 로컬라이즈된 이름을 생성합니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:list:parameters:0008:0001",
+          "ko": "`activation`: The activation that the function applies."
+        },
+        {
+          "id": "seg:list:parameters:0008:0002",
+          "ko": "`axes`: The indices of the axes on which the function applies certain activation functions, such as [`softmax`](bnnsactivationfunction/softmax.md)."
+        },
+        {
+          "id": "seg:paragraph:parameters:0010:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avkit/avplaybackspeed/init(rate:localizedname:))*"
+        },
+        {
+          "id": "seg:paragraph:controlsstyle:0002:0001",
+          "ko": "플레이어 뷰의 컨트롤 스타일입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "플레이어 뷰는 플레이어 뷰의 외형과 동작을 사용자 지정하기 위해 사용할 수 있는 여러 제어 스타일을 지원합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "가능한 값은 [`AVPlayerViewControlsStyle`](avplayerviewcontrolsstyle.md)에서 확인할 수 있습니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "뷰가 표시하는 사용자 인터페이스 컨트롤을 나타내는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "플레이어 뷰에 프레임 단계 버튼 표시 여부를 결정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "플레이어 뷰에 공유 서비스 버튼 표시 여부를 결정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "플레이어 뷰에 전체 화면 토글 버튼 표시 여부를 결정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "가능한 경우 플레이어 뷰에 타임코드 표시 여부를 결정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "비디오 콘텐츠와 컨트롤 사이에 추가 사용자 지정 뷰를 삽입하는 뷰입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "플레이어 뷰가 표시하는 동작 팝업 버튼 메뉴입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "플레이어 뷰 컨트롤러가 Now Playing 정보 센터를 업데이트할지 여부를 나타내는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:rawvalue:0002:0001",
+          "ko": "스레딩 모델을 나타내는 원시 값입니다."
+        },
+        {
+          "id": "seg:list:rawvalue:0004:0001",
+          "ko": "iOS ?+"
+        },
+        {
+          "id": "seg:list:rawvalue:0004:0002",
+          "ko": "iPadOS ?+"
+        },
+        {
+          "id": "seg:list:rawvalue:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:rawvalue:0004:0004",
+          "ko": "macOS ?+"
+        },
+        {
+          "id": "seg:list:rawvalue:0004:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:list:rawvalue:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:rawvalue:0004:0007",
+          "ko": "watchOS ?+"
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고"
+        },
+        {
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[init(UInt32)](blas_threading/init(_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "스레딩 모델 상수를 생성합니다."
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[init(rawValue: UInt32)](bnnsfiltercreatevectoractivationlayer(_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "부호 없는 정수 값으로 스레딩 모델 상수를 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "BLAS와 LAPACK가 단일 스레드 또는 다중 스레드에서 실행할지를 Accelerate 프레임워크가 결정하도록 지정하는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "BLAS와 LAPACK이 단일 스레드에서만 실행되도록 지정하는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:accumulatorcountmultiplier:0002:0001",
+          "ko": "각 매개변수에 필요한 누산기 개수입니다."
+        },
+        {
+          "id": "seg:list:accumulatorcountmultiplier:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:accumulatorcountmultiplier:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "학습률을 지정하는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "범위 `0`에서 `1` 사이인 1차 모멘트 상수를 지정하는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "범위 `0`에서 `1` 사이인 2차 모멘트 상수를 지정하는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "최소 `1` 이상이며 옵티마이저의 현재 시간을 나타내는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "수치적 안정성을 개선하기 위해 사용하는 엡실론 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "그래디언트 스케일링 계수를 지정하는 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "가중치 감쇠 계수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "그래디언트 클리핑 함수와 범위입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "클리핑 함수를 설명하는 상수입니다."
+        },
+        {
+          "id": "seg:heading:applyactivationactivationaxesinputoutputbatchsizefilterparameters:0000:0001",
+          "ko": "applyActivation(activation:axes:input:output:batchSize:filterParameters:)"
+        },
+        {
+          "id": "seg:paragraph:applyactivationactivationaxesinputoutputbatchsizefilterparameters:0002:0001",
+          "ko": "지정한 축에 대해 활성화 함수를 적용합니다."
+        },
+        {
+          "id": "seg:list:applyactivationactivationaxesinputoutputbatchsizefilterparameters:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:applyactivationactivationaxesinputoutputbatchsizefilterparameters:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:parameters:0008:0001",
+          "ko": "`activation`: 함수에서 적용할 활성화 함수입니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0002",
+          "ko": "`axes`: 함수가 [`softmax`](bnnsactivationfunction/softmax.md)와 같은 특정 활성화 함수를 적용하는 축의 인덱스입니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0003",
+          "ko": "`input`: 입력의 디스크립터입니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0004",
+          "ko": "`output`: 출력의 디스크립터입니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0005",
+          "ko": "`batchSize`: 입력-출력 쌍의 개수입니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0006",
+          "ko": "`filterParameters`: 필터 런타임 매개변수입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[func BNNSFilterCreateVectorActivationLayer(UnsafePointer<BNNSVectorDescriptor>, UnsafePointer<BNNSVectorDescriptor>, UnsafePointer<BNNSActivation>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatevectoractivationlayer(_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "활성화 필터를 래핑하고 비초기화 처리를 관리하는 레이어 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "활성화 함수를 설명하는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "일반적인 활성화 함수를 설명하는 매개변수 모음입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "활성화 레이어를 정의하는 매개변수 모음입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[func BNNSFilterCreateLayerActivation(UnsafePointer<BNNSLayerParametersActivation>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayeractivation(_:_:).md)"
+        }
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "batchIndex": 10,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1c7f-cdcc-7793-8b64-9d0d56cce37a\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"id\": \"seg:list:see-also:0026:0001\",\n      \"source\": \"[func cblas_cgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgerc(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies a matrix by a vector (single-precision complex).\",\n      \"contextAfter\": \"Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0027:0001\",\n      \"source\": \"Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"contextBefore\": \"[func cblas_cgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgerc(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_cgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgeru(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0028:0001\",\n      \"source\": \"[func cblas_cgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgeru(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"contextAfter\": \"Multiplies vector X by the transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"Multiplies vector X by the transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"contextBefore\": \"[func cblas_cgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgeru(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_chbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0030:0001\",\n      \"source\": \"[func cblas_chbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies vector X by the transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"contextAfter\": \"Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (single-precision complex).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (single-precision complex).\",\n      \"contextBefore\": \"[func cblas_chbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_chemm(CBLAS_ORDER, CBLAS_SIDE, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemm(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0032:0001\",\n      \"source\": \"[func cblas_chemm(CBLAS_ORDER, CBLAS_SIDE, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemm(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (single-precision complex).\",\n      \"contextAfter\": \"Multiplies two Hermitian matrices (single-precision complex), then adds a third (with scaling).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"Multiplies two Hermitian matrices (single-precision complex), then adds a third (with scaling).\",\n      \"contextBefore\": \"[func cblas_chemm(CBLAS_ORDER, CBLAS_SIDE, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemm(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_chemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemv(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0034:0001\",\n      \"source\": \"[func cblas_chemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemv(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies two Hermitian matrices (single-precision complex), then adds a third (with scaling).\",\n      \"contextAfter\": \"Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0035:0001\",\n      \"source\": \"Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.\",\n      \"contextBefore\": \"[func cblas_chemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemv(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_cher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher(_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0036:0001\",\n      \"source\": \"[func cblas_cher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher(_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.\",\n      \"contextAfter\": \"Hermitian rank 1 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0037:0001\",\n      \"source\": \"Hermitian rank 1 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.\",\n      \"contextBefore\": \"[func cblas_cher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher(_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_cher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher2(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0038:0001\",\n      \"source\": \"[func cblas_cher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher2(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Hermitian rank 1 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.\",\n      \"contextAfter\": \"Hermitian rank 2 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of vector `Y` to the product of the conjugate of the scaling factor, vector `Y`, and the conjugate transpose of vector `X`, and adds the result to matrix `A`.\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0039:0001\",\n      \"source\": \"Hermitian rank 2 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of vector `Y` to the product of the conjugate of the scaling factor, vector `Y`, and the conjugate transpose of vector `X`, and adds the result to matrix `A`.\",\n      \"contextBefore\": \"[func cblas_cher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher2(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_cher2k(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cher2k(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0040:0001\",\n      \"source\": \"[func cblas_cher2k(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cher2k(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Hermitian rank 2 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of vector `Y` to the product of the conjugate of the scaling factor, vector `Y`, and the conjugate transpose of vector `X`, and adds the result to matrix `A`.\",\n      \"contextAfter\": \"Performs a rank-2k update of a complex Hermitian matrix (single-precision complex).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0041:0001\",\n      \"source\": \"Performs a rank-2k update of a complex Hermitian matrix (single-precision complex).\",\n      \"contextBefore\": \"[func cblas_cher2k(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cher2k(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_cherk(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cherk(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0042:0001\",\n      \"source\": \"[func cblas_cherk(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cherk(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Performs a rank-2k update of a complex Hermitian matrix (single-precision complex).\",\n      \"contextAfter\": \"Rank-k update—multiplies a Hermitian matrix by its transpose and adds a second matrix (single precision).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0043:0001\",\n      \"source\": \"Rank-k update—multiplies a Hermitian matrix by its transpose and adds a second matrix (single precision).\",\n      \"contextBefore\": \"[func cblas_cherk(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cherk(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_chpmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chpmv(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0044:0001\",\n      \"source\": \"[func cblas_chpmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chpmv(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Rank-k update—multiplies a Hermitian matrix by its transpose and adds a second matrix (single precision).\",\n      \"contextAfter\": \"Scales a packed hermitian matrix, multiplies it by a vector, and adds a scaled vector.\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0045:0001\",\n      \"source\": \"Scales a packed hermitian matrix, multiplies it by a vector, and adds a scaled vector.\",\n      \"contextBefore\": \"[func cblas_chpmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chpmv(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_chpr(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?)](cblas_chpr(_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0046:0001\",\n      \"source\": \"[func cblas_chpr(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?)](cblas_chpr(_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Scales a packed hermitian matrix, multiplies it by a vector, and adds a scaled vector.\",\n      \"contextAfter\": \"Scales and multiplies a vector times its conjugate transpose, then adds a matrix.\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0047:0001\",\n      \"source\": \"Scales and multiplies a vector times its conjugate transpose, then adds a matrix.\",\n      \"contextBefore\": \"[func cblas_chpr(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?)](cblas_chpr(_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0049:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/cblas_cgemm(_:_:_:_:_:_:_:_:_:_:_:_:_:_:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:cgbsvx:0000:0001\",\n      \"source\": \"cgbsvx_(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: Accelerate **Kind**: func\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0006:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nfunc cgbsvx_(_ fact: UnsafePointer<CChar>, _ trans: UnsafePointer<CChar>, _ n: UnsafePointer<__LAPACK_int>, _ kl: UnsafePointer<__LAPACK_int>, _ ku: UnsafePointer<__LAPACK_int>, _ nrhs: UnsafePointer<__LAPACK_int>, _ ab: OpaquePointer?, _ ldab: UnsafePointer<__LAPACK_int>, _ afb: OpaquePointer?, _ ldafb: UnsafePointer<__LAPACK_int>, _ ipiv: UnsafeMutablePointer<__LAPACK_int>?, _ equed: UnsafeMutablePointer<CChar>, _ r: UnsafeMutablePointer<Float>?, _ c: UnsafeMutablePointer<Float>?, _ b: OpaquePointer?, _ ldb: UnsafePointer<__LAPACK_int>, _ x: OpaquePointer?, _ ldx: UnsafePointer<__LAPACK_int>, _ rcond: UnsafeMutablePointer<Float>, _ ferr: UnsafeMutablePointer<Float>?, _ berr: UnsafeMutablePointer<Float>?, _ work: OpaquePointer, _ rwork: UnsafeMutablePointer<Float>?, _ info: UnsafeMutablePointer<__LAPACK_int>)\\n```\",\n      \"contextAfter\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0001\",\n      \"source\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0002\",\n      \"source\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0003\",\n      \"source\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0004\",\n      \"source\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0005\",\n      \"source\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemm_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0006\",\n      \"source\": \"[func cgemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemm_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemv_(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    }\n  ]\n}\n\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T14:03:19.688318Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:20.043840Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:20.537819Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T14:03:21.282076Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T14:03:22.359878Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T14:03:24.291019Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T14:03:28.039032Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: c38ee74a-8cdc-4e6a-bc1d-0c8522dcaec6\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: c38ee74a-8cdc-4e6a-bc1d-0c8522dcaec6"
+    }
+  ],
+  "progress": {
+    "generatedAt": "2026-05-12T14:02:21.712Z",
+    "updatedAt": "2026-05-12T14:03:28.249Z",
+    "reason": "paused",
+    "queue": "state/queue/shard-0053.json",
+    "shard": {
+      "index": 53,
+      "total": 256
+    },
+    "abortReason": "Paused after Codex usage limit; retry after 7:02 PM",
+    "pause": {
+      "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM.",
+      "retryAfterText": "7:02 PM",
+      "retryAt": "2026-05-12T19:02:00.000Z"
+    },
+    "totals": {
+      "batches": 248,
+      "segments": 13860,
+      "completed": 8,
+      "failed": 1,
+      "processed": 9,
+      "active": 0,
+      "queued": 239,
+      "percent": 3.63
+    },
+    "batches": [
+      {
+        "index": 0,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:21.715Z",
+        "completedAt": "2026-05-12T14:02:32.148Z",
+        "durationMs": 10433
+      },
+      {
+        "index": 1,
+        "status": "success",
+        "segments": 58,
+        "startedAt": "2026-05-12T14:02:21.715Z",
+        "completedAt": "2026-05-12T14:02:34.888Z",
+        "durationMs": 13173
+      },
+      {
+        "index": 2,
+        "status": "success",
+        "segments": 47,
+        "startedAt": "2026-05-12T14:02:21.715Z",
+        "completedAt": "2026-05-12T14:02:31.057Z",
+        "durationMs": 9342
+      },
+      {
+        "index": 3,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:31.060Z",
+        "completedAt": "2026-05-12T14:02:42.005Z",
+        "durationMs": 10945
+      },
+      {
+        "index": 4,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:32.151Z",
+        "completedAt": "2026-05-12T14:03:13.638Z",
+        "durationMs": 41487
+      },
+      {
+        "index": 5,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:34.892Z",
+        "completedAt": "2026-05-12T14:02:52.567Z",
+        "durationMs": 17675
+      },
+      {
+        "index": 6,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:42.008Z",
+        "completedAt": "2026-05-12T14:03:01.466Z",
+        "durationMs": 19458
+      },
+      {
+        "index": 7,
+        "status": "success",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:02:52.571Z",
+        "completedAt": "2026-05-12T14:03:10.065Z",
+        "durationMs": 17494
+      },
+      {
+        "index": 8,
+        "status": "queued",
+        "segments": 54,
+        "startedAt": "2026-05-12T14:03:01.468Z",
+        "completedAt": "2026-05-12T14:03:13.668Z",
+        "durationMs": 12200,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+      },
+      {
+        "index": 9,
+        "status": "queued",
+        "segments": 60,
+        "startedAt": "2026-05-12T14:03:10.068Z",
+        "completedAt": "2026-05-12T14:03:17.105Z",
+        "durationMs": 7037,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+      },
+      {
+        "index": 10,
+        "status": "failed",
+        "segments": 31,
+        "startedAt": "2026-05-12T14:03:13.641Z",
+        "completedAt": "2026-05-12T14:03:28.244Z",
+        "durationMs": 14603,
+        "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1c7f-cdcc-7793-8b64-9d0d56cce37a\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"id\": \"seg:list:see-also:0026:0001\",\n      \"source\": \"[func cblas_cgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgerc(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies a matrix by a vector (single-precision complex).\",\n      \"contextAfter\": \"Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0027:0001\",\n      \"source\": \"Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"contextBefore\": \"[func cblas_cgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgerc(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_cgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgeru(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0028:0001\",\n      \"source\": \"[func cblas_cgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgeru(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"contextAfter\": \"Multiplies vector X by the transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"Multiplies vector X by the transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"contextBefore\": \"[func cblas_cgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgeru(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_chbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0030:0001\",\n      \"source\": \"[func cblas_chbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies vector X by the transpose of vector Y, then adds matrix A (single-precision complex).\",\n      \"contextAfter\": \"Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (single-precision complex).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (single-precision complex).\",\n      \"contextBefore\": \"[func cblas_chbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_chemm(CBLAS_ORDER, CBLAS_SIDE, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemm(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0032:0001\",\n      \"source\": \"[func cblas_chemm(CBLAS_ORDER, CBLAS_SIDE, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemm(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (single-precision complex).\",\n      \"contextAfter\": \"Multiplies two Hermitian matrices (single-precision complex), then adds a third (with scaling).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"Multiplies two Hermitian matrices (single-precision complex), then adds a third (with scaling).\",\n      \"contextBefore\": \"[func cblas_chemm(CBLAS_ORDER, CBLAS_SIDE, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemm(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_chemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemv(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0034:0001\",\n      \"source\": \"[func cblas_chemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemv(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies two Hermitian matrices (single-precision complex), then adds a third (with scaling).\",\n      \"contextAfter\": \"Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0035:0001\",\n      \"source\": \"Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.\",\n      \"contextBefore\": \"[func cblas_chemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemv(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_cher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher(_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0036:0001\",\n      \"source\": \"[func cblas_cher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher(_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.\",\n      \"contextAfter\": \"Hermitian rank 1 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0037:0001\",\n      \"source\": \"Hermitian rank 1 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.\",\n      \"contextBefore\": \"[func cblas_cher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher(_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_cher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher2(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0038:0001\",\n      \"source\": \"[func cblas_cher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher2(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Hermitian rank 1 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.\",\n      \"contextAfter\": \"Hermitian rank 2 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of vector `Y` to the product of the conjugate of the scaling factor, vector `Y`, and the conjugate transpose of vector `X`, and adds the result to matrix `A`.\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0039:0001\",\n      \"source\": \"Hermitian rank 2 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of vector `Y` to the product of the conjugate of the scaling factor, vector `Y`, and the conjugate transpose of vector `X`, and adds the result to matrix `A`.\",\n      \"contextBefore\": \"[func cblas_cher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher2(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_cher2k(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cher2k(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0040:0001\",\n      \"source\": \"[func cblas_cher2k(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cher2k(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Hermitian rank 2 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of vector `Y` to the product of the conjugate of the scaling factor, vector `Y`, and the conjugate transpose of vector `X`, and adds the result to matrix `A`.\",\n      \"contextAfter\": \"Performs a rank-2k update of a complex Hermitian matrix (single-precision complex).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0041:0001\",\n      \"source\": \"Performs a rank-2k update of a complex Hermitian matrix (single-precision complex).\",\n      \"contextBefore\": \"[func cblas_cher2k(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cher2k(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_cherk(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cherk(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0042:0001\",\n      \"source\": \"[func cblas_cherk(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cherk(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Performs a rank-2k update of a complex Hermitian matrix (single-precision complex).\",\n      \"contextAfter\": \"Rank-k update—multiplies a Hermitian matrix by its transpose and adds a second matrix (single precision).\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0043:0001\",\n      \"source\": \"Rank-k update—multiplies a Hermitian matrix by its transpose and adds a second matrix (single precision).\",\n      \"contextBefore\": \"[func cblas_cherk(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cherk(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_chpmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chpmv(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0044:0001\",\n      \"source\": \"[func cblas_chpmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chpmv(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Rank-k update—multiplies a Hermitian matrix by its transpose and adds a second matrix (single precision).\",\n      \"contextAfter\": \"Scales a packed hermitian matrix, multiplies it by a vector, and adds a scaled vector.\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0045:0001\",\n      \"source\": \"Scales a packed hermitian matrix, multiplies it by a vector, and adds a scaled vector.\",\n      \"contextBefore\": \"[func cblas_chpmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chpmv(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_chpr(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?)](cblas_chpr(_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0046:0001\",\n      \"source\": \"[func cblas_chpr(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?)](cblas_chpr(_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Scales a packed hermitian matrix, multiplies it by a vector, and adds a scaled vector.\",\n      \"contextAfter\": \"Scales and multiplies a vector times its conjugate transpose, then adds a matrix.\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0047:0001\",\n      \"source\": \"Scales and multiplies a vector times its conjugate transpose, then adds a matrix.\",\n      \"contextBefore\": \"[func cblas_chpr(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?)](cblas_chpr(_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0049:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/cblas_cgemm(_:_:_:_:_:_:_:_:_:_:_:_:_:_:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"cblascgemm(::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:cgbsvx:0000:0001\",\n      \"source\": \"cgbsvx_(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: Accelerate **Kind**: func\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0006:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nfunc cgbsvx_(_ fact: UnsafePointer<CChar>, _ trans: UnsafePointer<CChar>, _ n: UnsafePointer<__LAPACK_int>, _ kl: UnsafePointer<__LAPACK_int>, _ ku: UnsafePointer<__LAPACK_int>, _ nrhs: UnsafePointer<__LAPACK_int>, _ ab: OpaquePointer?, _ ldab: UnsafePointer<__LAPACK_int>, _ afb: OpaquePointer?, _ ldafb: UnsafePointer<__LAPACK_int>, _ ipiv: UnsafeMutablePointer<__LAPACK_int>?, _ equed: UnsafeMutablePointer<CChar>, _ r: UnsafeMutablePointer<Float>?, _ c: UnsafeMutablePointer<Float>?, _ b: OpaquePointer?, _ ldb: UnsafePointer<__LAPACK_int>, _ x: OpaquePointer?, _ ldx: UnsafePointer<__LAPACK_int>, _ rcond: UnsafeMutablePointer<Float>, _ ferr: UnsafeMutablePointer<Float>?, _ berr: UnsafeMutablePointer<Float>?, _ work: OpaquePointer, _ rwork: UnsafeMutablePointer<Float>?, _ info: UnsafeMutablePointer<__LAPACK_int>)\\n```\",\n      \"contextAfter\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0001\",\n      \"source\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0002\",\n      \"source\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0003\",\n      \"source\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0004\",\n      \"source\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0005\",\n      \"source\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemm_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0007:0006\",\n      \"source\": \"[func cgemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemm_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cgemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemv_(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cgbsvx(::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    }\n  ]\n}\n\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T14:03:19.688318Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:20.043840Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:20.537819Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T14:03:21.282076Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T14:03:22.359878Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T14:03:24.291019Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T14:03:28.039032Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: c38ee74a-8cdc-4e6a-bc1d-0c8522dcaec6\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: c38ee74a-8cdc-4e6a-bc1d-0c8522dcaec6"
+      },
+      {
+        "index": 11,
+        "status": "queued",
+        "segments": 22
+      },
+      {
+        "index": 12,
+        "status": "queued",
+        "segments": 25
+      },
+      {
+        "index": 13,
+        "status": "queued",
+        "segments": 24
+      },
+      {
+        "index": 14,
+        "status": "queued",
+        "segments": 22
+      },
+      {
+        "index": 15,
+        "status": "queued",
+        "segments": 23
+      },
+      {
+        "index": 16,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 17,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 18,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 19,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 20,
+        "status": "queued",
+        "segments": 40
+      },
+      {
+        "index": 21,
+        "status": "queued",
+        "segments": 39
+      },
+      {
+        "index": 22,
+        "status": "queued",
+        "segments": 31
+      },
+      {
+        "index": 23,
+        "status": "queued",
+        "segments": 23
+      },
+      {
+        "index": 24,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 25,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 26,
+        "status": "queued",
+        "segments": 28
+      },
+      {
+        "index": 27,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 28,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 29,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 30,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 31,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 32,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 33,
+        "status": "queued",
+        "segments": 50
+      },
+      {
+        "index": 34,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 35,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 36,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 37,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 38,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 39,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 40,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 41,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 42,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 43,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 44,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 45,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 46,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 47,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 48,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 49,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 50,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 51,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 52,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 53,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 54,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 55,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 56,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 57,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 58,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 59,
+        "status": "queued",
+        "segments": 31
+      },
+      {
+        "index": 60,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 61,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 62,
+        "status": "queued",
+        "segments": 43
+      },
+      {
+        "index": 63,
+        "status": "queued",
+        "segments": 43
+      },
+      {
+        "index": 64,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 65,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 66,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 67,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 68,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 69,
+        "status": "queued",
+        "segments": 50
+      },
+      {
+        "index": 70,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 71,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 72,
+        "status": "queued",
+        "segments": 46
+      },
+      {
+        "index": 73,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 74,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 75,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 76,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 77,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 78,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 79,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 80,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 81,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 82,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 83,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 84,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 85,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 86,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 87,
+        "status": "queued",
+        "segments": 59
+      },
+      {
+        "index": 88,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 89,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 90,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 91,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 92,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 93,
+        "status": "queued",
+        "segments": 39
+      },
+      {
+        "index": 94,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 95,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 96,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 97,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 98,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 99,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 100,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 101,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 102,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 103,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 104,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 105,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 106,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 107,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 108,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 109,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 110,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 111,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 112,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 113,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 114,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 115,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 116,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 117,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 118,
+        "status": "queued",
+        "segments": 50
+      },
+      {
+        "index": 119,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 120,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 121,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 122,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 123,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 124,
+        "status": "queued",
+        "segments": 33
+      },
+      {
+        "index": 125,
+        "status": "queued",
+        "segments": 25
+      },
+      {
+        "index": 126,
+        "status": "queued",
+        "segments": 35
+      },
+      {
+        "index": 127,
+        "status": "queued",
+        "segments": 46
+      },
+      {
+        "index": 128,
+        "status": "queued",
+        "segments": 33
+      },
+      {
+        "index": 129,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 130,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 131,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 132,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 133,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 134,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 135,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 136,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 137,
+        "status": "queued",
+        "segments": 42
+      },
+      {
+        "index": 138,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 139,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 140,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 141,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 142,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 143,
+        "status": "queued",
+        "segments": 36
+      },
+      {
+        "index": 144,
+        "status": "queued",
+        "segments": 16
+      },
+      {
+        "index": 145,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 146,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 147,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 148,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 149,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 150,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 151,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 152,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 153,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 154,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 155,
+        "status": "queued",
+        "segments": 48
+      },
+      {
+        "index": 156,
+        "status": "queued",
+        "segments": 47
+      },
+      {
+        "index": 157,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 158,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 159,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 160,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 161,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 162,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 163,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 164,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 165,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 166,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 167,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 168,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 169,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 170,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 171,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 172,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 173,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 174,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 175,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 176,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 177,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 178,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 179,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 180,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 181,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 182,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 183,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 184,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 185,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 186,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 187,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 188,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 189,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 190,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 191,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 192,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 193,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 194,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 195,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 196,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 197,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 198,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 199,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 200,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 201,
+        "status": "queued",
+        "segments": 59
+      },
+      {
+        "index": 202,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 203,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 204,
+        "status": "queued",
+        "segments": 45
+      },
+      {
+        "index": 205,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 206,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 207,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 208,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 209,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 210,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 211,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 212,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 213,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 214,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 215,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 216,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 217,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 218,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 219,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 220,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 221,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 222,
+        "status": "queued",
+        "segments": 41
+      },
+      {
+        "index": 223,
+        "status": "queued",
+        "segments": 38
+      },
+      {
+        "index": 224,
+        "status": "queued",
+        "segments": 44
+      },
+      {
+        "index": 225,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 226,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 227,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 228,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 229,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 230,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 231,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 232,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 233,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 234,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 235,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 236,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 237,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 238,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 239,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 240,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 241,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 242,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 243,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 244,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 245,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 246,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 247,
+        "status": "queued",
+        "segments": 36
+      }
+    ]
+  }
+}
