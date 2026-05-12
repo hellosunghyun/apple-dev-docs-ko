@@ -213,6 +213,14 @@ export interface TranslationBatchOutput {
   segments: Array<{ id: string; ko: string }>;
 }
 
+export interface QueueBatchFileRef {
+  path: string;
+  index: number;
+  segments: number;
+}
+
+export type QueueBatch = TranslationBatchInput | QueueBatchFileRef;
+
 export interface QueueFile {
   generatedAt: string;
   shard?: {
@@ -220,7 +228,7 @@ export interface QueueFile {
     total: number;
   };
   sourcePaths: string[];
-  batches: TranslationBatchInput[];
+  batches: QueueBatch[];
   summary: {
     totalSegments: number;
     toTranslate: number;

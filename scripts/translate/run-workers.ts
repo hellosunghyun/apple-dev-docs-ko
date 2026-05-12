@@ -2,9 +2,15 @@ import { appendFile, readdir, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
 import PQueue from "p-queue";
 import { Command } from "commander";
-import { ensureDir, readJson, resolveRoot } from "../lib/fs.js";
+import { ensureDir, fileExists, readJson, resolveRoot } from "../lib/fs.js";
 import { getUsageLimitInfo, translateBatch, type UsageLimitInfo } from "./codex-worker.js";
-import type { QueueFile, TranslationBatchOutput } from "../lib/types.js";
+import type {
+  QueueBatch,
+  QueueBatchFileRef,
+  QueueFile,
+  TranslationBatchInput,
+  TranslationBatchOutput
+} from "../lib/types.js";
 
 const program = new Command();
 program
@@ -29,6 +35,8 @@ type BatchState = {
 
 async function main(): Promise<void> {
   const queueFile = await readJson<QueueFile>(resolveRoot(options.queue));
+  const resolvedQueuePath = resolveRoot(options.queue);
+  const queueDir = path.dirname(resolvedQueuePath);
   const concurrency = Number(options.concurrency ?? process.env.LLM_CONCURRENCY ?? 3);
   const workerQueue = new PQueue({ concurrency });
   const resultsPath = resolveRoot(options.results);
@@ -40,17 +48,18 @@ async function main(): Promise<void> {
   const batchStates: BatchState[] = queueFile.batches.map((batch, index) => ({
     index,
     status: "queued",
-    segments: batch.segments.length
+    segments: batchSegmentCount(batch)
   }));
   const startedAt = new Date().toISOString();
   const totalBatches = queueFile.batches.length;
-  const totalSegments = queueFile.batches.reduce((sum, batch) => sum + batch.segments.length, 0);
+  const totalSegments = queueFile.batches.reduce((sum, batch) => sum + batchSegmentCount(batch), 0);
   let started = 0;
   let completed = 0;
   let failed = 0;
   let flushChain = Promise.resolve();
   let abortReason = "";
   let pauseInfo: UsageLimitInfo | undefined;
+  const batchCache = new Map<number, TranslationBatchInput>();
 
   completed = await loadCompletedBatchOutputs(batchDir, batchStates, outputs);
   started = completed;
@@ -62,7 +71,7 @@ async function main(): Promise<void> {
   );
   await flushState("initialized");
 
-  queueFile.batches.forEach((batch, batchIndex) => {
+  queueFile.batches.forEach((_, batchIndex) => {
     if (batchStates[batchIndex].status === "success") {
       return;
     }
@@ -73,10 +82,11 @@ async function main(): Promise<void> {
       batchState.status = "in_progress";
       batchState.startedAt = new Date(batchStartedAt).toISOString();
       started += 1;
-      logBatchStart(batchIndex, totalBatches, batch.segments.length);
+      logBatchStart(batchIndex, totalBatches, batchState.segments);
       await queueFlush(`batch-${batchIndex}-started`);
 
       try {
+        const batch = await getQueueBatch(queueFile, batchIndex, queueDir, batchCache);
         const output = await translateBatch(batch);
         outputs[batchIndex] = output;
         completed += 1;
@@ -207,6 +217,41 @@ function batchOutputPath(batchDir: string, index: number): string {
 
 function batchFailurePath(batchDir: string, index: number): string {
   return path.join(batchDir, `batch-${String(index).padStart(5, "0")}.failure.json`);
+}
+
+function batchSegmentCount(batch: QueueBatch): number {
+  if (isBatchFileRef(batch)) {
+    return batch.segments;
+  }
+  return batch.segments.length;
+}
+
+function isBatchFileRef(value: QueueBatch): value is QueueBatchFileRef {
+  return "path" in value && "segments" in value && !("task" in value);
+}
+
+async function getQueueBatch(
+  queueFile: QueueFile,
+  index: number,
+  queueDir: string,
+  batchCache: Map<number, TranslationBatchInput>
+): Promise<TranslationBatchInput> {
+  const cached = batchCache.get(index);
+  if (cached) return cached;
+
+  const queueBatch = queueFile.batches[index];
+  if (!isBatchFileRef(queueBatch)) {
+    batchCache.set(index, queueBatch);
+    return queueBatch;
+  }
+
+  const rawPath = queueBatch.path;
+  const resolvedBatchPath = path.isAbsolute(rawPath) ? rawPath : path.resolve(queueDir, rawPath);
+  const fallbackPath = resolveRoot(rawPath);
+  const batchPath = (await fileExists(resolvedBatchPath)) ? resolvedBatchPath : fallbackPath;
+  const loadedBatch = await readJson<TranslationBatchInput>(batchPath);
+  batchCache.set(index, loadedBatch);
+  return loadedBatch;
 }
 
 async function loadCompletedBatchOutputs(

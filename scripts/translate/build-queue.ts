@@ -1,9 +1,11 @@
+import { rm } from "node:fs/promises";
+import path from "node:path";
 import { Command } from "commander";
 import { loadGlossary, loadTranslationConfig } from "../lib/config.js";
-import { readJson, resolveRoot, writeJson } from "../lib/fs.js";
+import { ensureDir, readJson, resolveRoot, writeJson } from "../lib/fs.js";
 import { readOverride } from "../lib/overrides.js";
 import { applyOverride, readMemory, segmentNeedsTranslation } from "../lib/memory.js";
-import type { Manifest, QueueFile, TranslationBatchInput, TranslationMemorySegment } from "../lib/types.js";
+import type { Manifest, QueueBatchFileRef, QueueFile, TranslationBatchInput, TranslationMemorySegment } from "../lib/types.js";
 
 const program = new Command();
 program
@@ -65,11 +67,33 @@ async function main(): Promise<void> {
   const batchSegments = Number(options.batchSegments ?? process.env.BATCH_SEGMENTS ?? translationConfig.translation.batchSegments);
   const batchChars = Number(options.batchChars ?? process.env.BATCH_CHARS ?? translationConfig.translation.batchChars);
   const batches = buildBatches(candidates, batchSegments, batchChars, await loadGlossary());
+
+  const queuePath = options.shard ? `state/queue/shard-${String(options.shard).padStart(4, "0")}.json` : "state/queue/latest.json";
+  const resolvedQueuePath = resolveRoot(queuePath);
+  const queueDir = path.dirname(resolvedQueuePath);
+  const queueBaseName = path.basename(queuePath, ".json");
+  const batchDir = path.join(queueDir, `${queueBaseName}-batches`);
+
+  await rm(batchDir, { recursive: true, force: true });
+  await ensureDir(batchDir);
+  const batchRefs = await Promise.all(
+    batches.map(async (batch, index): Promise<QueueBatchFileRef> => {
+      const fileName = `batch-${String(index).padStart(5, "0")}.json`;
+      const batchPath = path.join(batchDir, fileName);
+      await writeJson(batchPath, batch);
+      return {
+        path: path.relative(queueDir, batchPath),
+        index,
+        segments: batch.segments.length
+      };
+    })
+  );
+
   const queue: QueueFile = {
     generatedAt: new Date().toISOString(),
     shard: options.shard && options.shardTotal ? { index: Number(options.shard), total: Number(options.shardTotal) } : undefined,
     sourcePaths,
-    batches,
+    batches: batchRefs,
     summary: {
       totalSegments: candidates.length + preserved + locked + skipped,
       toTranslate: candidates.length,
@@ -78,8 +102,7 @@ async function main(): Promise<void> {
       locked
     }
   };
-  const queuePath = options.shard ? `state/queue/shard-${String(options.shard).padStart(4, "0")}.json` : "state/queue/latest.json";
-  await writeJson(resolveRoot(queuePath), queue);
+  await writeJson(resolvedQueuePath, queue);
   console.log(`Queue batches: ${batches.length}; segments: ${candidates.length}`);
 }
 
