@@ -1,0 +1,3514 @@
+{
+  "generatedAt": "2026-05-12T16:06:28.899Z",
+  "updatedAt": "2026-05-12T16:06:51.612Z",
+  "queue": "state/queue/shard-0013.json",
+  "abortReason": "Paused after Codex usage limit; retry after May 19th, 2026 5:27 AM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM.",
+    "retryAfterText": "May 19th, 2026 5:27 AM"
+  },
+  "outputs": [
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:anchorupdateeventremoved:0002:0001",
+          "ko": "ARKit가 앵커 추적을 중단할 때 발생하는 이벤트입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "ARKit가 앵커 추적을 시작할 때 발생하는 이벤트입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "기존 앵커가 데이터를 업데이트할 때 발생하는 이벤트입니다."
+        },
+        {
+          "id": "seg:heading:inittransformextent:0000:0001",
+          "ko": "init(transform:extent:)"
+        },
+        {
+          "id": "seg:paragraph:inittransformextent:0002:0001",
+          "ko": "새 환경 프로브 앵커를 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "`add(anchor:)` 메서드를 사용해 AR 세션에서 사용자 지정 앵커 추적을 시작합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "장면에 환경 프로브 앵커를 추가하면 ARKit가 해당 앵커의 환경 텍스처 생성을 시작합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0003",
+          "ko": "앵커에 새 [`environmentTexture`](arenvironmentprobeanchor/environmenttexture.md)가 있는 경우 알림을 받으려면 [`session(_:didUpdate:)`](arsessiondelegate/session(_:didupdate:)-3qtt8.md), [`renderer(_:didUpdate:for:)`](arscnviewdelegate/renderer(_:didupdate:for:).md), [`view(_:didUpdate:for:)`](arskviewdelegate/view(_:didupdate:for:).md) 중 하나의 델리게이트 메서드를 구현해야 합니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`transform`: 앵커의 위치, 방향, 스케일을 인코딩하는 행렬로, 앵커를 배치한 AR 세션의 월드 좌표계에 상대적으로 지정됩니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0002",
+          "ko": "`extent`: 프로브 앵커의 범위(*bounds*)입니다. ARKit의 세계 좌표계는 항상 오른손 좌표 규칙을 따르지만 세션 구성에 따라 방향이 결정됩니다. 자세한 내용은 [`Understanding World Tracking`](understanding-world-tracking.md)을(를) 참고합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[init(name: String, transform: simd_float4x4, extent: simd_float3)](avaudiorecorderdelegate/audiorecorderendinterruption(_:withoptions:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "설명적 이름이 포함된 새 앵커 객체를 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arenvironmentprobeanchor/init(transform:extent:))*"
+        },
+        {
+          "id": "seg:paragraph:detectionobjects:0002:0001",
+          "ko": "프레임워크가 사용자 환경에서 감지하려고 시도하는 3D 객체의 집합입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 속성을 사용하면 ARKit가 사용자 환경에서 알려진 3D 객체를 찾아 [`ARObjectAnchor`](arobjectanchor.md)로 표시하고 AR 경험에서 사용할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "감지를 위한 참조 객체를 만들려면 월드 트래킹 세션에서 스캔한 다음 [`ARWorldMap`](arworldmap.md)를 사용해 [`ARReferenceObject`](arreferenceobject.md) 인스턴스를 추출합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0002",
+          "ko": "그런 다음 참조 객체를 파일로 저장하고 Xcode asset catalog를 사용해 만들기 원하는 ARKit 앱에 패키징할 수 있습니다."
+        },
+        {
+          "id": "seg:heading:raycastqueryfromallowingalignment:0000:0001",
+          "ko": "raycastQuery(from:allowing:alignment:)"
+        },
+        {
+          "id": "seg:paragraph:raycastqueryfromallowingalignment:0002:0001",
+          "ko": "뷰의 한 지점에서 시작되고 카메라 시야의 중심과 정렬되는 raycast 쿼리를 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 함수를 호출하면 ARKit는 인수로 지정한 화면 공간 지점에서 양의 z축 방향으로 확장되는 광선을 생성해, 물리적 환경에서 광선 상에 인수로 지정한 대상이 있는지 확인합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "대상이 존재하면 ARKit는 광선이 대상과 교차하는 3D 위치를 반환합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[func hitTest(CGPoint, types: ARHitTestResult.ResultType) -> [ARHitTestResult]](avaudiorecorderdelegate/audiorecorderendinterruption(_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "SceneKit 뷰의 한 점에 해당하는 캡처된 카메라 이미지에서 실제 환경 객체 또는 AR 앵커를 검색합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arscnview/raycastquery(from:allowing:alignment:))*"
+        },
+        {
+          "id": "seg:paragraph:meshanchormeshclassificationseat:0002:0001",
+          "ko": "의자입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "침대입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "캐비닛입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "가전제품입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "테이블입니다."
+        },
+        {
+          "id": "seg:paragraph:recoverysuggestion:0002:0001",
+          "ko": "실패로부터 복구하는 방법을 설명하는 지역화 메시지입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "소스가 번들인 경우 로드에 실패한 모델의 번들입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "소스가 번들인 경우 로드에 실패한 모델의 이름입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "소스가 URL인 경우 로드에 실패한 모델의 URL입니다."
+        },
+        {
+          "id": "seg:heading:initformatpacketcapacity:0000:0001",
+          "ko": "init(format:packetCapacity:)"
+        },
+        {
+          "id": "seg:paragraph:initformatpacketcapacity:0002:0001",
+          "ko": "패킷당 바이트 수가 일정한 오디오 데이터의 압축 버퍼를 생성합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "새 [`AVAudioCompressedBuffer`](avaudiocompressedbuffer.md) 인스턴스입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "형식이 PCM이거나 패킷당 바이트 수가 가변형인 경우(예: `format.streamDescription->mBytesPerPacket == 0`) 실패합니다."
+        },
+        {
+          "id": "seg:list:parameters:0012:0001",
+          "ko": "`format`: 버퍼에 포함되는 오디오의 형식입니다."
+        },
+        {
+          "id": "seg:list:parameters:0012:0002",
+          "ko": "`packetCapacity`: 버퍼의 용량(패킷 단위)입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0013:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[init(format: AVAudioFormat, packetCapacity: AVAudioPacketCount, maximumPacketSize: Int)](avaudiorecorderdelegate/audiorecorderendinterruption(_:withflags:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "오디오 데이터가 압축 상태로 포함된 버퍼를 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiorecorderdelegate/audiorecorderbegininterruption(_:))*"
+        },
+        {
+          "id": "seg:heading:audiorecorderbegininterruption:0000:0001",
+          "ko": "audioRecorderBeginInterruption(_:)"
+        },
+        {
+          "id": "seg:paragraph:audiorecorderbegininterruption:0002:0001",
+          "ko": "시스템이 오디오 녹음을 중단했음을 델리게이트에 알립니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0001",
+          "ko": "`recorder`: 중단된 오디오 녹음기입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[func audioRecorderEndInterruption(AVAudioRecorder)](avaudiorecorderdelegate/audiorecorderendinterruption(_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "오디오 세션 중단이 종료되었음을 델리게이트에 알립니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func audioRecorderEndInterruption(AVAudioRecorder, withOptions: Int)](avaudiorecorderdelegate/audiorecorderendinterruption(_:withoptions:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "오디오 세션 중단이 옵션과 함께 종료되었음을 델리게이트에 알립니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func audioRecorderEndInterruption(AVAudioRecorder, withFlags: Int)](avaudiorecorderdelegate/audiorecorderendinterruption(_:withflags:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "오디오 세션 중단이 플래그와 함께 종료되었음을 델리게이트에 알립니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiorecorderdelegate/audiorecorderbegininterruption(_:))*"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:mediaserviceswerelostnotification:0002:0001",
+          "ko": "미디어 서버가 종료될 때 시스템이 게시하는 알림입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "시스템은 미디어 서버가 처음으로 사용 불가능해질 때 이 알림을 게시합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "대부분의 앱은 이 알림에 구독할 필요가 없으며 대신 [`mediaServicesWereResetNotification`](avaudiosession/mediaserviceswereresetnotification.md) 알림을 구독해야 합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0003",
+          "ko": "그러나 이 알림은 서버가 다시 시작되기 전에 들어오는 요청을 처리하기 위한 적절한 조치를 취할 수 있는 신호로 사용할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "이 알림에는 [`userInfo`](https://developer.apple.com/documentation/Foundation/NSNotification/userInfo) 딕셔너리가 없습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "이 알림은 메인 스레드에서 게시됩니다."
+        },
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "시스템이 미디어 서버가 다시 시작할 때 게시하는 알림입니다."
+        },
+        {
+          "id": "seg:paragraph:pci:0002:0001",
+          "ko": "PCI(Peripheral Component Interconnect) 장치에 대한 I/O 연결입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[static let AVB: AVAudioSession.Port](avaudiosession/port/avb.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "Audio Video Bridging (AVB) 장치에 대한 I/O 연결입니다."
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let bluetoothHFP: AVAudioSession.Port](avaudiosession/port/bluetoothhfp.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "Bluetooth Hands-Free Profile 장치에 대한 I/O 연결입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let carAudio: AVAudioSession.Port](avaudiosession/port/caraudio.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "Car Audio를 통한 I/O 연결입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let displayPort: AVAudioSession.Port](avaudiosession/port/displayport.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "DisplayPort 장치에 대한 I/O 연결입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let fireWire: AVAudioSession.Port](avaudiosession/port/firewire.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "FireWire 장치에 대한 I/O 연결입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let thunderbolt: AVAudioSession.Port](avaudiosession/port/thunderbolt.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "Thunderbolt 장치에 대한 I/O 연결입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let usbAudio: AVAudioSession.Port](avaudiosession/port/usbaudio.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "범용 직렬 버스(USB) 장치에 대한 I/O 연결입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let virtual: AVAudioSession.Port](avaudiosession/port/virtual.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "물리적 오디오 하드웨어에 해당하지 않는 I/O 연결입니다."
+        },
+        {
+          "id": "seg:paragraph:avaudiounitreverb:0002:0001",
+          "ko": "리버브 효과를 구현하는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0001",
+          "ko": "리버브는 특정 환경의 음향 특성을 시뮬레이션합니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0002",
+          "ko": "여러 프리셋을 사용하여 특정 공간을 시뮬레이션하고 [`wetDryMix`](avaudiounitreverb/wetdrymix.md) 속성으로 원본 신호와 혼합합니다."
+        },
+        {
+          "id": "seg:heading:configure-the-reverb:0010:0001",
+          "ko": "리버브 구성"
+        },
+        {
+          "id": "seg:list:configure-the-reverb:0011:0001",
+          "ko": "[func loadFactoryPreset(AVAudioUnitReverbPreset)](avaudiounitreverb/loadfactorypreset(_:).md)"
+        },
+        {
+          "id": "seg:paragraph:configure-the-reverb:0012:0001",
+          "ko": "오디오 유닛을 리버브 프리셋으로 구성합니다."
+        },
+        {
+          "id": "seg:paragraph:configure-the-reverb:0014:0001",
+          "ko": "프리셋 리버브를 나타내는 상수입니다."
+        },
+        {
+          "id": "seg:heading:getting-and-setting-the-reverb-values:0015:0001",
+          "ko": "리버브 값 가져오기 및 설정"
+        },
+        {
+          "id": "seg:paragraph:getting-and-setting-the-reverb-values:0017:0001",
+          "ko": "wet 신호와 dry 신호의 혼합입니다."
+        },
+        {
+          "id": "seg:heading:inherits-from:0019:0001",
+          "ko": "상속"
+        },
+        {
+          "id": "seg:heading:conforms-to:0021:0001",
+          "ko": "준수"
+        },
+        {
+          "id": "seg:heading:see-also:0023:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "실시간으로 오디오를 처리하는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "다중 밴드 이퀄라이저를 구현하는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "다단계 디스토션 효과를 구현하는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "딜레이 효과를 구현하는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:avaudiounitreverbpresetlargeroom2:0002:0001",
+          "ko": "대체 대형 실내 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:list:avaudiounitreverbpresetlargeroom2:0004:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "소형 실내 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "중형 실내 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "대형 실내 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "중형 홀 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "대형 홀 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "플레이트 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "중형 챔버 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "대형 챔버 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "성당 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "대체 중형 홀 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "대체 중형 홀 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "대체 대형 홀 환경의 음향 특성을 나타내는 리버브 프리셋입니다."
+        },
+        {
+          "id": "seg:paragraph:avmidicontrolchangeeventmessagetypeattacktime:0002:0001",
+          "ko": "어택 타임을 제어하는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "bank 선택을 전환하기 위한 이벤트 유형입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "비브라토 효과를 조절하는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "호흡 컨트롤러용 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "발 컨트롤러를 사용할 때 연속적인 값 스트림을 보내는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "포르타멘토 속도를 제어하는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "데이터 입력 매개변수를 제어하는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "채널 볼륨을 제어하는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "왼쪽 및 오른쪽 채널 밸런스를 제어하는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "왼쪽 및 오른쪽 채널 패닝을 제어하는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "표현력 컨트롤러를 나타내는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "댐퍼 페달을 켜거나 끄는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "포르타멘토를 켜거나 끄는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "sostenuto를 켜거나 끄는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "음표의 볼륨을 낮추는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "레가토 페달을 켜거나 끄는 이벤트 유형입니다."
+        },
+        {
+          "id": "seg:paragraph:avspeechsynthesisvoice:0002:0001",
+          "ko": "음성 합성에서 사용할 수 있는 고유한 음성입니다."
+        },
+        {
+          "id": "seg:list:avspeechsynthesisvoice:0004:0005",
+          "ko": "tvOS ?+"
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0001",
+          "ko": "This class is a subclass of [`URLSessionTask`](https://developer.apple.com/documentation/Foundation/URLSessionTask) that you use to download HTTP Live Streaming assets."
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0002",
+          "ko": "You create instances of this class by calling [`makeAssetDownloadTask(downloadConfiguration:)`](avassetdownloadurlsession/makeassetdownloadtask(downloadconfiguration:).md) on the download session."
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0003",
+          "ko": "해당 음성은 Australian 또는 South African English와 같은 언어의 지역 변종을 선택적으로 반영할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0004",
+          "ko": "지원되는 언어의 전체 목록은 [`Languages Supported by VoiceOver`](https://developer.apple.comhttps://support.apple.com/en-us/HT206175)에서 확인할 수 있습니다."
+        },
+        {
+          "id": "seg:heading:obtaining-voices:0010:0001",
+          "ko": "음성 가져오기"
+        },
+        {
+          "id": "seg:list:obtaining-voices:0011:0001",
+          "ko": "[init?(identifier: String)](avspeechsynthesisvoice/init(identifier:).md)"
+        },
+        {
+          "id": "seg:paragraph:obtaining-voices:0012:0001",
+          "ko": "지정한 식별자에 대한 음성을 검색합니다."
+        },
+        {
+          "id": "seg:list:obtaining-voices:0013:0001",
+          "ko": "[init?(language: String?)](avspeechsynthesisvoice/init(language:).md)"
+        },
+        {
+          "id": "seg:paragraph:obtaining-voices:0014:0001",
+          "ko": "지정한 BCP 47 언어 코드에 대한 음성을 검색합니다."
+        },
+        {
+          "id": "seg:list:obtaining-voices:0015:0001",
+          "ko": "[class func speechVoices() -> [AVSpeechSynthesisVoice]](avspeechsynthesisvoice/speechvoices.md)"
+        },
+        {
+          "id": "seg:paragraph:obtaining-voices:0016:0001",
+          "ko": "기기에서 사용할 수 있는 모든 음성을 검색합니다."
+        },
+        {
+          "id": "seg:paragraph:obtaining-voices:0018:0001",
+          "ko": "시스템이 Alex로 식별하는 음성입니다."
+        },
+        {
+          "id": "seg:heading:inspecting-voices:0019:0001",
+          "ko": "음성 검사"
+        },
+        {
+          "id": "seg:paragraph:inspecting-voices:0021:0001",
+          "ko": "음성의 고유 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:inspecting-voices:0023:0001",
+          "ko": "음성의 이름입니다."
+        },
+        {
+          "id": "seg:paragraph:inspecting-voices:0025:0001",
+          "ko": "음성의 음성 품질입니다."
+        },
+        {
+          "id": "seg:paragraph:inspecting-voices:0027:0001",
+          "ko": "음성의 성별입니다."
+        },
+        {
+          "id": "seg:paragraph:inspecting-voices:0029:0001",
+          "ko": "음성의 특성입니다."
+        },
+        {
+          "id": "seg:list:inspecting-voices:0030:0001",
+          "ko": "[var audioFileSettings: [String : Any]](avspeechsynthesisvoice/audiofilesettings.md)"
+        },
+        {
+          "id": "seg:paragraph:inspecting-voices:0031:0001",
+          "ko": "오디오 파일 설정이 포함된 사전입니다."
+        },
+        {
+          "id": "seg:paragraph:inspecting-voices:0033:0001",
+          "ko": "음성의 음성 품질입니다."
+        },
+        {
+          "id": "seg:paragraph:inspecting-voices:0035:0001",
+          "ko": "음성의 성별입니다."
+        },
+        {
+          "id": "seg:paragraph:inspecting-voices:0037:0001",
+          "ko": "음성을 설명하는 특성입니다."
+        },
+        {
+          "id": "seg:heading:working-with-language-codes:0038:0001",
+          "ko": "언어 코드 작업"
+        },
+        {
+          "id": "seg:paragraph:working-with-language-codes:0040:0001",
+          "ko": "사용자의 현재 로케일에 대한 언어 및 로케일 코드를 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:working-with-language-codes:0042:0001",
+          "ko": "음성의 언어 및 로케일을 포함하는 BCP 47 코드입니다."
+        },
+        {
+          "id": "seg:list:initializers:0044:0001",
+          "ko": "[init?(coder: NSCoder)](avspeechsynthesisvoice/init(coder:).md)"
+        },
+        {
+          "id": "seg:heading:inherits-from:0046:0001",
+          "ko": "상속"
+        },
+        {
+          "id": "seg:heading:conforms-to:0048:0001",
+          "ko": "준수"
+        },
+        {
+          "id": "seg:heading:see-also:0050:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0052:0001",
+          "ko": "음성 합성에 필요한 텍스트와 음성에 영향을 주는 매개변수를 캡슐화하는 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:avassetdownloadtask:0002:0001",
+          "ko": "HTTP Live Streaming 에셋을 다운로드하는 데 사용되는 세션입니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0001",
+          "ko": "이 클래스는 HTTP Live Streaming 에셋을 다운로드할 때 사용하는 [`URLSessionTask`](https://developer.apple.com/documentation/Foundation/URLSessionTask)의 하위 클래스입니다."
+        },
+        {
+          "id": "seg:paragraph:overview:0008:0002",
+          "ko": "다운로드 세션에서 [`makeAssetDownloadTask(downloadConfiguration:)`](avassetdownloadurlsession/makeassetdownloadtask(downloadconfiguration:).md)로 이 클래스의 인스턴스를 생성합니다."
+        },
+        {
+          "id": "seg:heading:accessing-task-information:0010:0001",
+          "ko": "작업 정보 액세스"
+        },
+        {
+          "id": "seg:paragraph:accessing-task-information:0012:0001",
+          "ko": "이 작업이 다운로드하는 에셋입니다."
+        },
+        {
+          "id": "seg:list:accessing-task-information:0013:0001",
+          "ko": "[var loadedTimeRanges: [NSValue]](avassetdownloadtask/loadedtimeranges.md)"
+        },
+        {
+          "id": "seg:paragraph:accessing-task-information:0014:0001",
+          "ko": "재생을 위해 준비된 다운로드 미디어의 시간 범위입니다."
+        },
+        {
+          "id": "seg:list:accessing-task-information:0015:0001",
+          "ko": "[var options: [String : Any]?](avassetdownloadtask/options.md)"
+        },
+        {
+          "id": "seg:paragraph:accessing-task-information:0016:0001",
+          "ko": "작업의 구성 옵션입니다."
+        },
+        {
+          "id": "seg:paragraph:accessing-task-information:0018:0001",
+          "ko": "이 작업이 에셋을 다운로드하는 로컬 파일 URL입니다."
+        },
+        {
+          "id": "seg:heading:inherits-from:0020:0001",
+          "ko": "상속"
+        },
+        {
+          "id": "seg:heading:conforms-to:0022:0001",
+          "ko": "준수"
+        },
+        {
+          "id": "seg:heading:see-also:0024:0001",
+          "ko": "참고 항목"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:list:see-also:0025:0001",
+          "ko": "[Using AVFoundation to play and persist HTTP live streams](using-avfoundation-to-play-and-persist-http-live-streams.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0026:0001",
+          "ko": "AVFoundation을 사용하여 HTTP Live Streams를 재생하고 오프라인 재생을 위해 스트림을 디스크에 저장합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0028:0001",
+          "ko": "에셋 다운로드 작업을 생성하고 실행하는 URL session입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0030:0001",
+          "ko": "에셋의 여러 미디어 선택 항목을 다운로드하는 작업입니다."
+        },
+        {
+          "id": "seg:paragraph:outputfiletype:0002:0001",
+          "ko": "writer가 출력하는 컨테이너 파일의 형식입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "writer가 출력하는 컨테이너 파일의 위치입니다."
+        },
+        {
+          "id": "seg:paragraph:avcaptionconversionvalidatorstatuscompleted:0002:0001",
+          "ko": "시스템 유효성 검사가 완료되었음을 나타내는 상태입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "시스템이 유효성 검사 작업을 초기화하지 않았음을 나타내는 상태입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "시스템 유효성 검사가 진행 중임을 나타내는 상태입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "시스템 유효성 검사가 완료되기 전에 중단되었음을 나타내는 상태입니다."
+        },
+        {
+          "id": "seg:paragraph:avcapturedevicepositionfront:0002:0001",
+          "ko": "iOS 기기의 사용자 쪽 면에 있는 위치입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "iOS 기기의 피사체 측면에 있는 위치입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "지정되지 않은 위치입니다."
+        },
+        {
+          "id": "seg:heading:initrawvalue:0000:0001",
+          "ko": "init(rawValue:)"
+        },
+        {
+          "id": "seg:paragraph:initrawvalue:0002:0001",
+          "ko": "부호 없는 정수 값으로 전환 동작 조건을 생성합니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0001",
+          "ko": "`rawValue`: 조건의 부호 없는 정수 값입니다."
+        },
+        {
+          "id": "seg:paragraph:parameters:0010:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/primaryconstituentdevicerestrictedswitchingbehaviorconditions-swift.struct/init(rawvalue:))*"
+        },
+        {
+          "id": "seg:heading:initrawvalue:0000:0001",
+          "ko": "init(rawValue:)"
+        },
+        {
+          "id": "seg:paragraph:declaration:0007:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturemultichannelaudiomode/init(rawvalue:))*"
+        },
+        {
+          "id": "seg:paragraph:avcapturetimecodesourcetyperealtimeclock:0002:0001",
+          "ko": "실시간 응용 프로그램에서 timecode를 시스템 시계와 동기화합니다."
+        },
+        {
+          "id": "seg:paragraph:avcapturetimecodesourcetyperealtimeclock:0002:0002",
+          "ko": "실시간 이벤트나 실제 시간 정렬이 필요한 시나리오에 유용합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "timecode를 외부 timecode 데이터 스트림과 동기화합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0002",
+          "ko": "외부 쿼터 프레임 MIDI 또는 HID timecode 하드웨어를 활용한 전문 오디오 및 비디오 동기화에 적합합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "내부 또는 외부 소스가 채택되지 않습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0002",
+          "ko": "timecode는 0부터 시작하며 순차적으로 생성되는 프레임 카운트입니다."
+        },
+        {
+          "id": "seg:paragraph:avcapturetimecodegeneratordelegate:0002:0001",
+          "ko": "timecode 생성기에서 실시간 timecode 업데이트와 오류 알림을 수신하기 위한 프로토콜입니다."
+        },
+        {
+          "id": "seg:heading:responding-to-timecode-events:0008:0001",
+          "ko": "시간코드 이벤트 대응"
+        },
+        {
+          "id": "seg:list:responding-to-timecode-events:0009:0001",
+          "ko": "[func timecodeGenerator(AVCaptureTimecodeGenerator, didReceiveUpdate: AVCaptureTimecode, from: AVCaptureTimecode.Source)](avcapturetimecodegeneratordelegate/timecodegenerator(_:didreceiveupdate:from:).md)"
+        },
+        {
+          "id": "seg:paragraph:responding-to-timecode-events:0010:0001",
+          "ko": "지정한 소스에서 새롭고 정렬되지 않은 timecode가 파싱되면 대리자에게 알립니다."
+        },
+        {
+          "id": "seg:list:responding-to-timecode-events:0011:0001",
+          "ko": "[func timecodeGenerator(AVCaptureTimecodeGenerator, didUpdateAvailableSources: [AVCaptureTimecode.Source])](avcapturetimecodegeneratordelegate/timecodegenerator(_:didupdateavailablesources:).md)"
+        },
+        {
+          "id": "seg:paragraph:responding-to-timecode-events:0012:0001",
+          "ko": "사용 가능한 timecode 동기화 소스 목록이 업데이트되면 대리자에게 알립니다."
+        },
+        {
+          "id": "seg:list:responding-to-timecode-events:0013:0001",
+          "ko": "[func timecodeGenerator(AVCaptureTimecodeGenerator, transitionedTo: AVCaptureTimecodeGenerator.SynchronizationStatus, for: AVCaptureTimecode.Source)](avcapturetimecodegeneratordelegate/timecodegenerator(_:transitionedto:for:).md)"
+        },
+        {
+          "id": "seg:paragraph:responding-to-timecode-events:0014:0001",
+          "ko": "timecode 소스의 동기화 상태가 변경되면 대리자에게 알립니다."
+        },
+        {
+          "id": "seg:paragraph:responding-to-timecode-events:0016:0001",
+          "ko": "timecode 생성기의 동기화 상태를 정의하는 상수입니다."
+        },
+        {
+          "id": "seg:heading:inherits-from:0018:0001",
+          "ko": "상속"
+        },
+        {
+          "id": "seg:heading:see-also:0020:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0022:0001",
+          "ko": "정밀한 비디오 및 오디오 동기화를 위해 다양한 소스에서 timecode 데이터를 생성하고 동기화합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0024:0001",
+          "ko": "timecode 생성기의 동기화 상태를 정의하는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0026:0001",
+          "ko": "timecode 생성기가 동기화할 수 있는 timecode 소스를 설명합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0028:0001",
+          "ko": "timecode 생성기를 사용하여 timecode를 생성할 때의 가능한 소스를 정의합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0030:0001",
+          "ko": "이 구조체는 SMPTE 표준을 준수하는 timecode로, 비디오 또는 오디오 동기화를 위해 정밀한 시간 정보와 관련 타임스탬프를 정의합니다."
+        },
+        {
+          "id": "seg:list:see-also:0031:0001",
+          "ko": "[static func advanced(AVCaptureTimecode, by: Int64) -> AVCaptureTimecode](avcapturetimecode/advanced(_:by:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0032:0001",
+          "ko": "주어진 timecode에 지정된 프레임 수를 추가하여 새 timecode를 생성하고 초, 분, 시간의 오버플로우를 처리합니다."
+        },
+        {
+          "id": "seg:list:see-also:0033:0001",
+          "ko": "[static func createMetadataSampleBuffer(from: AVCaptureTimecode, associatedWithPresentationTimeStamp: CMTime) -> Unmanaged<CMSampleBuffer>?](avcapturetimecode/createmetadatasamplebuffer(from:associatedwithpresentationtimestamp:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0034:0001",
+          "ko": "비디오 트랙 통합을 위해 Timecode Media Description 메타데이터를 포함하는 샘플 버퍼를 생성합니다."
+        },
+        {
+          "id": "seg:list:see-also:0035:0001",
+          "ko": "[static func createMetadataSampleBuffer(from: AVCaptureTimecode, forDuration: CMTime) -> Unmanaged<CMSampleBuffer>?](avcapturetimecode/createmetadatasamplebuffer(from:forduration:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0036:0001",
+          "ko": "지정된 기간에 대한 Timecode Media Description 메타데이터를 포함하는 샘플 버퍼를 생성합니다."
+        },
+        {
+          "id": "seg:paragraph:availablevideocodectypes:0002:0001",
+          "ko": "출력이 지원하는 비디오 코덱입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "값에는 출력이 지원하는 비디오 코덱 배열이 포함됩니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "[`AVVideoCodecKey`](avvideocodeckey.md) 항목의 [`videoSettings`](avcapturevideodataoutput/videosettings.md) 딕셔너리에 지원되는 값을 설정하여 사용 코덱을 지정합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0003",
+          "ko": "반환된 목록의 첫 번째 형식이 가장 효율적인 출력 형식입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[var availableVideoPixelFormatTypes: [OSType]](avcapturevideodataoutput/availablevideopixelformattypes.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "출력이 지원하는 비디오 픽셀 형식입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func availableVideoCodecTypesForAssetWriter(writingTo: AVFileType) -> [AVVideoCodecType]](avcapturevideodataoutput/availablevideocodectypesforassetwriter(writingto:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "출력 파일에 비디오를 기록할 때 출력이 지원하는 비디오 코덱입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "시스템이 비디오 캡처에서 지원하는 코덱을 설명하는 상수 집합입니다."
+        },
+        {
+          "id": "seg:paragraph:avcontentauthorizationstatusbusy:0002:0001",
+          "ko": "현재 다른 에셋이 권한 부여를 시도하고 있어 콘텐츠 권한 부여의 마지막 요청을 완료할 수 없었습니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "콘텐츠 권한 부여 요청이 완료되지 않았습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "콘텐츠 권한 부여를 요청한 마지막 호출이 완료되었습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "콘텐츠 권한 부여 요청의 마지막 호출이 사용자에 의해 취소되었습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "시간 초과 간격 도달로 인해 콘텐츠 권한 부여 요청의 마지막 호출이 취소되었습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "권한 부여를 시도할 수 있는 알려진 메커니즘이 없어 콘텐츠 권한 부여 요청의 마지막 호출을 완료할 수 없었습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "복구할 수 없는 방식으로 콘텐츠 권한 부여 요청의 마지막 호출을 완료할 수 없었습니다."
+        },
+        {
+          "id": "seg:paragraph:heif:0002:0001",
+          "ko": "모든 코덱의 압축 이미지를 포함하는 고효율 이미지 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 UTI의 값은 `public.heif`입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "이 형식의 파일은 `.heif` 확장자를 가집니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let AHAP: AVFileType](avmetadataidentifier/commonidentifieraccessibilitydescription.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "Apple Haptics Audio Pattern 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let SCC: AVFileType](avmetadataidentifier/commonidentifieralbumname.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "Scenarist 폐쇄 캡션 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let ac3: AVFileType](avmetadataidentifier/commonidentifierartist.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "AC3 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let aifc: AVFileType](avmetadataidentifier/commonidentifierartwork.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "AIFC 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let aiff: AVFileType](avmetadataidentifier/commonidentifierassetidentifier.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "AIFF 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let amr: AVFileType](avmetadataidentifier/commonidentifierauthor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "적응형 멀티레이트 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let appleiTT: AVFileType](avmetadataidentifier/commonidentifiercontributor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "Apple iTT 캡션 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let au: AVFileType](avfiletype/au.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "Sun/NeXT 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let avci: AVFileType](avfiletype/avci.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "H.264 압축 이미지를 포함하는 고효율 이미지 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[static let caf: AVFileType](avfiletype/caf.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "Core Audio Format의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[static let dcm: AVFileType](avfiletype/dcm.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "Digital Imaging and Communications in Medicine (DICOM) 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static let dng: AVFileType](avfiletype/dng.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "Adobe Digital Negative 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static let eac3: AVFileType](avfiletype/eac3.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "향상된 AC3 오디오 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0036:0001",
+          "ko": "[static let heic: AVFileType](avfiletype/heic.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "HEVC 압축 이미지를 포함하는 고효율 이미지 파일 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:list:see-also:0038:0001",
+          "ko": "[static let jpg: AVFileType](avfiletype/jpg.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0039:0001",
+          "ko": "JPEG (JFIF) 형식의 UTI입니다."
+        },
+        {
+          "id": "seg:paragraph:commonidentifiertitle:0002:0001",
+          "ko": "미디어의 제목을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:mentions:0008:0001",
+          "ko": "[Retrieving media metadata](retrieving-media-metadata.md)"
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let commonIdentifierAccessibilityDescription: AVMetadataIdentifier](avmetadataidentifier/commonidentifieraccessibilitydescription.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "미디어의 접근성 설명을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let commonIdentifierAlbumName: AVMetadataIdentifier](avmetadataidentifier/commonidentifieralbumname.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "앨범 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let commonIdentifierArtist: AVMetadataIdentifier](avmetadataidentifier/commonidentifierartist.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "아티스트 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let commonIdentifierArtwork: AVMetadataIdentifier](avmetadataidentifier/commonidentifierartwork.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "앨범과 관련된 이미지를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let commonIdentifierAssetIdentifier: AVMetadataIdentifier](avmetadataidentifier/commonidentifierassetidentifier.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "미디어의 에셋 ID를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let commonIdentifierAuthor: AVMetadataIdentifier](avmetadataidentifier/commonidentifierauthor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "작성자 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let commonIdentifierContributor: AVMetadataIdentifier](avmetadataidentifier/commonidentifiercontributor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "기여자 이름을 나타내는 식별자입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let commonIdentifierCopyrights: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraframereadouttime.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "저작권 문구를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let commonIdentifierCreationDate: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraisosensitivity.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "원본 녹화 날짜를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[static let commonIdentifierCreator: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraidentifier.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "작성자의 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[static let commonIdentifierDescription: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameralensirisfnumber.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "미디어의 설명을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static let commonIdentifierFormat: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameralensmodel.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "미디어 콘텐츠의 파일 형식을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static let commonIdentifierLanguage: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacamerashutterspeedangle.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "오디오에서 말하거나 노래한 텍스트 또는 가사의 언어를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0036:0001",
+          "ko": "[static let commonIdentifierLastModifiedDate: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacamerashutterspeedtime.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "미디어의 마지막 수정 날짜를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0038:0001",
+          "ko": "[static let commonIdentifierLocation: AVMetadataIdentifier](avmetadataidentifier/commonidentifierlocation.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0039:0001",
+          "ko": "미디어의 위치 정보를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:paragraph:quicktimemetadataaccessibilitydescription:0002:0001",
+          "ko": "영화 파일 콘텐츠의 접근성 설명을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0008:0001",
+          "ko": "[static let quickTimeMetadataAIMEData: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataaimedata.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "kCMMetadataBaseDataType_RawData 형식의 값입니다."
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static let quickTimeMetadataAlbum: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataalbum.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "QuickTime의 앨범 또는 컬렉션 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static let quickTimeMetadataArranger: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataarranger.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "영화 파일 콘텐츠의 편곡자 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static let quickTimeMetadataArtist: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataartist.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "영화 파일 콘텐츠의 아티스트 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static let quickTimeMetadataArtwork: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataartwork.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "영화 파일 콘텐츠와 관련된 이미지를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static let quickTimeMetadataAuthor: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataauthor.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "영화 파일 콘텐츠의 저자 이름을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static let quickTimeMetadataAutoLivePhoto: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadataautolivephoto.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "라이브 포토 영화가 자동 모드를 사용했는지 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static let quickTimeMetadataCameraFocalLength35mmEquivalent: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacamerafocallength35mmequivalent.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "kCMMetadataBaseDataType_UTF8 형식의 값으로, 35mm 필름 동등값으로 정규화된 초점 거리를 나타냅니다(예: “50.00mm”)."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static let quickTimeMetadataCameraFrameReadoutTime: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraframereadouttime.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "QuickTime에서 카메라 프레임 판독 시간을 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static let quickTimeMetadataCameraISOSensitivity: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraisosensitivity.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "카메라의 ISO 노출 지수(예: “800”)로 빛에 대한 감도를 나타내는 kCMMetadataBaseDataType_UTF8 형식의 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0002",
+          "ko": "SMPTE RDD 18을 참조합니다."
+        },
+        {
+          "id": "seg:list:see-also:0028:0001",
+          "ko": "[static let quickTimeMetadataCameraIdentifier: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameraidentifier.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "QuickTime의 카메라 식별자를 나타내는 식별자입니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[static let quickTimeMetadataCameraLensIrisFNumber: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameralensirisfnumber.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "렌즈를 통해 전달되는 빛의 양을 나타내는 kCMMetadataBaseDataType_UTF8 형식의 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0002",
+          "ko": "이는 초점 거리를 유효 렌즈 개구 지름으로 나눈 값입니다(예: “F2.8” 또는 “2.8”)."
+        },
+        {
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static let quickTimeMetadataCameraLensModel: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacameralensmodel.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "kCMMetadataBaseDataType_UTF8 형식의 값으로 렌즈 모델을 나타냅니다(예: “iPhone 16 Pro back camera 6.765mm f/1.78”)."
+        },
+        {
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static let quickTimeMetadataCameraShutterSpeedAngle: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacamerashutterspeedangle.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "노출 기간을 분 단위 각도(1/60도)로 표시하는 kCMMetadataBaseDataType_UTF8 형식의 값입니다(예: “21600” 또는 “360.00deg”)."
+        },
+        {
+          "id": "seg:list:see-also:0036:0001",
+          "ko": "[static let quickTimeMetadataCameraShutterSpeedTime: AVMetadataIdentifier](avmetadataidentifier/quicktimemetadatacamerashutterspeedtime.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "1개 프레임/필드 주기당 초 단위 노출 기간을 나타내는 kCMMetadataBaseDataType_UTF8 형식의 값입니다."
+        },
+        {
+          "id": "seg:heading:inittrack:0000:0001",
+          "ko": "init(track:)"
+        },
+        {
+          "id": "seg:paragraph:inittrack:0002:0001",
+          "ko": "지정된 트랙에 대한 가변 입력 매개변수 개체를 생성합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0007:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0008:0001",
+          "ko": "볼륨 램프가 없고 [`trackID`](avmutableaudiomixinputparameters/trackid.md)가 `track`의 식별자로 설정된 가변 입력 매개변수 개체입니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`timeRange`: The time range to be made empty."
+        },
+        {
+          "id": "seg:paragraph:parameters:0012:0001",
+          "ko": "[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avmutableaudiomixinputparameters/init(track:))"
+        },
+        {
+          "id": "seg:heading:insertemptytimerange:0000:0001",
+          "ko": "insertEmptyTimeRange(_:)"
+        },
+        {
+          "id": "seg:paragraph:insertemptytimerange:0002:0001",
+          "ko": "영화에 빈 시간 범위를 추가합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "영화의 끝에는 빈 시간 범위를 추가할 수 없습니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`timeRange`: 빈 시간 범위로 만들 시간 범위입니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:heading:see-also:0011:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[func insertTimeRange(CMTimeRange, of: AVAsset, at: CMTime, copySampleData: Bool) throws](avplayeritemsegment/loadedtimeranges-879hc.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "지정된 자산의 특정 시간 범위에 있는 모든 트랙을 영화에 삽입합니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func scale(CMTimeRange, toDuration: CMTime)](bnns/copy(_:to:filterparameters:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "영화의 시간 범위 길이를 변경합니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[func removeTimeRange(CMTimeRange)](bnns/transpose(input:output:firsttransposeaxis:secondtransposeaxis:filterparameters:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "지정된 시간 범위를 영화에서 제거합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avmutablemovie/insertemptytimerange(_:))*"
+        },
+        {
+          "id": "seg:heading:initmediasubtypesfornativerepresentation:0000:0001",
+          "ko": "init(mediaSubtypesForNativeRepresentation:)"
+        },
+        {
+          "id": "seg:paragraph:initmediasubtypesfornativerepresentation:0002:0001",
+          "ko": "초기화된 legible-output 객체를 생성합니다."
+        },
+        {
+          "id": "seg:heading:return-value:0009:0001",
+          "ko": "반환 값"
+        },
+        {
+          "id": "seg:paragraph:return-value:0010:0001",
+          "ko": "초기화된 `AVPlayerItemLegibleOutput` 인스턴스입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0012:0001",
+          "ko": "인스턴스를 생성할 때 미디어 서브타입 FourCC 코드를 `NSNumber` 객체로 `subtypes` 배열에 추가하면 해당 유형을 [`CMSampleBuffer`](https://developer.apple.com/documentation/CoreMedia/CMSampleBuffer)에서 문자열 속성으로 처리하지 않고 `CMSampleBuffer`로 수신하도록 지정할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0012:0002",
+          "ko": "FourCC 코드는 다음과 같이 `NSNumber` 객체로 변환됩니다:"
+        },
+        {
+          "id": "seg:paragraph:discussion:0014:0001",
+          "ko": "`init` 메서드(권장)를 사용해 `AVPlayerItemLegibleOutput`를 초기화하면 빈 `subtypes` 배열로 이 메서드를 호출한 것과 동일하며, 이는 미디어 서브타입에 관계없이 모든 legible 데이터가 공통 형식의 [`NSAttributedString`](https://developer.apple.com/documentation/Foundation/NSAttributedString) 인스턴스로 전달됨을 의미합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0015:0001",
+          "ko": "현재 player item에 legible 데이터가 없는 미디어 서브타입이 media `subtypes` 배열에 포함되어 있어도 오류가 발생하지 않습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0015:0002",
+          "ko": "An `AVPlayerItemLegibleOutput` instance doesn’t vend closed caption data as a [`CMSampleBuffer`](https://developer.apple.com/documentation/CoreMedia/CMSampleBuffer), so it is an error to include `'c608'` in the media subtypes array."
+        },
+        {
+          "id": "seg:blockquote:discussion:0016:0001",
+          "ko": "**참고**: `AVPlayerItemLegibleOutput` 객체를 생성하는 권장 방법은 [`init`](1805461-init.md) 메서드를 사용하는 것입니다."
+        },
+        {
+          "id": "seg:list:parameters:0018:0001",
+          "ko": "`subtypes`: [`NSNumber`](https://developer.apple.com/documentation/Foundation/NSNumber) FourCC 코드로 구성된 [`NSArray`](https://developer.apple.com/documentation/Foundation/NSArray)입니다."
+        },
+        {
+          "id": "seg:paragraph:parameters:0020:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avplayeritemlegibleoutput/init(mediasubtypesfornativerepresentation:))*"
+        },
+        {
+          "id": "seg:paragraph:startdate:0002:0001",
+          "ko": "세그먼트가 시작되는 날짜입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "기본 항목에 날짜가 포함되지 않은 경우 이 값은 `nil`입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "이 세그먼트의 시간 매핑입니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[var loadedTimeRanges: [CMTimeRange]](avplayeritemsegment/loadedtimeranges-879hc.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "해당 세그먼트에서 미디어 데이터가 사용 가능한 시간 범위가 즉시 사용 가능합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "이 세그먼트와 연결된 interstitial 이벤트입니다."
+        },
+        {
+          "id": "seg:heading:clipbyglobalnormthresholdinputsoutputsglobalnorm:0000:0001",
+          "ko": "clipByGlobalNorm(threshold:inputs:outputs:globalNorm:)"
+        },
+        {
+          "id": "seg:paragraph:clipbyglobalnormthresholdinputsoutputsglobalnorm:0002:0001",
+          "ko": "입력 텐서를 전역 유클리드 노름으로 클리핑하고 결과를 출력 텐서에 기록합니다."
+        },
+        {
+          "id": "seg:list:clipbyglobalnormthresholdinputsoutputsglobalnorm:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:clipbyglobalnormthresholdinputsoutputsglobalnorm:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 함수를 사용하면 입력 텐서 배열의 값을 최대 전역 유클리드 노름으로 클리핑할 수 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "입력 텐서의 전역 노름을 알고 있다면 해당 값을 `globalNorm`으로 전달합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0003",
+          "ko": "그렇지 않으면 `0`을 전달하여 함수가 노름을 계산하도록 지정합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "유클리드 노름은 두 텐서의 제곱 합의 제곱근입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0002",
+          "ko": "다음 코드는 두 입력 텐서의 유클리드 노름을 전역 유클리드 노름의 절반으로 클리핑합니다:\n```swift\nstatic func clipToGlobalNorm() {\n    let inputOne = BNNSNDArrayDescriptor.allocate(\n        initializingFrom: [1, 2, 3, 4] as [Float],\n        shape: .vector(4))\n    let inputTwo = BNNSNDArrayDescriptor.allocate(\n        initializingFrom: [5, 6, 7, 8] as [Float],\n        shape: .vector(4))\n    \n    let outputOne = BNNSNDArrayDescriptor.allocateUninitialized(\n        scalarType: Float.self,\n        shape: .vector(4))\n    let outputTwo = BNNSNDArrayDescriptor.allocateUninitialized(\n        scalarType: Float.self,\n        shape: .vector(4))\n    \n    try? BNNS.clipByGlobalNorm(threshold: 0.5 * 14.2828568570857,\n                               inputs: [inputOne, inputTwo],\n                               outputs: [outputOne, outputTwo])\n    \n    // Prints: `[0.5, 1.0, 1.5, 2.0]`\n    print(outputOne.makeArray(of: Float.self)!)\n    \n    // Prints: `[2.5, 3.0, 3.5, 4.0]`\n    print(outputTwo.makeArray(of: Float.self)!)\n\n    inputOne.deallocate()\n    inputTwo.deallocate()\n    outputOne.deallocate()\n    outputTwo.deallocate()\n}\n```"
+        },
+        {
+          "id": "seg:list:parameters:0012:0001",
+          "ko": "`threshold`: 그래디언트를 클리핑할 최대 유클리드 노름입니다."
+        },
+        {
+          "id": "seg:list:parameters:0012:0002",
+          "ko": "`inputs`: 입력 디스크립터 배열입니다."
+        },
+        {
+          "id": "seg:list:parameters:0012:0003",
+          "ko": "`outputs`: 출력 디스크립터 배열입니다."
+        },
+        {
+          "id": "seg:list:parameters:0012:0004",
+          "ko": "`globalNorm`: 사용할 전역 노름입니다. `0`으로 설정하면 함수가 입력 디스크립터에서 노름을 계산하도록 지정합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0013:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static func copy(BNNSNDArrayDescriptor, to: BNNSNDArrayDescriptor, filterParameters: BNNSFilterParameters?) throws](bnns/copy(_:to:filterparameters:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "n차원 배열 디스크립터의 내용을 동일한 모양의 다른 디스크립터로 복사합니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static func transpose(input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, firstTransposeAxis: Int, secondTransposeAxis: Int, filterParameters: BNNSFilterParameters?) throws](bnns/transpose(input:output:firsttransposeaxis:secondtransposeaxis:filterparameters:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "텐서를 두 차원의 차원을 서로 바꿔 전치합니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[func BNNSCopy(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnscopy(_:_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "동일한 모양의 n차원 배열 디스크립터 내용을 다른 디스크립터에 복사합니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[func BNNSTranspose(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, Int, Int, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnstranspose(_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "텐서를 두 차원을 서로 바꿔 전치합니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[func BNNSGetPointer(BNNSFilter?, BNNSPointerSpecifier) -> BNNSNDArrayDescriptor](bnnsgetpointer(_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "필터 데이터 멤버에 대한 참조를 포함하는 n차원 배열 디스크립터를 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "BNNS get filter 함수가 반환할 포인터를 지정하는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "Gram 행렬 필터를 래핑하고 비초기화를 관리하는 레이어 객체입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "Gram 행렬 레이어를 정의하는 파라미터 집합입니다."
+        },
+        {
+          "id": "seg:list:see-also:0030:0001",
+          "ko": "[func BNNSFilterCreateLayerGram(UnsafePointer<BNNSLayerParametersGram>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayergram(_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "새 Gram 행렬 레이어를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0032:0001",
+          "ko": "[static func clip(to: ClosedRange<Float>, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor) throws](bnns/clip(to:input:output:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "입력 텐서를 닫힌 범위로 클리핑하고 결과를 출력 텐서에 기록합니다."
+        },
+        {
+          "id": "seg:list:see-also:0034:0001",
+          "ko": "[static func clipByNorm(threshold: Float, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, axes: [Int]?) throws](bnns/clipbynorm(threshold:input:output:axes:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0035:0001",
+          "ko": "입력 텐서를 유클리드 노름으로 클리핑하고 결과를 출력 텐서에 기록합니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:list:see-also:0036:0001",
+          "ko": "[func BNNSClipByValue(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, Float, Float) -> Int32](bnnsclipbyvalue(_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0037:0001",
+          "ko": "텐서의 값을 지정한 최소값과 최대값 범위로 클리핑합니다."
+        },
+        {
+          "id": "seg:list:see-also:0038:0001",
+          "ko": "[func BNNSClipByNorm(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, Float, UInt32) -> Int32](bnnsclipbynorm(_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0039:0001",
+          "ko": "텐서의 값을 최대 유클리디안 노름으로 클리핑합니다."
+        },
+        {
+          "id": "seg:list:see-also:0040:0001",
+          "ko": "[func BNNSClipByGlobalNorm(UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>>, UnsafeMutablePointer<UnsafePointer<BNNSNDArrayDescriptor>>, Int, Float, Float) -> Int32](bnnsclipbyglobalnorm(_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0041:0001",
+          "ko": "텐서의 값을 최대 전역 유클리디안 노름으로 클리핑합니다."
+        },
+        {
+          "id": "seg:list:see-also:0042:0001",
+          "ko": "[static func copyBandPart(BNNSNDArrayDescriptor, to: BNNSNDArrayDescriptor, lowerBandCount: Int?, upperBandCount: Int?, filterParameters: BNNSFilterParameters?) throws](bnns/copybandpart(_:to:lowerbandcount:upperbandcount:filterparameters:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0043:0001",
+          "ko": "행렬의 지정된 하위 대각선과 상위 대각선 요소를 복사하고, 나머지 요소는 0으로 설정합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0045:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnns/clipbyglobalnorm(threshold:inputs:outputs:globalnorm:))*"
+        },
+        {
+          "id": "seg:paragraph:bnnsgraphbuilderactivationtanh:0002:0001",
+          "ko": "Tanh 활성화입니다."
+        },
+        {
+          "id": "seg:list:bnnsgraphbuilderactivationtanh:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:paragraph:gelutanhapproximation:0002:0001",
+          "ko": "현재 그래프에 Gaussian Error Linear Unit (GELU) tanh 근사 활성화 연산을 추가합니다."
+        },
+        {
+          "id": "seg:list:gelutanhapproximation:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:paragraph:declaration:0008:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/gelutanhapproximation())*"
+        },
+        {
+          "id": "seg:heading:instancenormweightbiasepsilon:0000:0001",
+          "ko": "instanceNorm(weight:bias:epsilon:)"
+        },
+        {
+          "id": "seg:paragraph:instancenormweightbiasepsilon:0002:0001",
+          "ko": "현재 그래프에 인스턴스 정규화 작업을 추가합니다."
+        },
+        {
+          "id": "seg:list:instancenormweightbiasepsilon:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "이 함수는 `weight`와 `bias`를 사용하여 `self`에 대해 affine 변환 기반 인스턴스 정규화를 수행합니다. `weight`와 `bias`는 1차원이어야 하며 크기가 `selfx.shape[1]`이어야 합니다. `self`는 최소 3차원이어야 합니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0001",
+          "ko": "`weight`: 가중치 값입니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0002",
+          "ko": "`bias`: 편향 값입니다."
+        },
+        {
+          "id": "seg:list:parameters:0010:0003",
+          "ko": "`epsilon`: 함수가 0으로 나누기를 방지하기 위해 사용하는 엡실론 값입니다."
+        },
+        {
+          "id": "seg:paragraph:parameters:0012:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/instancenorm(weight:bias:epsilon:))*"
+        },
+        {
+          "id": "seg:heading:setdynamicshapesforfunction:0000:0001",
+          "ko": "setDynamicShapes(_:forFunction:)"
+        },
+        {
+          "id": "seg:paragraph:setdynamicshapesforfunction:0002:0001",
+          "ko": "그래프의 동적 형상을 지정하고, 가능한 경우 출력 형상을 추론합니다."
+        },
+        {
+          "id": "seg:list:setdynamicshapesforfunction:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:setdynamicshapesforfunction:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:parameters:0008:0001",
+          "ko": "`shapes`: [`BNNSGraphContextExecute(_:_:_:_:_:_:)`](bnnsgraphcontextexecute(_:_:_:_:_:_:).md)에 전달하는 순서와 동일한 순서로 입력 형상을 나열한 배열입니다. 이 함수는 차원이 0이 아닌 입력 형상을 읽고, 차원이 0인 입력 형상에는 소스 모델의 상수값 또는 기본값을 사용합니다. 소스 모델과 일치하지 않는 0이 아닌 값의 형상에 대해 이 함수는 오류를 생성합니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0002",
+          "ko": "`function`: 함수입니다. 그래프에 함수가 하나만 포함되어 있으면 `nil`로 지정합니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[func BNNSGraphContextSetDynamicShapes(bnns_graph_context_t, UnsafePointer<CChar>?, Int, UnsafeMutablePointer<bnns_graph_shape_t>) -> Int32](bnnsgraphcontextsetdynamicshapes(_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "그래프의 동적 형상을 지정하고, 가능한 경우 출력 형상을 추론합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "인수의 형상 명세입니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[func argumentCount(forFunction: String?) -> Int](bnnsgraph/context/argumentcount(forfunction:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "주어진 함수 인수의 인수 개수를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[func argumentNames(forFunction: String?) -> [String]](bnnsgraph/context/argumentnames(forfunction:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "주어진 함수 인수의 인수 이름을 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[func argumentPosition(forFunction: String?, argument: String) -> Int](bnnsgraph/context/argumentposition(forfunction:argument:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "주어진 함수 인수에 대한 인수 배열의 인덱스를 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "지정한 함수의 입력 인수 개수입니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[var functionNames: [String]](bnnsgraph/context/functionnames.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "그래프에서 호출 가능한 함수의 이름을 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "컨텍스트가 중간 텐서를 NaN과 infinity 값에 대해 검사하는지 지정하는 부울 값입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/context/setdynamicshapes(_:forfunction:))*"
+        },
+        {
+          "id": "seg:paragraph:pad:0002:0001",
+          "ko": "비대칭 패딩입니다. `x_padding` 또는 `y_padding`이 0보다 큰 경우 무시됩니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "관련 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "입력의 디스크립터입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "출력의 디스크립터입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "bias의 디스크립터입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "레이어가 출력에 적용하는 활성화 함수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "풀링 함수를 지정하는 변수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "커널의 너비입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "커널의 높이입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "입력 이미지의 가로 간격 증가량입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "입력 이미지의 세로 간격 증가량입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "컨볼루션 중 입력 이미지에서 요소 간 가로 간격 증가량입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "컨볼루션 중 입력 이미지에서 요소 간 세로 간격 증가량입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "각 채널의 좌우에 추가되는 가상 0의 개수인 가로 패딩입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "각 채널의 상단과 하단에 추가되는 가상 0의 개수인 세로 패딩입니다."
+        },
+        {
+          "id": "seg:heading:allocaterandominshapebatchsize:0000:0001",
+          "ko": "allocate(randomIn:shape:batchSize:)"
+        },
+        {
+          "id": "seg:paragraph:allocaterandominshapebatchsize:0002:0001",
+          "ko": "지정된 범위 내의 임의 값으로 초기화된 새 n차원 배열 디스크립터를 반환합니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:list:allocaterandominshapebatchsize:0004:0003",
+          "ko": "Mac Catalyst ?+"
+        },
+        {
+          "id": "seg:list:allocaterandominshapebatchsize:0004:0006",
+          "ko": "visionOS ?+"
+        },
+        {
+          "id": "seg:list:parameters:0008:0001",
+          "ko": "`range`: 무작위 값을 생성할 범위입니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0002",
+          "ko": "`shape`: n차원 배열 디스크립터의 모양입니다."
+        },
+        {
+          "id": "seg:list:parameters:0008:0003",
+          "ko": "`batchSize`: 데이터 배치 수입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0009:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0010:0001",
+          "ko": "[static func allocate<C>(initializingFrom: C, shape: BNNS.Shape, batchSize: Int) -> BNNSNDArrayDescriptor](bnnsndarraydescriptor/allocate(initializingfrom:shape:batchsize:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "지정한 컬렉션의 요소 복사본으로 초기화된 새 n차원 배열 디스크립터를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0012:0001",
+          "ko": "[static func allocate<Scalar>(randomUniformUsing: BNNS.RandomGenerator, range: ClosedRange<Scalar>, shape: BNNS.Shape, batchSize: Int) -> BNNSNDArrayDescriptor?](bnnsndarraydescriptor/allocate(randomuniformusing:range:shape:batchsize:)-2rorb.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "연속 균일 분포에서 임의의 정수 값으로 초기화된 새 배열 디스크립터를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0014:0001",
+          "ko": "[static func allocate<Scalar>(randomUniformUsing: BNNS.RandomGenerator, range: ClosedRange<Scalar>, shape: BNNS.Shape, batchSize: Int) -> BNNSNDArrayDescriptor?](bnnsndarraydescriptor/allocate(randomuniformusing:range:shape:batchsize:)-761hg.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "연속 균일 분포에서 임의의 부동 소수점 값으로 초기화된 새 배열 디스크립터를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0016:0001",
+          "ko": "[static func allocate<Scalar>(randomIn: ClosedRange<Scalar>, shape: BNNS.Shape, batchSize: Int) -> BNNSNDArrayDescriptor](bnnsndarraydescriptor/allocate(randomin:shape:batchsize:)-1697a.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "지정된 범위 내에서 임의 값을 사용해 초기화되는 새 n차원 배열 디스크립터를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0018:0001",
+          "ko": "[static func allocate<Scalar, Generator>(randomIn: ClosedRange<Scalar>, using: inout Generator, shape: BNNS.Shape, batchSize: Int) -> BNNSNDArrayDescriptor](bnnsndarraydescriptor/allocate(randomin:using:shape:batchsize:)-5kbi8.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "주어진 generator를 난수 소스로 사용해 지정된 범위 내에서 임의 값을 갖는 새 배열 디스크립터를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0020:0001",
+          "ko": "[static func allocate<Scalar, Generator>(randomIn: ClosedRange<Scalar>, using: inout Generator, shape: BNNS.Shape, batchSize: Int) -> BNNSNDArrayDescriptor](bnnsndarraydescriptor/allocate(randomin:using:shape:batchsize:)-3w6ig.md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "주어진 generator를 난수 소스로 사용해 지정된 범위 내에서 임의 값을 갖는 새 배열 디스크립터를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[static func allocate<T>(repeating: T, shape: BNNS.Shape, batchSize: Int) -> BNNSNDArrayDescriptor](bnnsndarraydescriptor/allocate(repeating:shape:batchsize:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "단일 스칼라 값이 반복되어 초기화된 새 n차원 배열 디스크립터를 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[static func allocateUninitialized(scalarType: any BNNSScalar.Type, shape: BNNS.Shape, batchSize: Int) -> BNNSNDArrayDescriptor](bnnsndarraydescriptor/allocateuninitialized(scalartype:shape:batchsize:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "초기화되지 않은 메모리로 할당되는 새 n차원 배열 디스크립터를 반환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "이 n차원 배열 디스크립터에 이전에 할당된 메모리 블록을 해제합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsndarraydescriptor/allocate(randomin:shape:batchsize:)-5a2p2)*"
+        },
+        {
+          "id": "seg:heading:bnnsndarrayfullyconnectedsparsifysparsecoo:0000:0001",
+          "ko": "BNNSNDArrayFullyConnectedSparsifySparseCOO(_:_:_:_:_:_:_:_:_:)"
+        },
+        {
+          "id": "seg:paragraph:bnnsndarrayfullyconnectedsparsifysparsecoo:0002:0001",
+          "ko": "표준 좌표 목록(COO) 레이아웃에서 BNNS 완전 연결 계층이 사용하는 기기별 희소 레이아웃으로 희소 텐서를 변환합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0001",
+          "ko": "딥러닝의 에너지 및 성능 비용이 증가함에 따라 메모리 사용량과 계산 오버헤드를 최소화하기 위해 더 효율적인 모델 설계가 가속화되고 있습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0008:0002",
+          "ko": "희소성은 모델 크기를 크게 줄이면서 정확도를 크게 손실하지 않고 계산, 저장, 에너지 효율을 높이는 널리 사용되는 방식입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0001",
+          "ko": "Pruning은 가중치와 같은 매개변수를 희소하게 만드는 기본 기법입니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0009:0002",
+          "ko": "파라미터를 가지치기하면 일부 값을 0으로 설정하며, 0이 아닌 값만 저장되어 추론에 참여합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0001",
+          "ko": "매개변수 희소화 프레임워크는 값의 크기와 위치를 기반으로 값을 가지치기합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0010:0002",
+          "ko": "성능 향상을 최대화하려면 가지치기한 값을 청크로 묶어 CPU가 전체 타일을 건너뛰어 읽도록 해야 합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0001",
+          "ko": "BNNS는 표준 희소 레이아웃인 좌표 목록(COO)이나 압축 희소 행(CSR) 형식을 직접 지원하지 않습니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0011:0002",
+          "ko": "대신 BNNS는 완전 연결과 같은 기존 머신러닝 프리미티브에서 사용할 수 있도록 COO 및 CSR 데이터를 최적화된 불투명 레이아웃으로 변환하는 함수를 제공합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0012:0001",
+          "ko": "```swift\n 1.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  2.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  3.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  4.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  5.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  6.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  7.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  8.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  9.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 10.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 11.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 12.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 13.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 14.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 15.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 16.0\n```"
+        },
+        {
+          "id": "seg:paragraph:discussion:0014:0001",
+          "ko": "동일한 값을 COO 형식으로는 비영(0이 아닌) 값 배열, 열 인덱스 배열, 행 인덱스 배열의 세 배열로 표현할 수 있습니다."
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:paragraph:discussion:0014:0002",
+          "ko": "BNNS는 열 인덱스와 행 인덱스가 교차된 형태를 요구합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0016:0001",
+          "ko": "완전 연결에 대해 COO 가중치를 BNNS opaque 형식으로 변환하려면 입력 가중치 모양과 인덱스의 배열 설명자를 생성한 뒤 [`BNNSNDArrayFullyConnectedSparsifySparseCOO(_:_:_:_:_:_:_:_:_:)`](bnnsndarrayfullyconnectedsparsifysparsecoo(_:_:_:_:_:_:_:_:_:).md)를 호출합니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0018:0001",
+          "ko": "반환 시 `sparsifiedWeights`에는 [`BNNSLayerParametersFullyConnected`](bnnslayerparametersfullyconnected.md)에 전달할 가중치가 포함됩니다."
+        },
+        {
+          "id": "seg:paragraph:discussion:0018:0002",
+          "ko": "이 예제에서 `sparsifiedWeights`의 데이터 크기는 144 바이트입니다."
+        },
+        {
+          "id": "seg:list:parameters:0020:0001",
+          "ko": "`in_dense_shape`: 입력 배열의 dense shape(즉 크기와 레이아웃)을 지정하는 배열 설명자입니다."
+        },
+        {
+          "id": "seg:list:parameters:0020:0002",
+          "ko": "`in_indices`: 입력 nonzero 값의 교차 인덱스를 포함하는 `[NNZ, rank]` 모양의 2D 배열 설명자입니다. 행 우선(row-major) 순서에서는 짝수 요소가 열 인덱스에, 홀수 요소가 행 인덱스에 해당합니다. 열 우선(column-major) 순서에서는 짝수 요소가 행 인덱스에, 홀수 요소가 열 인덱스에 해당합니다."
+        },
+        {
+          "id": "seg:list:parameters:0020:0003",
+          "ko": "`in_values`: nonzero 입력 값을 포함하는 `[NNZ]` 모양의 1D 배열 설명자입니다."
+        },
+        {
+          "id": "seg:list:parameters:0020:0004",
+          "ko": "`out`: 반환 시 장치 최적화된 BNNS sparse fully connected 가중치를 포함하는 배열 설명자입니다."
+        },
+        {
+          "id": "seg:list:parameters:0020:0005",
+          "ko": "`sparse_params`: 희소성 패턴에 대한 힌트를 제공하는 선택적 데이터 구조입니다."
+        },
+        {
+          "id": "seg:list:parameters:0020:0006",
+          "ko": "`batch_size`: 예상 배치 크기입니다."
+        },
+        {
+          "id": "seg:list:parameters:0020:0007",
+          "ko": "`workspace`: dense 입력 크기의 최소 두 배 이상의 scratch memory를 가리키는 선택적 포인터입니다. `nil`로 설정하면 BNNS가 필요한 scratch memory를 할당하고 해제하도록 지정합니다."
+        },
+        {
+          "id": "seg:list:parameters:0020:0008",
+          "ko": "`workspace_size`: 전달한 scratch memory의 크기를 바이트 단위로 지정합니다. `workspace`가 `nil`인 경우 이 함수는 `workspace_size` 매개변수를 무시합니다."
+        },
+        {
+          "id": "seg:list:parameters:0020:0009",
+          "ko": "`filter_params`: 런타임 필터 매개변수입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0021:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0022:0001",
+          "ko": "[func BNNSNDArrayGetDataSize(UnsafePointer<BNNSNDArrayDescriptor>) -> Int](bnnsndarraygetdatasize(_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "배열 설명자가 요구하는 크기를 바이트 단위로 반환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0024:0001",
+          "ko": "[func BNNSNDArrayFullyConnectedSparsifySparseCSR(UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSSparsityParameters>?, Int, UnsafeMutableRawPointer?, Int, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnsndarrayfullyconnectedsparsifysparsecsr(_:_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "표준화된 압축 희소 행렬(CSR) 레이아웃의 희소 텐서를 BNNS fully connected 레이어가 사용하는 장치별 희소 레이아웃으로 변환합니다."
+        },
+        {
+          "id": "seg:list:see-also:0026:0001",
+          "ko": "[static func sparsify(batchSize: Int, inputLayout: BNNS.SparseLayout, inputDenseShape: BNNSNDArrayDescriptor, inputValues: BNNSNDArrayDescriptor, output: inout BNNSNDArrayDescriptor, sparseParameters: BNNS.SparseParameters?, workspace: UnsafeMutableRawBufferPointer?, filterParameters: BNNSFilterParameters?) throws](bnns/fullyconnectedlayer/sparsify(batchsize:inputlayout:inputdenseshape:inputvalues:output:sparseparameters:workspace:filterparameters:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "표준화된 희소 레이아웃의 희소 텐서를 Fully Connected가 사용하는 장치별 희소 레이아웃으로 변환합니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0029:0001",
+          "ko": "sparsity 함수에 대한 힌트를 제공하는 데이터 구조입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0031:0001",
+          "ko": "BNNS가 opaque로 변환할 수 있는 표준화된 희소 레이아웃을 지정하는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0033:0001",
+          "ko": "sparsity의 패턴을 지정하는 상수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0036:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/bnnsndarrayfullyconnectedsparsifysparsecoo(_:_:_:_:_:_:_:_:_:))*"
+        },
+        {
+          "id": "seg:paragraph:outchannels:0002:0001",
+          "ko": "출력 채널 수입니다."
+        },
+        {
+          "id": "seg:heading:see-also:0007:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "레이어 활성화 함수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0011:0001",
+          "ko": "레이어 바이어스로, 출력 채널마다 하나가 있습니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0013:0001",
+          "ko": "입력 채널 수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0015:0001",
+          "ko": "합성곱 커널의 높이입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0017:0001",
+          "ko": "합성곱 커널의 너비입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0019:0001",
+          "ko": "각 샘플에 적용할 풀링 함수입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0021:0001",
+          "ko": "X 패딩입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0023:0001",
+          "ko": "입력 이미지에서의 X 증가량입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0025:0001",
+          "ko": "Y 패딩입니다."
+        },
+        {
+          "id": "seg:paragraph:see-also:0027:0001",
+          "ko": "입력 이미지에서의 Y 증가량입니다."
+        },
+        {
+          "id": "seg:heading:cgerq2:0000:0001",
+          "ko": "cgerq2_(_:_:_:_:_:_:_:)"
+        },
+        {
+          "id": "seg:heading:see-also:0006:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0007:0001",
+          "ko": "[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0002",
+          "ko": "[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0003",
+          "ko": "[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)"
+        }
+      ]
+    },
+    {
+      "segments": [
+        {
+          "id": "seg:list:see-also:0007:0004",
+          "ko": "[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0005",
+          "ko": "[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0006",
+          "ko": "[func cgemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemm_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0007",
+          "ko": "[func cgemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemv_(_:_:_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0008",
+          "ko": "[func cgerc_(UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgerc_(_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0009",
+          "ko": "[func cgeru_(UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgeru_(_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0010",
+          "ko": "[func chbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chbmv_(_:_:_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0011",
+          "ko": "[func chemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chemm_(_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0012",
+          "ko": "[func chemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](chemv_(_:_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0013",
+          "ko": "[func cher2_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher2_(_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0014",
+          "ko": "[func cher2k_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, UnsafePointer<Float>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher2k_(_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0015",
+          "ko": "[func cher_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<Float>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cher_(_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:paragraph:see-also:0009:0001",
+          "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/cgerq2_(_:_:_:_:_:_:_:))*"
+        },
+        {
+          "id": "seg:heading:cggsvd3:0000:0001",
+          "ko": "cggsvd3_(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:)"
+        },
+        {
+          "id": "seg:heading:see-also:0006:0001",
+          "ko": "참고 항목"
+        },
+        {
+          "id": "seg:list:see-also:0007:0001",
+          "ko": "[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0002",
+          "ko": "[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0003",
+          "ko": "[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0004",
+          "ko": "[func cdotu_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotu_(_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0005",
+          "ko": "[func cgbmv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgbmv_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0006",
+          "ko": "[func cgemm_(UnsafePointer<CChar>, UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemm_(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+        },
+        {
+          "id": "seg:list:see-also:0007:0007",
+          "ko": "[func cgemv_(UnsafePointer<CChar>, UnsafePointer<__LAPACK_int>, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cgemv_(_:_:_:_:_:_:_:_:_:_:_:).md)"
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "progress": {
+    "generatedAt": "2026-05-12T16:06:28.899Z",
+    "updatedAt": "2026-05-12T16:06:51.612Z",
+    "reason": "paused",
+    "queue": "state/queue/shard-0013.json",
+    "shard": {
+      "index": 13,
+      "total": 256
+    },
+    "abortReason": "Paused after Codex usage limit; retry after May 19th, 2026 5:27 AM",
+    "pause": {
+      "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM.",
+      "retryAfterText": "May 19th, 2026 5:27 AM"
+    },
+    "totals": {
+      "batches": 216,
+      "segments": 12517,
+      "completed": 11,
+      "failed": 0,
+      "processed": 11,
+      "active": 0,
+      "queued": 205,
+      "percent": 5.09
+    },
+    "batches": [
+      {
+        "index": 0,
+        "status": "success",
+        "segments": 22,
+        "completedAt": "2026-05-12T14:02:27.222Z",
+        "durationMs": 18413
+      },
+      {
+        "index": 1,
+        "status": "success",
+        "segments": 25,
+        "completedAt": "2026-05-12T14:02:27.666Z",
+        "durationMs": 18857
+      },
+      {
+        "index": 2,
+        "status": "success",
+        "segments": 32,
+        "completedAt": "2026-05-12T14:02:23.628Z",
+        "durationMs": 14818
+      },
+      {
+        "index": 3,
+        "status": "success",
+        "segments": 34,
+        "completedAt": "2026-05-12T14:36:35.447Z",
+        "durationMs": 11184
+      },
+      {
+        "index": 4,
+        "status": "success",
+        "segments": 40,
+        "completedAt": "2026-05-12T14:02:33.338Z",
+        "durationMs": 6113
+      },
+      {
+        "index": 5,
+        "status": "success",
+        "segments": 43,
+        "completedAt": "2026-05-12T14:02:45.801Z",
+        "durationMs": 18133
+      },
+      {
+        "index": 6,
+        "status": "success",
+        "segments": 42,
+        "completedAt": "2026-05-12T14:02:56.092Z",
+        "durationMs": 22752
+      },
+      {
+        "index": 7,
+        "status": "success",
+        "segments": 58,
+        "completedAt": "2026-05-12T14:36:44.472Z",
+        "durationMs": 20209
+      },
+      {
+        "index": 8,
+        "status": "success",
+        "segments": 60,
+        "completedAt": "2026-05-12T14:36:37.307Z",
+        "durationMs": 13044
+      },
+      {
+        "index": 9,
+        "status": "success",
+        "segments": 60,
+        "completedAt": "2026-05-12T14:36:52.795Z",
+        "durationMs": 17344
+      },
+      {
+        "index": 10,
+        "status": "success",
+        "segments": 60,
+        "completedAt": "2026-05-12T14:36:53.161Z",
+        "durationMs": 15851
+      },
+      {
+        "index": 11,
+        "status": "queued",
+        "segments": 59,
+        "startedAt": "2026-05-12T16:06:28.907Z",
+        "completedAt": "2026-05-12T16:06:51.610Z",
+        "durationMs": 22703,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM."
+      },
+      {
+        "index": 12,
+        "status": "queued",
+        "segments": 41,
+        "startedAt": "2026-05-12T16:06:28.907Z",
+        "completedAt": "2026-05-12T16:06:50.714Z",
+        "durationMs": 21807,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM."
+      },
+      {
+        "index": 13,
+        "status": "queued",
+        "segments": 60,
+        "startedAt": "2026-05-12T16:06:28.907Z",
+        "completedAt": "2026-05-12T16:06:51.359Z",
+        "durationMs": 22452,
+        "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM."
+      },
+      {
+        "index": 14,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 15,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 16,
+        "status": "queued",
+        "segments": 47
+      },
+      {
+        "index": 17,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 18,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 19,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 20,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 21,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 22,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 23,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 24,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 25,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 26,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 27,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 28,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 29,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 30,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 31,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 32,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 33,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 34,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 35,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 36,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 37,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 38,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 39,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 40,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 41,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 42,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 43,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 44,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 45,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 46,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 47,
+        "status": "queued",
+        "segments": 50
+      },
+      {
+        "index": 48,
+        "status": "queued",
+        "segments": 41
+      },
+      {
+        "index": 49,
+        "status": "queued",
+        "segments": 56
+      },
+      {
+        "index": 50,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 51,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 52,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 53,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 54,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 55,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 56,
+        "status": "queued",
+        "segments": 49
+      },
+      {
+        "index": 57,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 58,
+        "status": "queued",
+        "segments": 45
+      },
+      {
+        "index": 59,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 60,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 61,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 62,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 63,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 64,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 65,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 66,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 67,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 68,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 69,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 70,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 71,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 72,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 73,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 74,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 75,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 76,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 77,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 78,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 79,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 80,
+        "status": "queued",
+        "segments": 41
+      },
+      {
+        "index": 81,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 82,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 83,
+        "status": "queued",
+        "segments": 51
+      },
+      {
+        "index": 84,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 85,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 86,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 87,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 88,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 89,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 90,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 91,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 92,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 93,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 94,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 95,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 96,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 97,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 98,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 99,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 100,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 101,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 102,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 103,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 104,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 105,
+        "status": "queued",
+        "segments": 58
+      },
+      {
+        "index": 106,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 107,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 108,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 109,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 110,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 111,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 112,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 113,
+        "status": "queued",
+        "segments": 55
+      },
+      {
+        "index": 114,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 115,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 116,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 117,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 118,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 119,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 120,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 121,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 122,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 123,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 124,
+        "status": "queued",
+        "segments": 57
+      },
+      {
+        "index": 125,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 126,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 127,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 128,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 129,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 130,
+        "status": "queued",
+        "segments": 25
+      },
+      {
+        "index": 131,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 132,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 133,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 134,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 135,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 136,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 137,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 138,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 139,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 140,
+        "status": "queued",
+        "segments": 52
+      },
+      {
+        "index": 141,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 142,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 143,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 144,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 145,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 146,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 147,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 148,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 149,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 150,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 151,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 152,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 153,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 154,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 155,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 156,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 157,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 158,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 159,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 160,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 161,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 162,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 163,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 164,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 165,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 166,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 167,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 168,
+        "status": "queued",
+        "segments": 53
+      },
+      {
+        "index": 169,
+        "status": "queued",
+        "segments": 42
+      },
+      {
+        "index": 170,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 171,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 172,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 173,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 174,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 175,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 176,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 177,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 178,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 179,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 180,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 181,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 182,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 183,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 184,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 185,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 186,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 187,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 188,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 189,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 190,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 191,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 192,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 193,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 194,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 195,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 196,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 197,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 198,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 199,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 200,
+        "status": "queued",
+        "segments": 54
+      },
+      {
+        "index": 201,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 202,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 203,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 204,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 205,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 206,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 207,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 208,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 209,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 210,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 211,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 212,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 213,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 214,
+        "status": "queued",
+        "segments": 60
+      },
+      {
+        "index": 215,
+        "status": "queued",
+        "segments": 57
+      }
+    ]
+  }
+}

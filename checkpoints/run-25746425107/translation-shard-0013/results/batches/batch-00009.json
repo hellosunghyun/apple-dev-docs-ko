@@ -1,0 +1,174 @@
+{
+  "batchIndex": 9,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:52.795Z",
+  "durationMs": 17344,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:discussion:0014:0002",
+        "ko": "BNNS는 열 인덱스와 행 인덱스가 교차된 형태를 요구합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0016:0001",
+        "ko": "완전 연결에 대해 COO 가중치를 BNNS opaque 형식으로 변환하려면 입력 가중치 모양과 인덱스의 배열 설명자를 생성한 뒤 [`BNNSNDArrayFullyConnectedSparsifySparseCOO(_:_:_:_:_:_:_:_:_:)`](bnnsndarrayfullyconnectedsparsifysparsecoo(_:_:_:_:_:_:_:_:_:).md)를 호출합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0018:0001",
+        "ko": "반환 시 `sparsifiedWeights`에는 [`BNNSLayerParametersFullyConnected`](bnnslayerparametersfullyconnected.md)에 전달할 가중치가 포함됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0018:0002",
+        "ko": "이 예제에서 `sparsifiedWeights`의 데이터 크기는 144 바이트입니다."
+      },
+      {
+        "id": "seg:list:parameters:0020:0001",
+        "ko": "`in_dense_shape`: 입력 배열의 dense shape(즉 크기와 레이아웃)을 지정하는 배열 설명자입니다."
+      },
+      {
+        "id": "seg:list:parameters:0020:0002",
+        "ko": "`in_indices`: 입력 nonzero 값의 교차 인덱스를 포함하는 `[NNZ, rank]` 모양의 2D 배열 설명자입니다. 행 우선(row-major) 순서에서는 짝수 요소가 열 인덱스에, 홀수 요소가 행 인덱스에 해당합니다. 열 우선(column-major) 순서에서는 짝수 요소가 행 인덱스에, 홀수 요소가 열 인덱스에 해당합니다."
+      },
+      {
+        "id": "seg:list:parameters:0020:0003",
+        "ko": "`in_values`: nonzero 입력 값을 포함하는 `[NNZ]` 모양의 1D 배열 설명자입니다."
+      },
+      {
+        "id": "seg:list:parameters:0020:0004",
+        "ko": "`out`: 반환 시 장치 최적화된 BNNS sparse fully connected 가중치를 포함하는 배열 설명자입니다."
+      },
+      {
+        "id": "seg:list:parameters:0020:0005",
+        "ko": "`sparse_params`: 희소성 패턴에 대한 힌트를 제공하는 선택적 데이터 구조입니다."
+      },
+      {
+        "id": "seg:list:parameters:0020:0006",
+        "ko": "`batch_size`: 예상 배치 크기입니다."
+      },
+      {
+        "id": "seg:list:parameters:0020:0007",
+        "ko": "`workspace`: dense 입력 크기의 최소 두 배 이상의 scratch memory를 가리키는 선택적 포인터입니다. `nil`로 설정하면 BNNS가 필요한 scratch memory를 할당하고 해제하도록 지정합니다."
+      },
+      {
+        "id": "seg:list:parameters:0020:0008",
+        "ko": "`workspace_size`: 전달한 scratch memory의 크기를 바이트 단위로 지정합니다. `workspace`가 `nil`인 경우 이 함수는 `workspace_size` 매개변수를 무시합니다."
+      },
+      {
+        "id": "seg:list:parameters:0020:0009",
+        "ko": "`filter_params`: 런타임 필터 매개변수입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0021:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0022:0001",
+        "ko": "[func BNNSNDArrayGetDataSize(UnsafePointer<BNNSNDArrayDescriptor>) -> Int](bnnsndarraygetdatasize(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "배열 설명자가 요구하는 크기를 바이트 단위로 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0024:0001",
+        "ko": "[func BNNSNDArrayFullyConnectedSparsifySparseCSR(UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSSparsityParameters>?, Int, UnsafeMutableRawPointer?, Int, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnsndarrayfullyconnectedsparsifysparsecsr(_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "표준화된 압축 희소 행렬(CSR) 레이아웃의 희소 텐서를 BNNS fully connected 레이어가 사용하는 장치별 희소 레이아웃으로 변환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0026:0001",
+        "ko": "[static func sparsify(batchSize: Int, inputLayout: BNNS.SparseLayout, inputDenseShape: BNNSNDArrayDescriptor, inputValues: BNNSNDArrayDescriptor, output: inout BNNSNDArrayDescriptor, sparseParameters: BNNS.SparseParameters?, workspace: UnsafeMutableRawBufferPointer?, filterParameters: BNNSFilterParameters?) throws](bnns/fullyconnectedlayer/sparsify(batchsize:inputlayout:inputdenseshape:inputvalues:output:sparseparameters:workspace:filterparameters:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "표준화된 희소 레이아웃의 희소 텐서를 Fully Connected가 사용하는 장치별 희소 레이아웃으로 변환합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "sparsity 함수에 대한 힌트를 제공하는 데이터 구조입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0031:0001",
+        "ko": "BNNS가 opaque로 변환할 수 있는 표준화된 희소 레이아웃을 지정하는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0033:0001",
+        "ko": "sparsity의 패턴을 지정하는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0036:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/bnnsndarrayfullyconnectedsparsifysparsecoo(_:_:_:_:_:_:_:_:_:))*"
+      },
+      {
+        "id": "seg:paragraph:outchannels:0002:0001",
+        "ko": "출력 채널 수입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "레이어 활성화 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "레이어 바이어스로, 출력 채널마다 하나가 있습니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "입력 채널 수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "합성곱 커널의 높이입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "합성곱 커널의 너비입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "각 샘플에 적용할 풀링 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "X 패딩입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "입력 이미지에서의 X 증가량입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "Y 패딩입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "입력 이미지에서의 Y 증가량입니다."
+      },
+      {
+        "id": "seg:heading:cgerq2:0000:0001",
+        "ko": "cgerq2_(_:_:_:_:_:_:_:)"
+      },
+      {
+        "id": "seg:heading:see-also:0006:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0007:0001",
+        "ko": "[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:list:see-also:0007:0002",
+        "ko": "[func ccopy_(UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](ccopy_(_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:list:see-also:0007:0003",
+        "ko": "[func cdotc_(OpaquePointer, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](cdotc_(_:_:_:_:_:_:).md)"
+      }
+    ]
+  }
+}
