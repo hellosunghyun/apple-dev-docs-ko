@@ -1,0 +1,250 @@
+{
+  "batchIndex": 7,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:36.394Z",
+  "durationMs": 9220,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:list:see-also:0015:0001",
+        "ko": "[init(title: String?, dateRangeNavigationMarkers: [AVDateRangeMetadataGroup])](avnavigationmarkersgroup/init(title:daterangenavigationmarkers:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "지정된 제목과 날짜 범위 탐색 마커 배열을 사용해 탐색 마커 그룹을 초기화합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avkit/avnavigationmarkersgroup/init(title:timednavigationmarkers:))*"
+      },
+      {
+        "id": "seg:paragraph:blas:0001:0001",
+        "ko": "**프레임워크**: Accelerate"
+      },
+      {
+        "id": "seg:paragraph:blas:0002:0001",
+        "ko": "Apple의 Basic Linear Algebra Subprograms(BLAS) 구현으로 일반적인 선형 대수 연산을 수행합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0004:0001",
+        "ko": "vecLib 프레임워크에는 아홉 개의 C 헤더 파일이 포함되어 있으며, 단순히 나머지 파일을 포함하는 `vecLib.h`는 제외됩니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0005:0001",
+        "ko": "이 문서는 Apple의 BLAS API 인터페이스를 포함하는 헤더 파일 `cblas.h`와 `vblas.h`에 선언된 함수를 설명합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0001",
+        "ko": "문서에서 선행 차원을 행렬의 첫 번째 차원으로 설명하는 경우, 이는 열 우선(column-major) 순서를 의미합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0002",
+        "ko": "행 우선(row-major) 순서에서는 선행 차원이 행렬의 두 번째 차원입니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0007:0001",
+        "ko": "❗ **중요**: Apple은 BLAS 및 LAPACK 라이브러리를 Accelerate 프레임워크에서 제공하여 LAPACK 3.9.1과 일치합니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0007:0002",
+        "ko": "iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26 및 watchOS 26부터 라이브러리는 LAPACK 3.12.0과 일치합니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0007:0003",
+        "ko": "이 새 인터페이스는 추가 기능과 함께 새로운 ILP64 인터페이스를 제공합니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0007:0004",
+        "ko": "새 인터페이스를 사용하려면 Accelerate 또는 vecLib 헤더를 포함하기 전에 `ACCELERATE_NEW_LAPACK`을 정의합니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0007:0005",
+        "ko": "ILP64 인터페이스의 경우 `ACCELERATE_LAPACK_ILP64`도 정의합니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0007:0006",
+        "ko": "Swift 프로젝트의 경우 Xcode 빌드 설정에서 전처리기 매크로로 `ACCELERATE_NEW_LAPACK=1` 및 `ACCELERATE_LAPACK_ILP64=1`을 지정합니다."
+      },
+      {
+        "id": "seg:heading:specifying-the-threading-model:0009:0001",
+        "ko": "스레딩 모델 지정"
+      },
+      {
+        "id": "seg:paragraph:specifying-the-threading-model:0011:0001",
+        "ko": "BLAS용 Swift 오버레이의 네임스페이스 역할을 하는 열거형입니다."
+      },
+      {
+        "id": "seg:list:specifying-the-threading-model:0012:0001",
+        "ko": "[func BLASSetThreading(BLAS_THREADING) -> Int32](blassetthreading(_:).md)"
+      },
+      {
+        "id": "seg:paragraph:specifying-the-threading-model:0013:0001",
+        "ko": "BLAS 및 LAPACK 스레딩 모델을 설정합니다."
+      },
+      {
+        "id": "seg:list:specifying-the-threading-model:0014:0001",
+        "ko": "[func BLASGetThreading() -> BLAS_THREADING](blasgetthreading().md)"
+      },
+      {
+        "id": "seg:paragraph:specifying-the-threading-model:0015:0001",
+        "ko": "현재 BLAS 및 LAPACK 스레딩 모델을 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:specifying-the-threading-model:0017:0001",
+        "ko": "BLAS 및 LAPACK 스레딩 모델을 설명하는 상수입니다."
+      },
+      {
+        "id": "seg:heading:general-functions:0018:0001",
+        "ko": "일반 함수"
+      },
+      {
+        "id": "seg:list:general-functions:0019:0001",
+        "ko": "[func cblas_icamax(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> __LAPACK_int](cblas_icamax(_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:general-functions:0020:0001",
+        "ko": "벡터에서 절댓값이 가장 큰 요소의 인덱스를 반환합니다(단정밀도 복소수)."
+      },
+      {
+        "id": "seg:list:general-functions:0021:0001",
+        "ko": "[func cblas_idamax(__LAPACK_int, UnsafePointer<Double>?, __LAPACK_int) -> __LAPACK_int](cblas_idamax(_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:general-functions:0022:0001",
+        "ko": "벡터에서 절댓값이 가장 큰 요소의 인덱스를 반환합니다(배정밀도)."
+      },
+      {
+        "id": "seg:list:general-functions:0023:0001",
+        "ko": "[func cblas_isamax(__LAPACK_int, UnsafePointer<Float>?, __LAPACK_int) -> __LAPACK_int](cblas_isamax(_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:general-functions:0024:0001",
+        "ko": "벡터에서 절댓값이 가장 큰 요소의 인덱스를 반환합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:general-functions:0025:0001",
+        "ko": "[func cblas_izamax(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> __LAPACK_int](cblas_izamax(_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:general-functions:0026:0001",
+        "ko": "벡터에서 절댓값이 가장 큰 요소의 인덱스를 반환합니다(배정밀도 복소수)."
+      },
+      {
+        "id": "seg:heading:sparse-computation:0027:0001",
+        "ko": "희소 연산"
+      },
+      {
+        "id": "seg:list:sparse-computation:0028:0001",
+        "ko": "[Matrix and Vector Operations](matrix-and-vector-operations.md)"
+      },
+      {
+        "id": "seg:paragraph:sparse-computation:0029:0001",
+        "ko": "행렬과 벡터를 사용해 계산을 수행합니다."
+      },
+      {
+        "id": "seg:list:sparse-computation:0030:0001",
+        "ko": "[Pointwise Matrix Operations](pointwise-matrix-operations.md)"
+      },
+      {
+        "id": "seg:paragraph:sparse-computation:0031:0001",
+        "ko": "점별 희소 행렬에서 값을 생성하고 삽입하며 추출합니다."
+      },
+      {
+        "id": "seg:list:sparse-computation:0032:0001",
+        "ko": "[Blockwise Matrix Operations](blockwise-matrix-operations.md)"
+      },
+      {
+        "id": "seg:paragraph:sparse-computation:0033:0001",
+        "ko": "블록 단위 희소 행렬에서 값을 생성하고 삽입하며 추출합니다."
+      },
+      {
+        "id": "seg:list:sparse-computation:0034:0001",
+        "ko": "[General Sparse Matrix Management Operations](general-sparse-matrix-management-operations.md)"
+      },
+      {
+        "id": "seg:paragraph:sparse-computation:0035:0001",
+        "ko": "희소 행렬의 속성을 관리하고 활용합니다."
+      },
+      {
+        "id": "seg:list:sparse-computation:0036:0001",
+        "ko": "[Sparse Vector Utility Operations](sparse-vector-utility-operations.md)"
+      },
+      {
+        "id": "seg:paragraph:sparse-computation:0037:0001",
+        "ko": "희소 벡터 구조를 생성하고 작업합니다."
+      },
+      {
+        "id": "seg:heading:data-types:0038:0001",
+        "ko": "데이터 유형"
+      },
+      {
+        "id": "seg:paragraph:data-types:0040:0001",
+        "ko": "BLAS 오류 처리기 콜백 타입입니다."
+      },
+      {
+        "id": "seg:paragraph:constants:0043:0001",
+        "ko": "행렬이 행 우선인지 열 우선인지 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:constants:0045:0001",
+        "ko": "행렬에서 수행할 전치 연산을 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:constants:0047:0001",
+        "ko": "삼각 행렬이 단위 대각선인지(대각선 요소가 모두 1) 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:constants:0049:0001",
+        "ko": "행렬 곱셈의 순서를 나타냅니다."
+      },
+      {
+        "id": "seg:heading:catlas-and-cblas-vector-functions:0052:0001",
+        "ko": "CATLAS 및 CBLAS 벡터 함수"
+      },
+      {
+        "id": "seg:list:catlas-and-cblas-vector-functions:0053:0001",
+        "ko": "[func catlas_caxpby(__LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](catlas_caxpby(_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:catlas-and-cblas-vector-functions:0054:0001",
+        "ko": "두 벡터의 곱을 계산하고 각 벡터를 개별적으로 스케일합니다(단정밀도 복소수)."
+      },
+      {
+        "id": "seg:list:catlas-and-cblas-vector-functions:0055:0001",
+        "ko": "[func catlas_cset(__LAPACK_int, OpaquePointer, OpaquePointer, __LAPACK_int)](catlas_cset(_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:catlas-and-cblas-vector-functions:0056:0001",
+        "ko": "단정밀도 복소수 벡터를 제자리에서 수정하며 각 요소를 지정된 값으로 설정합니다."
+      },
+      {
+        "id": "seg:list:catlas-and-cblas-vector-functions:0057:0001",
+        "ko": "[func catlas_daxpby(__LAPACK_int, Double, UnsafePointer<Double>?, __LAPACK_int, Double, UnsafeMutablePointer<Double>?, __LAPACK_int)](catlas_daxpby(_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:catlas-and-cblas-vector-functions:0058:0001",
+        "ko": "두 벡터의 합을 계산하고 각 벡터를 개별적으로 스케일합니다(배정밀도)."
+      },
+      {
+        "id": "seg:list:catlas-and-cblas-vector-functions:0059:0001",
+        "ko": "[func catlas_dset(__LAPACK_int, Double, UnsafeMutablePointer<Double>, __LAPACK_int)](catlas_dset(_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:catlas-and-cblas-vector-functions:0060:0001",
+        "ko": "배정밀도 벡터를 제자리에서 수정하며 각 요소를 지정된 값으로 설정합니다."
+      },
+      {
+        "id": "seg:list:catlas-and-cblas-vector-functions:0061:0001",
+        "ko": "[func catlas_saxpby(__LAPACK_int, Float, UnsafePointer<Float>?, __LAPACK_int, Float, UnsafeMutablePointer<Float>?, __LAPACK_int)](catlas_saxpby(_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:catlas-and-cblas-vector-functions:0062:0001",
+        "ko": "두 벡터의 합을 계산하고 각 벡터를 개별적으로 스케일합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:catlas-and-cblas-vector-functions:0063:0001",
+        "ko": "[func catlas_sset(__LAPACK_int, Float, UnsafeMutablePointer<Float>, __LAPACK_int)](catlas_sset(_:_:_:_:).md)"
+      }
+    ]
+  }
+}
