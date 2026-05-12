@@ -1,0 +1,190 @@
+{
+  "batchIndex": 1,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:32.476Z",
+  "durationMs": 10952,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "The value is [`invalid`](https://developer.apple.com/documentation/CoreMedia/CMTime/invalid) while the effect is in progress, but changes to a valid time when the reaction effect completes and the system removes it from the list of [`reactionEffectsInProgress`](avcapturedevice/reactioneffectsinprogress.md)."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "이는 append한 미디어 데이터를 분석하고 특정 구간을 서로 다른 매개변수로 다시 인코딩함으로써 수행됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0003",
+        "ko": "재인코딩을 수행하려면 해당 구간의 미디어 데이터를 다시 append해야 합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0004",
+        "ko": "입력이 다시 append할 구간을 지정하는 방법은 [`currentPassDescription`](avassetwriterinput/currentpassdescription.md) property와 [`markCurrentPassAsFinished()`](avassetwriterinput/markcurrentpassasfinished().md) method를 참고합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "이 property의 값이 [`true`](https://developer.apple.com/documentation/Swift/true)인 경우, 동일한 asset writer에 연결된 다른 입력의 [`isReadyForMoreMediaData`](avassetwriterinput/isreadyformoremediadata.md) 값이 더 자주 그리고 더 긴 시간 동안 [`false`](https://developer.apple.com/documentation/Swift/false)일 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "특히, 다중 패스를 수행하지 않는 입력의 [`isReadyForMoreMediaData`](avassetwriterinput/isreadyformoremediadata.md) 값은 asset writer의 [`startWriting()`](avassetwriter/startwriting().md) 메서드 호출 후 [`false`](https://developer.apple.com/documentation/Swift/false)로 시작할 수 있으며, 모든 멀티패스 입력이 최종 pass를 완료한 뒤까지 [`true`](https://developer.apple.com/documentation/Swift/true)로 변경되지 않을 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "이 property의 값이 [`true`](https://developer.apple.com/documentation/Swift/true)인 경우 입력은 압축 샘플을 출력 파일에 쓰기 전에 하나 이상의 임시 파일에 데이터를 저장할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "임시 파일 쓰기 위치를 지정해야 하는 경우 자산 작성기의 [`directoryForTemporaryFiles`](avassetwriter/directoryfortemporaryfiles.md) property를 사용합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "기본값은 [`false`](https://developer.apple.com/documentation/Swift/false)이며, 이는 추가 분석이 수행되지 않고 구간을 다시 인코딩하지 않음을 의미합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0002",
+        "ko": "모든 자산 작성기 입력 구성에서 소스 미디어에 대해 다중 패스를 수행한다고 이점을 얻는 것은 아닙니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0003",
+        "ko": "선택한 인코더가 다중 패스를 수행할 수 있는지 확인하려면 [`startWriting()`](avassetwriter/startwriting().md) 호출 후 [`canPerformMultiplePasses`](avassetwriterinput/canperformmultiplepasses.md) 값을 조회합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0012:0001",
+        "ko": "❗ **중요**: [`expectsMediaDataInRealTime`](avassetwriterinput/expectsmediadatainrealtime.md) 값이 [`true`](https://developer.apple.com/documentation/Swift/true)일 때 이 property 값을 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정하면 오류입니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0012:0002",
+        "ko": "또한 asset writer에 포함된 다른 입력 중 하나라도 [`expectsMediaDataInRealTime`](avassetwriterinput/expectsmediadatainrealtime.md) 값이 [`true`](https://developer.apple.com/documentation/Swift/true)일 때, 이 property가 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정된 입력이 포함되는 것도 오류입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0013:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "append된 미디어 데이터에 대해 입력이 다중 패스를 수행할 수 있는지 나타내는 Boolean 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "현재 pass의 요구 사항을 설명하는 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "현재 pass의 요구 사항을 조회하기 위한 인터페이스를 정의하는 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "입력에서 append된 미디어를 분석해 특정 구간을 다시 인코딩하여 결과가 개선되는지 판단하도록 지시합니다."
+      },
+      {
+        "id": "seg:list:see-also:0022:0001",
+        "ko": "[func respondToEachPassDescription(on: dispatch_queue_t, using: () -> Void)](avassetwriterinput/respondtoeachpassdescription(on:using:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "입력이 새 pass를 시작할 때마다 callback을 호출하도록 지시합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0025:0001",
+        "ko": "멀티 패스가 지원되는 경우 작성기 입력 receiver에 대해 pass 설명의 async sequence를 수신할 수 있는 인터페이스를 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:currentlensposition:0002:0001",
+        "ko": "현재 렌즈 위치를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "The value is [`invalid`](https://developer.apple.com/documentation/CoreMedia/CMTime/invalid) while the effect is in progress, but changes to a valid time when the reaction effect completes and the system removes it from the list of [`reactionEffectsInProgress`](avcapturedevice/reactioneffectsinprogress.md)."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "기기가 특정 렌즈 위치로 초점을 고정할 수 있는지 나타내는 Boolean 값입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "현재 렌즈의 초점 위치입니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[func setFocusModeLocked(lensPosition: Float, completionHandler: ((CMTime) -> Void)?)](avcapturedevice/setfocusmodelocked(lensposition:completionhandler:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "지정한 값으로 렌즈 위치를 잠그고 초점 모드를 고정 상태로 설정합니다."
+      },
+      {
+        "id": "seg:paragraph:endtime:0002:0001",
+        "ko": "반응 효과가 끝난 직후 이어지는 첫 프레임의 표시 시간입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "효과 진행 중에는 값이 [`invalid`](https://developer.apple.com/documentation/CoreMedia/CMTime/invalid)이지만, 반응 효과가 완료되어 시스템이 이를 [`reactionEffectsInProgress`](avcapturedevice/reactioneffectsinprogress.md) 목록에서 제거하면 유효한 시간으로 변경됩니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "반응 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "효과가 수행할 수 있는 반응의 유형을 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "시스템이 효과를 렌더링하는 첫 프레임의 표시 시간입니다."
+      },
+      {
+        "id": "seg:paragraph:vga640x480:0002:0001",
+        "ko": "VGA 품질(640 x 480 픽셀) 비디오 출력을 캡처하기에 적합한 preset입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0008:0001",
+        "ko": "[static let qvga320x240: AVCaptureSession.Preset](avmetadatakey/metadata3gpuserdatakeyalbumandtrack.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "320 x 240 픽셀 비디오 출력을 캡처하기에 적합한 preset입니다."
+      },
+      {
+        "id": "seg:paragraph:metadata3gpuserdatakeycollection:0002:0001",
+        "ko": "미디어의 컬렉션 이름을 나타내는 키입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0008:0001",
+        "ko": "[static let metadata3GPUserDataKeyAlbumAndTrack: AVMetadataKey](avmetadatakey/metadata3gpuserdatakeyalbumandtrack.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "앨범 및 트랙 제목의 텍스트를 나타내는 키입니다."
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[static let metadata3GPUserDataKeyAuthor: AVMetadataKey](avmetadatakey/metadata3gpuserdatakeyauthor.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "미디어의 작성자를 나타내는 키입니다."
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[static let metadata3GPUserDataKeyCopyright: AVMetadataKey](avmetadatakey/metadata3gpuserdatakeycopyright.md)"
+      }
+    ]
+  }
+}
