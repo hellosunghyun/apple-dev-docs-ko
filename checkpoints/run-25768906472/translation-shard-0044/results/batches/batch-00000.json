@@ -1,0 +1,238 @@
+{
+  "batchIndex": 0,
+  "status": "success",
+  "completedAt": "2026-05-12T14:03:13.839Z",
+  "durationMs": 58038,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:initialworldmap:0002:0001",
+        "ko": "이 세션 구성에서 재개를 시도하려는 이전 AR 세션의 상태입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "In the case that [`componentsPerVector`](argeometrysource/componentspervector.md) is greater than 1, the element type of the geometry-source array is itself, a sequence."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "이 상태에는 사용자가 장치를 이동하는 물리적 공간에 대한 ARKit의 인식(ARKit이 장치의 위치와 방향을 결정하는 데 사용)이 포함되며, 세션에 추가된 모든 [`ARAnchor`](aranchor.md) 객체도 포함됩니다(이는 감지된 실제 세계의 특징이거나 앱이 배치한 가상 콘텐츠를 나타낼 수 있음)."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0003",
+        "ko": "[`getCurrentWorldMap(completionHandler:)`](arsession/getcurrentworldmap(completionhandler:).md)로 세션의 월드 맵을 저장한 다음, 구성의 [`initialWorldMap`](arworldtrackingconfiguration/initialworldmap.md) 속성에 할당하고 [`run(_:options:)`](arsession/run(_:options:).md)로 동일한 공간 인식과 앵커를 가진 다른 세션을 시작할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "월드 맵을 저장한 뒤 이를 사용해 새 세션을 시작하면, 앱은 새로운 AR 기능을 추가할 수 있습니다:"
+      },
+      {
+        "id": "seg:list:discussion:0010:0001",
+        "ko": "**멀티유저 AR 경험.** 보관된 [`ARWorldMap`](arworldmap.md) 객체를 주변 사용자 기기로 전송하여 공유 기준 좌표계를 만듭니다. 두 기기가 동일한 월드 맵을 추적하면 두 사용자 모두 동일한 가상 콘텐츠를 보고 상호작용하는 네트워크형 경험을 구성할 수 있습니다."
+      },
+      {
+        "id": "seg:list:discussion:0010:0002",
+        "ko": "**지속형 AR 경험.** 앱이 비활성 상태가 되면 월드 맵을 저장한 뒤, 동일한 물리적 환경에서 다음에 앱이 실행될 때 이를 복원할 수 있습니다. 재개된 월드 맵의 앵커를 사용해 저장된 세션의 동일한 위치에 동일한 가상 콘텐츠를 배치할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "초기 월드 맵으로 세션을 실행하면, ARKit가 기록된 월드 맵을 현재 환경과 정합하려고 시도하는 동안 세션이 [`ARCamera.TrackingState.limited(_:)`](arcamera/trackingstate-swift.enum/limited(_:).md) ([`ARCamera.TrackingState.Reason.relocalizing`](arcamera/trackingstate-swift.enum/reason/relocalizing.md)) 추적 상태로 시작됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0002",
+        "ko": "성공하면 짧은 시간 후 추적 상태가 [`ARCamera.TrackingState.normal`](arcamera/trackingstate-swift.enum/normal.md)로 전환되며, 현재 월드 좌표계와 앵커가 기록된 월드 맵의 좌표계 및 앵커와 일치함을 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0012:0001",
+        "ko": "ARKit가 기록된 월드 맵을 현재 환경과 정합하지 못하면(예: 장치가 월드 맵이 기록된 위치와 완전히 다른 곳에 있는 경우) 세션은 [`ARCamera.TrackingState.Reason.relocalizing`](arcamera/trackingstate-swift.enum/reason/relocalizing.md) 상태에 무기한 머뭅니다."
+      },
+      {
+        "id": "seg:heading:see-also:0013:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "새 바디 추적 구성을 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:componentspervector:0002:0001",
+        "ko": "각 벡터의 스칼라 구성 요소 개수입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "[`componentsPerVector`](argeometrysource/componentspervector.md)가 1보다 큰 경우 기하학 소스 배열의 요소 타입 자체가 시퀀스가 됩니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "버퍼의 벡터 수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "버퍼의 벡터 데이터 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "버퍼 시작 지점부터의 오프셋(바이트 단위)입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arscnview/anchor(for:))*"
+      },
+      {
+        "id": "seg:heading:anchorfor:0000:0001",
+        "ko": "anchor(for:)"
+      },
+      {
+        "id": "seg:paragraph:anchorfor:0002:0001",
+        "ko": "지정한 SceneKit 노드와 연결된 AR 앵커가 있으면 반환합니다."
+      },
+      {
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "노드를 추적하는 [`ARAnchor`](aranchor.md) 객체이며, 노드가 앵커와 연관되지 않았거나 뷰의 scene에 없으면 `nil`입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0001",
+        "ko": "`node`: 뷰의 scene에 있는 SceneKit 노드입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0011:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[func node(for: ARAnchor) -> SCNNode?](arscnview/node(for:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "지정한 AR 앵커와 연결된 SceneKit 노드가 있으면 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[func unprojectPoint(CGPoint, ontoPlane: simd_float4x4) -> simd_float3?](arscnview/unprojectpoint(_:ontoplane:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "ARKit이 감지한 3D 월드 공간의 평면으로 2D 뷰 점을 사영한 결과를 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arscnview/anchor(for:))*"
+      },
+      {
+        "id": "seg:paragraph:requiredauthorizations:0002:0001",
+        "ko": "바코드 감지 제공자를 사용하기 위해 필요한 권한 부여 유형입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0008:0001",
+        "ko": "[static var isSupported: Bool](barcodedetectionprovider/issupported.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "기기가 바코드 감지 제공자를 지원하는지 여부를 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:heading:camera-lighting-and-effects:0000:0001",
+        "ko": "카메라, 조명, 효과"
+      },
+      {
+        "id": "seg:paragraph:camera-lighting-and-effects:0001:0001",
+        "ko": "**프레임워크**: ARKit"
+      },
+      {
+        "id": "seg:paragraph:camera-lighting-and-effects:0002:0001",
+        "ko": "현재 세션의 카메라 위치와 조명을 결정하고, 오클루전과 같은 환경 요소에 효과를 적용합니다."
+      },
+      {
+        "id": "seg:paragraph:camera:0006:0001",
+        "ko": "특정 프레임에 대한 카메라 위치 및 이미지 특성 정보입니다."
+      },
+      {
+        "id": "seg:heading:lighting-effects:0007:0001",
+        "ko": "조명 효과"
+      },
+      {
+        "id": "seg:list:lighting-effects:0008:0001",
+        "ko": "[Adding realistic reflections to an AR experience](adding-realistic-reflections-to-an-ar-experience.md)"
+      },
+      {
+        "id": "seg:paragraph:lighting-effects:0009:0001",
+        "ko": "ARKit를 사용해 카메라 이미지에서 환경 프로브 텍스처를 생성하고 반사형 가상 객체를 렌더링합니다."
+      },
+      {
+        "id": "seg:paragraph:lighting-effects:0011:0001",
+        "ko": "월드 트래킹 AR 세션의 특정 공간 영역에 대한 환경 조명 정보를 제공하는 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:lighting-effects:0013:0001",
+        "ko": "AR 세션에서 캡처한 비디오 프레임과 연결된 예상 장면 조명 정보입니다."
+      },
+      {
+        "id": "seg:paragraph:lighting-effects:0015:0001",
+        "ko": "얼굴 추적 AR 세션에서 캡처한 비디오 프레임과 연결된 예상 환경 조명 정보입니다."
+      },
+      {
+        "id": "seg:list:occlusion:0017:0001",
+        "ko": "[Occluding virtual content with people](occluding-virtual-content-with-people.md)"
+      },
+      {
+        "id": "seg:paragraph:occlusion:0018:0001",
+        "ko": "ARKit가 카메라 피드에서 인식한 사람으로 앱의 가상 콘텐츠를 덮습니다."
+      },
+      {
+        "id": "seg:list:occlusion:0019:0001",
+        "ko": "[Effecting People Occlusion in Custom Renderers](effecting-people-occlusion-in-custom-renderers.md)"
+      },
+      {
+        "id": "seg:paragraph:occlusion:0020:0001",
+        "ko": "매트 생성기를 사용해 카메라 피드에서 ARKit가 사람을 인식하는 위치의 앱 가상 콘텐츠를 오클루드합니다."
+      },
+      {
+        "id": "seg:list:occlusion:0021:0001",
+        "ko": "[Visualizing and interacting with a reconstructed scene](visualizing-and-interacting-with-a-reconstructed-scene.md)"
+      },
+      {
+        "id": "seg:paragraph:occlusion:0022:0001",
+        "ko": "다각형 메쉬를 사용해 물리 환경의 형태를 추정합니다."
+      },
+      {
+        "id": "seg:paragraph:occlusion:0024:0001",
+        "ko": "카메라 피드에서 ARKit가 인식한 사람과 함께 앱의 가상 콘텐츠를 오클루드하기 위해 매트 텍스처를 생성하는 객체입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0025:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0026:0001",
+        "ko": "[Content Anchors](content-anchors.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0027:0001",
+        "ko": "평면 표면, 이미지, 실제 객체, 신체 자세, 얼굴을 포함해 물리 환경의 항목을 식별합니다."
+      },
+      {
+        "id": "seg:list:see-also:0028:0001",
+        "ko": "[Environmental Analysis](environmental-analysis.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0029:0001",
+        "ko": "카메라 영상과 부가 데이터를 분석하고, 레이 캐스팅 및 깊이 맵 정보를 사용해 항목의 위치를 결정합니다."
+      },
+      {
+        "id": "seg:list:see-also:0030:0001",
+        "ko": "[Data Management](data-management.md)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "batchIndex": 31,
+  "status": "success",
+  "completedAt": "2026-05-12T23:48:28.028Z",
+  "durationMs": 20655,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:verify-and-request-authorization-for-capture:0019:0002",
+        "ko": "사용자가 응답하면 시스템이 완료 핸들러를 호출합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:verify-and-request-authorization-for-capture:0019:0003",
+        "ko": "완료 핸들러의 success 매개변수가 [`true`](https://developer.apple.com/documentation/Swift/true)이면 캡처 세션을 설정하고 시작할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:blockquote:verify-and-request-authorization-for-capture:0020:0001",
+        "ko": "**Note**: 캡처를 시작하기 전에 [`requestAccess(for:completionHandler:)`](https://developer.apple.com/documentation/AVFoundation/AVCaptureDevice/requestAccess(for:completionHandler:))를 호출하되, 앱에 적절한 시점에만 호출해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:blockquote:verify-and-request-authorization-for-capture:0020:0002",
+        "ko": "예를 들어 앱의 주요 기능이 사진 또는 비디오 녹화가 아닌 경우에는 사용자가 앱의 카메라 관련 기능을 호출할 때에만 카메라 권한을 확인하면 됩니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:heading:request-authorization-before-saving-captured-media:0021:0001",
+        "ko": "캡처된 미디어를 저장하기 전에 권한 요청"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:request-authorization-before-saving-captured-media:0022:0001",
+        "ko": "사진이나 비디오를 캡처한 후 사용자의 Photos 라이브러리에 저장할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:request-authorization-before-saving-captured-media:0022:0002",
+        "ko": "Photos 라이브러리에 접근하려면 카메라 및 마이크 권한과는 별도로 사용자 권한이 필요합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:request-authorization-before-saving-captured-media:0022:0003",
+        "ko": "대부분의 사진 및 비디오 캡처 워크플로( Live Photos 및 RAW 형식 캡처 포함)에서는 [`PHPhotoLibrary`](https://developer.apple.com/documentation/Photos/PHPhotoLibrary) 및 [`PHAssetCreationRequest`](https://developer.apple.com/documentation/Photos/PHAssetCreationRequest) 클래스를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:request-authorization-before-saving-captured-media:0022:0004",
+        "ko": "이러한 클래스는 Photos 라이브러리에 대한 읽기/쓰기 액세스 권한이 필요하므로, 액세스 권한을 요청할 때 사용자에게 메시지를 제공하려면 정보 속성 목록에서 [`NSPhotoLibraryUsageDescription`](information-property-list/nsphotolibraryusagedescription.md) 키를 사용해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:request-authorization-before-saving-captured-media:0022:0005",
+        "ko": "자세한 내용은 [`Saving captured photos`](https://developer.apple.com/documentation/AVFoundation/saving-captured-photos)를 참조합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:heading:reset-authorization-from-terminal:0023:0001",
+        "ko": "터미널에서 권한 재설정"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:reset-authorization-from-terminal:0024:0001",
+        "ko": "사용자의 마이크 접근 권한 승인 또는 거부 상태를 다시 표시하려면 터미널을 열고 다음 명령을 입력합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:reset-authorization-from-terminal:0026:0001",
+        "ko": "카메라 접근에 대한 권한 상태를 재설정하려면 다음을 입력합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:reset-authorization-from-terminal:0028:0001",
+        "ko": "이 명령은 모든 앱의 액세스 권한 설정을 초기화하므로 다른 앱도 사용자에게 다시 권한 프롬프트를 표시합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:reset-authorization-from-terminal:0028:0002",
+        "ko": "이 도구를 사용하면 개인정보 보호 근거 문자열 및 그 현지화 버전의 표시를 디버깅할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:blockquote:reset-authorization-from-terminal:0029:0001",
+        "ko": "💡 **Tip**: `tccutil`을 사용하면 AddressBook, Calendar, Finder처럼 다른 시스템 서비스의 권한 접근 설정도 재설정할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:heading:see-also:0030:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:list:see-also:0031:0001",
+        "ko": "[Requesting authorization to capture and save media](../AVFoundation/requesting-authorization-to-capture-and-save-media.md)"
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:see-also:0032:0001",
+        "ko": "카메라, 마이크 및 사진 라이브러리 접근 권한을 사용자에게 요청합니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:see-also:0034:0001",
+        "ko": "앱이 macOS에서 시스템 오디오 캡처 접근을 요청하는 이유를 사용자에게 알려주는 메시지입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:see-also:0036:0001",
+        "ko": "앱이 기기의 카메라에 접근할 권한을 요청하는 이유를 사용자에게 알려주는 메시지입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:see-also:0038:0001",
+        "ko": "앱이 기기의 기본 카메라에 접근할 권한을 요청하는 이유를 사용자에게 알려주는 메시지입니다."
+      },
+      {
+        "sourcePath": "documentation/BundleResources/requesting-authorization-for-media-capture-on-macos.md",
+        "id": "seg:paragraph:see-also:0040:0001",
+        "ko": "앱이 기기의 마이크에 접근할 권한을 요청하는 이유를 사용자에게 알려주는 메시지입니다."
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:paragraph:kcfftpresourcelink:0002:0001",
+        "ko": "심볼릭 링크 정보를 포함하는 CFString을 가져오기 위한 CFDictionary 키입니다."
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:paragraph:kcfftpresourcelink:0002:0002",
+        "ko": "항목이 심볼릭 링크인 경우 CFString에는 링크가 참조하는 항목의 경로가 포함됩니다."
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:list:see-also:0008:0001",
+        "ko": "[func CFFTPCreateParsedResourceListing(CFAllocator?, UnsafePointer<UInt8>, CFIndex, UnsafeMutablePointer<Unmanaged<CFDictionary>?>?) -> CFIndex](cfftpcreateparsedresourcelisting(_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "FTP 목록을 사전으로 파싱합니다."
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "FTP 리소스를 공유하는 그룹의 이름을 포함하는 CFString을 가져오기 위한 CFDictionary 키입니다."
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "FTP 리소스가 마지막으로 수정된 날짜와 시간을 포함하는 CFDate를 가져오기 위한 CFDictionary 키입니다."
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "FTP 리소스의 접근 권한(`sys/types.h`에 정의됨)을 포함하는 CFNumber를 가져오기 위한 CFDictionary 키입니다."
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "FTP 리소스의 이름을 포함하는 CFString을 가져오기 위한 CFDictionary 키입니다."
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "FTP 리소스 소유자의 이름을 포함하는 CFString을 가져오기 위한 CFDictionary 키입니다."
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "FTP 리소스 크기를 바이트 단위로 포함하는 CFNumber를 가져오기 위한 CFDictionary 키입니다."
+      },
+      {
+        "sourcePath": "documentation/CFNetwork/kcfftpresourcelink.md",
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "`sys/dirent.h`에 정의된 대로 FTP 리소스 유형을 포함하는 CFNumber를 가져오기 위한 CFDictionary 키입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencryptedbytesvalue/type.md",
+        "id": "seg:paragraph:type:0002:0001",
+        "ko": "필드 유형을 식별하기 위해 사용되는 문자열입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencryptedbytesvalue/type.md",
+        "id": "seg:list:type:0004:0001",
+        "ko": "CKTool JS 1.2.15+"
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:paragraph:ckdbrecordfieldencrypteddoublelistvalue:0002:0001",
+        "ko": "double list 유형의 암호화 필드 값입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:list:ckdbrecordfieldencrypteddoublelistvalue:0004:0001",
+        "ko": "CKTool JS 1.2.15+"
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:paragraph:overview:0008:0001",
+        "ko": "JavaScript에서 이 타입은 설명된 속성으로 구성된 일반 객체입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:paragraph:overview:0009:0001",
+        "ko": "TypeScript에서 이 타입은 다음과 같이 가져옵니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:heading:instance-properties:0012:0001",
+        "ko": "인스턴스 속성"
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:paragraph:instance-properties:0014:0001",
+        "ko": "필드 유형을 식별하기 위해 사용되는 문자열입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:paragraph:instance-properties:0016:0001",
+        "ko": "double 값의 배열입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:heading:see-also:0017:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "double 유형의 필드 값입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "double list 유형의 필드 값입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbrecordfieldencrypteddoublelistvalue.md",
+        "id": "seg:paragraph:see-also:0023:0001",
+        "ko": "double 유형의 암호화된 필드 값입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbsharepotentialparticipant/emailaddress.md",
+        "id": "seg:paragraph:emailaddress:0002:0001",
+        "ko": "참여자의 이메일 주소입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/ckdbsharepotentialparticipant/emailaddress.md",
+        "id": "seg:list:emailaddress:0004:0001",
+        "ko": "CKTool JS 1.2.15+"
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/valuegreaterthanmaxnumbererror.md",
+        "id": "seg:paragraph:valuegreaterthanmaxnumbererror:0002:0001",
+        "ko": "지정된 값이 허용된 최대값보다 클 때 유효성 검사기가 내보내는 오류입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/valuegreaterthanmaxnumbererror.md",
+        "id": "seg:list:valuegreaterthanmaxnumbererror:0004:0001",
+        "ko": "CKTool JS 1.2.15+"
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/valuegreaterthanmaxnumbererror.md",
+        "id": "seg:paragraph:overview:0008:0001",
+        "ko": "`ValueRangeError`를 상속합니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/valuegreaterthanmaxnumbererror.md",
+        "id": "seg:heading:instance-properties:0010:0001",
+        "ko": "인스턴스 속성"
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/valuegreaterthanmaxnumbererror.md",
+        "id": "seg:paragraph:instance-properties:0012:0001",
+        "ko": "테스트되는 길이 속성의 최대값(포함)입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/valuegreaterthanmaxnumbererror.md",
+        "id": "seg:heading:inherited-by:0014:0001",
+        "ko": "상속 항목"
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/valuegreaterthanmaxnumbererror.md",
+        "id": "seg:heading:see-also:0016:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/valuegreaterthanmaxnumbererror.md",
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "범위 관련 유효성 검사 오류의 기본 클래스입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/valuegreaterthanmaxnumbererror.md",
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "지정된 값이 허용된 최소값보다 작을 때 유효성 검사기가 내보내는 오류입니다."
+      },
+      {
+        "sourcePath": "documentation/CKToolJS/valuegreaterthanmaxnumbererror.md",
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "값이 표현 가능한 범위를 벗어나 JavaScript number로 표현할 수 없을 때 유효성 검사기가 내보내는 오류입니다."
+      }
+    ]
+  }
+}
