@@ -35,7 +35,12 @@ async function main(): Promise<void> {
         status: segment.status
       }))
     };
-    await writeJson(resolveRoot("site/public/source-maps", file.sourcePath.replace(/\.md$/i, ".json")), sourceMap);
+    const sourceMapPath = file.sourcePath.replace(/\.md$/i, ".json");
+    await writeJson(resolveRoot("site/public/source-maps", sourceMapPath), sourceMap);
+    const routeSourceMapPath = sourceMapPath.toLowerCase();
+    if (routeSourceMapPath !== sourceMapPath) {
+      await writeJson(resolveRoot("site/public/source-maps", routeSourceMapPath), sourceMap);
+    }
   }
   console.log(`Source maps: ${files.length}`);
 }

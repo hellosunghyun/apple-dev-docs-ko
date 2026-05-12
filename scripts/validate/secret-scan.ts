@@ -17,6 +17,7 @@ const files = await fg(["**/*"], {
     "node_modules/**",
     "site/node_modules/**",
     "site/dist/**",
+    "site/.astro/**",
     ".docs/**",
     "AGENTS.md",
     "source-cache/**",
