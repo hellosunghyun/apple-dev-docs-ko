@@ -1,0 +1,142 @@
+{
+  "batchIndex": 1,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:35.157Z",
+  "durationMs": 12926,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:place-environment-probes-manually-for-enhanced-results:0024:0002",
+        "ko": "각 probe의 [`extent`](arenvironmentprobeanchor/extent.md)와 위치를 초기화합니다. 해당 가상 객체 크기를 기준으로 [`transform`](aranchor/transform.md)을(를) 사용합니다."
+      },
+      {
+        "id": "seg:paragraph:place-environment-probes-manually-for-enhanced-results:0026:0001",
+        "ko": "이 코드는 각 가상 객체 주변의 영역을 최적으로 캡처하기 위해 아래 규칙을 적용합니다:"
+      },
+      {
+        "id": "seg:list:place-environment-probes-manually-for-enhanced-results:0027:0001",
+        "ko": "probe의 위치는 가상 객체의 상단 중앙이어야 하며, `y` 성분은 객체 높이의 두 배여야 합니다. 이렇게 하면 probe extent의 하단이 가상 객체 하단과 맞춰져 객체가 놓인 실제 표면을 정확히 캡처합니다."
+      },
+      {
+        "id": "seg:list:place-environment-probes-manually-for-enhanced-results:0027:0002",
+        "ko": "probe의 `x` 및 `z` 성분은 객체의 너비와 깊이의 세 배여야 하며, 이를 통해 probe가 객체 아래쪽과 주변 영역을 캡처합니다."
+      },
+      {
+        "id": "seg:paragraph:place-environment-probes-manually-for-enhanced-results:0028:0001",
+        "ko": "![가상 객체 주변의 환경 probe anchor를 위한 권장 extent를 나타내는 다이어그램: 객체 높이의 두 배, 너비와 깊이의 세 배, 객체 상단 중앙 정렬](https://docs-assets.developer.apple.com/published/d993b9291118ec512ef9d4c4f322a542/ProbeExtent.png)"
+      },
+      {
+        "id": "seg:heading:use-environment-texturing-wisely:0029:0001",
+        "ko": "환경 텍스처링을 신중하게 사용"
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0030:0001",
+        "ko": "앱의 환경 텍스처링 사용을 현실감 있게 그리고 효율적으로 유지하려면 다음 팁을 따릅니다:"
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0031:0001",
+        "ko": "**거울 마감 표면처럼 정확한 반사를 요구하는 가상 콘텐츠는 피합니다.**"
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0032:0001",
+        "ko": "일반적으로 AR 경험은 현실을 완전히 모방할 수 있는 모든 정보를 갖추지 못합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0032:0002",
+        "ko": "좋은 AR 경험은 현실감의 한계를 가리는 방식으로 콘텐츠를 신중히 설계해 가상 객체가 사용자의 현실 환경에 존재한다는 인상을 유지합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0033:0001",
+        "ko": "ARKit 환경 텍스처는 사용자를 둘러싼 모든 방향의 환경을 촬영하지 않으며 실시간으로 갱신되지 않으므로, 일부 유형의 콘텐츠는 AR에서 적합하지 않습니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0033:0002",
+        "ko": "예를 들어, 가상 거울을 만나는 사용자는 자신의 반영이 나타나길 기대할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0033:0003",
+        "ko": "완전 반사 표면은 작거나 세부 정보가 많은 부분에서만 사용하고, 넓은 평면 표면에서는 반사도를 낮게 사용합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0034:0001",
+        "ko": "**이동하는 객체를 처리합니다.**"
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0035:0001",
+        "ko": "현실적인 반사를 렌더링하려면 해당 가상 객체 주변의 작은 영역을 캡처하는 환경 probe가 필요합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0035:0002",
+        "ko": "객체 위치가 변경되면 해당 환경 probe도 변경되어 객체의 새 주변 환경이 반영되어야 합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0035:0003",
+        "ko": "프로브를 수동으로 배치할 때는 이동하는 객체를 처리하기 위해 다음 전략 중 하나 이상을 고려합니다:"
+      },
+      {
+        "id": "seg:list:use-environment-texturing-wisely:0036:0001",
+        "ko": "객체의 이동 경로가 사전에 알려진 경우 여러 환경 probe anchor를 생성해 해당 경로를 따라 배치합니다."
+      },
+      {
+        "id": "seg:list:use-environment-texturing-wisely:0036:0002",
+        "ko": "주변 probe의 extent 범위를 벗어난 위치로 이동한 객체를 렌더링할 때 대체 사용할 수 있도록 매우 큰 extent의 글로벌 환경 probe를 생성합니다."
+      },
+      {
+        "id": "seg:list:use-environment-texturing-wisely:0036:0003",
+        "ko": "객체가 이동한 뒤에는 새 위치 주변을 캡처하는 새 probe를 생성하고 이전 위치와 연결된 환경 probe를 제거합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0037:0001",
+        "ko": "[`ARSCNView`](arscnview.md)로 AR 콘텐츠를 표시할 때 SceneKit은 여러 환경 probe의 extent가 겹치는 객체의 경우 자동으로 환경 텍스처를 보간합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0038:0001",
+        "ko": "**환경 텍스처를 너무 자주 생성하지 않습니다.**"
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0039:0001",
+        "ko": "ARKit는 카메라 이미지를 수집하는 데 시간이 걸리며, 그 이미지를 결합하고 외삽해 환경 텍스처를 만들려면 계산 자원이 필요합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0039:0002",
+        "ko": "새 [`AREnvironmentProbeAnchor`](arenvironmentprobeanchor.md) 인스턴스를 AR 세션에 자주 추가해도 표시 장면의 변화가 뚜렷하지 않을 수 있지만, 배터리 전력을 소모하고 AR 경험의 다른 요소에서 사용할 수 있는 성능 오버헤드를 줄입니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0040:0001",
+        "ko": "이 앱은 사용자가 가상 객체를 이동하거나 크기를 조정할 때마다 새 환경 probe를 생성하지만, 이러한 업데이트는 초당 1회보다 자주 발생하지 않도록 제한합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0040:0002",
+        "ko": "(샘플 `updateEnvironmentProbe(atTime:)` 함수를 참조합니다.)"
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0041:0001",
+        "ko": "**서로 다른 환경 텍스처 간의 급격한 전환을 피합니다.**"
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0042:0001",
+        "ko": "[`ARSCNView`](arscnview.md)에서 환경 텍스처가 변경되면(객체 이동 또는 해당 위치에 새 텍스처가 사용 가능해진 경우), SceneKit은 짧은 페이드 인 애니메이션을 사용해 새 결과로 자동 전환합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0042:0002",
+        "ko": "전환 전후에 사용되는 환경 텍스처의 내용에 따라 이 변경이 사용자에게 거칠게 느껴질 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0043:0001",
+        "ko": "현실감 없는 전환을 피하기 위해 이 샘플 앱은 첫 번째 환경 텍스처가 사용 가능해질 때까지 사용자가 가상 콘텐츠를 배치하도록 허용하지 않습니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0043:0002",
+        "ko": "자동 모드에서는 세션 시작 즉시 ARKit가 넓은 영역을 덮는 fallback 환경 텍스처 생성을 자동으로 시작합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0043:0003",
+        "ko": "(샘플 `updateSceneEnvironmentProbe(for:)` 함수를 참조합니다.) 이 환경 텍스처가 사용 가능해질 때까지 기다리면 가상 객체가 항상 세션에 적합한 환경을 반영합니다."
+      },
+      {
+        "id": "seg:paragraph:use-environment-texturing-wisely:0043:0004",
+        "ko": "(See the sample `updateSceneEnvironmentProbe(for:)` function.) Waiting until this environment texture is available ensures that virtual objects always reflect an environment appropriate to the session."
+      }
+    ]
+  }
+}
