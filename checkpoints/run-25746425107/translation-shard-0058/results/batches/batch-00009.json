@@ -1,0 +1,210 @@
+{
+  "batchIndex": 9,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:26.769Z",
+  "durationMs": 10098,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:heading:cblasstpsv:0000:0001",
+        "ko": "cblas_stpsv(_:_:_:_:_:_:_:_:)"
+      },
+      {
+        "id": "seg:paragraph:cblasstpsv:0002:0001",
+        "ko": "압축된 삼각 행렬 방정식 시스템을 풉니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "`TransA` 값에 따라 방정식 `A*X=B` 또는 `A'*X=B`를 풉니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0009:0001",
+        "ko": "❗ **중요**: Apple은 BLAS와 LAPACK 라이브러리를 LAPACK 3.9.1과 일치하도록 Accelerate 프레임워크에서 제공합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0009:0002",
+        "ko": "iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26 및 watchOS 26부터 라이브러리는 LAPACK 3.12.0과 일치합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0009:0003",
+        "ko": "이 새로운 인터페이스는 추가 기능과 함께 새로운 ILP64 인터페이스를 제공합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0009:0004",
+        "ko": "새 인터페이스를 사용하려면 Accelerate 또는 vecLib 헤더를 포함하기 전에 `ACCELERATE_NEW_LAPACK`를 정의해야 합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0009:0005",
+        "ko": "ILP64 인터페이스의 경우 `ACCELERATE_LAPACK_ILP64`도 정의해야 합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0009:0006",
+        "ko": "Swift 프로젝트의 경우 Xcode 빌드 설정에서 `ACCELERATE_NEW_LAPACK=1` 및 `ACCELERATE_LAPACK_ILP64=1`을 전처리기 매크로로 지정해야 합니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0001",
+        "ko": "`ORDER`: 행 기준(C) 또는 열 기준(Fortran) 데이터 배치를 지정합니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0002",
+        "ko": "`UPLO`: 행렬에서 상삼각 또는 하삼각을 사용할지 지정합니다. 유효한 값은 `'U'` 또는 `'L'`입니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0003",
+        "ko": "`TRANSA`: 행렬 A를 사용할지 (`'N'` 또는 `'n'`) 아니면 A의 전치 행렬을 사용할지 (`'T'`, `'t'`, `'C'` 또는 `'c'`) 지정합니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0004",
+        "ko": "`DIAG`: 행렬이 단위 삼각 행렬인지 지정합니다. 가능한 값은 `'U'`(단위 삼각 행렬) 또는 `'N'`(비단위 삼각 행렬)입니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0005",
+        "ko": "`N`: 행렬 `A`의 order입니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0006",
+        "ko": "`AP`: (압축 저장 형식의) 삼각 행렬 `A`입니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0007",
+        "ko": "`X`: 입력 시 벡터 `B`를 포함합니다. 반환 시 벡터 `X`로 덮어씁니다."
+      },
+      {
+        "id": "seg:list:parameters:0011:0008",
+        "ko": "`INCX`: `X`의 간격입니다. 예를 들어 `incX`가 7이면 7번째 요소마다 사용됩니다."
+      },
+      {
+        "id": "seg:heading:see-also:0012:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0013:0001",
+        "ko": "[func cblas_sasum(__LAPACK_int, UnsafePointer<Float>?, __LAPACK_int) -> Float](cblas_sasum(_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0014:0001",
+        "ko": "벡터의 요소 절대값 합계를 계산합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:see-also:0015:0001",
+        "ko": "[func cblas_saxpy(__LAPACK_int, Float, UnsafePointer<Float>?, __LAPACK_int, UnsafeMutablePointer<Float>?, __LAPACK_int)](cblas_saxpy(_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "상수 곱한 벡터에 벡터를 더하는 연산을 수행합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:see-also:0017:0001",
+        "ko": "[func cblas_scopy(__LAPACK_int, UnsafePointer<Float>?, __LAPACK_int, UnsafeMutablePointer<Float>?, __LAPACK_int)](cblas_scopy(_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "벡터를 다른 벡터로 복사합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:see-also:0019:0001",
+        "ko": "[func cblas_sgbmv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, __LAPACK_int, Float, UnsafePointer<Float>?, __LAPACK_int, UnsafePointer<Float>?, __LAPACK_int, Float, UnsafeMutablePointer<Float>?, __LAPACK_int)](cblas_sgbmv(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "일반 밴드 행렬을 스케일링한 다음 벡터를 곱하고 벡터를 더합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:see-also:0021:0001",
+        "ko": "[func cblas_sgemm(CBLAS_ORDER, CBLAS_TRANSPOSE, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, Float, UnsafePointer<Float>?, __LAPACK_int, UnsafePointer<Float>?, __LAPACK_int, Float, UnsafeMutablePointer<Float>?, __LAPACK_int)](cblas_sgemm(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "두 행렬을 곱합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:see-also:0023:0001",
+        "ko": "[func cblas_sgemv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, Float, UnsafePointer<Float>?, __LAPACK_int, UnsafePointer<Float>?, __LAPACK_int, Float, UnsafeMutablePointer<Float>?, __LAPACK_int)](cblas_sgemv(_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0024:0001",
+        "ko": "단정밀도 행렬을 벡터와 곱합니다."
+      },
+      {
+        "id": "seg:list:see-also:0025:0001",
+        "ko": "[func cblas_sger(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, Float, UnsafePointer<Float>?, __LAPACK_int, UnsafePointer<Float>?, __LAPACK_int, UnsafeMutablePointer<Float>?, __LAPACK_int)](cblas_sger(_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0026:0001",
+        "ko": "벡터 X를 벡터 Y의 전치와 곱한 다음 행렬 A를 더합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:see-also:0027:0001",
+        "ko": "[func cblas_snrm2(__LAPACK_int, UnsafePointer<Float>?, __LAPACK_int) -> Float](cblas_snrm2(_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0028:0001",
+        "ko": "벡터의 L2 노름(유클리드 길이)을 계산합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:see-also:0031:0001",
+        "ko": "[func cblas_srotg(UnsafeMutablePointer<Float>, UnsafeMutablePointer<Float>, UnsafeMutablePointer<Float>, UnsafeMutablePointer<Float>)](cblas_srotg(_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0032:0001",
+        "ko": "Givens 회전 행렬을 구성합니다."
+      },
+      {
+        "id": "seg:list:see-also:0033:0001",
+        "ko": "[func cblas_srotm(__LAPACK_int, UnsafeMutablePointer<Float>?, __LAPACK_int, UnsafeMutablePointer<Float>?, __LAPACK_int, UnsafePointer<Float>)](cblas_srotm(_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0034:0001",
+        "ko": "수정된 Givens 변환을 적용합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:see-also:0035:0001",
+        "ko": "[func cblas_srotmg(UnsafeMutablePointer<Float>, UnsafeMutablePointer<Float>, UnsafeMutablePointer<Float>, Float, UnsafeMutablePointer<Float>)](cblas_srotmg(_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0036:0001",
+        "ko": "수정된 Givens 회전 행렬을 생성합니다."
+      },
+      {
+        "id": "seg:list:see-also:0037:0001",
+        "ko": "[func cblas_ssbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, Float, UnsafePointer<Float>?, __LAPACK_int, UnsafePointer<Float>?, __LAPACK_int, Float, UnsafeMutablePointer<Float>?, __LAPACK_int)](cblas_ssbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0038:0001",
+        "ko": "대칭 밴드 행렬을 스케일링한 다음 벡터를 곱하고 벡터를 더합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:see-also:0039:0001",
+        "ko": "[func cblas_sscal(__LAPACK_int, Float, UnsafeMutablePointer<Float>?, __LAPACK_int)](cblas_sscal(_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0040:0001",
+        "ko": "벡터의 각 요소를 상수로 곱합니다(단정밀도)."
+      },
+      {
+        "id": "seg:list:see-also:0041:0001",
+        "ko": "[func cblas_sspmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, UnsafePointer<Float>?, UnsafePointer<Float>?, __LAPACK_int, Float, UnsafeMutablePointer<Float>?, __LAPACK_int)](cblas_sspmv(_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0042:0001",
+        "ko": "압축 대칭 행렬을 스케일링한 다음 벡터에 곱하고, 다른 벡터를 스케일링해 더합니다(단정밀도)."
+      },
+      {
+        "id": "seg:paragraph:see-also:0044:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/cblas_stpsv(_:_:_:_:_:_:_:_:))*"
+      },
+      {
+        "id": "seg:heading:chbtrd:0000:0001",
+        "ko": "chbtrd_(_:_:_:_:_:_:_:_:_:_:_:_:)"
+      },
+      {
+        "id": "seg:list:see-also:0029:0001",
+        "ko": "[func cblas_srot(__LAPACK_int, UnsafeMutablePointer<Float>?, __LAPACK_int, UnsafeMutablePointer<Float>?, __LAPACK_int, Float, Float)](cblas_srot(_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0030:0001",
+        "ko": "두 벡터 쌍에 Givens 회전 행렬을 적용합니다."
+      }
+    ]
+  }
+}
