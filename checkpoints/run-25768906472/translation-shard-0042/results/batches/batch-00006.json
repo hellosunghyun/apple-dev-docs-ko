@@ -1,0 +1,250 @@
+{
+  "batchIndex": 6,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:33.892Z",
+  "durationMs": 11078,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:list:parameters:0010:0007",
+        "ko": "`key_mask`: key에서 항목을 무시하기 위해 적용되는 마스크입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0008",
+        "ko": "`key_mask_stride`: key mask의 배치 stride입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0009",
+        "ko": "`value`: value 입력 행렬 데이터에 대한 포인터입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0010",
+        "ko": "`value_stride`: value의 배치 stride입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0011",
+        "ko": "`output`: output 행렬 데이터에 대한 포인터입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0012",
+        "ko": "`output_stride`: output의 배치 stride입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0013",
+        "ko": "`add_to_attention`: attention 계산에서 softmax 이전 mask 함수의 일부로 사용되는 2D 텐서에 대한 포인터입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0014",
+        "ko": "`backprop_cache_size`: 역전파 캐시의 크기(바이트)입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0015",
+        "ko": "`backprop_cache`: BNNS가 향후 이 함수 호출을 가속화하기 위해 사용할 수 있는 중간 결과를 저장하는 캐시입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0016",
+        "ko": "`workspace_size`: 배열 workspace의 크기(바이트)입니다."
+      },
+      {
+        "id": "seg:list:parameters:0010:0017",
+        "ko": "`workspace`: 계산 중에 사용되는 임시 버퍼입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0011:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "멀티헤드 어텐션 프로젝션 파라미터를 포함하는 구조체입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "멀티헤드 어텐션 레이어의 파라미터를 포함하는 구조체입니다."
+      },
+      {
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func BNNSFilterCreateLayerMultiheadAttention(UnsafePointer<BNNSLayerParametersMultiheadAttention>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayermultiheadattention(_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "새로운 멀티헤드 어텐션 레이어를 반환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0018:0001",
+        "ko": "[func BNNSApplyMultiheadAttentionBackward(BNNSFilter?, Int, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSMHAProjectionParameters>?, UnsafeRawPointer?, Int, UnsafePointer<BNNSNDArrayDescriptor>?, Int, UnsafeMutablePointer<BNNSMHAProjectionParameters>?, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSMHAProjectionParameters>?, UnsafePointer<BNNSNDArrayDescriptor>?, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSMHAProjectionParameters>, Int, UnsafeMutableRawPointer?, UnsafeMutablePointer<Int>?, UnsafeMutableRawPointer?) -> Int32](bnnsapplymultiheadattentionbackward(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnscomputenormbackward(_:_:_:_:_:_:))*"
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsapplymultiheadattention(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:))*"
+      },
+      {
+        "id": "seg:heading:bnnscomputenormbackward:0000:0001",
+        "ko": "BNNSComputeNormBackward(_:_:_:_:_:_:)"
+      },
+      {
+        "id": "seg:paragraph:bnnscomputenormbackward:0002:0001",
+        "ko": "compute norm 함수의 그라디언트를 역전파합니다."
+      },
+      {
+        "id": "seg:list:parameters:0008:0001",
+        "ko": "`target_desc`: The descriptor—which is either an input query, key, or value, or an output—of the main target of the operation."
+      },
+      {
+        "id": "seg:list:parameters:0008:0002",
+        "ko": "`weights`: The descriptor of the initial projection’s weights."
+      },
+      {
+        "id": "seg:list:parameters:0008:0003",
+        "ko": "`bias`: The descriptor of the initial projection’s bias."
+      },
+      {
+        "id": "seg:list:parameters:0008:0004",
+        "ko": "`out_delta`: 출력 델타의 디스크립터입니다."
+      },
+      {
+        "id": "seg:list:parameters:0008:0005",
+        "ko": "`norm_type`: 노름의 유형입니다. 이 함수는 [`BNNSL2Norm`](bnnsl2norm.md)만 지원합니다."
+      },
+      {
+        "id": "seg:list:parameters:0008:0006",
+        "ko": "`axis_flags`: 함수가 노름 계산에 사용하는 차원입니다. `0`으로 설정하면 모든 차원을 대상으로 노름을 계산함을 지정합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[static func computeNorm(input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, axes: [Int]?) throws](bnns/computenorm(input:output:axes:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "유클리드 노름을 계산하고 그 결과를 출력 텐서에 기록합니다."
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[static func computeNormBackward(input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, axes: [Int]?, outputGradient: BNNSNDArrayDescriptor, generatingInputGradient: BNNSNDArrayDescriptor) throws](bnns/computenormbackward(input:output:axes:outputgradient:generatinginputgradient:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "compute norm 함수의 그라디언트를 역전파합니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[func BNNSComputeNorm(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, BNNSNormType, UInt32) -> Int32](bnnscomputenorm(_:_:_:_:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "지정한 텐서 전체 또는 지정된 축에서 노름을 계산합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "노름 유형을 설명하는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnscomputenormbackward(_:_:_:_:_:_:))*"
+      },
+      {
+        "id": "seg:paragraph:bnnsgraphbuilderpoolingpadding:0002:0001",
+        "ko": "풀링 연산에 사용할 제로 패딩을 지정하기 위한 패딩입니다."
+      },
+      {
+        "id": "seg:list:bnnsgraphbuilderpoolingpadding:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:heading::0000:0001",
+        "ko": ".<=(::)"
+      },
+      {
+        "id": "seg:paragraph::0002:0001",
+        "ko": "현재 그래프에 요소별 이하 비교 연산을 추가합니다."
+      },
+      {
+        "id": "seg:list::0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:paragraph:declaration:0008:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/'._=(_:_:)-20vpj)*"
+      },
+      {
+        "id": "seg:paragraph:odesc:0002:0001",
+        "ko": "출력 디스크립터입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "손실 계산에 사용되는 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "입력 디스크립터입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "계산된 손실을 축소하는 데 사용되는 함수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "손실 함수가 레이블에 적용하는 스무딩 수준을 정의하는 값입니다."
+      },
+      {
+        "id": "seg:heading:inittargetdescweightsbias:0000:0001",
+        "ko": "init(target_desc:weights:bias:)"
+      },
+      {
+        "id": "seg:paragraph:inittargetdescweightsbias:0002:0001",
+        "ko": "지정된 파라미터에서 새로운 멀티헤드 어텐션 프로젝션 파라미터 구조체를 반환합니다."
+      },
+      {
+        "id": "seg:list:inittargetdescweightsbias:0004:0001",
+        "ko": "iOS ?+"
+      },
+      {
+        "id": "seg:list:inittargetdescweightsbias:0004:0002",
+        "ko": "iPadOS ?+"
+      },
+      {
+        "id": "seg:list:inittargetdescweightsbias:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:list:inittargetdescweightsbias:0004:0004",
+        "ko": "macOS ?+"
+      },
+      {
+        "id": "seg:list:inittargetdescweightsbias:0004:0005",
+        "ko": "tvOS ?+"
+      },
+      {
+        "id": "seg:list:inittargetdescweightsbias:0004:0006",
+        "ko": "visionOS ?+"
+      },
+      {
+        "id": "seg:list:inittargetdescweightsbias:0004:0007",
+        "ko": "watchOS ?+"
+      },
+      {
+        "id": "seg:list:parameters:0008:0001",
+        "ko": "`target_desc`: 연산의 주요 대상(입력 query, key, value 또는 출력) 중 하나에 대한 디스크립터입니다."
+      },
+      {
+        "id": "seg:list:parameters:0008:0002",
+        "ko": "`weights`: 초기 projection의 가중치 디스크립터입니다."
+      },
+      {
+        "id": "seg:list:parameters:0008:0003",
+        "ko": "`bias`: 초기 projection의 bias 디스크립터입니다."
+      }
+    ]
+  }
+}
