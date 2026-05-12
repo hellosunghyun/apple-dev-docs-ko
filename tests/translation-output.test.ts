@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { collectMarkdownLinks } from "../scripts/lib/segment.js";
 import { repairTranslationOutput, repairTranslatedSegment, validateTranslationOutput } from "../scripts/lib/validate.js";
+import { getUsageLimitInfo } from "../scripts/translate/codex-worker.js";
 import type { TranslationBatchInput } from "../scripts/lib/types.js";
 
 const input: TranslationBatchInput = {
@@ -83,5 +84,17 @@ describe("translation output validation", () => {
 
   it("can directly repair a translated segment", () => {
     expect(repairTranslatedSegment("Call `trackID`.", "trackID를 호출합니다.")).toContain("`trackID`");
+  });
+
+  it("detects Codex usage limit reset hints", () => {
+    const info = getUsageLimitInfo(
+      "ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 4:00 AM.",
+      new Date("2026-05-12T03:30:00Z")
+    );
+
+    expect(info).toMatchObject({
+      retryAfterText: "4:00 AM",
+      retryAt: "2026-05-12T04:00:00.000Z"
+    });
   });
 });

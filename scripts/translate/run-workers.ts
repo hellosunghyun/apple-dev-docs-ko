@@ -1,9 +1,9 @@
-import { appendFile, rename, writeFile } from "node:fs/promises";
+import { appendFile, readdir, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
 import PQueue from "p-queue";
 import { Command } from "commander";
 import { ensureDir, readJson, resolveRoot } from "../lib/fs.js";
-import { translateBatch } from "./codex-worker.js";
+import { getUsageLimitInfo, translateBatch, type UsageLimitInfo } from "./codex-worker.js";
 import type { QueueFile, TranslationBatchOutput } from "../lib/types.js";
 
 const program = new Command();
@@ -50,6 +50,10 @@ async function main(): Promise<void> {
   let failed = 0;
   let flushChain = Promise.resolve();
   let abortReason = "";
+  let pauseInfo: UsageLimitInfo | undefined;
+
+  completed = await loadCompletedBatchOutputs(batchDir, batchStates, outputs);
+  started = completed;
 
   await appendSummaryHeader(queueFile, totalBatches, totalSegments, concurrency);
   notice(
@@ -86,6 +90,24 @@ async function main(): Promise<void> {
         logProgress(queueFile, "batch-complete", batchIndex, totalBatches, completed, failed, started, batchState.durationMs);
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error);
+        const usageLimitInfo = getUsageLimitInfo(message);
+        if (usageLimitInfo) {
+          batchState.status = "queued";
+          batchState.completedAt = new Date().toISOString();
+          batchState.durationMs = Date.now() - batchStartedAt;
+          batchState.error = usageLimitInfo.message;
+          if (!pauseInfo) {
+            pauseInfo = usageLimitInfo;
+            abortReason = pauseMessage(usageLimitInfo);
+            workerQueue.clear();
+            await writePauseInfo(progressPath, usageLimitInfo, queueFile);
+            console.error(abortReason);
+            notice("Shard paused", `${shardLabel(queueFile)}: ${abortReason}`);
+          }
+          await queueFlush(`batch-${batchIndex}-usage-limit-paused`);
+          await appendSummaryRow(queueFile, totalBatches, completed, failed, activeCount(batchStates));
+          return;
+        }
         failed += 1;
         batchState.status = "failed";
         batchState.completedAt = new Date().toISOString();
@@ -109,14 +131,18 @@ async function main(): Promise<void> {
         }
       }
       await queueFlush(`batch-${batchIndex}-${batchState.status}`);
-      await appendSummaryRow(queueFile, totalBatches, completed, failed, started);
+      await appendSummaryRow(queueFile, totalBatches, completed, failed, activeCount(batchStates));
     });
   });
 
   await workerQueue.onIdle();
   await flushChain;
-  await flushState("finished");
-  await appendSummaryRow(queueFile, totalBatches, completed, failed, started, true);
+  await flushState(pauseInfo ? "paused" : "finished");
+  await appendSummaryRow(queueFile, totalBatches, completed, failed, activeCount(batchStates), true);
+  if (pauseInfo) {
+    console.log(`${shardLabel(queueFile)} paused after Codex usage limit; completed batches are saved for resume.`);
+    return;
+  }
   if (failures.length) {
     console.error(`Translation failures: ${failures.length}${abortReason ? ` (${abortReason})` : ""}`);
     process.exitCode = 1;
@@ -133,7 +159,7 @@ async function main(): Promise<void> {
 
   async function flushState(reason: string): Promise<void> {
     const updatedAt = new Date().toISOString();
-    const active = Math.max(0, started - completed - failed);
+    const active = activeCount(batchStates);
     const processed = completed + failed;
     const percent = totalBatches ? Number(((processed / totalBatches) * 100).toFixed(2)) : 100;
     const progress = {
@@ -143,6 +169,7 @@ async function main(): Promise<void> {
       queue: options.queue,
       shard: queueFile.shard,
       abortReason,
+      pause: pauseInfo,
       totals: {
         batches: totalBatches,
         segments: totalSegments,
@@ -160,6 +187,7 @@ async function main(): Promise<void> {
       updatedAt,
       queue: options.queue,
       abortReason,
+      pause: pauseInfo,
       outputs,
       failures,
       progress
@@ -176,6 +204,59 @@ function batchOutputPath(batchDir: string, index: number): string {
 
 function batchFailurePath(batchDir: string, index: number): string {
   return path.join(batchDir, `batch-${String(index).padStart(5, "0")}.failure.json`);
+}
+
+async function loadCompletedBatchOutputs(
+  batchDir: string,
+  batchStates: BatchState[],
+  outputs: Array<TranslationBatchOutput | undefined>
+): Promise<number> {
+  try {
+    const files = await readdir(batchDir);
+    let loaded = 0;
+    for (const file of files) {
+      const match = file.match(/^batch-(\d{5})\.json$/);
+      if (!match) continue;
+      const batchIndex = Number(match[1]);
+      if (!Number.isInteger(batchIndex) || batchIndex < 0 || batchIndex >= batchStates.length) continue;
+      const batchOutput = await readJson<{
+        status?: string;
+        completedAt?: string;
+        durationMs?: number;
+        output?: TranslationBatchOutput;
+      }>(path.join(batchDir, file));
+      if (batchOutput.status !== "success" || !batchOutput.output) continue;
+      outputs[batchIndex] = batchOutput.output;
+      batchStates[batchIndex].status = "success";
+      batchStates[batchIndex].completedAt = batchOutput.completedAt;
+      batchStates[batchIndex].durationMs = batchOutput.durationMs;
+      loaded += 1;
+    }
+    if (loaded > 0) {
+      console.log(`Loaded completed batches from checkpoint: ${loaded}`);
+    }
+    return loaded;
+  } catch {
+    return 0;
+  }
+}
+
+async function writePauseInfo(progressPath: string, usageLimitInfo: UsageLimitInfo, queueFile: QueueFile): Promise<void> {
+  await writeJsonAtomic(path.join(path.dirname(progressPath), "pause.json"), {
+    pausedAt: new Date().toISOString(),
+    reason: "codex_usage_limit",
+    shard: queueFile.shard,
+    ...usageLimitInfo
+  });
+}
+
+function pauseMessage(usageLimitInfo: UsageLimitInfo): string {
+  const retry = usageLimitInfo.retryAfterText ? `; retry after ${usageLimitInfo.retryAfterText}` : "";
+  return `Paused after Codex usage limit${retry}`;
+}
+
+function activeCount(batchStates: BatchState[]): number {
+  return batchStates.filter((batch) => batch.status === "in_progress").length;
 }
 
 async function writeJsonAtomic(filePath: string, value: unknown): Promise<void> {
@@ -254,7 +335,7 @@ async function appendSummaryRow(
   totalBatches: number,
   completed: number,
   failed: number,
-  started: number,
+  active: number,
   force = false
 ): Promise<void> {
   if (!process.env.GITHUB_STEP_SUMMARY) return;
@@ -262,7 +343,6 @@ async function appendSummaryRow(
   const every = Number(process.env.PROGRESS_SUMMARY_INTERVAL_BATCHES ?? 10);
   if (!force && processed > 0 && processed % every !== 0) return;
   if (force && processed > 0 && processed % every === 0) return;
-  const active = Math.max(0, started - processed);
   const percent = totalBatches ? ((processed / totalBatches) * 100).toFixed(2) : "100.00";
   await appendFile(
     process.env.GITHUB_STEP_SUMMARY,

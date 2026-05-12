@@ -6,6 +6,10 @@ on:
       shard_total:
         required: true
         default: "256"
+      resume_run_id:
+        required: false
+        default: ""
+        description: Optional previous run id. Restores completed shard batch outputs from checkpoint branches.
       max_parallel:
         required: true
         default: "20"
@@ -175,6 +179,38 @@ jobs:
             args+=(--batch-chars "$BATCH_CHARS")
           fi
           pnpm tsx scripts/translate/build-queue.ts "${args[@]}"
+      - name: Restore shard checkpoint
+        if: inputs.resume_run_id != ''
+        env:
+          SHARD_ID: ${{ steps.shard.outputs.id }}
+          RESUME_RUN_ID: ${{ inputs.resume_run_id }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          resume_branch="checkpoint/${RESUME_RUN_ID}/shard-${SHARD_ID}"
+          resume_tmp="${RUNNER_TEMP}/resume-shard-${SHARD_ID}"
+          resume_dir="${resume_tmp}/checkpoints/run-${RESUME_RUN_ID}/translation-shard-${SHARD_ID}"
+
+          rm -rf "$resume_tmp"
+          git init "$resume_tmp" >/dev/null
+          git -C "$resume_tmp" remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if ! git -C "$resume_tmp" fetch --depth=1 origin "$resume_branch" >/dev/null 2>&1; then
+            echo "No checkpoint branch found for ${resume_branch}; starting shard from scratch."
+            exit 0
+          fi
+          git -C "$resume_tmp" checkout --detach FETCH_HEAD >/dev/null 2>&1
+          mkdir -p tmp/results/batches tmp/progress
+          if [ -d "${resume_dir}/results/batches" ]; then
+            cp -R "${resume_dir}/results/batches/." tmp/results/batches/
+          fi
+          if [ -f "${resume_dir}/results/latest.json" ]; then
+            cp "${resume_dir}/results/latest.json" tmp/results/resumed-latest.json
+          fi
+          if [ -f "${resume_dir}/progress/latest.json" ]; then
+            cp "${resume_dir}/progress/latest.json" tmp/progress/resumed-latest.json
+          fi
+          restored="$(find tmp/results/batches -name 'batch-*.json' ! -name '*.failure.json' | wc -l | tr -d ' ')"
+          echo "Restored ${restored} completed batch outputs from ${resume_branch}."
       - name: Translate shard with incremental progress
         env:
           MOCK_TRANSLATION: ${{ inputs.mock_translation == 'true' && '1' || '' }}
@@ -382,7 +418,20 @@ jobs:
         with:
           pattern: translation-shard-*
           path: tmp/translation-shards
+      - name: Detect paused shards
+        id: paused
+        run: |
+          paused_count="$(find tmp/translation-shards -path '*/progress/pause.json' -type f | wc -l | tr -d ' ')"
+          echo "count=${paused_count}" >> "$GITHUB_OUTPUT"
+          if [ "$paused_count" != "0" ]; then
+            echo "paused=true" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Translation paused::${paused_count} shard(s) paused after Codex usage limits. Checkpoints and artifacts were saved; aggregate is skipped."
+            find tmp/translation-shards -path '*/progress/pause.json' -type f -print | sort | head -n 20
+          else
+            echo "paused=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Apply shard results
+        if: steps.paused.outputs.paused != 'true'
         run: |
           mkdir -p translation-memory/files
           find tmp/translation-shards -path '*/translation-memory/files/*.json' -print0 | while IFS= read -r -d '' file; do
@@ -393,6 +442,7 @@ jobs:
             pnpm tsx scripts/translate/apply-results.ts --queue "$shard_dir/queue.json" --results "$shard_dir/results.json"
           done
       - name: Render site content
+        if: steps.paused.outputs.paused != 'true'
         env:
           LIMIT_FILES: ${{ inputs.limit_files }}
         run: |
@@ -406,6 +456,7 @@ jobs:
             pnpm run site:build
           fi
       - run: pnpm run report
+        if: steps.paused.outputs.paused != 'true'
       - run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
@@ -413,4 +464,4 @@ jobs:
           git add state translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
           git commit -m "feat: 병렬 번역 샤드 결과 갱신" || echo "No changes"
           git push
-        if: inputs.commit_results == 'true' && inputs.mock_translation != 'true'
+        if: steps.paused.outputs.paused != 'true' && inputs.commit_results == 'true' && inputs.mock_translation != 'true'
