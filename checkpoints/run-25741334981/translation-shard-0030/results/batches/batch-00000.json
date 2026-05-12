@@ -1,0 +1,250 @@
+{
+  "batchIndex": 0,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:53.930Z",
+  "durationMs": 21561,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:arcameratrackingstatenotavailable:0002:0001",
+        "ko": "카메라 위치 추적은 사용할 수 없습니다."
+      },
+      {
+        "id": "seg:list:mentions:0008:0001",
+        "ko": "[Managing Session Life Cycle and Tracking Quality](managing-session-life-cycle-and-tracking-quality.md)"
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[case limited(ARCamera.TrackingState.Reason)](avaudioconverter/applicableencodebitrates.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "추적은 가능하지만 결과 품질이 신뢰하기 어렵습니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "위치 추적 품질이 제한되는 원인입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "카메라 위치 추적이 최적의 결과를 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:armeshclassificationdoor:0002:0001",
+        "ko": "해당 면은 실제 세계의 문 일부입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "해당 면은 실제 세계의 천장 일부입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "해당 면은 실제 세계의 바닥 일부입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "ARKit에서 분류할 수 없는 면입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "해당 면은 실제 세계의 좌석 일부입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "해당 면은 실제 세계의 테이블 일부입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "해당 면은 실제 세계의 벽 일부입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0021:0001",
+        "ko": "해당 면은 실제 세계의 창문 일부입니다."
+      },
+      {
+        "id": "seg:heading:capturehighresolutionframecompletion:0000:0001",
+        "ko": "captureHighResolutionFrame(completion:)"
+      },
+      {
+        "id": "seg:paragraph:capturehighresolutionframecompletion:0002:0001",
+        "ko": "일반 주기 외부에서 고해상도 캡처 이미지를 포함하는 frame을 요청합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "This property returns `nil` if you’re not encoding."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "실패한 경우 completion block은 `nil`이 아닌 오류 객체를 받습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "이전의 고해상도 캡처 요청이 아직 완료되지 않았거나 시스템 캡처 파이프라인에 근본 문제가 발생한 경우 호출이 실패할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0003",
+        "ko": "각 경우에 따라 [`highResolutionFrameCaptureInProgress`](arerror/highresolutionframecaptureinprogress.md) 또는 [`highResolutionFrameCaptureFailed`](arerror/highresolutionframecapturefailed.md)를 확인하여 실패 원인을 식별할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "ARKit은 자세 정보, 앵커, frame semantics를 포함하여 픽셀 데이터 이외의 frame 속성을 채웁니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "시스템은 frame을 completion handler에 비동기적으로 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "세션 중 언제든지 이 함수를 호출할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0002",
+        "ko": "시스템은 고해상도 frame을 out-of-band로 전달하므로 [`currentFrame`](arsession/currentframe.md) 또는 [`session(_:didUpdate:)`](arsessiondelegate/session(_:didupdate:)-9v2kw.md)의 frame 인수처럼 세션이 정기 간격으로 받는 다른 frame에 영향을 주지 않습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0012:0001",
+        "ko": "최고 해상도 캡처 이미지를 얻으려면 세션 구성에서 non-binned [`videoFormat`](arconfiguration/videoformat-swift.property.md)을 선택하세요."
+      },
+      {
+        "id": "seg:paragraph:discussion:0012:0002",
+        "ko": "[`recommendedVideoFormatForHighResolutionFrameCapturing`](arconfiguration/recommendedvideoformatforhighresolutionframecapturing.md)를 호출해 자신에게 가장 적합한 옵션을 선택할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0013:0001",
+        "ko": "최고 해상도의 정지 이미지를 위해서는 구성의 [`supportedVideoFormats`](arconfiguration/supportedvideoformats.md) 중 [`isRecommendedForHighResolutionFrameCapturing`](arconfiguration/videoformat-swift.class/isrecommendedforhighresolutionframecapturing.md)이 `true`를 반환하는 [`videoFormat`](arconfiguration/videoformat-swift.property.md)을 선택합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0013:0002",
+        "ko": "앱에 특정 해상도 요구 사항이 없다면, [`recommendedVideoFormatForHighResolutionFrameCapturing`](arconfiguration/recommendedvideoformatforhighresolutionframecapturing.md)가 반환하는 프레임워크 권장 형식을 사용할 수 있습니다."
+      },
+      {
+        "id": "seg:list:parameters:0015:0001",
+        "ko": "`completion`: 프레임 생성 시도 후 프레임워크가 실행하는 코드입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0016:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "ARKit의 해석을 포함해 활성 카메라 피드에서 캡처한 최신 정지 frame입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "위치 추적 정보가 포함된 세션의 일부로 캡처된 동영상 이미지입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arsession/capturehighresolutionframe(completion:))*"
+      },
+      {
+        "id": "seg:paragraph:init:0002:0001",
+        "ko": "새로운 월드 추적 구성을 초기화합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "This property returns `nil` if you’re not encoding."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "이 세션 구성으로 복원하려고 시도하는 이전 AR 세션의 상태입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration/init())*"
+      },
+      {
+        "id": "seg:heading:see-also:0006:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:availableencodebitrates:0002:0001",
+        "ko": "인코딩 시 코덱이 제공하는 모든 비트 전송률 배열입니다."
+      },
+      {
+        "id": "seg:list:availableencodebitrates:0004:0001",
+        "ko": "iOS ?+"
+      },
+      {
+        "id": "seg:list:availableencodebitrates:0004:0002",
+        "ko": "iPadOS ?+"
+      },
+      {
+        "id": "seg:list:availableencodebitrates:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:list:availableencodebitrates:0004:0004",
+        "ko": "macOS ?+"
+      },
+      {
+        "id": "seg:list:availableencodebitrates:0004:0005",
+        "ko": "tvOS ?+"
+      },
+      {
+        "id": "seg:list:availableencodebitrates:0004:0006",
+        "ko": "visionOS ?+"
+      },
+      {
+        "id": "seg:list:availableencodebitrates:0004:0007",
+        "ko": "watchOS ?+"
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 property는 인코딩하지 않는 경우 `nil`을 반환합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[var applicableEncodeBitRates: [NSNumber]?](avaudioconverter/applicableencodebitrates.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "현재 형식과 설정에 따라 인코딩 중 프레임워크가 적용하는 비트 전송률의 배열입니다."
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[var availableEncodeChannelLayoutTags: [NSNumber]?](avaudioconverter/availableencodechannellayouttags.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "인코딩 시 코덱이 제공하는 모든 출력 채널 레이아웃 태그의 배열입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "비트 전송률(초당 비트 수)입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "프레임워크가 인코딩 중 사용하는 키 값 상수입니다."
+      },
+      {
+        "id": "seg:heading:initcontentsof:0000:0001",
+        "ko": "init(contentsOf:)"
+      },
+      {
+        "id": "seg:paragraph:initcontentsof:0002:0001",
+        "ko": "파일에서 오디오를 재생할 플레이어를 생성합니다."
+      },
+      {
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      }
+    ]
+  }
+}
