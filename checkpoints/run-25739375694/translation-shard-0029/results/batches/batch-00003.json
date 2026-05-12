@@ -1,0 +1,142 @@
+{
+  "batchIndex": 3,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:54.554Z",
+  "durationMs": 21955,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:see-also:0035:0001",
+        "ko": "시스템이 음악 트랙으로 구성한 MIDI 이벤트 컬렉션에서 오디오를 재생하는 객체입니다."
+      },
+      {
+        "id": "seg:heading:creating-custom-audio-effects:0000:0001",
+        "ko": "사용자 지정 오디오 효과 만들기"
+      },
+      {
+        "id": "seg:paragraph:creating-custom-audio-effects:0001:0001",
+        "ko": "**Framework**: AVFAudio"
+      },
+      {
+        "id": "seg:paragraph:creating-custom-audio-effects:0002:0001",
+        "ko": "Audio Unit (AU) 플러그인을 생성해 Logic Pro X 및 GarageBand와 같은 앱에 사용자 지정 오디오 효과 처리를 추가합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0001",
+        "ko": "이 샘플 앱은 최신 Audio Unit 표준(AUv3)을 사용해 사용자 지정 오디오 효과 플러그인을 만드는 방법을 보여줍니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0006:0002",
+        "ko": "AUv3 표준은 [`App Extensions`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG) 모델을 기반으로 하며, 플러그인을 App Store 또는 자체 스토어를 통해 배포되는 앱에 포함된 확장으로 제공한다는 의미입니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0007:0001",
+        "ko": "샘플 Audio Unit은 컷오프 주파수 이하의 주파수를 출력으로 통과시키는 저역 통과 필터입니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0007:0002",
+        "ko": "이 지점 이상의 주파수는 감쇠됩니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0007:0003",
+        "ko": "또한 컷오프 지점 주변의 좁은 대역을 부스트하거나 감쇠하는 필터 공진도 조절도 가능합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0007:0004",
+        "ko": "아래 그림에서처럼, 플러그인의 사용자 인터페이스에 있는 드래그 가능한 점을 이동해 이러한 값을 설정합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0008:0001",
+        "ko": "![plug-in User Interface](https://docs-assets.developer.apple.com/published/77036aca41724e5409050b93ab4a5b9c/graph.png)"
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0001",
+        "ko": "이 프로젝트에는 iOS와 macOS 대상이 모두 있습니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0009:0002",
+        "ko": "각 플랫폼의 기본 앱 대상에는 두 개의 지원 대상이 있습니다. `AUv3FilterExtension`은 플러그인을 Audio Unit 확장으로 패키징한 대상이고, `AUv3FilterFramework`는 플러그인의 코드와 리소스를 번들로 묶는 대상입니다."
+      },
+      {
+        "id": "seg:blockquote:overview:0010:0001",
+        "ko": "**참고**: 이 Audio Unit 확장을 호스트 앱에서 사용하는 방법은 [`Incorporating Audio Effects and Instruments`](https://developer.apple.com/documentation/AudioToolbox/incorporating-audio-effects-and-instruments)에서 확인할 수 있습니다."
+      },
+      {
+        "id": "seg:heading:create-a-custom-audio-effect-plug-in:0011:0001",
+        "ko": "사용자 지정 오디오 효과 플러그인 생성"
+      },
+      {
+        "id": "seg:paragraph:create-a-custom-audio-effect-plug-in:0012:0001",
+        "ko": "확장 자체에는 두 가지 주요 구성 요소가 있습니다. 하나는 Audio Unit 본체이고, 다른 하나는 이를 생성하는 factory 객체입니다."
+      },
+      {
+        "id": "seg:paragraph:create-a-custom-audio-effect-plug-in:0013:0001",
+        "ko": "샘플 앱의 Audio Unit은 `AUv3FilterDemo`입니다."
+      },
+      {
+        "id": "seg:paragraph:create-a-custom-audio-effect-plug-in:0013:0002",
+        "ko": "이 클래스는 [`AUAudioUnit`](https://developer.apple.com/documentation/AudioToolbox/AUAudioUnit)을 상속하는 Swift class이며, 매개변수, 프리셋, I/O 버스 같은 핵심 기능을 포함해 플러그인의 인터페이스를 정의합니다."
+      },
+      {
+        "id": "seg:paragraph:create-a-custom-audio-effect-plug-in:0013:0003",
+        "ko": "`FilterDSPKernel`이라는 클래스가 플러그인의 디지털 신호 처리(DSP) 로직을 제공하며, 실시간 안전성을 보장하기 위해 C++로 작성됩니다."
+      },
+      {
+        "id": "seg:paragraph:create-a-custom-audio-effect-plug-in:0013:0004",
+        "ko": "Swift가 C++와 직접 통신할 수 없기 때문에 샘플 프로젝트에는 중간 역할을 하는 Objective-C++ 어댑터 클래스 `FilterDSPKernelAdapter`도 포함됩니다."
+      },
+      {
+        "id": "seg:paragraph:create-a-custom-audio-effect-plug-in:0014:0001",
+        "ko": "`AUv3FilterDemoViewController`는 Audio Unit의 메인 뷰 컨트롤러입니다."
+      },
+      {
+        "id": "seg:paragraph:create-a-custom-audio-effect-plug-in:0014:0002",
+        "ko": "이 클래스는 [`AUAudioUnitFactory`](https://developer.apple.com/documentation/AudioToolbox/AUAudioUnitFactory) protocol을 채택하며 플러그인의 새 인스턴스 생성을 담당합니다."
+      },
+      {
+        "id": "seg:paragraph:create-a-custom-audio-effect-plug-in:0014:0003",
+        "ko": "호스트 앱의 요청 시 `AUv3FilterDemo`의 새 인스턴스를 반환하도록 protocol의 [`createAudioUnit(with:)`](https://developer.apple.com/documentation/AudioToolbox/AUAudioUnitFactory/createAudioUnit(with:)) factory 메서드를 구현합니다."
+      },
+      {
+        "id": "seg:blockquote:create-a-custom-audio-effect-plug-in:0016:0001",
+        "ko": "❗ **중요**: 글리치 없는 성능을 보장하려면 플러그인의 오디오 처리가 실시간 안전한 컨텍스트에서 이루어져야 합니다."
+      },
+      {
+        "id": "seg:blockquote:create-a-custom-audio-effect-plug-in:0016:0002",
+        "ko": "오디오 렌더링 시 메모리를 할당하거나 파일 I/O를 수행하거나 잠금을 걸거나 Swift 또는 Objective-C 런타임과 상호작용해서는 안 됩니다."
+      },
+      {
+        "id": "seg:heading:add-custom-parameters-to-your-audio-unit:0017:0001",
+        "ko": "오디오 유닛에 사용자 지정 매개변수 추가"
+      },
+      {
+        "id": "seg:paragraph:add-custom-parameters-to-your-audio-unit:0018:0001",
+        "ko": "대부분의 Audio Unit에서는 오디오 처리를 구성하기 위해 하나 이상의 매개변수를 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:add-custom-parameters-to-your-audio-unit:0018:0002",
+        "ko": "오디오 유닛은 [`AUParameterTree`](https://developer.apple.com/documentation/AudioToolbox/AUParameterTree) 인스턴스가 제공하는 트리 구조로 매개변수를 배치합니다."
+      },
+      {
+        "id": "seg:paragraph:add-custom-parameters-to-your-audio-unit:0018:0003",
+        "ko": "이 객체는 플러그인 매개변수와 매개변수 그룹 트리의 루트 노드를 나타냅니다."
+      },
+      {
+        "id": "seg:paragraph:add-custom-parameters-to-your-audio-unit:0019:0001",
+        "ko": "`AUv3FilterDemo`에는 필터의 컷오프 주파수와 공진을 제어하는 매개변수가 있습니다."
+      },
+      {
+        "id": "seg:paragraph:add-custom-parameters-to-your-audio-unit:0019:0002",
+        "ko": "`AUParameterTree`의 factory 메서드를 사용해 매개변수를 생성합니다.\n```swift\nprivate enum AUv3FilterParam: AUParameterAddress {\n    case cutoff, resonance\n}\n\n/// The parameter to control the cutoff frequency (12 Hz - 20 kHz).\nvar cutoffParam: AUParameter = {\n    let parameter =\n        AUParameterTree.createParameter(withIdentifier: \"cutoff\",\n                                        name: \"Cutoff\",\n                                        address: AUv3FilterParam.cutoff.rawValue,\n                                        min: 12.0,\n                                        max: 20_000.0,\n                                        unit: .hertz,\n                                        unitName: nil,\n                                        flags: [.flag_IsReadable,\n                                                .flag_IsWritable,\n                                                .flag_CanRamp],\n                                        valueStrings: nil,\n                                        dependentParameters: nil)\n    // Set default value\n    parameter.value = 0.0\n\n    return parameter\n}()\n\n/// The parameter to control the cutoff frequency's resonance (+/-20 dB).\nvar resonanceParam: AUParameter = {\n    let parameter =\n        AUParameterTree.createParameter(withIdentifier: \"resonance\",\n                                        name: \"Resonance\",\n                                        address: AUv3FilterParam.resonance.rawValue,\n                                        min: -20.0,\n                                        max: 20.0,\n                                        unit: .decibels,\n                                        unitName: nil,\n                                        flags: [.flag_IsReadable,\n                                                .flag_IsWritable,\n                                                .flag_CanRamp],\n                                        valueStrings: nil,\n                                        dependentParameters: nil)\n    // Set the default value.\n    parameter.value = 20_000.0\n\n    return parameter\n}()\n```"
+      },
+      {
+        "id": "seg:paragraph:add-custom-parameters-to-your-audio-unit:0021:0001",
+        "ko": "컷오프 매개변수는 12 Hz에서 20 kHz 범위를 정의하고, 공진 매개변수는 -20 dB에서 20 dB 범위를 정의합니다."
+      },
+      {
+        "id": "seg:paragraph:add-custom-parameters-to-your-audio-unit:0021:0002",
+        "ko": "각 매개변수는 읽기 및 쓰기가 가능하며 램핑도 지원하므로 시간이 지남에 따라 값을 수정할 수 있습니다."
+      }
+    ]
+  }
+}
