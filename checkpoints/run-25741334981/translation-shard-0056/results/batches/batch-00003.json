@@ -1,0 +1,230 @@
+{
+  "batchIndex": 3,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:56.472Z",
+  "durationMs": 22045,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:isstudiolightsupported:0002:0001",
+        "ko": "이 형식이 Studio Light를 지원하는지 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "Camera calibration data is present only if you specified the [`isCameraCalibrationDataDeliveryEnabled`](avcapturephotosettings/iscameracalibrationdatadeliveryenabled.md) and [`isDualCameraDualPhotoDeliveryEnabled`](avcapturephotosettings/isdualcameradualphotodeliveryenabled.md) settings when requesting capture."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "사용자가 Studio Light를 활성화했을 때 사용 가능한 최소 및 최대 프레임 속도를 나타내는 값입니다."
+      },
+      {
+        "id": "seg:paragraph:isadjustingwhitebalance:0002:0001",
+        "ko": "장치가 현재 화이트 밸런스를 조정 중인지 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "Camera calibration data is present only if you specified the [`isCameraCalibrationDataDeliveryEnabled`](avcapturephotosettings/iscameracalibrationdatadeliveryenabled.md) and [`isDualCameraDualPhotoDeliveryEnabled`](avcapturephotosettings/isdualcameradualphotodeliveryenabled.md) settings when requesting capture."
+      },
+      {
+        "id": "seg:heading:requestaccessforcompletionhandler:0000:0001",
+        "ko": "requestAccess(for:completionHandler:)"
+      },
+      {
+        "id": "seg:paragraph:requestaccessforcompletionhandler:0002:0001",
+        "ko": "특정 유형의 미디어를 앱이 캡처할 수 있도록 사용자의 허가를 요청합니다."
+      },
+      {
+        "id": "seg:list:mentions:0008:0001",
+        "ko": "[Requesting authorization to capture and save media](tracking-photo-capture-progress.md)"
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "미디어를 캡처하려면 사용자로부터 명시적 권한이 필요합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "앱의 기본 권한 상태는 [`AVAuthorizationStatus.notDetermined`](avauthorizationstatus/notdetermined.md)로, 사용자가 아직 미디어 캡처 권한을 부여하지 않았음을 의미합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0003",
+        "ko": "권한이 필요한 미디어 형식에 대해 [`AVCaptureDeviceInput`](avcapturedeviceinput.md) 객체를 처음 생성하면 시스템이 자동으로 녹음 권한을 요청하는 경고를 표시합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0004",
+        "ko": "대신 이 메서드를 호출하여 원하는 시점에 사용자를 요청할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0005",
+        "ko": "시스템은 사용자의 선택을 저장하므로 더 이상 사용자를 다시 요청하지 않습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0006",
+        "ko": "사용자는 설정 앱에서 권한 상태를 변경할 수 있습니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0011:0001",
+        "ko": "❗ **중요**: 앱은 캡처 장치 사용에 대한 설명을 제공하려면 [`NSCameraUsageDescription`](https://developer.apple.com/documentation/BundleResources/Information-Property-List/NSCameraUsageDescription)와 [`NSMicrophoneUsageDescription`](https://developer.apple.com/documentation/BundleResources/Information-Property-List/NSMicrophoneUsageDescription) Info.plist 키를 사용해야 합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0011:0002",
+        "ko": "시스템은 권한을 요청할 때, 그리고 이후 설정 앱에서 이 키에 대해 설정한 문자열을 표시합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0011:0003",
+        "ko": "사용 설명을 제공하지 않은 상태에서 이 메서드를 호출하거나 캡처 세션을 시작하려고 하면 예외가 발생합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0012:0001",
+        "ko": "시스템이 사용자에게 접근 권한을 요청하는 동안에도 이 메서드 호출은 스레드를 차단하지 않습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0012:0002",
+        "ko": "단, 권한이 부여될 때까지 시스템은 검은색 비디오 프레임과 무음 오디오 샘플만 제공합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0013:0001",
+        "ko": "**참고**: 미디어 타입이 [`audio`](avmediatype/audio.md)인 경우 이 메서드를 호출하면 [`AVAudioSession`](https://developer.apple.com/documentation/AVFAudio/AVAudioSession)의 [`requestRecordPermission(_:)`](https://developer.apple.com/documentation/AVFAudio/AVAudioSession/requestRecordPermission(_:)) 메서드를 호출하는 것과 동일합니다."
+      },
+      {
+        "id": "seg:list:parameters:0015:0001",
+        "ko": "`mediaType`: 권한 상태를 확인할 미디어 타입입니다. 지원되는 미디어 타입은 [`video`](avmediatype/video.md) 및 [`audio`](avmediatype/audio.md)입니다."
+      },
+      {
+        "id": "seg:list:parameters:0015:0002",
+        "ko": "`handler`: 사용자가 앱에 대한 접근을 허용했는지 또는 거부했는지를 나타내는 부울 값을 전달하는 콜백입니다. 사용자 인터페이스 업데이트를 수행하기 전에 메인 큐 또는 [`MainActor`](https://developer.apple.com/documentation/Swift/MainActor)로 제어를 반환합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0016:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:list:see-also:0017:0001",
+        "ko": "[class func authorizationStatus(for: AVMediaType) -> AVAuthorizationStatus](avcapturephotocapturedelegate/photooutput(_:didcapturephotofor:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "특정 유형의 미디어를 캡처할 수 있도록 사용자가 앱에 권한을 부여했는지를 나타내는 권한 상태를 반환합니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "앱의 미디어 캡처 권한 상태를 나타내는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturephotocapturedelegate/photooutput(_:willcapturephotofor:))*"
+      },
+      {
+        "id": "seg:paragraph:cameracalibrationdata:0002:0001",
+        "ko": "사진을 캡처한 카메라 장치의 보정 정보입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "카메라 보정 데이터는 캡처를 요청할 때 [`isCameraCalibrationDataDeliveryEnabled`](avcapturephotosettings/iscameracalibrationdatadeliveryenabled.md) 및 [`isDualCameraDualPhotoDeliveryEnabled`](avcapturephotosettings/isdualcameradualphotodeliveryenabled.md) 설정을 지정한 경우에만 존재합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "깊이 데이터가 포함된 캡처에서 카메라 보정 데이터는 [`AVDepthData`](avdepthdata.md) [`cameraCalibrationData`](avdepthdata/cameracalibrationdata.md) 속성을 참조하세요."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "사진과 함께 캡처된 깊이 데이터 또는 시차 맵 데이터입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "사진을 캡처한 장치 유형입니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[var metadata: [String : Any]](avcapturephoto/metadata.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "캡처된 이미지를 설명하는 메타데이터 사전입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "사진과 함께 캡처된 portrait effects matte입니다."
+      },
+      {
+        "id": "seg:heading:photooutputwillcapturephotofor:0000:0001",
+        "ko": "photoOutput(_:willCapturePhotoFor:)"
+      },
+      {
+        "id": "seg:paragraph:photooutputwillcapturephotofor:0002:0001",
+        "ko": "사진 캡처가 곧 발생함을 대리자에게 알립니다."
+      },
+      {
+        "id": "seg:list:mentions:0008:0001",
+        "ko": "[Tracking photo capture progress](tracking-photo-capture-progress.md)"
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "사진 출력은 캡처 시작 시점에 가능한 한 가깝게 이 메서드를 호출합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "셔터 소리가 활성화되어 있으면, 이 호출은 사진 출력이 셔터 소리 재생을 시작한 바로 다음에 발생합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0011:0001",
+        "ko": "**참고**: Live Photo 캡처는 셔터 소리를 비활성화합니다."
+      },
+      {
+        "id": "seg:blockquote:discussion:0011:0002",
+        "ko": "일부 지역에서는 기기의 무음 스위치가 셔터 소리를 비활성화할 수 있습니다."
+      },
+      {
+        "id": "seg:list:parameters:0013:0001",
+        "ko": "`output`: 캡처를 수행하는 사진 출력입니다."
+      },
+      {
+        "id": "seg:list:parameters:0013:0002",
+        "ko": "`resolvedSettings`: 이 캡처에 사용된 설정을 설명하는 객체입니다. 이 객체의 [`uniqueID`](avcapturephotosettings/uniqueid.md) 값을 캡처를 시작할 때 사용한 사진 설정 객체의 [`uniqueID`](avcapturephotosettings/uniqueid.md) 속성과 일치시켜서 이 대리자 호출이 어떤 캡처 요청에 해당하는지 확인할 수 있습니다. 이 객체를 사용하면 사진 출력이 자동 설정에 대해 선택한 값을 확인할 수도 있습니다."
+      },
+      {
+        "id": "seg:heading:see-also:0014:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:list:see-also:0015:0001",
+        "ko": "[func photoOutput(AVCapturePhotoOutput, willBeginCaptureFor: AVCaptureResolvedPhotoSettings)](avcapturephotocapturedelegate/photooutput(_:willbegincapturefor:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "캡처 출력이 설정을 해석했으며 곧 캡처 프로세스를 시작할 것임을 대리자에게 알립니다."
+      },
+      {
+        "id": "seg:list:see-also:0017:0001",
+        "ko": "[func photoOutput(AVCapturePhotoOutput, didCapturePhotoFor: AVCaptureResolvedPhotoSettings)](avcapturephotocapturedelegate/photooutput(_:didcapturephotofor:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "사진이 촬영되었음을 대리자에게 알립니다."
+      },
+      {
+        "id": "seg:list:see-also:0019:0001",
+        "ko": "[func photoOutput(AVCapturePhotoOutput, didFinishCaptureFor: AVCaptureResolvedPhotoSettings, error: (any Error)?)](avcapturephotocapturedelegate/photooutput(_:didfinishcapturefor:error:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "캡처 프로세스가 완료되었음을 대리자에게 알립니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturephotocapturedelegate/photooutput(_:willcapturephotofor:))*"
+      },
+      {
+        "id": "seg:heading:samplepresentationtimefortracktime:0000:0001",
+        "ko": "samplePresentationTime(forTrackTime:)"
+      }
+    ]
+  }
+}
