@@ -12,7 +12,21 @@ const files = await fg(["**/*"], {
   cwd: resolveRoot(),
   dot: true,
   onlyFiles: true,
-  ignore: [".git/**", "node_modules/**", "site/node_modules/**", "site/dist/**", ".docs/**", "AGENTS.md"]
+  ignore: [
+    ".git/**",
+    "node_modules/**",
+    "site/node_modules/**",
+    "site/dist/**",
+    ".docs/**",
+    "AGENTS.md",
+    "source-cache/**",
+    "tmp/**",
+    ".tmp/**",
+    "translation-memory/**",
+    "translations/**",
+    "site/src/content/docs/**",
+    "site/public/source-maps/**"
+  ]
 });
 
 const hits: string[] = [];

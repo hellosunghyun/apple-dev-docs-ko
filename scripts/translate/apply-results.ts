@@ -13,12 +13,30 @@ async function main(): Promise<void> {
   const bySourcePath = new Map<string, Array<{ id: string; ko: string }>>();
   const sourcePaths = new Set(queue.sourcePaths);
   const allSegments = results.outputs.flatMap((output) => output?.segments ?? []);
+  const memoryIdsBySourcePath = new Map<string, Set<string>>();
 
   for (const sourcePath of sourcePaths) {
     const memory = await readMemory(sourcePath);
     if (!memory) continue;
     const segmentIds = new Set(memory.segments.map((segment) => segment.id));
-    bySourcePath.set(sourcePath, allSegments.filter((segment) => segmentIds.has(segment.id)));
+    memoryIdsBySourcePath.set(sourcePath, segmentIds);
+  }
+
+  for (const segment of allSegments) {
+    if (segment.sourcePath) {
+      if (!sourcePaths.has(segment.sourcePath)) continue;
+      const output = bySourcePath.get(segment.sourcePath) ?? [];
+      output.push({ id: segment.id, ko: segment.ko });
+      bySourcePath.set(segment.sourcePath, output);
+      continue;
+    }
+
+    const matches = Array.from(memoryIdsBySourcePath.entries()).filter(([, ids]) => ids.has(segment.id));
+    if (matches.length !== 1) continue;
+    const [sourcePath] = matches[0];
+    const output = bySourcePath.get(sourcePath) ?? [];
+    output.push({ id: segment.id, ko: segment.ko });
+    bySourcePath.set(sourcePath, output);
   }
 
   let changed = 0;
@@ -33,4 +51,3 @@ async function main(): Promise<void> {
 }
 
 await main();
-

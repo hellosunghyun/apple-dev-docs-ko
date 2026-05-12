@@ -7,8 +7,9 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "ko"],
+        "required": ["sourcePath", "id", "ko"],
         "properties": {
+          "sourcePath": { "type": "string" },
           "id": { "type": "string" },
           "ko": { "type": "string", "minLength": 1 }
         },
@@ -18,4 +19,3 @@
   },
   "additionalProperties": false
 }
-

@@ -8,8 +8,9 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "source"],
+        "required": ["sourcePath", "id", "source"],
         "properties": {
+          "sourcePath": { "type": "string" },
           "id": { "type": "string" },
           "source": { "type": "string" },
           "contextBefore": { "type": "string" },
@@ -23,4 +24,3 @@
   },
   "additionalProperties": true
 }
-

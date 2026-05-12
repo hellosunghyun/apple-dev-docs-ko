@@ -200,6 +200,7 @@ export interface TranslationBatchInput {
   rules: Record<string, boolean | string>;
   glossary: Record<string, string[] | Record<string, string>>;
   segments: Array<{
+    sourcePath: string;
     id: string;
     source: string;
     contextBefore: string;
@@ -210,7 +211,7 @@ export interface TranslationBatchInput {
 }
 
 export interface TranslationBatchOutput {
-  segments: Array<{ id: string; ko: string }>;
+  segments: Array<{ sourcePath?: string; id: string; ko: string }>;
 }
 
 export interface QueueBatchFileRef {

@@ -42,7 +42,7 @@ async function main(): Promise<void> {
   }
   const sourcePaths = files.map((file) => file.sourcePath);
 
-  const candidates: TranslationMemorySegment[] = [];
+  const candidates: Array<TranslationMemorySegment & { sourcePath: string }> = [];
   let preserved = 0;
   let locked = 0;
   let skipped = 0;
@@ -61,7 +61,7 @@ async function main(): Promise<void> {
         continue;
       }
       if (options.force || segmentNeedsTranslation(segment)) {
-        candidates.push(segment);
+        candidates.push({ ...segment, sourcePath });
       } else {
         skipped += 1;
       }
@@ -149,7 +149,7 @@ async function appendText(filePath: string, value: string): Promise<void> {
 }
 
 function buildBatches(
-  segments: TranslationMemorySegment[],
+  segments: Array<TranslationMemorySegment & { sourcePath: string }>,
   batchSegments: number,
   batchChars: number,
   glossary: Record<string, unknown>
@@ -165,6 +165,7 @@ function buildBatches(
       chars = 0;
     }
     current.push({
+      sourcePath: segment.sourcePath,
       id: segment.id,
       source: segment.source,
       contextBefore: segment.contextBefore,

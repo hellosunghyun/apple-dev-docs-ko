@@ -18,12 +18,14 @@ export function validateTranslationOutput(input: TranslationBatchInput, output: 
   if (input.segments.length !== output.segments.length) {
     errors.push(`Segment count mismatch: input=${input.segments.length}, output=${output.segments.length}`);
   }
-  const inputById = new Map(input.segments.map((segment) => [segment.id, segment]));
   for (const translated of output.segments) {
-    const source = inputById.get(translated.id);
+    const source = findInputSegment(input, translated);
     if (!source) {
-      errors.push(`Unknown segment id: ${translated.id}`);
+      errors.push(`Unknown segment: ${translated.sourcePath ?? "unknown"}#${translated.id}`);
       continue;
+    }
+    if (translated.sourcePath && translated.sourcePath !== source.sourcePath) {
+      errors.push(`Source path changed in ${translated.id}: ${translated.sourcePath}`);
     }
     if (!translated.ko.trim()) {
       errors.push(`Empty Korean translation: ${translated.id}`);
@@ -44,22 +46,30 @@ export function validateTranslationOutput(input: TranslationBatchInput, output: 
 }
 
 export function repairTranslationOutput(input: TranslationBatchInput, output: TranslationBatchOutput): TranslationBatchOutput {
-  const inputById = new Map(input.segments.map((segment) => [segment.id, segment]));
   return {
     segments: output.segments.map((translated) => {
-      const source = inputById.get(translated.id);
+      const source = findInputSegment(input, translated);
       if (!source) return translated;
       const ko = repairTranslatedSegment(source.source, translated.ko);
       const segmentErrors = validateTranslationOutput(
         { ...input, segments: [source] },
-        { segments: [{ id: translated.id, ko }] }
+        { segments: [{ sourcePath: source.sourcePath, id: translated.id, ko }] }
       );
       return {
+        sourcePath: source.sourcePath,
         id: translated.id,
         ko: segmentErrors.length ? source.source : ko
       };
     })
   };
+}
+
+function findInputSegment(input: TranslationBatchInput, translated: TranslationBatchOutput["segments"][number]): TranslationBatchInput["segments"][number] | undefined {
+  if (translated.sourcePath) {
+    return input.segments.find((segment) => segment.sourcePath === translated.sourcePath && segment.id === translated.id);
+  }
+  const matches = input.segments.filter((segment) => segment.id === translated.id);
+  return matches.length === 1 ? matches[0] : undefined;
 }
 
 export function repairTranslatedSegment(source: string, translated: string): string {

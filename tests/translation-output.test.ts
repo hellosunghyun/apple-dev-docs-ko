@@ -11,6 +11,7 @@ const input: TranslationBatchInput = {
   glossary: {},
   segments: [
     {
+      sourcePath: "documentation/coremotion/cmdevicemotion.md",
       id: "seg:1",
       source: "Use `CMDeviceMotion` with https://example.com.",
       contextBefore: "",
@@ -25,12 +26,12 @@ describe("translation output validation", () => {
   it("requires inline code and URLs to be preserved", () => {
     expect(
       validateTranslationOutput(input, {
-        segments: [{ id: "seg:1", ko: "`CMDeviceMotion`를 https://example.com와 함께 사용합니다." }]
+        segments: [{ sourcePath: "documentation/coremotion/cmdevicemotion.md", id: "seg:1", ko: "`CMDeviceMotion`를 https://example.com와 함께 사용합니다." }]
       })
     ).toEqual([]);
     expect(
       validateTranslationOutput(input, {
-        segments: [{ id: "seg:1", ko: "CMDeviceMotion를 사용합니다." }]
+        segments: [{ sourcePath: "documentation/coremotion/cmdevicemotion.md", id: "seg:1", ko: "CMDeviceMotion를 사용합니다." }]
       }).length
     ).toBeGreaterThan(0);
   });
@@ -48,7 +49,13 @@ describe("translation output validation", () => {
     };
 
     const repaired = repairTranslationOutput(drifted, {
-      segments: [{ id: "seg:link", ko: "load를 사용해 endDate를 설정합니다. [load](avasynchronouskeyvalueloading/load.md)" }]
+      segments: [
+        {
+          sourcePath: "documentation/coremotion/cmdevicemotion.md",
+          id: "seg:link",
+          ko: "load를 사용해 endDate를 설정합니다. [load](avasynchronouskeyvalueloading/load.md)"
+        }
+      ]
     });
 
     expect(validateTranslationOutput(drifted, repaired)).toEqual([]);
@@ -69,7 +76,7 @@ describe("translation output validation", () => {
     };
 
     const repaired = repairTranslationOutput(fallbackInput, {
-      segments: [{ id: "seg:fallback", ko: "장치를 사용합니다." }]
+      segments: [{ sourcePath: "documentation/coremotion/cmdevicemotion.md", id: "seg:fallback", ko: "장치를 사용합니다." }]
     });
 
     expect(repaired.segments[0].ko).toBe(fallbackInput.segments[0].source);

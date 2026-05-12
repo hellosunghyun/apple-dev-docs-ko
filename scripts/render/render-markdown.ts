@@ -7,13 +7,17 @@ import { readOverride } from "../lib/overrides.js";
 import type { Manifest, ManifestFile } from "../lib/types.js";
 
 const program = new Command();
-program.option("--file <sourcePath>").option("--limit-files <count>").parse();
-const options = program.opts<{ file?: string; limitFiles?: string }>();
+program.option("--file <sourcePath>").option("--file-list <file>").option("--limit-files <count>").parse();
+const options = program.opts<{ file?: string; fileList?: string; limitFiles?: string }>();
 
 async function main(): Promise<void> {
   const sourceConfig = await loadSourceConfig();
   const manifest = await readJson<Manifest>(resolveRoot("state/manifest.json"));
   let files = options.file ? manifest.files.filter((file) => file.sourcePath === options.file) : manifest.files;
+  if (options.fileList) {
+    const selected = new Set((await readText(resolveRoot(options.fileList))).split(/\r?\n/).map((line) => line.trim()).filter(Boolean));
+    files = files.filter((file) => selected.has(file.sourcePath));
+  }
   if (options.limitFiles) files = files.slice(0, Number(options.limitFiles));
   let rendered = 0;
   for (const file of files) {
@@ -39,4 +43,3 @@ async function renderFile(file: ManifestFile, cacheDir: string, upstreamSha: str
 }
 
 await main();
-

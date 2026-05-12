@@ -98,6 +98,7 @@ function parseRetryAt(value: string, now: Date): string | undefined {
 function mockTranslate(input: TranslationBatchInput): TranslationBatchOutput {
   return {
     segments: input.segments.map((segment) => ({
+      sourcePath: segment.sourcePath,
       id: segment.id,
       ko: mockKorean(segment.source)
     }))

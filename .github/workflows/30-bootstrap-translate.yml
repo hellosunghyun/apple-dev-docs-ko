@@ -448,25 +448,23 @@ jobs:
           fi
       - name: Apply shard results
         run: |
-          mkdir -p translation-memory/files
-          find tmp/translation-shards -path '*/translation-memory/files/*.json' -print0 | while IFS= read -r -d '' file; do
-            cp "$file" "translation-memory/files/$(basename "$file")"
-          done
-
-          find tmp/translation-shards -mindepth 1 -maxdepth 1 -type d -name 'translation-shard-*' | sort | while read -r shard_dir; do
-            pnpm tsx scripts/translate/apply-results.ts --queue "$shard_dir/queue.json" --results "$shard_dir/results.json"
-          done
+          pnpm tsx scripts/translate/apply-shard-results.ts \
+            --shards-dir tmp/translation-shards \
+            --changed-files tmp/changed-source-paths.txt
       - name: Render site content
         env:
           LIMIT_FILES: ${{ inputs.limit_files }}
         run: |
-          if [ -n "$LIMIT_FILES" ]; then
+          if [ ! -s tmp/changed-source-paths.txt ]; then
+            echo "No translated files changed; skipping render."
+          elif [ -n "$LIMIT_FILES" ]; then
             pnpm tsx scripts/render/render-markdown.ts --limit-files "$LIMIT_FILES"
             pnpm tsx scripts/render/build-source-maps.ts --limit-files "$LIMIT_FILES"
             pnpm run site:content
             pnpm --dir site run build
           else
-            pnpm run render
+            pnpm tsx scripts/render/render-markdown.ts --file-list tmp/changed-source-paths.txt
+            pnpm tsx scripts/render/build-source-maps.ts --file-list tmp/changed-source-paths.txt
             pnpm run site:build
           fi
       - run: pnpm run report
@@ -474,7 +472,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
-          git add state translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
+          git add state/translation-progress.json translation-memory translations site/src/content site/src/data site/public/source-maps site/public/search site/public/status reports
           git commit -m "feat: 병렬 번역 샤드 결과 갱신" || echo "No changes"
           git push
         if: inputs.commit_results == 'true' && inputs.mock_translation != 'true'
