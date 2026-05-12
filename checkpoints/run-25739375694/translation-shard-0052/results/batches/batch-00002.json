@@ -1,0 +1,138 @@
+{
+  "batchIndex": 2,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:42.662Z",
+  "durationMs": 17185,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:display-a-camera-feed-and-monitor-the-session:0011:0001",
+        "ko": "AR Stream는 [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView)를 표시하는 뷰 컨트롤러가 포함된 창을 구성해 장치의 카메라 피드를 표시합니다(샘플 프로젝트의 `Main.storyboard` 파일 참조)."
+      },
+      {
+        "id": "seg:paragraph:display-a-camera-feed-and-monitor-the-session:0011:0002",
+        "ko": "기본적으로 [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView)는 world-tracking 구성 [`ARWorldTrackingConfiguration`](arworldtrackingconfiguration.md)으로 세션을 실행합니다."
+      },
+      {
+        "id": "seg:paragraph:display-a-camera-feed-and-monitor-the-session:0011:0003",
+        "ko": "뷰의 세션 이벤트 알림을 수신하려면, 샘플 프로젝트의 뷰 컨트롤러(샘플 프로젝트의 `ViewController` 참고)는 자신을 세션 델리게이트로 지정합니다."
+      },
+      {
+        "id": "seg:heading:capture-frames:0013:0001",
+        "ko": "프레임 캡처"
+      },
+      {
+        "id": "seg:paragraph:capture-frames:0014:0001",
+        "ko": "사용자의 물리적 환경을 원격 사용자에게 표시하기 위해 AR Stream는 [`RPScreenRecorder`](https://developer.apple.com/documentation/ReplayKit/RPScreenRecorder)를 사용해 스크린 녹화 세션을 엽니다."
+      },
+      {
+        "id": "seg:paragraph:capture-frames:0016:0001",
+        "ko": "스크린 녹화는 앱의 기본 창 내용을 캡처하며, 여기에는 RealityKit이 카메라 피드에 추가할 수 있는 증강 내용이 포함됩니다."
+      },
+      {
+        "id": "seg:paragraph:capture-frames:0016:0002",
+        "ko": "[`startCapture(handler:completionHandler:)`](https://developer.apple.com/documentation/ReplayKit/RPScreenRecorder/startCapture(handler:completionHandler:)) 클로저에서 샘플 프로젝트는 캡처된 화면(`sampleBuffer`)을 네트워크 전송을 위해 `compressAndSend` 함수에 전달합니다."
+      },
+      {
+        "id": "seg:paragraph:capture-frames:0016:0003",
+        "ko": "샘플 프로젝트는 또한 세션의 현재 프레임을 전달해 화면 캡처가 카메라 이미지 크기에 맞춰지도록 합니다."
+      },
+      {
+        "id": "seg:blockquote:capture-frames:0018:0001",
+        "ko": "**Note**: [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView)는 뷰의 내용을 캡처하는 [`snapshot(saveToHDR:completion:)`](https://developer.apple.com/documentation/RealityKit/ARView/snapshot(saveToHDR:completion:)-66jzu) 함수를 제공하지만, ReplayKit의 스크린 녹화가 실시간 캡처에 더 적합합니다."
+      },
+      {
+        "id": "seg:heading:compress-and-send-frames-to-the-peer:0019:0001",
+        "ko": "피어에 프레임 압축 및 전송"
+      },
+      {
+        "id": "seg:paragraph:compress-and-send-frames-to-the-peer:0020:0001",
+        "ko": "샘플 프로젝트의 `VideoProcessor` 클래스는 `compressAndSend` 함수를 구현하며, 이 함수는 [`VTCompressionSession`](https://developer.apple.com/documentation/VideoToolbox/VTCompressionSession)을 사용해 캡처된 비디오 프레임을 압축합니다."
+      },
+      {
+        "id": "seg:paragraph:compress-and-send-frames-to-the-peer:0022:0001",
+        "ko": "앱의 실시간 스트리밍 사용 사례에서 적시에 압축되도록 비디오 프로세서는 압축 세션의 [`kVTCompressionPropertyKey_RealTime`](https://developer.apple.com/documentation/VideoToolbox/kVTCompressionPropertyKey_RealTime) 옵션을 활성화합니다."
+      },
+      {
+        "id": "seg:paragraph:compress-and-send-frames-to-the-peer:0024:0001",
+        "ko": "[`VTCompressionSession`](https://developer.apple.com/documentation/VideoToolbox/VTCompressionSession)이 프레임 인코딩을 완료하면 앱은 해당 [`ARFrame`](arframe.md)에서 가져온 역투영 행렬과 역뷰 행렬을 사용해 `VideoFrameData` 인스턴스를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:compress-and-send-frames-to-the-peer:0026:0001",
+        "ko": "프로젝트는 `VideoFrameData`를 JSON 데이터로 직렬화해 인코딩하고, 해당 데이터를 `sendHandler`로 전달합니다."
+      },
+      {
+        "id": "seg:paragraph:compress-and-send-frames-to-the-peer:0028:0001",
+        "ko": "스크린 녹화 클로저는 데이터 전송을 위해 로컬 네트워크 상에서 `VideoFrameData`를 전송하는 코드가 포함된 [`Multipeer Connectivity`](https://developer.apple.com/documentation/MultipeerConnectivity) send handler를 정의합니다."
+      },
+      {
+        "id": "seg:heading:receive-and-decompress-peer-frames:0030:0001",
+        "ko": "피어 프레임 수신 및 디컴프레스"
+      },
+      {
+        "id": "seg:paragraph:receive-and-decompress-peer-frames:0031:0001",
+        "ko": "앱이 다른 장치에서 `VideoFrameData`를 받으면 JSON 데이터를 디코딩합니다."
+      },
+      {
+        "id": "seg:paragraph:receive-and-decompress-peer-frames:0033:0001",
+        "ko": "전송된 비디오 프레임을 보관하려면 AR Stream가 샘플 버퍼를 재구성합니다."
+      },
+      {
+        "id": "seg:paragraph:receive-and-decompress-peer-frames:0035:0001",
+        "ko": "시스템은 비압축 데이터만 표시할 수 있으므로 비디오 프로세서는 `decompress` 함수 내에서 [`VTDecompressionSession`](https://developer.apple.com/documentation/VideoToolbox/VTDecompressionSession)을 사용해 비디오 프레임을 디컴프레스합니다."
+      },
+      {
+        "id": "seg:paragraph:receive-and-decompress-peer-frames:0037:0001",
+        "ko": "AR Stream는 샘플 프로젝트의 렌더러 객체(샘플 프로젝트의 `Renderer` 참조)를 사용해 비디오 프레임을 화면에 그립니다."
+      },
+      {
+        "id": "seg:paragraph:receive-and-decompress-peer-frames:0037:0002",
+        "ko": "렌더러는 즉시 표시할 수 있도록 프레임 데이터를 큐에 넣습니다."
+      },
+      {
+        "id": "seg:heading:display-the-remote-users-camera-feed:0039:0001",
+        "ko": "원격 사용자 카메라 피드 표시"
+      },
+      {
+        "id": "seg:paragraph:display-the-remote-users-camera-feed:0040:0001",
+        "ko": "AR Stream는 [`MTKView`](https://developer.apple.com/documentation/MetalKit/MTKView) 하위 클래스 `OverlayViewController`를 정의하며, 화면 왼쪽 아래에 *picture-in-picture* (PiP) 보기를 배치해 [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView) 위에 원격 사용자의 카메라 피드를 표시합니다."
+      },
+      {
+        "id": "seg:paragraph:display-the-remote-users-camera-feed:0041:0001",
+        "ko": "![앱 시작 시 사용자 AR 경험의 카메라 피드를 전체 크기로 표시한 앱의 스크린샷"
+      },
+      {
+        "id": "seg:paragraph:display-the-remote-users-camera-feed:0041:0002",
+        "ko": "화면 왼쪽 아래에는 원격 사용자의 경험 카메라 피드를 나타내는 더 작은 보기(또는 PiP 보기)를 오버레이합니다.](https://docs-assets.developer.apple.com/published/10a488f59f21fe469045f05871130c14/ar-streaming-pip-view.jpg)"
+      },
+      {
+        "id": "seg:paragraph:display-the-remote-users-camera-feed:0042:0001",
+        "ko": "샘플 프로젝트의 `AppDelegate`는 PiP 보기를 보조 창에서 구성합니다."
+      },
+      {
+        "id": "seg:paragraph:display-the-remote-users-camera-feed:0042:0002",
+        "ko": "ReplayKit의 스크린 녹화는 기본 창만 캡처하므로 PiP 보기에는 원격 사용자의 카메라 피드만 표시됩니다."
+      },
+      {
+        "id": "seg:heading:send-gestures-to-the-peer:0044:0001",
+        "ko": "피어로 제스처 전송"
+      },
+      {
+        "id": "seg:paragraph:send-gestures-to-the-peer:0045:0001",
+        "ko": "원격 사용자가 PiP 보기를 탭하면 프로젝트는 탭 위치를 기록해 반응합니다."
+      },
+      {
+        "id": "seg:paragraph:send-gestures-to-the-peer:0047:0001",
+        "ko": "샘플 프로젝트는 사용자가 전송한 역행렬을 사용해 원격 사용자가 사용자의 AR 경험과 상호작용할 수 있게 합니다."
+      },
+      {
+        "id": "seg:paragraph:send-gestures-to-the-peer:0049:0001",
+        "ko": "프로젝트는 탭 위치와 역행렬을 사용해 사용자 [`ARSession`](arsession.md) 월드 좌표계에서의 위치와 방향을 설명하는 광선 캐스트로 변환합니다(샘플 프로젝트의 `makeRay` 함수 참조)."
+      },
+      {
+        "id": "seg:paragraph:send-gestures-to-the-peer:0051:0001",
+        "ko": "그런 다음 샘플 프로젝트는 광선 캐스트를 JSON 데이터로 인코딩해 연결된 피어로 전송합니다."
+      }
+    ]
+  }
+}
