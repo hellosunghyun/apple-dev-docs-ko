@@ -1,0 +1,176 @@
+{
+  "docId": "documentation/AVFoundation/avcapturesmartframingmonitor/recommendedframing.md",
+  "title": "recommendedFraming",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturesmartframingmonitor/recommendedframing",
+  "segments": [
+    {
+      "id": "seg:heading:recommendedframing:0000:0001",
+      "source": "recommendedFraming",
+      "ko": "recommendedFraming",
+      "sourceHash": "2e75bf7d95f87ca72e658d71e5004333d55bcd388c6919fe9d7565795e16c69a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:recommendedframing:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:recommendedframing:0002:0001",
+      "source": "The latest recommended framing from the monitor.",
+      "ko": "모니터에서 권장하는 최신 프레이밍입니다.",
+      "sourceHash": "9e5ed1386716058e8d3667112d9a4c06cbfa703cae5f224cba143d37ec0a9f4d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:recommendedframing:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:recommendedframing:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:recommendedframing:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:recommendedframing:0004:0003",
+      "source": "Mac Catalyst 26.0+",
+      "ko": "Mac Catalyst 26.0+",
+      "sourceHash": "41da0bcbe19513a5638f4ac052319884e486b3cc05252ef6209b23e7b2b1d8e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar recommendedFraming: AVCaptureFraming? { get }\n```",
+      "ko": "```swift\nvar recommendedFraming: AVCaptureFraming? { get }\n```",
+      "sourceHash": "dc7f8b398be9f51b6655cde9448b929baa2a4929b9ee58b3bc37e1b8da815aa1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Adopting smart framing in your camera app](adopting-smart-framing-in-your-camera-app.md)",
+      "ko": "[Adopting smart framing in your camera app](adopting-smart-framing-in-your-camera-app.md)",
+      "sourceHash": "5c4ff7fd7cfc73fc4495220d30ab21169ce444da69d3f07b5704eb1a6147d99c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "While your [`AVCaptureSession`](avcapturesession.md) is running, the monitor continuously observes its device’s scene to recommend the best framing.",
+      "ko": "[`AVCaptureSession`](avcapturesession.md)가 실행 중일 때 모니터는 해당 기기의 장면을 계속 관찰하여 가장 적절한 프레이밍을 추천합니다.",
+      "sourceHash": "74cac4ddd00908a816f7829206cf410689baba4a6db097e9e6e5138bb4c3bd1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "This recommended framing is always one of the values in [`enabledFramings`](avcapturesmartframingmonitor/enabledframings.md).",
+      "ko": "이 권장 프레이밍은 항상 [`enabledFramings`](avcapturesmartframingmonitor/enabledframings.md)의 값 중 하나입니다.",
+      "sourceHash": "7bc9f2a0842c8b7775090ae513176b0ea69cb693747a740e1a30648e46ab1761",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0003",
+      "source": "This property may return `nil` if smart framing isn’t supported for the device in its current configuration.",
+      "ko": "이 속성은 현재 구성에서 기기가 스마트 프레이밍을 지원하지 않으면 `nil`을 반환할 수 있습니다.",
+      "sourceHash": "fc815f7f0ce66f72613d944f664b444771b822dc45572c612d0f6be3661f1652",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0004",
+      "source": "Its default value is `nil`.",
+      "ko": "기본값은 `nil`입니다.",
+      "sourceHash": "f9534d14b818aa5bf0f592662ee9211ea3ff85dfa2866ff574e1e3f2e03d03d0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0005",
+      "source": "This property is key-value observable, and when you observe a change, you may respond to the new recommendation by calling [`setDynamicAspectRatio(_:completionHandler:)`](avcapturedevice/setdynamicaspectratio(_:completionhandler:).md) and setting [`videoZoomFactor`](avcapturedevice/videozoomfactor.md) on the associated device in whatever order best matches your animation between old and new framings.",
+      "ko": "이 속성은 key-value 관찰이 가능하며, 변경을 관찰한 뒤 [`setDynamicAspectRatio(_:completionHandler:)`](avcapturedevice/setdynamicaspectratio(_:completionhandler:).md)를 호출하고 관련 기기에서 [`videoZoomFactor`](avcapturedevice/videozoomfactor.md)를 설정하여 기존 프레이밍과 새 프레이밍 전환 애니메이션에 가장 적합한 순서로 새 권장사항에 대응할 수 있습니다.",
+      "sourceHash": "fe478482a0c5ee5ab2ec6f84ed29796100c8f9f11123d13e2a23dbb81d5c2d5a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var supportedFramings: [AVCaptureFraming]](avcapturesmartframingmonitor/supportedframings.md)",
+      "ko": "[var supportedFramings: [AVCaptureFraming]](avmetadataidentifier/itunesmetadataalbum.md)",
+      "sourceHash": "fc378e6c1b6c9da4c4e520e349df6fbb06934bca9822a860738bbe476b5c1ec6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "An array of framings supported by the monitor in its current configuration.",
+      "ko": "현재 구성에서 모니터가 지원하는 프레이밍 배열입니다.",
+      "sourceHash": "22398573a37bc9670164e88fdeec4249682e1c252515eeff46cabc32f8e13cdf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var enabledFramings: [AVCaptureFraming]](avcapturesmartframingmonitor/enabledframings.md)",
+      "ko": "[var enabledFramings: [AVCaptureFraming]](avmetadataidentifier/itunesmetadataalbumartist.md)",
+      "sourceHash": "5f8ba0d437b6821b91738d57878b0bbd547525ae602a6d15533d09b5d4a8c8f1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "An array of framings that the monitor is allowed to suggest.",
+      "ko": "모니터가 제안할 수 있는 프레이밍 배열입니다.",
+      "sourceHash": "2de2ab457a01eb62f5d190b1c6449d5edc50fec5a2683774b474cd135e46420f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0016:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesmartframingmonitor/recommendedframing)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesmartframingmonitor/recommendedframing)*",
+      "sourceHash": "ed6c0931013375ae6261d3f690c577c165dafdc44bbb4f8b795c9e843477c616",
+      "status": "preserved"
+    }
+  ]
+}

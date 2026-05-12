@@ -1,0 +1,218 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosession/availablecategories.md",
+  "title": "availableCategories",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosession/availablecategories",
+  "segments": [
+    {
+      "id": "seg:heading:availablecategories:0000:0001",
+      "source": "availableCategories",
+      "ko": "availableCategories",
+      "sourceHash": "b70ed9d88a91bbf8221b1df3cfa4d8e3efa51067670135f0cdabaaf1b2d27f09",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:availablecategories:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: property",
+      "ko": "**Framework**: AVFAudio **Kind**: property",
+      "sourceHash": "dbcab8cee850c10188239b4c73df47a01c6d8b4597a46786c5db98ee29c5588e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:availablecategories:0002:0001",
+      "source": "The audio session categories available on the current device.",
+      "ko": "현재 기기에서 사용 가능한 오디오 세션 카테고리입니다.",
+      "sourceHash": "539017e8aa45f9911b6684429a093f985646c91cb747e5f8a8754c142769ca95",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:availablecategories:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:availablecategories:0004:0001",
+      "source": "iOS 9.0+",
+      "ko": "iOS 9.0+",
+      "sourceHash": "5e500d43331f50d418de64f036136c59cae8019e851cea2322bbe52f3417e342",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:availablecategories:0004:0002",
+      "source": "iPadOS 9.0+",
+      "ko": "iPadOS 9.0+",
+      "sourceHash": "76a293c18c4e8a4dc7d9f40b220cc7f9eb91580e5b0a3041a6d046bf6969a307",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:availablecategories:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:availablecategories:0004:0004",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:availablecategories:0004:0005",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:availablecategories:0004:0006",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar availableCategories: [AVAudioSession.Category] { get }\n```",
+      "ko": "```swift\nvar availableCategories: [AVAudioSession.Category] { get }\n```",
+      "sourceHash": "1a79ecee623cd3175af83d1a816ddedcafbd07c87f03e016fb0d9229b3818854",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Not every device supports every audio session category.",
+      "ko": "If this property is `true`, but no assistive technology, such as VoiceOver, is on, the speech synthesizer uses the utterance property values.",
+      "sourceHash": "0f637e8ee88f464b6255d58c3d89fb3fab1aa57b6f1bd19af44b7219e597fa16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "For instance, the [`record`](avaudiosession/category-swift.struct/record.md) category isn’t available on a device that doesn’t support audio input.",
+      "ko": "예를 들어 [`record`](avaudiosession/category-swift.struct/record.md) 카테고리는 오디오 입력을 지원하지 않는 기기에서는 사용할 수 없습니다.",
+      "sourceHash": "524198e2222eac21a0d7abb5721141bb89bfc3797affc126c3eef14b8f383d9b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Query this property to determine if the category you’d like to use is available on the current device.",
+      "ko": "이 속성을 조회하면 현재 기기에서 사용하려는 카테고리가 사용 가능한지 확인할 수 있습니다.",
+      "sourceHash": "5529ab3779bd06b118d8663b7761ebbf97636bcb9d1e90e38447c80d82b6ed0e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var category: AVAudioSession.Category](avaudiosession/category-swift.property.md)",
+      "ko": "[var category: AVAudioSession.Category](avaudiosession/category-swift.property.md)",
+      "sourceHash": "e741b813059fcadc030e415453445d26d5a95e819353ea8e751d22422ff54141",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "The current audio session category.",
+      "ko": "현재 오디오 세션 카테고리입니다.",
+      "sourceHash": "8f105a73051a729c309ef05e0001a05e987c31c44c72fc2ee1669eaca68e2eb1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[AVAudioSession.Category](avaudiosession/category-swift.struct.md)",
+      "ko": "[AVAudioSession.Category](avaudiosession/category-swift.struct.md)",
+      "sourceHash": "63ddac6f44409d3e275af925dd9aedf75821439faf2c62fafd0c2f554a83310d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Audio session category identifiers.",
+      "ko": "오디오 세션 카그고리 식별자입니다.",
+      "sourceHash": "e32962adbd9c33824d0dfe257ae25f315acd0dad5729d16bbd99e41856e9b21e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var categoryOptions: AVAudioSession.CategoryOptions](avaudiosession/categoryoptions-swift.property.md)",
+      "ko": "[var categoryOptions: AVAudioSession.CategoryOptions](avaudiosession/categoryoptions-swift.property.md)",
+      "sourceHash": "239c20e2381cf8224eeed8ecc5f93abe1d6bc650d23353ab4bd6eeefa458fff1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The set of options associated with the current audio session category.",
+      "ko": "현재 오디오 세션 카테고리와 연결된 옵션 집합입니다.",
+      "sourceHash": "b93615dd6c444aec4002c7c3f18a5509bd30c9a0a04ce1a52eeb6fd636e2a881",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[AVAudioSession.CategoryOptions](avaudiosession/categoryoptions-swift.struct.md)",
+      "ko": "[AVAudioSession.CategoryOptions](avaudiosession/categoryoptions-swift.struct.md)",
+      "sourceHash": "a3d3b864fa5109e9867f1ad41ec018f423eda7ffb5339ab5fd6db0baadac646a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Constants that specify optional audio behaviors.",
+      "ko": "선택적 오디오 동작을 지정하는 상수입니다.",
+      "sourceHash": "b19acbcc4871830da74e787c1b2e1160e74373d17f61c5419432d0f7c0f10dc0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[static var farFieldInput: AVAudioSession.CategoryOptions](avaudiosession/categoryoptions-swift.struct/farfieldinput.md)",
+      "ko": "[static var farFieldInput: AVAudioSession.CategoryOptions](avaudiosession/categoryoptions-swift.struct/farfieldinput.md)",
+      "sourceHash": "724cd5c6c88087cd47209b3088b7f37d8f6ff62f511e30140a3266a319fcce38",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "This option should be used if a session prefers to use FarFieldInput when available.",
+      "ko": "이 옵션은 세션에서 FarFieldInput을 사용할 수 있을 때 이를 선호하는 경우 사용해야 합니다.",
+      "sourceHash": "e4326f2d663326f7caf86a743c94f4097724a890c03fc9ef1edbdc17d97dfad2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0002",
+      "source": "This option is only valid with categories that support input - [`playAndRecord`](avaudiosession/category-swift.struct/playandrecord.md) and [`record`](avaudiosession/category-swift.struct/record.md).",
+      "ko": "이 옵션은 입력을 지원하는 카테고리에서만 유효합니다. 해당 카테고리는 [`playAndRecord`](avaudiosession/category-swift.struct/playandrecord.md)와 [`record`](avaudiosession/category-swift.struct/record.md)입니다.",
+      "sourceHash": "841249718a5a90cbbaa486080329ffb2a82f167dc54b4fe97b32b066af83c5c0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0021:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/availablecategories)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/availablecategories)*",
+      "sourceHash": "3cfb151faea82c9440daba096314a25e6c5ea563412ae391653d4e6fdbfd3c83",
+      "status": "preserved"
+    }
+  ]
+}

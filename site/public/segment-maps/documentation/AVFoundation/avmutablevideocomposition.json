@@ -1,0 +1,694 @@
+{
+  "docId": "documentation/AVFoundation/avmutablevideocomposition.md",
+  "title": "AVMutableVideoComposition",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avmutablevideocomposition",
+  "segments": [
+    {
+      "id": "seg:heading:avmutablevideocomposition:0000:0001",
+      "source": "AVMutableVideoComposition",
+      "ko": "AVMutableVideoComposition",
+      "sourceHash": "23a23f56fa5274c862c93efd409403f5619bb4f4322d3557d099bac96d90ee36",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmutablevideocomposition:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmutablevideocomposition:0002:0001",
+      "source": "A mutable video composition subclass.",
+      "ko": "가변 비디오 컴포지션 하위 클래스입니다.",
+      "sourceHash": "74998b914fe92d7b41c75f634a37e26b024d62650b1cd10b9858230662fc7cd2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avmutablevideocomposition:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablevideocomposition:0004:0001",
+      "source": "iOS 4.0+",
+      "ko": "iOS 4.0+",
+      "sourceHash": "0c0ed66d9f4133c5a709449f69be4759ac3625b24734b8390d2f7e23b33c3545",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablevideocomposition:0004:0002",
+      "source": "iPadOS 4.0+",
+      "ko": "iPadOS 4.0+",
+      "sourceHash": "dfe042d2e3f40a7e917ced53f052a0d5f5ba8d69dfa62a3b59fb59de8ef49851",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablevideocomposition:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablevideocomposition:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablevideocomposition:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablevideocomposition:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVMutableVideoComposition\n```",
+      "ko": "```swift\nclass AVMutableVideoComposition\n```",
+      "sourceHash": "6cc41a9c744c7849e3d6cdce68a186a84e70bac4b057c2fad5bde2d100b64d6a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "If you use the built-in video compositor, the instructions a video composition contain can specify a spatial transformation, an opacity value, and a cropping rectangle for each video source.",
+      "ko": "내장 비디오 컴포지터를 사용하는 경우, 비디오 컴포지션의 지시문은 각 비디오 소스에 대해 공간 변환, 불투명도 값, 잘라내기 사각형을 지정할 수 있습니다.",
+      "sourceHash": "6a232bfd2de3c068653acfe2f0f795ed4e028d92a3adcdf851d91775b9364f7d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "This values can vary over time by applying linear ramping functions.",
+      "ko": "선형 램핑 함수를 적용하면 이 값들은 시간에 따라 변할 수 있습니다.",
+      "sourceHash": "267be8cd2aadc016f442a6de3da552c37f789efe3f3931d258b628d6ae6bc126",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "You can create a custom video compositor by implementing the [`AVVideoCompositing`](avvideocompositing.md) protocol.",
+      "ko": "[`AVVideoCompositing`](avvideocompositing.md) 프로토콜을 구현해 사용자 지정 비디오 컴포지터를 만들 수 있습니다.",
+      "sourceHash": "1a4762398b39c9cdbca3b48b2e6a304996f56a4d7b3ff4a2e82bfd5063904aab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "The system provides the custom video compositor with pixel buffers for each of its video sources during playback, and can perform arbitrary graphical operations on them to produce visual output.",
+      "ko": "시스템은 재생 중 각 비디오 소스의 픽셀 버퍼를 사용자 지정 비디오 컴포지터에 제공하며, 이를 사용해 임의의 그래픽 작업을 수행해 시각적 출력을 생성할 수 있습니다.",
+      "sourceHash": "0af994dec5c2a0ae9de094b96036c7eb3de6a14387cc0879381ab9149a3b0b6c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-video-composition:0011:0001",
+      "source": "Creating a video composition",
+      "ko": "비디오 컴포지션 만들기",
+      "sourceHash": "c0fc68e581f0e0ee5a681f008855fca3637703762e27c3ff1de75284f191ace0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-video-composition:0012:0001",
+      "source": "[class func videoComposition(withPropertiesOf: AVAsset, completionHandler: (AVMutableVideoComposition?, (any Error)?) -> Void)](avmutablevideocomposition/videocomposition(withpropertiesof:completionhandler:).md)",
+      "ko": "[class func videoComposition(withPropertiesOf: AVAsset, completionHandler: (AVMutableVideoComposition?, (any Error)?) -> Void)](avmutablevideocomposition/videocomposition(withpropertiesof:completionhandler:).md)",
+      "sourceHash": "8af44372e1a59c38c9d73135bca0bba7a852524fd06b218da58daa2bcfcfa08b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-video-composition:0013:0001",
+      "source": "Returns a new video composition that’s configured to present the video tracks of the specified asset.",
+      "ko": "지정된 자산의 비디오 트랙을 표시하도록 구성된 새 비디오 컴포지션을 반환합니다.",
+      "sourceHash": "d44205a97c2bda2a283d37a0db09a40aaa3b7ffa3296fb4aa335ed2cbbcb30a0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-video-composition:0014:0001",
+      "source": "[class func videoComposition(withPropertiesOf: AVAsset, prototypeInstruction: AVVideoCompositionInstruction, completionHandler: (AVMutableVideoComposition?, (any Error)?) -> Void)](avmutablevideocomposition/videocomposition(withpropertiesof:prototypeinstruction:completionhandler:).md)",
+      "ko": "[class func videoComposition(withPropertiesOf: AVAsset, prototypeInstruction: AVVideoCompositionInstruction, completionHandler: (AVMutableVideoComposition?, (any Error)?) -> Void)](avmutablevideocomposition/videocomposition(withpropertiesof:prototypeinstruction:completionhandler:).md)",
+      "sourceHash": "f445e0a5c80f6323713e8f12d28bc0977e22707f1f08910a40601c91711bf326",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-video-composition:0015:0001",
+      "source": "Returns a new mutable video composition with the specified asset properties and a prototype video composition instruction.",
+      "ko": "지정된 자산 속성 및 프로토타입 비디오 컴포지션 지시문을 사용해 새 가변 비디오 컴포지션을 반환합니다.",
+      "sourceHash": "d6402827925122ed5424c27d3b8c9b115683c10a25ff44727363fd99b3bbddc8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-video-composition:0016:0001",
+      "source": "[class func videoComposition(with: AVAsset, applyingCIFiltersWithHandler: (AVAsynchronousCIImageFilteringRequest) -> Void, completionHandler: (AVMutableVideoComposition?, (any Error)?) -> Void)](avmutablevideocomposition/videocomposition(with:applyingcifilterswithhandler:completionhandler:).md)",
+      "ko": "[class func videoComposition(with: AVAsset, applyingCIFiltersWithHandler: (AVAsynchronousCIImageFilteringRequest) -> Void, completionHandler: (AVMutableVideoComposition?, (any Error)?) -> Void)](avmutablevideocomposition/videocomposition(with:applyingcifilterswithhandler:completionhandler:).md)",
+      "sourceHash": "20c3e4826c208308c7c1fe76c15797cad5d918efb35d42844441aac99bb9f6ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-video-composition:0017:0001",
+      "source": "Returns a new video composition that’s configured to apply Core Image filters to each video frame of the specified asset.",
+      "ko": "지정된 자산의 각 비디오 프레임에 Core Image 필터를 적용하도록 구성된 새 비디오 컴포지션을 반환합니다.",
+      "sourceHash": "2f7837bc0403e0bd06597135c22f55b7d1c75e9a251e1720988cdd9a0a5c22ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-video-composition:0018:0001",
+      "source": "[init(propertiesOf: AVAsset)](avmutablevideocomposition/init(propertiesof:).md)",
+      "ko": "[init(propertiesOf: AVAsset)](avmutablevideocomposition/init(propertiesof:).md)",
+      "sourceHash": "f4a0ffe2918a5a83678804624e167c62dc8424872e8c43e0ac7d80318d2be2c0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-video-composition:0019:0001",
+      "source": "Creates a mutable video composition with the specified asset properties.",
+      "ko": "지정된 자산 속성으로 가변 비디오 컴포지션을 생성합니다.",
+      "sourceHash": "4a1be890bbe275bcdcfea42a762dfc018bd0c148611b227d7544022de0db41ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-video-composition:0020:0001",
+      "source": "[init(propertiesOf: AVAsset, prototypeInstruction: AVVideoCompositionInstruction)](avmutablevideocomposition/init(propertiesof:prototypeinstruction:).md)",
+      "ko": "[init(propertiesOf: AVAsset, prototypeInstruction: AVVideoCompositionInstruction)](avmutablevideocomposition/init(propertiesof:prototypeinstruction:).md)",
+      "sourceHash": "3aedbbcbba33e37180230aed0beb92f38e4cf87096f5d4f20b3cce958c3cf8aa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-video-composition:0021:0001",
+      "source": "Creates a mutable video composition with the specified asset properties and a prototype video composition instruction.",
+      "ko": "지정된 자산 속성과 프로토타입 비디오 컴포지션 지시문을 사용해 가변 비디오 컴포지션을 생성합니다.",
+      "sourceHash": "99bd483439c03ce688107e569921e953b20c241c7921cebe0996126d13edee0f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-video-composition:0022:0001",
+      "source": "[init(asset: AVAsset, applyingCIFiltersWithHandler: (AVAsynchronousCIImageFilteringRequest) -> Void)](avmutablevideocomposition/init(asset:applyingcifilterswithhandler:).md)",
+      "ko": "[init(asset: AVAsset, applyingCIFiltersWithHandler: (AVAsynchronousCIImageFilteringRequest) -> Void)](avmutablevideocomposition/init(asset:applyingcifilterswithhandler:).md)",
+      "sourceHash": "a98d34f343c4389924a65b6e06550104b205ee9f2d5a628b8daaaf7c4f2db613",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-video-composition:0023:0001",
+      "source": "Creates a mutable video composition configured to apply Core Image filters to each video frame of the specified asset.",
+      "ko": "지정된 자산의 각 비디오 프레임에 Core Image 필터를 적용하도록 구성된 가변 비디오 컴포지션을 생성합니다.",
+      "sourceHash": "5da73b6a6bf5f8c00308ad2b87aaf34f259f57a72e4684bea5fd7c724f73061f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-video-composition-properties:0024:0001",
+      "source": "Configuring video composition properties",
+      "ko": "비디오 컴포지션 속성 구성",
+      "sourceHash": "6cb5518d6814d109f9e350489af2056d0f6a90f03e64d0f84d4f3f270a293e2b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-video-composition-properties:0025:0001",
+      "source": "[var frameDuration: CMTime](avmutablevideocomposition/frameduration.md)",
+      "ko": "[var frameDuration: CMTime](avmutablevideocomposition/frameduration.md)",
+      "sourceHash": "92a0d8e8cd3614bfd55284cddbff5839268361a16daa05ad8721b3f9d473cf34",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-video-composition-properties:0026:0001",
+      "source": "A time interval for which the video composition should render composed video frames.",
+      "ko": "비디오 컴포지션이 합성된 비디오 프레임을 렌더링해야 하는 시간 간격입니다.",
+      "sourceHash": "177523d04ced6291e7b70eafdcd0c1896a90db800a6154d5f5ccc471f1997675",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-video-composition-properties:0027:0001",
+      "source": "[var renderSize: CGSize](avmutablevideocomposition/rendersize.md)",
+      "ko": "[var renderSize: CGSize](avmutablevideocomposition/rendersize.md)",
+      "sourceHash": "4bd9b8b7c7d2d91b337d7b21b59538d0d8a5215edd2b27ede686849c6c52d947",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-video-composition-properties:0028:0001",
+      "source": "The size at which the video composition should render.",
+      "ko": "비디오 컴포지션이 렌더링해야 하는 크기입니다.",
+      "sourceHash": "9a52148e9fcda4c58468d849a7862020ad268a55db432df4edf35454e963d3b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-video-composition-properties:0029:0001",
+      "source": "[var renderScale: Float](avmutablevideocomposition/renderscale.md)",
+      "ko": "[var renderScale: Float](avmutablevideocomposition/renderscale.md)",
+      "sourceHash": "ed479fb8b54b69d974c3e9c269ef77e606b7e4607a08bce30a38d33d94587ca0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-video-composition-properties:0030:0001",
+      "source": "The scale at which the video composition should render.",
+      "ko": "비디오 컴포지션이 렌더링해야 하는 배율입니다.",
+      "sourceHash": "54c9f5fa705f689379d5b45f038584ecd2ba7e436602f3f01128b9182bc2ce99",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-video-composition-properties:0031:0001",
+      "source": "[var animationTool: AVVideoCompositionCoreAnimationTool?](avmutablevideocomposition/animationtool.md)",
+      "ko": "[var animationTool: AVVideoCompositionCoreAnimationTool?](avmutablevideocomposition/animationtool.md)",
+      "sourceHash": "eb5d3a3b2bb9918b838bf38a5a834dedf2d657d04365516969d8f82d701843df",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-video-composition-properties:0032:0001",
+      "source": "A video composition tool to use with Core Animation in offline rendering.",
+      "ko": "오프라인 렌더링에서 Core Animation과 함께 사용할 비디오 컴포지션 도구입니다.",
+      "sourceHash": "b597cc06991f093421350aca360a940c12b843cc66d2d113327fe64a1d6f5795",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:specifying-composition-instructions:0033:0001",
+      "source": "Specifying composition instructions",
+      "ko": "컴포지션 지시문 지정",
+      "sourceHash": "920be23b00c17b0a82d6fac7321e65d688a27334a6be99651e0238611c2d19aa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:specifying-composition-instructions:0034:0001",
+      "source": "[var instructions: [any AVVideoCompositionInstructionProtocol]](avmutablevideocomposition/instructions.md)",
+      "ko": "[var instructions: [any AVVideoCompositionInstructionProtocol]](avmutablevideocomposition/instructions.md)",
+      "sourceHash": "6553cc341fd8eef965ece9b2e779c8ae43e5da98834c9247a5541c4ea64b33de",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:specifying-composition-instructions:0035:0001",
+      "source": "The video composition instructions.",
+      "ko": "The video composition instructions.",
+      "sourceHash": "c3bf209089c9d5809f87bd9b8f3138e784db77cad5d8c8cfbfa975e2cc2c3ca6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:specifying-composition-instructions:0036:0001",
+      "source": "[protocol AVVideoCompositionInstructionProtocol](avvideocompositioninstructionprotocol.md)",
+      "ko": "[protocol AVVideoCompositionInstructionProtocol](avvideocompositioninstructionprotocol.md)",
+      "sourceHash": "6142a70e19679e4d7ceebae045d2de3511822c0e5c10b6550a564ff915f0e925",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:specifying-composition-instructions:0037:0001",
+      "source": "A protocol that defines the interface for a video composition instruction.",
+      "ko": "A protocol that defines the interface for a video composition instruction.",
+      "sourceHash": "03eb15b1048abc3ed619663cb66f817a154cbc4038a931a73fd1e1924249b088",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:configuring-hdr-metadata:0038:0001",
+      "source": "Configuring HDR metadata",
+      "ko": "Configuring HDR metadata",
+      "sourceHash": "25448b774771c7bdad25625b2a3d552a36f90fbdd41db98daada29bde53c756d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-hdr-metadata:0039:0001",
+      "source": "[var perFrameHDRDisplayMetadataPolicy: AVVideoComposition.PerFrameHDRDisplayMetadataPolicy](avmutablevideocomposition/perframehdrdisplaymetadatapolicy.md)",
+      "ko": "[var perFrameHDRDisplayMetadataPolicy: AVVideoComposition.PerFrameHDRDisplayMetadataPolicy](avmutablevideocomposition/perframehdrdisplaymetadatapolicy.md)",
+      "sourceHash": "0812ff3980799492544672886ce09973f7c2fb639b8fb3973c866a5f700690f5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-hdr-metadata:0040:0001",
+      "source": "Configures the policy for display of HDR display metadata on the rendered frame.",
+      "ko": "Configures the policy for display of HDR display metadata on the rendered frame.",
+      "sourceHash": "7fa635bae9b469a87e6969cd5205e76ebc9d5460974ca042439816d4cb777708",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-hdr-metadata:0041:0001",
+      "source": "[AVVideoComposition.PerFrameHDRDisplayMetadataPolicy](avvideocomposition/perframehdrdisplaymetadatapolicy-swift.struct.md)",
+      "ko": "[AVVideoComposition.PerFrameHDRDisplayMetadataPolicy](avvideocomposition/perframehdrdisplaymetadatapolicy-swift.struct.md)",
+      "sourceHash": "574b56ac471a42f13e9db316c344909bce71f1c49ceefb8fd3d3333ea7426b8e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-hdr-metadata:0042:0001",
+      "source": "A type that defines the policy for handling of per frame HDR metadata.",
+      "ko": "A type that defines the policy for handling of per frame HDR metadata.",
+      "sourceHash": "f0b02e412383e57bb5e9b7619929e11d44a4de6a1975cb684df6a0c9248c27dd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:configuring-color:0043:0001",
+      "source": "Configuring color",
+      "ko": "Configuring color",
+      "sourceHash": "ba66149629e7c20955e2c039ef03240bed3d38bd455dd35175520d9204d1bc75",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-color:0044:0001",
+      "source": "[var colorPrimaries: String?](avmutablevideocomposition/colorprimaries.md)",
+      "ko": "[var colorPrimaries: String?](avmutablevideocomposition/colorprimaries.md)",
+      "sourceHash": "e64c40d40013d4657daf23f0d0cc745e7fe4340782709a181f5db97f91ee4e06",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-color:0045:0001",
+      "source": "The color primaries used for video composition.",
+      "ko": "The color primaries used for video composition.",
+      "sourceHash": "2ec06c645e020b10e6244c817f4514ac77fe3175e1dc2e94cfa67028b89faa0b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-color:0046:0001",
+      "source": "[var colorTransferFunction: String?](avmutablevideocomposition/colortransferfunction.md)",
+      "ko": "[var colorTransferFunction: String?](avmutablevideocomposition/colortransferfunction.md)",
+      "sourceHash": "832159c4121c431f8f302d8d134a7b24e6c7266a5dfccd05a49fc72021f284a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-color:0047:0001",
+      "source": "The transfer function used for video composition.",
+      "ko": "The transfer function used for video composition.",
+      "sourceHash": "ca41e16d17887754a07720dec8f79e34627db8c31eff624371d0a404d46d53ef",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-color:0048:0001",
+      "source": "[var colorYCbCrMatrix: String?](avmutablevideocomposition/colorycbcrmatrix.md)",
+      "ko": "[var colorYCbCrMatrix: String?](avmutablevideocomposition/colorycbcrmatrix.md)",
+      "sourceHash": "bf6e70d73a93675f8aabfe2c490fad7b3bc70d7957ca9d6e16c2c0b6d84534e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-color:0049:0001",
+      "source": "The YCbCr matrix used for video composition.",
+      "ko": "The YCbCr matrix used for video composition.",
+      "sourceHash": "587e8933372d6cb985adbbb57caaff752429d5843d36e4e9dd8dd17a13176754",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:identifying-source-tracks:0050:0001",
+      "source": "Identifying source tracks",
+      "ko": "Identifying source tracks",
+      "sourceHash": "a5b8a298e02da68b76623b7fb6641051a8eca9b435f500cc4744699244d6328c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:identifying-source-tracks:0051:0001",
+      "source": "[var sourceTrackIDForFrameTiming: CMPersistentTrackID](avmutablevideocomposition/sourcetrackidforframetiming.md)",
+      "ko": "[var sourceTrackIDForFrameTiming: CMPersistentTrackID](avmutablevideocomposition/sourcetrackidforframetiming.md)",
+      "sourceHash": "7c3c22e303e31bd84fbddcd73c7e9e8b6d5b7d7ea589afe3d0b431df1615a5b4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:identifying-source-tracks:0052:0001",
+      "source": "An identifier of the source track from which the video composition derives frame timing.",
+      "ko": "An identifier of the source track from which the video composition derives frame timing.",
+      "sourceHash": "0ff35208035d3889ecf2f399d51c8b48529afadbbea49587816c034f44f8abc3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:identifying-source-tracks:0053:0001",
+      "source": "[var sourceSampleDataTrackIDs: [CMPersistentTrackID]](avmutablevideocomposition/sourcesampledatatrackids-7i02t.md)",
+      "ko": "[var sourceSampleDataTrackIDs: [CMPersistentTrackID]](avmutablevideocomposition/sourcesampledatatrackids-7i02t.md)",
+      "sourceHash": "5bad5c532223b117efd7ecf243d875304bd93ef2ace0cf0aa2e99405297c8bf5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:identifying-source-tracks:0054:0001",
+      "source": "The identifiers of source sample data tracks in the composition that the object requires to compose frames.",
+      "ko": "The identifiers of source sample data tracks in the composition that the object requires to compose frames.",
+      "sourceHash": "b414d396bd49f7fd13f266135e58c6e4366e108065b89b87982ab7a58dadf46e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:specifying-a-custom-compositor:0055:0001",
+      "source": "Specifying a custom compositor",
+      "ko": "Specifying a custom compositor",
+      "sourceHash": "5339a438a6d68adbd3444f16819385c72e18d61f25e650ee4997acf065b45c54",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:specifying-a-custom-compositor:0056:0001",
+      "source": "[var customVideoCompositorClass: (any AVVideoCompositing.Type)?](avmutablevideocomposition/customvideocompositorclass.md)",
+      "ko": "[var customVideoCompositorClass: (any AVVideoCompositing.Type)?](avmutablevideocomposition/customvideocompositorclass.md)",
+      "sourceHash": "259eab7b98ff3d9862e5f86d81a410f17967931ae48fc30c3c1c6ca2f9957971",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:specifying-a-custom-compositor:0057:0001",
+      "source": "The custom compositor class to use.",
+      "ko": "The custom compositor class to use.",
+      "sourceHash": "d0d529d15d3650c4e7216dcc85efbbe716ceae0f7a2dc599b7afc86170571fc4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:initializers:0058:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0059:0001",
+      "source": "[init(propertiesOfAsset: AVAsset, prototypeInstruction: AVVideoCompositionInstruction)](avmutablevideocomposition/init(propertiesofasset:prototypeinstruction:).md)",
+      "ko": "[init(propertiesOfAsset: AVAsset, prototypeInstruction: AVVideoCompositionInstruction)](avmutablevideocomposition/init(propertiesofasset:prototypeinstruction:).md)",
+      "sourceHash": "bf0065842cdade1c4e2bef3a965d7cf18d9b4f4bb91262eb75db3c03b43a1f81",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:relationships:0060:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0061:0001",
+      "source": "Inherits From",
+      "ko": "Inherits From",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:inherits-from:0062:0001",
+      "source": "[AVVideoComposition](avvideocomposition.md)",
+      "ko": "[AVVideoComposition](avvideocomposition.md)",
+      "sourceHash": "4d2686325938bf1d2b6a3c018c91a40ac7601af2e9feb4870c77dab59e2edf90",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0063:0001",
+      "source": "Conforms To",
+      "ko": "Conforms To",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:conforms-to:0064:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0064:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0064:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0064:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0064:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0064:0006",
+      "source": "[NSCopying](../Foundation/NSCopying.md)",
+      "ko": "[NSCopying](../Foundation/NSCopying.md)",
+      "sourceHash": "a3e3914d750a60e4b250a0090cdf594ea4328ed30cecb20ea43c55afb46b9005",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0064:0007",
+      "source": "[NSMutableCopying](../Foundation/NSMutableCopying.md)",
+      "ko": "[NSMutableCopying](../Foundation/NSMutableCopying.md)",
+      "sourceHash": "5c4674cdc6153938efa09fc1e7068ef3205a681ad3a8ef20068e1460aa0d5b8c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0064:0008",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0064:0009",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0064:0010",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0065:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0066:0001",
+      "source": "[Editing and playing HDR video](editing-and-playing-hdr-video.md)",
+      "ko": "[Editing and playing HDR video](editing-and-playing-hdr-video.md)",
+      "sourceHash": "dadb00dce867481b7f2422d49d3c4cd81aad34b9503a4352be6ae111c9113df2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0067:0001",
+      "source": "Support high-dynamic-range (HDR) video content in your app by using the HDR editing and playback capabilities of AVFoundation.",
+      "ko": "Support high-dynamic-range (HDR) video content in your app by using the HDR editing and playback capabilities of AVFoundation.",
+      "sourceHash": "2dc9ad2efc8ce36faaacce09f08a215224b2ba59228d4240a3ec574f77119f68",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0068:0001",
+      "source": "[Debugging AVFoundation audio mixes, compositions, and video compositions](debugging-avfoundation-audio-mixes-compositions-and-video-compositions.md)",
+      "ko": "[Debugging AVFoundation audio mixes, compositions, and video compositions](debugging-avfoundation-audio-mixes-compositions-and-video-compositions.md)",
+      "sourceHash": "23aca82d626273a14bd1954c88d3041bf5cf9d42574a9a13c23afa8836c9b9aa",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0069:0001",
+      "source": "Resolve common problems when creating compositions, video compositions, and audio mixes.",
+      "ko": "Resolve common problems when creating compositions, video compositions, and audio mixes.",
+      "sourceHash": "d9ca40c6d0b31673129375d5ee73e181d5165f76ff70682fa889e041c5f60a09",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0070:0001",
+      "source": "[class AVVideoComposition](avvideocomposition.md)",
+      "ko": "[class AVVideoComposition](avvideocomposition.md)",
+      "sourceHash": "a61e75d2d5f5ebcc249c4331d94681240646cb394a7669610635e794bc5452d0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0071:0001",
+      "source": "An object that describes how to compose video frames at particular points in time.",
+      "ko": "An object that describes how to compose video frames at particular points in time.",
+      "sourceHash": "adab327b328c233ebdb0e5bae0789a88425ff33c13701b3a9e43eb0b76fbc5a6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0072:0001",
+      "source": "[class AVVideoCompositionInstruction](avvideocompositioninstruction-swift.class.md)",
+      "ko": "[class AVVideoCompositionInstruction](avvideocompositioninstruction-swift.class.md)",
+      "sourceHash": "01064c2d2521365be885bfa1d16501a3cb57757f60f7ec121318a08cde3c8e88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0073:0001",
+      "source": "An operation that a compositor performs.",
+      "ko": "An operation that a compositor performs.",
+      "sourceHash": "ce0914ac1497a2ce59ddda9a1956aadf0e25da40d4cc62c34807e8abf0bbd637",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0074:0001",
+      "source": "[class AVVideoCompositionLayerInstruction](avvideocompositionlayerinstruction.md)",
+      "ko": "[class AVVideoCompositionLayerInstruction](avvideocompositionlayerinstruction.md)",
+      "sourceHash": "a633da2fc31b81663d833460742e33fb6b8023061f7cf7796cb4641bbbe22d29",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0075:0001",
+      "source": "An object used to modify the transform, cropping, and opacity ramps applied to a given track in a composition.",
+      "ko": "An object used to modify the transform, cropping, and opacity ramps applied to a given track in a composition.",
+      "sourceHash": "003543a6cd435ec2720457b2f84804fc87128212828cc31bf5ff46ad087fdfb7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0076:0001",
+      "source": "[class AVMutableVideoCompositionInstruction](avmutablevideocompositioninstruction.md)",
+      "ko": "[class AVMutableVideoCompositionInstruction](avmutablevideocompositioninstruction.md)",
+      "sourceHash": "f1cda892b9725beb3fa6c917bd5d18871dad9391875bc653a3d5d62fc702b609",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0077:0001",
+      "source": "A mutable video composition instruction subclass.",
+      "ko": "A mutable video composition instruction subclass.",
+      "sourceHash": "dd24266cb87473d6e2252c07ad96bde76c5b16e6109dcfe607e55d1b64a0d68d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0078:0001",
+      "source": "[class AVMutableVideoCompositionLayerInstruction](avmutablevideocompositionlayerinstruction.md)",
+      "ko": "[class AVMutableVideoCompositionLayerInstruction](avmutablevideocompositionlayerinstruction.md)",
+      "sourceHash": "ba0ee9c4728862748791dbea73b66a639268f3cfc202cc69b5da3cb014b3417d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0079:0001",
+      "source": "An object used to modify the transform, cropping, and opacity ramps applied to a given track in a mutable composition.",
+      "ko": "An object used to modify the transform, cropping, and opacity ramps applied to a given track in a mutable composition.",
+      "sourceHash": "aa31cdc563c420fbe96a7bd9834498c0fe273f545217454b22494189fb3c6c4e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0080:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0081:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutablevideocomposition)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutablevideocomposition)*",
+      "sourceHash": "15c82eb7efb93e7f98feca94307218f4eb2470020e913798958326155d5bc27d",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "docId": "documentation/AVFAudio/avaudiouniteffect.md",
+  "title": "AVAudioUnitEffect",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiouniteffect",
+  "segments": [
+    {
+      "id": "seg:heading:avaudiouniteffect:0000:0001",
+      "source": "AVAudioUnitEffect",
+      "ko": "AVAudioUnitEffect",
+      "sourceHash": "417d73743bea739efb92de22882b3e2f4c7cb2b7dd4389d2802f0a1177274427",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiouniteffect:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiouniteffect:0002:0001",
+      "source": "An object that processes audio in real time.",
+      "ko": "실시간으로 오디오를 처리하는 객체입니다.",
+      "sourceHash": "674284b1d45543ed5e178e83095b0290f129b8d7f8588d742260a918aeb9965f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudiouniteffect:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiouniteffect:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiouniteffect:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiouniteffect:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiouniteffect:0004:0004",
+      "source": "macOS 10.10+",
+      "ko": "macOS 10.10+",
+      "sourceHash": "928cfc2e204a2d523c05071eb21f65479a96f581dc23a43fa1848eecc5216dcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiouniteffect:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiouniteffect:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAudioUnitEffect\n```",
+      "ko": "```swift\nclass AVAudioUnitEffect\n```",
+      "sourceHash": "844866e4f1418d55265e9a030b9449b4a3ea8e8b0005185d7694dbea2c224f27",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "This processing uses [`AudioUnit`](https://developer.apple.com/documentation/AudioToolbox/AudioUnit) of type effect, music effect, panner, remote effect, or remote music effect.",
+      "ko": "이 처리는 [`AudioUnit`](https://developer.apple.com/documentation/AudioToolbox/AudioUnit) 중 type이 effect, music effect, panner, remote effect 또는 remote music effect인 오디오 유닛을 사용합니다.",
+      "sourceHash": "5caa8e20188ba9b714ae7119ec6fdf3d030f00c38929ccae0c732e3b01990cc1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "These effects run in real time and process some number of audio input samples to produce several audio output samples.",
+      "ko": "이러한 효과는 실시간으로 실행되며 일부 오디오 입력 샘플을 처리해 여러 개의 오디오 출력 샘플을 생성합니다.",
+      "sourceHash": "e311e6237a3a2140624b13dd9c7dba1163a964bc3a328dadc9ee0702542b048c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0003",
+      "source": "A delay unit is an example of an effect unit.",
+      "ko": "딜레이 유닛은 효과 유닛의 예입니다.",
+      "sourceHash": "d0224ba776b80667c46cf71a0c53a97cd20b423299fcf076331102ff16a8b68d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-an-audio-effect:0010:0001",
+      "source": "Creating an audio effect",
+      "ko": "오디오 효과 생성",
+      "sourceHash": "e33cbca551cc35ee87a6ab7c9a29d352d95c35d9df03d85e1412e8531e40567a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-audio-effect:0011:0001",
+      "source": "[init(audioComponentDescription: AudioComponentDescription)](avaudiouniteffect/init(audiocomponentdescription:).md)",
+      "ko": "[init(audioComponentDescription: AudioComponentDescription)](avaudiouniteffect/init(audiocomponentdescription:).md)",
+      "sourceHash": "5bd0d5ed67fc10e008a8159907c56ce3455c8e6979cab1c93005132b10ca2fba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-an-audio-effect:0012:0001",
+      "source": "Creates an audio unit effect object with the specified description.",
+      "ko": "지정된 설명으로 오디오 유닛 효과 객체를 생성합니다.",
+      "sourceHash": "5a397375bcbe59fb0a9092329a81a0200c5ddf3285ddd5107d2583b129ccfafa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-the-bypass-state:0013:0001",
+      "source": "Getting the bypass state",
+      "ko": "바이패스 상태 가져오기",
+      "sourceHash": "794290d01ee331a02f2f663db72b7f9c709112b4fba203bac8e5c9da255bed00",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-the-bypass-state:0014:0001",
+      "source": "[var bypass: Bool](avaudiouniteffect/bypass.md)",
+      "ko": "[var bypass: Bool](avaudiouniteffect/bypass.md)",
+      "sourceHash": "3d8070be9881982f82975c1641187001d7cef3f3173464418959a564c2efdaac",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-the-bypass-state:0015:0001",
+      "source": "The bypass state of the audio unit.",
+      "ko": "오디오 유닛의 bypass 상태입니다.",
+      "sourceHash": "dce8007c29a120f57c9cc09963e013b34761d06b3456c857638595aaf3f35536",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0016:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0017:0001",
+      "source": "Inherits From",
+      "ko": "상속 대상",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0018:0001",
+      "source": "[AVAudioUnit](avaudiounit.md)",
+      "ko": "[AVAudioUnit](avaudiounit.md)",
+      "sourceHash": "36574dc49ccbafe3c2a04d50589c6848c8f20b7480774eff8cdd2b9dbae0742d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherited-by:0019:0001",
+      "source": "Inherited By",
+      "ko": "상속한 클래스",
+      "sourceHash": "42035a6fba4e21843f669d8b7e1e57fb192087a3ae79a1ddf62cfa85090744bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherited-by:0020:0001",
+      "source": "[AVAudioUnitDelay](avaudiounitdelay.md)",
+      "ko": "[AVAudioUnitDelay](avaudiounitdelay.md)",
+      "sourceHash": "0045fc8c597d34822dd8cdb42ea5a460820c9959dcd3908c00df1523a936ad36",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherited-by:0020:0002",
+      "source": "[AVAudioUnitDistortion](avaudiounitdistortion.md)",
+      "ko": "[AVAudioUnitDistortion](avaudiounitdistortion.md)",
+      "sourceHash": "1492655b7debdadc9d75c1e643f17a8f94b8fa36f5f9f0185643ebaaa6cf2d6c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherited-by:0020:0003",
+      "source": "[AVAudioUnitEQ](avaudiouniteq.md)",
+      "ko": "[AVAudioUnitEQ](avaudiouniteq.md)",
+      "sourceHash": "825236699845f57326c1d71dbf6f42c2cca4a24b2bcbf9e6c8e844c582b8dc80",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherited-by:0020:0004",
+      "source": "[AVAudioUnitReverb](avaudiounitreverb.md)",
+      "ko": "[AVAudioUnitReverb](avaudiounitreverb.md)",
+      "sourceHash": "b2826cc674b0301aa22dc9b1eeaa9fe42b7501d52050c97caaeb447fe48423ea",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0021:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0023:0001",
+      "source": "See Also",
+      "ko": "참고",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[class AVAudioUnitEQ](avaudiouniteq.md)",
+      "ko": "[class AVAudioUnitEQ](avaudiouniteq.md)",
+      "sourceHash": "6c44eeeed76d881b384e5753c172a1f5c06188723e3d604c06bebc88d2efb7c4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "An object that implements a multiband equalizer.",
+      "ko": "멀티밴드 이퀄라이저를 구현하는 객체입니다.",
+      "sourceHash": "2ec631b1d73959ca04a52122279e72e86b6eded43fa4ffc6580b5df8c45c5b23",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[class AVAudioUnitDistortion](avaudiounitdistortion.md)",
+      "ko": "[class AVAudioUnitDistortion](avaudiounitdistortion.md)",
+      "sourceHash": "1568040c2aace00aebd450aa9aea9b41ef92a1960e9d087e11cf29a50b66932e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "An object that implements a multistage distortion effect.",
+      "ko": "다단계 왜곡 효과를 구현하는 객체입니다.",
+      "sourceHash": "5f50530cbf9a31551df2bd366c80e85d7b0a626aa6d61906de8a75a784a1f58d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[class AVAudioUnitDelay](avaudiounitdelay.md)",
+      "ko": "[class AVAudioUnitDelay](avaudiounitdelay.md)",
+      "sourceHash": "ac60387882857e44778943eb9d94fce1cd035358470c5948f167fcb512f56ba2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "An object that implements a delay effect.",
+      "ko": "딜레이 효과를 구현하는 객체입니다.",
+      "sourceHash": "ca3bb5005f78de0ae352350868c1f2037901039399c2690330628c755fa8f6f4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[class AVAudioUnitReverb](avaudiounitreverb.md)",
+      "ko": "[class AVAudioUnitReverb](avaudiounitreverb.md)",
+      "sourceHash": "14a0d86f862a694de9d1de379d4cc8f57c0f1d853bd448577ced4fb6af8e824b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "An object that implements a reverb effect.",
+      "ko": "리버브 효과를 구현하는 객체입니다.",
+      "sourceHash": "6ceba5717453bf2174f0a505c2a47ac3720ef57e940870c6a6889749ead398d7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0032:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiouniteffect)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiouniteffect)*",
+      "sourceHash": "2b6cd1791d9afaf36085b9ce754aaab7e37bc59accaae69f9a1c077b78a7f6c8",
+      "status": "preserved"
+    }
+  ]
+}

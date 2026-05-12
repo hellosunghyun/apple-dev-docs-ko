@@ -1,0 +1,456 @@
+{
+  "docId": "documentation/AVFoundation/avcapturephotooutputreadinesscoordinator.md",
+  "title": "AVCapturePhotoOutputReadinessCoordinator",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturephotooutputreadinesscoordinator",
+  "segments": [
+    {
+      "id": "seg:heading:avcapturephotooutputreadinesscoordinator:0000:0001",
+      "source": "AVCapturePhotoOutputReadinessCoordinator",
+      "ko": "AVCapturePhotoOutputReadinessCoordinator",
+      "sourceHash": "7ad9681f9382c32e85b52811c4851c10f0eeb36531e7367f079a9ec9fbfcb047",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avcapturephotooutputreadinesscoordinator:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avcapturephotooutputreadinesscoordinator:0002:0001",
+      "source": "An object that monitors changes to a photo output’s capture readiness.",
+      "ko": "사진 출력의 캡처 준비 상태 변경을 모니터링하는 객체입니다.",
+      "sourceHash": "2f11489772354bbe4b7dfb0bc272df7898e9aab58d17f45a1ce2d468ca0e0093",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avcapturephotooutputreadinesscoordinator:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturephotooutputreadinesscoordinator:0004:0001",
+      "source": "iOS 17.0+",
+      "ko": "iOS 17.0+",
+      "sourceHash": "e5cea757bf32cbccc7d863aa42afab59dff1fa9ce5ef2b3addfbb28be822c165",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturephotooutputreadinesscoordinator:0004:0002",
+      "source": "iPadOS 17.0+",
+      "ko": "iPadOS 17.0+",
+      "sourceHash": "12d04dd1560d4b771625b38560f01ece509e2548d1af87dbc0995f8ce1a7abb6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturephotooutputreadinesscoordinator:0004:0003",
+      "source": "Mac Catalyst 17.0+",
+      "ko": "Mac Catalyst 17.0+",
+      "sourceHash": "01e7bd4869b427ea84a91185934fc689e7c1b161e5b013fb425a44277994b5f3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturephotooutputreadinesscoordinator:0004:0004",
+      "source": "macOS 14.0+",
+      "ko": "macOS 14.0+",
+      "sourceHash": "c037401748a572da79aedb55d7cb53c26eaac4007d481a2f3f8a76b42f357acb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturephotooutputreadinesscoordinator:0004:0005",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVCapturePhotoOutputReadinessCoordinator\n```",
+      "ko": "```swift\nclass AVCapturePhotoOutputReadinessCoordinator\n```",
+      "sourceHash": "9b44e263eea504da714d87f8da3d675ff056f7405379b12c3cd038c55d73809c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Use this object to coordinate user interface updates on the main queue with a [`AVCapturePhotoOutput`](avcapturephotooutput.md) that runs on a background queue.",
+      "ko": "이 객체를 사용해 메인 큐의 사용자 인터페이스 업데이트를 백그라운드 큐에서 실행되는 [`AVCapturePhotoOutput`](avcapturephotooutput.md)와 조정할 수 있습니다.",
+      "sourceHash": "e01a2703adf76c799adacad5ed14ec900f5215779f62b9fad6080dd2582a1578",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "Adopt the [`AVCapturePhotoOutputReadinessCoordinatorDelegate`](avcapturephotooutputreadinesscoordinatordelegate.md) protocol in your app and set its implementation as the coordinator’s delegate object to receive callbacks as the associated photo output’s [`captureReadiness`](avcapturephotooutput/capturereadiness-swift.property.md) state changes.",
+      "ko": "[`AVCapturePhotoOutputReadinessCoordinatorDelegate`](avcapturephotooutputreadinesscoordinatordelegate.md) 프로토콜을 앱에서 채택하고 구현을 조정기의 delegate 객체로 설정하면, 연결된 사진 출력의 [`captureReadiness`](avcapturephotooutput/capturereadiness-swift.property.md) 상태 변경 시 콜백을 받을 수 있습니다.",
+      "sourceHash": "d8c081b380383f70466424e3958d34616d0f04d05219d35c1a1ab69df001033b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "You can track additional capture requests with this object by calling its [`startTrackingCaptureRequest(using:)`](avcapturephotooutputreadinesscoordinator/starttrackingcapturerequest(using:).md) method.",
+      "ko": "이 객체의 [`startTrackingCaptureRequest(using:)`](avcapturephotooutputreadinesscoordinator/starttrackingcapturerequest(using:).md) 메서드를 호출해 추가 캡처 요청을 추적할 수 있습니다.",
+      "sourceHash": "5d46b00151f4cf5643cc087e9fe6a3e231d94a2140d870b190136b3509e5110f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "You can use it to synchronously update shutter button availability and appearance and on the main thread while calling the photo output’s [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) method asynchronously on a background queue.",
+      "ko": "백그라운드 큐에서 사진 출력의 [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) 메서드를 비동기로 호출하는 동안, 메인 스레드에서 셔터 버튼의 사용 가능 여부와 모양을 동기적으로 업데이트하는 데 사용할 수 있습니다.",
+      "sourceHash": "19501be2bef79857855f1ded39cf6079dcfdbf3ec53759257e49b11a2fe8d3b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-coordinator:0011:0001",
+      "source": "Creating a coordinator",
+      "ko": "조정기 생성",
+      "sourceHash": "b3951ba47949d01ae50e59b01983657593935c7ce65aa4556d3c2005815ecd62",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-coordinator:0012:0001",
+      "source": "[init(photoOutput: AVCapturePhotoOutput)](avcapturephotooutputreadinesscoordinator/init(photooutput:).md)",
+      "ko": "[init(photoOutput: AVCapturePhotoOutput)](avcapturephotooutputreadinesscoordinator/init(photooutput:).md)",
+      "sourceHash": "bed7a29b8e794da2ed44b07d8d5671369efecfa06b5afc946f6c91b719d243d5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-coordinator:0013:0001",
+      "source": "Creates an object that helps coordinate user interface changes with a photo output that runs on a background queue.",
+      "ko": "백그라운드 큐에서 실행되는 사진 출력과 사용자 인터페이스 변경을 조정하도록 돕는 객체를 생성합니다.",
+      "sourceHash": "8dabf45ed572dcd6f91a2a4b856570e9ce982b4e48a2795823fd0be205443e43",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:setting-the-delegate-object:0014:0001",
+      "source": "Setting the delegate object",
+      "ko": "delegate 객체 설정",
+      "sourceHash": "36891d26c91b1faeb1fb34408f0e21a4f518cd8168c7270dda07edf708ea5854",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:setting-the-delegate-object:0015:0001",
+      "source": "[var delegate: (any AVCapturePhotoOutputReadinessCoordinatorDelegate)?](avcapturephotooutputreadinesscoordinator/delegate.md)",
+      "ko": "[var delegate: (any AVCapturePhotoOutputReadinessCoordinatorDelegate)?](avcapturephotooutputreadinesscoordinator/delegate.md)",
+      "sourceHash": "b82e57793fc9a021a40d527c3f0d45089c1544b8d892395986414061f132d3da",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setting-the-delegate-object:0016:0001",
+      "source": "The coordinator’s delegate object.",
+      "ko": "조정기의 delegate 객체입니다.",
+      "sourceHash": "06c4bb7307a1a34efa6a3375feb0bb09d9f3fc7566e7fa4e5655fe66134ee9d9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:performing-tracking-requests:0017:0001",
+      "source": "Performing tracking requests",
+      "ko": "추적 요청 수행",
+      "sourceHash": "1723290521cf85209104e985f84f7a10a66e983a22d607931fc6eb648d017c51",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:performing-tracking-requests:0018:0001",
+      "source": "[func startTrackingCaptureRequest(using: AVCapturePhotoSettings)](avcapturephotooutputreadinesscoordinator/starttrackingcapturerequest(using:).md)",
+      "ko": "[func startTrackingCaptureRequest(using: AVCapturePhotoSettings)](avcapturephotooutputreadinesscoordinator/starttrackingcapturerequest(using:).md)",
+      "sourceHash": "f04d10e22583d75043028e51895cab4912fd950a9d84facf98923ab63dc810a8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:performing-tracking-requests:0019:0001",
+      "source": "Tracks a capture request that uses the specified photo settings.",
+      "ko": "지정된 사진 설정을 사용하는 캡처 요청을 추적합니다.",
+      "sourceHash": "2e5eab6f5cab42ef97c6345a53b0bdfb8b41e25e9418d53758c9f5ce713cb546",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:performing-tracking-requests:0020:0001",
+      "source": "[func stopTrackingCaptureRequest(using: Int64)](avcapturephotooutputreadinesscoordinator/stoptrackingcapturerequest(using:).md)",
+      "ko": "[func stopTrackingCaptureRequest(using: Int64)](avcapturephotooutputreadinesscoordinator/stoptrackingcapturerequest(using:).md)",
+      "sourceHash": "be2f6cdd9b05bff5876030d71e987943380d6dd39ba7abab41748a710c552f4b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:performing-tracking-requests:0021:0001",
+      "source": "Stop tracking the capture request represented by the specified photo setting’s unique identifier.",
+      "ko": "지정된 사진 설정의 고유 식별자에 해당하는 캡처 요청 추적을 중지합니다.",
+      "sourceHash": "211ac8ab1aec71ceb089b5e4fdf0c049ec91a6b026a6f56e2b3b172cb553d545",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:determining-readiness-for-capture:0022:0001",
+      "source": "Determining readiness for capture",
+      "ko": "캡처 준비 상태 판정",
+      "sourceHash": "7fec8d62465d84ac8c3046930d0ee0e20bd3c3d66056f7436dd94a19909d610d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:determining-readiness-for-capture:0023:0001",
+      "source": "[var captureReadiness: AVCapturePhotoOutput.CaptureReadiness](avcapturephotooutputreadinesscoordinator/capturereadiness.md)",
+      "ko": "[var captureReadiness: AVCapturePhotoOutput.CaptureReadiness](avcapturephotooutputreadinesscoordinator/capturereadiness.md)",
+      "sourceHash": "2348c8062c848f13b06c92d7c6879be186c74483b81323f7e1b01ed22e9e0ed8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:determining-readiness-for-capture:0024:0001",
+      "source": "A value that indicates whether the coordinator’s photo output is ready to respond to new capture requests in a timely manner.",
+      "ko": "조정기의 사진 출력이 새로운 캡처 요청에 시의적절하게 응답할 수 있는지 여부를 나타내는 값입니다.",
+      "sourceHash": "59938c3366323805b9ef1bf3f2373a59ce27818c46bbe20b57d9d4779be067fe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0025:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0026:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0027:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0028:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0029:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0029:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0029:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0029:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0029:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0029:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0030:0001",
+      "source": "See Also",
+      "ko": "참고",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0031:0001",
+      "source": "[Capturing consistent color images](capturing-consistent-color-images.md)",
+      "ko": "[Capturing consistent color images](capturing-consistent-color-images.md)",
+      "sourceHash": "933ceef6de54aabaf93a8facf373399bfd2a776389ca4d8eac5f44e1db1b709a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0032:0001",
+      "source": "Add the power of a photography studio and lighting rig to your app with the new Constant Color API.",
+      "ko": "새 Constant Color API를 사용해 앱에 촬영 스튜디오와 조명 장비의 효과를 추가할 수 있습니다.",
+      "sourceHash": "adccabb14eb2f52cb08f501d5d9c26e8749c09fa3af73644e4835cf6f7535f2b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0033:0001",
+      "source": "[Capturing still and Live Photos](capturing-still-and-live-photos.md)",
+      "ko": "[Capturing still and Live Photos](capturing-still-and-live-photos.md)",
+      "sourceHash": "f69489177e36621b64df959a118eb6d7ca30020f212801788ad13e3b6e23ebc6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0034:0001",
+      "source": "Configure and capture single or multiple still images, Live Photos, and other forms of photography.",
+      "ko": "정지 이미지, Live Photos 및 기타 사진 형식의 단일 또는 다중 이미지를 구성하고 캡처합니다.",
+      "sourceHash": "ad3028b9b11b0d6b44a8c2a42c192ea4ad7f041cf9c35038dfff80d6fa4a60f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0035:0001",
+      "source": "[Capturing photos in RAW and Apple ProRAW formats](capturing-photos-in-raw-and-apple-proraw-formats.md)",
+      "ko": "[Capturing photos in RAW and Apple ProRAW formats](capturing-photos-in-raw-and-apple-proraw-formats.md)",
+      "sourceHash": "7d9b0d0a08c2d25762ac6e4233445da7c7dff9f48e395605b6096f8f14c36426",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0036:0001",
+      "source": "Support professional photography workflows by enabling minimally processed image capture in your camera app.",
+      "ko": "카메라 앱에서 최소 처리된 이미지 캡처를 사용하도록 하여 전문가용 촬영 워크플로우를 지원합니다.",
+      "sourceHash": "9ea9ab4d0ba9f1a8162a6e43c1b056c902e9a15cbbdeba37c3ef847827d3a374",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0037:0001",
+      "source": "[Supporting Continuity Camera in Your Mac App](../AppKit/supporting-continuity-camera-in-your-mac-app.md)",
+      "ko": "[Supporting Continuity Camera in Your Mac App](../AppKit/supporting-continuity-camera-in-your-mac-app.md)",
+      "sourceHash": "16975ea4fead29dc7e63945f44da6436e36cfa034d06a37f34106c280dbead05",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0038:0001",
+      "source": "Incorporate scanned documents and pictures from a user’s iPhone, iPad, or iPod touch into your Mac app using Continuity Camera.",
+      "ko": "Continuity Camera를 사용해 사용자의 iPhone, iPad 또는 iPod touch에서 스캔한 문서와 사진을 Mac 앱에 통합합니다.",
+      "sourceHash": "b09e683fd922ad2881d7ffb5a33a5946682e2635f61df50cd7f2422e0ed79297",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0039:0001",
+      "source": "[class AVCapturePhoto](avcapturephoto.md)",
+      "ko": "[class AVCapturePhoto](avcapturephoto.md)",
+      "sourceHash": "cfdfc6176e4e023078c2e1139e42b4b757e7f2119f6d30a2e3399c7ef6c18b2a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0040:0001",
+      "source": "A container for image data from a photo capture output.",
+      "ko": "사진 캡처 출력의 이미지 데이터를 담는 컨테이너입니다.",
+      "sourceHash": "82d75dbcbba316f3de6551984b1a7278bcb1d62070aeb5ab9f36be9389f08197",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0041:0001",
+      "source": "[class AVCaptureDeferredPhotoProxy](avcapturedeferredphotoproxy.md)",
+      "ko": "[class AVCaptureDeferredPhotoProxy](avcapturedeferredphotoproxy.md)",
+      "sourceHash": "5d4cd2c814aabdcf834593b124f88f31e9b4b741f0775bb85df1f6b4c16d6e3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0042:0001",
+      "source": "A lightly-processed photo with data that the system may use to process and fetch a higher-resolution asset at a later time.",
+      "ko": "시스템이 나중에 고해상도 자산을 처리하고 가져오는 데 사용할 수 있는 가벼운 처리의 사진 데이터입니다.",
+      "sourceHash": "43b845c0dba7e47f0d33765faf287a697882db643577d5acf5fae8b6cedf43bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0043:0001",
+      "source": "[class AVCapturePhotoOutput](avcapturephotooutput.md)",
+      "ko": "[class AVCapturePhotoOutput](avcapturephotooutput.md)",
+      "sourceHash": "b7890cceb808f17c4a6ce5add41c76340d66892d317e13c7f0b5e7aee592f3ae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0044:0001",
+      "source": "A capture output for still image, Live Photos, and other photography workflows.",
+      "ko": "정지 이미지, Live Photos 및 기타 사진 촬영 워크플로우를 위한 캡처 출력입니다.",
+      "sourceHash": "248776834cee824565e4ce84a5d7c7bc5a255e4282b873020e288cad54c17e76",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0045:0001",
+      "source": "[protocol AVCapturePhotoCaptureDelegate](avcapturephotocapturedelegate.md)",
+      "ko": "[protocol AVCapturePhotoCaptureDelegate](avcapturephotocapturedelegate.md)",
+      "sourceHash": "d8cb78e5fdcdbb650882bd1c5470d8b8ca9b1e869e5da45c708846adbdc4ad6e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0046:0001",
+      "source": "Methods for monitoring progress and receiving results from a photo capture output.",
+      "ko": "사진 캡처 출력의 진행 상황을 모니터링하고 결과를 수신하는 방법입니다.",
+      "sourceHash": "cc4a1e891c2cfc55c76e944cbb8096a19f4b5b24caf5e9582c768996e98f25e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0047:0001",
+      "source": "[protocol AVCapturePhotoOutputReadinessCoordinatorDelegate](avcapturephotooutputreadinesscoordinatordelegate.md)",
+      "ko": "[protocol AVCapturePhotoOutputReadinessCoordinatorDelegate](avcapturephotooutputreadinesscoordinatordelegate.md)",
+      "sourceHash": "931e0d7c587f41c43c2184c156b31b6dac4e8bd6fb6dc71a6a5eca246531e45c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0048:0001",
+      "source": "A delegate protocol to receive updates about a photo output’s capture readiness.",
+      "ko": "사진 출력의 캡처 준비 상태 업데이트를 수신하는 위임 프로토콜입니다.",
+      "sourceHash": "12ce058906fba2009e206f518fee8bf87ecae3c399f5e79d61d237158a083098",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0049:0001",
+      "source": "[class AVCaptureStillImageOutput](avcapturestillimageoutput.md)",
+      "ko": "[class AVCaptureStillImageOutput](avcapturestillimageoutput.md)",
+      "sourceHash": "01d5a9afb7c09ab49d5bb50d48643eb237924e0940755e4a2dfbf3f541662bd2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0050:0001",
+      "source": "A capture output for capturing still photos.",
+      "ko": "정지 사진 캡처를 위한 캡처 출력입니다.",
+      "sourceHash": "8592357e24c289df2df71989c3f52fb14209d39cae55356dad74c394b47db51e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0051:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0052:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturephotooutputreadinesscoordinator)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturephotooutputreadinesscoordinator)*",
+      "sourceHash": "252e28639c19d066351038240227da16501b200c486e821cadcba2456b588b96",
+      "status": "preserved"
+    }
+  ]
+}

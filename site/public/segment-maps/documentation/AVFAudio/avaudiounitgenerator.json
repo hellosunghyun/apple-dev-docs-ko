@@ -1,0 +1,274 @@
+{
+  "docId": "documentation/AVFAudio/avaudiounitgenerator.md",
+  "title": "AVAudioUnitGenerator",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiounitgenerator",
+  "segments": [
+    {
+      "id": "seg:heading:avaudiounitgenerator:0000:0001",
+      "source": "AVAudioUnitGenerator",
+      "ko": "AVAudioUnitGenerator",
+      "sourceHash": "8343bfacf00d3b6c7a5be61d0b7a57ff1344488cd4ed95a63f66d14a59718d74",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitgenerator:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitgenerator:0002:0001",
+      "source": "An object that generates audio output.",
+      "ko": "오디오 출력을 생성하는 객체입니다.",
+      "sourceHash": "f772a37186a2b6966076714df789c0930b0d518935935d2185351c7e5eadf937",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitgenerator:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitgenerator:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitgenerator:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitgenerator:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitgenerator:0004:0004",
+      "source": "macOS 10.10+",
+      "ko": "macOS 10.10+",
+      "sourceHash": "928cfc2e204a2d523c05071eb21f65479a96f581dc23a43fa1848eecc5216dcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitgenerator:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitgenerator:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAudioUnitGenerator\n```",
+      "ko": "```swift\nclass AVAudioUnitGenerator\n```",
+      "sourceHash": "eab9983da9b9f5ecb3ea35ab8e641835146ec6d99a720bbeff302fd534c02c1e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "A generator represents an [`AudioUnit`](https://developer.apple.com/documentation/AudioToolbox/AudioUnit) of type `kAudioUnitType_Generator` or `kAudioUnitType_RemoteGenerator`.",
+      "ko": "제너레이터는 `kAudioUnitType_Generator` 또는 `kAudioUnitType_RemoteGenerator` 유형의 [`AudioUnit`](https://developer.apple.com/documentation/AudioToolbox/AudioUnit)를 나타냅니다.",
+      "sourceHash": "21def0d61cc617ec5176520cfa28dea70dffc8b641394c6d0a3a4ae1a6125c08",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "A generator has no audio input, but produces audio output.",
+      "ko": "제너레이터는 오디오 입력이 없지만 오디오 출력을 생성합니다.",
+      "sourceHash": "4161d68aa8dfd83e6bdb1e9f38950b2d2879910e1cc189ef29639a2bfcc52bf5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0003",
+      "source": "An example is a tone generator.",
+      "ko": "예로 톤 제너레이터가 있습니다.",
+      "sourceHash": "52d5f54e3de96465a6d53250dfaac52a4527f58f620195e488444dd805346f93",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-an-audio-unit-generator:0010:0001",
+      "source": "Creating an audio unit generator",
+      "ko": "오디오 유닛 제너레이터 만들기",
+      "sourceHash": "0feff3653a9c5dac0c78dca07a727d71d589382b8333a063e25b1bb73bd91543",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-audio-unit-generator:0011:0001",
+      "source": "[init(audioComponentDescription: AudioComponentDescription)](avaudiounitgenerator/init(audiocomponentdescription:).md)",
+      "ko": "[init(audioComponentDescription: AudioComponentDescription)](avaudiounitgenerator/init(audiocomponentdescription:).md)",
+      "sourceHash": "18bebf4b1e204a499b58885a96130fe198fe3741a7f018a9a124a5c66a2bd3c8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-an-audio-unit-generator:0012:0001",
+      "source": "Creates a generator audio unit with the specified description.",
+      "ko": "지정된 설명으로 제너레이터 오디오 유닛을 생성합니다.",
+      "sourceHash": "8fb415ee892a19a5a32b60a0c5108be289bf1b41486e5e876042230aade5ebec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-and-setting-the-bypass-status:0013:0001",
+      "source": "Getting and setting the bypass status",
+      "ko": "bypass 상태 가져오기 및 설정",
+      "sourceHash": "49ce25c6185d47b17dcaba91afe7af4f943c5851eb8a3d15930cf0ea1101b04b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-and-setting-the-bypass-status:0014:0001",
+      "source": "[var bypass: Bool](avaudiounitgenerator/bypass.md)",
+      "ko": "[var bypass: Bool](avaudiounitgenerator/bypass.md)",
+      "sourceHash": "2c92bab5a488d7d53c3ac3c8a9013e3145163001e5fdceeae85955b6907e6416",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-and-setting-the-bypass-status:0015:0001",
+      "source": "The bypass state of the audio unit.",
+      "ko": "오디오 유닛의 bypass 상태입니다.",
+      "sourceHash": "dce8007c29a120f57c9cc09963e013b34761d06b3456c857638595aaf3f35536",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0016:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0017:0001",
+      "source": "Inherits From",
+      "ko": "상속 대상",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0018:0001",
+      "source": "[AVAudioUnit](avaudiounit.md)",
+      "ko": "[AVAudioUnit](avaudiounit.md)",
+      "sourceHash": "36574dc49ccbafe3c2a04d50589c6848c8f20b7480774eff8cdd2b9dbae0742d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0019:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0001",
+      "source": "[AVAudio3DMixing](avaudio3dmixing.md)",
+      "ko": "[AVAudio3DMixing](avaudio3dmixing.md)",
+      "sourceHash": "b2a090303b7721191d3127fa2f68e80dcc487eb87498df2256b43d6db66ebbe3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0002",
+      "source": "[AVAudioMixing](avaudiomixing.md)",
+      "ko": "[AVAudioMixing](avaudiomixing.md)",
+      "sourceHash": "37ac4642d2317d12b78bd1ecdee4b9f970dbb6ba2779c9331a8a35af916beeb5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0003",
+      "source": "[AVAudioStereoMixing](avaudiostereomixing.md)",
+      "ko": "[AVAudioStereoMixing](avaudiostereomixing.md)",
+      "sourceHash": "81a03a19acb930569fa76b4e0a73c71549cef94e1672c4468a1be876a00dc57a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0004",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0005",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0006",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0007",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0008",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0009",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:horizontal_rule:conforms-to:0021:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:conforms-to:0022:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiounitgenerator)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiounitgenerator)*",
+      "sourceHash": "9ce0efac99a30ec954147bf64cd063dfa9861c2dabde7e0daf0ea1d43c7eae7a",
+      "status": "preserved"
+    }
+  ]
+}

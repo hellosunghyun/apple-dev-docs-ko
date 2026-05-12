@@ -1,0 +1,218 @@
+{
+  "docId": "documentation/AVFoundation/avcapturephotooutput/maxbracketedcapturephotocount.md",
+  "title": "maxBracketedCapturePhotoCount",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturephotooutput/maxbracketedcapturephotocount",
+  "segments": [
+    {
+      "id": "seg:heading:maxbracketedcapturephotocount:0000:0001",
+      "source": "maxBracketedCapturePhotoCount",
+      "ko": "maxBracketedCapturePhotoCount",
+      "sourceHash": "018c5d8b954eec7085358fb840bd652a63192753b072e005f9b3c9e0736c015c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:maxbracketedcapturephotocount:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:maxbracketedcapturephotocount:0002:0001",
+      "source": "The maximum number of images that the photo capture output can support in a single bracketed capture.",
+      "ko": "사진 캡처 출력이 단일 브래킷 캡처에서 지원할 수 있는 최대 이미지 수입니다.",
+      "sourceHash": "43b512bcf7149254238187ec6d131cd255a649316ed4b69b65474f49093ee403",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:maxbracketedcapturephotocount:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:maxbracketedcapturephotocount:0004:0001",
+      "source": "iOS 10.0+",
+      "ko": "iOS 10.0+",
+      "sourceHash": "15e2b63b966efd6cadb08b2da63ceeef2c0cd4d8cb66c4d5cdb143020e883acb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:maxbracketedcapturephotocount:0004:0002",
+      "source": "iPadOS 10.0+",
+      "ko": "iPadOS 10.0+",
+      "sourceHash": "c3d62141271e1019e3bb1a762c72d79ee3522feb4faafb39c46567ce18387f92",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:maxbracketedcapturephotocount:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:maxbracketedcapturephotocount:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar maxBracketedCapturePhotoCount: Int { get }\n```",
+      "ko": "```swift\nvar maxBracketedCapturePhotoCount: Int { get }\n```",
+      "sourceHash": "36a65d4534408382adc1881312907a38ba7221e757291fe111e4a4a15da159b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "To perform a bracketed capture of multiple images with varied capture settings, create a [`AVCapturePhotoBracketSettings`](avcapturephotobracketsettings.md) instance containing the combination of settings and bracketed variations you want.",
+      "ko": "The property returns [`true`](https://developer.apple.com/documentation/Swift/true) if video stabilization is currently in use; otherwise [`false`](https://developer.apple.com/documentation/Swift/false).",
+      "sourceHash": "88c641e7c66033f9c30f229a8f4888bd4a658e6d8f96c314477091ac62c1db64",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The maximum number of photos per capture depends on the size and format of images to be captured.",
+      "ko": "캡처당 최대 사진 수는 캡처할 이미지의 크기와 형식에 따라 달라집니다.",
+      "sourceHash": "6c4bc15dc6153c63520b881e44a03ee9a4f6d72b835d27b05996d4c6b8983a91",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0001",
+      "source": "**Note**: This property’s value can change if the [`sessionPreset`](avcapturesession/sessionpreset.md) property of the current capture session or the [`activeFormat`](avcapturedevice/activeformat.md) property of the underlying capture device changes.",
+      "ko": "**Note**: 현재 캡처 세션의 [`sessionPreset`](avcapturesession/sessionpreset.md) 속성이나 기본 캡처 장치의 [`activeFormat`](avcapturedevice/activeformat.md) 속성이 변경되면 이 속성의 값이 변경될 수 있습니다.",
+      "sourceHash": "6ebdced778d35dd8229de173268741aca8cddbf72fb7a9dcb1b7244239cc9d7a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0002",
+      "source": "Not all devices and capture formats support bracketed capture.",
+      "ko": "모든 기기와 캡처 형식이 브래킷 캡처를 지원하지는 않습니다.",
+      "sourceHash": "b9d46ed419858f3f349e3e38e2d8525e1c5c4facf7d27f27ac815732a1a9e081",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0003",
+      "source": "If the current device or active format does not support bracketed capture, this property’s value is zero.",
+      "ko": "현재 장치 또는 활성 형식이 브래킷 캡처를 지원하지 않으면 이 속성의 값은 0입니다.",
+      "sourceHash": "a0268fd4d74f073f7a177e762d2bf0a99eb6eac46d32ad9a25942d16f5403e9c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "This property supports key-value observing.",
+      "ko": "이 속성은 키-값 관찰(key-value observing)을 지원합니다.",
+      "sourceHash": "d191ec2919976839580c125b2fe0468e3c46d7fe0f54949bb4493094ada7e47e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var isContentAwareDistortionCorrectionSupported: Bool](avcapturephotooutput/iscontentawaredistortioncorrectionsupported.md)",
+      "ko": "[var isContentAwareDistortionCorrectionSupported: Bool](avcapturephotooutput/iscontentawaredistortioncorrectionsupported.md)",
+      "sourceHash": "0702837ae6cd09d035957265bcf01af6e99f41408b621f025caf6a78e9bd88eb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "A Boolean value that indicates whether the session’s current configuration supports content-aware distortion correction.",
+      "ko": "현재 세션의 현재 구성에서 콘텐츠 인식 왜곡 보정을 지원하는지 나타내는 불리언 값입니다.",
+      "sourceHash": "a095afaf6c75cee33ad41811d860f81b4e70c37e28d4a69a1766626228e2042b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var isContentAwareDistortionCorrectionEnabled: Bool](avcapturephotooutput/iscontentawaredistortioncorrectionenabled.md)",
+      "ko": "[var isContentAwareDistortionCorrectionEnabled: Bool](avcapturephotooutput/iscontentawaredistortioncorrectionenabled.md)",
+      "sourceHash": "86f99ae70b9934a686617a39540743480086c56786cf5053dd6471839f9d69e5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A Boolean value that indicates whether the photo render pipeline can perform content-aware distortion correction.",
+      "ko": "사진 렌더링 파이프라인이 콘텐츠 인식 왜곡 보정을 수행할 수 있는지 나타내는 불리언 값입니다.",
+      "sourceHash": "e591356110d83a01b1f8382c0db0db8ba20742c3e50448d0edff7267c93e9fcd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var isLensStabilizationDuringBracketedCaptureSupported: Bool](avcapturephotooutput/islensstabilizationduringbracketedcapturesupported.md)",
+      "ko": "[var isLensStabilizationDuringBracketedCaptureSupported: Bool](avcapturephotooutput/islensstabilizationduringbracketedcapturesupported.md)",
+      "sourceHash": "83bcca9de49acf65b0075b7a40122786d24e6f0dd9aefc3336b9c61ec93769b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "A Boolean value indicating whether the capture output currently supports lens stabilization during bracketed image capture.",
+      "ko": "현재 캡처 출력이 브래킷 이미지 캡처 중 렌즈 안정화를 지원하는지 나타내는 불리언 값입니다.",
+      "sourceHash": "328ce4e5b931efc0dd207e8e93c0b1d0830df65accd903326d25882d3754c347",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var supportedFlashModes: [AVCaptureDevice.FlashMode]](avcapturephotooutput/supportedflashmodes-1n6nm.md)",
+      "ko": "[var supportedFlashModes: [AVCaptureDevice.FlashMode]](avmetadataidentifier/id3metadataband.md)",
+      "sourceHash": "0d64c479beae190d4a1d448b45f2fd98c1fee9535ef54e75de1c6d5c81c1ddaf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A Swift array of flash settings this capture output currently supports.",
+      "ko": "이 캡처 출력이 현재 지원하는 플래시 설정의 Swift 배열입니다.",
+      "sourceHash": "c68d917ad0103b5e5149cc565716321ea743eb68540d7ba9e2317a61ff4756c0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[var isAutoRedEyeReductionSupported: Bool](avcapturephotooutput/isautoredeyereductionsupported.md)",
+      "ko": "[var isAutoRedEyeReductionSupported: Bool](avcapturephotooutput/isautoredeyereductionsupported.md)",
+      "sourceHash": "ff92ca8350533bb73974597c5c73c3443a4b3bfae2670dcbc43f6e786bca3af5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "A Boolean value indicating whether the capture output supports automatic red-eye reduction.",
+      "ko": "이 캡처 출력이 자동 적목 감소를 지원하는지 나타내는 불리언 값입니다.",
+      "sourceHash": "723d52c08f9a7e4b224af7226dd358f32f5fde20ed20f50744050f3b20917a09",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0022:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturephotooutput/maxbracketedcapturephotocount)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturephotooutput/maxbracketedcapturephotocount)*",
+      "sourceHash": "2898843c26027ebfec56c92e6e47022e6b7ec77c43ad3f144cad24b4143d5c98",
+      "status": "preserved"
+    }
+  ]
+}

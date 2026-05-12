@@ -1,0 +1,351 @@
+{
+  "docId": "documentation/AVFoundation/avcaptureaudiofileoutput.md",
+  "title": "AVCaptureAudioFileOutput",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcaptureaudiofileoutput",
+  "segments": [
+    {
+      "id": "seg:heading:avcaptureaudiofileoutput:0000:0001",
+      "source": "AVCaptureAudioFileOutput",
+      "ko": "AVCaptureAudioFileOutput",
+      "sourceHash": "d7cb3d804435faf20aa2d4e2865d7489be5f36de4efd5fdfa41c7930528abd60",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avcaptureaudiofileoutput:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avcaptureaudiofileoutput:0002:0001",
+      "source": "A capture output that records audio and saves the recorded audio to a file.",
+      "ko": "오디오를 녹화하고 녹음한 오디오를 파일에 저장하는 캡처 출력입니다.",
+      "sourceHash": "4273829cd25fd4c84ef9ada120e74dffe4669acd0c7a674a656bea28a39f75ec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avcaptureaudiofileoutput:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcaptureaudiofileoutput:0004:0001",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVCaptureAudioFileOutput\n```",
+      "ko": "```swift\nclass AVCaptureAudioFileOutput\n```",
+      "sourceHash": "c7048016570a9fc0b6812fe07530a78d50661afff2672a22914dbd61e7159734",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "`AVCaptureAudioFileOutput` implements the complete file recording interface declared by [`AVCaptureFileOutput`](avcapturefileoutput.md) for writing media data to audio files.",
+      "ko": "`AVCaptureAudioFileOutput`는 미디어 데이터를 오디오 파일에 쓰기 위해 [`AVCaptureFileOutput`](avcapturefileoutput.md)에 선언된 전체 파일 녹화 인터페이스를 구현합니다.",
+      "sourceHash": "525906b16bc711b509444d6b86dcd50e132eafc68194c2a2c39b0413b6f60b3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "In addition, you can configure options specific to the audio file formats, including writing metadata collections to each file and specifying audio encoding options.",
+      "ko": "또한 각 파일에 메타데이터 컬렉션을 쓰거나 오디오 인코딩 옵션을 지정하는 등 오디오 파일 형식별 옵션을 구성할 수 있습니다.",
+      "sourceHash": "1531f9bfcfffb88a20dc19ea3ca8155888914143709d37042678474bbfce7fda",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0003",
+      "source": "`AVCaptureAudioFileOutput` does not, however, support [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md)—use [`startRecording(to:outputFileType:recordingDelegate:)`](avcaptureaudiofileoutput/startrecording(to:outputfiletype:recordingdelegate:).md) instead.",
+      "ko": "`AVCaptureAudioFileOutput`은(는) [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md)를 지원하지 않습니다. 대신 [`startRecording(to:outputFileType:recordingDelegate:)`](avcaptureaudiofileoutput/startrecording(to:outputfiletype:recordingdelegate:).md)를 사용합니다.",
+      "sourceHash": "ab3df75f02ea97a710f02eb8f8ea19ab5498d9b094b6cc35c43e50b419c0822d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discovering-supported-types:0010:0001",
+      "source": "Discovering supported types",
+      "ko": "지원되는 형식 검색",
+      "sourceHash": "f8d4e4e1328ca8fc22b7bad595ce2a1f9203f960a109ebd23484d893f7ce0d8d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discovering-supported-types:0011:0001",
+      "source": "[class func availableOutputFileTypes() -> [AVFileType]](avcaptureaudiofileoutput/availableoutputfiletypes.md)",
+      "ko": "[class func availableOutputFileTypes() -> [AVFileType]](avcaptureaudiofileoutput/availableoutputfiletypes.md)",
+      "sourceHash": "eb58d9461a635b3f073e5c10e30227af8ecc5583c686aaec603473d432de6980",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discovering-supported-types:0012:0001",
+      "source": "Returns an array containing UTIs identifying the file types `AVCaptureAudioFileOutput` can write.",
+      "ko": "`AVCaptureAudioFileOutput`가 작성할 수 있는 파일 유형을 식별하는 UTI를 포함하는 배열을 반환합니다.",
+      "sourceHash": "ebabc92f890a0881d7f3bacf5fa4b18a79f3e5c2363f45a1b375e686a7ed71ae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:starting-a-recording:0013:0001",
+      "source": "Starting a recording",
+      "ko": "녹화 시작",
+      "sourceHash": "8ce9abf4c5a50f6f442345df9ab6fb7c88cbe4dcdccb5f592a76c6d3cab3270b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:starting-a-recording:0014:0001",
+      "source": "[func startRecording(to: URL, outputFileType: AVFileType, recordingDelegate: any AVCaptureFileOutputRecordingDelegate)](avcaptureaudiofileoutput/startrecording(to:outputfiletype:recordingdelegate:).md)",
+      "ko": "[func startRecording(to: URL, outputFileType: AVFileType, recordingDelegate: any AVCaptureFileOutputRecordingDelegate)](avcaptureaudiofileoutput/startrecording(to:outputfiletype:recordingdelegate:).md)",
+      "sourceHash": "c7041a419936c4a113db3308e8342ee6690fcc9da261e3a6abced77ca84b86c2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:starting-a-recording:0015:0001",
+      "source": "Tells the receiver to start recording to a new file of the specified format, and specifies a delegate that will be notified when recording is finished.",
+      "ko": "수신자에게 지정한 형식의 새 파일로 녹화를 시작하도록 지시하고, 녹화 완료 시 알림을 받을 델리게이트를 지정합니다.",
+      "sourceHash": "9b53e07ad81af1931fd3d80cf53f73366f6d37dde7f61ba6f993c36268851a78",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-output:0016:0001",
+      "source": "Configuring output",
+      "ko": "출력 구성",
+      "sourceHash": "cc347776792b7dde756ee604528357a3758b2ad20922d5ecb8d68d5ed3d84732",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0017:0001",
+      "source": "[var audioSettings: [String : Any]?](avcaptureaudiofileoutput/audiosettings.md)",
+      "ko": "[var audioSettings: [String : Any]?](avcaptureaudiofileoutput/audiosettings.md)",
+      "sourceHash": "a85f73a6c3e813613c4f628c148d15610d0dd9db7a39cfa9951a6f41d25f4a4e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0018:0001",
+      "source": "The settings used to decode or re-encode audio before it is output by the receiver.",
+      "ko": "수신자가 출력하기 전에 오디오를 디코딩하거나 다시 인코딩할 때 사용되는 설정입니다.",
+      "sourceHash": "07eff5748c8a1494cefcf4de08427533c6cbe01c6a5b4fe126d9859520f7e5cb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0019:0001",
+      "source": "[var metadata: [AVMetadataItem]](avcaptureaudiofileoutput/metadata.md)",
+      "ko": "[var metadata: [AVMetadataItem]](avcaptureaudiofileoutput/metadata.md)",
+      "sourceHash": "6b947be5466098233a2dfe723221daa3da07a249627cb0257c156bf16fb27244",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0020:0001",
+      "source": "A collection of metadata to be written to the receiver’s output files.",
+      "ko": "수신자의 출력 파일에 기록할 메타데이터 컬렉션입니다.",
+      "sourceHash": "c352f6398cdc0425af192260f32db7c396f77c05c3be3431bdd4d486f48f8295",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:creating-output:0021:0001",
+      "source": "Creating output",
+      "ko": "출력 생성",
+      "sourceHash": "c572e97119fd8dde6afde7bbf9407ebe068a185eb8c904c2aa5dcd2cacc78b39",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-output:0022:0001",
+      "source": "[init()](avcaptureaudiofileoutput/init.md)",
+      "ko": "[init()](avcaptureaudiofileoutput/init.md)",
+      "sourceHash": "c329c8c7ddd70c8529f3a800fda3e32727c35bc84fe89d3846d79dd0b456478c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:creating-output:0023:0001",
+      "source": "Creates a new audio file output.",
+      "ko": "새 오디오 파일 출력을 생성합니다.",
+      "sourceHash": "05afd727ebeda12dd5d208c430900c1542a1e97e346da14bfce110d7a88ac2eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0024:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0025:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0026:0001",
+      "source": "[AVCaptureFileOutput](avcapturefileoutput.md)",
+      "ko": "[AVCaptureFileOutput](avcapturefileoutput.md)",
+      "sourceHash": "c3a2fee8cb47fada95f2e09e7265c972a81f8ede5d736dce6c6904a2b1922254",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0027:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0029:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[Recording movies in alternative formats](recording-movies-in-alternative-formats.md)",
+      "ko": "[Recording movies in alternative formats](recording-movies-in-alternative-formats.md)",
+      "sourceHash": "0fbf538009ec4a4cd54191f9ac32fdd9c86726b0e9b56f206e85c21da5fd4762",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Change the default format for capturing movie files.",
+      "ko": "영화 파일 캡처의 기본 형식을 변경합니다.",
+      "sourceHash": "ecc95819990a7f00e8f5a8f8fd1259fd1e3f4f068621db09e68c71e7ee5ccbe4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[class AVCaptureMovieFileOutput](avcapturemoviefileoutput.md)",
+      "ko": "[class AVCaptureMovieFileOutput](avcapturemoviefileoutput.md)",
+      "sourceHash": "9483b95fca85221d886ba56c7d8aceef98d781da54891fe722538e5625d46799",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "A capture output that records video and audio to a QuickTime movie file.",
+      "ko": "QuickTime 영화 파일에 비디오와 오디오를 녹화하는 캡처 출력입니다.",
+      "sourceHash": "ece27dee5b9dd5702c95db1d4894708f99a3f764004d1980ed0e74aba1df8e95",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[class AVCaptureFileOutput](avcapturefileoutput.md)",
+      "ko": "[class AVCaptureFileOutput](avcapturefileoutput.md)",
+      "sourceHash": "d471f7c03c11b13fd2df28d022e599b73d469eb25b08ce11a53677aba4eab9ef",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "The abstract superclass for capture outputs that can record captured data to a file.",
+      "ko": "캡처한 데이터를 파일로 기록할 수 있는 캡처 출력의 추상 상위 클래스입니다.",
+      "sourceHash": "807d46876beec93a9bb2a174c2566a251e0a22def33a8c2c8f9220889105ffdb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[protocol AVCaptureFileOutputDelegate](avcapturefileoutputdelegate.md)",
+      "ko": "[protocol AVCaptureFileOutputDelegate](avcapturefileoutputdelegate.md)",
+      "sourceHash": "b80a3e8205705e588c572d1085f9773b7d1edb558bc29d9ac6f59620622fe10b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Methods for monitoring or controlling the output of a media file capture.",
+      "ko": "미디어 파일 캡처 출력을 모니터링하거나 제어하는 메서드입니다.",
+      "sourceHash": "d170bf5eabc25d6c90fb3d5d04b6e2be59897574acd05f7414d174c2a2771011",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[protocol AVCaptureFileOutputRecordingDelegate](avcapturefileoutputrecordingdelegate.md)",
+      "ko": "[protocol AVCaptureFileOutputRecordingDelegate](avcapturefileoutputrecordingdelegate.md)",
+      "sourceHash": "411c05e6ee7456dab815c6be44756dee05e1100a27a0aa0d656b4a9e41c9c973",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Methods for responding to events that occur while recording captured media to a file.",
+      "ko": "캡처한 미디어를 파일로 녹화하는 동안 발생하는 이벤트에 응답하는 메서드입니다.",
+      "sourceHash": "df92bfd8a46dd224dd0625310c492d8938ffb9de4d0ec3a8ded982d74871f87a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0040:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcaptureaudiofileoutput)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcaptureaudiofileoutput)*",
+      "sourceHash": "16e3a9c718b037e23304f2f7317d60e62da4e8b9320d8f577598a4091428ae7c",
+      "status": "preserved"
+    }
+  ]
+}

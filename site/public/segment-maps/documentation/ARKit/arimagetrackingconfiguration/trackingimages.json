@@ -1,0 +1,148 @@
+{
+  "docId": "documentation/ARKit/arimagetrackingconfiguration/trackingimages.md",
+  "title": "trackingImages",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arimagetrackingconfiguration/trackingimages",
+  "segments": [
+    {
+      "id": "seg:heading:trackingimages:0000:0001",
+      "source": "trackingImages",
+      "ko": "trackingImages",
+      "sourceHash": "a62541ca690b521e73c47733c6d4f52769113a71cd13f3a2085daca6e119f1eb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:trackingimages:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: property",
+      "ko": "**Framework**: ARKit **Kind**: property",
+      "sourceHash": "eebebd0c04c444b8ad7332b72cb6b5efed96fb65bd16793fa46eb608d4454b7e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:trackingimages:0002:0001",
+      "source": "A set of images that ARKit searches for and tracks in the user’s environment.",
+      "ko": "ARKit이 사용자 환경에서 검색하고 추적하는 이미지 집합입니다.",
+      "sourceHash": "a05d9771e4c846b14ffb2a8641f1c51bd0995e59018dc59f18fcc01ff69604f2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:trackingimages:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:trackingimages:0004:0001",
+      "source": "iOS 12.0+",
+      "ko": "iOS 12.0+",
+      "sourceHash": "d772ac55afa4f2e29f0ad87866389d5448344b22e6c5979243d576c96de2a90f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:trackingimages:0004:0002",
+      "source": "iPadOS 12.0+",
+      "ko": "iPadOS 12.0+",
+      "sourceHash": "109cb36899cd72c746909cd023ddbcd42128fedc73db86b8ced78f537739f5b9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:trackingimages:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar trackingImages: Set<ARReferenceImage> { get set }\n```",
+      "ko": "```swift\nvar trackingImages: Set<ARReferenceImage> { get set }\n```",
+      "sourceHash": "f51077509191e1ed79f0756672db404d0b8fb79386d2e6ed37280a1454882237",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Add members to this set for each image that ARKit searches for in the user’s environment.",
+      "ko": "이 집합에 사용자 환경에서 ARKit이 검색할 각 이미지를 추가합니다.",
+      "sourceHash": "b76854496525ef3e883f320b5f03f45472bdb9cf4dcb3c2825e8f74c519ad78b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "When ARKit observes a matching image, the framework creates an [`ARImageAnchor`](arimageanchor.md) object and adds it to the session.",
+      "ko": "ARKit이 일치하는 이미지를 감지하면 프레임워크가 [`ARImageAnchor`](arimageanchor.md) 객체를 생성해 세션에 추가합니다.",
+      "sourceHash": "d3138503b1b485dc21fb1a0724490afd97bd9341e5161dc830f678e1c8cb0ebe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "If you set [`maximumNumberOfTrackedImages`](arworldtrackingconfiguration/maximumnumberoftrackedimages.md) to a value greater than `1`, ARKit tracks multiple images as the session progresses, up to a maximum of four.",
+      "ko": "[`maximumNumberOfTrackedImages`](arworldtrackingconfiguration/maximumnumberoftrackedimages.md) 값을 `1`보다 크게 설정하면 ARKit는 세션 진행 중 최대 4개까지 여러 이미지를 추적합니다.",
+      "sourceHash": "377c27dc58839ccef3eb983b5b9155f955c2c6c15dca88fbbb424bbdf868e491",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "To define the reference images that this property contains, create an asset catalog in Xcode or create [`ARReferenceImage`](arreferenceimage.md) objects programmatically.",
+      "ko": "이 속성이 포함하는 참조 이미지를 정의하려면 Xcode에서 에셋 카탈로그를 생성하거나 [`ARReferenceImage`](arreferenceimage.md) 객체를 프로그래밍 방식으로 생성하면 됩니다.",
+      "sourceHash": "bd9446175220344a8f4eee538d7d4413db282fb92c5c721c617c7ca3e396f388",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "For an example, see [`Tracking and altering images`](tracking-and-altering-images.md).",
+      "ko": "예시는 [`Tracking and altering images`](tracking-and-altering-images.md)에서 확인할 수 있습니다.",
+      "sourceHash": "59430004b64b2c12e4df2987116b45f69f08428130f0b870d34ee326378bc988",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var maximumNumberOfTrackedImages: Int](arimagetrackingconfiguration/maximumnumberoftrackedimages.md)",
+      "ko": "[var maximumNumberOfTrackedImages: Int](arimagetrackingconfiguration/maximumnumberoftrackedimages.md)",
+      "sourceHash": "4f95e1a8b017b4526c86672868d536eab800985cd79aeab060ba4676ad9cb928",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "The number of image anchors to monitor closely for position and orientation updates.",
+      "ko": "위치 및 방향 업데이트를 면밀히 모니터링할 이미지 앵커 수입니다.",
+      "sourceHash": "a59e96d038d52a2fbc8d807aa0ed9a3b37f47642a5bcbe37bc9e7b0556551520",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0013:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arimagetrackingconfiguration/trackingimages)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arimagetrackingconfiguration/trackingimages)*",
+      "sourceHash": "64f96b2c3442743dd86af5df857a56d33efaf179ded016a77076538cfba88457",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosession/outputmutestatechangenotification.md",
+  "title": "outputMuteStateChangeNotification",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosession/outputmutestatechangenotification",
+  "segments": [
+    {
+      "id": "seg:heading:outputmutestatechangenotification:0000:0001",
+      "source": "outputMuteStateChangeNotification",
+      "ko": "outputMuteStateChangeNotification",
+      "sourceHash": "1bef52c67f4057cf539907b77328a6d0b4abd4afcd8ef42a0e220caccaa908bf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:outputmutestatechangenotification:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: property",
+      "ko": "**Framework**: AVFAudio **Kind**: property",
+      "sourceHash": "dbcab8cee850c10188239b4c73df47a01c6d8b4597a46786c5db98ee29c5588e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:outputmutestatechangenotification:0002:0001",
+      "source": "Notification sent to registered listeners when session’s output mute state changes.",
+      "ko": "세션 출력 음소거 상태가 변경될 때 등록된 수신자에게 전송되는 알림입니다.",
+      "sourceHash": "1dc929dc98ebb3091911218ecee12dd83f088a9d3bfd72db35fa5a9759e64bde",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:outputmutestatechangenotification:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputmutestatechangenotification:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputmutestatechangenotification:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputmutestatechangenotification:0004:0003",
+      "source": "Mac Catalyst 26.0+",
+      "ko": "Mac Catalyst 26.0+",
+      "sourceHash": "41da0bcbe19513a5638f4ac052319884e486b3cc05252ef6209b23e7b2b1d8e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass let outputMuteStateChangeNotification: NSNotification.Name\n```",
+      "ko": "```swift\nclass let outputMuteStateChangeNotification: NSNotification.Name\n```",
+      "sourceHash": "bbc2c3f7ff3ec4ca187cdb7230c5d01fdb2829f3cd43615ccf2e5217f5044390",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "The userInfo dictionary will contain the updated output mute value as accessed by [`muteStateKey`](avaudiosession/mutestatekey.md)",
+      "ko": "The expected behavior of an app is to pause playback if a route change occurs due to a device no longer being available ([`AVAudioSession.RouteChangeReason.oldDeviceUnavailable`](avaudiosession/routechangereason/olddeviceunavailable.md)).",
+      "sourceHash": "4784f3e3368ffde251cb0d6bb57b347dfb1e9ae1c1ed0d4041700a9bb9db27c1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[var isOutputMuted: Bool](avaudiosession/isoutputmuted.md)",
+      "ko": "[var isOutputMuted: Bool](avaudiosession/isoutputmuted.md)",
+      "sourceHash": "1c581ef3e3518dd3af1dab98bb7857eca4edbc2ac5232a4cf22b6a318e00997b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "A Boolean value that indicates whether audio output is in a muted state.",
+      "ko": "오디오 출력이 음소거 상태인지 나타내는 부울 값입니다.",
+      "sourceHash": "225880c0fb874e0dc41a8094b82300186207c372c1bb4e561e0ad935462f8f6b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[func setOutputMuted(Bool) throws](avaudiosession/setoutputmuted(_:).md)",
+      "ko": "[func setOutputMuted(Bool) throws](avaudiosession/setoutputmuted(_:).md)",
+      "sourceHash": "2cdd47cd056de40adf3ebf72f1147e9d12dff76620ae518d141cf785e3a63e16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Sets a Boolean value to inform the system to mute the session’s output audio.",
+      "ko": "시스템에 세션의 출력 오디오를 음소거하도록 알리는 부울 값을 설정합니다.",
+      "sourceHash": "6a3f3ba94c9fdc6e14abe3ea0d8158f8b3e405f8ef52fb1dbbbc4d1e3ffc455e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0002",
+      "source": "The default value is false (unmuted).",
+      "ko": "기본값은 false(음소거 해제)입니다.",
+      "sourceHash": "929b21d86fc79a57f61ee22755f6d9362db507dba6e6990f1785e7c2e1e5151d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[class let muteStateKey: String](avaudiosession/mutestatekey.md)",
+      "ko": "[class let muteStateKey: String](avaudiosession/mutestatekey.md)",
+      "sourceHash": "0998556692504c0f0737f5197e999d4ee06cf7fbbd8d7ec4fe8f85593ecf7f3a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Keys for [`outputMuteStateChangeNotification`](avaudiosession/outputmutestatechangenotification.md) Value is `NSNumber` type with boolean value 0 for unmuted or value 1 for muted (samples zeroed out)",
+      "ko": "[`outputMuteStateChangeNotification`](avaudiosession/outputmutestatechangenotification.md)용 키입니다. 값은 `NSNumber` 타입으로, 음소거 해제는 부울 0, 음소거는 부울 1(샘플이 0으로 설정됨)입니다.",
+      "sourceHash": "79216fa1f12b30cfb131a9b04fcf5ef0b06259444be50c4687add9e04a8aa3ee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[class let userIntentToUnmuteOutputNotification: NSNotification.Name](avaudiosession/userintenttounmuteoutputnotification.md)",
+      "ko": "[class let userIntentToUnmuteOutputNotification: NSNotification.Name](avaudiosession/userintenttounmuteoutputnotification.md)",
+      "sourceHash": "1695c5af59e6624838e7766c6f1c3ce0f9a543b502f24cce22761ce55d36e0c8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Notification sent to registered listeners when the application’s output is muted and user hints to unmute.",
+      "ko": "애플리케이션 출력이 음소거되고 사용자가 음소거 해제를 요청할 때 등록된 수신자에게 전송되는 알림입니다.",
+      "sourceHash": "7b5bbe91b27f687c238c4bf9b2baea12fbd40f5a818dfb912c607b1edc8f475d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[class let userIntentToUnmuteOutputNotification: NSNotification.Name](avaudiosession/userintenttounmuteoutputnotification.md)",
+      "ko": "[class let userIntentToUnmuteOutputNotification: NSNotification.Name](avaudiosession/userintenttounmuteoutputnotification.md)",
+      "sourceHash": "1695c5af59e6624838e7766c6f1c3ce0f9a543b502f24cce22761ce55d36e0c8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Notification sent to registered listeners when the application’s output is muted and user hints to unmute.",
+      "ko": "애플리케이션 출력이 음소거되고 사용자가 음소거 해제를 요청할 때 등록된 수신자에게 전송되는 알림입니다.",
+      "sourceHash": "7b5bbe91b27f687c238c4bf9b2baea12fbd40f5a818dfb912c607b1edc8f475d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[class let muteStateKey: String](avaudiosession/mutestatekey.md)",
+      "ko": "[class let muteStateKey: String](avaudiosession/mutestatekey.md)",
+      "sourceHash": "0998556692504c0f0737f5197e999d4ee06cf7fbbd8d7ec4fe8f85593ecf7f3a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Keys for [`outputMuteStateChangeNotification`](avaudiosession/outputmutestatechangenotification.md) Value is `NSNumber` type with boolean value 0 for unmuted or value 1 for muted (samples zeroed out)",
+      "ko": "[`outputMuteStateChangeNotification`](avaudiosession/outputmutestatechangenotification.md)용 키입니다. 값은 `NSNumber` 타입으로, 음소거 해제는 부울 0, 음소거는 부울 1(샘플이 0으로 설정됨)입니다.",
+      "sourceHash": "79216fa1f12b30cfb131a9b04fcf5ef0b06259444be50c4687add9e04a8aa3ee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0022:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/outputmutestatechangenotification)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/outputmutestatechangenotification)*",
+      "sourceHash": "aa0a6237c68fb5352956865de86f92e2ba9680892e9707fdecca6c9e86bc3e9d",
+      "status": "preserved"
+    }
+  ]
+}

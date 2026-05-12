@@ -1,0 +1,45 @@
+---
+source_path: "documentation/AVFoundation/avmutablemetadataitem/locale.md"
+upstream_sha: "8a29a1d75e67151b588206d3e921a4ff212726be"
+translation_status: machine_translated
+official_url: "https://developer.apple.com/documentation/avfoundation/avmutablemetadataitem/locale"
+official: false
+---
+
+> 비공식 번역입니다. 정확한 최신 내용은 원문을 확인하세요.
+
+# <span class="ko-segment" data-segment-id="seg:heading:locale:0000:0001">locale</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:locale:0001:0001">**Framework**: AVFoundation **Kind**: property</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:locale:0002:0001">변경 가능한 메타데이터 항목의 로케일입니다.</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:locale:0003:0001">**Availability**:</span>
+
+- <span class="ko-segment" data-segment-id="seg:list:locale:0004:0001">iOS 4.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:locale:0004:0002">iPadOS 4.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:locale:0004:0003">Mac Catalyst 13.1+</span>
+- <span class="ko-segment" data-segment-id="seg:list:locale:0004:0004">macOS 10.7+</span>
+- <span class="ko-segment" data-segment-id="seg:list:locale:0004:0005">tvOS 9.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:locale:0004:0006">visionOS 1.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:locale:0004:0007">watchOS 1.0+</span>
+
+## <span class="ko-segment" data-segment-id="seg:heading:declaration:0005:0001">Declaration</span>
+
+```swift
+var locale: Locale? { get set }
+```
+
+#### <span class="ko-segment" data-segment-id="seg:heading:discussion:0007:0001">Discussion</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0008:0001">This property value is <a href="https://developer.apple.com/documentation/Swift/true">@@TOKEN_0@@</a> if you can export the composition using <a href="avassetexportsession.md">@@TOKEN_1@@</a>.</span>
+
+## <span class="ko-segment" data-segment-id="seg:heading:see-also:0009:0001">참고 항목</span>
+
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0010:0001"><a href="avmutablemetadataitem/extendedlanguagetag.md">var extendedLanguageTag: String?</a></span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0011:0001">메타데이터 항목의 IETF BCP 47(RFC 4646) 언어 식별자입니다.</span>
+
+---
+
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0013:0001">*<a href="https://developer.apple.com/documentation/avfoundation/avmutablemetadataitem/locale">View on Apple Developer</a>*</span>

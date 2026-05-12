@@ -1,0 +1,302 @@
+{
+  "docId": "documentation/AVFoundation/avdisplaycriteria.md",
+  "title": "AVDisplayCriteria",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avdisplaycriteria",
+  "segments": [
+    {
+      "id": "seg:heading:avdisplaycriteria:0000:0001",
+      "source": "AVDisplayCriteria",
+      "ko": "AVDisplayCriteria",
+      "sourceHash": "9523c3aa76c9e2698fddda66d1a4f6595e27d6815ea612347bed2008c57fbbbb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avdisplaycriteria:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avdisplaycriteria:0002:0001",
+      "source": "An object the system uses to guide the selection of a display mode in tvOS.",
+      "ko": "tvOS에서 표시 모드 선택을 안내하는 데 시스템이 사용하는 객체입니다.",
+      "sourceHash": "bfba36f0d547821fd8a106f8f603b42033d5031ea219c9175120548458e9a17b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avdisplaycriteria:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avdisplaycriteria:0004:0001",
+      "source": "tvOS 11.2+",
+      "ko": "tvOS 11.2+",
+      "sourceHash": "b233b8f03bad99523eb10f26f0cb302f3310012311dc26d347283eaea2f37439",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avdisplaycriteria:0004:0002",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVDisplayCriteria\n```",
+      "ko": "```swift\nclass AVDisplayCriteria\n```",
+      "sourceHash": "9577ae348320c05c7133e4fa743ce1a928c602d196c96fe1952c01d0cd013fe0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "In tvOS, this object provides the display criteria that an [`AVDisplayManager`](https://developer.apple.com/documentation/AVKit/AVDisplayManager) uses to set an appropriate display mode, such as switching to HDR, when presenting a video asset.",
+      "ko": "In tvOS에서 이 객체는 `[`AVDisplayManager`](https://developer.apple.com/documentation/AVKit/AVDisplayManager) 가 동영상 자산을 표시할 때 HDR로 전환하는 등 적절한 표시 모드를 설정하는 데 사용하는 display criteria를 제공합니다.",
+      "sourceHash": "53029b8f9f21f8ea4876f92e34ba893ae779f6fac5863ae7b2f874646b621081",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "If your app uses [`AVPlayerViewController`](https://developer.apple.com/documentation/AVKit/AVPlayerViewController) for its player user interface, the system automatically applies the display critera when it presents the asset.",
+      "ko": "앱이 플레이어 사용자 인터페이스로 [`AVPlayerViewController`](https://developer.apple.com/documentation/AVKit/AVPlayerViewController)를 사용하는 경우, 시스템은 자산을 표시할 때 display criteria를 자동으로 적용합니다.",
+      "sourceHash": "4fa9ce6b13a5dbf28425b3a08aba99411fd813eac033b0ae7a334f98fc4fc371",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0003",
+      "source": "If you use a custom player interface, load the value of an asset’s [`preferredDisplayCriteria`](avpartialasyncproperty/preferreddisplaycriteria.md) property and set it on the window’s [`avDisplayManager`](https://developer.apple.com/documentation/UIKit/UIWindow/avDisplayManager) object.",
+      "ko": "커스텀 플레이어 인터페이스를 사용하는 경우, 자산의 [`preferredDisplayCriteria`](avpartialasyncproperty/preferreddisplaycriteria.md) 속성 값을 로드해 창의 [`avDisplayManager`](https://developer.apple.com/documentation/UIKit/UIWindow/avDisplayManager) 객체에 설정합니다.",
+      "sourceHash": "baf1a9adf8418365e7623532f3b7ffb016b4e9ff25ad4a30fa5157bcdc9f6513",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0009:0001",
+      "source": "❗ **Important**: Most apps don’t create instances of this class, and instead retrieve the preferred display criteria from a media asset.",
+      "ko": "❗ **중요**: 대부분의 앱은 이 클래스의 인스턴스를 생성하지 않고 미디어 자산에서 선호 표시 기준을 가져옵니다.",
+      "sourceHash": "b3fb7e7a11e4bd2606eebf49fceb308e401b8252149e1f0108c35ce9cd872e66",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0009:0002",
+      "source": "If your app doesn’t use [`AVAsset`](avasset.md), such as a streaming app that renders sample buffers using [`AVSampleBufferDisplayLayer`](avsamplebufferdisplaylayer.md), you can manually create an instance using the [`init(refreshRate:formatDescription:)`](avdisplaycriteria/init(refreshrate:formatdescription:).md) initializer.",
+      "ko": "앱에서 [`AVAsset`](avasset.md)을 사용하지 않는 경우(예: [`AVSampleBufferDisplayLayer`](avsamplebufferdisplaylayer.md)로 샘플 버퍼를 렌더링하는 스트리밍 앱)는 [`init(refreshRate:formatDescription:)`](avdisplaycriteria/init(refreshrate:formatdescription:).md) 이니셜라이저를 사용해 인스턴스를 수동으로 생성할 수 있습니다.",
+      "sourceHash": "998529cdb1d08060430fee851accea141ae1b099eb1bcacad3c7a88172a1e341",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:create-a-display-criteria:0011:0001",
+      "source": "Create a display criteria",
+      "ko": "Display criteria 생성",
+      "sourceHash": "3daa119390d4e5c1edd44535667e772a670cb33a72c8f8be9a0ecde29e69c04c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:create-a-display-criteria:0012:0001",
+      "source": "[init(refreshRate: Float, formatDescription: CMFormatDescription)](avdisplaycriteria/init(refreshrate:formatdescription:).md)",
+      "ko": "[init(refreshRate: Float, formatDescription: CMFormatDescription)](avdisplaycriteria/init(refreshrate:formatdescription:).md)",
+      "sourceHash": "814ec57e4189de6e66566c91d31ac7eddbc08a8a30e4c349462432f3936dbe81",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:create-a-display-criteria:0013:0001",
+      "source": "Creates a display criteria object with the specified refresh rate and format description.",
+      "ko": "지정된 새로고침 속도와 형식 설명이 있는 display criteria 객체를 생성합니다.",
+      "sourceHash": "8a9de9e59f07eb09c3babc8dbf0dc870c3c9127a3e99b5dc69d796950da1ee2e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0014:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0015:0001",
+      "source": "Inherits From",
+      "ko": "상속 대상",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0016:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0017:0001",
+      "source": "Conforms To",
+      "ko": "채택",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0006",
+      "source": "[NSCopying](../Foundation/NSCopying.md)",
+      "ko": "[NSCopying](../Foundation/NSCopying.md)",
+      "sourceHash": "a3e3914d750a60e4b250a0090cdf594ea4328ed30cecb20ea43c55afb46b9005",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0007",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0008",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0009",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0019:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[static var preferredRate: AVAsyncProperty<Root, Float>](avpartialasyncproperty/preferredrate.md)",
+      "ko": "[static var preferredRate: AVAsyncProperty<Root, Float>](avpartialasyncproperty/preferredrate.md)",
+      "sourceHash": "e79eba9335102da7bf3069acaf37a1005c3bdf228f99a5717cfd74b3b67fcc53",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "The asset’s rate preference for playing its media.",
+      "ko": "자산의 미디어 재생 속도 선호도입니다.",
+      "sourceHash": "7d7add191b2420f9fd0d8ceae532ec71387c7a300817039bc8e9ca9b8a2021bf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[static var preferredVolume: AVAsyncProperty<Root, Float>](avpartialasyncproperty/preferredvolume-20mb3.md)",
+      "ko": "[static var preferredVolume: AVAsyncProperty<Root, Float>](avpartialasyncproperty/preferredvolume-20mb3.md)",
+      "sourceHash": "4251e7b230228d869f31e91f56197952a434e66ba217c4a8978e99099b4081e5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "The asset’s volume preference for playing its audible media.",
+      "ko": "자산의 청취 가능한 미디어 재생 볼륨 선호도입니다.",
+      "sourceHash": "60ac35301e4cf87b16411af93f3ef598de51b3eabfdb3f0b7762becd0610dc0a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[static var preferredTransform: AVAsyncProperty<Root, CGAffineTransform>](avpartialasyncproperty/preferredtransform-80d13.md)",
+      "ko": "[static var preferredTransform: AVAsyncProperty<Root, CGAffineTransform>](avpartialasyncproperty/preferredtransform-80d13.md)",
+      "sourceHash": "d8d3ee1014d400645bdeeedaa236484c5a21e5b5f46c5fbed6727e81a9b4d263",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "The asset’s transform preference to apply to its visual content during presentation or processing.",
+      "ko": "표시 또는 처리 중 시각 콘텐츠에 적용할 자산의 변환 선호도입니다.",
+      "sourceHash": "d6816de7451e3c47274bf547b317bfc7a64ef19a98f8f0026e4f185d7e132a08",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[static var preferredDisplayCriteria: AVAsyncProperty<Root, AVDisplayCriteria>](avpartialasyncproperty/preferreddisplaycriteria.md)",
+      "ko": "[static var preferredDisplayCriteria: AVAsyncProperty<Root, AVDisplayCriteria>](avpartialasyncproperty/preferreddisplaycriteria.md)",
+      "sourceHash": "dc6cf67fcff4b61a3ee4c3a3f9421ee82b9daf80eec19db26e1394776f1f9f07",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "The asset’s display mode preference for optimal playback of its content.",
+      "ko": "콘텐츠 최적 재생을 위한 자산의 표시 모드 선호도입니다.",
+      "sourceHash": "6f77ea4561b948b2779c7b7d40c52deb824f53985b74b6f22c1798e1bd60af4f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0028:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avdisplaycriteria)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avdisplaycriteria)*",
+      "sourceHash": "573adb16655db6c2442e75e88caeda42f5f28924587dcf90daed1039451703db",
+      "status": "preserved"
+    }
+  ]
+}

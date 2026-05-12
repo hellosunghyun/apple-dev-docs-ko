@@ -1,0 +1,708 @@
+{
+  "docId": "documentation/ARKit/streaming-an-ar-experience.md",
+  "title": "Streaming an AR experience",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/streaming-an-ar-experience",
+  "segments": [
+    {
+      "id": "seg:heading:streaming-an-ar-experience:0000:0001",
+      "source": "Streaming an AR experience",
+      "ko": "AR 경험 스트리밍",
+      "sourceHash": "99bc026ffdd93bdeeb92b7ebbfa5a4496134d512fc1acd2d1968b832f750da64",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:streaming-an-ar-experience:0001:0001",
+      "source": "**Framework**: ARKit",
+      "ko": "**프레임워크**: ARKit",
+      "sourceHash": "f52f1f198768fecfb3eca7e0900afdc8bbc7fd0775dd02734574f44e18a1beee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:streaming-an-ar-experience:0002:0001",
+      "source": "Control an AR experience remotely by transferring sensor and user input over the network.",
+      "ko": "네트워크를 통해 센서 데이터와 사용자 입력을 전송하여 AR 경험을 원격으로 제어합니다.",
+      "sourceHash": "e1324ad8ea096dcdc514b11d19c1c2cb154ff286f660a857bd9b24a046522994",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:streaming-an-ar-experience:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:streaming-an-ar-experience:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:streaming-an-ar-experience:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:streaming-an-ar-experience:0004:0003",
+      "source": "Mac Catalyst 13.0+",
+      "ko": "Mac Catalyst 13.0+",
+      "sourceHash": "d3bbfc64a16ca2617fa4bd761772bec991e6f8960375b3a7baff386418fb34b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:streaming-an-ar-experience:0004:0004",
+      "source": "Xcode 16.0+",
+      "ko": "Xcode 16.0+",
+      "sourceHash": "30ee611d3d2b717bbfa7871816511cdfd583d65901972f2c52a53e259bdb2522",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0005:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0001",
+      "source": "The sample app, AR Stream, shares the augmented camera feed with a peer device, and enables it to take control by interacting with the remote AR experience.",
+      "ko": "샘플 앱 AR Stream은 증강 카메라 피드를 피어 장치와 공유하고, 원격 AR 경험에 대한 상호작용을 통해 피어가 제어할 수 있게 합니다.",
+      "sourceHash": "86884bf9215e9edebbdc8f3185ed10d7e07c09e0c5215d254035c64298d18cbf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0002",
+      "source": "For example, a user shares their screen depicting their physical environment with a computer technician who assists the user with troubleshooting a hardware issue.",
+      "ko": "예를 들어 사용자가 물리적 환경을 보여 주는 화면을 하드웨어 문제를 진단해 주는 컴퓨터 기술자와 공유할 수 있습니다.",
+      "sourceHash": "3ee18e91c83d3c132f5cfb903c28d456fdcae827db1a3be2cdca401c53e0f02d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0003",
+      "source": "As the user views a broken device resting on a table from different angles, the remote technician interacts with the experience by augmenting the user’s camera feed with textual annotations that describe the necessary steps to repair the device.",
+      "ko": "사용자가 테이블 위에 놓인 고장난 장치를 여러 각도에서 보는 동안, 원격 기술자는 사용자의 카메라 피드에 텍스트 주석을 추가해 기기 수리 단계에 필요한 작업을 설명함으로써 상호작용합니다.",
+      "sourceHash": "423b2b3428ff55c0ef9e51cf843cec6062d32ac8ebcb4e060567641f309c6e5d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0001",
+      "source": "![An illustration of a user's device viewing an AR experience in front of a real-world computer tower on a table.",
+      "ko": "![실제 컴퓨터 타워 앞에서 사용자의 장치가 실제 환경의 AR 경험을 보는 모습을 보여 주는 삽화.",
+      "sourceHash": "74c7a2a303a6add91045c4376d5e12b5ce66b30b669cf4e556c4d349ec400e90",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0002",
+      "source": "The screen displays the tower through the device’s camera feed, which the app augments with explanatory text that the remote technician creates.](https://docs-assets.developer.apple.com/published/e0bb1908e2ec930a83a07e11d1f863f6/ar-streaming-hero.png)",
+      "ko": "화면은 기기의 카메라 피드를 통해 타워를 표시하며, 앱은 원격 기술자가 생성한 설명 텍스트로 이를 증강합니다.](https://docs-assets.developer.apple.com/published/e0bb1908e2ec930a83a07e11d1f863f6/ar-streaming-hero.png)",
+      "sourceHash": "1b300f6b9e0314b5f222bcd336b9c3df6e58df65b61ed49c0b15bf56727e1a9f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "To enable the remote user to see the user’s physical environment, AR Stream shares device sensor information across the network.",
+      "ko": "원격 사용자가 사용자의 물리적 환경을 볼 수 있도록 AR Stream은 네트워크를 통해 장치 센서 정보를 공유합니다.",
+      "sourceHash": "5f744edd0ae30e4bb02a0afbc51e3d4481b6f6bf39bf0c7603fb1452c51309e0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "By compressing camera frames with [`Video Toolbox`](https://developer.apple.com/documentation/VideoToolbox), the app provides the peer with good visibility of the user’s view by displaying the remote experience at a high frame rate.",
+      "ko": "[`Video Toolbox`](https://developer.apple.com/documentation/VideoToolbox)로 카메라 프레임을 압축해 앱은 고프레임률로 원격 경험을 표시하고 피어가 사용자의 화면을 선명하게 볼 수 있도록 합니다.",
+      "sourceHash": "efb7c9c8f8d2a2c8e5033dee6a0209155c528ea380327ade32b641825a9cc7b2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "AR Stream also sends mathematical details about the user’s real-world pose to the remote user to process the peer’s touch input.",
+      "ko": "AR Stream은 또한 사용자의 실제 자세에 대한 수학적 세부 정보를 원격 사용자에게 전달해 피어의 터치 입력을 처리합니다.",
+      "sourceHash": "40692a5a6075dcffd593315fc11ac6475d81c908854a282c888c0b31fd319e77",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "The sample app sends the session’s inverse view and inverse projection matrices to the remote device so it can calculate a location in the user’s environment where the remote user taps.",
+      "ko": "샘플 앱은 세션의 역 뷰 행렬과 역 투영 행렬을 원격 장치로 전송해 원격 사용자가 탭한 사용자의 환경 내 위치를 계산할 수 있게 합니다.",
+      "sourceHash": "7f8004d9cd138fc66c66559913f7ddba28462c6724078fdfe74ab82f4b032d1e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0003",
+      "source": "To indicate when the remote user taps the screen, AR Stream places a helpful virtual indicator at the tap location.",
+      "ko": "원격 사용자가 화면을 탭했음을 표시하기 위해 AR Stream은 탭 위치에 유용한 가상 표시기를 배치합니다.",
+      "sourceHash": "49be7e209315c8a200bdbb3d1ba729cdd23d3b301996d80d9c3341989d599f3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:display-a-camera-feed-and-monitor-the-session:0010:0001",
+      "source": "Display a Camera Feed and Monitor the Session",
+      "ko": "카메라 피드 표시 및 세션 모니터링",
+      "sourceHash": "ac1d6cdc7de2671ae6682ea47c1a6aec492be8de53d7e1501f20567db7250af4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-a-camera-feed-and-monitor-the-session:0011:0001",
+      "source": "AR Stream displays the device’s camera feed by configuring a window with a view controller that displays an [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView) (see the sample project’s `Main.storyboard` file).",
+      "ko": "AR Stream는 [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView)를 표시하는 뷰 컨트롤러가 포함된 창을 구성해 장치의 카메라 피드를 표시합니다(샘플 프로젝트의 `Main.storyboard` 파일 참조).",
+      "sourceHash": "fd8824a6329ab70d73361f6d6cb2e1cc2f6d9f74b210aa3c1a661f771b3c7b5a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-a-camera-feed-and-monitor-the-session:0011:0002",
+      "source": "By default,[`ARView`](https://developer.apple.com/documentation/RealityKit/ARView) runs a session with a world-tracking configuration [`ARWorldTrackingConfiguration`](arworldtrackingconfiguration.md).",
+      "ko": "기본적으로 [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView)는 world-tracking 구성 [`ARWorldTrackingConfiguration`](arworldtrackingconfiguration.md)으로 세션을 실행합니다.",
+      "sourceHash": "d73a7ae119c763b96092157e19be3ae57704d7d967abc7009d4776513adb7a88",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-a-camera-feed-and-monitor-the-session:0011:0003",
+      "source": "To receive notifications of the view’s session events, the project’s view controller (see `ViewController` in the sample project) assigns itself as the session delegate.",
+      "ko": "뷰의 세션 이벤트 알림을 수신하려면, 샘플 프로젝트의 뷰 컨트롤러(샘플 프로젝트의 `ViewController` 참고)는 자신을 세션 델리게이트로 지정합니다.",
+      "sourceHash": "ab9a7a60a8b9feba09f606badde133970e87d49270266f0c63e5be73b66bf4b0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:display-a-camera-feed-and-monitor-the-session:0012:0001",
+      "source": "```swift\narView.session.delegate = self\n```",
+      "ko": "```swift\narView.session.delegate = self\n```",
+      "sourceHash": "7101ea5502bd81ec9ea9add63508639ccdbdada17f9902305a8b1e03929c1788",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:capture-frames:0013:0001",
+      "source": "Capture Frames",
+      "ko": "프레임 캡처",
+      "sourceHash": "5405ba338974053bcb21d8270d6a614d1285601cffcbbefcc82f7b294fa83aee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-frames:0014:0001",
+      "source": "To show the user’s physical environment to the remote user, AR Stream uses ReplayKit to open a screen-recording session with [`RPScreenRecorder`](https://developer.apple.com/documentation/ReplayKit/RPScreenRecorder).",
+      "ko": "사용자의 물리적 환경을 원격 사용자에게 표시하기 위해 AR Stream는 [`RPScreenRecorder`](https://developer.apple.com/documentation/ReplayKit/RPScreenRecorder)를 사용해 스크린 녹화 세션을 엽니다.",
+      "sourceHash": "d47a9a19e9f4f758cc54fe20240ce041911ba22930378e779ecda07a6202c0eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:capture-frames:0015:0001",
+      "source": "```swift\nRPScreenRecorder.shared().startCapture {\n```",
+      "ko": "```swift\nRPScreenRecorder.shared().startCapture {\n```",
+      "sourceHash": "ae89b324ffc6400a57d6b441e5fc9b1a624e0ab716e3d4a6660e02805308a1d3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:capture-frames:0016:0001",
+      "source": "The screen recording captures the contents of the app’s main window, which includes any augmentations that RealityKit may add to the camera feed.",
+      "ko": "스크린 녹화는 앱의 기본 창 내용을 캡처하며, 여기에는 RealityKit이 카메라 피드에 추가할 수 있는 증강 내용이 포함됩니다.",
+      "sourceHash": "d00d29bab4a343c48d79d9bba5052f5e322b6bc52fe5e296d3e16297d0b64f36",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-frames:0016:0002",
+      "source": "In the [`startCapture(handler:completionHandler:)`](https://developer.apple.com/documentation/ReplayKit/RPScreenRecorder/startCapture(handler:completionHandler:)) closure, the sample project passes the captured screen (`sampleBuffer`) to the `compressAndSend` function for eventual transmission over the network.",
+      "ko": "[`startCapture(handler:completionHandler:)`](https://developer.apple.com/documentation/ReplayKit/RPScreenRecorder/startCapture(handler:completionHandler:)) 클로저에서 샘플 프로젝트는 캡처된 화면(`sampleBuffer`)을 네트워크 전송을 위해 `compressAndSend` 함수에 전달합니다.",
+      "sourceHash": "1904a88b2f3eb2ae005762b51bb4b49e2fbfc1d5022efd45c9e513177204166b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-frames:0016:0003",
+      "source": "The sample project also passes in the session’s current frame to conform the screen captures to the camera-image size.",
+      "ko": "샘플 프로젝트는 또한 세션의 현재 프레임을 전달해 화면 캡처가 카메라 이미지 크기에 맞춰지도록 합니다.",
+      "sourceHash": "b73161e75d88b973e3a6322bb31067d4f32b43c59e58590f5df32e1835e7a4da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:capture-frames:0017:0001",
+      "source": "```swift\nif type == .video {\n    guard let currentFrame = arView.session.currentFrame else { return }\n    videoProcessor.compressAndSend(sampleBuffer, arFrame: currentFrame) {\n```",
+      "ko": "```swift\nif type == .video {\n    guard let currentFrame = arView.session.currentFrame else { return }\n    videoProcessor.compressAndSend(sampleBuffer, arFrame: currentFrame) {\n```",
+      "sourceHash": "29210f5931fd429363c8c9f3f70c1d4639d4a7816323ad207cde5111e2e9174b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:blockquote:capture-frames:0018:0001",
+      "source": "**Note**: Although [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView) provides a [`snapshot(saveToHDR:completion:)`](https://developer.apple.com/documentation/RealityKit/ARView/snapshot(saveToHDR:completion:)-66jzu) function to capture the contents of the view, ReplayKit’s screen recording is more conducive to real-time capture.",
+      "ko": "**Note**: [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView)는 뷰의 내용을 캡처하는 [`snapshot(saveToHDR:completion:)`](https://developer.apple.com/documentation/RealityKit/ARView/snapshot(saveToHDR:completion:)-66jzu) 함수를 제공하지만, ReplayKit의 스크린 녹화가 실시간 캡처에 더 적합합니다.",
+      "sourceHash": "1df9f090b9a52250e324f7a39a1c80e21672538b392ba880fa969b60ee14e051",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:compress-and-send-frames-to-the-peer:0019:0001",
+      "source": "Compress and Send Frames to the Peer",
+      "ko": "피어에 프레임 압축 및 전송",
+      "sourceHash": "7700ea9494fdc0913ea548ce3a4bd3539e611a427f769fc6ae75b403d7168d2b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:compress-and-send-frames-to-the-peer:0020:0001",
+      "source": "The sample project’s `VideoProcessor` class implements the `compressAndSend` function, which uses [`VTCompressionSession`](https://developer.apple.com/documentation/VideoToolbox/VTCompressionSession) to compress the captured video frames.",
+      "ko": "샘플 프로젝트의 `VideoProcessor` 클래스는 `compressAndSend` 함수를 구현하며, 이 함수는 [`VTCompressionSession`](https://developer.apple.com/documentation/VideoToolbox/VTCompressionSession)을 사용해 캡처된 비디오 프레임을 압축합니다.",
+      "sourceHash": "e43505fdc33453c4f1c155ca720eb2204aac980ac4020f228437aa737237e3f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:compress-and-send-frames-to-the-peer:0021:0001",
+      "source": "```swift\nVTCompressionSessionEncodeFrame(compressionSession,\n    imageBuffer: imageBuffer,\n    presentationTimeStamp: presentationTimeStamp,\n    duration: .invalid,\n    frameProperties: nil,\n    infoFlagsOut: nil) {\n```",
+      "ko": "```swift\nVTCompressionSessionEncodeFrame(compressionSession,\n    imageBuffer: imageBuffer,\n    presentationTimeStamp: presentationTimeStamp,\n    duration: .invalid,\n    frameProperties: nil,\n    infoFlagsOut: nil) {\n```",
+      "sourceHash": "ff869283cee1219f9c2a479ac5f99165fed3f81e670d433797beaeb9b21fdaa5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:compress-and-send-frames-to-the-peer:0022:0001",
+      "source": "To ensure timely compression for the real-time streaming use case of the app, the video processor enables the compression session’s [`kVTCompressionPropertyKey_RealTime`](https://developer.apple.com/documentation/VideoToolbox/kVTCompressionPropertyKey_RealTime) option.",
+      "ko": "앱의 실시간 스트리밍 사용 사례에서 적시에 압축되도록 비디오 프로세서는 압축 세션의 [`kVTCompressionPropertyKey_RealTime`](https://developer.apple.com/documentation/VideoToolbox/kVTCompressionPropertyKey_RealTime) 옵션을 활성화합니다.",
+      "sourceHash": "c763ea12427c30121082d10822ac702724406ba4ae7a705fe4a5d2ece3a13a66",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:compress-and-send-frames-to-the-peer:0023:0001",
+      "source": "```swift\nVTSessionSetProperty(compressionSession, key: kVTCompressionPropertyKey_RealTime,\n    value: kCFBooleanTrue)\n```",
+      "ko": "```swift\nVTSessionSetProperty(compressionSession, key: kVTCompressionPropertyKey_RealTime,\n    value: kCFBooleanTrue)\n```",
+      "sourceHash": "c86982435726eb87018d41115a9e65de22c39f45536429ff23533e499eccbd0e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:compress-and-send-frames-to-the-peer:0024:0001",
+      "source": "After the [`VTCompressionSession`](https://developer.apple.com/documentation/VideoToolbox/VTCompressionSession) finishes encoding a frame, the app creates a `VideoFrameData` instance using the compressed frame and the inverse view and projection matrices from the corresponding [`ARFrame`](arframe.md).",
+      "ko": "[`VTCompressionSession`](https://developer.apple.com/documentation/VideoToolbox/VTCompressionSession)이 프레임 인코딩을 완료하면 앱은 해당 [`ARFrame`](arframe.md)에서 가져온 역투영 행렬과 역뷰 행렬을 사용해 `VideoFrameData` 인스턴스를 생성합니다.",
+      "sourceHash": "b272be6645861a4f62e0b05aa6fc72113dc7dba42795bb104f91f5417b49e7de",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:compress-and-send-frames-to-the-peer:0025:0001",
+      "source": "```swift\nlet videoFrameData = VideoFrameData(sampleBuffer: sampleBuffer, arFrame: arFrame)\n```",
+      "ko": "```swift\nlet videoFrameData = VideoFrameData(sampleBuffer: sampleBuffer, arFrame: arFrame)\n```",
+      "sourceHash": "e13f80062bdd0ee97cd7dd62a38953fe1cecfac2e3ab4848e21494837db9df67",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:compress-and-send-frames-to-the-peer:0026:0001",
+      "source": "The project serializes and encodes the `VideoFrameData` as JSON data, and passes the data to its `sendHandler`.",
+      "ko": "프로젝트는 `VideoFrameData`를 JSON 데이터로 직렬화해 인코딩하고, 해당 데이터를 `sendHandler`로 전달합니다.",
+      "sourceHash": "d0bb5efa96a9037cc9850003f326ebcf158fd5c06efa68b2c2017f959f8c78d3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:compress-and-send-frames-to-the-peer:0027:0001",
+      "source": "```swift\ndo {\n    let data = try JSONEncoder().encode(videoFrameData)\n    // Invoke the caller's handler to send the data.\n    sendHandler(data)\n} catch {\n    fatalError(\"Failed to encode videoFrameData as JSON with error: \"\n        + error.localizedDescription)\n}\n```",
+      "ko": "```swift\ndo {\n    let data = try JSONEncoder().encode(videoFrameData)\n    // Invoke the caller's handler to send the data.\n    sendHandler(data)\n} catch {\n    fatalError(\"Failed to encode videoFrameData as JSON with error: \"\n        + error.localizedDescription)\n}\n```",
+      "sourceHash": "c67c0bfd9938d502623dc553542d0e22923430d58caf99237680f8458996bd7d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:compress-and-send-frames-to-the-peer:0028:0001",
+      "source": "The screen-recording closure defines the send handler to contain code that uses [`Multipeer Connectivity`](https://developer.apple.com/documentation/MultipeerConnectivity) to transmit the video data over the local network.",
+      "ko": "스크린 녹화 클로저는 데이터 전송을 위해 로컬 네트워크 상에서 `VideoFrameData`를 전송하는 코드가 포함된 [`Multipeer Connectivity`](https://developer.apple.com/documentation/MultipeerConnectivity) send handler를 정의합니다.",
+      "sourceHash": "4591217e77099c1e3f67fac566348fdf10a85bcc13bb355badf02540002f467f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:compress-and-send-frames-to-the-peer:0029:0001",
+      "source": "```swift\nmultipeerSession.sendToAllPeers(data, reliably: true)\n```",
+      "ko": "```swift\nmultipeerSession.sendToAllPeers(data, reliably: true)\n```",
+      "sourceHash": "e880b74873ac29caea59ba70c8e184dc1cab9055cbb1c02c97420b8d79dadda6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:receive-and-decompress-peer-frames:0030:0001",
+      "source": "Receive and Decompress Peer Frames",
+      "ko": "피어 프레임 수신 및 디컴프레스",
+      "sourceHash": "b865056250432ff08090997a0135a59b9d577429bc4926ee8695aafb9c0cde85",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:receive-and-decompress-peer-frames:0031:0001",
+      "source": "When the app receives `VideoFrameData` from another device, it decodes the JSON data.",
+      "ko": "앱이 다른 장치에서 `VideoFrameData`를 받으면 JSON 데이터를 디코딩합니다.",
+      "sourceHash": "1b02d99ef1bceae66640a6a169b9772f605564d1d2879ef69deb50b3bbbf993e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:receive-and-decompress-peer-frames:0032:0001",
+      "source": "```swift\nfunc receivedData(_ data: Data, from peer: MCPeerID) {\n    // Try to decode the received data and handle it appropriately.\n    if let videoFrameData = try? JSONDecoder().decode(VideoFrameData.self,\n        from: data) {\n```",
+      "ko": "```swift\nfunc receivedData(_ data: Data, from peer: MCPeerID) {\n    // Try to decode the received data and handle it appropriately.\n    if let videoFrameData = try? JSONDecoder().decode(VideoFrameData.self,\n        from: data) {\n```",
+      "sourceHash": "c21491788b0662b437848d3fb3cf11e2dd78648c84086f067ef10ff7f88d4bcf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:receive-and-decompress-peer-frames:0033:0001",
+      "source": "To house the transmitted video frame, AR Stream reconstructs a sample buffer.",
+      "ko": "전송된 비디오 프레임을 보관하려면 AR Stream가 샘플 버퍼를 재구성합니다.",
+      "sourceHash": "1656a95c007678ab8aa869abee48c14909bb6325b1c4ed185d7aa932c655c9d7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:receive-and-decompress-peer-frames:0034:0001",
+      "source": "```swift\nlet sampleBuffer = videoFrameData.makeSampleBuffer()\n```",
+      "ko": "```swift\nlet sampleBuffer = videoFrameData.makeSampleBuffer()\n```",
+      "sourceHash": "4b15e8a8524913b962ac10bd40ec3b42e17d6357b229fbe547d9f5fe0e90d11c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:receive-and-decompress-peer-frames:0035:0001",
+      "source": "The system can display only uncompressed data, so the video processor decompresses the video frame using [`VTDecompressionSession`](https://developer.apple.com/documentation/VideoToolbox/VTDecompressionSession) within its `decompress` function.",
+      "ko": "시스템은 비압축 데이터만 표시할 수 있으므로 비디오 프로세서는 `decompress` 함수 내에서 [`VTDecompressionSession`](https://developer.apple.com/documentation/VideoToolbox/VTDecompressionSession)을 사용해 비디오 프레임을 디컴프레스합니다.",
+      "sourceHash": "6bfc6f746706a4d261346c708ffa2ddbf2d62753653fea7bd61d4814b32a7439",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:receive-and-decompress-peer-frames:0036:0001",
+      "source": "```swift\nVTDecompressionSessionDecodeFrame(decompressionSession,\n    sampleBuffer: sampleBuffer,\n    flags: [],\n    infoFlagsOut: nil) {\n```",
+      "ko": "```swift\nVTDecompressionSessionDecodeFrame(decompressionSession,\n    sampleBuffer: sampleBuffer,\n    flags: [],\n    infoFlagsOut: nil) {\n```",
+      "sourceHash": "f457f4356a639fe90de2dab96e763e9aebb2b5a284f8fb5d5d406f89a5502243",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:receive-and-decompress-peer-frames:0037:0001",
+      "source": "AR Stream draws the video frame to the screen using its renderer object (see `Renderer` in the sample project).",
+      "ko": "AR Stream는 샘플 프로젝트의 렌더러 객체(샘플 프로젝트의 `Renderer` 참조)를 사용해 비디오 프레임을 화면에 그립니다.",
+      "sourceHash": "89bd40ac91318ec450d96e67096795809d48058fe0d2a1b03e2fffba44e17fff",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:receive-and-decompress-peer-frames:0037:0002",
+      "source": "The renderer enqueues the frame data for imminent display.",
+      "ko": "렌더러는 즉시 표시할 수 있도록 프레임 데이터를 큐에 넣습니다.",
+      "sourceHash": "35e14b0f3240d6124445207250da5f3049c5934b39759aaaa13ac73363a3c230",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:receive-and-decompress-peer-frames:0038:0001",
+      "source": "```swift\n// Update the PipView aspect ratio to match the camera-image dimensions.\nlet width = CGFloat(CVPixelBufferGetWidth(imageBuffer))\nlet height = CGFloat(CVPixelBufferGetHeight(imageBuffer))\noverlayViewController?.setPipViewConstraints(width: width, height: height)\n\noverlayViewController?.renderer.enqueueFrame(\n    pixelBuffer: imageBuffer,\n    presentationTimeStamp: presentationTimeStamp,\n    inverseProjectionMatrix: videoFrameData.inverseProjectionMatrix,\n    inverseViewMatrix: videoFrameData.inverseViewMatrix)\n```",
+      "ko": "```swift\n// Update the PipView aspect ratio to match the camera-image dimensions.\nlet width = CGFloat(CVPixelBufferGetWidth(imageBuffer))\nlet height = CGFloat(CVPixelBufferGetHeight(imageBuffer))\noverlayViewController?.setPipViewConstraints(width: width, height: height)\n\noverlayViewController?.renderer.enqueueFrame(\n    pixelBuffer: imageBuffer,\n    presentationTimeStamp: presentationTimeStamp,\n    inverseProjectionMatrix: videoFrameData.inverseProjectionMatrix,\n    inverseViewMatrix: videoFrameData.inverseViewMatrix)\n```",
+      "sourceHash": "16f59b25018bb94f34dc44a43ff056dab8f0dd83bac15ba6466eab585c4f73ae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:display-the-remote-users-camera-feed:0039:0001",
+      "source": "Display the Remote Users Camera Feed",
+      "ko": "원격 사용자 카메라 피드 표시",
+      "sourceHash": "04bbfb21f4ce7801eb9cd9f6703ac23d53a722d2a221f302cb19ff787b81a6e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-the-remote-users-camera-feed:0040:0001",
+      "source": "AR Stream defines an [`MTKView`](https://developer.apple.com/documentation/MetalKit/MTKView) subclass, `OverlayViewController`, that displays the remote user’s camera feed on top of the [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView) by placing a *picture-in-picture* (PiP) view at the bottom left of the screen.",
+      "ko": "AR Stream는 [`MTKView`](https://developer.apple.com/documentation/MetalKit/MTKView) 하위 클래스 `OverlayViewController`를 정의하며, 화면 왼쪽 아래에 *picture-in-picture* (PiP) 보기를 배치해 [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView) 위에 원격 사용자의 카메라 피드를 표시합니다.",
+      "sourceHash": "7fcf56d27f4f4c488216586b288386479256fab4124fb862f8c77953491bc473",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-the-remote-users-camera-feed:0041:0001",
+      "source": "![A screenshot of the app at launch that displays the camera feed of the user’s AR experience at full size.",
+      "ko": "![앱 시작 시 사용자 AR 경험의 카메라 피드를 전체 크기로 표시한 앱의 스크린샷",
+      "sourceHash": "b6bc1570073b885f158edb8414a5f9bb40d3244bfcdfa6fa60ddb88ecee88aeb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-the-remote-users-camera-feed:0041:0002",
+      "source": "At the bottom left, the app overlays a smaller view — or PiP view — that represents the camera feed of the remote user’s experience.](https://docs-assets.developer.apple.com/published/10a488f59f21fe469045f05871130c14/ar-streaming-pip-view.jpg)",
+      "ko": "화면 왼쪽 아래에는 원격 사용자의 경험 카메라 피드를 나타내는 더 작은 보기(또는 PiP 보기)를 오버레이합니다.](https://docs-assets.developer.apple.com/published/10a488f59f21fe469045f05871130c14/ar-streaming-pip-view.jpg)",
+      "sourceHash": "98c92afd950953a36fd527cc77aa7341e5fce1e28f90e3937d9a2cf80987c3b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-the-remote-users-camera-feed:0042:0001",
+      "source": "The sample project’s `AppDelegate` configures the PiP view in a secondary window.",
+      "ko": "샘플 프로젝트의 `AppDelegate`는 PiP 보기를 보조 창에서 구성합니다.",
+      "sourceHash": "0b28d645e53b57d480f512bbdc0960c0cc601c4caedab5d2e1577a2a2a885d3b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-the-remote-users-camera-feed:0042:0002",
+      "source": "Because ReplayKit’s screen recording captures only the main window, the PiP view displays only the remote user’s camera feed.",
+      "ko": "ReplayKit의 스크린 녹화는 기본 창만 캡처하므로 PiP 보기에는 원격 사용자의 카메라 피드만 표시됩니다.",
+      "sourceHash": "86455cf69f3230de0c78d6286e1530fb41cb36e2194d7e3928d953e8b5e59e2e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:display-the-remote-users-camera-feed:0043:0001",
+      "source": "```swift\noverlayWindow = UIWindow(windowScene: windowScene)\n\nlet storyBoard = UIStoryboard(name: \"Main\", bundle: nil)\nlet overlayViewController = storyBoard.instantiateViewController(\n    identifier: \"OverlayViewController\")\noverlayWindow.rootViewController = overlayViewController\noverlayWindow.makeKeyAndVisible()\n\n// Make sure the overlayWindow is always above the main window.\noverlayWindow.windowLevel = window.windowLevel + 1\n```",
+      "ko": "```swift\noverlayWindow = UIWindow(windowScene: windowScene)\n\nlet storyBoard = UIStoryboard(name: \"Main\", bundle: nil)\nlet overlayViewController = storyBoard.instantiateViewController(\n    identifier: \"OverlayViewController\")\noverlayWindow.rootViewController = overlayViewController\noverlayWindow.makeKeyAndVisible()\n\n// Make sure the overlayWindow is always above the main window.\noverlayWindow.windowLevel = window.windowLevel + 1\n```",
+      "sourceHash": "bf18be93804e88c769297debd39426ced37ba8c84c89d9aead864359c6d1a89d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:send-gestures-to-the-peer:0044:0001",
+      "source": "Send Gestures to the Peer",
+      "ko": "피어로 제스처 전송",
+      "sourceHash": "e6af3a664913d594a190b592e64d67a36351ee2514db7366578c83b92bef827a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:send-gestures-to-the-peer:0045:0001",
+      "source": "When the remote user taps the PiP view, the project responds by recording the tap location.",
+      "ko": "원격 사용자가 PiP 보기를 탭하면 프로젝트는 탭 위치를 기록해 반응합니다.",
+      "sourceHash": "b42141c61fcdc91270d37d13206d25b0b82834bfd90b2cf4b86049e52e6c3e53",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:send-gestures-to-the-peer:0046:0001",
+      "source": "```swift\n@objc\nfunc tapped(_ sender: UITapGestureRecognizer) {\n    guard let view = sender.view else { return }\n    let location = sender.location(in: view)\n```",
+      "ko": "```swift\n@objc\nfunc tapped(_ sender: UITapGestureRecognizer) {\n    guard let view = sender.view else { return }\n    let location = sender.location(in: view)\n```",
+      "sourceHash": "36697c6c1c632cc835aaf71e34d940f7f2175e34f2edeaa884d68b4ed72c2754",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:send-gestures-to-the-peer:0047:0001",
+      "source": "The sample project uses the inverse matrices that the user sends to enable the remote user to interact with the user’s AR experience.",
+      "ko": "샘플 프로젝트는 사용자가 전송한 역행렬을 사용해 원격 사용자가 사용자의 AR 경험과 상호작용할 수 있게 합니다.",
+      "sourceHash": "b07eedd7bb1c89edcd830294a4f9cf7c4c2b1717656ecfac054ed17b409adb10",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:send-gestures-to-the-peer:0048:0001",
+      "source": "```swift\nguard let inverseProjectionMatrix = renderer.lastDrawnInverseProjectionMatrix,\n    let inverseViewMatrix = renderer.lastDrawnInverseViewMatrix else {\n    return\n}\n```",
+      "ko": "```swift\nguard let inverseProjectionMatrix = renderer.lastDrawnInverseProjectionMatrix,\n    let inverseViewMatrix = renderer.lastDrawnInverseViewMatrix else {\n    return\n}\n```",
+      "sourceHash": "0d2b1ca3bc2565d3a3372523e1e068f2d45462e6b2e7ad1d625a7c894f51c8b9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:send-gestures-to-the-peer:0049:0001",
+      "source": "The project converts the tap location and inverse matrices into a ray cast that describes the location and direction in the user’s [`ARSession`](arsession.md) world coordinate system (see the `makeRay` function in the sample project).",
+      "ko": "프로젝트는 탭 위치와 역행렬을 사용해 사용자 [`ARSession`](arsession.md) 월드 좌표계에서의 위치와 방향을 설명하는 광선 캐스트로 변환합니다(샘플 프로젝트의 `makeRay` 함수 참조).",
+      "sourceHash": "2a585e78410d5f76f78c9761a3fa0ca102f4fb6ec21861e175d16833dfbf750a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:send-gestures-to-the-peer:0050:0001",
+      "source": "```swift\nlet rayQuery = makeRay(from: location,\n    viewportSize: view.frame.size,\n    inverseProjectionMatrix: simd_float4x4(inverseProjectionMatrix),\n    inverseViewMatrix: simd_float4x4(inverseViewMatrix))\n```",
+      "ko": "```swift\nlet rayQuery = makeRay(from: location,\n    viewportSize: view.frame.size,\n    inverseProjectionMatrix: simd_float4x4(inverseProjectionMatrix),\n    inverseViewMatrix: simd_float4x4(inverseViewMatrix))\n```",
+      "sourceHash": "bfa1ab46bdd1320d05a46fd622e1d83674c211812d3270104517c784b447b119",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:send-gestures-to-the-peer:0051:0001",
+      "source": "Then, the sample project encodes the ray cast as JSON data and sends it to the connected peer.",
+      "ko": "그런 다음 샘플 프로젝트는 광선 캐스트를 JSON 데이터로 인코딩해 연결된 피어로 전송합니다.",
+      "sourceHash": "bd387e6a4e38ea43a63c48897ceb92ceab5585b423a11f0b7c401f8452e760fd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:send-gestures-to-the-peer:0052:0001",
+      "source": "```swift\nlet data = try JSONEncoder().encode(rayQuery)\nmultipeerSession?.sendToAllPeers(data, reliably: true)\n```",
+      "ko": "```swift\nlet data = try JSONEncoder().encode(rayQuery)\nmultipeerSession?.sendToAllPeers(data, reliably: true)\n```",
+      "sourceHash": "cabf858d3fda0ba6c95963b83c679e23c4ecc275bfd94dad45952a278847b3e2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:handle-peer-gestures:0053:0001",
+      "source": "Handle Peer Gestures",
+      "ko": "Handle Peer Gestures",
+      "sourceHash": "0137f748d69e68d52160cfa39106911541952b59d97844a4e9e56f3a04d9b394",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:handle-peer-gestures:0054:0001",
+      "source": "In the project’s `ViewController`, the `receivedData` function receives a `Ray` object when the remote user taps the PiP view.",
+      "ko": "In the project’s `ViewController`, the `receivedData` function receives a `Ray` object when the remote user taps the PiP view.",
+      "sourceHash": "79814662e02db675c70b449d9126b3d42674056cd503357557ba6a5725b18b41",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:handle-peer-gestures:0055:0001",
+      "source": "```swift\n} else if let rayQuery = try? JSONDecoder().decode(Ray.self, from: data) {\n```",
+      "ko": "```swift\n} else if let rayQuery = try? JSONDecoder().decode(Ray.self, from: data) {\n```",
+      "sourceHash": "e67702439a3b0d9697670f4f94a1f161f4405b9585deae8e2695b68cd59993d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:handle-peer-gestures:0056:0001",
+      "source": "To hand the remote user’s tap gesture to ARKit as if the user is tapping the screen, the sample project uses the `Ray` data to create an [`ARTrackedRaycast`](artrackedraycast.md).",
+      "ko": "To hand the remote user’s tap gesture to ARKit as if the user is tapping the screen, the sample project uses the `Ray` data to create an [`ARTrackedRaycast`](artrackedraycast.md).",
+      "sourceHash": "2245576f22702065ae7fe809f6a4c6e475d7054c3f793a58346246b8414be18e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:handle-peer-gestures:0057:0001",
+      "source": "```swift\ntrackedRaycast = arView.session.trackedRaycast(\n    ARRaycastQuery(\n        origin: rayQuery.origin,\n        direction: rayQuery.direction,\n        allowing: .estimatedPlane,\n        alignment: .any)\n    ) {\n```",
+      "ko": "```swift\ntrackedRaycast = arView.session.trackedRaycast(\n    ARRaycastQuery(\n        origin: rayQuery.origin,\n        direction: rayQuery.direction,\n        allowing: .estimatedPlane,\n        alignment: .any)\n    ) {\n```",
+      "sourceHash": "4f646b296bf66d99517f75c0bb5d0c5bd1c4626d8c6040941407e86e0caf8e08",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:handle-peer-gestures:0058:0001",
+      "source": "When the tracked ray cast intersects with a surface in the user’s environment, the app records the resulting location.",
+      "ko": "When the tracked ray cast intersects with a surface in the user’s environment, the app records the resulting location.",
+      "sourceHash": "b0e255094c174e490e7e9cb2a2b97d2fba9019f4c4853257e451d25aa8af7d35",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:handle-peer-gestures:0059:0001",
+      "source": "```swift\nif let result = raycastResults.first {\n    marker.transform.matrix = result.worldTransform\n```",
+      "ko": "```swift\nif let result = raycastResults.first {\n    marker.transform.matrix = result.worldTransform\n```",
+      "sourceHash": "a26171e14f9195084fdae092134f318ca4aef054d43c1dbffbddef0424d48405",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:display-virtual-content:0060:0001",
+      "source": "Display Virtual Content",
+      "ko": "Display Virtual Content",
+      "sourceHash": "d48de290e7d473b2d4a311d2f433dc22188c8b520b9ee6c4a505682fab47d28b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:display-virtual-content:0061:0001",
+      "source": "To enable the remote user to interact with the user’s AR experience, the app places a virtual ball at the location in the environment where the remote user taps.",
+      "ko": "To enable the remote user to interact with the user’s AR experience, the app places a virtual ball at the location in the environment where the remote user taps.",
+      "sourceHash": "a3d012519688ecf0abd388cf5746d765477120e752dd7d1d08d12e8d6574672f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:display-virtual-content:0062:0001",
+      "source": "![A screenshot of the app that displays the camera feed of the user’s AR experience at full size.",
+      "ko": "![A screenshot of the app that displays the camera feed of the user’s AR experience at full size.",
+      "sourceHash": "af27fb05be226194e6ee8bb7253fd2a797f70bd49aa15e86a3051a98388fb7a1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:display-virtual-content:0062:0002",
+      "source": "A purple virtual ball rests on a real desk in the remote user’s PiP view to indicate where the user tapped the remote user’s PiP view.](https://docs-assets.developer.apple.com/published/8268b999db44dca704b0c092567df256/ar-streaming-virtual-content.jpg)",
+      "ko": "A purple virtual ball rests on a real desk in the remote user’s PiP view to indicate where the user tapped the remote user’s PiP view.](https://docs-assets.developer.apple.com/published/8268b999db44dca704b0c092567df256/ar-streaming-virtual-content.jpg)",
+      "sourceHash": "70aabecdb3a47d040b7a25118fa4f0687ea0d9abec46cbe42b3e7a03936d2eb4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:display-virtual-content:0063:0001",
+      "source": "❗ **Important**: AR Stream displays a virtual ball for simplicity.",
+      "ko": "❗ **Important**: AR Stream displays a virtual ball for simplicity.",
+      "sourceHash": "6fca0885a45daba3cee755e2bb86adf3de3b0859aed61a917531f90a83514bdc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:display-virtual-content:0063:0002",
+      "source": "An app may require different virtual content, such as an arrow that points to a precise spot, or virtual text that explains the importance of a location.",
+      "ko": "An app may require different virtual content, such as an arrow that points to a precise spot, or virtual text that explains the importance of a location.",
+      "sourceHash": "fcd3a24546eabaa159e18141a12393a1ffb55de5bdfdfe59ffda6eb5d2ff5be5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:display-virtual-content:0063:0003",
+      "source": "For an example app that displays text at a real-world location, see [`Creating screen annotations for objects in an AR experience`](creating-screen-annotations-for-objects-in-an-ar-experience.md).",
+      "ko": "For an example app that displays text at a real-world location, see [`Creating screen annotations for objects in an AR experience`](creating-screen-annotations-for-objects-in-an-ar-experience.md).",
+      "sourceHash": "eee8ed96089be567bf1b4591bf96763b4fd3d13a398f699e7dfb921650985ed3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:display-virtual-content:0064:0001",
+      "source": "The project creates this visual marker using a ball-shaped [`ModelEntity`](https://developer.apple.com/documentation/RealityKit/ModelEntity).",
+      "ko": "The project creates this visual marker using a ball-shaped [`ModelEntity`](https://developer.apple.com/documentation/RealityKit/ModelEntity).",
+      "sourceHash": "9bd8ea95b0966067be53c5641ad33e690dfb87f1643f160c650b388694b486cb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:display-virtual-content:0065:0001",
+      "source": "```swift\nlet marker: AnchorEntity = {\n    let entity = AnchorEntity()\n    entity.addChild(ModelEntity(mesh: .generateSphere(radius: 0.05)))\n    entity.isEnabled = false\n    return entity\n}()\n```",
+      "ko": "```swift\nlet marker: AnchorEntity = {\n    let entity = AnchorEntity()\n    entity.addChild(ModelEntity(mesh: .generateSphere(radius: 0.05)))\n    entity.isEnabled = false\n    return entity\n}()\n```",
+      "sourceHash": "83ec3f8e398152c65cac525f24becc1c554b8b5388e6540d044b8d1af6ce8611",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:display-virtual-content:0066:0001",
+      "source": "At app launch, the marker is invisible by default as the project readies the marker for display by adding it to the scene.",
+      "ko": "At app launch, the marker is invisible by default as the project readies the marker for display by adding it to the scene.",
+      "sourceHash": "d0c8bb2364521d52ba049f8994c3591885bac1e1ad6b7890c1eef60647a3b136",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:display-virtual-content:0067:0001",
+      "source": "```swift\narView.scene.addAnchor(marker)\n```",
+      "ko": "```swift\narView.scene.addAnchor(marker)\n```",
+      "sourceHash": "87578a9263e07026606a63c74f2cb0fb7df49c67d00b7a74297b824fe224c11d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:display-virtual-content:0068:0001",
+      "source": "When the app receives a `Ray` from the remote user and adjusts the marker’s position, the project displays the marker by enabling it.",
+      "ko": "When the app receives a `Ray` from the remote user and adjusts the marker’s position, the project displays the marker by enabling it.",
+      "sourceHash": "a765f38e6ae4831ef938b814c56b1fe272decb6a7db50a9c974cf62aa821118d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:display-virtual-content:0069:0001",
+      "source": "```swift\nmarker.isEnabled = true\n```",
+      "ko": "```swift\nmarker.isEnabled = true\n```",
+      "sourceHash": "8d4e8fe7143b7ece4902aea884ed06f40f50fdc2d8cd63145bc6dc0628c95e55",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0070:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0071:0001",
+      "source": "[Creating a collaborative session](creating-a-collaborative-session.md)",
+      "ko": "[Creating a collaborative session](creating-a-collaborative-session.md)",
+      "sourceHash": "ff6e04dcd6d4f33ef69fe73169d323f4c3b248ad2fba3f9c0375e9d16e1e97d4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0072:0001",
+      "source": "Enable nearby devices to share an AR experience by using a peer-to-peer multiuser strategy.",
+      "ko": "Enable nearby devices to share an AR experience by using a peer-to-peer multiuser strategy.",
+      "sourceHash": "292d23bc1ee89370f91db7a5db8770c6c43d4bc2f602aaa8427a17bf958b347b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0073:0001",
+      "source": "[Creating a multiuser AR experience](creating-a-multiuser-ar-experience.md)",
+      "ko": "[Creating a multiuser AR experience](creating-a-multiuser-ar-experience.md)",
+      "sourceHash": "e98a30215df3526df5faac2eb7e511174bd10d78f09970b5bdf2e6a84a898a91",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0074:0001",
+      "source": "Enable nearby devices to share an AR experience by using a host-guest multiuser strategy.",
+      "ko": "Enable nearby devices to share an AR experience by using a host-guest multiuser strategy.",
+      "sourceHash": "4a629a93492cc78ef36efafec492abe785d7de0c908e7b7aa724881b2ceccca8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0075:0001",
+      "source": "[class ARParticipantAnchor](arparticipantanchor.md)",
+      "ko": "[class ARParticipantAnchor](arparticipantanchor.md)",
+      "sourceHash": "b8dd1664ac47314a0bcf02efd928c609119f894df2067e82f7ddd89e0580f115",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0076:0001",
+      "source": "An anchor for another user in multiuser augmented reality experiences.",
+      "ko": "An anchor for another user in multiuser augmented reality experiences.",
+      "sourceHash": "15cf785cc8f928ac1da7a448340c53f6df9a2437314ef5d46dd9f5ef2c585ebc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0077:0001",
+      "source": "[ARSession.CollaborationData](arsession/collaborationdata.md)",
+      "ko": "[ARSession.CollaborationData](arsession/collaborationdata.md)",
+      "sourceHash": "2143a191ba6ea138bc6e8e4df9019b94de0ab5ed8155ad199377f5a3e1defc39",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0078:0001",
+      "source": "An object that holds information that a user has collected about the physical environment.",
+      "ko": "An object that holds information that a user has collected about the physical environment.",
+      "sourceHash": "d7a5362d0d4a609d4a906f90026ae2f51000afcfffc864305a2630455d84d552",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0079:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0080:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/streaming-an-ar-experience)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/streaming-an-ar-experience)*",
+      "sourceHash": "0b1d2b82c3ed7bbbcf7800c84108e1a6776b544ba1a3731ee8e80211301337eb",
+      "status": "preserved"
+    }
+  ]
+}

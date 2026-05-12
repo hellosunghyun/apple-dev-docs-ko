@@ -1,0 +1,358 @@
+{
+  "docId": "documentation/AppKit/nspagelayout.md",
+  "title": "NSPageLayout",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appkit/nspagelayout",
+  "segments": [
+    {
+      "id": "seg:heading:nspagelayout:0000:0001",
+      "source": "NSPageLayout",
+      "ko": "NSPageLayout",
+      "sourceHash": "15cf005361efd3aa4bb06cf738f87f4a74a45f6c26ceaa08203d25fa16e201e5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:nspagelayout:0001:0001",
+      "source": "**Framework**: AppKit **Kind**: class",
+      "ko": "**Framework**: AppKit **Kind**: class",
+      "sourceHash": "62e3328cefea10ca1ce6cf0cc46c401f24af8d93ad6724316003cf14d75926bf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:nspagelayout:0002:0001",
+      "source": "A panel that queries the user for information such as paper type and orientation.",
+      "ko": "종이 유형과 방향 같은 정보를 사용자로부터 묻는 패널입니다.",
+      "sourceHash": "08efcccf27d185a6769359d882dff3376b11cd1705b6003d404215508fb0e8dd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:nspagelayout:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:nspagelayout:0004:0001",
+      "source": "macOS ?+",
+      "ko": "macOS ?+",
+      "sourceHash": "7565f9a2fe151983964ce7f1a1fff21dbf4130de4d3457f25bd88800eafbe279",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\n@MainActor\nclass NSPageLayout\n```",
+      "ko": "```swift\n@MainActor\nclass NSPageLayout\n```",
+      "sourceHash": "53ef134f804a2ede8699869f121b36149b0c9c480d244dd5266c0c69982d528a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "A page layout panel is typically displayed in response to the user selecting the Page Setup menu item.",
+      "ko": "페이지 레이아웃 패널은 사용자가 Page Setup 메뉴 항목을 선택할 때 일반적으로 표시됩니다.",
+      "sourceHash": "c16229c1dae1b008baa0f653e95e7f35865041244ede4473ffb51c3f7b4b97c0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "You obtain an instance with the [`pageLayout`](nspagelayout/pagelayout.md) class method.",
+      "ko": "[`pageLayout`](nspagelayout/pagelayout.md) 클래스 메서드로 인스턴스를 가져옵니다.",
+      "sourceHash": "12d9ca09a73992404e70cc627da629ed2407c07633e7897210f7315cdbb055b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0003",
+      "source": "The pane can then be run as a sheet using [`beginSheet(with:modalFor:delegate:didEnd:contextInfo:)`](nspagelayout/beginsheet(with:modalfor:delegate:didend:contextinfo:).md) or modally using [`runModal()`](nspagelayout/runmodal().md) or [`runModal(with:)`](nspagelayout/runmodal(with:).md).",
+      "ko": "그런 다음 [`beginSheet(with:modalFor:delegate:didEnd:contextInfo:)`](nspagelayout/beginsheet(with:modalfor:delegate:didend:contextinfo:).md)로 시트처럼 실행하거나, [`runModal()`](nspagelayout/runmodal().md) 또는 [`runModal(with:)`](nspagelayout/runmodal(with:).md)로 모달로 실행할 수 있습니다.",
+      "sourceHash": "5ec57e3273925a6b4c297d319924622f032fa30ef2a64bf7cadbdcc6c134ce33",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "For design guidance, see [`Human Interface Guidelines`](https://developer.apple.comhttps://developer.apple.com/design/human-interface-guidelines/macos/system-capabilities/printing#page-setup-dialogs).",
+      "ko": "디자인 가이드는 [`Human Interface Guidelines`](https://developer.apple.comhttps://developer.apple.com/design/human-interface-guidelines/macos/system-capabilities/printing#page-setup-dialogs)를 참조하십시오.",
+      "sourceHash": "83147e7fa83c4dc593024104f08fbddbb82fa79f841d4963134f1d25f57e3533",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:running-the-page-setup-dialog:0011:0001",
+      "source": "Running the page setup dialog",
+      "ko": "페이지 설정 대화 상자 실행",
+      "sourceHash": "8aa4ed5253f43f0a037f1674f3c503d24c1fc8005548c88d478a97f8bfe11466",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:running-the-page-setup-dialog:0012:0001",
+      "source": "[func beginSheet(using: NSPrintInfo, on: NSWindow, completionHandler: ((NSPageLayout.Result) -> Void)?)](nspagelayout/beginsheet(using:on:completionhandler:).md)",
+      "ko": "[func beginSheet(using: NSPrintInfo, on: NSWindow, completionHandler: ((NSPageLayout.Result) -> Void)?)](nspagelayout/beginsheet(using:on:completionhandler:).md)",
+      "sourceHash": "c73a856cbf3fc14e8b34bb3840549dfd1e2bb3d45ebbdad7d55e55368c13c575",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:running-the-page-setup-dialog:0012:0002",
+      "source": "[func beginSheet(with: NSPrintInfo, modalFor: NSWindow, delegate: Any?, didEnd: Selector?, contextInfo: UnsafeMutableRawPointer?)](nspagelayout/beginsheet(with:modalfor:delegate:didend:contextinfo:).md)",
+      "ko": "[func beginSheet(with: NSPrintInfo, modalFor: NSWindow, delegate: Any?, didEnd: Selector?, contextInfo: UnsafeMutableRawPointer?)](nspagelayout/beginsheet(with:modalfor:delegate:didend:contextinfo:).md)",
+      "sourceHash": "cc16929858e65f6750359ff91b2387e323951381f1bfb785e36f6b1cd22d8451",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:running-the-page-setup-dialog:0013:0001",
+      "source": "Presents a page setup sheet for the specified print info object, document-modal relative to the specified window.",
+      "ko": "지정된 인쇄 정보 객체에 대해 지정된 창과 관련된 문서 모달 방식으로 페이지 설정 시트를 표시합니다.",
+      "sourceHash": "6562d73c857e210af31181966bf304eed952994a41cda211a8bdbc7807dbe595",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:running-the-page-setup-dialog:0014:0001",
+      "source": "[func runModal() -> Int](nspagelayout/runmodal.md)",
+      "ko": "[func runModal() -> Int](nspagelayout/runmodal.md)",
+      "sourceHash": "17ab79547a25042152b1f8568b3d0e2f20ccd5327935806add0ef22afa716591",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:running-the-page-setup-dialog:0015:0001",
+      "source": "Displays the page layout panel and begins the modal loop using the shared print info object.",
+      "ko": "공유 인쇄 정보 객체를 사용해 페이지 레이아웃 패널을 표시하고 모달 루프를 시작합니다.",
+      "sourceHash": "c6184f00d9f7ae0946c3c89985246af2ca127258f02ccf371b2781d524addfd0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:running-the-page-setup-dialog:0016:0001",
+      "source": "[func runModal(with: NSPrintInfo) -> Int](nspagelayout/runmodal(with:).md)",
+      "ko": "[func runModal(with: NSPrintInfo) -> Int](nspagelayout/runmodal(with:).md)",
+      "sourceHash": "7088e65d02fc2e174014b7d0eba97e7739da7a71d272144db1d6f293b19f3e9b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:running-the-page-setup-dialog:0017:0001",
+      "source": "Displays the page layout panel and begins the modal loop using the specified print info object.",
+      "ko": "지정된 인쇄 정보 객체를 사용해 페이지 레이아웃 패널을 표시하고 모달 루프를 시작합니다.",
+      "sourceHash": "01d3edf155a6855c5c77ac3d24b2c67db7c2ec3a90d9986c8c5bab42ee9526ee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:customizing-the-page-setup-dialog:0018:0001",
+      "source": "Customizing the page setup dialog",
+      "ko": "페이지 설정 대화 상자 사용자 지정",
+      "sourceHash": "cedcfea431563ec578b3a4d121c2a6165357f01fb783d360f9b9ea2cb8cfeed8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:customizing-the-page-setup-dialog:0019:0001",
+      "source": "[func addAccessoryController(NSViewController)](nspagelayout/addaccessorycontroller(_:).md)",
+      "ko": "[func addAccessoryController(NSViewController)](nspagelayout/addaccessorycontroller(_:).md)",
+      "sourceHash": "3519ecf4bd89ab6561d2b4477456b4324ea7a639136f05d974e564f64526800e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:customizing-the-page-setup-dialog:0020:0001",
+      "source": "Adds the specified controller of an accessory view to be presented in the page setup panel.",
+      "ko": "페이지 설정 패널에 표시할 액세서리 뷰의 지정된 컨트롤러를 추가합니다.",
+      "sourceHash": "08dd19004240266f03171749a4a3b58d56703013de7da6471d14fd46c24f0b41",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:customizing-the-page-setup-dialog:0021:0001",
+      "source": "[func removeAccessoryController(NSViewController)](nspagelayout/removeaccessorycontroller(_:).md)",
+      "ko": "[func removeAccessoryController(NSViewController)](nspagelayout/removeaccessorycontroller(_:).md)",
+      "sourceHash": "3aeb5e0128e6f19cd41c7f890262bb1e6232ec3036b1f8a442d38a74cc6cd932",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:customizing-the-page-setup-dialog:0022:0001",
+      "source": "Removes the specified controller of an accessory view.",
+      "ko": "지정된 액세서리 뷰의 컨트롤러를 제거합니다.",
+      "sourceHash": "360f04887b76b0051a49398b18fd90e8a721bb45fe8b132347748a6d1ad39c0d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:customizing-the-page-setup-dialog:0023:0001",
+      "source": "[var accessoryControllers: [NSViewController]](nspagelayout/accessorycontrollers.md)",
+      "ko": "[var accessoryControllers: [NSViewController]](nspagelayout/accessorycontrollers.md)",
+      "sourceHash": "c7df7e55dadf17dab53db0ee1abb8e3920cfcf09ed491dc941782e8c54da78cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:customizing-the-page-setup-dialog:0024:0001",
+      "source": "An array of accessory view controllers belonging to the page layout panel.",
+      "ko": "페이지 레이아웃 패널에 속하는 액세서리 뷰 컨트롤러의 배열입니다.",
+      "sourceHash": "afd02224048e874f4809138387cddb48197b2472fcb68e4aced6bc31a7965ae5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:accessing-the-printing-information:0025:0001",
+      "source": "Accessing the printing information",
+      "ko": "인쇄 정보 접근",
+      "sourceHash": "0c4a1c097092e3be695f664c42e6f77a56b1fba4196987366dc9f10888fc24ac",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-the-printing-information:0026:0001",
+      "source": "[var printInfo: NSPrintInfo?](nspagelayout/printinfo.md)",
+      "ko": "[var printInfo: NSPrintInfo?](nspagelayout/printinfo.md)",
+      "sourceHash": "7d87b69b6eede863c3b789d28f6f6b58a95b025b8c57d7509441b4c751185de9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-the-printing-information:0027:0001",
+      "source": "The printing information object used when the page layout panel is run.",
+      "ko": "페이지 레이아웃 패널이 실행될 때 사용되는 인쇄 정보 객체입니다.",
+      "sourceHash": "d5f84b3774d4117123cc60afd66696e9083d38fb46b7b0fcfc7e6afe8212e694",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-the-printing-information:0028:0001",
+      "source": "[class NSPrintInfo](nsprintinfo.md)",
+      "ko": "[class NSPrintInfo](nsprintinfo.md)",
+      "sourceHash": "0f3d9759f2bdc4db644a1b8d725c6b6647d8466223785b81cb7a946b56890561",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-the-printing-information:0029:0001",
+      "source": "An object that stores information that’s used to generate printed output.",
+      "ko": "인쇄 출력 생성을 위해 사용되는 정보를 저장하는 객체입니다.",
+      "sourceHash": "170e77f82c75edaf4369453679cf64159f5e081f28a58f09e363e73a7a0a4e05",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-the-printing-information:0030:0001",
+      "source": "[NSPageLayout.Result](nspagelayout/result.md)",
+      "ko": "[NSPageLayout.Result](nspagelayout/result.md)",
+      "sourceHash": "c845cee1526852b51726105a7337afbe5094c25a6492485a1881ddb8d650b8dd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:relationships:0031:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0032:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0033:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0034:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0035:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0035:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0035:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0035:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0035:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0035:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0035:0007",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0036:0001",
+      "source": "See Also",
+      "ko": "참고",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0037:0001",
+      "source": "[class NSPrintPanel](nsprintpanel.md)",
+      "ko": "[class NSPrintPanel](nsprintpanel.md)",
+      "sourceHash": "58bd9958336911181e91abec5cb1cf6e285711f41c547a4f31b2d0304b181295",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0038:0001",
+      "source": "The Print panel that queries the user for information about a print job.",
+      "ko": "인쇄 작업에 대한 정보를 사용자에게 묻는 인쇄 패널입니다.",
+      "sourceHash": "1b1e7f8ce93c4964ad8f96bb685fe57abaf269609950ff521a82d4e7e98cfacf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0039:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0040:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nspagelayout)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nspagelayout)*",
+      "sourceHash": "295dd2922899eff62a9db1e5ec6626a928f5f4aaaea34f3e9fc0bea8c0c38e71",
+      "status": "preserved"
+    }
+  ]
+}

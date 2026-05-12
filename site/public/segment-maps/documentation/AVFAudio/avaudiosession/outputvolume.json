@@ -1,0 +1,141 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosession/outputvolume.md",
+  "title": "outputVolume",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosession/outputvolume",
+  "segments": [
+    {
+      "id": "seg:heading:outputvolume:0000:0001",
+      "source": "outputVolume",
+      "ko": "outputVolume",
+      "sourceHash": "ff0268ea69c3da9b02a271d79814fa8b6b43cd29d1da4de0e5f31e721feb6e84",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:outputvolume:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: property",
+      "ko": "**Framework**: AVFAudio **Kind**: property",
+      "sourceHash": "dbcab8cee850c10188239b4c73df47a01c6d8b4597a46786c5db98ee29c5588e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:outputvolume:0002:0001",
+      "source": "The systemwide output volume set by the user.",
+      "ko": "사용자가 설정한 시스템 전체 출력 볼륨입니다.",
+      "sourceHash": "2343b075e7c1ef41eff1fc0a394b4b16470eabaf9a52900bb5b67718a44ff874",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:outputvolume:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputvolume:0004:0001",
+      "source": "iOS 6.0+",
+      "ko": "iOS 6.0+",
+      "sourceHash": "3d4dd430bbebf24548d6073001d3b7ca25d38a35fb48c99fbca116f560f382fc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputvolume:0004:0002",
+      "source": "iPadOS 6.0+",
+      "ko": "iPadOS 6.0+",
+      "sourceHash": "92f0fefc8cc53859b925f1f60e72b8af1e1ccc88febb363e541aab64498551ae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputvolume:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputvolume:0004:0004",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputvolume:0004:0005",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputvolume:0004:0006",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar outputVolume: Float { get }\n```",
+      "ko": "```swift\nvar outputVolume: Float { get }\n```",
+      "sourceHash": "765117d11a9a4bd4d1cc49db3b556c128f7c0d56128f6173a4e6cb46c26e3361",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This property returns a value in the range `0.0` to `1.0`, with `0.0` representing the minimum volume, and `1.0` representing the maximum volume.",
+      "ko": "이 속성은 `0.0`에서 `1.0` 범위의 값을 반환하며, `0.0`은 최소 볼륨, `1.0`은 최대 볼륨을 나타냅니다.",
+      "sourceHash": "0ba59e5e755a75b7e651eee31acf0290337c76e69469e70797ad8f73be7c632f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Only the user can directly set the system volume.",
+      "ko": "시스템 볼륨은 사용자만 직접 설정할 수 있습니다.",
+      "sourceHash": "d175381dcbce1b1abf4b293a9f8b54931ae08fef622b562b960d6974990e2051",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "Provide a volume control in your app, using [`MPVolumeView`](https://developer.apple.com/documentation/MediaPlayer/MPVolumeView), to provide the interface to adjust the system volume.",
+      "ko": "앱에서 [`MPVolumeView`](https://developer.apple.com/documentation/MediaPlayer/MPVolumeView)를 사용해 시스템 볼륨을 조정할 수 있는 인터페이스를 제공하려면 볼륨 제어를 추가해야 합니다.",
+      "sourceHash": "2d42669bb3c96f422369d747bcb7ca8730c58c2829835b5952e01ca8d9a2a270",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "You can observe changes to the value of this property by using [`Key-value observing`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/KVO.html#//apple_ref/doc/uid/TP40008195-CH16).",
+      "ko": "[`Key-value observing`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/KVO.html#//apple_ref/doc/uid/TP40008195-CH16)을 사용해 이 속성 값의 변경을 관찰할 수 있습니다.",
+      "sourceHash": "47da5a83da773d962520c3e46021bc316b71ae5cdc03f5147ad85efb7db525db",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:discussion:0011:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/outputvolume)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/outputvolume)*",
+      "sourceHash": "a81aa37f1003a8d7c35e92668065caaf2772033676a413ad6f18e4e6d5703a85",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "docId": "documentation/AVFoundation/selecting-subtitles-and-alternative-audio-tracks.md",
+  "title": "Selecting subtitles and alternative audio tracks",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/selecting-subtitles-and-alternative-audio-tracks",
+  "segments": [
+    {
+      "id": "seg:heading:selecting-subtitles-and-alternative-audio-tracks:0000:0001",
+      "source": "Selecting subtitles and alternative audio tracks",
+      "ko": "자막 및 대체 오디오 트랙 선택",
+      "sourceHash": "1b2eca8f0fa1f2cb1e1ccc4d54082e24aaae90cedc5339b9e654fda09ddf0ad6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:selecting-subtitles-and-alternative-audio-tracks:0001:0001",
+      "source": "**Framework**: AVFoundation",
+      "ko": "**Framework**: AVFoundation",
+      "sourceHash": "d1a1a81bcb090684ac27d86fff88465af08239993e5a6442a93dc76635a7ffc2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:selecting-subtitles-and-alternative-audio-tracks:0002:0001",
+      "source": "Extend your app’s appeal to users by adding subtitles and alternative audio tracks in their native language.",
+      "ko": "원어민 언어로 자막과 대체 오디오 트랙을 추가해 앱의 도달 범위를 넓일 수 있습니다.",
+      "sourceHash": "5def49b60778f0db5b7ee12b43369e38f41441ac7fd1318c99874c17aeb44dee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "As a developer, you want to make your apps accessible to as broad an audience as possible.",
+      "ko": "개발자로서 앱을 가능한 한 넓은 사용자에게 접근 가능하게 만들고자 합니다.",
+      "sourceHash": "0171ff0930e64def34489ce3285aba017f4bd9951bbbd718e3b52a7f81bc10ab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "One way for you to extend your app’s reach is to make it available to users in their native language as well as to provide support for users who have have hearing impairments or other accessibility needs.",
+      "ko": "앱의 도달 범위를 넓히는 한 방법은 사용자에게 모국어로 제공하고, 청각 장애나 기타 접근성 요구가 있는 사용자를 지원하는 것입니다.",
+      "sourceHash": "c64ae2194155a949d3531e1d7b71ccb8a1a9b2da7d9d1fa560521cf11f60bd1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0003",
+      "source": "AVKit and AVFoundation simplify handling these concerns by providing built-in support for presenting subtitles and closed captions, and for selecting alternative audio and video tracks.",
+      "ko": "AVKit 및 AVFoundation은 자막 및 폐쇄 캡션 표시와 대체 오디오 및 비디오 트랙 선택을 위한 기본 제공 지원을 제공하여 이러한 문제를 간단하게 처리할 수 있게 합니다.",
+      "sourceHash": "4aa5ffdc9d2b451a6f2bcaceefb086775aa60f56505c797a96b93b32f0dbcbe0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0004",
+      "source": "If you’re building your own custom player or would like to present your own media-selection interface, use the features provided by AVFoundation’s [`AVMediaSelectionGroup`](avmediaselectiongroup.md) and [`AVMediaSelectionOption`](avmediaselectionoption.md) classes.",
+      "ko": "직접 사용자 지정 플레이어를 구축하거나 자체 미디어 선택 인터페이스를 표시하려는 경우 AVFoundation의 [`AVMediaSelectionGroup`](avmediaselectiongroup.md) 및 [`AVMediaSelectionOption`](avmediaselectionoption.md) 클래스가 제공하는 기능을 사용합니다.",
+      "sourceHash": "0083cf338fc373177a1b5754b53950bb0627d76be0dd5784fe0087a14fbab94e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:retrieve-the-available-media-options:0005:0001",
+      "source": "Retrieve the Available Media Options",
+      "ko": "사용 가능한 미디어 옵션 검색",
+      "sourceHash": "bab1a4f772f24617fbed2e305ffdc21ca8abe734d58b9abdac2d9225f0a01a2d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:retrieve-the-available-media-options:0006:0001",
+      "source": "`AVMediaSelectionOption` models an alternative audio, video, or text track contained within the source media.",
+      "ko": "`AVMediaSelectionOption`은(는) 소스 미디어에 포함된 대체 오디오, 비디오 또는 텍스트 트랙을 모델링합니다.",
+      "sourceHash": "4cfa684f8071a6967d5c68219289dacafd3eb5d081d7b70c4a8ad07c4229f6ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:retrieve-the-available-media-options:0006:0002",
+      "source": "Media options are used to select alternative camera angles, present audio dubbed in a user’s native language, or display subtitles and closed captions.",
+      "ko": "미디어 옵션은 대체 카메라 각도 선택, 사용자 모국어로 더빙한 오디오 제공, 자막 및 폐쇄 캡션 표시에 사용됩니다.",
+      "sourceHash": "33c868096152c7b705361679c05a7640c0a77e72fac64529302ce95e20ca5fae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:retrieve-the-available-media-options:0006:0003",
+      "source": "You determine which alternative media presentations are available by asynchronously loading and calling the asset’s [`availableMediaCharacteristicsWithMediaSelectionOptions`](avasset/availablemediacharacteristicswithmediaselectionoptions.md) property, which returns an array of strings indicating the available media characteristics.",
+      "ko": "에셋의 사용 가능한 미디어 표현은 에셋의 [`availableMediaCharacteristicsWithMediaSelectionOptions`](avasset/availablemediacharacteristicswithmediaselectionoptions.md) 속성을 비동기식으로 로드하고 호출하면 확인할 수 있으며, 이 속성은 사용 가능한 미디어 특성을 나타내는 문자열 배열을 반환합니다.",
+      "sourceHash": "303cb8ba57f95e396b1b3d828c65c7b6ef7e7000f04943b630405ee5c21ba5eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:retrieve-the-available-media-options:0006:0004",
+      "source": "The possible values returned are [`audible`](avmediacharacteristic/audible.md) (alternative audio tracks), [`visual`](avmediacharacteristic/visual.md) (alternative video tracks), and [`legible`](avmediacharacteristic/legible.md) (subtitles and closed captions).",
+      "ko": "반환되는 가능한 값은 [`audible`](avmediacharacteristic/audible.md)(대체 오디오 트랙), [`visual`](avmediacharacteristic/visual.md)(대체 비디오 트랙), [`legible`](avmediacharacteristic/legible.md)(자막 및 폐쇄 캡션)입니다.",
+      "sourceHash": "b452919fe32b1005c7d1a96d35e655c8c6ac31c7f568b95928a32c042e865491",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:retrieve-the-available-media-options:0007:0001",
+      "source": "After you’ve retrieved the array of available options, you call the asset’s [`mediaSelectionGroup(forMediaCharacteristic:)`](avasset/mediaselectiongroup(formediacharacteristic:).md) method, passing it the desired characteristic.",
+      "ko": "사용 가능한 옵션 배열을 검색한 후 에셋의 [`mediaSelectionGroup(forMediaCharacteristic:)`](avasset/mediaselectiongroup(formediacharacteristic:).md) 메서드를 호출해 원하는 특성을 전달합니다.",
+      "sourceHash": "f2782e463a4ab1e1ee125b465294b8edf3fdb08fdd691caa73b9d226c4cbfe76",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:retrieve-the-available-media-options:0007:0002",
+      "source": "This method returns the associated `AVMediaSelectionGroup` object, or `nil` if no groups exist for the specified characteristic.",
+      "ko": "이 메서드는 해당 `AVMediaSelectionGroup` 객체를 반환하며, 지정한 특성에 대한 그룹이 없으면 `nil`을 반환합니다.",
+      "sourceHash": "3e5761a48e444ace6ac1690ac684da08ad33fc2df9accd05bd38792717675354",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:retrieve-the-available-media-options:0008:0001",
+      "source": "`AVMediaSelectionGroup` acts as a container for a collection of mutually exclusive `AVMediaSelectionOption` objects.",
+      "ko": "`AVMediaSelectionGroup`은 서로 배타적인 `AVMediaSelectionOption` 객체 집합의 컨테이너 역할을 합니다.",
+      "sourceHash": "f3d331bee28a07b83a71267d5b45b304b93c30b12114c4f9e86e66c6b7dc31cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:retrieve-the-available-media-options:0008:0002",
+      "source": "The following example shows how you retrieve an asset’s media-selection groups and display their available options:",
+      "ko": "다음 예제는 에셋의 미디어 선택 그룹을 검색하고 사용 가능한 옵션을 표시하는 방법을 보여줍니다.",
+      "sourceHash": "f44a4a8419cb21bcdfc16263fecd23dc47bd8b5f7e2b536ef89988512fd3e5b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:retrieve-the-available-media-options:0009:0001",
+      "source": "```swift\nfor characteristic in asset.availableMediaCharacteristicsWithMediaSelectionOptions {\n    print(\"\\(characteristic)\")\n\n    // Retrieve the AVMediaSelectionGroup for the specified characteristic.\n    if let group = asset.mediaSelectionGroup(forMediaCharacteristic: characteristic) {\n        // Print its options.\n        for option in group.options {\n            print(\"  Option: \\(option.displayName)\")\n        }\n    }\n}\n```",
+      "ko": "```swift\nfor characteristic in asset.availableMediaCharacteristicsWithMediaSelectionOptions {\n    print(\"\\(characteristic)\")\n\n    // Retrieve the AVMediaSelectionGroup for the specified characteristic.\n    if let group = asset.mediaSelectionGroup(forMediaCharacteristic: characteristic) {\n        // Print its options.\n        for option in group.options {\n            print(\"  Option: \\(option.displayName)\")\n        }\n    }\n}\n```",
+      "sourceHash": "99a12c517d4a54acc7acfd8f69517c4d9239debd398318857f82920cc7e2185c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:retrieve-the-available-media-options:0010:0001",
+      "source": "The output for an asset containing audio and subtitle media options looks similar to the following:",
+      "ko": "오디오와 자막 미디어 옵션이 포함된 에셋의 출력은 다음과 유사합니다.",
+      "sourceHash": "a4df24e9d442f2dcb9100af9fe81d3e53d8f2acdf353e2cb2872d9225611f11d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:retrieve-the-available-media-options:0011:0001",
+      "source": "```swift\n[AVMediaCharacteristicAudible]\n  Option: English\n  Option: Spanish\n\n[AVMediaCharacteristicLegible]\n  Option: English\n  Option: German\n  Option: Spanish\n  Option: French\n```",
+      "ko": "```swift\n[AVMediaCharacteristicAudible]\n  Option: English\n  Option: Spanish\n\n[AVMediaCharacteristicLegible]\n  Option: English\n  Option: German\n  Option: Spanish\n  Option: French\n```",
+      "sourceHash": "0019e0c3cc207e60487b7d195d56cf6ef5762eaa707bb1fd667e5697e83c1066",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:select-the-desired-media-option:0012:0001",
+      "source": "Select the Desired Media Option",
+      "ko": "원하는 미디어 옵션 선택",
+      "sourceHash": "2aaf8166fbfa5091841f5c14ee93d004af56568077a3810d2d1082307cc56f60",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-the-desired-media-option:0013:0001",
+      "source": "After you’ve retrieved an `AVMediaSelectionGroup` object for a particular media characteristic and identified the desired `AVMediaSelectionOption` object, the next step is to select it.",
+      "ko": "특정 미디어 특성에 대한 `AVMediaSelectionGroup` 객체를 검색하고 원하는 `AVMediaSelectionOption` 객체를 확인한 후 다음 단계는 해당 옵션을 선택하는 것입니다.",
+      "sourceHash": "f2cfbc4494a2d7853f0b8525df6b8c5b5c88bd372d5a6648b7eac674025671ee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-the-desired-media-option:0013:0002",
+      "source": "You select a media option by calling [`select(_:in:)`](avplayeritem/select(_:in:).md) on the active [`AVPlayerItem`](avplayeritem.md).",
+      "ko": "활성 [`AVPlayerItem`](avplayeritem.md)에서 [`select(_:in:)`](avplayeritem/select(_:in:).md) 메서드를 호출해 미디어 옵션을 선택합니다.",
+      "sourceHash": "16d123fdb4f7ff446c9f41ae264ec67249e60e5a0088c27cbd7a5d21289e2a7d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-the-desired-media-option:0013:0003",
+      "source": "For instance, to present the asset’s Spanish subtitle option, you could select it as follows:",
+      "ko": "예를 들어 에셋의 스페인어 자막 옵션을 표시하려면 다음과 같이 선택할 수 있습니다.",
+      "sourceHash": "3d34d6159e1846ebd5c3beb6669b9b940c3f8d8a5ab8532f5e99520b9578aa4a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:select-the-desired-media-option:0014:0001",
+      "source": "```swift\nif let group = asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible) {\n    let locale = Locale(identifier: \"es-ES\")\n    let options =\n        AVMediaSelectionGroup.mediaSelectionOptions(from: group.options, with: locale)\n    if let option = options.first {\n        // Select Spanish-language subtitle option\n        playerItem.select(option, in: group)\n    }\n}\n```",
+      "ko": "```swift\nif let group = asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible) {\n    let locale = Locale(identifier: \"es-ES\")\n    let options =\n        AVMediaSelectionGroup.mediaSelectionOptions(from: group.options, with: locale)\n    if let option = options.first {\n        // Select Spanish-language subtitle option\n        playerItem.select(option, in: group)\n    }\n}\n```",
+      "sourceHash": "d6aecc51e35be8b8eab5d1698e46409bf06a8814d6f71788eb7c1a16c417a92d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:select-the-desired-media-option:0015:0001",
+      "source": "Selecting a media option makes it immediately available for presentation.",
+      "ko": "미디어 옵션을 선택하면 즉시 표시할 수 있게 됩니다.",
+      "sourceHash": "b155130709caee1fa0e82db925f7cc3d51018c21071ad097ed6a9bc4aec024b1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-the-desired-media-option:0015:0002",
+      "source": "Selecting a subtitle or closed-caption option displays the associated text within the video display provided by [`AVPlayerViewController`](https://developer.apple.com/documentation/AVKit/AVPlayerViewController), [`AVPlayerView`](https://developer.apple.com/documentation/AVKit/AVPlayerView), and [`AVPlayerLayer`](avplayerlayer.md).",
+      "ko": "자막 또는 폐쇄 캡션 옵션을 선택하면 [`AVPlayerViewController`](https://developer.apple.com/documentation/AVKit/AVPlayerViewController), [`AVPlayerView`](https://developer.apple.com/documentation/AVKit/AVPlayerView), [`AVPlayerLayer`](avplayerlayer.md)가 제공하는 비디오 화면에 관련 텍스트가 표시됩니다.",
+      "sourceHash": "8bedfd60b08720ee2ae8c57b498f7f1b1759e0c9328240c96402a2cfa66a5320",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-the-desired-media-option:0015:0003",
+      "source": "Selecting an alternative audio or video option replaces the currently presented media with the new selection’s media.",
+      "ko": "Selecting an alternative audio or video option replaces the currently presented media with the new selection’s media.",
+      "sourceHash": "2778b68b2a776b5eaf35a384b141a41b60cf0d63ac2700a6e29116fb5a043797",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:select-the-desired-media-option:0016:0001",
+      "source": "[`AVPlayer`](avplayer.md) automatically selects media based on the user’s system preferences as its default behavior.",
+      "ko": "[`AVPlayer`](avplayer.md) automatically selects media based on the user’s system preferences as its default behavior.",
+      "sourceHash": "20b2555c916f3d4ebd0ec93ebed23594813a751a21a1d9681ba572c9b11c0cb9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:select-the-desired-media-option:0016:0002",
+      "source": "To take control over when it makes media selections, disable the default behavior by setting the player’s [`appliesMediaSelectionCriteriaAutomatically`](avplayer/appliesmediaselectioncriteriaautomatically.md) value to [`false`](https://developer.apple.com/documentation/Swift/false).",
+      "ko": "To take control over when it makes media selections, disable the default behavior by setting the player’s [`appliesMediaSelectionCriteriaAutomatically`](avplayer/appliesmediaselectioncriteriaautomatically.md) value to [`false`](https://developer.apple.com/documentation/Swift/false).",
+      "sourceHash": "83aa1b05c571469b669e0989c279d3543c61f85f3e1de4c5c54ca47222f30bff",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0017:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[class AVMediaSelection](avmediaselection.md)",
+      "ko": "[class AVMediaSelection](avmediaselection.md)",
+      "sourceHash": "7f6c94b272dcf48328ddda5b1f3d08d6ce522bc339526e5ad4cbb0ee66094bae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "An object that represents a complete rendition of media selection options on an asset.",
+      "ko": "An object that represents a complete rendition of media selection options on an asset.",
+      "sourceHash": "3c6a925e16ef22adfbea4257c96d25720d360f16e86608c37eabf11c96bd8a87",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[class AVMediaSelectionGroup](avmediaselectiongroup.md)",
+      "ko": "[class AVMediaSelectionGroup](avmediaselectiongroup.md)",
+      "sourceHash": "15e642255bc12c95d16809e298d1e7904b1c496104dff6ccca5c9a46e1497d36",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "An object that represents a collection of mutually exclusive options for the presentation of media within an asset.",
+      "ko": "An object that represents a collection of mutually exclusive options for the presentation of media within an asset.",
+      "sourceHash": "286e98077068fff753ac0c3fc81f903ad06ec7d8c0da0afa1e41754e3e2154f4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[class AVMediaSelectionOption](avmediaselectionoption.md)",
+      "ko": "[class AVMediaSelectionOption](avmediaselectionoption.md)",
+      "sourceHash": "fe2117d5df6c64cab2053f9eea82f196b01e2d15dd1e39583430dbb5d858bfa7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "An object that represents a specific option for the presentation of media within a group of options.",
+      "ko": "An object that represents a specific option for the presentation of media within a group of options.",
+      "sourceHash": "441b4e28ae3d747ec77ae63a31122a73c6a6dca15c16dba4f48fc54662f2b893",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[class AVMutableMediaSelection](avmutablemediaselection.md)",
+      "ko": "[class AVMutableMediaSelection](avmutablemediaselection.md)",
+      "sourceHash": "35fffa089d42ca56cb52b675e5da556509f528d5bdb521a3a259b692bc29ace0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "A mutable object that represents a complete rendition of media selection options on an asset.",
+      "ko": "A mutable object that represents a complete rendition of media selection options on an asset.",
+      "sourceHash": "e98a4d339776c1ee361c367823c5acacab9f2ffd8831d8f406603be98f19e3db",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[class AVPlayerMediaSelectionCriteria](avplayermediaselectioncriteria.md)",
+      "ko": "[class AVPlayerMediaSelectionCriteria](avplayermediaselectioncriteria.md)",
+      "sourceHash": "0fbc3e0a8e96fef294d04965b94c3126b2f560417d3411dbaf53b3d187f54e41",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "An object that specifies the preferred languages and media characteristics for a player.",
+      "ko": "An object that specifies the preferred languages and media characteristics for a player.",
+      "sourceHash": "b99562667a61c04dd1a15bde09bcf50e3851f74b3a5d72ba3794dcc391727b5e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[class AVCustomMediaSelectionScheme](avcustommediaselectionscheme.md)",
+      "ko": "[class AVCustomMediaSelectionScheme](avcustommediaselectionscheme.md)",
+      "sourceHash": "193ec6d4e80f9cc34f2df20e8ce63ff604ca5ea2c7e956acae922da17face1af",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "For content that has been authored with the express intent of offering an alternative selection interface for AVMediaSelectionOptions, AVCustomMediaSelectionScheme provides a collection of custom settings for controlling the presentation of the media.",
+      "ko": "For content that has been authored with the express intent of offering an alternative selection interface for AVMediaSelectionOptions, AVCustomMediaSelectionScheme provides a collection of custom settings for controlling the presentation of the media.",
+      "sourceHash": "0eeedc1d85a8ea494e1352a97250787c2a77040f905ccaaf00e438d559dd9b30",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[class AVMediaPresentationSelector](avmediapresentationselector.md)",
+      "ko": "[class AVMediaPresentationSelector](avmediapresentationselector.md)",
+      "sourceHash": "e29a7f8342d8b188b2ffed342bdbfa925d9f7a867f179f513d1adbb43972bef8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "For content that has been authored with the express intent of offering an alternative selection interface for AVMediaSelectionOptions, AVMediaPresentationSelector represents a collection of mutually exclusive settings.",
+      "ko": "For content that has been authored with the express intent of offering an alternative selection interface for AVMediaSelectionOptions, AVMediaPresentationSelector represents a collection of mutually exclusive settings.",
+      "sourceHash": "1a13d48163027c8b4f70b8d5fdf0b83826ab078e41c4e9f89e69656abbdf607f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[class AVMediaPresentationSetting](avmediapresentationsetting.md)",
+      "ko": "[class AVMediaPresentationSetting](avmediapresentationsetting.md)",
+      "sourceHash": "8250db148a1d3b5b8d591ee9fd13ec3540fd4157f18a6a318047e035d7fe970c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "For content that has been authored with the express intent of offering an alternative selection interface for AVMediaSelectionOptions, AVMediaPresentationSetting represents a selectable setting for controlling the presentation of the media.",
+      "ko": "For content that has been authored with the express intent of offering an alternative selection interface for AVMediaSelectionOptions, AVMediaPresentationSetting represents a selectable setting for controlling the presentation of the media.",
+      "sourceHash": "1f92204a86dc5c3dd4980e32184430ca116ab7d11817494a2fc21da69c4be7d0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0034:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/selecting-subtitles-and-alternative-audio-tracks)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/selecting-subtitles-and-alternative-audio-tracks)*",
+      "sourceHash": "1645f8c39572a547ec0460a4122f127d8938434e559a204f640c9e8184d70b78",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "docId": "documentation/AVFAudio/avaudiounittimeeffect.md",
+  "title": "AVAudioUnitTimeEffect",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiounittimeeffect",
+  "segments": [
+    {
+      "id": "seg:heading:avaudiounittimeeffect:0000:0001",
+      "source": "AVAudioUnitTimeEffect",
+      "ko": "AVAudioUnitTimeEffect",
+      "sourceHash": "95aaeef3a0d1709bb07df6d0dbca633dd76294670bc4ceb3f48ee8a6e5f86247",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiounittimeeffect:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiounittimeeffect:0002:0001",
+      "source": "An object that processes audio in nonreal time.",
+      "ko": "실시간이 아닌(non-real-time) 오디오를 처리하는 개체입니다.",
+      "sourceHash": "318bdf018fefe79b3bbc549882c91ccb980789da3a7b7a9c7a661ceffc759768",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudiounittimeeffect:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounittimeeffect:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounittimeeffect:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounittimeeffect:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounittimeeffect:0004:0004",
+      "source": "macOS 10.10+",
+      "ko": "macOS 10.10+",
+      "sourceHash": "928cfc2e204a2d523c05071eb21f65479a96f581dc23a43fa1848eecc5216dcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounittimeeffect:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounittimeeffect:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAudioUnitTimeEffect\n```",
+      "ko": "```swift\nclass AVAudioUnitTimeEffect\n```",
+      "sourceHash": "59534b529d4ddefcee5ef78cbaea1369abe21bc92cc418cb2fe8d75986d652a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "A time effect audio unit represents an [`AVAudioUnit`](avaudiounit.md) with a type `kAudioUnitType_FormatConverter` (`aufc)`.",
+      "ko": "You can download HTTP Live Streaming assets to an iOS device using the [`AVAssetDownloadURLSession`](avassetdownloadurlsession.md) and [`AVAssetDownloadTask`](avassetdownloadtask.md) classes.",
+      "sourceHash": "641750acf61589065f0fba68fe05e580734ebad44a7936b497761b40a8fb976e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "These effects don’t process audio in real time.",
+      "ko": "이러한 효과는 실시간으로 오디오를 처리하지 않습니다.",
+      "sourceHash": "f32296ddc489281b47577f16419a60c2ef7bcdaffaa1c2446ae2d9a4825e281e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0003",
+      "source": "The [`AVAudioUnitVarispeed`](avaudiounitvarispeed.md) class is an example of a time effect unit.",
+      "ko": "[`AVAudioUnitVarispeed`](avaudiounitvarispeed.md) 클래스는 time effect 유닛의 예입니다.",
+      "sourceHash": "f65a9ea415cef9de03bc0e26aae04bfc4587e29676d112bfe7acfb5e80294052",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-time-effect:0010:0001",
+      "source": "Creating a time effect",
+      "ko": "시간 효과 생성하기",
+      "sourceHash": "dbf25f3f33d96359791f160769fa0d75437d24d284e6f7e3c62d6ddf4962f98c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-time-effect:0011:0001",
+      "source": "[init(audioComponentDescription: AudioComponentDescription)](avaudiounittimeeffect/init(audiocomponentdescription:).md)",
+      "ko": "[`init(audioComponentDescription: AudioComponentDescription)`](avaudiounittimeeffect/init(audiocomponentdescription:).md)",
+      "sourceHash": "fbcc9778b9c8ece1795be3651443dc95d40cbdcb0c0c4c123d0db7d9a5b0dc38",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-time-effect:0012:0001",
+      "source": "Creates a time effect audio unit with the specified description.",
+      "ko": "지정된 설명을 사용해 time effect 오디오 유닛을 생성합니다.",
+      "sourceHash": "7e58dfa815188cce5b8447183f171ed3f5477f95fb253b24c005399cd2b9511c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-and-setting-the-time-effect:0013:0001",
+      "source": "Getting and setting the time effect",
+      "ko": "시간 효과 가져오기 및 설정하기",
+      "sourceHash": "5f3d3aaebd116a950c3b08af0687904e929b89d72f90b61865d1bc7957f21e23",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-and-setting-the-time-effect:0014:0001",
+      "source": "[var bypass: Bool](avaudiounittimeeffect/bypass.md)",
+      "ko": "[var bypass: Bool](avaudiounittimeeffect/bypass.md)",
+      "sourceHash": "06f7a06d8b24ee41f6ec913b6958349df055d13493dca998d8157f4aa7b0a28f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-and-setting-the-time-effect:0015:0001",
+      "source": "The bypass state of the audio unit.",
+      "ko": "오디오 유닛의 bypass 상태입니다.",
+      "sourceHash": "dce8007c29a120f57c9cc09963e013b34761d06b3456c857638595aaf3f35536",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0016:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0017:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0018:0001",
+      "source": "[AVAudioUnit](avaudiounit.md)",
+      "ko": "[AVAudioUnit](avaudiounit.md)",
+      "sourceHash": "36574dc49ccbafe3c2a04d50589c6848c8f20b7480774eff8cdd2b9dbae0742d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherited-by:0019:0001",
+      "source": "Inherited By",
+      "ko": "상속 받는 항목",
+      "sourceHash": "42035a6fba4e21843f669d8b7e1e57fb192087a3ae79a1ddf62cfa85090744bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherited-by:0020:0001",
+      "source": "[AVAudioUnitTimePitch](avaudiounittimepitch.md)",
+      "ko": "[AVAudioUnitTimePitch](avaudiounittimepitch.md)",
+      "sourceHash": "75277772b97a0a69f194bbf28fb54d58337885bcd2a67842d327b2a3ba90e62d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherited-by:0020:0002",
+      "source": "[AVAudioUnitVarispeed](avaudiounitvarispeed.md)",
+      "ko": "[AVAudioUnitVarispeed](avaudiounitvarispeed.md)",
+      "sourceHash": "35cde3b8bce92fe59fc8d32629aab1d1c1afe74889f2ed0342acc73799554c14",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0021:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0023:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[class AVAudioUnitTimePitch](avaudiounittimepitch.md)",
+      "ko": "[class AVAudioUnitTimePitch](avaudiounittimepitch.md)",
+      "sourceHash": "1f5c8ef5c52fbc8f262bc75edcb311a167b5d5a7e92c8e32364fc2e483f9cd24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "An object that provides a good-quality playback rate and pitch shifting independently of each other.",
+      "ko": "재생 속도와 피치 시프트를 서로 독립적으로 고품질로 제공하는 개체입니다.",
+      "sourceHash": "f671fa1be423c8cd77778ddd6d09372e560547f0ccd67a72920bf0cf09f1ffe0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[class AVAudioUnitVarispeed](avaudiounitvarispeed.md)",
+      "ko": "[class AVAudioUnitVarispeed](avaudiounitvarispeed.md)",
+      "sourceHash": "fb60e03f72ad89ab3fa174b12bc1e740d10a1e2991046daed9e91b5c6a37d2bb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "An object that allows control of the playback rate.",
+      "ko": "재생 속도를 제어할 수 있는 개체입니다.",
+      "sourceHash": "fb602219289137effa108e583bdf03558b85d20dcfcd6d85e9a997c07ec67d8f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0028:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiounittimeeffect)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiounittimeeffect)*",
+      "sourceHash": "6a72df9246b09c75936071a9b0b8baf23015c569914948d6255e3e9d2fcdf165",
+      "status": "preserved"
+    }
+  ]
+}

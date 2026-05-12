@@ -1,0 +1,183 @@
+{
+  "docId": "documentation/AVFoundation/avassetresourceloaderdelegate/resourceloader-didcancel-3nl51.md",
+  "title": "resourceLoader(:didCancel:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetresourceloaderdelegate/resourceloader-didcancel-3nl51",
+  "segments": [
+    {
+      "id": "seg:heading:resourceloaderdidcancel:0000:0001",
+      "source": "resourceLoader(_:didCancel:)",
+      "ko": "resourceLoader(_:didCancel:)",
+      "sourceHash": "1e7b1bcac639007fae5eb9d919bfe5c41bf9059f76c50db62fd22e5dba06e4a2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:resourceloaderdidcancel:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:resourceloaderdidcancel:0002:0001",
+      "source": "Informs the delegate that a prior loading request has been cancelled.",
+      "ko": "대리자에게 이전 로드 요청이 취소되었음을 알립니다.",
+      "sourceHash": "88fdc7cd2814d55f6e1d45b4192a29612f7f5bedc07507d675d5a8f4bab783e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:resourceloaderdidcancel:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resourceloaderdidcancel:0004:0001",
+      "source": "iOS 7.0+",
+      "ko": "iOS 7.0+",
+      "sourceHash": "1ceb179e72300483bbe4de83f94fa14777f1aa4ad49f5b26a004a90764f51fe7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resourceloaderdidcancel:0004:0002",
+      "source": "iPadOS 7.0+",
+      "ko": "iPadOS 7.0+",
+      "sourceHash": "1f72093de273c2b8a1b0f4acad220b3881241f056b2b2168b48b64219a2708c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resourceloaderdidcancel:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resourceloaderdidcancel:0004:0004",
+      "source": "macOS 10.9+",
+      "ko": "macOS 10.9+",
+      "sourceHash": "ea7fd68a1169efd58a43f910e0a50ba2367a86a9bb7ffee8a512f04ee4f12758",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resourceloaderdidcancel:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resourceloaderdidcancel:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\noptional func resourceLoader(_ resourceLoader: AVAssetResourceLoader, didCancel loadingRequest: AVAssetResourceLoadingRequest)\n```",
+      "ko": "```swift\noptional func resourceLoader(_ resourceLoader: AVAssetResourceLoader, didCancel loadingRequest: AVAssetResourceLoadingRequest)\n```",
+      "sourceHash": "de1769e1b0020ec6502a5babf2bbb0e46e4ac89bff6f313485f4d052bfcad277",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Previously issued loading requests can be cancelled when data from the resource is no longer required or when a loading request is superseded by new requests for data from the same resource.",
+      "ko": "리소스의 데이터가 더 이상 필요하지 않거나, 동일한 리소스의 새 데이터 요청으로 인해 이전 로드 요청이 대체되는 경우 이전에 발급된 로드 요청이 취소될 수 있습니다.",
+      "sourceHash": "2f2ef315de40e0371b3edca059bda2268f06d2cceed46396b0c8fd45f7b65d6e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "For example, if to complete a seek operation it becomes necessary to load a range of bytes that’s different from a range previously requested, the prior request may be cancelled while the delegate is still handling it.",
+      "ko": "The example below shows how to reverse synchronize the output timestamps to the original timestamps in the [`captureOutput(_:didOutput:from:)`](avcapturevideodataoutputsamplebufferdelegate/captureoutput(_:didoutput:from:).md) method:",
+      "sourceHash": "c45157d45a09ec9684cb836a0b8d3957386a341268f12f80b63e44bbc8bb56bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`resourceLoader`: The resource loader.",
+      "ko": "`resourceLoader`: 리소스 로더입니다.",
+      "sourceHash": "e4b003d32fb4f74e00f57bfac8b4de8dfaf8a41123ca017072801103e94532cf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0002",
+      "source": "`loadingRequest`: The loading request that has been cancelled.",
+      "ko": "`loadingRequest`: 취소된 로드 요청입니다.",
+      "sourceHash": "a7a4b6a0b8e97b663beefa8929676c03e18a2463d9a136c0c157b721703daa5d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func resourceLoader(AVAssetResourceLoader, shouldWaitForLoadingOfRequestedResource: AVAssetResourceLoadingRequest) -> Bool](avassetresourceloaderdelegate/resourceloader(_:shouldwaitforloadingofrequestedresource:).md)",
+      "ko": "[func resourceLoader(AVAssetResourceLoader, shouldWaitForLoadingOfRequestedResource: AVAssetResourceLoadingRequest) -> Bool](avassetresourceloaderdelegate/resourceloader(_:shouldwaitforloadingofrequestedresource:).md)",
+      "sourceHash": "0008a548aaf5ac542cc9dc9470d72263bdb5d911980522110574019f744d17b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Asks the delegate if it wants to load the requested resource.",
+      "ko": "대리자가 요청한 리소스를 로드할지 여부를 묻습니다.",
+      "sourceHash": "e04d9c10e913beb33c17325a2d554277e9e0f5e50ea1594541c6bf8a47f057e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func resourceLoader(AVAssetResourceLoader, shouldWaitForRenewalOfRequestedResource: AVAssetResourceRenewalRequest) -> Bool](avassetresourceloaderdelegate/resourceloader(_:shouldwaitforrenewalofrequestedresource:).md)",
+      "ko": "[func resourceLoader(AVAssetResourceLoader, shouldWaitForRenewalOfRequestedResource: AVAssetResourceRenewalRequest) -> Bool](avassetresourceloaderdelegate/resourceloader(_:shouldwaitforrenewalofrequestedresource:).md)",
+      "sourceHash": "68d7fd5bc2dd13c4236ef80697e1deb29217284d226df129516213b8bb2b8a81",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Tells the delegate when assistance is required of the application to renew a resource.",
+      "ko": "애플리케이션이 리소스를 갱신하기 위해 도움을 요청할 때 대리자에게 알립니다.",
+      "sourceHash": "163ebcc031c31745d867e91cc5d5848b6532a58c968bd1f96706dc7af8d68bc6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0017:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetresourceloaderdelegate/resourceloader(_:didcancel:)-3nl51)*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avassetresourceloaderdelegate/resourceloader(_:didcancel:)-3nl51)*",
+      "sourceHash": "68e20e10059df7c374ce7e861f9e702afd5769b728a381e2ce92158ca7fde688",
+      "status": "machine_translated"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "docId": "documentation/ARKit/arsession/getgeolocation-forpointcompletionhandler.md",
+  "title": "getGeoLocation(forPoint:completionHandler:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arsession/getgeolocation-forpointcompletionhandler",
+  "segments": [
+    {
+      "id": "seg:heading:getgeolocationforpointcompletionhandler:0000:0001",
+      "source": "getGeoLocation(forPoint:completionHandler:)",
+      "ko": "getGeoLocation(forPoint:completionHandler:)",
+      "sourceHash": "f93032985b0ae86bc58acbeece655224811ee61bae0c71893f5a77c20d4831cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:getgeolocationforpointcompletionhandler:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: method",
+      "ko": "**Framework**: ARKit **Kind**: method",
+      "sourceHash": "9b335dd0cadec1f426ce27810957dcda749fe1d5008130ce607d61fcd8b52bea",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getgeolocationforpointcompletionhandler:0002:0001",
+      "source": "Converts a position in the framework’s local coordinate system to latitude, longitude and altitude.",
+      "ko": "프레임워크의 로컬 좌표계를 위도, 경도 및 고도로 변환합니다.",
+      "sourceHash": "7e8933ec8c9c1fb4313afdb0fffef993dd1f25d460a57a69e3419e7a508049ef",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:getgeolocationforpointcompletionhandler:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:getgeolocationforpointcompletionhandler:0004:0001",
+      "source": "iOS 14.0+",
+      "ko": "iOS 14.0+",
+      "sourceHash": "a09fb717eefa07878cab396c9697a744dfc726f6a8a77c093ef12e8124ffd90b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:getgeolocationforpointcompletionhandler:0004:0002",
+      "source": "iPadOS 14.0+",
+      "ko": "iPadOS 14.0+",
+      "sourceHash": "3bd5f9207436aaf3fd80bdb95d64d5d280ff80afc32e998b4c7ef682ec2802e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:getgeolocationforpointcompletionhandler:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc geoLocation(forPoint position: simd_float3) async throws -> (CLLocationCoordinate2D, CLLocationDistance)\n```",
+      "ko": "```swift\nfunc geoLocation(forPoint position: simd_float3) async throws -> (CLLocationCoordinate2D, CLLocationDistance)\n```",
+      "sourceHash": "a6acaa3d0b5b72e377d0cd8b28792b2e5aaf9dae8d89a45a501d7ac75d6b943e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "ARKit refers to its local coordinate space as “world” coordinate space, but this is different from geographic coordinates.",
+      "ko": "ARKit은 로컬 좌표 공간을 “world” 좌표 공간이라고 부르지만, 이는 지리 좌표와 다릅니다.",
+      "sourceHash": "ff1fa67758559c2f5b3095683049523a394b5f60cf2c6763417b08f639e876c8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "For more information on ARKit’s coordinate space, see [`setWorldOrigin(relativeTransform:)`](arsession/setworldorigin(relativetransform:).md).",
+      "ko": "ARKit의 좌표 공간에 대한 자세한 내용은 [`setWorldOrigin(relativeTransform:)`](arsession/setworldorigin(relativetransform:).md)에서 확인합니다.",
+      "sourceHash": "d8ea2a11c0cc549e24b63bf98887cee4e3ced3e4398211c8fa7ce33402f0d8cf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "To succeed, this function requires an [`ARGeoTrackingConfiguration`](argeotrackingconfiguration.md) session with state equal to [`ARGeoTrackingStatus.State.localized`](argeotrackingstatus/state-swift.enum/localized.md).",
+      "ko": "이 함수를 성공적으로 실행하려면 상태가 [`ARGeoTrackingStatus.State.localized`](argeotrackingstatus/state-swift.enum/localized.md)인 [`ARGeoTrackingConfiguration`](argeotrackingconfiguration.md) 세션이 필요합니다.",
+      "sourceHash": "8d2717e9884c84adff1af1cc8450b8fdfdb4d3a812be3c0cd762c00060ee5310",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`position`: Position in local coordinates to convert.",
+      "ko": "`position`: 변환할 로컬 좌표의 위치입니다.",
+      "sourceHash": "2edab010a1de8f678e8613251e94f4dea9e58569d5ae5df8b8f63a6fa0d52709",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0002",
+      "source": "`completionHandler`: Code that control will execute when this function returns. The session runs this code on its delegate queue. The parameters are: - **coordinate**: Location coordinates (latitude, longitude).",
+      "ko": "`completionHandler`: 이 함수가 반환되면 컨트롤이 실행할 코드입니다. 세션은 이 코드를 delegate 큐에서 실행하며 매개변수는 다음과 같습니다: - **coordinate**: 위치 좌표(위도, 경도).",
+      "sourceHash": "bce6a2ca3643cfc3ed4a2c3a4f0730037c55feb82d12a53a6c16c67bbf095541",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0003",
+      "source": "**altitude**: The altitude.",
+      "ko": "**altitude**: 고도입니다.",
+      "sourceHash": "f1a4983e799c0214835ad9fa61af25e5d312b8a7cade917577fef106d332a91f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0004",
+      "source": "**error**: The reason, if conversion fails.",
+      "ko": "**error**: 변환이 실패할 경우 이유입니다.",
+      "sourceHash": "1ae5e4f74c2a76baf6ee7c6ad4f5c26046875810a2b5dc3cc0689c269df81cd1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:parameters:0012:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:parameters:0013:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arsession/getgeolocation(forpoint:completionhandler:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/arkit/arsession/getgeolocation(forpoint:completionhandler:))*",
+      "sourceHash": "a702a9a8c3e4f1c981d6e581e1d9e526cd5f50e2714b0cf4903db190d8c60d32",
+      "status": "machine_translated"
+    }
+  ]
+}

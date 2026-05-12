@@ -1,0 +1,218 @@
+{
+  "docId": "documentation/AVFoundation/avcapturefileoutputdelegate/fileoutput-didoutputsamplebufferfrom.md",
+  "title": "fileOutput(:didOutputSampleBuffer:from:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturefileoutputdelegate/fileoutput-didoutputsamplebufferfrom",
+  "segments": [
+    {
+      "id": "seg:heading:fileoutputdidoutputsamplebufferfrom:0000:0001",
+      "source": "fileOutput(_:didOutputSampleBuffer:from:)",
+      "ko": "fileOutput(_:didOutputSampleBuffer:from:)",
+      "sourceHash": "7568763b0c889539147e063847b57373471747e97f5b19adcc8b845f8098019e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:fileoutputdidoutputsamplebufferfrom:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:fileoutputdidoutputsamplebufferfrom:0002:0001",
+      "source": "Gives the delegate the opportunity to inspect samples as they are received by the output and start and stop recording at exact times.",
+      "ko": "이 메서드는 출력이 샘플을 수신하는 즉시 델리게이트가 샘플을 검사하고, 정확한 시점에 녹화를 시작하거나 중지할 수 있도록 합니다.",
+      "sourceHash": "c43561bc4a41d1103bd1b93de172771364404317489bb2c18c0f195a09be3164",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:fileoutputdidoutputsamplebufferfrom:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:fileoutputdidoutputsamplebufferfrom:0004:0001",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\noptional func fileOutput(_ output: AVCaptureFileOutput, didOutputSampleBuffer sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection)\n```",
+      "ko": "```swift\noptional func fileOutput(_ output: AVCaptureFileOutput, didOutputSampleBuffer sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection)\n```",
+      "sourceHash": "c736e3a2322bb561f60c702df15537fa5168013c8f14cdba0f0fbb4b8e3fbafc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This method is called whenever the file output receives a single sample buffer (a single video frame or audio buffer, for example) from the given connection.",
+      "ko": "이 메서드는 지정된 연결에서 파일 출력이 단일 샘플 버퍼(예: 비디오 프레임 한 개 또는 오디오 버퍼)를 받을 때마다 호출됩니다.",
+      "sourceHash": "8b6bc7a623762af012a8c1f9c23e71a9b9718e5cf5747523986dec5dd6ed4796",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "This gives delegates an opportunity to start and stop recording or change output files at an exact sample boundary.",
+      "ko": "이를 통해 델리게이트는 정확한 샘플 경계에서 녹화를 시작 및 중지하거나 출력 파일을 변경할 수 있습니다.",
+      "sourceHash": "b833320e55647c113e071923d48b7879af788bd11bf35af1eb8bd28a379da8e9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "If called from within this method, the file output’s [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md) and [`resumeRecording()`](avcapturefileoutput/resumerecording().md) methods are guaranteed to include the received sample buffer in the new file, whereas calls to [`stopRecording()`](avcapturefileoutput/stoprecording().md) and [`pauseRecording()`](avcapturefileoutput/pauserecording().md) are guaranteed to include all samples leading up to those in the current sample buffer in the existing file.",
+      "ko": "이 메서드 내에서 호출되는 경우 파일 출력의 [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md) 및 [`resumeRecording()`](avcapturefileoutput/resumerecording().md) 메서드는 수신한 샘플 버퍼를 새 파일에 반드시 포함하고, 반면 [`stopRecording()`](avcapturefileoutput/stoprecording().md) 및 [`pauseRecording()`](avcapturefileoutput/pauserecording().md) 호출은 현재 샘플 버퍼 이전의 모든 샘플을 기존 파일에 반드시 포함합니다.",
+      "sourceHash": "db36095d99fe0d19b9cc5b59ba14a6c11e37adbb776df95beae860e43cb257bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "You can gather information particular to the samples by inspecting the `CMSampleBuffer` object.",
+      "ko": "`CMSampleBuffer` 객체를 검사하여 샘플 고유의 정보를 수집할 수 있습니다.",
+      "sourceHash": "fe55d8faca2be281e79646ddb73cb1ac6769b17062953bd58b50b0edd663c51c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "Sample buffers always contain a single frame of video if called from this method but may also contain multiple samples of audio.",
+      "ko": "이 메서드에서 호출될 때 샘플 버퍼는 항상 비디오 프레임 한 개를 포함하지만, 오디오 샘플 여러 개를 포함할 수도 있습니다.",
+      "sourceHash": "55160db621eecc02b0f7526bcd0a41ee02322f7444676e550876b742a31ef65a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0003",
+      "source": "For B-frame video formats, samples are always delivered in presentation order.",
+      "ko": "B-frame 비디오 형식의 샘플은 항상 표시 순서로 전달됩니다.",
+      "sourceHash": "2535ab1766f3131c225e3c098f068a97d2e75b3574d27e39977fc00c18248b43",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "If you need to reference the `CMSampleBuffer` object outside of the scope of this method, you must retain it and then release it when you have finished with it.",
+      "ko": "이 메서드 범위 밖에서 `CMSampleBuffer` 객체를 참조해야 하는 경우, 먼저 이를 유지했다가 사용이 끝나면 해제해야 합니다.",
+      "sourceHash": "e2869bd1ec659c5829161614d8928f3b12fe4553071d8a3892b12f4d639a0120",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "To maintain optimal performance, some sample buffers directly reference pools of memory that may need to be reused by the device system and other capture inputs.",
+      "ko": "최적의 성능을 유지하려면 일부 샘플 버퍼가 디바이스 시스템과 다른 캡처 입력에서 재사용해야 하는 메모리 풀을 직접 참조합니다.",
+      "sourceHash": "53c5f1ed6f28c6efdd1bc263bdfb94cb4d55b14be094471ff993be03e6fd29dc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "This is frequently the case for uncompressed device native capture where memory blocks are copied as little as possible.",
+      "ko": "메모리 블록을 가능한 한 적게 복사하는 비압축 디바이스 네이티브 캡처에서 이러한 상황이 자주 발생합니다.",
+      "sourceHash": "8aeb07c2b1908aef4665fb95797ff549b34c33dc0ac635050535d112cd72f101",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0003",
+      "source": "If multiple sample buffers reference such pools of memory for too long, inputs will no longer be able to copy new samples into memory and those samples will be dropped.",
+      "ko": "여러 샘플 버퍼가 해당 메모리 풀을 너무 오래 참조하면 입력에서 새 샘플을 메모리에 복사할 수 없게 되어 해당 샘플이 드롭됩니다.",
+      "sourceHash": "522a2a525456978cf0d5e23bffb5e44ceb6e20fbb988bbafc1735997572c0f64",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0004",
+      "source": "If your application is causing samples to be dropped by retaining the provided `CMSampleBuffer` objects for too long, but it needs access to the sample data for a long period of time, consider copying the data into a new buffer and then calling `CFRelease` on the sample buffer (if it was previously retained) so that the memory it references can be reused.",
+      "ko": "애플리케이션이 제공된 `CMSampleBuffer` 객체를 너무 오래 유지하여 샘플이 드롭되는 상황이 발생하지만 장기간 샘플 데이터에 접근해야 하는 경우, 데이터는 새 버퍼로 복사한 뒤 이전에 retain된 상태였다면 `CFRelease`를 호출해 참조 메모리가 재사용되도록 고려합니다.",
+      "sourceHash": "7e16f6e4e0f8a489254480dcf4f230164213f7e5c11bc3e0b88d307af304c8b5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0001",
+      "source": "You should not assume that this method will be called on a specific thread.",
+      "ko": "이 메서드가 특정 스레드에서 호출된다고 가정해서는 안 됩니다.",
+      "sourceHash": "1cb253349f287c8869498ef20b55a7ba9ee00457269d88eddb4a707ffc5cea6a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0002",
+      "source": "In addition, this method is called frequently, so it must be efficient to prevent capture performance problems.",
+      "ko": "또한 이 메서드는 자주 호출되므로 캡처 성능 문제를 방지하려면 효율적으로 동작해야 합니다.",
+      "sourceHash": "2c79e993bac8af3cf76eb7cb76a7ee2843a53dcd87c8ac5dc7fae5e7a2e02bfe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0013:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0014:0001",
+      "source": "`output`: The capture file output that is receiving the media data.",
+      "ko": "`output`: 미디어 데이터를 수신하는 캡처 파일 출력입니다.",
+      "sourceHash": "44bbe7cc43ec81ccded1d6a562486b3e79c1636d6566230424e1733084790989",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0014:0002",
+      "source": "`sampleBuffer`: A `CMSampleBuffer` object containing the sample data and additional information about the sample, such as its format and presentation time.",
+      "ko": "`sampleBuffer`: 샘플 데이터와 샘플 형식, 표시 시간과 같은 추가 정보를 포함하는 `CMSampleBuffer` 객체입니다.",
+      "sourceHash": "2103aa88d3a9dc24f37e5c06b2aa42577953f13d7daaf0c03b14bf79024369b1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0014:0003",
+      "source": "`connection`: The [`AVCaptureConnection`](avcaptureconnection.md) object attached to the file output from which the sample data was received.",
+      "ko": "`connection`: 샘플 데이터가 수신된 파일 출력에 연결된 [`AVCaptureConnection`](avcaptureconnection.md) 객체입니다.",
+      "sourceHash": "243ea9cebf2224246fdbab2ed933eaa3e047653a7368bfdeb4c90d03c027d0c7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0015:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func fileOutputShouldProvideSampleAccurateRecordingStart(AVCaptureFileOutput) -> Bool](avcapturefileoutputdelegate/fileoutputshouldprovidesampleaccuraterecordingstart(_:).md)",
+      "ko": "[func fileOutputShouldProvideSampleAccurateRecordingStart(AVCaptureFileOutput) -> Bool](avcapturefileoutputdelegate/fileoutputshouldprovidesampleaccuraterecordingstart(_:).md)",
+      "sourceHash": "b8149b389a7f7a4ee27021ba0e3b0e9f80f6bf1b7106029a442cc9ed8b3e69a1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Allows a client to opt in to frame accurate recording in [`fileOutput(_:didOutputSampleBuffer:from:)`](avcapturefileoutputdelegate/fileoutput(_:didoutputsamplebuffer:from:).md).",
+      "ko": "클라이언트가 [`fileOutput(_:didOutputSampleBuffer:from:)`](avcapturefileoutputdelegate/fileoutput(_:didoutputsamplebuffer:from:).md)에서 프레임 정확도 녹화에 옵트인할 수 있도록 허용합니다.",
+      "sourceHash": "0e29f2b27575d997bc11160386ed1d7c4773f12d548cd5e992f1e90e03e2aac6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0018:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturefileoutputdelegate/fileoutput(_:didoutputsamplebuffer:from:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avcapturefileoutputdelegate/fileoutput(_:didoutputsamplebuffer:from:))*",
+      "sourceHash": "bbf3e945a7f50a8e8bbb2c0f37b087f1e335ee54249d1838aa7ad4eb8aa6ffa6",
+      "status": "machine_translated"
+    }
+  ]
+}

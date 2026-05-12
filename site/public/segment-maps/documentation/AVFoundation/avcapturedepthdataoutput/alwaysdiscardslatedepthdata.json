@@ -1,0 +1,141 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedepthdataoutput/alwaysdiscardslatedepthdata.md",
+  "title": "alwaysDiscardsLateDepthData",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedepthdataoutput/alwaysdiscardslatedepthdata",
+  "segments": [
+    {
+      "id": "seg:heading:alwaysdiscardslatedepthdata:0000:0001",
+      "source": "alwaysDiscardsLateDepthData",
+      "ko": "alwaysDiscardsLateDepthData",
+      "sourceHash": "618c047b65e224c4c8bce66bfc56046d7cb6953ea36e2f71c26770a859d3c28c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:alwaysdiscardslatedepthdata:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:alwaysdiscardslatedepthdata:0002:0001",
+      "source": "A Boolean value that determines whether the capture output should discard any depth data that is not processed before the next depth data is captured.",
+      "ko": "다음 깊이 데이터가 캡처되기 전에 처리되지 않은 깊이 데이터를 캡처 출력이 폐기해야 하는지 여부를 결정하는 Boolean 값입니다.",
+      "sourceHash": "4b8efa6d32fd57a77c4d12dd79a2161ea8165950dc5a02c525374fa37f3fadc8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:alwaysdiscardslatedepthdata:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:alwaysdiscardslatedepthdata:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:alwaysdiscardslatedepthdata:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:alwaysdiscardslatedepthdata:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:alwaysdiscardslatedepthdata:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar alwaysDiscardsLateDepthData: Bool { get set }\n```",
+      "ko": "```swift\nvar alwaysDiscardsLateDepthData: Bool { get set }\n```",
+      "sourceHash": "d1ea40d0151601d4a601abff352471d035149b94f5f552150342b8bd68c861f6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "If the [`delegateCallbackQueue`](avcapturedepthdataoutput/delegatecallbackqueue.md) dispatch queue is blocked when new depth data is captured, this property determines whether the capture output allows your delegate object more time to process old depth data.",
+      "ko": "새 깊이 데이터가 캡처될 때 [`delegateCallbackQueue`](avcapturedepthdataoutput/delegatecallbackqueue.md) 디스패치 큐가 블록되면, 이 속성은 캡처 출력이 이전 깊이 데이터를 처리할 대리자 객체에 더 많은 시간을 허용할지 결정합니다.",
+      "sourceHash": "7b289cbca4638884fb35d42bbb9d80f41b8a87c31c34d98b61151a4b33b6a205",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "If this property’s value is [`false`](https://developer.apple.com/documentation/Swift/false), the capture output delivers old data to your delegate as soon as possible, but application memory usage may increase as a result.",
+      "ko": "이 속성 값이 [`false`](https://developer.apple.com/documentation/Swift/false)인 경우, 캡처 출력은 가능한 한 빨리 이전 데이터를 대리자에게 전달하지만 그 결과로 애플리케이션 메모리 사용량이 증가할 수 있습니다.",
+      "sourceHash": "76d0bb09b30a91e8dad6587303afb9fbaa29d965bfc6443ba2e4f139b98db531",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "The default value is [`true`](https://developer.apple.com/documentation/Swift/true).",
+      "ko": "기본값은 [`true`](https://developer.apple.com/documentation/Swift/true)입니다.",
+      "sourceHash": "360365df209eabcf2a60aec9c5cfcb75cbd70b5e41518d27f205e13ac637b50d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[var isFilteringEnabled: Bool](avcapturedepthdataoutput/isfilteringenabled.md)",
+      "ko": "[var isFilteringEnabled: Bool](avcapturedepthdataoutput/isfilteringenabled.md)",
+      "sourceHash": "268bdaba46bca673e347484f480e346855cab2c4e3baa2ef31813c04bdcc28af",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "A Boolean value that determines whether the depth data output should filter depth data to smooth out noise and fill invalid values.",
+      "ko": "깊이 데이터 출력에서 노이즈를 평활화하고 유효하지 않은 값을 채우기 위해 깊이 데이터를 필터링해야 하는지 여부를 결정하는 Boolean 값입니다.",
+      "sourceHash": "363f1841c3b35baf29918c4fc68ad57481295d18f64166c0e38753bb17129365",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0012:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedepthdataoutput/alwaysdiscardslatedepthdata)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedepthdataoutput/alwaysdiscardslatedepthdata)*",
+      "sourceHash": "f1ee9c1dff97d720293e439f8f24b4b4491452cb8b1cda5b729c270d2e8e461e",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "docId": "documentation/AVFAudio/avaudiooutputnode.md",
+  "title": "AVAudioOutputNode",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiooutputnode",
+  "segments": [
+    {
+      "id": "seg:heading:avaudiooutputnode:0000:0001",
+      "source": "AVAudioOutputNode",
+      "ko": "AVAudioOutputNode",
+      "sourceHash": "beebb3859bf521fa95cda72e8ca18142ef34be333bae563569cb8348405a9331",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiooutputnode:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiooutputnode:0002:0001",
+      "source": "An object that connects to the system’s audio output.",
+      "ko": "시스템의 오디오 출력에 연결되는 객체입니다.",
+      "sourceHash": "3f3fa7e22a0d63a01e4b0b191e3f343197f757f7d741be13ffc5582b17074424",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudiooutputnode:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiooutputnode:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiooutputnode:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiooutputnode:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiooutputnode:0004:0004",
+      "source": "macOS 10.10+",
+      "ko": "macOS 10.10+",
+      "sourceHash": "928cfc2e204a2d523c05071eb21f65479a96f581dc23a43fa1848eecc5216dcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiooutputnode:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiooutputnode:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiooutputnode:0004:0007",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAudioOutputNode\n```",
+      "ko": "```swift\nclass AVAudioOutputNode\n```",
+      "sourceHash": "a6e2a4369a45970f7414983a2f01929cd03eba49a97c8671ec214ea274b6773d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "This node connects to the system’s audio output when rendering to or from an audio device.",
+      "ko": "The effect of this message depends on the [`AVMusicTrack`](avmusictrack.md) destination audio unit.",
+      "sourceHash": "eaba987ad7a504e6a3face983d1a0f32a57533248432bd6dca77626397907313",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "This node performs output in response to client’s requests when the engine is in manual rendering mode.",
+      "ko": "이 노드는 엔진이 수동 렌더링 모드일 때 client의 요청에 따라 출력을 수행합니다.",
+      "sourceHash": "a699a89414c651dcb4ed31a72876a67e58792bf2be214d8f74edcbf07236595d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "This audio node has one element.",
+      "ko": "이 오디오 노드는 요소가 하나입니다.",
+      "sourceHash": "451f5971d908753d147d6941d9a7aa42bf700f5b071153e996a5e9178f5dc23e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "The format of the output scope reflects:",
+      "ko": "출력 scope의 형식은 다음을 반영합니다.",
+      "sourceHash": "2b15aaaba5161a9ce64d108cf79b4c57e93f699797b5e8cd78662ff5e9dd28af",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0001",
+      "source": "The audio hardware sample rate and channel count when it connects to the hardware.",
+      "ko": "하드웨어에 연결될 때의 오디오 하드웨어 샘플 레이트와 채널 수입니다.",
+      "sourceHash": "4e49194abe0542a450d3aae31522aefdc798496cf5633f83d68fb5c3484ee344",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0002",
+      "source": "The engine’s manual rendering mode output format (see [`manualRenderingFormat`](avaudioengine/manualrenderingformat.md)).",
+      "ko": "엔진의 수동 렌더링 모드 출력 형식(참조 [`manualRenderingFormat`](avaudioengine/manualrenderingformat.md))입니다.",
+      "sourceHash": "b86978d50c257ef6cba84255dcd543c33fc45f6faa5c1dc6912aa801a6a88485",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0001",
+      "source": "The format of the input scope is initially the same as that of the output, but you may set it to a different format, in which case the audio node converts.",
+      "ko": "입력 scope의 형식은 초기에는 출력과 동일하지만 다른 형식으로 설정할 수 있으며, 이 경우 오디오 노드가 변환합니다.",
+      "sourceHash": "8d556fb90ffcaf3fa7cc874c6eb09f6b67e00e1fb088184aa23b3a9215e97757",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0012:0001",
+      "source": "❗ **Important**: This class has no methods of its own.",
+      "ko": "❗ **중요**: 이 class에는 자체 method가 없습니다.",
+      "sourceHash": "3487274127296934e717610ecc2825c855b7f1d7f4957478345599b566ea9e7c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0012:0002",
+      "source": "It overrides methods that its base classes define.",
+      "ko": "기본 class에서 정의한 method를 override합니다.",
+      "sourceHash": "d8bcc0c53268ee368a150a4eced55c9d987b074fe366b9b2456434ba3cd70936",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0013:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:configuring-the-spatial-audio-experience:0014:0001",
+      "source": "Configuring the Spatial Audio experience",
+      "ko": "Spatial Audio 환경 구성",
+      "sourceHash": "ea83ccf87c645f7a0fd569beb3a6424a1a9c770e859237834c5ed269c0609c1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-the-spatial-audio-experience:0015:0001",
+      "source": "[var intendedSpatialExperience: any SpatialAudioExperience](avaudiooutputnode/intendedspatialexperience-3ts59.md)",
+      "ko": "[var intendedSpatialExperience: any SpatialAudioExperience](avaudiooutputnode/intendedspatialexperience-3ts59.md)",
+      "sourceHash": "94832b36c30192fe1ae3997d94923b5d51451375d14886a151a9138918e3c026",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-the-spatial-audio-experience:0016:0001",
+      "source": "The intended spatial experience for this output node.",
+      "ko": "이 출력 node의 의도된 spatial experience입니다.",
+      "sourceHash": "fbd07aaf24ed09e75d3d6d656c6d70b4805eef54e7439a5aca15a91080af0154",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0017:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0018:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0019:0001",
+      "source": "[AVAudioIONode](avaudioionode.md)",
+      "ko": "[AVAudioIONode](avaudioionode.md)",
+      "sourceHash": "9ca698e59908f5e94f38235aa443cce011f1bee99cf077f6b8cba645b2997b51",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0020:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0022:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[class AVAudioNode](avaudionode.md)",
+      "ko": "[class AVAudioNode](avaudionode.md)",
+      "sourceHash": "90afb2d99d81cb3a404fdf7d9f98ac36ee371101d3095c03b0cd74a24776d315",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "An object you use for audio generation, processing, or an I/O block.",
+      "ko": "오디오 생성, 처리 또는 I/O block에 사용하는 객체입니다.",
+      "sourceHash": "db84ed166935cbbf0e961e2d2802ca13efa38b20cb9aa5fd2a271a3e928c2ae3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[class AVAudioInputNode](avaudioinputnode.md)",
+      "ko": "[class AVAudioInputNode](avaudioinputnode.md)",
+      "sourceHash": "e6199288ebb68951eb30df42ce85920e0944bc4658d66a0dd535f144eb0ae1a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "An object that connects to the system’s audio input.",
+      "ko": "시스템의 오디오 입력에 연결되는 객체입니다.",
+      "sourceHash": "407c500b87973334b8cd973b3a7aa984bac0abb2cf57308660008a180787670f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[class AVAudioIONode](avaudioionode.md)",
+      "ko": "[class AVAudioIONode](avaudioionode.md)",
+      "sourceHash": "1fc01c81d0599a5fdb504103b45ce5a97cb8d13d4b64b0baf4f48a12b65c99e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "An object that performs audio input or output in the engine.",
+      "ko": "엔진에서 오디오 입력 또는 출력을 수행하는 객체입니다.",
+      "sourceHash": "b116268437745ea9d8a36135f4840b5d44892966bfcfe22845f2d6af0afddc3c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0029:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiooutputnode)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiooutputnode)*",
+      "sourceHash": "0508765e4d570e43d99c84b085539538106597efc4eb7ae45d6dde70e1eb506b",
+      "status": "preserved"
+    }
+  ]
+}

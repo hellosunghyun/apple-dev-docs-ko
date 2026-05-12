@@ -1,0 +1,232 @@
+{
+  "docId": "documentation/AVFoundation/avplaybackcoordinatorplaybackcontroldelegate.md",
+  "title": "AVPlaybackCoordinatorPlaybackControlDelegate",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avplaybackcoordinatorplaybackcontroldelegate",
+  "segments": [
+    {
+      "id": "seg:heading:avplaybackcoordinatorplaybackcontroldelegate:0000:0001",
+      "source": "AVPlaybackCoordinatorPlaybackControlDelegate",
+      "ko": "AVPlaybackCoordinatorPlaybackControlDelegate",
+      "sourceHash": "7382400179bfd3af4f9c24f16e1a944b7eb076808551c22eac2b33c6bedc9863",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avplaybackcoordinatorplaybackcontroldelegate:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: protocol",
+      "ko": "**Framework**: AVFoundation **Kind**: protocol",
+      "sourceHash": "9fe72dbe3a0e813782809d79461aa3177173d881d27789c4a87f37d98dcfa943",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avplaybackcoordinatorplaybackcontroldelegate:0002:0001",
+      "source": "A protocol that defines the method to implement to respond to playback commands from the playback coordinator.",
+      "ko": "재생 코디네이터에서 발송하는 재생 명령에 응답하기 위해 구현해야 하는 메서드를 정의하는 protocol입니다.",
+      "sourceHash": "b7f15d2f677c197174981c2ee6c0154239eabfc7d47b13fb804f2a62e9367276",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avplaybackcoordinatorplaybackcontroldelegate:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplaybackcoordinatorplaybackcontroldelegate:0004:0001",
+      "source": "iOS 15.0+",
+      "ko": "iOS 15.0+",
+      "sourceHash": "86b54448da2eb8626f00177bd04f05a8e48cee585c11805cf3f3e0d890c4e777",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplaybackcoordinatorplaybackcontroldelegate:0004:0002",
+      "source": "iPadOS 15.0+",
+      "ko": "iPadOS 15.0+",
+      "sourceHash": "c7cbc9927b4ccc77db75d1ebf30fcc53090d5edd108c73c553dc668c46926af8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplaybackcoordinatorplaybackcontroldelegate:0004:0003",
+      "source": "Mac Catalyst 15.0+",
+      "ko": "Mac Catalyst 15.0+",
+      "sourceHash": "9d0a6a3a1920dff6b27072e4fe1bcdd8a15ec1e6a32ea0e948a78c43ac895f9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplaybackcoordinatorplaybackcontroldelegate:0004:0004",
+      "source": "macOS 12.0+",
+      "ko": "macOS 12.0+",
+      "sourceHash": "adffa1c4f69a9ee1f27b5e361c29af9b83d00fb7441c2e24713b7acb91ac5100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplaybackcoordinatorplaybackcontroldelegate:0004:0005",
+      "source": "tvOS 15.0+",
+      "ko": "tvOS 15.0+",
+      "sourceHash": "129e8b0216e52c06ca36ea909fe3bc08430cea5008b00272663c5ef8fc40009b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplaybackcoordinatorplaybackcontroldelegate:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nprotocol AVPlaybackCoordinatorPlaybackControlDelegate : NSObjectProtocol, Sendable\n```",
+      "ko": "```swift\nprotocol AVPlaybackCoordinatorPlaybackControlDelegate : NSObjectProtocol, Sendable\n```",
+      "sourceHash": "37b7c2da2c2257cdd3453d4f8c0e11db414db72eaf1ccfe8306a6431dbb21d70",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:topics:0007:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:responding-to-commands:0008:0001",
+      "source": "Responding to commands",
+      "ko": "명령에 대한 응답",
+      "sourceHash": "4283c7f3c00f479fa5c2f83f1e00a6ffcb73069892c4c735c959bfedad30bc8e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:responding-to-commands:0009:0001",
+      "source": "[func playbackCoordinator(AVDelegatingPlaybackCoordinator, didIssue: AVDelegatingPlaybackCoordinatorPlayCommand, completionHandler: () -> Void)](avplaybackcoordinatorplaybackcontroldelegate/playbackcoordinator(_:didissue:completionhandler:)-73p3a.md)",
+      "ko": "[func playbackCoordinator(AVDelegatingPlaybackCoordinator, didIssue: AVDelegatingPlaybackCoordinatorPlayCommand, completionHandler: () -> Void)](avplaybackcoordinatorplaybackcontroldelegate/playbackcoordinator(_:didissue:completionhandler:)-73p3a.md)",
+      "sourceHash": "6facec57378dbbfbca678f8161a8ea408927bba5a3bd312e7a2584035fe1d349",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:responding-to-commands:0010:0001",
+      "source": "Tells the delegate to match the playback rate to that of the group when the rate is nonzero.",
+      "ko": "재생 속도가 0이 아닌 경우 그룹의 재생 속도에 맞춰 조정하도록 대리자에게 지시합니다.",
+      "sourceHash": "ad058c8ae4c02e912e6390e7ae006152bb481e3e612993d403b4a350c7777087",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:responding-to-commands:0011:0001",
+      "source": "[func playbackCoordinator(AVDelegatingPlaybackCoordinator, didIssue: AVDelegatingPlaybackCoordinatorPauseCommand, completionHandler: () -> Void)](avplaybackcoordinatorplaybackcontroldelegate/playbackcoordinator(_:didissue:completionhandler:)-56t01.md)",
+      "ko": "[func playbackCoordinator(AVDelegatingPlaybackCoordinator, didIssue: AVDelegatingPlaybackCoordinatorPauseCommand, completionHandler: () -> Void)](avplaybackcoordinatorplaybackcontroldelegate/playbackcoordinator(_:didissue:completionhandler:)-56t01.md)",
+      "sourceHash": "4ac198d2d463e9b267cece6662661efb3e8b2bcd2e89b5279a63c916801118ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:responding-to-commands:0012:0001",
+      "source": "Tells the delegate to pause playback.",
+      "ko": "대리자에게 재생을 일시 중지하라고 지시합니다.",
+      "sourceHash": "108dec8500deba57ad62ab9ec43ae9703d19b7c081c435e530bdf188a9076946",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:responding-to-commands:0013:0001",
+      "source": "[func playbackCoordinator(AVDelegatingPlaybackCoordinator, didIssue: AVDelegatingPlaybackCoordinatorSeekCommand, completionHandler: () -> Void)](avplaybackcoordinatorplaybackcontroldelegate/playbackcoordinator(_:didissue:completionhandler:)-4fk8y.md)",
+      "ko": "[func playbackCoordinator(AVDelegatingPlaybackCoordinator, didIssue: AVDelegatingPlaybackCoordinatorSeekCommand, completionHandler: () -> Void)](avplaybackcoordinatorplaybackcontroldelegate/playbackcoordinator(_:didissue:completionhandler:)-4fk8y.md)",
+      "sourceHash": "f3c03f5666b07d70d8bf6911462599b03aaa57f9d163a5e6f8d535e714c44b69",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:responding-to-commands:0014:0001",
+      "source": "Tells the delegate to seek to a new time.",
+      "ko": "대리자에게 새 시간으로 이동하라고 지시합니다.",
+      "sourceHash": "7fbd88f69c8663b3190a6e9c585c46378d6b93ac523308ff118acd85784579ee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:responding-to-commands:0015:0001",
+      "source": "[func playbackCoordinator(AVDelegatingPlaybackCoordinator, didIssue: AVDelegatingPlaybackCoordinatorBufferingCommand, completionHandler: () -> Void)](avplaybackcoordinatorplaybackcontroldelegate/playbackcoordinator(_:didissue:completionhandler:)-btle.md)",
+      "ko": "[func playbackCoordinator(AVDelegatingPlaybackCoordinator, didIssue: AVDelegatingPlaybackCoordinatorBufferingCommand, completionHandler: () -> Void)](avplaybackcoordinatorplaybackcontroldelegate/playbackcoordinator(_:didissue:completionhandler:)-btle.md)",
+      "sourceHash": "7246ca89bff7f581bd824e1c421c42bbc92d346b3dcc2b24c6d22d47b12d2320",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:responding-to-commands:0016:0001",
+      "source": "Tells the delegate to expect playback soon and to start buffering media data in preparation.",
+      "ko": "대리자에게 곧 재생이 시작될 예정이므로 준비 단계로 미디어 데이터를 버퍼링하도록 지시합니다.",
+      "sourceHash": "44a59b9305c2fdbdb7b44b0a2132a2f686c046671467bc1d4fe5bdd6900ce37d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0017:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0018:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0019:0001",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherits-from:0019:0002",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherits-from:0019:0003",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0020:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[init(playbackControlDelegate: any AVPlaybackCoordinatorPlaybackControlDelegate)](avdelegatingplaybackcoordinator/init(playbackcontroldelegate:).md)",
+      "ko": "[init(playbackControlDelegate: any AVPlaybackCoordinatorPlaybackControlDelegate)](avdelegatingplaybackcoordinator/init(playbackcontroldelegate:).md)",
+      "sourceHash": "a30a55a66ab766f3accd4a02cb2be2be8883a98cf8f6572ad65364bc06b17843",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "Creates a playback coordinator for a custom playback object.",
+      "ko": "사용자 정의 재생 객체에 대한 재생 코디네이터를 생성합니다.",
+      "sourceHash": "645f2a029d87abc395c978fb8a18eef5ca8cb4d02a3be669a61cf5bdc7cb5fd5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0023:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplaybackcoordinatorplaybackcontroldelegate)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplaybackcoordinatorplaybackcontroldelegate)*",
+      "sourceHash": "029e1081f9ad664417c9a53a765fa08e865dcd300b87f3bf06f5d60313f4822b",
+      "status": "preserved"
+    }
+  ]
+}

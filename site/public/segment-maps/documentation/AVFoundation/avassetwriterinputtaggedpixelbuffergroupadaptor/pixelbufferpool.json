@@ -1,0 +1,155 @@
+{
+  "docId": "documentation/AVFoundation/avassetwriterinputtaggedpixelbuffergroupadaptor/pixelbufferpool.md",
+  "title": "pixelBufferPool",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetwriterinputtaggedpixelbuffergroupadaptor/pixelbufferpool",
+  "segments": [
+    {
+      "id": "seg:heading:pixelbufferpool:0000:0001",
+      "source": "pixelBufferPool",
+      "ko": "pixelBufferPool",
+      "sourceHash": "205c552c4de7850cc4fc9057d7a853b5b82ea730c2514b52368133f5fe63ba40",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:pixelbufferpool:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:pixelbufferpool:0002:0001",
+      "source": "A pixel buffer pool that vends and efficiently recycles the pixel buffers of tagged buffer groups.",
+      "ko": "태그된 버퍼 그룹의 픽셀 버퍼를 공급하고 효율적으로 재활용하는 픽셀 버퍼 풀입니다.",
+      "sourceHash": "d464bf32f333a6fd94f0a75e69e38f63f11da5fb9d22cf54837377e4361e8403",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:pixelbufferpool:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:pixelbufferpool:0004:0001",
+      "source": "iOS 17.0+",
+      "ko": "iOS 17.0+",
+      "sourceHash": "e5cea757bf32cbccc7d863aa42afab59dff1fa9ce5ef2b3addfbb28be822c165",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:pixelbufferpool:0004:0002",
+      "source": "iPadOS 17.0+",
+      "ko": "iPadOS 17.0+",
+      "sourceHash": "12d04dd1560d4b771625b38560f01ece509e2548d1af87dbc0995f8ce1a7abb6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:pixelbufferpool:0004:0003",
+      "source": "Mac Catalyst 17.0+",
+      "ko": "Mac Catalyst 17.0+",
+      "sourceHash": "01e7bd4869b427ea84a91185934fc689e7c1b161e5b013fb425a44277994b5f3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:pixelbufferpool:0004:0004",
+      "source": "macOS 14.0+",
+      "ko": "macOS 14.0+",
+      "sourceHash": "c037401748a572da79aedb55d7cb53c26eaac4007d481a2f3f8a76b42f357acb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:pixelbufferpool:0004:0005",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar pixelBufferPool: CVPixelBufferPool? { get }\n```",
+      "ko": "```swift\nvar pixelBufferPool: CVPixelBufferPool? { get }\n```",
+      "sourceHash": "988878fdcc32d4ca7799bc270e200810427ca4e39b609da9172ff68ae5fbca49",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "For maximum efficiency, create the pixel buffers of tagged buffer groups using this pool with the [`CVPixelBufferPoolCreatePixelBuffer(_:_:_:)`](https://developer.apple.com/documentation/CoreVideo/CVPixelBufferPoolCreatePixelBuffer(_:_:_:)) function.",
+      "ko": "최고 효율을 위해 이 풀에서 태그된 버퍼 그룹의 픽셀 버퍼를 [`CVPixelBufferPoolCreatePixelBuffer(_:_:_:)`](https://developer.apple.com/documentation/CoreVideo/CVPixelBufferPoolCreatePixelBuffer(_:_:_:)) 함수로 생성합니다.",
+      "sourceHash": "8b6de0ceac0dbc39e4f5309ee6e990b624359e4887da933a81cc8b16d5c8724e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "The value of this property is `nil` before you call [`startWriting()`](avassetwriter/startwriting().md) on the associated [`AVAssetWriter`](avassetwriter.md) object.",
+      "ko": "이 속성의 값은 연결된 [`AVAssetWriter`](avassetwriter.md) 객체에서 [`startWriting()`](avassetwriter/startwriting().md) 호출 전에 `nil`입니다.",
+      "sourceHash": "974d5b3f56c723587e361a7e8683ec69888fb93799fe38993428c1a2fdb4ca96",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "Query this property after writing starts to retrieve a `non-nil` value.",
+      "ko": "쓰기 시작 후 이 속성을 조회하면 `non-nil` 값을 얻을 수 있습니다.",
+      "sourceHash": "ad26b21543d1e77f8aa541575b8aaa1f0f54d7e3cc9b599523d766a38bd430e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "This property is not key value observable.",
+      "ko": "이 속성은 key-value 관찰이 지원되지 않습니다.",
+      "sourceHash": "2da19635483b73c69562aa73a6a9e6839fa88f19755f7c64c0eba913783ed91c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "관련 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var sourcePixelBufferAttributes: [String : any Sendable]?](avassetwriterinputtaggedpixelbuffergroupadaptor/sourcepixelbufferattributes.md)",
+      "ko": "[var sourcePixelBufferAttributes: [String : any Sendable]?](avassetwriterinputtaggedpixelbuffergroupadaptor/sourcepixelbufferattributes.md)",
+      "sourceHash": "48484d261cb642c79d1f84154a4fbe0e63c68b08f5d69d1e5665d751171a8a10",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "The attributes of buffers that the adaptor’s pixel buffer pool vends.",
+      "ko": "어댑터의 픽셀 버퍼 풀이 제공하는 버퍼의 속성입니다.",
+      "sourceHash": "9da19a1c3f576003684456d03c2c54e391ed97ff712fde7f330b2755de299b0d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0014:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetwriterinputtaggedpixelbuffergroupadaptor/pixelbufferpool)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetwriterinputtaggedpixelbuffergroupadaptor/pixelbufferpool)*",
+      "sourceHash": "ad6a9f46a9582b64191d497d4c0e71971d73196c6064e5cd1108bece08562c23",
+      "status": "preserved"
+    }
+  ]
+}

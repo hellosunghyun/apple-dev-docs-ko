@@ -1,0 +1,778 @@
+{
+  "docId": "documentation/AppClip/testing-the-launch-experience-of-your-app-clip.md",
+  "title": "Testing the launch experience of your App Clip",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appclip/testing-the-launch-experience-of-your-app-clip",
+  "segments": [
+    {
+      "id": "seg:heading:testing-the-launch-experience-of-your-app-clip:0000:0001",
+      "source": "Testing the launch experience of your App Clip",
+      "ko": "App Clip 실행 경험 테스트",
+      "sourceHash": "fd1d661ad1ac9ac11f4cbe0031e9a17905851d4d68529be33ff4c5c9f1202c51",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:testing-the-launch-experience-of-your-app-clip:0001:0001",
+      "source": "**Framework**: App Clips",
+      "ko": "**프레임워크**: App Clips",
+      "sourceHash": "95392eefad8d1307f1b4358d5e43162d75c9d10a3c215f33272e7e50a3704949",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:testing-the-launch-experience-of-your-app-clip:0002:0001",
+      "source": "Debug App Clip invocations, test the launch experience, and verify the configuration of your released App Clip.",
+      "ko": "App Clip 호출을 디버깅하고, 실행 경험을 테스트하며, 릴리스된 App Clip의 구성을 확인합니다.",
+      "sourceHash": "c0676401ded8f23f7ed4a9f6a3930556528566c8cb44b5a6a6b10554db4b76fd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "A fast launch experience is crucial to the experience your App Clip provides.",
+      "ko": "빠른 실행 경험은 App Clip이 제공하는 사용자 경험에 필수적입니다.",
+      "sourceHash": "36dd4d4ae7a98e19cf94c2ee1aff5898dfbb81d99639774c698c5e1fde6de765",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "As a result, you’ll spend a significant amount of time choosing invocation URLs, configuring App Clip experiences in App Store Connect, and writing code to handle the invocation URL.",
+      "ko": "결과적으로 호출 URL을 선택하고 App Store Connect에서 App Clip 경험을 구성한 다음 호출 URL을 처리할 코드를 작성하는 데 상당한 시간을 할애하게 됩니다.",
+      "sourceHash": "153093ca45afa7a80e99640c5fc410e6dfd6c3137b11659424c227dbc8f60008",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0001",
+      "source": "To ensure your App Clip offers a smooth launch experience and that you properly configured your App Clip experiences, use the following tests and verifications:",
+      "ko": "App Clip이 매끄러운 실행 경험을 제공하고 App Clip 경험 구성이 올바른지 확인하려면 다음 테스트와 검증을 사용합니다:",
+      "sourceHash": "07c4f636e42485c0bb3600be45d5a6e45bddf7700af13eefe636cf832f62497a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0006:0001",
+      "source": "During development, use the `_XCAppClipURL` environment variable to configure an invocation URL for debugging.",
+      "ko": "개발 중에는 디버깅용 invocation URL을 구성하기 위해 `_XCAppClipURL` 환경 변수를 사용합니다.",
+      "sourceHash": "ef5364bfb036ce3b48671d87c1740fd6189e87bdcc3125d183c5ea1ad7a01545",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0006:0002",
+      "source": "Verify the design of the App Clip card and the launch experience of your App Clip from invocations by creating a local experience on your test device.",
+      "ko": "테스트 기기에서 로컬 경험을 생성한 뒤 호출 시 App Clip 카드와 App Clip 실행 경험을 검증합니다.",
+      "sourceHash": "c8036cb477b7ae73884a07dac74bfa075a89b24a9094a218f26b14eebeede3b4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0006:0003",
+      "source": "When you’re ready to share a beta version with others, create an App Clip experience for testers in [`TestFlight`](https://developer.apple.comhttps://developer.apple.com/testflight/).",
+      "ko": "다른 사용자와 베타 버전 공유가 준비되면 [`TestFlight`](https://developer.apple.comhttps://developer.apple.com/testflight/)에서 테스트 대상으로 App Clip 경험을 생성합니다.",
+      "sourceHash": "1e687e40c755f9132f4cb482450f860025eb6f2eec8f3960eff7fb78b576fdf4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0006:0004",
+      "source": "When you’ve published your App Clip on the App Store, verify your App Clip configuration by using the App Clip diagnostics on iPhone.",
+      "ko": "App Store에 App Clip을 게시한 후에는 iPhone의 App Clip diagnostics를 사용해 App Clip 구성을 검증합니다.",
+      "sourceHash": "9da1d8c8330a48559dbc15763e5fef36cc07ce367d90cad77cae2418506e35f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:debug-your-app-clip:0007:0001",
+      "source": "Debug Your App Clip",
+      "ko": "App Clip 디버깅",
+      "sourceHash": "6b48a443da50124cfd2a15cde146647feadd42e3df6ef9d67c7926be9e69cd98",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0008:0001",
+      "source": "The invocation URL plays a key role to offering a fast and instant launch experience for your App Clip because you can use it to update the user interface of your App Clip to match the user’s context.",
+      "ko": "invocation URL은 App Clip의 사용자 인터페이스를 사용자의 컨텍스트에 맞게 업데이트할 수 있어 빠르고 즉시 실행되는 App Clip 경험을 제공하는 데 핵심 역할을 합니다.",
+      "sourceHash": "9ff301569c066a010a4da812967967bc6690c0a33d860a8e96b892bebe92c951",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0008:0002",
+      "source": "Testing this code is especially important.",
+      "ko": "이 코드를 테스트하는 것이 특히 중요합니다.",
+      "sourceHash": "40edaa069725a252bada8d87f3e9c1918936b7831883708cf6e55c786dc6d913",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0008:0003",
+      "source": "In Xcode, provide an invocation URL for debugging.",
+      "ko": "Xcode에서 디버깅용 invocation URL을 제공합니다.",
+      "sourceHash": "b89fa3b5ec5214e37417495dcf5d134852381e33a934517abca271d1c2ab80e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0008:0004",
+      "source": "Then, make sure your code handles your invocation URLs — including unexpected invocation URLs — and updates the user interface of your App Clip to match the user’s context.",
+      "ko": "그다음 코드가 예기치 않은 invocation URL을 포함한 모든 invocation URL을 처리하고, 사용자 컨텍스트에 맞게 App Clip의 사용자 인터페이스를 업데이트하는지 확인합니다.",
+      "sourceHash": "3ca77b3b219603e205e93367a9f706e0bcd414727fe7327a5536ba5aac17c0d7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0009:0001",
+      "source": "To configure an invocation URL for debugging:",
+      "ko": "디버깅용 invocation URL을 구성하려면:",
+      "sourceHash": "5ce34490eb5dcb9be2348f1c02ed8d38e543014441fa9b6c8212637889727dc9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:debug-your-app-clip:0010:0001",
+      "source": "In Xcode, choose Product > Scheme > Edit Scheme and select the scheme for your App Clip.",
+      "ko": "Xcode에서 `Product > Scheme > Edit Scheme`을 선택하고 App Clip의 스킴을 선택합니다.",
+      "sourceHash": "c4ab2bad4cd1250ebb8da1753de3efcd700d6e0a99e0b20d1a95399fa1825fc4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:debug-your-app-clip:0010:0002",
+      "source": "Select the Run action.",
+      "ko": "`Run` 작업을 선택합니다.",
+      "sourceHash": "ea3842c1e9f1f8d20a57910826d821ea40426331f6b8378b3e558fb3a30c9f58",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:debug-your-app-clip:0010:0003",
+      "source": "In the Arguments tab, check whether the `_XCAppClipURL` environment variable is present. When you add an App Clip target to your project, Xcode adds it for you. If it’s missing, add the environment variable.",
+      "ko": "`Arguments` 탭에서 `_XCAppClipURL` 환경 변수가 있는지 확인합니다. 프로젝트에 App Clip 대상을 추가하면 Xcode가 자동으로 추가합니다. 누락된 경우 환경 변수를 추가합니다.",
+      "sourceHash": "19f56a6fed1ea41b9913f9f9f97ac1791bcb47a820f81128fd6987dbc95f418f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:debug-your-app-clip:0010:0004",
+      "source": "Set the environment variable’s value to the invocation URL you want to test.",
+      "ko": "환경 변수 값을 테스트할 invocation URL로 설정합니다.",
+      "sourceHash": "ffbf6e98f9071079a2e61feb4595db0ceeddf70a9b5eaea6980eaf91ffa59020",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:debug-your-app-clip:0010:0005",
+      "source": "Enable the variable by selecting the checkbox next to it.",
+      "ko": "변수 옆의 체크박스를 선택해 변수를 사용하도록 설정합니다.",
+      "sourceHash": "5de35d2205b0fa90cac7c85f2521dbc89a425cbec60dcca6b662620c06b77ab5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:debug-your-app-clip:0010:0006",
+      "source": "Build and run the App Clip to access the test URL you configured from an [`NSUserActivity`](https://developer.apple.com/documentation/Foundation/NSUserActivity) object. For more information on accessing the invocation URL, refer to [`Responding to invocations`](responding-to-invocations.md).",
+      "ko": "테스트 URL은 [`NSUserActivity`](https://developer.apple.com/documentation/Foundation/NSUserActivity) 개체에서 접근하도록 App Clip을 빌드하고 실행해 확인합니다. invocation URL 접근 방법은 [`Responding to invocations`](responding-to-invocations.md)을 참조합니다.",
+      "sourceHash": "1a3db3b14cbabf766eb9cb9c67c151956cf47da5af9114ae1315e4f930d35954",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0011:0001",
+      "source": "The following screenshot shows the sheet to configure an App Clip target’s Run action with a value for the `_XCAppClipURL` environment variable:",
+      "ko": "다음 스크린샷은 `_XCAppClipURL` 환경 변수 값을 사용해 App Clip 대상의 `Run` 동작을 구성하는 시트를 보여 줍니다.",
+      "sourceHash": "ad0aacbc6a9de2bf0a985e5a87079e0d8b25137bae49ad8bcc84d31a15d752a5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0012:0001",
+      "source": "![A screenshot showing the sheet to configure an App Clip target’s Run action.",
+      "ko": "![App Clip 대상의 `Run` 동작을 구성하는 시트를 보여 주는 스크린샷.",
+      "sourceHash": "918ec253193060801104f826d2b442b1035ab6072bc9aedc860f2a2de2caa6ee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0012:0002",
+      "source": "The _XCAppClipURL environment variable’s value is set but not enabled.](https://docs-assets.developer.apple.com/published/f183530078eba0a42a3d61fa51ea8197/media-3671997%402x.png)",
+      "ko": "`_XCAppClipURL` 환경 변수 값은 설정되었지만 활성화되지 않았습니다.](https://docs-assets.developer.apple.com/published/f183530078eba0a42a3d61fa51ea8197/media-3671997%402x.png)",
+      "sourceHash": "e55c7f34321403ce4146baa73f3df6d4a6f4183c56da6da90a89d5d5e509a4a8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0013:0001",
+      "source": "When you debug your App Clip with Xcode, the App Clip launches right away with the value you set for the `_XCAppClipURL` variable.",
+      "ko": "Xcode로 App Clip을 디버그하면 `_XCAppClipURL` 변수에 설정한 값으로 App Clip이 즉시 실행됩니다.",
+      "sourceHash": "2d77282537f75544f264e85779d1c30c2bf400817dad1f7a582aa72ef3b3583d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0013:0002",
+      "source": "Note that the App Clip card doesn’t appear.",
+      "ko": "App Clip 카드는 표시되지 않습니다.",
+      "sourceHash": "8cdac9631a32f837a87d4c4adefb0a80531ade16eca711619febc8fdba9dac97",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:debug-your-app-clip:0013:0003",
+      "source": "To see the App Clip card on invocation when testing and test your entire launch experience, register a local experience on your test device.",
+      "ko": "테스트할 때 호출에서 App Clip 카드를 확인하고 전체 실행 경험을 검증하려면 테스트 기기에 로컬 경험을 등록합니다.",
+      "sourceHash": "0d632325424b9ae4f1672e184b173317e4c4a4fbb91621afe8a91bd604eddbf6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:test-app-clip-invocations-with-a-local-experience:0014:0001",
+      "source": "Test App Clip Invocations with a Local Experience",
+      "ko": "로컬 경험으로 App Clip 호출 테스트",
+      "sourceHash": "579621209a6aad044c63d29ade4ab7527d497cc139fc33d5fcb67425d05b2cab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0015:0001",
+      "source": "Leveraging the `_XCAppClipURL` environment variable is helpful when you debug the code that handles the invocation URL.",
+      "ko": "`_XCAppClipURL` 환경 변수를 활용하면 invocation URL을 처리하는 코드를 디버그할 때 유용합니다.",
+      "sourceHash": "4d3ba605ed672404e4944ed9d9da6c89467e563c203e3fbc6bf94324d95e3058",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0015:0002",
+      "source": "However, you need to ensure your App Clip provides a fast and reliable launch experience from various invocations.",
+      "ko": "그러나 여러 가지 호출에서 App Clip이 빠르고 신뢰할 수 있는 실행 경험을 제공하도록 해야 합니다.",
+      "sourceHash": "2cc4a6ffa6aa39523e8c0be2a0882a217409f909d7b5bbb2b350fbe66ee8af11",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0015:0003",
+      "source": "In addition, exploring imagery, text, and a call-to-action verb for the App Clip card is especially important because the App Clip card is the user’s first interaction when they launch your App Clip.",
+      "ko": "또한 App Clip 카드는 사용자가 App Clip을 실행할 때의 첫 상호작용이므로 이미지, 텍스트, call-to-action 동사를 검토하는 것이 특히 중요합니다.",
+      "sourceHash": "a52dd1da4bd08ba5ee52985b88383da4141db0611264389db9e5596bf10f19b5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:test-app-clip-invocations-with-a-local-experience:0016:0001",
+      "source": "**Note**: Local experiences are a great way to test the launch experience of your App Clip during development.",
+      "ko": "**참고**: 로컬 경험은 개발 중 App Clip의 실행 경험을 테스트하는 데 매우 효과적인 방법입니다.",
+      "sourceHash": "0bc8ccb545814f16035c2834b322781801bf6ddb3f0e93e4289f46d3feaf195b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:test-app-clip-invocations-with-a-local-experience:0016:0002",
+      "source": "However, you can use local experiences to test the scenario in which a person has installed the full app and an invocation launches the app and not the App Clip.",
+      "ko": "단, 로컬 경험을 사용하면 전체 앱이 설치된 사용자가 호출할 때 App Clip이 아닌 앱이 실행되는 시나리오도 테스트할 수 있습니다.",
+      "sourceHash": "b12ec2adae86b81a98f6e8a3e567a503d5e260ef9e90a64a1ba1a3adda917a40",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:test-app-clip-invocations-with-a-local-experience:0016:0003",
+      "source": "To verify that the invocation URL can launch your full app, use universal links.",
+      "ko": "invocation URL이 전체 앱을 실행할 수 있는지 확인하려면 universal links를 사용합니다.",
+      "sourceHash": "ceb303d259557356e461c1104316f1edb06ff1698d5a47555711331c20a82466",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:test-app-clip-invocations-with-a-local-experience:0016:0004",
+      "source": "For more information, refer to [`Test the launch experience of the full app during development`](testing-the-launch-experience-of-your-app-clip#Test-the-launch-experience-of-the-full-app-during-development.md) below.",
+      "ko": "자세한 내용은 아래 [`Test the launch experience of the full app during development`](testing-the-launch-experience-of-your-app-clip#Test-the-launch-experience-of-the-full-app-during-development.md) 항목을 참조하세요.",
+      "sourceHash": "c7f7161ac7064da7679cd1c9c21242de04078721f86c41e584f7056ada1b2c22",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0017:0001",
+      "source": "To test invocations and explore the design of your App Clip card during development, configure a local experience on your test device.",
+      "ko": "개발 중에 호출을 테스트하고 App Clip 카드의 디자인을 검토하려면 테스트 기기에서 로컬 경험을 구성합니다.",
+      "sourceHash": "3d98fb5a07ad0d896734258b42e64a79d0d98e1bd2f8090dfd40401bda5614da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0017:0002",
+      "source": "With a local experience, you can launch your App Clip by:",
+      "ko": "로컬 경험을 사용하면 다음과 같이 App Clip을 실행할 수 있습니다:",
+      "sourceHash": "f626577bd57a607964b236e3cec7622392c313bea82bd739d4763f4eb9b72421",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:test-app-clip-invocations-with-a-local-experience:0018:0001",
+      "source": "Scanning an App Clip Code, QR code, or NFC tag you’ve created to launch the local experience. For information on creating App Clip Codes for testing, refer to [`Creating App Clip Codes with the App Clip Code Generator`](creating-app-clip-codes-with-the-app-clip-code-generator.md). To create a QR code or write an NFC tag, use your favorite tool.",
+      "ko": "작성한 App Clip Code, QR 코드 또는 NFC 태그를 스캔해 로컬 경험을 실행합니다. 테스트용 App Clip Code 생성 방법은 [`Creating App Clip Codes with the App Clip Code Generator`](creating-app-clip-codes-with-the-app-clip-code-generator.md)를 참조하세요. QR 코드를 만들거나 NFC 태그를 쓰려면 선호하는 도구를 사용합니다.",
+      "sourceHash": "17118f35505ea166809a3c5bb8e55de5a4d7ccf2d74a13ebd8175eea9e8d12b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:test-app-clip-invocations-with-a-local-experience:0018:0002",
+      "source": "Tapping a Smart Banner you added to your website or an App Clip card that appears in Safari or an [`SFSafariViewController`](https://developer.apple.com/documentation/SafariServices/SFSafariViewController).",
+      "ko": "웹사이트에 추가한 Smart Banner 또는 Safari 또는 [`SFSafariViewController`](https://developer.apple.com/documentation/SafariServices/SFSafariViewController)에서 표시되는 App Clip 카드를 탭합니다.",
+      "sourceHash": "085e96f4544b8c33a8f760ac9703ca4851924dbe98380a9b007db060ec643fd7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:test-app-clip-invocations-with-a-local-experience:0018:0003",
+      "source": "Sharing a link to the website that displays a Smart App Banner. Make sure to add the sender of the message as a contact on the test device.",
+      "ko": "Smart App Banner가 표시되는 웹사이트 링크를 공유합니다. 메시지 발신자를 테스트 기기의 연락처에 추가해야 합니다.",
+      "sourceHash": "cca93526e89761e2313cde0953d935bf81adc29c8e7397c4e87f27498249a27b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0019:0001",
+      "source": "Note that you don’t need to configure the [`Associated Domains Entitlement`](https://developer.apple.com/documentation/BundleResources/Entitlements/com.apple.developer.associated-domains) or associate the App Clip with your website to launch a local experience from App Clip Codes, QR codes, or NFC tags.",
+      "ko": "참고: [`Associated Domains Entitlement`](https://developer.apple.com/documentation/BundleResources/Entitlements/com.apple.developer.associated-domains) 또는 App Clip과 웹사이트의 연동을 구성할 필요 없이 App Clip Code, QR 코드, NFC 태그로 로컬 경험을 실행할 수 있습니다.",
+      "sourceHash": "f0dc0ad12da82e3ea8afa9bc4be26d2d150caaaaac9828004e19e3019cd9c9dc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0019:0002",
+      "source": "However, testing invocations from a Smart App Banner or the App Clip card in Safari comes with prerequisites; for example, you need to associate your website with your App Clip, submit a version of your app with an App Clip for review to App Store Connect, and release it in the App Store after approval.",
+      "ko": "However, testing invocations from a Smart App Banner or the App Clip card in Safari comes with prerequisites; for example, you need to associate your website with your App Clip, submit a version of your app with an App Clip for review to App Store Connect, and release it in the App Store after approval.",
+      "sourceHash": "dd0751dd627642d153f197caf04045782fa39857a3c3f9e36fea0084d32536b4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0019:0003",
+      "source": "To learn more about when the Smart App Banner appears and for information on supporting invocations from your website or the Messages app, refer to [`Supporting invocations from your website and the Messages app`](supporting-invocations-from-your-website-and-the-messages-app.md).",
+      "ko": "To learn more about when the Smart App Banner appears and for information on supporting invocations from your website or the Messages app, refer to [`Supporting invocations from your website and the Messages app`](supporting-invocations-from-your-website-and-the-messages-app.md).",
+      "sourceHash": "523774658893be366f5d10f9717bf0c8d076ed33c1209487ef9404656d1bacf4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0019:0004",
+      "source": "To verify your configured App Clip experiences for a released app and App Clip, refer to [`Verify the configuration of your released App Clip`](testing-the-launch-experience-of-your-app-clip#Verify-the-configuration-of-your-released-App-Clip.md) below.",
+      "ko": "To verify your configured App Clip experiences for a released app and App Clip, refer to [`Verify the configuration of your released App Clip`](testing-the-launch-experience-of-your-app-clip#Verify-the-configuration-of-your-released-App-Clip.md) below.",
+      "sourceHash": "35451fa793549731ff847ef876a416baa9f872ef35e6dfb7c4fd22be37b7dc6c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:test-app-clip-invocations-with-a-local-experience:0020:0001",
+      "source": "💡 **Tip**: Add the Code Scanner and the NFC Tag Reader to Control Center by opening the Settings app and selecting Control Center.",
+      "ko": "💡 **Tip**: Add the Code Scanner and the NFC Tag Reader to Control Center by opening the Settings app and selecting Control Center.",
+      "sourceHash": "5fa82a649e6211489eec85b2c47435971f41714a31324e1ca67bb846beb1f5a0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0021:0001",
+      "source": "To test your launch experience with a local experience:",
+      "ko": "To test your launch experience with a local experience:",
+      "sourceHash": "ed4ee4557840a5b5ff345ee71decd28929b932607cb32f65bb02a3953de9aa26",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:test-app-clip-invocations-with-a-local-experience:0022:0001",
+      "source": "Build and run your App Clip on your test device to make sure it’s cached on the test device. For example, with the Fruta sample code project, follow the instructions to configure it, then run the `Fruta iOS Clip` scheme. To download the sample code project, visit [`Fruta: Building a feature-rich app with SwiftUI`](fruta-building-a-feature-rich-app-with-swiftui.md).",
+      "ko": "Build and run your App Clip on your test device to make sure it’s cached on the test device. For example, with the Fruta sample code project, follow the instructions to configure it, then run the `Fruta iOS Clip` scheme. To download the sample code project, visit [`Fruta: Building a feature-rich app with SwiftUI`](fruta-building-a-feature-rich-app-with-swiftui.md).",
+      "sourceHash": "d994c88ebda9020b09d01ab8dae23ac38998f7e8e980c76e8e0badd1521cc844",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:test-app-clip-invocations-with-a-local-experience:0022:0002",
+      "source": "On your test device, open the Settings app, navigate to the iOS developer settings by choosing Developer > Local Experiences, and select Register Local Experience.",
+      "ko": "On your test device, open the Settings app, navigate to the iOS developer settings by choosing Developer > Local Experiences, and select Register Local Experience.",
+      "sourceHash": "a25216bacb568d2c53418fe5f8da66bf7ad30496655f966dc2a014b677b5d87b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:test-app-clip-invocations-with-a-local-experience:0022:0003",
+      "source": "Enter the invocation URL you want to test. In some cases, it may be a simple URL prefix like `https://fruta.example.com`. It can also be a longer invocation URL with path and query parameters.",
+      "ko": "Enter the invocation URL you want to test. In some cases, it may be a simple URL prefix like `https://fruta.example.com`. It can also be a longer invocation URL with path and query parameters.",
+      "sourceHash": "90c8cadca765d6e8630d02413e8d1c5388098c67b32c9d4f44bac3756c67752a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:test-app-clip-invocations-with-a-local-experience:0022:0004",
+      "source": "Enter the bundle ID of your App Clip.",
+      "ko": "Enter the bundle ID of your App Clip.",
+      "sourceHash": "2a0fc0a676d79ce5610ccd54d34c36121212d4ce31816bfc98f1867f8643787e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:test-app-clip-invocations-with-a-local-experience:0022:0005",
+      "source": "Provide a title and a subtitle. For the Fruta sample code project, you could enter `Order a smoothie.` as the title and `It’s yummy!` as the subtitle.",
+      "ko": "Provide a title and a subtitle. For the Fruta sample code project, you could enter `Order a smoothie.` as the title and `It’s yummy!` as the subtitle.",
+      "sourceHash": "37adb3e154ef6abc8b3746e04a05391df0910e6b695499141f8dd3148cc9b663",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:test-app-clip-invocations-with-a-local-experience:0022:0006",
+      "source": "Select a call-to-action; for example `Open`.",
+      "ko": "Select a call-to-action; for example `Open`.",
+      "sourceHash": "1a60ba38c6205f08552b8553906c2dec9ce434284036867470a833da09a7f7a2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:test-app-clip-invocations-with-a-local-experience:0022:0007",
+      "source": "Choose a photo you want to use as the App Clip card’s header image.",
+      "ko": "Choose a photo you want to use as the App Clip card’s header image.",
+      "sourceHash": "3f6c382492da7e6921c3bbe7ef5c0a1f51363705c89467d87c41ba0ca82ec760",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:test-app-clip-invocations-with-a-local-experience:0023:0001",
+      "source": "**Note**: In addition to building and running your App Clip on your test device to cache it on the device, you can also manually add the `.ipa` file of your App Clip to the device.",
+      "ko": "**Note**: In addition to building and running your App Clip on your test device to cache it on the device, you can also manually add the `.ipa` file of your App Clip to the device.",
+      "sourceHash": "ad06df32543fdae956ff590649d33a0467028c49d99ecca6a8851101f13f8c47",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:test-app-clip-invocations-with-a-local-experience:0023:0002",
+      "source": "First, archive the full app that corresponds with your App Clip.",
+      "ko": "First, archive the full app that corresponds with your App Clip.",
+      "sourceHash": "7ad7f8b818bcab043b195557336b762107e5947382dd5cee972098a5b4e7635d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:test-app-clip-invocations-with-a-local-experience:0023:0003",
+      "source": "Then, in Xcode, export the App Clip for Ad Hoc or Development distribution.",
+      "ko": "Then, in Xcode, export the App Clip for Ad Hoc or Development distribution.",
+      "sourceHash": "b4eec26d442cc03fc002974012a632663e6c753c850e3073e5171bbf63f4c58a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:test-app-clip-invocations-with-a-local-experience:0023:0004",
+      "source": "Finally, drag the exported `.ipa` file to a connected device that appears in the Devices and Simulators window.",
+      "ko": "Finally, drag the exported `.ipa` file to a connected device that appears in the Devices and Simulators window.",
+      "sourceHash": "2f1d1f1a341211f2742792edf51879dce25303b4a66598e4f6a51052790c4f5c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0024:0001",
+      "source": "The following screenshot shows the interface you use to configure a local experience on iPhone:",
+      "ko": "The following screenshot shows the interface you use to configure a local experience on iPhone:",
+      "sourceHash": "cb48a06b784834b115d6c745bf186160faec78c5f779ea4377bbc8fbd8ad93ad",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0025:0001",
+      "source": "![A screenshot of an iPhone that shows the interface for configuring a local experience.",
+      "ko": "![A screenshot of an iPhone that shows the interface for configuring a local experience.",
+      "sourceHash": "45c14a190823b9852c4fac66900edaba2d838a5847ab6e8e490d49c8c3b9c23b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0025:0002",
+      "source": "It uses https://example.com as the URL prefix and com.example.app.clip as the bundle identifier.",
+      "ko": "It uses https://example.com as the URL prefix and com.example.app.clip as the bundle identifier.",
+      "sourceHash": "e8fd7f0c744a3b7cf74125b7e66ad091463c6a7028a29e95d271ff875926fe70",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0025:0003",
+      "source": "The title for the local experience’s App Clip card is Example App, its subtitle is A local App Clip experience, and its call-to-action verb is Open.](https://docs-assets.developer.apple.com/published/2a952ad63d25ae376798d8dc31152766/settings-local-experience%402x.png)",
+      "ko": "The title for the local experience’s App Clip card is Example App, its subtitle is A local App Clip experience, and its call-to-action verb is Open.](https://docs-assets.developer.apple.com/published/2a952ad63d25ae376798d8dc31152766/settings-local-experience%402x.png)",
+      "sourceHash": "18f6cea09d45a144d8b09e28397dde98e232c9720c501cb2650c5cedbf4e0afa",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0026:0001",
+      "source": "When you configure a local experience on a device, the local experience takes precedence over App Clip experiences you configure in [`App Store Connect`](https://developer.apple.comhttps://appstoreconnect.apple.com/login).",
+      "ko": "When you configure a local experience on a device, the local experience takes precedence over App Clip experiences you configure in [`App Store Connect`](https://developer.apple.comhttps://appstoreconnect.apple.com/login).",
+      "sourceHash": "64df18ec27dea855be6a288ff36e1d5ff7e308ceff0b12ae72cda9e668ecbeb3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0026:0002",
+      "source": "However, local experiences only launch an App Clip that’s signed for Development, Ad Hoc, or TestFlight distribution.",
+      "ko": "However, local experiences only launch an App Clip that’s signed for Development, Ad Hoc, or TestFlight distribution.",
+      "sourceHash": "2ff31ec6214ef7ae10f791a09a50825b335e3b5d98fcec99bb14bd0e7194486a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0026:0003",
+      "source": "They don’t launch an App Clip or full app that’s published on the App Store.",
+      "ko": "They don’t launch an App Clip or full app that’s published on the App Store.",
+      "sourceHash": "27df510bfaec736c5747d746f75c66e65067af6b6238180f922f6908e4bd47c2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-app-clip-invocations-with-a-local-experience:0026:0004",
+      "source": "Remember to remove the local experience before testing App Clip experiences you configure in App Store Connect.",
+      "ko": "Remember to remove the local experience before testing App Clip experiences you configure in App Store Connect.",
+      "sourceHash": "ab311b4e56a78bd88b52c77a1f07b7dab27cac0d0c56e9ccf2daca67e9dc6bca",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:test-the-launch-experience-of-the-full-app-during-development:0027:0001",
+      "source": "Test the Launch Experience of the Full App During Development",
+      "ko": "Test the Launch Experience of the Full App During Development",
+      "sourceHash": "ea123575b2f4eedf1303d6cb44c97e8c2ac8745a7010fb03be4de673aa4c2597",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-the-launch-experience-of-the-full-app-during-development:0028:0001",
+      "source": "Local App Clip invocations help you test the launch experience of your App Clip while you develop it in Xcode.",
+      "ko": "Local App Clip invocations help you test the launch experience of your App Clip while you develop it in Xcode.",
+      "sourceHash": "d07e9946e24611764608c2063db124b58a4b1c4e36ac4e90894b5eec0d4e0c22",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-the-launch-experience-of-the-full-app-during-development:0028:0002",
+      "source": "However, local invocations don’t allow you to test the launch experience of the full app from an App Clip invocation.",
+      "ko": "However, local invocations don’t allow you to test the launch experience of the full app from an App Clip invocation.",
+      "sourceHash": "4e74bfa455b77ea36d271d840f5573fc6bdfa4285cb829fe835e63829cd56d66",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-the-launch-experience-of-the-full-app-during-development:0028:0003",
+      "source": "The best way to verify that your full app can handle App Clip invocations as you would expect is to use universal links and the invocation URL of your App Clip as the link’s URL.",
+      "ko": "The best way to verify that your full app can handle App Clip invocations as you would expect is to use universal links and the invocation URL of your App Clip as the link’s URL.",
+      "sourceHash": "16f51ee26d47678df1ebde529f0be09f295ec299c74a408b148679663ed39f72",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-the-launch-experience-of-the-full-app-during-development:0028:0004",
+      "source": "Both App Clips and universal links make the launch URL available as part of the user activity object.",
+      "ko": "Both App Clips and universal links make the launch URL available as part of the user activity object.",
+      "sourceHash": "44b471b61aefb076b61f0a8ffdcbb91edf5438728ae26cd47342eb5acc58353b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-the-launch-experience-of-the-full-app-during-development:0028:0005",
+      "source": "If a Universal Link opens your app to the App Clip experience you expect, you can be sure that the launch experience from the App Clip card to your full app works correctly.",
+      "ko": "If a Universal Link opens your app to the App Clip experience you expect, you can be sure that the launch experience from the App Clip card to your full app works correctly.",
+      "sourceHash": "0e1032321a8af176591fb1b7ed1daa77ae6b5ea34641dfb1d7f5323c30025fd2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-the-launch-experience-of-the-full-app-during-development:0029:0001",
+      "source": "For more information about debugging and testing universal links, refer to [`TN3155: Debugging universal links`](https://developer.apple.com/documentation/Technotes/tn3155-debugging-universal-links).",
+      "ko": "For more information about debugging and testing universal links, refer to [`TN3155: Debugging universal links`](https://developer.apple.com/documentation/Technotes/tn3155-debugging-universal-links).",
+      "sourceHash": "795b1a54f93f60fbe7aa1441cf31bcc2bd317cfa2b37b92c7cb8151a563e11f6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:test-the-launch-experience-of-the-full-app-during-development:0029:0002",
+      "source": "For general information about universal links, refer to [`Supporting universal links in your app`](https://developer.apple.com/documentation/Xcode/supporting-universal-links-in-your-app).",
+      "ko": "For general information about universal links, refer to [`Supporting universal links in your app`](https://developer.apple.com/documentation/Xcode/supporting-universal-links-in-your-app).",
+      "sourceHash": "763c0559e57862fb143f87c597b617ee824a31c48554556b1af96960e2db6db4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:create-app-clip-experiences-for-testers-in-testflight:0030:0001",
+      "source": "Create App Clip Experiences for Testers in Testflight",
+      "ko": "Create App Clip Experiences for Testers in Testflight",
+      "sourceHash": "c4c8244d3f0bfae0cb692b8fc1072d72036b793d4569e2a87e81f77f3fc09bc6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0031:0001",
+      "source": "A reliable user experience is crucial to App Clips and requires spending time to test all user flows and supported invocations.",
+      "ko": "A reliable user experience is crucial to App Clips and requires spending time to test all user flows and supported invocations.",
+      "sourceHash": "b5d3e70914de678f5ac791f0d2a8edf4091ad909d1c02fc9812e286accf13a90",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0031:0002",
+      "source": "To help make sure your App Clip works as expected, you can make your App Clip available to testers in [`TestFlight`](https://developer.apple.comhttps://developer.apple.com/testflight/).",
+      "ko": "To help make sure your App Clip works as expected, you can make your App Clip available to testers in [`TestFlight`](https://developer.apple.comhttps://developer.apple.com/testflight/).",
+      "sourceHash": "4ce6c68dbd773ac57cad1aa2844058db9736d8011a301aeecf31852ee61f1158",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0031:0003",
+      "source": "First, upload an app with an App Clip to [`App Store Connect`](https://developer.apple.comhttps://appstoreconnect.apple.com/login).",
+      "ko": "First, upload an app with an App Clip to [`App Store Connect`](https://developer.apple.comhttps://appstoreconnect.apple.com/login).",
+      "sourceHash": "1f6c5fc0d93ceefeb929725ff4c99a0bf0afed4a69ac700696fb06ed3d95f3fd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0031:0004",
+      "source": "Then, in App Store Connect, navigate to the uploaded build.",
+      "ko": "Then, in App Store Connect, navigate to the uploaded build.",
+      "sourceHash": "cfa1fd87965e7d986ce483cf8c9ffa93fdc0dfaa3ae268670b09760ba16a234f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0031:0005",
+      "source": "In the App Clip section, you can configure up to three different App Clip experiences for testing.",
+      "ko": "In the App Clip section, you can configure up to three different App Clip experiences for testing.",
+      "sourceHash": "08ee53e0d97401a7592556c4a986d430c24b0a6c64319834ab75eb83cdaa6ae0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0031:0006",
+      "source": "Note that the App Clip card doesn’t appear for App Clip experiences you create in TestFlight.",
+      "ko": "Note that the App Clip card doesn’t appear for App Clip experiences you create in TestFlight.",
+      "sourceHash": "45cd642490134644e6a1a33582fd9fcb556ae6474517c0476b70b41ef864fc69",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:create-app-clip-experiences-for-testers-in-testflight:0032:0001",
+      "source": "❗ **Important**: Unlike local experiences, creating an App Clip experience for testers in TestFlight requires you to associate your App Clip with your website.",
+      "ko": "❗ **Important**: Unlike local experiences, creating an App Clip experience for testers in TestFlight requires you to associate your App Clip with your website.",
+      "sourceHash": "18279fc9bf3877e57b3ad0a216eee7b46091c752ca014fd01628070c1ede639f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:create-app-clip-experiences-for-testers-in-testflight:0032:0002",
+      "source": "For more information on configuring associated domains, refer to [`Associating your App Clip with your website`](associating-your-app-clip-with-your-website.md).",
+      "ko": "For more information on configuring associated domains, refer to [`Associating your App Clip with your website`](associating-your-app-clip-with-your-website.md).",
+      "sourceHash": "e2da1983630043179e9187fb9a1c98934f06b649e452d8741d527e3bd0c39623",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0033:0001",
+      "source": "Users don’t install App Clips, and App Clips don’t appear on the Home Screen.",
+      "ko": "Users don’t install App Clips, and App Clips don’t appear on the Home Screen.",
+      "sourceHash": "0ce72f6914c33752f6a1ebf2d5e668a7206a974a118c7f99ad4032e966f825ef",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0033:0002",
+      "source": "Similarly, testers don’t install the beta version of your App Clip, and it also doesn’t appear on the Home Screen either.",
+      "ko": "Similarly, testers don’t install the beta version of your App Clip, and it also doesn’t appear on the Home Screen either.",
+      "sourceHash": "88296dda00bee1302078da12b7ab3ce713b4337d6403f9859777b9ef71ac5b2e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0033:0003",
+      "source": "Instead, testers launch the App Clip experiences you configure for testing through the [`TestFlight app`](https://developer.apple.comhttps://apps.apple.com/us/app/testflight/id899247664) on their device.",
+      "ko": "Instead, testers launch the App Clip experiences you configure for testing through the [`TestFlight app`](https://developer.apple.comhttps://apps.apple.com/us/app/testflight/id899247664) on their device.",
+      "sourceHash": "39b2b8fc63f4b3e488ad096488093c06d1adebe4ac3c7b027ada655eb1b90c72",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0034:0001",
+      "source": "For more information on configuring experiences for testing in App Store Connect, refer to [`Testing an App Clip Experience`](https://developer.apple.comhttps://help.apple.com/app-store-connect/#/devbc57e2ec6).",
+      "ko": "For more information on configuring experiences for testing in App Store Connect, refer to [`Testing an App Clip Experience`](https://developer.apple.comhttps://help.apple.com/app-store-connect/#/devbc57e2ec6).",
+      "sourceHash": "9ad8ca4fcead84a054ab47ecb134fbe17a56e8991c211e70d4c2f51a03ca8b1c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0035:0001",
+      "source": "Testers can also configure a local experience to launch the App Clip you distribute with TestFlight.",
+      "ko": "Testers can also configure a local experience to launch the App Clip you distribute with TestFlight.",
+      "sourceHash": "bded11720e780bbe83d27f087338d74badf2773705d8cbe560eefebab6fddbe1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0035:0002",
+      "source": "However, you must still associate your App Clip with your website so testers can launch it from the TestFlight app.",
+      "ko": "However, you must still associate your App Clip with your website so testers can launch it from the TestFlight app.",
+      "sourceHash": "a5504b42bb56f45f222af60c65c30f5b453996dc03a75b8ca376700668480add",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-app-clip-experiences-for-testers-in-testflight:0035:0003",
+      "source": "In addition, testers must launch the App Clip from an App Clip experience you configure for testing in App Store Connect at least once to ensure that the App Clip is cached on the device.",
+      "ko": "In addition, testers must launch the App Clip from an App Clip experience you configure for testing in App Store Connect at least once to ensure that the App Clip is cached on the device.",
+      "sourceHash": "483056fab69500d35cff6635a451524ab29625b5ca54841c259469c1c1b0b2db",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:remove-cached-advanced-app-clip-experiences:0036:0001",
+      "source": "Remove Cached Advanced App Clip Experiences",
+      "ko": "Remove Cached Advanced App Clip Experiences",
+      "sourceHash": "59a1eaa57b67ae2e43d53ef115d4fe7ae061333edf5fa8e7dd55c11f5fcef917",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:remove-cached-advanced-app-clip-experiences:0037:0001",
+      "source": "When you create a new advanced App Clip experience in App Store Connect, the new experience may not work right away because iOS caches App Clip experiences.",
+      "ko": "When you create a new advanced App Clip experience in App Store Connect, the new experience may not work right away because iOS caches App Clip experiences.",
+      "sourceHash": "32ba8ccb8c807c269b7671b773d4b003196baf0fc013b6eb700dee56b8e2b111",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:remove-cached-advanced-app-clip-experiences:0037:0002",
+      "source": "To make sure an invocation launches a new App Clip experience, open the Settings app, navigate to the Developer section, and choose Clear Experience Cache.",
+      "ko": "To make sure an invocation launches a new App Clip experience, open the Settings app, navigate to the Developer section, and choose Clear Experience Cache.",
+      "sourceHash": "4c172cf1325b053f0d27133c2dcc08e73e4a2b1f02f74963a52e4945552c5a79",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:verify-the-configuration-of-your-released-app-clip:0038:0001",
+      "source": "Verify the Configuration of Your Released App Clip",
+      "ko": "Verify the Configuration of Your Released App Clip",
+      "sourceHash": "d099b86acd980c37bf95caec046288709d91a8b67655c68c1977f3cd304514fa",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:verify-the-configuration-of-your-released-app-clip:0039:0001",
+      "source": "When you’ve uploaded your app version with an App Clip, it has passed App Store review, and you’ve released the version in the App Store, verify the configuration of your App Clip experiences to be sure that your website displays the Smart App Banner and that the App Clip appears on users’ devices:",
+      "ko": "When you’ve uploaded your app version with an App Clip, it has passed App Store review, and you’ve released the version in the App Store, verify the configuration of your App Clip experiences to be sure that your website displays the Smart App Banner and that the App Clip appears on users’ devices:",
+      "sourceHash": "56a5f843b3bf279125a64afdcb6a51fdc9a823e4cf1f221d612fd658a662a030",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:verify-the-configuration-of-your-released-app-clip:0040:0001",
+      "source": "Configure a default and optional advanced App Clip experiences in [`App Store Connect`](https://developer.apple.comhttps://appstoreconnect.apple.com/login) and release the version of your app that contains the App Clip on the App Store.",
+      "ko": "Configure a default and optional advanced App Clip experiences in [`App Store Connect`](https://developer.apple.comhttps://appstoreconnect.apple.com/login) and release the version of your app that contains the App Clip on the App Store.",
+      "sourceHash": "ea2985513681b5742e993329ed5d9ad87e747f5dfbe4152fa7c90d64af4298b7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:verify-the-configuration-of-your-released-app-clip:0040:0002",
+      "source": "On iPhone, open the Settings app, and navigate to the iOS developer settings by choosing Developer.",
+      "ko": "On iPhone, open the Settings app, and navigate to the iOS developer settings by choosing Developer.",
+      "sourceHash": "9bd8ae1564a78289fd48c8a8da29b78fa90291ed18957a78273b1ab50b4451bb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:verify-the-configuration-of-your-released-app-clip:0040:0003",
+      "source": "Choose Diagnostics in the App Clips Testing section.",
+      "ko": "Choose Diagnostics in the App Clips Testing section.",
+      "sourceHash": "bb3f0103bbc2472ff33729e78dc442d28448937ca7d6b12d6a5faebf9dc2ad65",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:verify-the-configuration-of-your-released-app-clip:0040:0004",
+      "source": "Enter the URL of the website you associated with your App Clip and that you use for your App Clip experiences — for example, `https://fruta.example.com`.",
+      "ko": "Enter the URL of the website you associated with your App Clip and that you use for your App Clip experiences — for example, `https://fruta.example.com`.",
+      "sourceHash": "dd7350fb5b42f5538972fe10df791b25ee77dfd17d4025e61fdb3d1678322e29",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:verify-the-configuration-of-your-released-app-clip:0041:0001",
+      "source": "When you enter a URL, the system verifies your App Clip configuration and indicates whether you:",
+      "ko": "When you enter a URL, the system verifies your App Clip configuration and indicates whether you:",
+      "sourceHash": "88b84e2180fbe5eb639a4d4029e9461e17285b48476f04c7040af21896123867",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:verify-the-configuration-of-your-released-app-clip:0042:0001",
+      "source": "Registered an advanced App Clip experience",
+      "ko": "Registered an advanced App Clip experience",
+      "sourceHash": "388b7e03a3c4b5184ceae4e5423f3a4f4f05bb6b5e027ff3ee9c95e26febe6ab",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:verify-the-configuration-of-your-released-app-clip:0042:0002",
+      "source": "Published your App Clip on the App Store",
+      "ko": "Published your App Clip on the App Store",
+      "sourceHash": "7fb944bbeead2c0f343e23b464a0b72d4ba274d52649ca8ba4cb70017f3d0f06",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:verify-the-configuration-of-your-released-app-clip:0042:0003",
+      "source": "Associated your App Clip with the entered URL",
+      "ko": "Associated your App Clip with the entered URL",
+      "sourceHash": "d311d6b7946765b1809fa03a5b26289759ce256ff4ec7f2dde58782bae874d49",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:verify-the-configuration-of-your-released-app-clip:0042:0004",
+      "source": "Picked an invocation URL that fits into an App Clip Code",
+      "ko": "Picked an invocation URL that fits into an App Clip Code",
+      "sourceHash": "51e9ee2d492ffffa042a904d492ef0763d219994da31ad8509c562759a32f143",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:verify-the-configuration-of-your-released-app-clip:0042:0005",
+      "source": "Added a Smart App Banner to your website",
+      "ko": "Added a Smart App Banner to your website",
+      "sourceHash": "f8120bb621f8004aee2d8605885d7e1ddbd26413a71eb6d9dba65b6c98afced9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:verify-the-configuration-of-your-released-app-clip:0043:0001",
+      "source": "If the system found issues with your configuration, the App Clip diagnostics functionality on iPhone indicates errors and offers links to App Clip documentation to help resolve issues.",
+      "ko": "If the system found issues with your configuration, the App Clip diagnostics functionality on iPhone indicates errors and offers links to App Clip documentation to help resolve issues.",
+      "sourceHash": "d95525c8f4de775dac81dffbd3154a88c6076b2d4a33100f15f3196923bf6009",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:verify-the-configuration-of-your-released-app-clip:0043:0002",
+      "source": "Note that advanced App Clip experiences and displaying a Smart App Banner on your website are optional but recommended steps that help users discover your App Clip.",
+      "ko": "Note that advanced App Clip experiences and displaying a Smart App Banner on your website are optional but recommended steps that help users discover your App Clip.",
+      "sourceHash": "b304208136abad96bca7a1527cb410cc599ed5699d51ab05cdca06b846672be4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:verify-the-configuration-of-your-released-app-clip:0044:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:verify-the-configuration-of-your-released-app-clip:0045:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appclip/testing-the-launch-experience-of-your-app-clip)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appclip/testing-the-launch-experience-of-your-app-clip)*",
+      "sourceHash": "f200b15388b6aa6c397e7b0628a4dafb04bec7e56a70d44eafafd0146cabfec7",
+      "status": "preserved"
+    }
+  ]
+}

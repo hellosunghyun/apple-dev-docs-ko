@@ -1,0 +1,190 @@
+{
+  "docId": "documentation/AVFoundation/avassetresourceloadingdatarequest/requestedoffset.md",
+  "title": "requestedOffset",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetresourceloadingdatarequest/requestedoffset",
+  "segments": [
+    {
+      "id": "seg:heading:requestedoffset:0000:0001",
+      "source": "requestedOffset",
+      "ko": "requestedOffset",
+      "sourceHash": "8481eb32811772c377d113e6ef155216324ba444b3470bf21f765d15b5e38579",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:requestedoffset:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:requestedoffset:0002:0001",
+      "source": "The position within the resource of the first byte requested.",
+      "ko": "요청한 첫 번째 바이트가 리소스 내에서 위치한 위치입니다.",
+      "sourceHash": "3bd8fe6dbe56f9391e904253bdd736b7ae73a315b86870d8968947ebec72bd2e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:requestedoffset:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:requestedoffset:0004:0001",
+      "source": "iOS 7.0+",
+      "ko": "iOS 7.0+",
+      "sourceHash": "1ceb179e72300483bbe4de83f94fa14777f1aa4ad49f5b26a004a90764f51fe7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:requestedoffset:0004:0002",
+      "source": "iPadOS 7.0+",
+      "ko": "iPadOS 7.0+",
+      "sourceHash": "1f72093de273c2b8a1b0f4acad220b3881241f056b2b2168b48b64219a2708c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:requestedoffset:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:requestedoffset:0004:0004",
+      "source": "macOS 10.9+",
+      "ko": "macOS 10.9+",
+      "sourceHash": "ea7fd68a1169efd58a43f910e0a50ba2367a86a9bb7ffee8a512f04ee4f12758",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:requestedoffset:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:requestedoffset:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar requestedOffset: Int64 { get }\n```",
+      "ko": "```swift\nvar requestedOffset: Int64 { get }\n```",
+      "sourceHash": "1c188cac8124a41dc39e0b3774f1916276f3e4ed029a426ceccd46ee6b1300bb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "When all of the requested bytes that can be provided have been loaded—including the possible [`contentInformationRequest`](avassetresourceloadingrequest/contentinformationrequest.md) data in the [`AVAssetResourceLoadingRequest`](avassetresourceloadingrequest.md) instance that contains the receiver—the delegate should respond by invoking [`finishLoading()`](avassetresourceloadingrequest/finishloading().md).",
+      "ko": "요청할 수 있는 바이트를 모두 로드하면(수신된 [`AVAssetResourceLoadingRequest`](avassetresourceloadingrequest.md) 인스턴스에 포함된 가능한 [`contentInformationRequest`](avassetresourceloadingrequest/contentinformationrequest.md) 데이터를 포함), 델리게이트는 [`finishLoading()`](avassetresourceloadingrequest/finishloading().md)을 호출하여 응답해야 합니다.",
+      "sourceHash": "e4bd26a4fd1133c35b0485b0f77882a0cfca8ce7d70ec915580b80073621fd06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "If the `requestedOffset` value is beyond the content length of the resource, the [`AVAssetResourceLoadingRequest`](avassetresourceloadingrequest.md) instance is sent a [`finishLoading()`](avassetresourceloadingrequest/finishloading().md) message without any prior invocations of [`respond(with:)`](avassetresourceloadingdatarequest/respond(with:).md).",
+      "ko": "`requestedOffset` 값이 리소스의 콘텐츠 길이보다 크면, [`respond(with:)`](avassetresourceloadingdatarequest/respond(with:).md)가 먼저 호출되지 않은 상태에서 [`AVAssetResourceLoadingRequest`](avassetresourceloadingrequest.md) 인스턴스에 [`finishLoading()`](avassetresourceloadingrequest/finishloading().md) 메시지가 전송됩니다.",
+      "sourceHash": "a5c6d1cdf55c58a76d55a546cf97361a7103b25719f0d2aad2cf62fafc0330ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[func respond(with: Data)](avassetresourceloadingdatarequest/respond(with:).md)",
+      "ko": "[func respond(with: Data)](avassetresourceloadingdatarequest/respond(with:).md)",
+      "sourceHash": "6540c69f9e6f37917081b76fe4e6b1f08371d289dbe69226874c2dcff2b45907",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "Provides data to the loading request.",
+      "ko": "로딩 요청에 데이터를 제공합니다.",
+      "sourceHash": "997ea706cd1623cbe19f8bfcddd0f43eeb2fac02412e839f24d6dd87e05f4a79",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var requestedLength: Int](avassetresourceloadingdatarequest/requestedlength.md)",
+      "ko": "[var requestedLength: Int](avassetresourceloadingdatarequest/requestedlength.md)",
+      "sourceHash": "71b36d21bf6f0f71998370b6ec5b1ecb045e1a28e4f7fa4cceb1cc26d306aaae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "The length, in bytes, of the data requested.",
+      "ko": "요청한 데이터의 길이(바이트)입니다.",
+      "sourceHash": "dee2bfb8dc592c35ec68da1012ebf0042d0c6dd14d41e44b4837062f6d9f0441",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var currentOffset: Int64](avassetresourceloadingdatarequest/currentoffset.md)",
+      "ko": "[var currentOffset: Int64](avassetresourceloadingdatarequest/currentoffset.md)",
+      "sourceHash": "cebb35abb91148692940e50731d981e04fe11e712010b7e00944767bb084d3f7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The position within the resource of the next byte.",
+      "ko": "리소스 내에서 다음 바이트의 위치입니다.",
+      "sourceHash": "106b88586338ccc1e56dfa8adb920becec1330f5fc4e5dce98d59760ec064eba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[var requestsAllDataToEndOfResource: Bool](avassetresourceloadingdatarequest/requestsalldatatoendofresource.md)",
+      "ko": "[var requestsAllDataToEndOfResource: Bool](avassetresourceloadingdatarequest/requestsalldatatoendofresource.md)",
+      "sourceHash": "15f2517eccefb2e14bc4b229eae26ae908ed2cbd7bbb3e526086910504a972ef",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "A Boolean value that indicates the entire remaining length of the resource from the offest to the end of the resource is being requested.",
+      "ko": "리소스의 오프셋부터 끝까지 남은 전체 길이가 요청 중임을 나타내는 부울 값입니다.",
+      "sourceHash": "b33b63375d7d680f22108a195dabfcbdaf3a84c18af20e5eac315e22e88b0169",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetresourceloadingdatarequest/requestedoffset)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetresourceloadingdatarequest/requestedoffset)*",
+      "sourceHash": "e8fc5f95d6b3321ea6abe797aee5ef7ee9e55204b7cbfd5ab2d13289c4ab994f",
+      "status": "preserved"
+    }
+  ]
+}

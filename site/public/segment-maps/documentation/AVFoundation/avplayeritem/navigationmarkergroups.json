@@ -1,0 +1,141 @@
+{
+  "docId": "documentation/AVFoundation/avplayeritem/navigationmarkergroups.md",
+  "title": "navigationMarkerGroups",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avplayeritem/navigationmarkergroups",
+  "segments": [
+    {
+      "id": "seg:heading:navigationmarkergroups:0000:0001",
+      "source": "navigationMarkerGroups",
+      "ko": "navigationMarkerGroups",
+      "sourceHash": "0f99ac18fa87f2b5be510b38bfe7a3dd22df45d1f7e19fc69b33056252e6aa56",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:navigationmarkergroups:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:navigationmarkergroups:0002:0001",
+      "source": "The time marker groups that provide ways to navigate the player item’s content.",
+      "ko": "The time marker groups that provide ways to navigate the player item’s content.",
+      "sourceHash": "4df24f683627fbdc7be054282bf85d133d658334b700c1186d9a817cbaa4dcf1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:navigationmarkergroups:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:navigationmarkergroups:0004:0001",
+      "source": "tvOS ?+",
+      "ko": "tvOS ?+",
+      "sourceHash": "e197a5f363006a02e522e5f07b216c8e4a4e9a6a147fcb43f9877e395882682a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar navigationMarkerGroups: [AVNavigationMarkersGroup] { get set }\n```",
+      "ko": "```swift\nvar navigationMarkerGroups: [AVNavigationMarkersGroup] { get set }\n```",
+      "sourceHash": "175c1b3b1f6c89f01b9174825c6b78a4a169ff602678180377ba24bde943b341",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "A navigation marker group provides a set of time markers for navigating playback.",
+      "ko": "A navigation marker group provides a set of time markers for navigating playback.",
+      "sourceHash": "c7df796f788727df4012c6339031eb121d9632c1f2bf409b1ba19edc45b62023",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The most common form of navigation marker group is a chapter list; however, you can also provide other sets of markers to allow a user to jump to significant events in the presentation.",
+      "ko": "The most common form of navigation marker group is a chapter list; however, you can also provide other sets of markers to allow a user to jump to significant events in the presentation.",
+      "sourceHash": "841d44a9fe7969b7afc660635a611330aaf566b1fcc23b287c5b1c185ae37fd2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "For example, a “Goals Scored” marker group might summarize key moments in a recorded sporting event.",
+      "ko": "For example, a “Goals Scored” marker group might summarize key moments in a recorded sporting event.",
+      "sourceHash": "964b859b53ea3af79bd8ac34250f18a9de3c9ed389682074bf95b422907ca33c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0004",
+      "source": "When you present a player item containing marker groups with the [`AVPlayerViewController`](https://developer.apple.com/documentation/AVKit/AVPlayerViewController) class, the user interface provides options for navigating each group.",
+      "ko": "When you present a player item containing marker groups with the [`AVPlayerViewController`](https://developer.apple.com/documentation/AVKit/AVPlayerViewController) class, the user interface provides options for navigating each group.",
+      "sourceHash": "217e0b21425d1b1e21ffa8c9c37ca2beea79a137971bad61f6f338e87e4e3719",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "To provide a chapter list, use the first item in the [`navigationMarkerGroups`](avplayeritem/navigationmarkergroups.md) array and set its title property to `nil`.",
+      "ko": "챕터 목록을 제공하려면 [`navigationMarkerGroups`](avplayeritem/navigationmarkergroups.md) 배열의 첫 번째 항목을 사용하고 해당 항목의 `title` 속성을 `nil`로 설정합니다.",
+      "sourceHash": "0b5ee0d8d84343f2ce390bb40415158a7af19f290075d1fa284893fd8b6dc33c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "To provide additional or alternate means of navigating content, use a unique title value for each navigation marker group in the array.",
+      "ko": "콘텐츠 탐색을 위한 추가 또는 대체 수단을 제공하려면 배열의 각 navigation marker group에 고유한 title 값을 사용합니다.",
+      "sourceHash": "f8d4ef72a3c56b2bd8291283701a893d38ea88981d9289323a7640159fb1d281",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var nextContentProposal: AVContentProposal?](avplayeritem/nextcontentproposal.md)",
+      "ko": "[var nextContentProposal: AVContentProposal?](avplayeritem/nextcontentproposal.md)",
+      "sourceHash": "2d0ae2973f1251925ab09a9dc0407a9dc8dcf034cae44382b579ecf588e9d5b9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "The item proposed to follow the current content.",
+      "ko": "현재 콘텐츠 뒤에 제안된 항목입니다.",
+      "sourceHash": "40929946d3cf4b0628b5169043a50b556fbe0e8f2c9d3a6d08a6e74e3dac5bbc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0013:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayeritem/navigationmarkergroups)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayeritem/navigationmarkergroups)*",
+      "sourceHash": "1e15acbfb125a1ced0e44a6c6d41481c6eba5a5de875f6fef053a130b7461a35",
+      "status": "preserved"
+    }
+  ]
+}

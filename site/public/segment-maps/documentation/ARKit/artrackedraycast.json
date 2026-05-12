@@ -1,0 +1,260 @@
+{
+  "docId": "documentation/ARKit/artrackedraycast.md",
+  "title": "ARTrackedRaycast",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/artrackedraycast",
+  "segments": [
+    {
+      "id": "seg:heading:artrackedraycast:0000:0001",
+      "source": "ARTrackedRaycast",
+      "ko": "ARTrackedRaycast",
+      "sourceHash": "efa03e042601ec15754af8a17122fe78e2f4494211543b3ba03f3bb3b8f6647e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:artrackedraycast:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: class",
+      "ko": "**Framework**: ARKit **Kind**: class",
+      "sourceHash": "cd2a2f048fbda3c62dc609eaaff263f2176c4a42225cdd27e4a416ceaee5a3f8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:artrackedraycast:0002:0001",
+      "source": "A raycast query that ARKit repeats in succession to give you refined results over time.",
+      "ko": "ARKit가 시간이 지남에 따라 점진적으로 정제된 결과를 제공하도록 연속으로 반복하는 레이캐스트 쿼리입니다.",
+      "sourceHash": "e78e939c7f998b5cdf232a3f057b91f57e190d768c81e8196072c604742f2a67",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:artrackedraycast:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:artrackedraycast:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:artrackedraycast:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:artrackedraycast:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass ARTrackedRaycast\n```",
+      "ko": "```swift\nclass ARTrackedRaycast\n```",
+      "sourceHash": "22bbc422ed215932844f7d4da88333a9d9e59d4e4500542390527a2d52ad5a5a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Tracked raycasting improves hit-testing techniques by repeating the query for a 3D position in succession.",
+      "ko": "추적 레이캐스팅은 3D 위치에 대한 쿼리를 연속으로 반복하여 히트 테스트 기법을 개선합니다.",
+      "sourceHash": "e4c64827bd2b3f94f346518814261f05559a7226975c74e200ec77a2de517553",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "ARKit provides you with an updated position as it refines its understanding of world over time.",
+      "ko": "ARKit는 세션이 월드에 대한 이해를 시간이 지남에 따라 정제하면서 갱신된 위치를 제공합니다.",
+      "sourceHash": "95807729261e1c98f47b839e6b3dbb55737ef87cbdcea577b89066ade6fd11da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "To start a tracked raycast, you call [`trackedRaycast(_:updateHandler:)`](arsession/trackedraycast(_:updatehandler:).md) on your app’s current [`ARSession`](arsession.md).",
+      "ko": "추적 레이캐스트를 시작하려면 앱의 현재 [`ARSession`](arsession.md)에서 [`trackedRaycast(_:updateHandler:)`](arsession/trackedraycast(_:updatehandler:).md) 메서드를 호출합니다.",
+      "sourceHash": "bc1c26501f199410d18ede58686290bff74ad1d2f73882dd26815b1a28687a1a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:stopping-tracking:0011:0001",
+      "source": "Stopping Tracking",
+      "ko": "추적 중지",
+      "sourceHash": "2ce0dc808436957ead6fe02f1f74c2293d44e1e35740e797dda9d86e90d294c3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:stopping-tracking:0012:0001",
+      "source": "[func stopTracking()](artrackedraycast/stoptracking.md)",
+      "ko": "[func stopTracking()](artrackedraycast/stoptracking.md)",
+      "sourceHash": "5556bbded76b0f7e244a29d803b46050bfce6cfd31d750ffe34c3efe05004f0f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:stopping-tracking:0013:0001",
+      "source": "Stops repeating the raycast query.",
+      "ko": "레이캐스트 쿼리의 반복 실행을 중지합니다.",
+      "sourceHash": "851c040d9867f72646b032b5a9875ce373d31717a0b8f16e05b50cf6a1ed106f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0014:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0015:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0016:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0017:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0018:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0019:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[Placing objects and handling 3D interaction](placing-objects-and-handling-3d-interaction.md)",
+      "ko": "[Placing objects and handling 3D interaction](placing-objects-and-handling-3d-interaction.md)",
+      "sourceHash": "8106553db34dc9f23a72907e5e47430170e5fd9a4c275179a9f7bf8b4ce87727",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Place virtual content at tracked, real-world locations, and enable the user to interact with virtual content by using gestures.",
+      "ko": "추적된 실제 세계 위치에 가상 콘텐츠를 배치하고, 제스처를 사용해 사용자가 가상 콘텐츠와 상호작용할 수 있도록 합니다.",
+      "sourceHash": "bb75d6b3c0c23e94bcc23a8e1d5c3164e4dd1d467be33a6159163b4dbad15ef4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[class ARRaycastQuery](arraycastquery.md)",
+      "ko": "[class ARRaycastQuery](arraycastquery.md)",
+      "sourceHash": "8488deac03d405ff0f437f3569d7a977c10ba1909850f36bdf61dd20b94a4172",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "A mathematical ray you use to find 3D positions on real-world surfaces.",
+      "ko": "실제 세계 표면에서 3D 위치를 찾는 데 사용하는 수학적 광선입니다.",
+      "sourceHash": "56cd74dc670e96e90155708abfcc55e5d43f5646546c98e4f388a55f2a710004",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[class ARRaycastResult](arraycastresult.md)",
+      "ko": "[class ARRaycastResult](arraycastresult.md)",
+      "sourceHash": "9e4836f870820a20e4b10f44ed28897d88bd2d4430fcd6a41f0e01d17f24472e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Information about a real-world surface found by examining a point on the screen.",
+      "ko": "화면의 한 점을 검사하여 발견된 실제 세계 표면에 대한 정보입니다.",
+      "sourceHash": "1f4e4b8e139d0796851ca2f69d3621e3c5308519c117a63518cbfb8c96e9e274",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0026:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/artrackedraycast)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/artrackedraycast)*",
+      "sourceHash": "5729a289c1b61e747e1379ce07549787511cd6f4b7f4399d46125fc4b7e8c14c",
+      "status": "preserved"
+    }
+  ]
+}

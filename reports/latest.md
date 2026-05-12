@@ -2,14 +2,14 @@
 
 ## Upstream
 
-- Latest SHA: sample-local
-- Last processed SHA: sample-local
+- Latest SHA: 8a29a1d75e67151b588206d3e921a4ff212726be
+- Last processed SHA: not set
 
 ## Summary
 
-- Files: 3
-- Translated files: 3
-- Failed segments: 0
+- Files: 339016
+- Translated files: 1567
+- Failed segments: 3295
 - Review needed: 0
 
 ## Site

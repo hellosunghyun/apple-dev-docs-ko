@@ -1,0 +1,169 @@
+{
+  "docId": "documentation/ARKit/arplanegeometry/triangleindices-64epx.md",
+  "title": "triangleIndices",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arplanegeometry/triangleindices-64epx",
+  "segments": [
+    {
+      "id": "seg:heading:triangleindices:0000:0001",
+      "source": "triangleIndices",
+      "ko": "triangleIndices",
+      "sourceHash": "a89d2cf4f93a3828ce53ddf9ee5338c7b12b9d71162f50c50d36bb2383c2bb6f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:triangleindices:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: property",
+      "ko": "**Framework**: ARKit **Kind**: property",
+      "sourceHash": "eebebd0c04c444b8ad7332b72cb6b5efed96fb65bd16793fa46eb608d4454b7e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:triangleindices:0002:0001",
+      "source": "An array of indices describing the triangle mesh formed by the plane geometry’s vertex data.",
+      "ko": "평면 메시의 정점 데이터로 구성된 삼각형 메시를 설명하는 인덱스 배열입니다.",
+      "sourceHash": "af11b7780e0ccad1d94c5e8dd78eb64958b5dd9b116a910ef838f44755e71808",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:triangleindices:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:triangleindices:0004:0001",
+      "source": "iOS 11.3+",
+      "ko": "iOS 11.3+",
+      "sourceHash": "fba68f35b90aebab5566c583fc9bc4f244d3043cf51de36da0c77cb658732dfb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:triangleindices:0004:0002",
+      "source": "iPadOS 11.3+",
+      "ko": "iPadOS 11.3+",
+      "sourceHash": "76b9181264a10f249e90eb787e124760bdfc1f6e5aa8ba446a290b382bb5ca4f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:triangleindices:0004:0003",
+      "source": "Mac Catalyst 11.3+",
+      "ko": "Mac Catalyst 11.3+",
+      "sourceHash": "f8f251690fd0a6362a18713b5aad04b532232481c11ece7df4006d46316d8ed3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\n@nonobjc\nvar triangleIndices: [Int16] { get }\n```",
+      "ko": "```swift\n@nonobjc\nvar triangleIndices: [Int16] { get }\n```",
+      "sourceHash": "8f9ada31b2d64aa9cb9954b2b4ab23b0bf04046e09ba08ae6de472bcea34037e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Each 16-bit integer value in this array represents an index into the [`vertices`](arplanegeometry/vertices-43kle.md) and [`textureCoordinates`](arplanegeometry/texturecoordinates-p801.md) arrays.",
+      "ko": "이 배열의 각 16비트 정수 값은 [`vertices`](arplanegeometry/vertices-43kle.md)와 [`textureCoordinates`](arplanegeometry/texturecoordinates-p801.md) 배열에 대한 인덱스를 나타냅니다.",
+      "sourceHash": "2437c7d53042680a759ab5dea5d835fc5ecbdb344bddd832f733caf2fbf38147",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Each set of three indices identifies the vertices that form a single triangle in the mesh.",
+      "ko": "세 개의 인덱스 집합은 메시에서 단일 삼각형을 구성하는 정점을 식별합니다.",
+      "sourceHash": "4beef3681ed2c8ae7229347baa2a87e3b131a9338e0f73ce4a85d4dc4c8d6079",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "You can use array as an index buffer for a triangle mesh in GPU-based rendering or to create 3D model asset files.",
+      "ko": "이 배열은 GPU 기반 렌더링에서 삼각형 메시의 인덱스 버퍼로 사용하거나 3D 모델 에셋 파일을 만들 때 사용할 수 있습니다.",
+      "sourceHash": "ebedd6957d35a873a850d011851778b5644a1f034c9d4fbcede1fc0f9636a691",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Each set of three indices forms a triangle, so the number of indices in the [`triangleIndices`](arplanegeometry/triangleindices-64epx.md) array is three times the [`triangleCount`](arplanegeometry/trianglecount.md) value.",
+      "ko": "세 개의 인덱스가 하나의 삼각형을 구성하므로, [`triangleIndices`](arplanegeometry/triangleindices-64epx.md) 배열의 인덱스 수는 [`triangleCount`](arplanegeometry/trianglecount.md) 값의 세 배입니다.",
+      "sourceHash": "33631539d1afdc2e398c8b910c7ea758d8d02c1c5cb8d0456db04d160b1bf3b2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var vertices: [simd_float3]](arplanegeometry/vertices-43kle.md)",
+      "ko": "[var vertices: [simd_float3]](arplanegeometry/vertices-43kle.md)",
+      "sourceHash": "3d8349e6babcb853a8c9e583885907cad6137ccdac5428260e3b7ed3151b36dd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "An array of vertex positions for each point in the plane mesh.",
+      "ko": "평면 메시의 각 점에 대한 정점 위치 배열입니다.",
+      "sourceHash": "21e6d6bb0adf9e78bffb35c498333eae643286092127692b304ca052dbab5fee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var textureCoordinates: [vector_float2]](arplanegeometry/texturecoordinates-p801.md)",
+      "ko": "[var textureCoordinates: [vector_float2]](arplanegeometry/texturecoordinates-p801.md)",
+      "sourceHash": "ee7248b54a48ab1a1bf77d2d0d359bd259a8a65d62c3cceeb989dae4e822baf5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "An array of texture coordinate values for each point in the plane mesh.",
+      "ko": "평면 메시의 각 점에 대한 텍스처 좌표 값 배열입니다.",
+      "sourceHash": "fa70539f095be582a2b846b5987d62b9f963d3cfcce463104dc4e99883ba3a71",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var triangleCount: Int](arplanegeometry/trianglecount.md)",
+      "ko": "[var triangleCount: Int](arplanegeometry/trianglecount.md)",
+      "sourceHash": "3b2a07b15e61c14faf1e45f1b0ac1b0d212e26c39f524462019e23a0da57f6d2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The number of triangles described by the [`triangleIndices`](arplanegeometry/triangleindices-1azi3.md) buffer.",
+      "ko": "[`triangleIndices`](arplanegeometry/triangleindices-1azi3.md) 버퍼로 설명되는 삼각형 개수입니다.",
+      "sourceHash": "348236dc89008c3dfac0b1cf9d2c7b5917caebaeda0fff2f35978c9097ff7892",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0017:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arplanegeometry/triangleindices-64epx)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arplanegeometry/triangleindices-64epx)*",
+      "sourceHash": "0fc94a2780f6a7c7ca3b570f61c21af1810a0f36e71eb6cb293c938a0d852a8a",
+      "status": "preserved"
+    }
+  ]
+}

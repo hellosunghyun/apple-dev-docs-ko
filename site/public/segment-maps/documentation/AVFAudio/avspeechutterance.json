@@ -1,0 +1,575 @@
+{
+  "docId": "documentation/AVFAudio/avspeechutterance.md",
+  "title": "AVSpeechUtterance",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avspeechutterance",
+  "segments": [
+    {
+      "id": "seg:heading:avspeechutterance:0000:0001",
+      "source": "AVSpeechUtterance",
+      "ko": "AVSpeechUtterance",
+      "sourceHash": "18558237f0209ead90896eecf046dbafc1cc91284aafb2e36f542b877a9ce538",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avspeechutterance:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avspeechutterance:0002:0001",
+      "source": "An object that encapsulates the text for speech synthesis and parameters that affect the speech.",
+      "ko": "음성 합성을 위한 텍스트와 음성에 영향을 주는 매개변수를 캡슐화하는 객체입니다.",
+      "sourceHash": "1da0c07802b664b21f0db6029d13acf9c12a56b111f5ce6b2315a858e6cee44e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avspeechutterance:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechutterance:0004:0001",
+      "source": "iOS 7.0+",
+      "ko": "iOS 7.0+",
+      "sourceHash": "1ceb179e72300483bbe4de83f94fa14777f1aa4ad49f5b26a004a90764f51fe7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechutterance:0004:0002",
+      "source": "iPadOS 7.0+",
+      "ko": "iPadOS 7.0+",
+      "sourceHash": "1f72093de273c2b8a1b0f4acad220b3881241f056b2b2168b48b64219a2708c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechutterance:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechutterance:0004:0004",
+      "source": "macOS 10.14+",
+      "ko": "macOS 10.14+",
+      "sourceHash": "627f17252db61b06e5a3a3bd4b059e0908f48979a7960122571777674bb41473",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechutterance:0004:0005",
+      "source": "tvOS ?+",
+      "ko": "tvOS ?+",
+      "sourceHash": "e197a5f363006a02e522e5f07b216c8e4a4e9a6a147fcb43f9877e395882682a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:avspeechutterance:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechutterance:0004:0007",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVSpeechUtterance\n```",
+      "ko": "```swift\nclass AVSpeechUtterance\n```",
+      "sourceHash": "8acf10439e5caac31bf25e34997aaeff910e7242489b8d395b793bff4c676e5e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "An `AVSpeechUtterance` is the basic unit of speech synthesis.",
+      "ko": "`AVSpeechUtterance`는 음성 합성의 기본 단위입니다.",
+      "sourceHash": "b5959a6a57ea872f74c3cd95bcf1738e7a9d52a85cf20eec03660a850777e079",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "To synthesize speech, create an `AVSpeechUtterance` instance with text you want a speech synthesizer to speak.",
+      "ko": "음성을 합성하려면 음성 합성기가 말하도록 할 텍스트로 `AVSpeechUtterance` 인스턴스를 생성합니다.",
+      "sourceHash": "2f589d0743334ab414437c21790929ede0652b41729f3a1e1bf2a40213461191",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "Optionally, change the [`voice`](avspeechutterance/voice.md), [`pitchMultiplier`](avspeechutterance/pitchmultiplier.md), [`volume`](avspeechutterance/volume.md), [`rate`](avspeechutterance/rate.md), [`preUtteranceDelay`](avspeechutterance/preutterancedelay.md), or [`postUtteranceDelay`](avspeechutterance/postutterancedelay.md) parameters for the utterance.",
+      "ko": "선택적으로 해당 발화의 [`voice`](avspeechutterance/voice.md), [`pitchMultiplier`](avspeechutterance/pitchmultiplier.md), [`volume`](avspeechutterance/volume.md), [`rate`](avspeechutterance/rate.md), [`preUtteranceDelay`](avspeechutterance/preutterancedelay.md), [`postUtteranceDelay`](avspeechutterance/postutterancedelay.md) 매개변수를 변경할 수 있습니다.",
+      "sourceHash": "581688c7dcf9822699dd3d14e1133990df72e9c1abcb15b9deb6b6c391e06f57",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0003",
+      "source": "Pass the utterance to an instance of [`AVSpeechSynthesizer`](avspeechsynthesizer.md) to begin speech, or enqueue the utterance to speak later if the synthesizer is already speaking.",
+      "ko": "발화를 [`AVSpeechSynthesizer`](avspeechsynthesizer.md) 인스턴스에 전달하면 음성 합성이 시작되며, 합성기가 이미 음성을 재생 중이면 해당 발화를 나중에 말하기 위해 큐에 넣습니다.",
+      "sourceHash": "7edc32f43f403a2d2e1e8363781d55028086bb2eba0482c9669e2fb605847551",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "Split a body of text into multiple utterances if you want to apply different speech parameters.",
+      "ko": "텍스트 본문을 여러 utterance로 분할하면 서로 다른 음성 매개변수를 개별적으로 적용할 수 있습니다.",
+      "sourceHash": "4b9ee7cc3756935637a40070f306bfef0d38c172f53f091955d6c4190a6b6287",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0002",
+      "source": "For example, you can emphasize a sentence by increasing the pitch and decreasing the rate of that utterance relative to others, or you can introduce pauses between sentences by putting each into an utterance with a leading or trailing delay.",
+      "ko": "예를 들어, 특정 utterance의 pitch를 높이고 rate를 낮춰 다른 utterance에 비해 해당 문장을 강조할 수 있으며, 문장 앞뒤에 지연이 있는 utterance로 나누어 문장 사이에 일시 정지를 추가할 수 있습니다.",
+      "sourceHash": "579b106b523ca42148f20243b6e23b2ec65077d676083a9dee7ae7ac727e5b97",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0001",
+      "source": "Set and use the [`AVSpeechSynthesizerDelegate`](avspeechsynthesizerdelegate.md) to receive notifications when the synthesizer starts or finishes speaking an utterance.",
+      "ko": "[`AVSpeechSynthesizerDelegate`](avspeechsynthesizerdelegate.md)를 설정하고 사용하여 utterance의 재생 시작 또는 종료 시 알림을 받을 수 있습니다.",
+      "sourceHash": "20f954e0b0cc8fa71330abcd77de30a84c8e9fbef144c86b5c2ec5e0ee85133d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0002",
+      "source": "Create an utterance for each meaningful unit in a body of text if you want to receive notifications as its speech progresses.",
+      "ko": "음성 출력이 진행되는 동안 알림을 받으려면 텍스트 본문의 각 의미 단위마다 utterance를 생성합니다.",
+      "sourceHash": "3afc5f112fd4d1a0541f1dbb26fe7625089c2f887dd58fd4c6060669634159db",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0012:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-an-utterance:0013:0001",
+      "source": "Creating an utterance",
+      "ko": "발화 생성",
+      "sourceHash": "01ff5444a46349282c95411833d894ccd472a95b147f498f0b34956c0db97c05",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-utterance:0014:0001",
+      "source": "[init(string: String)](avspeechutterance/init(string:).md)",
+      "ko": "[init(string: String)](avspeechutterance/init(string:).md)",
+      "sourceHash": "4634e5d28ff532a82224f78712e985c5900a337bc156537e036951ea79d8c030",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-an-utterance:0015:0001",
+      "source": "Creates an utterance with the text string that you specify for the speech synthesizer to speak.",
+      "ko": "음성 합성기가 읽을 텍스트 문자열로 utterance를 생성합니다.",
+      "sourceHash": "b2734122e78d9f27fa76d2c2e4ddee61cab58a8a36cc206ba83e1cccb55e5016",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-utterance:0016:0001",
+      "source": "[init(attributedString: NSAttributedString)](avspeechutterance/init(attributedstring:).md)",
+      "ko": "[init(attributedString: NSAttributedString)](avspeechutterance/init(attributedstring:).md)",
+      "sourceHash": "674dd757a5de1adcd84076418bdf4728e9a785066fd2273c57fe9ae18138ec4e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-an-utterance:0017:0001",
+      "source": "Creates an utterance with the attributed text string that you specify for the speech synthesizer to speak.",
+      "ko": "음성 합성기가 읽을 텍스트로 지정한 속성 문자열을 사용해 utterance를 생성합니다.",
+      "sourceHash": "8a90f0bf9da8552bea2019c2497e2d2ade7bdcb654b6bfc6dd1f29ec58b44799",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-utterance:0018:0001",
+      "source": "[let AVSpeechSynthesisIPANotationAttribute: String](avspeechsynthesisipanotationattribute.md)",
+      "ko": "[let AVSpeechSynthesisIPANotationAttribute: String](avspeechsynthesisipanotationattribute.md)",
+      "sourceHash": "49f9323387d0f0e6602941b936cd0513ec078b25f8f22fa185b222132a9e70c9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:creating-an-utterance:0019:0001",
+      "source": "A string that contains International Phonetic Alphabet (IPA) symbols the speech synthesizer uses to control pronunciation of certain words or phrases.",
+      "ko": "음성 합성기가 특정 단어 또는 구문의 발음을 제어하는 데 사용하는 국제 음성 기호(IPA) 심볼을 포함하는 문자열입니다.",
+      "sourceHash": "2542cb5213cd17b45ddf28734ae7cd79e4f1c4899c5f14ac8130bfaade49a38e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-utterance:0020:0001",
+      "source": "[init?(ssmlRepresentation: String)](avspeechutterance/init(ssmlrepresentation:)-8zam9.md)",
+      "ko": "[init?(ssmlRepresentation: String)](avspeechutterance/init(ssmlrepresentation:)-8zam9.md)",
+      "sourceHash": "71648e050f6248741254a2e0161423f8836a6fcec41c09a7919c718aaa65a7a9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-an-utterance:0021:0001",
+      "source": "Creates a speech utterance with an Speech Synthesis Markup Language (SSML) string.",
+      "ko": "Speech Synthesis Markup Language (SSML) 문자열로 음성 utterance를 생성합니다.",
+      "sourceHash": "fb4f107c2129f2fbde51226af235fc6caf1dc307d343e6b6e14e357cc3169487",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-an-utterance:0022:0001",
+      "source": "Configuring an utterance",
+      "ko": "발화 구성",
+      "sourceHash": "5e3d315e3bfa4bf92868646c419179d0e8570a709cf0d442b887f4845d27c4c3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-an-utterance:0023:0001",
+      "source": "[var voice: AVSpeechSynthesisVoice?](avspeechutterance/voice.md)",
+      "ko": "[var voice: AVSpeechSynthesisVoice?](avspeechutterance/voice.md)",
+      "sourceHash": "652202c840d75e24e83755ed73a29554e84b1ea5a0bda729da956f7e910a3e7e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-an-utterance:0024:0001",
+      "source": "The voice the speech synthesizer uses when speaking the utterance.",
+      "ko": "utterance를 말할 때 음성 합성기가 사용하는 음성입니다.",
+      "sourceHash": "1e190c613c192bf9ddc2fc317fe90a16f3aaaf45627a0fc29690d41cf5ed755c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-an-utterance:0025:0001",
+      "source": "[var pitchMultiplier: Float](avspeechutterance/pitchmultiplier.md)",
+      "ko": "[var pitchMultiplier: Float](avspeechutterance/pitchmultiplier.md)",
+      "sourceHash": "3ad852327621b828bc1719a17da3fc9f0dc7b50f6f54bfe06dc1710164e50eb1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-an-utterance:0026:0001",
+      "source": "The baseline pitch the speech synthesizer uses when speaking the utterance.",
+      "ko": "utterance를 말할 때 음성 합성기가 사용하는 기준 pitch입니다.",
+      "sourceHash": "8c3bb89bc88ee6644e3a741940c5a5953432359944903fd270e3bc30f5435e05",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-an-utterance:0027:0001",
+      "source": "[var volume: Float](avspeechutterance/volume.md)",
+      "ko": "[var volume: Float](avspeechutterance/volume.md)",
+      "sourceHash": "2126ba52cced97e4a2dbc0965d3ed73acabea8092ffb5a0b01dc786199fc293a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-an-utterance:0028:0001",
+      "source": "The volume the speech synthesizer uses when speaking the utterance.",
+      "ko": "utterance를 말할 때 음성 합성기가 사용하는 볼륨입니다.",
+      "sourceHash": "151ab9e14b9282f9ebfe9057ca55d89b1b684ba8992054629010e2aabff34449",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-an-utterance:0029:0001",
+      "source": "[var prefersAssistiveTechnologySettings: Bool](avspeechutterance/prefersassistivetechnologysettings.md)",
+      "ko": "[var prefersAssistiveTechnologySettings: Bool](avspeechutterance/prefersassistivetechnologysettings.md)",
+      "sourceHash": "8e141ac54008b1cc6a66ca845366ae752595e7792aecf782120975d7ea768aeb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-an-utterance:0030:0001",
+      "source": "A Boolean that specifies whether assistive technology settings take precedence over the property values of this utterance.",
+      "ko": "이 utterance의 property 값보다 보조 기술 설정이 우선 적용되는지 지정하는 Boolean 값입니다.",
+      "sourceHash": "944816c8861ac39516ff7c79449f702576f4af234282a4c56c8f6e1f2f89b32d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-utterance-timing:0031:0001",
+      "source": "Configuring utterance timing",
+      "ko": "발화 타이밍 구성",
+      "sourceHash": "5ba7d7eed3b2457b6d7e1b107f1f8322a0eca406c67f99b33a007fc59b6862d5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-utterance-timing:0032:0001",
+      "source": "[var rate: Float](avspeechutterance/rate.md)",
+      "ko": "[var rate: Float](avspeechutterance/rate.md)",
+      "sourceHash": "e9b0d0213d4d53a644317834bd57b1638c015c036548a48335fd5c41c531381e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-utterance-timing:0033:0001",
+      "source": "The rate the speech synthesizer uses when speaking the utterance.",
+      "ko": "utterance를 말할 때 음성 합성기가 사용하는 rate입니다.",
+      "sourceHash": "41d12a3e8ccc542bcd5b387081e88d3956cf074939adeaa4305cb84f48d12f58",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-utterance-timing:0034:0001",
+      "source": "[let AVSpeechUtteranceMinimumSpeechRate: Float](avspeechutteranceminimumspeechrate.md)",
+      "ko": "[let AVSpeechUtteranceMinimumSpeechRate: Float](avspeechutteranceminimumspeechrate.md)",
+      "sourceHash": "9c43207489ad8c6d69cbce38ebc879cd51c5d1fa5bb92a7d76ea926f3a5e72ab",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-utterance-timing:0035:0001",
+      "source": "The minimum rate the speech synthesizer uses when speaking an utterance.",
+      "ko": "utterance를 말할 때 음성 합성기가 사용하는 최소 rate입니다.",
+      "sourceHash": "ea56bc95fea71cc82b266d97dba40dbbd58d8e042937fdf1c4898edbf40c699c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-utterance-timing:0036:0001",
+      "source": "[let AVSpeechUtteranceMaximumSpeechRate: Float](avspeechutterancemaximumspeechrate.md)",
+      "ko": "[let AVSpeechUtteranceMaximumSpeechRate: Float](avspeechutterancemaximumspeechrate.md)",
+      "sourceHash": "2a7209ef19d4e208c38a12040c3834ed1816cc77037170daee8354c236e328b9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-utterance-timing:0037:0001",
+      "source": "The maximum rate the speech synthesizer uses when speaking an utterance.",
+      "ko": "utterance를 말할 때 음성 합성기가 사용하는 최대 rate입니다.",
+      "sourceHash": "08196e1bbe41bbc3d9e0cbe60067c652cd09a23c4d04fa7725656ee04c6d5261",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-utterance-timing:0038:0001",
+      "source": "[let AVSpeechUtteranceDefaultSpeechRate: Float](avspeechutterancedefaultspeechrate.md)",
+      "ko": "[let AVSpeechUtteranceDefaultSpeechRate: Float](avspeechutterancedefaultspeechrate.md)",
+      "sourceHash": "e2c953320ef6296a628910c990e12d780eaf08cb051f09dd2eb7bf7c4f4211ef",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-utterance-timing:0039:0001",
+      "source": "The default rate the speech synthesizer uses when speaking an utterance.",
+      "ko": "utterance를 말할 때 음성 합성기가 사용하는 기본 rate입니다.",
+      "sourceHash": "29b28ae53bd32259f575359b8f48f77323b5a0603a1a1ff256ad345fe3d8b8e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-utterance-timing:0040:0001",
+      "source": "[var preUtteranceDelay: TimeInterval](avspeechutterance/preutterancedelay.md)",
+      "ko": "[var preUtteranceDelay: TimeInterval](avspeechutterance/preutterancedelay.md)",
+      "sourceHash": "5b274514dcd6e45be885e113dafdbb98d07610257a8185a2917bd629b9eb4de4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-utterance-timing:0041:0001",
+      "source": "The amount of time the speech synthesizer pauses before speaking the utterance.",
+      "ko": "음성 합성기가 utterance를 말하기 전에 일시 정지하는 시간입니다.",
+      "sourceHash": "aac24cb29a22587708e85360c8aec54d45836a373710c87a0d4ca1c4220e86ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-utterance-timing:0042:0001",
+      "source": "[var postUtteranceDelay: TimeInterval](avspeechutterance/postutterancedelay.md)",
+      "ko": "[var postUtteranceDelay: TimeInterval](avspeechutterance/postutterancedelay.md)",
+      "sourceHash": "69c7b0693e554fae2a00486f337d45659acac0c6e67840318585a7abb38dcbab",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-utterance-timing:0043:0001",
+      "source": "The amount of time the speech synthesizer pauses after speaking an utterance before handling the next utterance in the queue.",
+      "ko": "음성 합성기가 하나의 utterance를 말한 뒤 큐의 다음 utterance를 처리하기 전에 일시 정지하는 시간입니다.",
+      "sourceHash": "7bd9e1c77d581552378fbe7ca887c8ff988be56ec768a39d6cf37f919206bb4b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:inspecting-utterance-text:0044:0001",
+      "source": "Inspecting utterance text",
+      "ko": "발화 텍스트 검사",
+      "sourceHash": "fb0fd96ff66f1f5d44323f84cfdf20bdfec9d32c2b0b518aeddd069987e4e665",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-utterance-text:0045:0001",
+      "source": "[var speechString: String](avspeechutterance/speechstring.md)",
+      "ko": "[var speechString: String](avspeechutterance/speechstring.md)",
+      "sourceHash": "2d91f1d9c624ac344d947a0b701e7d176dd78f9bc5adfa57fb9c26970070eb27",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-utterance-text:0046:0001",
+      "source": "A string that contains the text for speech synthesis.",
+      "ko": "음성 합성용 텍스트를 포함하는 문자열입니다.",
+      "sourceHash": "98b1fcd1ddff92c209116d5c1bf363d2e9cac81b13ea1232ef8e4584cde56e33",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-utterance-text:0047:0001",
+      "source": "[var attributedSpeechString: NSAttributedString](avspeechutterance/attributedspeechstring.md)",
+      "ko": "[var attributedSpeechString: NSAttributedString](avspeechutterance/attributedspeechstring.md)",
+      "sourceHash": "852b642a2d2964c66ffd0fc157218fa6123ef4ada1ddd309235d554a6243100e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-utterance-text:0048:0001",
+      "source": "An attributed string that contains the text for speech synthesis.",
+      "ko": "음성 합성용 텍스트를 포함하는 attributed string입니다.",
+      "sourceHash": "42b1a9c41bb54f99e27508d1a5d8efc876fc5efa3bad09ec0b13dfcd6a933be0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:initializers:0049:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0050:0001",
+      "source": "[convenience init?(SSMLRepresentation: String)](avspeechutterance/init(ssmlrepresentation:)-2aunp.md)",
+      "ko": "[convenience init?(SSMLRepresentation: String)](avspeechutterance/init(ssmlrepresentation:)-2aunp.md)",
+      "sourceHash": "03d6a423c658fc9ee66183f16b76fce8d135934886c72408d983611604b8aa55",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:initializers:0050:0002",
+      "source": "[init?(SSMLRepresentation: String)](avspeechutterance/init(ssmlrepresentation:)-7rl77.md)",
+      "ko": "[init?(SSMLRepresentation: String)](avspeechutterance/init(ssmlrepresentation:)-7rl77.md)",
+      "sourceHash": "84e30700aa7cbee0677f945596ad049d54f6ed1c25cc07230d8ad60d3160f83b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:initializers:0050:0003",
+      "source": "[init?(coder: NSCoder)](avspeechutterance/init(coder:).md)",
+      "ko": "[init?(coder: NSCoder)](avspeechutterance/init(coder:).md)",
+      "sourceHash": "50e2a8d63c3f06de6fec5b0fceefb4e35ab710fb24c4ab67f90d1666da0a24b7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0051:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0052:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0053:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0054:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0006",
+      "source": "[NSCoding](../Foundation/NSCoding.md)",
+      "ko": "[NSCoding](../Foundation/NSCoding.md)",
+      "sourceHash": "af607052cedc51e60ff863609cb573f7fdea5ddf489103c8b59416e9aa32e36a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0007",
+      "source": "[NSCopying](../Foundation/NSCopying.md)",
+      "ko": "[NSCopying](../Foundation/NSCopying.md)",
+      "sourceHash": "a3e3914d750a60e4b250a0090cdf594ea4328ed30cecb20ea43c55afb46b9005",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0008",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0009",
+      "source": "[NSSecureCoding](../Foundation/NSSecureCoding.md)",
+      "ko": "[NSSecureCoding](../Foundation/NSSecureCoding.md)",
+      "sourceHash": "e80dfbc2e883ff92db27afe0edc4d86a1a41b3b289cd23f70bb52edcc387180a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0056:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0057:0001",
+      "source": "[class AVSpeechSynthesisVoice](avspeechsynthesisvoice.md)",
+      "ko": "[class AVSpeechSynthesisVoice](avspeechsynthesisvoice.md)",
+      "sourceHash": "823688852ef124accab86da4dbb7be8cb529fd5a6d263c0b526a7f56235e466c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0058:0001",
+      "source": "A distinct voice for use in speech synthesis.",
+      "ko": "음성 합성에 사용되는 고유한 voice입니다.",
+      "sourceHash": "405717ad9581bf07495f4da32f26e4a69ec4498491fa8f5890c988b201beb6e0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0059:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0060:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avspeechutterance)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avspeechutterance)*",
+      "sourceHash": "59b00e85a3881cfc568dd334ed5dab5e07a95d5388007f6420c61c0fe81e571e",
+      "status": "preserved"
+    }
+  ]
+}

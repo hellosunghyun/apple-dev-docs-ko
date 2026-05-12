@@ -1,0 +1,729 @@
+{
+  "docId": "documentation/ARKit/creating-screen-annotations-for-objects-in-an-ar-experience.md",
+  "title": "Creating screen annotations for objects in an AR experience",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/creating-screen-annotations-for-objects-in-an-ar-experience",
+  "segments": [
+    {
+      "id": "seg:heading:creating-screen-annotations-for-objects-in-an-ar-experience:0000:0001",
+      "source": "Creating screen annotations for objects in an AR experience",
+      "ko": "AR 경험의 객체를 위한 화면 주석 만들기",
+      "sourceHash": "6f9af7a8c68335cae404b2628dd59f4c188a3dd4d8ddef2e56c4fae2aa7b8ef3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-screen-annotations-for-objects-in-an-ar-experience:0001:0001",
+      "source": "**Framework**: ARKit",
+      "ko": "**프레임워크**: ARKit",
+      "sourceHash": "f52f1f198768fecfb3eca7e0900afdc8bbc7fd0775dd02734574f44e18a1beee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-screen-annotations-for-objects-in-an-ar-experience:0002:0001",
+      "source": "Annotate an AR experience with virtual sticky notes that you display onscreen over real and virtual objects.",
+      "ko": "실제 객체와 가상 객체 위에 화면에 표시되는 가상 스티커 노트로 AR 경험을 주석 처리합니다.",
+      "sourceHash": "6107010ff78dcc90d8686b207ce358a5ed88c73128d78076ff00754a85a246ad",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-screen-annotations-for-objects-in-an-ar-experience:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:creating-screen-annotations-for-objects-in-an-ar-experience:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:creating-screen-annotations-for-objects-in-an-ar-experience:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:creating-screen-annotations-for-objects-in-an-ar-experience:0004:0003",
+      "source": "Mac Catalyst 13.0+",
+      "ko": "Mac Catalyst 13.0+",
+      "sourceHash": "d3bbfc64a16ca2617fa4bd761772bec991e6f8960375b3a7baff386418fb34b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:creating-screen-annotations-for-objects-in-an-ar-experience:0004:0004",
+      "source": "Xcode 16.0+",
+      "ko": "Xcode 16.0+",
+      "sourceHash": "30ee611d3d2b717bbfa7871816511cdfd583d65901972f2c52a53e259bdb2522",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0005:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0001",
+      "source": "At times, the user may want to annotate real or virtual objects in your AR experience.",
+      "ko": "때로는 사용자가 AR 경험에서 실제 객체 또는 가상 객체에 주석을 추가하려고 할 수 있습니다.",
+      "sourceHash": "4b5e7bdd65df6f2e059160419712df9eb997d09f9cc396fd4969d60683f3f18d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0002",
+      "source": "For example, they might want to place a virtual name plate on paintings at a museum.",
+      "ko": "예를 들어, 박물관의 그림에 가상 이름표를 배치하고자 할 수 있습니다.",
+      "sourceHash": "5e154fe4d33e2cd97e95f7c334920db2181612d10d31c2c9478848235cc4b27c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0003",
+      "source": "By fixing annotations to the screen, you enable the user to annotate their AR experience in *screen space*.",
+      "ko": "주석을 화면에 고정하면 사용자는 AR 경험을 *screen space*에서 주석 처리할 수 있습니다.",
+      "sourceHash": "c57cfc747fe5f38bbac63fc14c75d4a195a82eb6c7da4c5c2c52e8bd413aa3a1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0004",
+      "source": "To demonstrate screen-space annotations, this sample app enables the capability to tap the screen to place one or more virtual sticky notes with text in the real world.",
+      "ko": "To demonstrate screen-space annotations, this sample app enables the capability to tap the screen to place one or more virtual sticky notes with text in the real world.",
+      "sourceHash": "031f33c3cdf8b294e8c2be37a3f5b5b44967e86bc4cea7c52cb8b79a88ef9440",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0001",
+      "source": "Text displayed in screen space remains readable at all viewing angles and distances.",
+      "ko": "이 샘플 앱은 화면 공간 주석을 시연하기 위해 사용자가 화면을 탭하면 실제 세계에 텍스트가 포함된 하나 이상의 가상 스티커 노트를 배치할 수 있는 기능을 제공합니다.",
+      "sourceHash": "7e21069fd10893b7f39fd95186c4f1ebfeb4d17b90f4b9c3d7013675021793b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0002",
+      "source": "The sample app implements sticky notes using a [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView) that’s flush with the screen, which allows the user to quickly define the note’s text using regular touch input.",
+      "ko": "이 샘플 앱은 화면에 밀착된[`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView)를 사용해 스티커 노트를 구현하므로 사용자가 일반 터치 입력으로 노트의 텍스트를 빠르게 입력할 수 있습니다.",
+      "sourceHash": "383f369cbc57451d4fabeaa14f92e95ab8cb4b2fc86ac5e863536cbb6c07012e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0003",
+      "source": "Using UIKit to annotate an AR experience also provides the benefits of localization and accessibility.",
+      "ko": "AR 경험에 주석을 추가할 때 UIKit을 사용하면 로컬라이제이션과 접근성의 이점도 얻을 수 있습니다.",
+      "sourceHash": "1b19d6e3c65a1599f20cd23d3d37ec7d4984d2dfdc64a9a4c55ec878876884dc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0008:0001",
+      "source": "**Note**: This sample uses RealityKit to anchor virtual content in the real world.",
+      "ko": "**참고**: 이 샘플은 RealityKit을 사용해 가상 콘텐츠를 실제 세계에 고정합니다.",
+      "sourceHash": "6895475d37cac77789eee35df51f9159d4645364a5653d220cdacaf526f4e80f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0008:0002",
+      "source": "RealityKit requires iOS 13.",
+      "ko": "RealityKit에는 iOS 13이 필요합니다.",
+      "sourceHash": "90eb3cb037c0c18453e845500c6d2ff1a1b1ebae7049a7d9649a30d27ab1ee7f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0008:0003",
+      "source": "ARKit is not available in iOS Simulator.",
+      "ko": "ARKit은 iOS Simulator에서 사용할 수 없습니다.",
+      "sourceHash": "81400e8db3efe4de3af0e25cfc6149af4412b43458a30f553261ef4957e785c3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "To display text that’s anchored in world space instead, see [`Recognizing and Labeling Arbitrary Objects`](recognizing-and-labeling-arbitrary-objects.md).",
+      "ko": "대신 월드 공간에 고정된 텍스트를 표시하려면 [`Recognizing and Labeling Arbitrary Objects`](recognizing-and-labeling-arbitrary-objects.md)를 참조합니다.",
+      "sourceHash": "00ae55130f707d5579c43dec66a565dce05508ccf1ce67a22b97289cf6166e41",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:resolve-the-users-tap-to-a-3d-location:0010:0001",
+      "source": "Resolve the Users Tap to a 3d Location",
+      "ko": "사용자 탭을 3D 위치로 변환",
+      "sourceHash": "580354faaec490629547d19bbb1d6c914e2d861a7fece3ce4ebd54509778555f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:resolve-the-users-tap-to-a-3d-location:0011:0001",
+      "source": "To annotate an object in an AR experience, you first determine where it is in the physical environment.",
+      "ko": "AR 경험에서 객체에 주석을 추가하려면 먼저 물리적 환경에서 해당 위치를 확인해야 합니다.",
+      "sourceHash": "376409345128bb50b76c991eac5baabe309fda96930f3ae41ad86cdf0657cc22",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:resolve-the-users-tap-to-a-3d-location:0011:0002",
+      "source": "This sample app enables the user to tap the screen to place a sticky note by first adding a tap gesture recognizer to the view.",
+      "ko": "```swift\nfunc arViewGestureSetup() {\n    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedOnARView))\n    arView.addGestureRecognizer(tapGesture)\n    \n    let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipedDownOnARView))\n    swipeGesture.direction = .down\n    arView.addGestureRecognizer(swipeGesture)\n}\n```",
+      "sourceHash": "343d6bacf036568b09b089d9a50a252897bf39c5eb30b70e271777d07c445bb5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:resolve-the-users-tap-to-a-3d-location:0012:0001",
+      "source": "```swift\nfunc arViewGestureSetup() {\n    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedOnARView))\n    arView.addGestureRecognizer(tapGesture)\n    \n    let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipedDownOnARView))\n    swipeGesture.direction = .down\n    arView.addGestureRecognizer(swipeGesture)\n}\n```",
+      "ko": "```swift\nfunc arViewGestureSetup() {\n    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedOnARView))\n    arView.addGestureRecognizer(tapGesture)\n    \n    let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipedDownOnARView))\n    swipeGesture.direction = .down\n    arView.addGestureRecognizer(swipeGesture)\n}\n```",
+      "sourceHash": "9869508649a7d11b550dd62f7178d8bb83c9c65e0856584f5998ac5750e9045a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:resolve-the-users-tap-to-a-3d-location:0013:0001",
+      "source": "When the input handler is called, you read the tap screen coordinates by calling [`location(in:)`](https://developer.apple.com/documentation/UIKit/UIGestureRecognizer/location(in:)).",
+      "ko": "입력 핸들러가 호출되면 [`location(in:)`](https://developer.apple.com/documentation/UIKit/UIGestureRecognizer/location(in:))를 호출해 탭한 화면 좌표를 읽습니다.",
+      "sourceHash": "ed41e99634ffda33cc37f3008828e7b088b35134680b9a797078bfb2a320ac0a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:resolve-the-users-tap-to-a-3d-location:0014:0001",
+      "source": "```swift\nlet touchLocation = sender.location(in: arView)\n```",
+      "ko": "```swift\nlet touchLocation = sender.location(in: arView)\n```",
+      "sourceHash": "d9ba8a2f97080beeadfc8a3bd4579787d8226790bdd1d7326612c894b7a924de",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:resolve-the-users-tap-to-a-3d-location:0015:0001",
+      "source": "To get a 3D world position that corresponds to the tap location, cast a ray from the camera’s origin through the touch location to check for intersection with any real-world surfaces along that ray.",
+      "ko": "탭 위치에 대응하는 3D 월드 위치를 얻으려면 카메라의 원점에서 터치 위치로 레이를 투사해 해당 레이 상의 실제 세계 표면과의 교차 여부를 확인합니다.",
+      "sourceHash": "4bdc64465506597f297799fcfe2825c46e480034401ca60039a1a181cb4d5da3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:resolve-the-users-tap-to-a-3d-location:0016:0001",
+      "source": "```swift\nguard let raycastResult = arView.raycast(from: touchLocation, allowing: .estimatedPlane, alignment: .any).first else {\n    messageLabel.displayMessage(\"No surface detected, try getting closer.\", duration: 2.0)\n    return\n}\n```",
+      "ko": "```swift\nguard let raycastResult = arView.raycast(from: touchLocation, allowing: .estimatedPlane, alignment: .any).first else {\n    messageLabel.displayMessage(\"No surface detected, try getting closer.\", duration: 2.0)\n    return\n}\n```",
+      "sourceHash": "29176fc92511506c043261ec86761027af10795853e0f1a7e64c0405aec444c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:resolve-the-users-tap-to-a-3d-location:0017:0001",
+      "source": "If ARKit finds a planar surface where the user tapped, the ray-cast result provides you the 3D intersection point in [`worldTransform`](arraycastresult/worldtransform.md).",
+      "ko": "ARKit이 사용자가 탭한 위치에서 평면 표면을 찾으면 레이캐스트 결과에서 [`worldTransform`](arraycastresult/worldtransform.md)의 3D 교차 지점을 제공합니다.",
+      "sourceHash": "b79016d276da55c2b17c02169ab1f3a65ca5fbb414a9c8083e67b6a91450a9d3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:anchor-a-sticky-note-in-the-environment:0018:0001",
+      "source": "Anchor a Sticky Note in the Environment",
+      "ko": "환경에 스티커 노트 고정",
+      "sourceHash": "c9e0ba1a0668fa1e33a33561cc081f3b1c2044c47a4b513a75d5a3b38a8aef33",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:anchor-a-sticky-note-in-the-environment:0019:0001",
+      "source": "To keep track of a real-world location, you create an anchor positioned there.",
+      "ko": "실제 세계 위치를 추적하려면 해당 위치에 앵커를 생성합니다.",
+      "sourceHash": "df47761cb892930b87cddc7cd29e9fce04c9dddfecbb2e10e2468159df52dd84",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:anchor-a-sticky-note-in-the-environment:0019:0002",
+      "source": "RealityKit implements an anchor as an [`Entity`](https://developer.apple.com/documentation/RealityKit/Entity) conforming to [`HasAnchoring`](https://developer.apple.com/documentation/RealityKit/HasAnchoring).",
+      "ko": "RealityKit은 앵커를 [`HasAnchoring`](https://developer.apple.com/documentation/RealityKit/HasAnchoring)을 준수하는 [`Entity`](https://developer.apple.com/documentation/RealityKit/Entity)로 구현합니다.",
+      "sourceHash": "0c6eabfde10a5b0523fe196a8989d818c6beff3944647abc80189f303c94d44c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:anchor-a-sticky-note-in-the-environment:0019:0003",
+      "source": "Thus, you implement those protocols when designing a sticky note in RealityKit.",
+      "ko": "따라서 RealityKit에서 스티커 노트를 설계할 때 이러한 프로토콜을 구현합니다.",
+      "sourceHash": "561459fdba243ca02d5dd2016b47a9f5e7f8d2fc9524309dc54bfb9c42e360d0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:anchor-a-sticky-note-in-the-environment:0020:0001",
+      "source": "```swift\nclass StickyNoteEntity: Entity, HasAnchoring, HasScreenSpaceView {\n    // ...\n```",
+      "ko": "```swift\nclass StickyNoteEntity: Entity, HasAnchoring, HasScreenSpaceView {\n    // ...\n```",
+      "sourceHash": "bc4b3f65fb1b566596dd8dc6e0c080de1b64d15596ffcc578a02dab85ad74ea8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:anchor-a-sticky-note-in-the-environment:0021:0001",
+      "source": "Create the entity by calling its initializer and passing in the ray-cast result’s [`worldTransform`](arraycastresult/worldtransform.md).",
+      "ko": "레이라트 결과의 [`worldTransform`](arraycastresult/worldtransform.md)을 전달해 이니셜라이저를 호출해 엔티티를 생성합니다.",
+      "sourceHash": "24ecb1c85fdd82e9b1de97737f56a89a1e8f9de3f4d8ef02f7e2fc4a606efaec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:anchor-a-sticky-note-in-the-environment:0022:0001",
+      "source": "```swift\nlet note = StickyNoteEntity(frame: frame, worldTransform: raycastResult.worldTransform)\n```",
+      "ko": "```swift\nlet note = StickyNoteEntity(frame: frame, worldTransform: raycastResult.worldTransform)\n```",
+      "sourceHash": "1d543366e3181406cd7fa0a627fec45d22b390e7b9f8d99e2b333d5bf77c1f27",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:anchor-a-sticky-note-in-the-environment:0023:0001",
+      "source": "In the sticky note entity’s `init` function, position the entity at the tap location by setting its transformation matrix to the argument [`worldTransform`](arraycastresult/worldtransform.md).",
+      "ko": "스티커 노트 엔티티의 `init` 함수에서 `worldTransform`](arraycastresult/worldtransform.md) 인수를 변환 행렬로 설정해 엔티티를 탭 위치에 배치합니다.",
+      "sourceHash": "2e6f470c7f81ee40fd5c22e948a47f43e8fc869efc153b5341ef66919fd23a8a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:anchor-a-sticky-note-in-the-environment:0024:0001",
+      "source": "```swift\ninit(frame: CGRect, worldTransform: simd_float4x4) {\n    super.init()\n    self.transform.matrix = worldTransform\n    // ...\n```",
+      "ko": "```swift\ninit(frame: CGRect, worldTransform: simd_float4x4) {\n    super.init()\n    self.transform.matrix = worldTransform\n    // ...\n```",
+      "sourceHash": "c241d71ee0331efb05b1ae5836b845928f6d3a9042e72d1648fe7ade6fcad3c5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:anchor-a-sticky-note-in-the-environment:0025:0001",
+      "source": "Let RealityKit know about your entity by adding it to the scene hierarchy.",
+      "ko": "엔티티를 장면 계층에 추가하여 RealityKit에 엔티티를 알립니다.",
+      "sourceHash": "6acd2dc351e6f083687ae001dbeca3f209e58ecb0e53a47a2d8b6778f52f2efd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:anchor-a-sticky-note-in-the-environment:0025:0002",
+      "source": "RealityKit then registers an [`ARAnchor`](aranchor.md) for your entity with ARKit.",
+      "ko": "그러면 RealityKit이 ARKit에 해당 엔티티의 [`ARAnchor`](aranchor.md)를 등록합니다.",
+      "sourceHash": "d3665e67fecd3e8fa88ce0fd95d13402a514e73d23b0cb0771932ee2a1b3807f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:anchor-a-sticky-note-in-the-environment:0026:0001",
+      "source": "```swift\n// Add the sticky note to the scene's entity hierarchy.\narView.scene.addAnchor(note)\n```",
+      "ko": "```swift\n// Add the sticky note to the scene's entity hierarchy.\narView.scene.addAnchor(note)\n```",
+      "sourceHash": "f99e29909d8242a62675643c14c7428837a219adf2beefd79cdb322889932fbf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:display-the-sticky-notes-annotation:0027:0001",
+      "source": "Display the Sticky Notes Annotation",
+      "ko": "스티커 노트 주석 표시",
+      "sourceHash": "8c6d1d20f4dfbbae57cf9acd051220bbdbb5545047a2281302ac4747349a615c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0028:0001",
+      "source": "For the purposes of this sample app, the sticky note entity has no geometry and thus, no appearance.",
+      "ko": "이 샘플 앱에서는 스티커 노트 엔티티에 기하가 없어 형태가 없습니다.",
+      "sourceHash": "bef4eb1ee8a48cbd6e5ef64421513adc4837477ea6af71d8da1baead7b55df6c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0028:0002",
+      "source": "Its anchor provides a 3D location only, and it’s the sticky note’s screen-space annotation that has an appearance.",
+      "ko": "이 앵커는 3D 위치만 제공하므로 스티커 노트의 화면 공간 주석에만 표시가 있습니다.",
+      "sourceHash": "16c6efb21ee9e507b99cd30b4c71d2614f3c739c61700452c0601450306c4273",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0028:0003",
+      "source": "To display it, you define the sticky note’s annotation.",
+      "ko": "이를 표시하려면 스티커 노트의 주석을 정의합니다.",
+      "sourceHash": "9047baff27e60bad2fcb071b1a7f3773066ba9b33a5b646d577937aba6b3177a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0028:0004",
+      "source": "Following RealityKit’s entity-component model, design a component that houses the annotation, which in this case is a view.",
+      "ko": "RealityKit의 엔티티-컴포넌트 모델에 따라 주석을 포함하는 컴포넌트를 설계하는데, 이 경우 컴포넌트는 뷰입니다.",
+      "sourceHash": "bf4d3e12c3ac5e8156df5d875a518d5018b1897c410c526bd7123598af44edf9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0028:0005",
+      "source": "See `ScreenSpaceComponent.swift`.",
+      "ko": "`ScreenSpaceComponent.swift`를 참조합니다.",
+      "sourceHash": "f7078362e5ef233db3854e7a915abc49ee747d255a7a22d529668c92c6465f8f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:display-the-sticky-notes-annotation:0029:0001",
+      "source": "```swift\nstruct ScreenSpaceComponent: Component {\n    var view: StickyNoteView?\n    //...\n```",
+      "ko": "```swift\nstruct ScreenSpaceComponent: Component {\n    var view: StickyNoteView?\n    //...\n```",
+      "sourceHash": "038b9dd2076191cedcddeb4f6d2911940ed8e8ad75f3396b012a40eea8b4d342",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0030:0001",
+      "source": "As a prepackaged UI element that renders text for you, [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView) is useful as a screen-space annotation.",
+      "ko": "텍스트를 렌더링해 주는 사전 패키지 UI 요소로서 [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView)가 화면 공간 주석에 유용합니다.",
+      "sourceHash": "093341fbf6bb6395d08aba8482f763d5d79830389e3440b1a7ad207cd15e19ff",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:display-the-sticky-notes-annotation:0031:0001",
+      "source": "```swift\nclass StickyNoteView: UIView {\n    var textView: UITextView!\n    // ...\n```",
+      "ko": "```swift\nclass StickyNoteView: UIView {\n    var textView: UITextView!\n    // ...\n```",
+      "sourceHash": "0967d7b0b918bab20fbc4eaf9f0f2dc88aff84e0598140cca7fd018a6fc4bf6a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0032:0001",
+      "source": "Expose the screen-space component in its own protocol.",
+      "ko": "화면 공간 컴포넌트를 자체 프로토콜로 노출합니다.",
+      "sourceHash": "1cd40e56d826aa9d0ec3dd3baf8f0472f111c565e5c0a7fb42c3f42d3ddf1943",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:display-the-sticky-notes-annotation:0033:0001",
+      "source": "```swift\nprotocol HasScreenSpaceView: Entity {\n    var screenSpaceComponent: ScreenSpaceComponent { get set }\n}\n```",
+      "ko": "```swift\nprotocol HasScreenSpaceView: Entity {\n    var screenSpaceComponent: ScreenSpaceComponent { get set }\n}\n```",
+      "sourceHash": "0bda23d4c4d356c9101bc9b96c7cb6d581db875febdbf1ac6fc726284f887382",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0034:0001",
+      "source": "Implement the protocol in your entity; see `StickyNoteEntity.swift`.",
+      "ko": "엔티티에서 해당 프로토콜을 구현합니다. `StickyNoteEntity.swift`를 확인합니다.",
+      "sourceHash": "97c07bddc0e27d87f0236666e6018a355db677b73082b290a8735faeb5691555",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:display-the-sticky-notes-annotation:0035:0001",
+      "source": "```swift\nclass StickyNoteEntity: Entity, HasAnchoring, HasScreenSpaceView {\n    // ...\n```",
+      "ko": "```swift\nclass StickyNoteEntity: Entity, HasAnchoring, HasScreenSpaceView {\n    // ...\n```",
+      "sourceHash": "bc4b3f65fb1b566596dd8dc6e0c080de1b64d15596ffcc578a02dab85ad74ea8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0036:0001",
+      "source": "To display the entity’s annotation, add the sticky-note view to the view hierarchy.",
+      "ko": "엔티티의 주석을 표시하려면 스티커 노트 뷰를 뷰 계층에 추가합니다.",
+      "sourceHash": "1bac15a690f050de342704678e245d6e46a18879e7db997118a3ead50910f607",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:display-the-sticky-notes-annotation:0037:0001",
+      "source": "```swift\n// Add the sticky note's view to the view hierarchy.\nguard let stickyView = note.view else { return }\narView.insertSubview(stickyView, belowSubview: trashZone)\n```",
+      "ko": "```swift\n// Add the sticky note's view to the view hierarchy.\nguard let stickyView = note.view else { return }\narView.insertSubview(stickyView, belowSubview: trashZone)\n```",
+      "sourceHash": "282a0524c7a3d3aeee23d7289637b56e9b229831abf0ce8eb47a6ec9331037a0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0038:0001",
+      "source": "To put the annotation in the right place on the screen, ask the [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView) to convert its entity’s world location to a 2D screen point.",
+      "ko": "주석을 화면의 정확한 위치에 배치하려면 [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView)에 엔티티의 월드 위치를 2D 화면 좌표로 변환하라고 요청합니다.",
+      "sourceHash": "2c23d219ddf7a472694077357d2d4e04c52aa2c01b19caf07ee45e25e8e19286",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:display-the-sticky-notes-annotation:0039:0001",
+      "source": "```swift\nguard let projectedPoint = arView.project(note.position) else { return }\n```",
+      "ko": "```swift\nguard let projectedPoint = arView.project(note.position) else { return }\n```",
+      "sourceHash": "3fcdd6bd512f2a65c1c00a0b7707cc1273b24af673c01753523415ba09ea18fa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0040:0001",
+      "source": "To enhance visual accuracy, center the note’s view around the anchor’s projected world location.",
+      "ko": "시각적 정확도를 높이려면 앵커의 투영된 월드 위치를 기준으로 노트의 뷰를 가운데 정렬합니다.",
+      "sourceHash": "bce5a93008fae16893f12a0b28d4ae9231b3ceb01f1cd071745e42ee54240d8a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:display-the-sticky-notes-annotation:0041:0001",
+      "source": "```swift\nsetPositionCenter(projectedPoint)\n```",
+      "ko": "```swift\nsetPositionCenter(projectedPoint)\n```",
+      "sourceHash": "49a3d56f9b3d967337bbac9e37e824b75f0a260f373b915a3300304ee4f62471",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:display-the-sticky-notes-annotation:0042:0001",
+      "source": "To do that, calculate the midpoint and set the view’s origin.",
+      "ko": "이를 위해 중간점을 계산해 뷰의 원점을 설정합니다.",
+      "sourceHash": "c518aa0fc03cd2056ca507c4ec5dc1f1a4f3c574d1efc3c34804288c3aa09214",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:display-the-sticky-notes-annotation:0043:0001",
+      "source": "```swift\nview.frame.origin = CGPoint(x: centerPoint.x, y: centerPoint.y)\n```",
+      "ko": "```swift\nview.frame.origin = CGPoint(x: centerPoint.x, y: centerPoint.y)\n```",
+      "sourceHash": "afbe5fb1213d9c573d295eb090c0cbbc0297daa78dd1833eca6b89703137be6e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:update-the-annotations-position:0044:0001",
+      "source": "Update the Annotations Position",
+      "ko": "주석 위치 업데이트",
+      "sourceHash": "861ad498dcd721d10cb6f9dd6426f759d468a51f491981a1ec94bcf2068ad0b7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:update-the-annotations-position:0045:0001",
+      "source": "Because users move their device during an AR experience, the annotation’s screen position quickly becomes out of sync with its anchor’s world position.",
+      "ko": "사용자가 AR 경험에서 기기를 이동하면 주석의 화면 위치가 앵커의 월드 위치와 빠르게 맞지 않게 됩니다.",
+      "sourceHash": "d9c3b47c0fd607b5f67a2c3f8fe1a4e4911426b5b8d96eaecfcc20297871e068",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:update-the-annotations-position:0045:0002",
+      "source": "To keep the annotation’s screen position accurate, call [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView)‘s `project` function every frame, updating the annotation’s position with the result.",
+      "ko": "주석의 화면 위치를 정확히 유지하려면 [`ARView`](https://developer.apple.com/documentation/RealityKit/ARView)의 `project` 함수를 매 프레임 호출하고 결과로 주석의 위치를 갱신합니다.",
+      "sourceHash": "5396e73d1e249f770d0a7fd9630a945997656668148b71f3360b8f3464af7e17",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:update-the-annotations-position:0046:0001",
+      "source": "```swift\n// Updates the screen position of the note based on its visibility\nnote.projection = Projection(projectedPoint: projectedPoint, isVisible: isVisible)\nnote.updateScreenPosition()\n```",
+      "ko": "```swift\n// Updates the screen position of the note based on its visibility\nnote.projection = Projection(projectedPoint: projectedPoint, isVisible: isVisible)\nnote.updateScreenPosition()\n```",
+      "sourceHash": "d2b1275761cf7e18580be971938e53a30b5695e6300ebeaf55d32e12879f17b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:handle-user-interaction:0047:0001",
+      "source": "Handle User Interaction",
+      "ko": "사용자 상호작용 처리",
+      "sourceHash": "f8bd3d51172d53874fed6e703fe6e1c3a8ca286d47758f74e642240486f5e192",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0048:0001",
+      "source": "A benefit of using [`UIView`](https://developer.apple.com/documentation/UIKit/UIView) types for screen annotations is that they simplify user interaction.",
+      "ko": "스크린 주석에 [`UIView`](https://developer.apple.com/documentation/UIKit/UIView) 타입을 사용하면 사용자 상호작용을 간소화할 수 있습니다.",
+      "sourceHash": "f05aaa63f779ae98208c402672cdd8bee355c8a3264a5d3093ac4e893c384fa3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0048:0002",
+      "source": "The sample implements sticky notes using [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView), which enables users to more easily edit their text.",
+      "ko": "샘플은 [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView)를 사용해 스티커 노트를 구현하며, 사용자가 텍스트를 더 쉽게 편집할 수 있도록 합니다.",
+      "sourceHash": "547303e9e0f7aad3c980bd97537ba8bf014fa6c287559c9804b0fd4e682e2372",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0048:0003",
+      "source": "The sample implements minimal gesture recognizer code to manage sticky notes.",
+      "ko": "샘플은 스티커 노트를 관리하는 최소한의 제스처 인식기 코드를 구현합니다.",
+      "sourceHash": "d43c5ce09b11fb630ca1b7de781288ac654ef32808bf42c0770a182ffcf0c346",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0049:0001",
+      "source": "The following code enables the capability to create a note by tapping the screen.",
+      "ko": "다음 코드는 화면을 탭해 노트를 생성하는 기능을 제공합니다.",
+      "sourceHash": "b90e974ee2df275b6de75eb649e027e6214aa6ee755c53e2d404171b3289f483",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:handle-user-interaction:0050:0001",
+      "source": "```swift\n@objc\nfunc tappedOnARView(_ sender: UITapGestureRecognizer) {\n    \n    // Ignore the tap if the user is editing a sticky note.\n    for note in stickyNotes where note.isEditing { return }\n    \n    // Create a new sticky note at the tap location.\n    insertNewSticky(sender)\n}\n```",
+      "ko": "```swift\n@objc\nfunc tappedOnARView(_ sender: UITapGestureRecognizer) {\n    \n    // Ignore the tap if the user is editing a sticky note.\n    for note in stickyNotes where note.isEditing { return }\n    \n    // Create a new sticky note at the tap location.\n    insertNewSticky(sender)\n}\n```",
+      "sourceHash": "3fea9855709210bcc1cb09485e96b8312bb737569c9fee32119658b3349ff11a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0051:0001",
+      "source": "By implementing its own tap gesture recognizer to control editing, [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView) enables the user to tap an existing note to edit its text.",
+      "ko": "편집을 제어하기 위해 자체 탭 제스처 인식기를 구현하면 [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView)는 사용자가 기존 노트를 탭해 텍스트를 편집할 수 있게 합니다.",
+      "sourceHash": "de8c74d2efd5202ac9fcd8b62a1f2ef14f5bc5b27fef5ecf903c7259c4974c32",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0051:0002",
+      "source": "To be notified when the user edits a note, override [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView)’s `textViewDidBeginEditing(_ textView:)` delegate callback.",
+      "ko": "사용자가 노트를 편집할 때 알림을 받으려면 [`UITextView`](https://developer.apple.com/documentation/UIKit/UITextView)의 `textViewDidBeginEditing(_ textView:)` 델리게이트 콜백을 재정의합니다.",
+      "sourceHash": "85e606d76867d31bfbc580a8eb310a1225add023bd7beaf5ea4c9dbf2efc7f21",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:handle-user-interaction:0052:0001",
+      "source": "```swift\nextension ViewController: UITextViewDelegate {\n    \n    // - Tag: TextViewDidBeginEditing\n    func textViewDidBeginEditing(_ textView: UITextView) {\n\n\n        // Get the main view for this sticky note.\n        guard let stickyView = textView.firstSuperViewOfType(StickyNoteView.self) else { return }\n        // ...\n\n```",
+      "ko": "```swift\nextension ViewController: UITextViewDelegate {\n    \n    // - Tag: TextViewDidBeginEditing\n    func textViewDidBeginEditing(_ textView: UITextView) {\n\n\n        // Get the main view for this sticky note.\n        guard let stickyView = textView.firstSuperViewOfType(StickyNoteView.self) else { return }\n        // ...\n\n```",
+      "sourceHash": "a542883cc3a959977e9893a1287d275632015e1bb6c94f8c6074cd3d9657e87b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0053:0001",
+      "source": "The following code enables the capability to move a note by panning the screen.",
+      "ko": "다음 코드는 화면을 팬 제스처로 이동해 노트를 이동할 수 있는 기능을 활성화합니다.",
+      "sourceHash": "55021e6f16e5cc963ce1bfcab5d17c35a9a89024c648a19633ef7df47700917f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:handle-user-interaction:0054:0001",
+      "source": "```swift\n@objc\nfunc panOnStickyView(_ sender: UIPanGestureRecognizer) {\n    \n    guard let stickyView = sender.view as? StickyNoteView else { return }\n    \n    let panLocation = sender.location(in: arView)\n    \n    // Ignore the pan if any StickyViews are being edited.\n    for note in stickyNotes where note.isEditing { return }\n    \n    panStickyNote(sender, stickyView, panLocation)\n}\n```",
+      "ko": "```swift\n@objc\nfunc panOnStickyView(_ sender: UIPanGestureRecognizer) {\n    \n    guard let stickyView = sender.view as? StickyNoteView else { return }\n    \n    let panLocation = sender.location(in: arView)\n    \n    // Ignore the pan if any StickyViews are being edited.\n    for note in stickyNotes where note.isEditing { return }\n    \n    panStickyNote(sender, stickyView, panLocation)\n}\n```",
+      "sourceHash": "b058223102c8f393dd809b1053fb7882ba9c5ce60cd1bc23e51d377700f9ca6d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0055:0001",
+      "source": "When the user pans to reposition a sticky note, you convert the screen touch location to a 3D world position using [`raycast(from:allowing:alignment:)`](https://developer.apple.com/documentation/RealityKit/ARView/raycast(from:allowing:alignment:)).",
+      "ko": "사용자가 스티커 노트를 재배치할 때, 화면 터치 위치를 [`raycast(from:allowing:alignment:)`](https://developer.apple.com/documentation/RealityKit/ARView/raycast(from:allowing:alignment:))를 사용해 3D 월드 위치로 변환합니다.",
+      "sourceHash": "6de7147691c7194e8ddeb8e068dd18185162931f6a0bd89958842cb538aad4a3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0055:0002",
+      "source": "The user can then reposition the sticky note’s anchor in the real world versus simply moving the annotation to a new arbitrary screen location.",
+      "ko": "이후 사용자는 임의의 화면 위치로 주석을 단순히 이동하는 대신 실제 세계에서 스티커 노트의 앵커를 재배치할 수 있습니다.",
+      "sourceHash": "6e4865225f3ca670ae6fcf66702a8eefdf0df37753829abc4cedd146f51b2e69",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0055:0003",
+      "source": "If a ray cast from the final screen location in the pan gesture doesn’t produce an intersection with a 3D world location, don’t move the sticky note there.",
+      "ko": "팬 제스처의 마지막 화면 위치에서 레이캐스트를 실행했을 때 3D 월드 위치와의 교차가 감지되지 않으면 해당 위치로 스티커 노트를 이동하지 않습니다.",
+      "sourceHash": "7681a9df82a9d085f7c3b79538b5298cdaa2d56b8a4a47f22f114c67dab8a8f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:handle-user-interaction:0056:0001",
+      "source": "```swift\nfileprivate func attemptRepositioning(_ stickyView: StickyNoteView) {\n    // Conducts a ray-cast for feature points using the panned position of the StickyNoteView\n    let point = CGPoint(x: stickyView.frame.midX, y: stickyView.frame.midY)\n    if let result = arView.raycast(from: point, allowing: .estimatedPlane, alignment: .any).first {\n        stickyView.stickyNote.transform.matrix = result.worldTransform\n    } else {\n        messageLabel.displayMessage(\"No surface detected, unable to reposition note.\", duration: 2.0)\n        stickyView.stickyNote.shouldAnimate = true\n    }\n}\n```",
+      "ko": "```swift\nfileprivate func attemptRepositioning(_ stickyView: StickyNoteView) {\n    // Conducts a ray-cast for feature points using the panned position of the StickyNoteView\n    let point = CGPoint(x: stickyView.frame.midX, y: stickyView.frame.midY)\n    if let result = arView.raycast(from: point, allowing: .estimatedPlane, alignment: .any).first {\n        stickyView.stickyNote.transform.matrix = result.worldTransform\n    } else {\n        messageLabel.displayMessage(\"No surface detected, unable to reposition note.\", duration: 2.0)\n        stickyView.stickyNote.shouldAnimate = true\n    }\n}\n```",
+      "sourceHash": "06f28fe299be8f0adac211b966349d74e2643dd3cfdbf9b6f18cbdbaf7c09e8b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:handle-user-interaction:0057:0001",
+      "source": "The following portion of the pan gesture handler enables the capability to remove a sticky note when the user drags it to the text that says “delete” at the top of the screen.",
+      "ko": "다음 pan 제스처 처리 부분은 사용자가 화면 상단의 \"delete\" 텍스트로 끌어올 때 스티커 노트를 삭제할 수 있는 기능을 지원합니다.",
+      "sourceHash": "78e98ceed702e4b2541937bf92fab6cffb6cbf2d7101bab508ae468afc7cc31c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:handle-user-interaction:0058:0001",
+      "source": "```swift\nif stickyView.isInTrashZone {\n    deleteStickyNote(stickyView.stickyNote)\n    // ...\n```",
+      "ko": "```swift\nif stickyView.isInTrashZone {\n    deleteStickyNote(stickyView.stickyNote)\n    // ...\n```",
+      "sourceHash": "a8584325a46f672d3c1f76574b622118c6b7ecb53ae6b17ea05ffab51edd8249",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:enhance-the-experience-with-animation:0059:0001",
+      "source": "Enhance the Experience with Animation",
+      "ko": "애니메이션으로 경험 향상",
+      "sourceHash": "75004134aa72f23cbe742411bfa7307fb88ca256d053b4d665ed79f7fba8734d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enhance-the-experience-with-animation:0060:0001",
+      "source": "Keeping screen-space annotations to a minimum will maximize the user’s immersion in the AR experience.",
+      "ko": "화면 공간 주석을 최소화하면 AR 경험에서 사용자의 몰입도를 최대화할 수 있습니다.",
+      "sourceHash": "9afd6c302a9a598c59d5731a39d5d0efa6d03242e2ef2f4e2b4ebe2835135ea9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enhance-the-experience-with-animation:0060:0002",
+      "source": "The sample app makes sticky notes small when the user isn’t editing text, minimizing distractions so they can focus on the real-world environment.",
+      "ko": "샘플 앱은 사용자가 텍스트를 편집하지 않을 때 스티커 노트를 작게 표시해 산만함을 줄이고 실제 환경에 집중할 수 있게 합니다.",
+      "sourceHash": "c61724797b9c43908d3cfe521b49ba01e38373bdb43f0bc6d7b2ddc49bdd9478",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enhance-the-experience-with-animation:0060:0003",
+      "source": "But for similar reasons, you should enlarge a sticky note when the user is editing text.",
+      "ko": "그러나 같은 이유로 사용자가 텍스트를 편집할 때는 스티커 노트를 확대해야 합니다.",
+      "sourceHash": "00918d5bac0075bd02fd4796ef847d2340826aa000a3091461b1196b5c578d32",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enhance-the-experience-with-animation:0060:0004",
+      "source": "To create a seamless transition between editing and nonediting states, animate the sticky note’s size instead of changing it abruptly.",
+      "ko": "편집 상태와 비편집 상태 간 전환을 매끄럽게 만들려면 스티커 노트 크기를 갑작스럽게 바꾸지 말고 애니메이션으로 조정합니다.",
+      "sourceHash": "da49640a39fd131420f2d3141b58e6d50ad302f03cb8054a838a09ea77a5d23d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enhance-the-experience-with-animation:0060:0005",
+      "source": "See the `animateStickyViewToEditingFrame` function.",
+      "ko": "`animateStickyViewToEditingFrame` 함수에서 해당 동작을 확인할 수 있습니다.",
+      "sourceHash": "261fc87300ea5f1d794ddadcf1f434ffcf5269708ffe868d171acabe2a1cc5b7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:enhance-the-experience-with-animation:0061:0001",
+      "source": "```swift\nfunc animateStickyViewToEditingFrame(_ stickyView: StickyNoteView, keyboardHeight: Double) {\n    let safeFrame = view.safeAreaLayoutGuide.layoutFrame\n    let height = safeFrame.height - keyboardHeight\n    let inset = height * 0.05\n    let editingFrame = CGRect(origin: safeFrame.origin, size: CGSize(width: safeFrame.width, height: height)).insetBy(dx: inset, dy: inset)\n    UIViewPropertyAnimator(duration: 0.2, curve: .easeIn) {\n        stickyView.frame = editingFrame\n        //...\n```",
+      "ko": "```swift\nfunc animateStickyViewToEditingFrame(_ stickyView: StickyNoteView, keyboardHeight: Double) {\n    let safeFrame = view.safeAreaLayoutGuide.layoutFrame\n    let height = safeFrame.height - keyboardHeight\n    let inset = height * 0.05\n    let editingFrame = CGRect(origin: safeFrame.origin, size: CGSize(width: safeFrame.width, height: height)).insetBy(dx: inset, dy: inset)\n    UIViewPropertyAnimator(duration: 0.2, curve: .easeIn) {\n        stickyView.frame = editingFrame\n        //...\n```",
+      "sourceHash": "f3831f67288d74f88968540fc2e41ddcf1c535b41d232a015eb6bd28b791b057",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:enhance-the-experience-with-animation:0062:0001",
+      "source": "Bring even more focus to the editing experience by dimming the background and by lighting the sticky note that the user is editing.",
+      "ko": "배경을 어둡게 하고 사용자가 편집 중인 스티커 노트를 강조 표시하여 편집 경험을 더욱 집중되게 만듭니다.",
+      "sourceHash": "c4224e2020a3852daf65278a769ae39225fd2210200c7c7c710644a5490b465b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:enhance-the-experience-with-animation:0063:0001",
+      "source": "```swift\nstickyView.blurView.effect = UIBlurEffect(style: .light)\n```",
+      "ko": "```swift\nstickyView.blurView.effect = UIBlurEffect(style: .light)\n```",
+      "sourceHash": "238729ab2bcf4d04318406fce5698110bd75f20b5765cc6949b0d1155729dc64",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:enhance-the-experience-with-animation:0064:0001",
+      "source": "To prevent the user from losing track of a sticky note’s real-world location, animate the note smoothly from one position to the next.",
+      "ko": "사용자가 스티커 노트의 실제 위치를 잃지 않도록 노트를 한 위치에서 다음 위치로 부드럽게 애니메이션 처리합니다.",
+      "sourceHash": "9d9d96f11db749b8be3324d417536e50470c2c2842dce39a288314462152a9c3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enhance-the-experience-with-animation:0064:0002",
+      "source": "For example, if an annotation fails to reposition, animate the sticky note back to its original screen position.",
+      "ko": "예를 들어 주석 재배치가 실패하면 스티커 노트를 원래 화면 위치로 되돌려 애니메이션합니다.",
+      "sourceHash": "99968390648080e774bb2d287efb14657c851bee0e9c4121d449697e7d539f11",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enhance-the-experience-with-animation:0064:0003",
+      "source": "This increases the user’s ability to track the annotation if they want to try moving it again.",
+      "ko": "이렇게 하면 사용자가 다시 이동을 시도할 때 주석을 추적하기 쉬워집니다.",
+      "sourceHash": "7553def59b4e13c4060504993416d399ab25368a7aa0cea35904e29f13feec65",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:enhance-the-experience-with-animation:0065:0001",
+      "source": "```swift\nif shouldAnimate {\n    animateTo(projectedPoint)\n    // ...\n```",
+      "ko": "```swift\nif shouldAnimate {\n    animateTo(projectedPoint)\n    // ...\n```",
+      "sourceHash": "4c4d7d3e58a39e70819278644039fa6baf07bf766310d2462ae6f0d4471403bc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:enhance-the-experience-with-animation:0066:0001",
+      "source": "To animate the note’s movement, you continually set its location using a [`UIViewPropertyAnimator`](https://developer.apple.com/documentation/UIKit/UIViewPropertyAnimator).",
+      "ko": "노트의 움직임을 애니메이트하려면 [`UIViewPropertyAnimator`](https://developer.apple.com/documentation/UIKit/UIViewPropertyAnimator)를 사용해 위치를 지속적으로 설정합니다.",
+      "sourceHash": "4c18cf5aaa61d8659ff1f39d9abd4699b367c4633b58e1eb51380dd66c9f4335",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:enhance-the-experience-with-animation:0067:0001",
+      "source": "```swift\nfunc animateTo(_ point: CGPoint) {\n\n    let animator = UIViewPropertyAnimator(duration: 0.3, curve: .linear) {\n        self.setPositionCenter(point)\n    }\n    // ...\n```",
+      "ko": "```swift\nfunc animateTo(_ point: CGPoint) {\n\n    let animator = UIViewPropertyAnimator(duration: 0.3, curve: .linear) {\n        self.setPositionCenter(point)\n    }\n    // ...\n```",
+      "sourceHash": "37e582ee7ff89b708749cbcd263f3d2b7d6ff8fbdfe60e91a36c4f6c8ff0ee83",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0068:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0069:0001",
+      "source": "[Recognizing and Labeling Arbitrary Objects](recognizing-and-labeling-arbitrary-objects.md)",
+      "ko": "[Recognizing and Labeling Arbitrary Objects](recognizing-and-labeling-arbitrary-objects.md)",
+      "sourceHash": "e3efa344017ca541a6946544609b5c65e865801b03fddf2ba50a68893f994a21",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0070:0001",
+      "source": "Create anchors that track objects you recognize in the camera feed, using a custom optical-recognition algorithm.",
+      "ko": "커스텀 광학 인식 알고리즘을 사용해 카메라 피드에서 인식한 객체를 추적하는 앵커를 생성합니다.",
+      "sourceHash": "5fcf54bbf40bcd423f174eebec3ec87a5107422a3fa735fb0469aafffd19197b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0071:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0072:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/creating-screen-annotations-for-objects-in-an-ar-experience)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/creating-screen-annotations-for-objects-in-an-ar-experience)*",
+      "sourceHash": "bc7ca9ec01ff5871dbddcc602e87f9ada2ac66a0211647de1aee9bf22acecaf6",
+      "status": "preserved"
+    }
+  ]
+}

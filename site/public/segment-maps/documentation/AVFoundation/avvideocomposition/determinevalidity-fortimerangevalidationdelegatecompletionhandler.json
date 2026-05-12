@@ -1,0 +1,211 @@
+{
+  "docId": "documentation/AVFoundation/avvideocomposition/determinevalidity-fortimerangevalidationdelegatecompletionhandler.md",
+  "title": "determineValidity(for:timeRange:validationDelegate:completionHandler:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avvideocomposition/determinevalidity-fortimerangevalidationdelegatecompletionhandler",
+  "segments": [
+    {
+      "id": "seg:heading:determinevalidityfortimerangevalidationdelegatecompletionhandler:0000:0001",
+      "source": "determineValidity(for:timeRange:validationDelegate:completionHandler:)",
+      "ko": "determineValidity(for:timeRange:validationDelegate:completionHandler:)",
+      "sourceHash": "e8c64ebe2b512649b72ff827b1135cb4ef6e20184089d4553a85ca193ec052d3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:determinevalidityfortimerangevalidationdelegatecompletionhandler:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:determinevalidityfortimerangevalidationdelegatecompletionhandler:0002:0001",
+      "source": "Determines whether the time ranges of the composition’s instructions conform to validation requirements.",
+      "ko": "구성의 지시사항 시간 범위가 유효성 검사 요구 사항을 충족하는지 판단합니다.",
+      "sourceHash": "cd308918733129deae0b64b71154d79a0d18e59d046a67d3cbf2734b501d64a6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:determinevalidityfortimerangevalidationdelegatecompletionhandler:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:determinevalidityfortimerangevalidationdelegatecompletionhandler:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:determinevalidityfortimerangevalidationdelegatecompletionhandler:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:determinevalidityfortimerangevalidationdelegatecompletionhandler:0004:0003",
+      "source": "Mac Catalyst 16.0+",
+      "ko": "Mac Catalyst 16.0+",
+      "sourceHash": "87ecab2e4ea7b5b949ac3608f01726f8e88b11cb3d4b8233535e965e0f50886b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:determinevalidityfortimerangevalidationdelegatecompletionhandler:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:determinevalidityfortimerangevalidationdelegatecompletionhandler:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:determinevalidityfortimerangevalidationdelegatecompletionhandler:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc isValid(for asset: AVAsset?, timeRange: CMTimeRange, validationDelegate: (any AVVideoCompositionValidationHandling)?) async throws -> Bool\n```",
+      "ko": "```swift\nfunc isValid(for asset: AVAsset?, timeRange: CMTimeRange, validationDelegate: (any AVVideoCompositionValidationHandling)?) async throws -> Bool\n```",
+      "sourceHash": "6bc539f3a05811fe179d8a60dbd2c82b338f673c2f8e49c6e77e1fa72e353cd1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "During validation, the video composition calls the validation delegate, if one exists, with a reference to any trouble spots in the video composition.",
+      "ko": "유효성 검사 중에 비디오 구성은 대리자가 있는 경우 문제 지점의 참조와 함께 비디오 구성의 유효성 검사 대리자를 호출합니다.",
+      "sourceHash": "17760bc6eaa198794870bdaab8539d2e817ade02205a4732a7710fcfd7132e21",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "This method raises an exception if the delegate modifies the video composition’s instructions, or the array of layer instructions of any [`AVVideoCompositionInstruction`](avvideocompositioninstruction-swift.class.md) object contained therein during validation.",
+      "ko": "이 메서드는 유효성 검사 중에 대리자가 비디오 구성의 지시사항 또는 그 안에 포함된 [`AVVideoCompositionInstruction`](avvideocompositioninstruction-swift.class.md) 객체의 레이어 지시사항 배열을 수정하면 예외를 발생시킵니다.",
+      "sourceHash": "9090b966d436ee2a5da05cb645bb15961f68c649b909f52bac9d4738a055de6a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`asset`: An asset object, if you require validating the time ranges of the instructions against the duration of the asset and the track IDs of the layer instructions against the asset’s tracks. Pass `nil` to skip that validation.",
+      "ko": "`asset`: 지시사항의 시간 범위를 에셋의 재생 기간과 비교하고 레이어 지시사항의 트랙 ID를 에셋의 트랙과 비교해 유효성 검사해야 하는 경우 사용하는 에셋 객체입니다. 이 유효성 검사를 건너뛰려면 `nil`을 전달합니다.",
+      "sourceHash": "f1557dfc937d79b5c19fd33d6299025c5cc6ac9bd15ea08c4491e1e31df402d5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0002",
+      "source": "`timeRange`: A time range over which to validate instructions. The method validates only instructions with time ranges that overlap with this time range. To validate all instructions that you can use for playback or other processing, regardless of time range, pass `CMTimeRange(start: .zero, duration: .positiveInfinity)`.",
+      "ko": "`timeRange`: 지시사항을 유효성 검사할 시간 범위입니다. 메서드는 이 시간 범위와 겹치는 시간 범위를 가진 지시사항만 유효성 검사합니다. 재생 또는 기타 처리에 사용할 수 있는 모든 지시사항을 시간 범위와 무관하게 검증하려면 `CMTimeRange(start: .zero, duration: .positiveInfinity)`를 전달합니다.",
+      "sourceHash": "68bc3230b208840a3cfc2672fb051149a85043dc17719d16163068f597c9e780",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0003",
+      "source": "`validationDelegate`: An object that adopts the [`AVVideoCompositionValidationHandling`](avvideocompositionvalidationhandling.md) protocol to receive detailed information about problematic sections of a video composition during processing. Pass `nil` if you don’t require the details.",
+      "ko": "`validationDelegate`: 처리 중 비디오 구성의 문제 구간에 대한 자세한 정보를 수신하기 위해 [`AVVideoCompositionValidationHandling`](avvideocompositionvalidationhandling.md) 프로토콜을 채택하는 객체입니다. 상세 정보가 필요하지 않으면 `nil`을 전달합니다.",
+      "sourceHash": "664bb8699a9fb3bc3ebe2d7025aae7347265ceccc215f15a635aa0f2f364cf56",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0004",
+      "source": "`completionHandler`: A block the system calls when it determines whether the video composition is valid.",
+      "ko": "`completionHandler`: 시스템이 비디오 구성의 유효성을 판별했을 때 호출하는 블록입니다.",
+      "sourceHash": "03b580840bf8039616caff39e30931623bbba00787ffcce16994a5845b8d7345",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func isValid(for: [AVAssetTrack], assetDuration: CMTime, timeRange: CMTimeRange, validationDelegate: (any AVVideoCompositionValidationHandling)?) -> Bool](avvideocomposition/isvalid(for:assetduration:timerange:validationdelegate:).md)",
+      "ko": "[func isValid(for: [AVAssetTrack], assetDuration: CMTime, timeRange: CMTimeRange, validationDelegate: (any AVVideoCompositionValidationHandling)?) -> Bool](avvideocomposition/isvalid(for:assetduration:timerange:validationdelegate:).md)",
+      "sourceHash": "ca544631a906e37b873b31065823992a5d666a1d3d2d314d47c9d58e9864ffec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Indicates whether the time ranges of the composition’s instructions conform to validation requirements.",
+      "ko": "구성의 지시사항 시간 범위가 유효성 검사 요구 사항을 준수하는지 나타냅니다.",
+      "sourceHash": "7342bc8e028260f5d4c5b8aac61ebf925b1481cd824cc3185624970c7cba5d7d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[protocol AVVideoCompositionValidationHandling](avvideocompositionvalidationhandling.md)",
+      "ko": "[protocol AVVideoCompositionValidationHandling](avvideocompositionvalidationhandling.md)",
+      "sourceHash": "33372f0fe21c104583ed40380b286d9a07ce0dc06c9c28ad00a3e6d7dcae2ff0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Methods you can implement to indicate whether validation of a video composition should continue after specific errors are found.",
+      "ko": "특정 오류가 발견된 후 비디오 구성의 유효성 검사를 계속 진행할지 여부를 나타내기 위해 구현할 수 있는 메서드입니다.",
+      "sourceHash": "c5b2c1efe4dac54273fd291e9f4668630bf78fc814dae53d034ad2f570d23c8f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func isValid(for: AVAsset?, timeRange: CMTimeRange, validationDelegate: (any AVVideoCompositionValidationHandling)?) -> Bool](avvideocomposition/isvalid(for:timerange:validationdelegate:).md)",
+      "ko": "[func isValid(for: AVAsset?, timeRange: CMTimeRange, validationDelegate: (any AVVideoCompositionValidationHandling)?) -> Bool](avvideocomposition/isvalid(for:timerange:validationdelegate:).md)",
+      "sourceHash": "114ec7e1a34afebc77464f3d34a0e1644badf8414bc0a24d8963f10ac2479e10",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Indicates whether the time ranges of the composition’s instructions conform to validation requirements.",
+      "ko": "구성의 지시사항 시간 범위가 유효성 검사 요구 사항을 준수하는지 나타냅니다.",
+      "sourceHash": "7342bc8e028260f5d4c5b8aac61ebf925b1481cd824cc3185624970c7cba5d7d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avvideocomposition/determinevalidity(for:timerange:validationdelegate:completionhandler:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avvideocomposition/determinevalidity(for:timerange:validationdelegate:completionhandler:))*",
+      "sourceHash": "ad987690b09856da478e19c227e7c8edbf5c0b069ae2cac2efd2820c2d7f5d66",
+      "status": "machine_translated"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "docId": "documentation/AVKit/avexperiencecontroller/transition-to.md",
+  "title": "transition(to:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avkit/avexperiencecontroller/transition-to",
+  "segments": [
+    {
+      "id": "seg:heading:transitionto:0000:0001",
+      "source": "transition(to:)",
+      "ko": "transition(to:)",
+      "sourceHash": "5925fe8a1b119aa5f539cf1f71788cf9026806aaf6e6e77f4a585761d70ef4d5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:transitionto:0001:0001",
+      "source": "**Framework**: AVKit **Kind**: method",
+      "ko": "**Framework**: AVKit **Kind**: method",
+      "sourceHash": "13a13fd435f140de81e767ebd7c5623120855db836b9e84c16d8bf0dac6b5b58",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:transitionto:0002:0001",
+      "source": "Transitions the video to a different experience.",
+      "ko": "동영상을 다른 경험으로 전환합니다.",
+      "sourceHash": "5d2530a3d148626a5542e78eeddd5d1652c07c9d86c7c14d563c2240186b4fbb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:transitionto:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:transitionto:0004:0001",
+      "source": "visionOS 2.0+",
+      "ko": "visionOS 2.0+",
+      "sourceHash": "bc5acbfc8aafa9a90a4589d3961a2aada274622f9f9c149634aaaf8154632078",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\n@discardableResult\n@MainActor final func transition(to toExperience: AVExperienceController.Experience) async -> AVExperienceController.TransitionContext.TransitionResult\n```",
+      "ko": "```swift\n@discardableResult\n@MainActor final func transition(to toExperience: AVExperienceController.Experience) async -> AVExperienceController.TransitionContext.TransitionResult\n```",
+      "sourceHash": "36d79c2b6279c70ff53713c15c6512942ec96cef5c024d821ce3fb9d552b1f81",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "A transition result.",
+      "ko": "전환 결과입니다.",
+      "sourceHash": "9a5239e1d36d82e2364da9518e40fc70a2b8cbd81f61e44be0736b09e660e607",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Call this method to transition to a different experience such as [`AVExperienceController.Experience.expanded`](avexperiencecontroller/experience-swift.enum/expanded.md).",
+      "ko": "Call this method to transition to a different experience such as [`AVExperienceController.Experience.expanded`](avexperiencecontroller/experience-swift.enum/expanded.md).",
+      "sourceHash": "46d00a0207be63afdd26c3a9ca3cb01f6f0a6f385d53a93f7fdb2218dd82f02c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "When you initiate a transition, the system calls the experience controller’s delegate methods so your app can respond to experience changes.",
+      "ko": "전환을 시작하면 시스템이 경험 컨트롤러의 delegate 메서드를 호출하므로 앱에서 경험 변경에 대응할 수 있습니다. 전환의 성공 여부는 이 메서드가 반환하는 [`AVExperienceController.TransitionContext.TransitionResult`](avexperiencecontroller/transitioncontext/transitionresult.md)를 평가하여 판단합니다.",
+      "sourceHash": "8e96c5b40ec1870619b39b01fc20c70510ecb39d9dbb94c53cc69837ae33b847",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "You determine the success of a transition by evaluating the [`AVExperienceController.TransitionContext.TransitionResult`](avexperiencecontroller/transitioncontext/transitionresult.md) this method returns.",
+      "ko": "이 메서드가 반환하는 [`AVExperienceController.TransitionContext.TransitionResult`](avexperiencecontroller/transitioncontext/transitionresult.md)를 평가하여 전환의 성공 여부를 판단합니다.",
+      "sourceHash": "b52653c1c3a1e2de932a140d147e11d06c65f0eb56fc4aaaa698cfc3513a406a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "A transition result of [`AVExperienceController.TransitionContext.TransitionResult.completed`](avexperiencecontroller/transitioncontext/transitionresult/completed.md) indicates a successful transition, in which case the system updates the [`experience`](avexperiencecontroller/experience-swift.property.md) property to the new experience.",
+      "ko": "전환 결과가 [`AVExperienceController.TransitionContext.TransitionResult.completed`](avexperiencecontroller/transitioncontext/transitionresult/completed.md)인 경우 전환이 성공한 것입니다. 이때 시스템은 [`experience`](avexperiencecontroller/experience-swift.property.md) 속성을 새 경험으로 업데이트합니다.",
+      "sourceHash": "bf0825939b3a593c25f3fe53b589d74483ddce5d495f8ab0465893f37ab30341",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0003",
+      "source": "A transition result of [`AVExperienceController.TransitionContext.TransitionResult.reversed(reason:)`](avexperiencecontroller/transitioncontext/transitionresult/reversed(reason:).md) indicates a failed transition.",
+      "ko": "전환 결과가 [`AVExperienceController.TransitionContext.TransitionResult.reversed(reason:)`](avexperiencecontroller/transitioncontext/transitionresult/reversed(reason:).md)인 경우 전환이 실패한 것입니다.",
+      "sourceHash": "e36ab06995dfd23c85b8f59cda32255eb7f97560d300eaa0368d8c1db32ccefe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0004",
+      "source": "Evaluate the the result’s [`AVExperienceController.TransitionContext.ReversedReason`](avexperiencecontroller/transitioncontext/reversedreason.md) to determine why the transition failed.",
+      "ko": "전환 실패 원인을 확인하려면 결과의 [`AVExperienceController.TransitionContext.ReversedReason`](avexperiencecontroller/transitioncontext/reversedreason.md)를 평가합니다.",
+      "sourceHash": "f7c97170e851309e27c2c7136adf4bd6564085caff3068d470c67229b804edfa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0005",
+      "source": "A failure that occurs before the transition begins results in the system not invoking any delegate callback methods.",
+      "ko": "전환이 시작되기 전에 실패가 발생하면 시스템이 delegate 콜백 메서드를 호출하지 않습니다.",
+      "sourceHash": "a6fe4c72dba7158c7274003feaa2b94a0e3cb0c7e9defa7088b8d2330acc73a4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0006",
+      "source": "If the failure happens after the callback to [`experienceController(_:prepareForTransitionUsing:)`](avexperiencecontroller/delegate-swift.protocol/experiencecontroller(_:preparefortransitionusing:).md) occurs, the transition context changes to [`AVExperienceController.TransitionContext.Status.finished(result:)`](avexperiencecontroller/transitioncontext/status-swift.enum/finished(result:).md).",
+      "ko": "[`experienceController(_:prepareForTransitionUsing:)`](avexperiencecontroller/delegate-swift.protocol/experiencecontroller(_:preparefortransitionusing:).md) 콜백이 실행된 후에 실패가 발생하면 전환 컨텍스트가 [`AVExperienceController.TransitionContext.Status.finished(result:)`](avexperiencecontroller/transitioncontext/status-swift.enum/finished(result:).md)로 변경됩니다.",
+      "sourceHash": "a5771e4630ced8dea022a8f895f82839cd5ff84d06c67f3cefaf06f040e923f9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0012:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0013:0001",
+      "source": "`toExperience`: The experience to transition to.",
+      "ko": "`toExperience`: 전환할 대상 경험입니다.",
+      "sourceHash": "fabc30531a839d3aac0edc1dda6828202fc853280bce82645f810a89b1d9dcbc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:parameters:0014:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:parameters:0015:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avexperiencecontroller/transition(to:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avkit/avexperiencecontroller/transition(to:))*",
+      "sourceHash": "6090f76e43f4ccd4c1488810dcf33536a5f45157a6bca32b39b316c284ea2c36",
+      "status": "machine_translated"
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "docId": "documentation/AVFoundation/avvideocompositioninstructionprotocol.md",
+  "title": "AVVideoCompositionInstructionProtocol",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avvideocompositioninstructionprotocol",
+  "segments": [
+    {
+      "id": "seg:heading:avvideocompositioninstructionprotocol:0000:0001",
+      "source": "AVVideoCompositionInstructionProtocol",
+      "ko": "AVVideoCompositionInstructionProtocol",
+      "sourceHash": "77dd423fd2afd848fc8424273e35521fb646f9f0c8edf0a86ff750cf10ae3830",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avvideocompositioninstructionprotocol:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: protocol",
+      "ko": "**Framework**: AVFoundation **Kind**: protocol",
+      "sourceHash": "9fe72dbe3a0e813782809d79461aa3177173d881d27789c4a87f37d98dcfa943",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avvideocompositioninstructionprotocol:0002:0001",
+      "source": "A protocol that defines the interface for a video composition instruction.",
+      "ko": "비디오 컴포지션 지시문의 인터페이스를 정의하는 프로토콜입니다.",
+      "sourceHash": "03eb15b1048abc3ed619663cb66f817a154cbc4038a931a73fd1e1924249b088",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avvideocompositioninstructionprotocol:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avvideocompositioninstructionprotocol:0004:0001",
+      "source": "iOS 7.0+",
+      "ko": "iOS 7.0+",
+      "sourceHash": "1ceb179e72300483bbe4de83f94fa14777f1aa4ad49f5b26a004a90764f51fe7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avvideocompositioninstructionprotocol:0004:0002",
+      "source": "iPadOS 7.0+",
+      "ko": "iPadOS 7.0+",
+      "sourceHash": "1f72093de273c2b8a1b0f4acad220b3881241f056b2b2168b48b64219a2708c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avvideocompositioninstructionprotocol:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avvideocompositioninstructionprotocol:0004:0004",
+      "source": "macOS 10.9+",
+      "ko": "macOS 10.9+",
+      "sourceHash": "ea7fd68a1169efd58a43f910e0a50ba2367a86a9bb7ffee8a512f04ee4f12758",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avvideocompositioninstructionprotocol:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avvideocompositioninstructionprotocol:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nprotocol AVVideoCompositionInstructionProtocol : NSObjectProtocol, Sendable\n```",
+      "ko": "```swift\nprotocol AVVideoCompositionInstructionProtocol : NSObjectProtocol, Sendable\n```",
+      "sourceHash": "a15a4869f79455930603668b48cf70c466329ddebd6a2575ad147253c609d467",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "A video composition maintains an array of instructions that describe how to compose its content.",
+      "ko": "비디오 컴포지션은 내용 구성 방법을 설명하는 지시문 배열을 유지합니다.",
+      "sourceHash": "f1a22267fbed97bb8c3ddbe4aed1d61bed97814d5a23ff7b1b56a7c4e0aea945",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:getting-track-id-settings:0010:0001",
+      "source": "Getting track ID settings",
+      "ko": "트랙 ID 설정 가져오기",
+      "sourceHash": "be7717f9e32d7e5f32a32271ec0b6ebda74f77a7265ca2ff36e8909fc4ec1f17",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-track-id-settings:0011:0001",
+      "source": "[var passthroughTrackID: CMPersistentTrackID](avvideocompositioninstructionprotocol/passthroughtrackid.md)",
+      "ko": "[var passthroughTrackID: CMPersistentTrackID](avvideocompositioninstructionprotocol/passthroughtrackid.md)",
+      "sourceHash": "fadbaa0184aea2ea6c0f6fc863deb400dcc952f19aebcb1e7f65526090df3bba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-track-id-settings:0012:0001",
+      "source": "An identifier of a source track to pass through without compositing.",
+      "ko": "합성하지 않고 그대로 통과할 소스 트랙의 식별자입니다.",
+      "sourceHash": "6b267de0b90a13082bccc3f60467fc08efb0d457b501442e67f2ee5400ac6deb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-track-id-settings:0013:0001",
+      "source": "[var requiredSourceTrackIDs: [NSValue]?](avvideocompositioninstructionprotocol/requiredsourcetrackids.md)",
+      "ko": "[var requiredSourceTrackIDs: [NSValue]?](avvideocompositioninstructionprotocol/requiredsourcetrackids.md)",
+      "sourceHash": "fcb28ee9139b3043131a523e4f59d103252644c73b0ef9cad258d3a5e679f934",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:getting-track-id-settings:0014:0001",
+      "source": "The identifiers of the video tracks the instruction requires to compose frames.",
+      "ko": "프레임을 구성하기 위해 지시문에 필요한 비디오 트랙의 식별자입니다.",
+      "sourceHash": "4a794f9c7557ab18a0a50637d9df301673c95100ed7a173f70b3191236155c3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-track-id-settings:0015:0001",
+      "source": "[var requiredSourceSampleDataTrackIDs: [NSNumber]](avvideocompositioninstructionprotocol/requiredsourcesampledatatrackids.md)",
+      "ko": "[var requiredSourceSampleDataTrackIDs: [NSNumber]](avvideocompositioninstructionprotocol/requiredsourcesampledatatrackids.md)",
+      "sourceHash": "1327781b5069d1242335b7a4fe430315eb7d9b8e9592d50b6df357117843f5ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:getting-track-id-settings:0016:0001",
+      "source": "The identifiers of the sample data tracks the instruction requires to compose frames.",
+      "ko": "프레임을 구성하기 위해 지시문에 필요한 샘플 데이터 트랙의 식별자입니다.",
+      "sourceHash": "aa91ca5a8312ef40d1feb2936003a0550ced46b5a81dda7ece0e713a56808416",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-tweening-settings:0017:0001",
+      "source": "Getting tweening settings",
+      "ko": "트위닝 설정 가져오기",
+      "sourceHash": "0e4db1b32db79b974a09f502ca8ed0dce7590a8f99106a5befb7565e963d5801",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-tweening-settings:0018:0001",
+      "source": "[var containsTweening: Bool](avvideocompositioninstructionprotocol/containstweening.md)",
+      "ko": "[var containsTweening: Bool](avvideocompositioninstructionprotocol/containstweening.md)",
+      "sourceHash": "64b8a1501e4896d5a461e2eccfb10863cb4d1c38efb42f51ae25325103ab71c0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-tweening-settings:0019:0001",
+      "source": "A Boolean value that indicates whether the composition contains tweening.",
+      "ko": "컴포지션에 트위닝이 포함되어 있는지 나타내는 부울 값입니다.",
+      "sourceHash": "77962c51aa47aeea5f3555521820714930bfa48fc41219d9887ef589bb2a3a77",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-post-processing-status:0020:0001",
+      "source": "Getting post-processing status",
+      "ko": "후처리 상태 가져오기",
+      "sourceHash": "98fd230ea433cff9fc94153f254a4002d73e87f104f2d32b2acdc1589c38c50d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-post-processing-status:0021:0001",
+      "source": "[var enablePostProcessing: Bool](avvideocompositioninstructionprotocol/enablepostprocessing.md)",
+      "ko": "[var enablePostProcessing: Bool](avvideocompositioninstructionprotocol/enablepostprocessing.md)",
+      "sourceHash": "cfa0e5e57d4142a90b9255c6cc30358e963fc2cd1bf93335ffc99478cd1075c6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-post-processing-status:0022:0001",
+      "source": "A Boolean value that indicates whether the composition enables post-processing.",
+      "ko": "컴포지션이 후처리를 사용하도록 설정되어 있는지 나타내는 부울 값입니다.",
+      "sourceHash": "39157b6785a1de3f8512d9e37ef746789ed54057681ac881e5041bcdb82e0224",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-timing-settings:0023:0001",
+      "source": "Getting timing settings",
+      "ko": "타이밍 설정 가져오기",
+      "sourceHash": "87a0a6a5e36a944cd98038be2cffeec88f094a071c8741de243098178e5759d0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-timing-settings:0024:0001",
+      "source": "[var timeRange: CMTimeRange](avvideocompositioninstructionprotocol/timerange.md)",
+      "ko": "[var timeRange: CMTimeRange](avvideocompositioninstructionprotocol/timerange.md)",
+      "sourceHash": "df83d44b9665818c5578ea3203926a241bf854de88a99babcef3a9f2d137166a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-timing-settings:0025:0001",
+      "source": "The time range during which the instruction is effective.",
+      "ko": "지시문이 적용되는 시간 범위입니다.",
+      "sourceHash": "8d83e208cc949a7d5028f336d583645e837741a44211a0fc862b3905e7224a21",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0026:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0027:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0028:0001",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherits-from:0028:0002",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherits-from:0028:0003",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforming-types:0029:0001",
+      "source": "Conforming Types",
+      "ko": "준수 유형",
+      "sourceHash": "8776043036a10e239895349ba2be06d5d6393f85e38f81f6489be98293407bf8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforming-types:0030:0001",
+      "source": "[AVMutableVideoCompositionInstruction](avmutablevideocompositioninstruction.md)",
+      "ko": "[AVMutableVideoCompositionInstruction](avmutablevideocompositioninstruction.md)",
+      "sourceHash": "e1733c70837de2aa2f7a3af587f33e829670761c53e7aa1f5d5ae6b43d86f6f8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforming-types:0030:0002",
+      "source": "[AVVideoCompositionInstruction](avvideocompositioninstruction-swift.class.md)",
+      "ko": "[AVVideoCompositionInstruction](avvideocompositioninstruction-swift.class.md)",
+      "sourceHash": "5c9b4cd2c79a6fcf44c3bf943034f72ce09de257f38637059ccc5c7a27f3f2e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0031:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[var instructions: [any AVVideoCompositionInstructionProtocol]](avmutablevideocomposition/instructions.md)",
+      "ko": "[var instructions: [any AVVideoCompositionInstructionProtocol]](avmutablevideocomposition/instructions.md)",
+      "sourceHash": "6553cc341fd8eef965ece9b2e779c8ae43e5da98834c9247a5541c4ea64b33de",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "The video composition instructions.",
+      "ko": "비디오 컴포지션 지시문입니다.",
+      "sourceHash": "c3bf209089c9d5809f87bd9b8f3138e784db77cad5d8c8cfbfa975e2cc2c3ca6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0034:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avvideocompositioninstructionprotocol)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avvideocompositioninstructionprotocol)*",
+      "sourceHash": "ab8e634dd247088843b5bc458121e3963f7c2716d8cc20fed8c08f55662528dd",
+      "status": "preserved"
+    }
+  ]
+}

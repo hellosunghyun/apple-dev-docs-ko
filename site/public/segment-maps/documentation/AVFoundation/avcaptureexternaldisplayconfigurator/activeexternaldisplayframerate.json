@@ -1,0 +1,169 @@
+{
+  "docId": "documentation/AVFoundation/avcaptureexternaldisplayconfigurator/activeexternaldisplayframerate.md",
+  "title": "activeExternalDisplayFrameRate",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcaptureexternaldisplayconfigurator/activeexternaldisplayframerate",
+  "segments": [
+    {
+      "id": "seg:heading:activeexternaldisplayframerate:0000:0001",
+      "source": "activeExternalDisplayFrameRate",
+      "ko": "activeExternalDisplayFrameRate",
+      "sourceHash": "9d0ac088b3dbec1313f076b93c79a24e9488a76f6986be162f44ac3ec3035da9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:activeexternaldisplayframerate:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:activeexternaldisplayframerate:0002:0001",
+      "source": "The currently configured frame rate on the external display that’s displaying the preview layer.",
+      "ko": "현재 미리보기 레이어를 표시하는 외부 디스플레이의 설정된 프레임레이트입니다.",
+      "sourceHash": "fe898cc2df8b6ba763be9d5ec634a98fc13b28597ed8dc9ed9bd0bea67518766",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:activeexternaldisplayframerate:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:activeexternaldisplayframerate:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:activeexternaldisplayframerate:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:activeexternaldisplayframerate:0004:0003",
+      "source": "Mac Catalyst 26.0+",
+      "ko": "Mac Catalyst 26.0+",
+      "sourceHash": "41da0bcbe19513a5638f4ac052319884e486b3cc05252ef6209b23e7b2b1d8e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:activeexternaldisplayframerate:0004:0004",
+      "source": "macOS 26.0+",
+      "ko": "macOS 26.0+",
+      "sourceHash": "6fcc4a770cbd02feaac4df78b954d37ef26fc9755008ee17612223162fd4ed2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:activeexternaldisplayframerate:0004:0005",
+      "source": "tvOS 26.0+",
+      "ko": "tvOS 26.0+",
+      "sourceHash": "28934d9284c51fe0aa7b9363ccc49ea3cd840259287dd4f466466d4888ef2bf8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar activeExternalDisplayFrameRate: Double { get }\n```",
+      "ko": "```swift\nvar activeExternalDisplayFrameRate: Double { get }\n```",
+      "sourceHash": "5d279fe3b0612744980c8b860d7885c7c465ead21257aa44162a0c8f79a3ad76",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Observe this property to determine if the configured frame rate matches the max frame rate ([`activeVideoMinFrameDuration`](avcapturedevice/activevideominframeduration.md)) of the device.",
+      "ko": "By default, `AVCaptureStillImageOutput` emits images with the same dimensions as its source [`AVCaptureDevice`](avcapturedevice.md) instance’s `activeFormat.formatDescription`.",
+      "sourceHash": "28315fd229fe94bd11accd14a01bdf09f0123c3325f9077212bd03d6b49aa766",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "When the [`isActive`](avcaptureexternaldisplayconfigurator/isactive.md) property becomes `false`, this property changes to 0.",
+      "ko": "However, if you set this property to [`true`](https://developer.apple.com/documentation/Swift/true), the receiver emits still images at the capture device’s [`highResolutionStillImageDimensions`](avcapturedevice/format/highresolutionstillimagedimensions.md) value.",
+      "sourceHash": "f15ea314c4775ac3e62eff08a80b8df757a62f56cdd2deadd58cde6758ffeffb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[var device: AVCaptureDevice?](avcaptureexternaldisplayconfigurator/device.md)",
+      "ko": "[var device: AVCaptureDevice?](avcaptureexternaldisplayconfigurator/device.md)",
+      "sourceHash": "c2373ea335a489afff92a304fd4bba8345940088beefb40e75b58b937435d95a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "The device for which the coordinator configures the preview layer.",
+      "ko": "조정자가 미리보기 레이어를 구성하는 장치입니다.",
+      "sourceHash": "1d2181fc5a3a3bb0230a24e0887d94e5bb470c2bf448dacb382eba7fd8c723dd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var isActive: Bool](avcaptureexternaldisplayconfigurator/isactive.md)",
+      "ko": "[var isActive: Bool](avcaptureexternaldisplayconfigurator/isactive.md)",
+      "sourceHash": "80347997d227c241a6c8391e1b103615a369972f6072b01e6df5f4de38941179",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "This property tells you whether the configurator is actively configuring the external display.",
+      "ko": "이 속성은 조정자가 외부 디스플레이를 능동적으로 구성하고 있는지 여부를 나타냅니다.",
+      "sourceHash": "f5714e89c3490b3e8b48cfeb9ecc8d973e8a5e5533642f046b83f64fa529c979",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var previewLayer: CALayer?](avcaptureexternaldisplayconfigurator/previewlayer.md)",
+      "ko": "[var previewLayer: CALayer?](avcaptureexternaldisplayconfigurator/previewlayer.md)",
+      "sourceHash": "6c105f09c1f61619b07c980f921dd69f102e1a8406bff4cfe668375900dc712b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "The layer for which the configurator adjusts display properties to match the device’s state.",
+      "ko": "조정자가 장치 상태에 맞춰 표시 속성을 조정하는 레이어입니다.",
+      "sourceHash": "be63dca2313b960e0fa7ac22942cd4926989cf35f7728e31719f9d66fcf6a821",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0016:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcaptureexternaldisplayconfigurator/activeexternaldisplayframerate)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcaptureexternaldisplayconfigurator/activeexternaldisplayframerate)*",
+      "sourceHash": "6e85dc07336b191981aa0dcc5b3263c9f0b285bb13e824d369c249be7bd10fc1",
+      "status": "preserved"
+    }
+  ]
+}

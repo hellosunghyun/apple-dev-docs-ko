@@ -1,0 +1,197 @@
+{
+  "docId": "documentation/AppKit/nsapplicationdelegate/application-printfileswithsettingsshowprintpanels.md",
+  "title": "application(:printFiles:withSettings:showPrintPanels:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appkit/nsapplicationdelegate/application-printfileswithsettingsshowprintpanels",
+  "segments": [
+    {
+      "id": "seg:heading:applicationprintfileswithsettingsshowprintpanels:0000:0001",
+      "source": "application(_:printFiles:withSettings:showPrintPanels:)",
+      "ko": "application(_:printFiles:withSettings:showPrintPanels:)",
+      "sourceHash": "cad4c5f7b238e9e3462e898b67004a35d4bbf23ce59971151d920cb4a3a6783d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:applicationprintfileswithsettingsshowprintpanels:0001:0001",
+      "source": "**Framework**: AppKit **Kind**: method",
+      "ko": "**Framework**: AppKit **Kind**: method",
+      "sourceHash": "d0bb5eba5cbec0f2e57076ce9bf28601986c84bd690d2e162e981dbbb6baff21",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:applicationprintfileswithsettingsshowprintpanels:0002:0001",
+      "source": "Returns a value that indicates if the app prints the specified files.",
+      "ko": "지정된 파일을 앱이 인쇄하는지 여부를 나타내는 값을 반환합니다.",
+      "sourceHash": "09eeebd4b9fbd0706cd8c0a544747ac58d6e87924e8504ff68c6de9b58d57642",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:applicationprintfileswithsettingsshowprintpanels:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:applicationprintfileswithsettingsshowprintpanels:0004:0001",
+      "source": "macOS ?+",
+      "ko": "macOS ?+",
+      "sourceHash": "7565f9a2fe151983964ce7f1a1fff21dbf4130de4d3457f25bd88800eafbe279",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\n@MainActor\noptional func application(_ application: NSApplication, printFiles fileNames: [String], withSettings printSettings: [NSPrintInfo.AttributeKey : Any], showPrintPanels: Bool) -> NSApplication.PrintReply\n```",
+      "ko": "```swift\n@MainActor\noptional func application(_ application: NSApplication, printFiles fileNames: [String], withSettings printSettings: [NSPrintInfo.AttributeKey : Any], showPrintPanels: Bool) -> NSApplication.PrintReply\n```",
+      "sourceHash": "b52faf4898bf1e525c78438f8ebf5ea09176ec0c9d955e6ff430a6a7bf876ce3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "A constant indicating whether printing was successful.",
+      "ko": "인쇄가 성공했는지 여부를 나타내는 상수입니다.",
+      "sourceHash": "c4088a80e5cdc201824a5b01ca5bb7d8557b02bf23735e6f8598773c3fa4d774",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0002",
+      "source": "For a list of possible values, see [`NSApplication.PrintReply`](nsapplication/printreply.md).",
+      "ko": "가능한 값 목록은 [`NSApplication.PrintReply`](nsapplication/printreply.md)를 참조합니다.",
+      "sourceHash": "23b1f12001b4e348ea9616dc9c9734b1206b12d805f32b6813b800bce61d6be1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Return `NSPrintingReplyLater` if the result of printing cannot be returned immediately, for example, if printing will cause the presentation of a sheet.",
+      "ko": "예를 들어 인쇄로 인해 시트가 표시될 수 있는 경우처럼 인쇄 결과를 즉시 반환할 수 없으면 `NSPrintingReplyLater`를 반환합니다.",
+      "sourceHash": "d176534ab397f020dd263859917288b30ab950b3a8904ef6abc8a8255b04b820",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "If your method returns `NSPrintingReplyLater` it must always invoke the `NSApplication` method [`reply(toOpenOrPrint:)`](nsapplication/reply(toopenorprint:).md)] when the entire print operation has been completed, successfully or not.",
+      "ko": "메서드가 `NSPrintingReplyLater`를 반환하면 전체 인쇄 작업이 성공했든 실패했든 완료 시점에 `NSApplication`의 [`reply(toOpenOrPrint:)`](nsapplication/reply(toopenorprint:).md)] 메서드를 항상 호출해야 합니다.",
+      "sourceHash": "58317b169def4160567d42345f39c374421ea536eed4790b008a2bb87c91b48f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "This delegate method replaces `application:printFiles:`, which is now deprecated.",
+      "ko": "이 대리자 메서드는 더 이상 사용되지 않는 `application:printFiles:`를 대체합니다.",
+      "sourceHash": "de58e09d63c1bffc249514b9adc119b125d3f5cd689a70edb3d9c90c712ddf10",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "If your application delegate only implements the deprecated method, it is still invoked, and `NSApplication` uses private functionality to arrange for the print settings to take effect.",
+      "ko": "애플리케이션 대리자가 사용되지 않는 메서드만 구현한 경우에도 해당 메서드는 호출되며, `NSApplication`은 비공개 기능을 사용해 인쇄 설정이 적용되도록 처리합니다.",
+      "sourceHash": "f6ad901f74d18e80b88c27ab9650a0600a649d7ec7d65559c3b5a49e099ad8ab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0012:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0013:0001",
+      "source": "`application`: The application object that is handling the printing.",
+      "ko": "`application`: 인쇄를 처리하는 application 객체입니다.",
+      "sourceHash": "1872f8c6eb4e80e2233190b89e722b36f72f995b7996e62de860b0e35f1e6aa3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0002",
+      "source": "`fileNames`: An array of [`NSString`](https://developer.apple.com/documentation/Foundation/NSString) objects, each of which contains the name of a file to print.",
+      "ko": "`fileNames`: 인쇄할 파일 이름을 각 항목으로 포함하는 [`NSString`](https://developer.apple.com/documentation/Foundation/NSString) 객체의 배열입니다.",
+      "sourceHash": "e4b975b8ff1334de4c9dfe45c3cf2de6acb9face161b590d72d38f351bd03ef8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0003",
+      "source": "`printSettings`: A dictionary containing `NSPrintInfo`-compatible print job attributes.",
+      "ko": "`printSettings`: `NSPrintInfo`와 호환되는 인쇄 작업 속성을 포함하는 사전입니다.",
+      "sourceHash": "d2d4908a0fc53ef4bf9f07a1fcce5483922e212e905ea07319e9629e3f0f6a0f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0004",
+      "source": "`showPrintPanels`: A Boolean that specifies whether the print panel should be displayed for each file printed. Print progress indicators will be presented even if this value is [`false`](https://developer.apple.com/documentation/Swift/false).",
+      "ko": "`showPrintPanels`: 각 파일을 인쇄할 때 인쇄 패널을 표시할지 여부를 지정하는 Boolean 값입니다. 이 값이 [`false`](https://developer.apple.com/documentation/Swift/false)인 경우에도 인쇄 진행 표시기는 표시됩니다.",
+      "sourceHash": "7aaea5a9eeb56a9c9afd59edec2bb1b60344d5137ee180b121d5005ca78ff11c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0014:0001",
+      "source": "See Also",
+      "ko": "참고",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func application(NSApplication, printFile: String) -> Bool](nsapplicationdelegate/application(_:printfile:).md)",
+      "ko": "[func application(NSApplication, printFile: String) -> Bool](nsapplicationdelegate/application(_:printfile:).md)",
+      "sourceHash": "b6fef56635d84fcd18d98009cbcfc34dcc388469f26babb4e3262a25e2e8a0b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Returns a Boolean value that indicates if the app prints the specified file in its entirety.",
+      "ko": "지정된 파일을 앱이 완전히 인쇄했는지 여부를 나타내는 Boolean 값을 반환합니다.",
+      "sourceHash": "e5f2d32b6edf57a531fa79cbeab692ae3a1170b0a3c9a7673136132b2187f78e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[NSApplication.PrintReply](nsapplication/printreply.md)",
+      "ko": "[NSApplication.PrintReply](nsapplication/printreply.md)",
+      "sourceHash": "95366f2c61f3e00d22307d25fa04bb44f8833ce6b60f959fccdda768b255cf37",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Constants that indicate the outcome of a print request.",
+      "ko": "인쇄 요청의 결과를 나타내는 상수입니다.",
+      "sourceHash": "1f9bdb3bb9262086b85883c6d8adec22a2be55b6ad52dc8b0c5a540d6c190762",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nsapplicationdelegate/application(_:printfiles:withsettings:showprintpanels:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/appkit/nsapplicationdelegate/application(_:printfiles:withsettings:showprintpanels:))*",
+      "sourceHash": "f574c8c575afeb23d903477605d72e8686f99f601a68d5a22b2afc716eb6ab7d",
+      "status": "machine_translated"
+    }
+  ]
+}

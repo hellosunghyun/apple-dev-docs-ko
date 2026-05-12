@@ -1,0 +1,239 @@
+{
+  "docId": "documentation/AVFoundation/avcapturemoviefileoutput/setoutputsettings-for.md",
+  "title": "setOutputSettings(:for:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturemoviefileoutput/setoutputsettings-for",
+  "segments": [
+    {
+      "id": "seg:heading:setoutputsettingsfor:0000:0001",
+      "source": "setOutputSettings(_:for:)",
+      "ko": "setOutputSettings(_:for:)",
+      "sourceHash": "177e3e90c478efdc3b73eaaaf29e3112b35d217d163afa223397c9ea85c4b088",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setoutputsettingsfor:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setoutputsettingsfor:0002:0001",
+      "source": "Sets the options the output uses to encode media from the given connection while recording.",
+      "ko": "지정된 연결에서 녹화 중 미디어 인코딩에 사용하는 출력 옵션을 설정합니다.",
+      "sourceHash": "712f189b161fdfb8fb7327b563c3a97f16bacb025d3580fefcd64458ae674579",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setoutputsettingsfor:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setoutputsettingsfor:0004:0001",
+      "source": "iOS 10.0+",
+      "ko": "iOS 10.0+",
+      "sourceHash": "15e2b63b966efd6cadb08b2da63ceeef2c0cd4d8cb66c4d5cdb143020e883acb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setoutputsettingsfor:0004:0002",
+      "source": "iPadOS 10.0+",
+      "ko": "iPadOS 10.0+",
+      "sourceHash": "c3d62141271e1019e3bb1a762c72d79ee3522feb4faafb39c46567ce18387f92",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setoutputsettingsfor:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setoutputsettingsfor:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setoutputsettingsfor:0004:0005",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc setOutputSettings(_ outputSettings: [String : Any]?, for connection: AVCaptureConnection)\n```",
+      "ko": "```swift\nfunc setOutputSettings(_ outputSettings: [String : Any]?, for connection: AVCaptureConnection)\n```",
+      "sourceHash": "88f91bc70bd5106fc8bc4c6d80b31f2bd7b3e10cc651bf125798e717f4125f12",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "For details on output settings, see [`Video settings`](video-settings.md) for video connections and [`Audio settings`](audio-settings.md) for audio connections.",
+      "ko": "For details on output settings, see [`Video settings`](video-settings.md) for video connections and [`Audio settings`](audio-settings.md) for audio connections.",
+      "sourceHash": "40b9912de4f08f3fcbee1f1b9d7573246b3eb4e97562d04960cc335ff762b377",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "On iOS, your output settings dictionary may only contain keys listed returned from the [`supportedOutputSettingsKeys(for:)`](avcapturemoviefileoutput/supportedoutputsettingskeys(for:).md) method.",
+      "ko": "On iOS, your output settings dictionary may only contain keys listed returned from the [`supportedOutputSettingsKeys(for:)`](avcapturemoviefileoutput/supportedoutputsettingskeys(for:).md) method.",
+      "sourceHash": "2dd1a1943c55a4833aa8594b0f731fedf7ec383daf2247066533366823831b7c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "If you specify any other key, the system throws an invalid argument exception.",
+      "ko": "If you specify any other key, the system throws an invalid argument exception.",
+      "sourceHash": "c50e3f3313de1631d09110ab2e8799b4bd2f8854c1e06b18f9cce73281c75c39",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0003",
+      "source": "Additionally, the value you specify for [`AVVideoCodecKey`](avvideocodeckey.md) should be present in the [`availableVideoCodecTypes`](avcapturemoviefileoutput/availablevideocodectypes.md) array.",
+      "ko": "Additionally, the value you specify for [`AVVideoCodecKey`](avvideocodeckey.md) should be present in the [`availableVideoCodecTypes`](avcapturemoviefileoutput/availablevideocodectypes.md) array.",
+      "sourceHash": "04617b1f0dc815427cf02418bd37774b2c2b83c1edbb9045ee495ff1c3afdf98",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0004",
+      "source": "If you specify [`AVVideoCompressionPropertiesKey`](avvideocompressionpropertieskey.md), you must also specify a valid value for [`AVVideoCodecKey`](avvideocodeckey.md).",
+      "ko": "[`AVVideoCompressionPropertiesKey`](avvideocompressionpropertieskey.md)를 지정하는 경우 [`AVVideoCodecKey`](avvideocodeckey.md)에 대한 유효한 값도 함께 지정해야 합니다.",
+      "sourceHash": "6ce08e92a11d56ad5b48f976ae4f8e42b1d2b418b511af65f3207767cb6a7994",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "On iOS, the [`outputSettings(for:)`](avcapturemoviefileoutput/outputsettings(for:).md) method always provides a fully populated dictionary.",
+      "ko": "iOS에서 [`outputSettings(for:)`](avcapturemoviefileoutput/outputsettings(for:).md) 메서드는 항상 모든 항목이 채워진 딕셔너리를 제공합니다.",
+      "sourceHash": "09dba0d6ed58bf87683370cd58d9efc824e83a24e127179f5cb5969fd217d353",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "If you call [`outputSettings(for:)`](avcapturemoviefileoutput/outputsettings(for:).md) with the intent of overriding a few of the values, you must exclude keys that aren’t supported before calling [`setOutputSettings(_:for:)`](avcapturemoviefileoutput/setoutputsettings(_:for:).md).",
+      "ko": "[`outputSettings(for:)`](avcapturemoviefileoutput/outputsettings(for:).md)를 호출해 일부 값만 재정의하려는 경우, [`setOutputSettings(_:for:)`](avcapturemoviefileoutput/setoutputsettings(_:for:).md)를 호출하기 전에 지원되지 않는 키를 제외해야 합니다.",
+      "sourceHash": "7ea3439a3ad13d873ed9bab6272d5f433d2910af1c56e40564948274ef318c75",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0003",
+      "source": "When providing an [`AVVideoCompressionPropertiesKey`](avvideocompressionpropertieskey.md) sub dictionary, you may specify a sparse dictionary.",
+      "ko": "[`AVVideoCompressionPropertiesKey`](avvideocompressionpropertieskey.md) 하위 딕셔너리를 제공할 때는 필요한 항목만 포함된 희소 딕셔너리를 지정할 수 있습니다.",
+      "sourceHash": "7cf0d5658f38fc3c7f194d8e24564229f5850effbf9412fbdda14ea75f572f4c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0004",
+      "source": "A movie file output object always fills in missing keys with default values for the current capture session configuration.",
+      "ko": "movie file output 객체는 현재 캡처 세션 구성의 기본값으로 누락된 키를 항상 채웁니다.",
+      "sourceHash": "77afe3039bb3a07d9f4111c2cc47f75b5a0930ade3744b31d940967e88bcd6e8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0011:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0012:0001",
+      "source": "`outputSettings`: A dictionary of output settings. Pass an empty dictionary to specify that the format of the media from the connection shouldn’t change before writing to the file. Pass `nil` to specify that the session preset determines output format.",
+      "ko": "`outputSettings`: 출력 설정의 딕셔너리입니다. 파일에 쓰기 전에 연결에서 전달되는 미디어 형식이 변경되지 않도록 하려면 빈 딕셔너리를 전달합니다. 세션 프리셋이 출력 형식을 결정하도록 하려면 `nil`을 전달합니다.",
+      "sourceHash": "a4d59fce0b6236984c9c5ca12105515e049edec953e1568574a8dcafaf43e83c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0012:0002",
+      "source": "`connection`: The connection delivering the media to encode.",
+      "ko": "`connection`: 인코딩할 미디어를 전달하는 연결입니다.",
+      "sourceHash": "f10f8b8c45b0267c46f16e3df73b2431843df806a044fabb650f30a3c5c3db66",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func supportedOutputSettingsKeys(for: AVCaptureConnection) -> [String]](avcapturemoviefileoutput/supportedoutputsettingskeys(for:).md)",
+      "ko": "[func supportedOutputSettingsKeys(for: AVCaptureConnection) -> [String]](avmetadataformat/isouserdata.md)",
+      "sourceHash": "1b7ea02fe01a5180778cef3a1161ab45833a47342e831a56aa29028f08cef8c8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Returns a list of supported keys to use in the output settings dictionary.",
+      "ko": "출력 설정 딕셔너리에 사용할 수 있는 지원 키 목록을 반환합니다.",
+      "sourceHash": "3c54843940077aa58aa6b0c0877d19386e490e4ab2f64e1eeb48705a711a5d07",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func outputSettings(for: AVCaptureConnection) -> [String : Any]](avcapturemoviefileoutput/outputsettings(for:).md)",
+      "ko": "[func outputSettings(for: AVCaptureConnection) -> [String : Any]](avmetadataformat/quicktimemetadata.md)",
+      "sourceHash": "835bdd9fb78676607664e901ed3cd68bd39a5ddf12e58eac60cf299de06fdec0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Returns the settings the output uses to encode media from the specified connection.",
+      "ko": "지정한 연결의 미디어를 인코딩할 때 출력에서 사용하는 설정을 반환합니다.",
+      "sourceHash": "5e7827d27c5a328f836ff870015c479f96ffeb500c6b027d843de4152785ed6e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var availableVideoCodecTypes: [AVVideoCodecType]](avcapturemoviefileoutput/availablevideocodectypes.md)",
+      "ko": "[var availableVideoCodecTypes: [AVVideoCodecType]](avmetadataformat/unknown.md)",
+      "sourceHash": "a2dc0a5b9087b8d09dd837d077f178097951c7a00890ba217c2286b636310ccd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "The video codecs types the output supports for recording movie files.",
+      "ko": "출력이 movie file을 녹화할 때 지원하는 비디오 코덱 유형입니다.",
+      "sourceHash": "d67c2ef5110a03713b265d8ef02c232c2f21e6800e448bb9f78b71d50ab732c3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturemoviefileoutput/setoutputsettings(_:for:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturemoviefileoutput/setoutputsettings(_:for:))*",
+      "sourceHash": "4483bf93b282149070c5c00215552f6dcbb0722470ee0c332a186b0e2b0ef78a",
+      "status": "machine_translated"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "docId": "documentation/AVFoundation/avplayeritemoutputpulldelegate/outputsequencewasflushed.md",
+  "title": "outputSequenceWasFlushed(:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avplayeritemoutputpulldelegate/outputsequencewasflushed",
+  "segments": [
+    {
+      "id": "seg:heading:outputsequencewasflushed:0000:0001",
+      "source": "outputSequenceWasFlushed(_:)",
+      "ko": "outputSequenceWasFlushed(_:)",
+      "sourceHash": "2909fbe4d065bebaae2d80ad0703664bada1ca227e355ebd415ee7af46f137b0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:outputsequencewasflushed:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:outputsequencewasflushed:0002:0001",
+      "source": "Tells the delegate that a new sample sequence is commencing.",
+      "ko": "새 샘플 시퀀스가 시작됨을 델리게이트에 알립니다.",
+      "sourceHash": "f181d3c2a729aa81078a564e169fb338e7d4833d29dcb7cb52595ff0ba0f09ae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:outputsequencewasflushed:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputsequencewasflushed:0004:0001",
+      "source": "iOS 6.0+",
+      "ko": "iOS 6.0+",
+      "sourceHash": "3d4dd430bbebf24548d6073001d3b7ca25d38a35fb48c99fbca116f560f382fc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputsequencewasflushed:0004:0002",
+      "source": "iPadOS 6.0+",
+      "ko": "iPadOS 6.0+",
+      "sourceHash": "92f0fefc8cc53859b925f1f60e72b8af1e1ccc88febb363e541aab64498551ae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputsequencewasflushed:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputsequencewasflushed:0004:0004",
+      "source": "macOS 10.8+",
+      "ko": "macOS 10.8+",
+      "sourceHash": "f3a9e14ee293c884d2cb370f5f755069c45e9b1b88587a86f92a22178822639b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputsequencewasflushed:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputsequencewasflushed:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:outputsequencewasflushed:0004:0007",
+      "source": "watchOS 1.0+",
+      "ko": "watchOS 1.0+",
+      "sourceHash": "2dbee682371896bee6965d157efc729a43696cec8b6451157482f77264ffbb65",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\noptional func outputSequenceWasFlushed(_ output: AVPlayerItemOutput)\n```",
+      "ko": "```swift\noptional func outputSequenceWasFlushed(_ output: AVPlayerItemOutput)\n```",
+      "sourceHash": "b1a6221c326fe5587b1b63d4712bd9e71262ba477ebb23a8824c64dd5ef59209",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This method is called after any attempt to seek or change the playback direction of the item’s content.",
+      "ko": "When your app enters a state where using a video decoder resources is not permissible, the value of this property changes to [`true`](https://developer.apple.com/documentation/Swift/true) along with the video renderer’s status changing to [`AVQueuedSampleBufferRenderingStatus.failed`](avqueuedsamplebufferrenderingstatus/failed.md).",
+      "sourceHash": "f2cbab0e3e3c8a06f3d91c40d60a54499ac441e223081a78985a72291893670d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "If you are maintaining any queued future samples, you can use your implementation of this method to discard those samples.",
+      "ko": "To resume rendering sample buffers, you must first reset the video renderer by calling [`flush()`](avqueuedsamplebufferrendering/flush().md) or [`flush(removingDisplayedImage:completionHandler:)`](avsamplebuffervideorenderer/flush(removingdisplayedimage:completionhandler:).md).",
+      "sourceHash": "f7770a70f6694ef1bfc8f258a2b3df0daf6402f328a76bda16527d4787f0cac7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0009:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0010:0001",
+      "source": "`output`: The output object that sent the message.",
+      "ko": "`output`: 메시지를 보낸 출력 객체입니다.",
+      "sourceHash": "08278feabfe496883e5ddbda27681b93d8be92a7d4c50745d3b3ba09f48443e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[func outputMediaDataWillChange(AVPlayerItemOutput)](avplayeritemoutputpulldelegate/outputmediadatawillchange(_:).md)",
+      "ko": "[func outputMediaDataWillChange(AVPlayerItemOutput)](avplayeritemoutputpulldelegate/outputmediadatawillchange(_:).md)",
+      "sourceHash": "660d399c0d90a94bde3cf37089276fc4adeca27489966e2008eabe3098a36218",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Tells the delegate that new samples are about to arrive.",
+      "ko": "새 샘플이 곧 도착함을 델리게이트에 알립니다.",
+      "sourceHash": "01aa5562993b1668b64f3b101dedc350e7c2bb3f5b710a59f2bc6a3f0dde5a09",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0014:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayeritemoutputpulldelegate/outputsequencewasflushed(_:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayeritemoutputpulldelegate/outputsequencewasflushed(_:))*",
+      "sourceHash": "c37e09b6aa4387e956ab07dcdd7d869cb2d2f75a6f467cac0fcb0f779287be5f",
+      "status": "machine_translated"
+    }
+  ]
+}

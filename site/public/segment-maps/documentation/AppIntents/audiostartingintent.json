@@ -1,0 +1,253 @@
+{
+  "docId": "documentation/AppIntents/audiostartingintent.md",
+  "title": "AudioStartingIntent",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appintents/audiostartingintent",
+  "segments": [
+    {
+      "id": "seg:heading:audiostartingintent:0000:0001",
+      "source": "AudioStartingIntent",
+      "ko": "AudioStartingIntent",
+      "sourceHash": "d39fbeed09810e8f634c5847e55aa989761532a96803417c8e1169ffc8a28efa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:audiostartingintent:0001:0001",
+      "source": "**Framework**: App Intents **Kind**: protocol",
+      "ko": "**Framework**: App Intents **Kind**: protocol",
+      "sourceHash": "52843dafbb27cdd5820da9b51f136b81ebc91aa4133453426d466ae9eeda7c81",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:audiostartingintent:0002:0001",
+      "source": "An App Intent that plays, pauses, or otherwise modifies audio playback state when it executes.",
+      "ko": "실행될 때 오디오 재생 상태를 재생, 일시 중지 또는 기타 방식으로 수정하는 App Intent입니다.",
+      "sourceHash": "ee957755aadbc6f7e62e32088e7a64db4fa6b371aee88377bf3af86daf5e34b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:audiostartingintent:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:audiostartingintent:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:audiostartingintent:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:audiostartingintent:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:audiostartingintent:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:audiostartingintent:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:audiostartingintent:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:audiostartingintent:0004:0007",
+      "source": "watchOS 9.0+",
+      "ko": "watchOS 9.0+",
+      "sourceHash": "74f54147ec06c7528917e10d68b6a402263ae2503dac544ef616ac2a86563097",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nprotocol AudioStartingIntent : SystemIntent\n```",
+      "ko": "```swift\nprotocol AudioStartingIntent : SystemIntent\n```",
+      "sourceHash": "2e2149c4a6603f1b66529110d1fcf0f664b6e3f89db26337d695ba8c8ba4def4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Adopt this protocol to indicate to the system that your App Intent plays audio.",
+      "ko": "이 프로토콜을 채택하면 시스템이 App Intent가 오디오를 재생함을 인식합니다.",
+      "sourceHash": "6bec3031d45413aabe87203e4013ed280606d3984612278d8d63d3eded47e15e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "The system can then avoid dialogue or other experiences that might interrupt that audio.",
+      "ko": "시스템은 그 오디오를 방해할 수 있는 대화나 다른 경험을 피할 수 있습니다.",
+      "sourceHash": "46f56035347de03a839b432659f843ddb1f0b4c6e029ca4331cf15822661a3db",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0009:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0010:0001",
+      "source": "Inherits From",
+      "ko": "상속 대상",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0011:0001",
+      "source": "[AppIntent](appintent.md)",
+      "ko": "[AppIntent](appintent.md)",
+      "sourceHash": "39a7105e8b259a550b548ced2b4d0f47178c89f550a4f4907dfa9626c2ef07c5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherits-from:0011:0002",
+      "source": "[PersistentlyIdentifiable](persistentlyidentifiable.md)",
+      "ko": "[PersistentlyIdentifiable](persistentlyidentifiable.md)",
+      "sourceHash": "afe5ac8f78227335f4b119bab7cd91e42632a4891e555031ba1e7e012d2943ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherits-from:0011:0003",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherits-from:0011:0004",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherits-from:0011:0005",
+      "source": "[SystemIntent](systemintent.md)",
+      "ko": "[SystemIntent](systemintent.md)",
+      "sourceHash": "6fbdf1f16e014377d084a58d519b249f1d5e237b846d12ad2e250fe2add25b46",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[protocol AudioPlaybackIntent](audioplaybackintent.md)",
+      "ko": "[protocol AudioPlaybackIntent](audioplaybackintent.md)",
+      "sourceHash": "3262ef55ad3a011c2d08235044fab51393637aee681d786b4e53f38c5730e22e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "An App Intent that plays, pauses, or otherwise modifies audio playback state when it executes.",
+      "ko": "실행 시 오디오 재생 상태를 재생, 일시 중지하거나 다른 방식으로 수정하는 App Intent입니다.",
+      "sourceHash": "ee957755aadbc6f7e62e32088e7a64db4fa6b371aee88377bf3af86daf5e34b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[protocol AudioRecordingIntent](audiorecordingintent.md)",
+      "ko": "[protocol AudioRecordingIntent](audiorecordingintent.md)",
+      "sourceHash": "5573d7b0e74a2e4d2203d9085896b1c50a42bd2129b40a2d0576c5d052b9ae9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "An app intent that starts, stops or otherwise modifies audio recording state.",
+      "ko": "오디오 녹음 상태를 시작, 중지하거나 다른 방식으로 수정하는 앱 인텐트입니다.",
+      "sourceHash": "1e32734e29b3e289a01b0e111dc0e10cb6531ca150d2523d73dab4a2997063c1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[protocol CameraCaptureIntent](cameracaptureintent.md)",
+      "ko": "[protocol CameraCaptureIntent](cameracaptureintent.md)",
+      "sourceHash": "5f6f31e4fcc958162cb78aebff16f80f9ccfa8a5c3c6d4ebeb32df67364ff782",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Designates intent that will launch an activity that uses device’s camera to capture photos or videos.",
+      "ko": "기기의 카메라를 사용해 사진 또는 동영상을 촬영하는 활동을 시작하는 인텐트를 지정합니다.",
+      "sourceHash": "2d42ab60b528d7a05ccc45ef87cb4299aa04bfd087800d2d191dcb241fd80640",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0002",
+      "source": "Marking your intent with this protocol makes it available as a possible action for Camera quick action.",
+      "ko": "이 protocol로 인텐트를 표시하면 Camera quick action에서 사용할 수 있는 동작으로 노출됩니다.",
+      "sourceHash": "24e48162284b42453398bbfc928bf1ef2af6f398ea94bef7564c9c4e4da85817",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[protocol PlayVideoIntent](playvideointent.md)",
+      "ko": "[protocol PlayVideoIntent](playvideointent.md)",
+      "sourceHash": "e36bf681a298bfc3ff860c8d891bb148720b7cfee4ce0002014d5ef60a16beb9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "An intent that looks for videos based on a search term, then plays the content.",
+      "ko": "검색어를 기준으로 동영상을 검색한 뒤 콘텐츠를 재생하는 인텐트입니다.",
+      "sourceHash": "56e56ba83414b5c3beb6a73b5076af2f8db1af980d2ad5413b5108d3c8ce41cd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0021:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appintents/audiostartingintent)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appintents/audiostartingintent)*",
+      "sourceHash": "5ed70315dc4c52fff9019d349895ab9dfac74a8fe5bee8313e0a0c58c8947720",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "docId": "documentation/AVFAudio/avmidiprogramchangeevent.md",
+  "title": "AVMIDIProgramChangeEvent",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avmidiprogramchangeevent",
+  "segments": [
+    {
+      "id": "seg:heading:avmidiprogramchangeevent:0000:0001",
+      "source": "AVMIDIProgramChangeEvent",
+      "ko": "AVMIDIProgramChangeEvent",
+      "sourceHash": "bb6a82cdeba646a2292e15f263f6edbc484fe35f2968b6fce15fd17e227158eb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmidiprogramchangeevent:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmidiprogramchangeevent:0002:0001",
+      "source": "An object that represents a MIDI program or patch change message.",
+      "ko": "MIDI program 또는 patch change 메시지를 나타내는 객체입니다.",
+      "sourceHash": "5c009301ebf8add2a428e67fbc14aca7cad6e0e6f7ab7c5bd9c1a874e8bc6461",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avmidiprogramchangeevent:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidiprogramchangeevent:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidiprogramchangeevent:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidiprogramchangeevent:0004:0003",
+      "source": "Mac Catalyst 16.0+",
+      "ko": "Mac Catalyst 16.0+",
+      "sourceHash": "87ecab2e4ea7b5b949ac3608f01726f8e88b11cb3d4b8233535e965e0f50886b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidiprogramchangeevent:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidiprogramchangeevent:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidiprogramchangeevent:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVMIDIProgramChangeEvent\n```",
+      "ko": "```swift\nclass AVMIDIProgramChangeEvent\n```",
+      "sourceHash": "aeaac350bec11e4b200b2307bf59c0e31233af1eb806fb69838bf15ba7b7f266",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "The effect of this message depends on the [`AVMusicTrack`](avmusictrack.md) destination audio unit.",
+      "ko": "이 메시지의 효과는 [`AVMusicTrack`](avmusictrack.md) destination audio unit에 따라 달라집니다.",
+      "sourceHash": "9d63fee21d2e804302ab4ef1a52538300fcb243fc924df7d53061be40c5ee4e9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-program-change-event:0010:0001",
+      "source": "Creating a Program Change Event",
+      "ko": "Program Change Event 생성",
+      "sourceHash": "2842cdc35adf561bf806fc14aeda093a76b12d7f9052254d061840e3abfec954",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-program-change-event:0011:0001",
+      "source": "[init(channel: UInt32, programNumber: UInt32)](avmidiprogramchangeevent/init(channel:programnumber:).md)",
+      "ko": "[init(channel: UInt32, programNumber: UInt32)](avmidiprogramchangeevent/init(channel:programnumber:).md)",
+      "sourceHash": "79f8443110c45b1bb6f0eded744f84169ad99adda3a795c0f3431bc18349b4c3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-program-change-event:0012:0001",
+      "source": "Creates a program change event with a channel and program number.",
+      "ko": "채널과 프로그램 번호로 program change event를 생성합니다.",
+      "sourceHash": "d590f173ac376279b909dc487ac8ea50992aafeeb97221c05e6f76b91eff0682",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-a-program-change-event:0013:0001",
+      "source": "Configuring a Program Change Event",
+      "ko": "Program Change Event 구성",
+      "sourceHash": "8b20dcf27aae2c4df8c29cb6c5e380497e0311e80b1a609effa629b3c5b537cb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-a-program-change-event:0014:0001",
+      "source": "[var programNumber: UInt32](avmidiprogramchangeevent/programnumber.md)",
+      "ko": "[var programNumber: UInt32](avmidiprogramchangeevent/programnumber.md)",
+      "sourceHash": "f0716cfbd069273f3feba8a046743dffdc36359c468ec95124ffbab5027458f5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-a-program-change-event:0015:0001",
+      "source": "The MIDI program number.",
+      "ko": "MIDI 프로그램 번호입니다.",
+      "sourceHash": "8db9dae492351171985cb6bce8435d1905ce40b30d9853603bc276ba0682e6ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0016:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0017:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0018:0001",
+      "source": "[AVMIDIChannelEvent](avmidichannelevent.md)",
+      "ko": "[AVMIDIChannelEvent](avmidichannelevent.md)",
+      "sourceHash": "e74de85ad0bfced963601b9f4bee9f4b237143bfe23d38b61c10dbcd4651a2bd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0019:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0020:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0021:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[class AVMIDIChannelEvent](avmidichannelevent.md)",
+      "ko": "[class AVMIDIChannelEvent](avmidichannelevent.md)",
+      "sourceHash": "b42e0427d0d111a1d4cc353d34f27f0d7294517ffdb9d69fdef9338611dde597",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "A base class for all MIDI messages that operate on a single MIDI channel.",
+      "ko": "단일 MIDI 채널에서 동작하는 모든 MIDI 메시지의 기본 class입니다.",
+      "sourceHash": "eede1846bb71e177f3dd657f21c6fc6fb9d471895b3341d9a552ba4b89afe526",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[class AVMIDIChannelPressureEvent](avmidichannelpressureevent.md)",
+      "ko": "[class AVMIDIChannelPressureEvent](avmidichannelpressureevent.md)",
+      "sourceHash": "5b6ecb5526c5848f78a5107588cbad0755587cf4e5abdf6b7428f644047fbaab",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "An object that represents a MIDI channel pressure message.",
+      "ko": "MIDI 채널 압력 메시지를 나타내는 객체입니다.",
+      "sourceHash": "70600398a269551dec92324d8c57d9d5236c4c5d01d1993f3eb904f8aba0457d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[class AVMIDIPolyPressureEvent](avmidipolypressureevent.md)",
+      "ko": "[class AVMIDIPolyPressureEvent](avmidipolypressureevent.md)",
+      "sourceHash": "1ff56e72ea9a84f2a86fc3989dd82628a1b4b7ec93a1054fefa5458fbb641191",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "An object that represents a MIDI poly or key pressure event.",
+      "ko": "MIDI poly 또는 key pressure 이벤트를 나타내는 객체입니다.",
+      "sourceHash": "5eb91ca706a2c52b67f2fba1d79e61fc7ccfdcb7c448e255413e48193e81d7df",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[class AVMIDIPitchBendEvent](avmidipitchbendevent.md)",
+      "ko": "[class AVMIDIPitchBendEvent](avmidipitchbendevent.md)",
+      "sourceHash": "986c6e0a7165dd46edbafe1eba83cd5cefd1ceea769f1debe2d82182c24c532f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "An object that represents a MIDI pitch bend message.",
+      "ko": "MIDI pitch bend 메시지를 나타내는 객체입니다.",
+      "sourceHash": "70e982354cf456b9662e90ebb09691cdc1f0bd3147bd14055196d24a59ce6c55",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[class AVMIDIControlChangeEvent](avmidicontrolchangeevent.md)",
+      "ko": "[class AVMIDIControlChangeEvent](avmidicontrolchangeevent.md)",
+      "sourceHash": "d4d908c464f084e01f45483f6c3eaa9d14994c3db78d5ea86172760659f12d2d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "An object that represents a MIDI control change message.",
+      "ko": "MIDI control change 메시지를 나타내는 객체입니다.",
+      "sourceHash": "0bbf60fc9da6195f5e7ccb38855735892dfbbdbf1163d9a0568cdf87ceea092b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0032:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avmidiprogramchangeevent)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avmidiprogramchangeevent)*",
+      "sourceHash": "3924aad1849fb17abfffbfb0acbd9fcf2e6825e40bddad777e2dc6562724d0cb",
+      "status": "preserved"
+    }
+  ]
+}

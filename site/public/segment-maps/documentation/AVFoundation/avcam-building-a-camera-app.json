@@ -1,0 +1,848 @@
+{
+  "docId": "documentation/AVFoundation/avcam-building-a-camera-app.md",
+  "title": "AVCam: Building a camera app",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcam-building-a-camera-app",
+  "segments": [
+    {
+      "id": "seg:heading:avcam-building-a-camera-app:0000:0001",
+      "source": "AVCam: Building a camera app",
+      "ko": "AVCam: 카메라 앱 만들기",
+      "sourceHash": "1ec5093084b0c4208fffc13cdd3271bd08533f4b420f946821ae906f5786f334",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avcam-building-a-camera-app:0001:0001",
+      "source": "**Framework**: AVFoundation",
+      "ko": "**프레임워크**: AVFoundation",
+      "sourceHash": "d1a1a81bcb090684ac27d86fff88465af08239993e5a6442a93dc76635a7ffc2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avcam-building-a-camera-app:0002:0001",
+      "source": "Capture photos and record video using the front and rear iPhone and iPad cameras.",
+      "ko": "전면 및 후면 iPhone, iPad 카메라를 사용해 사진을 캡처하고 동영상을 녹화합니다.",
+      "sourceHash": "41a63b72d1b3bdc80e8f96ebffb433c57950fb348bb3f6890ad1ac00b488c600",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avcam-building-a-camera-app:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcam-building-a-camera-app:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcam-building-a-camera-app:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcam-building-a-camera-app:0004:0003",
+      "source": "Mac Catalyst 26.0+",
+      "ko": "Mac Catalyst 26.0+",
+      "sourceHash": "41da0bcbe19513a5638f4ac052319884e486b3cc05252ef6209b23e7b2b1d8e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcam-building-a-camera-app:0004:0004",
+      "source": "Xcode 26.0+",
+      "ko": "Xcode 26.0+",
+      "sourceHash": "5c66dd708ca7ae5b28e52b2ec5de06442d24d89fb58600040e4e414faf4f11d5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0005:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0001",
+      "source": "The AVCam sample shows you how to build a basic camera app for iOS.",
+      "ko": "이 AVCam 샘플은 iOS용 기본 카메라 앱을 빌드하는 방법을 보여줍니다.",
+      "sourceHash": "1e737b1397cf1e2c01ad9c42f1df02e6e01fc3522a2ad7a99be5e900f53f2128",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0002",
+      "source": "It demonstrates how to use AVFoundation to access device cameras and microphones, configure a capture session, capture photos and videos, and much more.",
+      "ko": "이 샘플은 AVFoundation을 사용해 장치 카메라와 마이크에 접근하고 캡처 세션을 구성하며, 사진과 동영상을 캡처하는 방법 등 다양한 방법을 보여줍니다.",
+      "sourceHash": "3446a72dd329aea684f9f002f6341378a9dd59a167c6c9393c6d2926f306b838",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0003",
+      "source": "It also shows how to use the [`PhotoKit`](https://developer.apple.com/documentation/PhotoKit) framework to save your captured media to the Photos library.",
+      "ko": "또한 [`PhotoKit`](https://developer.apple.com/documentation/PhotoKit) 프레임워크를 사용해 캡처한 미디어를 Photos 라이브러리에 저장하는 방법도 보여줍니다.",
+      "sourceHash": "706355e187c0c263e246fafc8dbba35d4bf8c6f040ec2afefa59247716e65f95",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0001",
+      "source": "The sample uses SwiftUI and the features of Swift concurrency to build a responsive camera app.",
+      "ko": "이 샘플은 SwiftUI와 Swift 동시성 기능을 사용해 반응형 카메라 앱을 빌드합니다.",
+      "sourceHash": "2cff8a0f9293f5689fc055958b7c839b6621185953b254545991a9a61dad739c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0002",
+      "source": "The following diagram describes the app’s design:",
+      "ko": "다음 다이어그램은 앱의 설계를 설명합니다:",
+      "sourceHash": "b8f081ecc9aedf9288c480dbe8870982ac7d9358d4bdccdf746b947254e2e61b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "![A diagram that describes the relationships between app objects.",
+      "ko": "![앱 객체 간의 관계를 설명하는 다이어그램입니다.",
+      "sourceHash": "be96a6d8fdb1d7818ca56dd988e16afd75485f7426912a20349b8674c632be82",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "When the app starts, it creates an instance of CameraModel.",
+      "ko": "앱이 시작되면 `CameraModel` 인스턴스를 생성합니다.",
+      "sourceHash": "17af0b24aa796c1ac8100ab3803dffc5f35ad040894c7ba8c3f19fe6501a56f6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0003",
+      "source": "The camera model creates instances of the CaptureService and MediaLibrary types, which it uses to perform its essential functions.",
+      "ko": "카메라 모델은 필수 기능 수행에 사용하는 `CaptureService`와 `MediaLibrary` 타입의 인스턴스를 생성합니다.",
+      "sourceHash": "eedd7ebaeaa00c327e5d58f53ffa3e95278c9cf396a8d14dcf090fbe98ac19e2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0004",
+      "source": "Finally, the app creates an instance of CameraView, which provides the main user interface, and passes it a reference to the CameraModel object.](https://docs-assets.developer.apple.com/published/099e27ca35a3de0fc5aaadb24152517d/app-assembly-overview.png)",
+      "ko": "마지막으로 앱은 기본 사용자 인터페이스를 제공하는 `CameraView` 인스턴스를 생성하고 `CameraModel` 객체에 대한 참조를 전달합니다.](https://docs-assets.developer.apple.com/published/099e27ca35a3de0fc5aaadb24152517d/app-assembly-overview.png)",
+      "sourceHash": "b6f3f11caa072aff3b7d4d411636af51479d3bc4a99f019b1d2a38a249bd49be",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "The key type the app defines is `CaptureService`, an actor that manages the interactions with the AVFoundation capture APIs.",
+      "ko": "이 앱에서 핵심적으로 정의된 타입은 AVFoundation 캡처 API와의 상호작용을 관리하는 actor인 `CaptureService`입니다.",
+      "sourceHash": "42efb872e6692916e3bea361dfda2310c06a4130267a5ce0ea543ffdc5a2f8a4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "This object configures the capture pipeline and manages its life cycle, and defines an asynchronous interface to capture photos and videos.",
+      "ko": "이 객체는 캡처 파이프라인을 구성하고 수명을 관리하며, 사진과 동영상을 캡처하는 비동기 인터페이스를 정의합니다.",
+      "sourceHash": "5ac49a4a2eb4692b9300f4e30122d135c0fa12d7720ebc93362d1da78e4e1768",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0003",
+      "source": "It delegates the handling of those operations to the app’s `PhotoCapture` and `MovieCapture` objects, respectively.",
+      "ko": "해당 동작은 앱의 `PhotoCapture` 및 `MovieCapture` 객체에 각각 위임됩니다.",
+      "sourceHash": "e696f9016d6133c3d67072deb9bf88323480ff946483e007e291da5b5847d6f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0010:0001",
+      "source": "**Note**: Configuring and starting a capture session are blocking operations that can take time to complete.",
+      "ko": "**참고**: 캡처 세션을 구성하고 시작하는 작업은 완료까지 시간이 걸릴 수 있는 블로킹 연산입니다.",
+      "sourceHash": "ddd32210b3c34531b01aefc03d59bc7093c5afd117152c82d082f0dfdd7cdbcd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0010:0002",
+      "source": "To keep the user interface responsive, the app defines `CaptureService` as an actor type to ensure that AVFoundation capture API calls don’t occur on the main thread.",
+      "ko": "UI 반응성을 유지하기 위해 앱은 `CaptureService`를 actor 타입으로 정의해 AVFoundation 캡처 API 호출이 메인 스레드에서 실행되지 않도록 합니다.",
+      "sourceHash": "64d9f01d3ae965e7292e5d74b19a1cab0ed053f30a5ffdf085b1e2ab0b6c3069",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configure-the-sample-code-project:0011:0001",
+      "source": "Configure the Sample Code Project",
+      "ko": "샘플 코드 프로젝트 구성",
+      "sourceHash": "19422740af60255e099df3d4f613b730295d5a1875b82c98e0a0f45432bd1424",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-the-sample-code-project:0012:0001",
+      "source": "Because Simulator doesn’t have access to device cameras, it isn’t suitable for running the app—you’ll need to run it on a device.",
+      "ko": "시뮬레이터는 장치 카메라에 접근할 수 없으므로 앱 실행에 적합하지 않으므로, 실제 기기에서 실행해야 합니다.",
+      "sourceHash": "ad7f43d0c053f2f98a44f3a9fdb96bfbcaa278945f72c00e6bbc6e5572de9929",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-the-sample-code-project:0012:0002",
+      "source": "To run this sample, you’ll need the following:",
+      "ko": "이 샘플을 실행하려면 다음이 필요합니다:",
+      "sourceHash": "3d7bd5dd5d96b4bd530f12c8c84955f07b56e8d49309c696dbea9448a7c43488",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configure-the-sample-code-project:0013:0001",
+      "source": "An iOS device with iOS 26 or later",
+      "ko": "iOS 26 이상이 탑재된 iOS 기기",
+      "sourceHash": "c9dc0e73d6f5e455a7a16feb3a694d67e08cf901b934b832858b00503181a225",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-the-sample-code-project:0014:0001",
+      "source": "AVCam adopts the [`LockedCameraCapture`](https://developer.apple.com/documentation/LockedCameraCapture) framework, which makes the app eligible to launch from the Lock Screen, Control Center, Action Button, and the Camera Control.",
+      "ko": "AVCam은 [`LockedCameraCapture`](https://developer.apple.com/documentation/LockedCameraCapture) 프레임워크를 채택해 앱이 잠금 화면, Control Center, 액션 버튼, Camera Control에서 실행될 수 있는 자격을 갖추게 합니다.",
+      "sourceHash": "cc8d24875470fb42e212a961dafe6100688809426e72e3350b8670d6db4ef712",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-the-sample-code-project:0014:0002",
+      "source": "To support this framework, the sample adds a capture extension target and a Control Center extension target to the main app target.",
+      "ko": "이 프레임워크를 지원하기 위해 샘플은 기본 앱 대상에 캡처 확장 대상과 Control Center 확장 대상을 추가합니다.",
+      "sourceHash": "20ecffdad1f2d2eac636dd8e64cc4396d2ebac48f9a3e44c62ba913f09b3f652",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-the-sample-code-project:0014:0003",
+      "source": "Set your signing credentials on each target to build and run the sample.",
+      "ko": "샘플을 빌드하고 실행하려면 각 대상에 서명 자격 증명을 설정합니다.",
+      "sourceHash": "816eb56ef3495072179c378eb55ed324c273d1b0619296957da8ec1055d51a1b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configure-a-capture-session:0015:0001",
+      "source": "Configure a Capture Session",
+      "ko": "캡처 세션 구성",
+      "sourceHash": "fbfd1ab1d9d48340ad51dabdb543728eb1d92312b878d5640843959eff031b6f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0016:0001",
+      "source": "The central object in any capture app is an instance of [`AVCaptureSession`](AVCaptureSession.md).",
+      "ko": "모든 캡처 앱의 중심 객체는 [`AVCaptureSession`](AVCaptureSession.md) 인스턴스입니다.",
+      "sourceHash": "056698d547a8c2797bd3885e2ecf5d12a71bd84e0addb7505d58f1b8f85c20ca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0016:0002",
+      "source": "A capture session is the central hub to which the app connects inputs from camera and microphone devices, and attaches them to outputs that capture media like photos and video.",
+      "ko": "캡처 세션은 앱이 카메라와 마이크 장치의 입력을 연결하고, 이를 사진 및 동영상을 캡처하는 출력에 연결하는 중앙 허브입니다.",
+      "sourceHash": "146f6261592e277eddd686efaf55bf0ed5104d262bb55dd71d9b81d226c73d96",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0016:0003",
+      "source": "After configuring the session, the app uses it to control the flow of data through the capture pipeline.",
+      "ko": "세션을 구성한 후 앱은 이를 통해 캡처 파이프라인으로 데이터 흐름을 제어합니다.",
+      "sourceHash": "094eab72a2008850ba30cc748095db22d9604adde7c287e2b45e534d58c3ff7e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0017:0001",
+      "source": "![A diagram that describes the configuration of a capture session.",
+      "ko": "![캡처 세션 구성을 설명하는 다이어그램입니다.",
+      "sourceHash": "c6f47a2c55737b6325b87a09a6264e65e899609e1b5c2473290a52151281a6a2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0017:0002",
+      "source": "It shows how a capture session connects inputs from camera and microphone devices to compatible outputs that capture photos or video, or display a video preview.](https://docs-assets.developer.apple.com/published/5bffa1d94c052514c5b1f45adc09649b/avcapturesession-overview.png)",
+      "ko": "이 다이어그램은 카메라 및 마이크 장치의 입력을 사진 또는 동영상을 캡처하거나 비디오 미리보기를 표시할 수 있는 호환 출력에 연결하는 방법을 보여줍니다.](https://docs-assets.developer.apple.com/published/5bffa1d94c052514c5b1f45adc09649b/avcapturesession-overview.png)",
+      "sourceHash": "cab28e276a22421099f6ba1026dcc9b97fd47e58fa14bb8757a2dd1f8fedfacd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0018:0001",
+      "source": "The capture service performs the session configuration in its `setUpSession()` method.",
+      "ko": "캡처 서비스는 `setUpSession()` 메서드에서 세션 구성을 수행합니다.",
+      "sourceHash": "477ecf58468172f0bb2a739664ddb3c70a84bf3bfcb3775c04a1d1600590209e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0018:0002",
+      "source": "It retrieves the default camera and microphone for the host device and adds them as inputs to the capture session.",
+      "ko": "호스트 장치의 기본 카메라와 마이크를 검색한 다음 이를 캡처 세션의 입력으로 추가합니다.",
+      "sourceHash": "1eead77d91a2b000be0e6dacc2bcb9c9b075587ce42d2c3b232fc41c8207d045",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:configure-a-capture-session:0019:0001",
+      "source": "```swift\n// Retrieve the default camera and microphone.\nlet defaultCamera = try deviceLookup.defaultCamera\nlet defaultMic = try deviceLookup.defaultMic\n\n// Add inputs for the default camera and microphone devices.\nactiveVideoInput = try addInput(for: defaultCamera)\ntry addInput(for: defaultMic)\n```",
+      "ko": "```swift\n// Retrieve the default camera and microphone.\nlet defaultCamera = try deviceLookup.defaultCamera\nlet defaultMic = try deviceLookup.defaultMic\n\n// Add inputs for the default camera and microphone devices.\nactiveVideoInput = try addInput(for: defaultCamera)\ntry addInput(for: defaultMic)\n```",
+      "sourceHash": "bb56ae40ea9b7f1e22a5c2e6ad9fdab322bb1df9cb782e1b73cc04d14e0ea401",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0020:0001",
+      "source": "To add the inputs, it uses a helper method that creates a new [`AVCaptureDeviceInput`](avcapturedeviceinput.md) for the specified camera or microphone device and adds it to the capture session, if possible.",
+      "ko": "입력을 추가하기 위해 이 메서드는 지정한 카메라 또는 마이크 장치에 대한 새 [`AVCaptureDeviceInput`](avcapturedeviceinput.md) 인스턴스를 생성하고, 가능한 경우 캡처 세션에 추가하는 헬퍼 메서드를 사용합니다.",
+      "sourceHash": "869afc30f67956e602fa20966b75f9637ee00f47d5cdba12480b760186cca7ec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:configure-a-capture-session:0021:0001",
+      "source": "```swift\n// Adds an input to the capture session to connect the specified capture device.\n@discardableResult\nprivate func addInput(for device: AVCaptureDevice) throws -> AVCaptureDeviceInput {\n    let input = try AVCaptureDeviceInput(device: device)\n    if captureSession.canAddInput(input) {\n        captureSession.addInput(input)\n    } else {\n        throw CameraError.addInputFailed\n    }\n    return input\n}\n```",
+      "ko": "```swift\n// Adds an input to the capture session to connect the specified capture device.\n@discardableResult\nprivate func addInput(for device: AVCaptureDevice) throws -> AVCaptureDeviceInput {\n    let input = try AVCaptureDeviceInput(device: device)\n    if captureSession.canAddInput(input) {\n        captureSession.addInput(input)\n    } else {\n        throw CameraError.addInputFailed\n    }\n    return input\n}\n```",
+      "sourceHash": "17684a4f50ebbc520c13a0296b62b9189a666b1a8f6540fd118a82e307743ab4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0022:0001",
+      "source": "After adding the device inputs, the method configures the capture session for the app’s default photo capture mode.",
+      "ko": "장치 입력을 추가한 후, 해당 메서드는 앱의 기본 사진 캡처 모드에 맞게 캡처 세션을 구성합니다.",
+      "sourceHash": "9d25ea45d39bfe4d200d0628c3aca9f27d43835c4b89893d2cd22ae627f79f71",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0022:0002",
+      "source": "It optimizes the pipeline for high-resolution photo quality output by setting the capture session’s [`photo`](avcapturesession/preset/photo.md) preset.",
+      "ko": "캡처 세션의 [`photo`](avcapturesession/preset/photo.md) 프리셋을 설정하면 고해상도 사진 화질 출력용 파이프라인이 최적화됩니다.",
+      "sourceHash": "049d75f852bc5e584cafc05cb6a862c1d5816eb32e22f9f0a5d2bdd6ef649672",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-a-capture-session:0022:0003",
+      "source": "Finally, to enable the app to capture photos, it adds an [`AVCapturePhotoOutput`](avcapturephotooutput.md) instance to the session.",
+      "ko": "마지막으로 앱에서 사진을 촬영할 수 있도록 세션에 [`AVCapturePhotoOutput`](avcapturephotooutput.md) 인스턴스를 추가합니다.",
+      "sourceHash": "59f462adcd0d6dbc04b1b212247efa5abbf4b0735dfb79b62b4d4eb70ec8569e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:configure-a-capture-session:0023:0001",
+      "source": "```swift\n// Configure the session for photo capture by default.\ncaptureSession.sessionPreset = .photo\n\n// Add the photo capture output as the default output type.\nif captureSession.canAddOutput(photoCapture.output) {\n    captureSession.addOutput(photoCapture.output)\n} else {\n    throw CameraError.addOutputFailed\n}\n```",
+      "ko": "```swift\n// Configure the session for photo capture by default.\ncaptureSession.sessionPreset = .photo\n\n// Add the photo capture output as the default output type.\nif captureSession.canAddOutput(photoCapture.output) {\n    captureSession.addOutput(photoCapture.output)\n} else {\n    throw CameraError.addOutputFailed\n}\n```",
+      "sourceHash": "bd7795f8c0ab4b9363faecd964d5b223a61355004adebb7f302ae249915f1f8a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:set-up-a-capture-preview:0024:0001",
+      "source": "Set Up a Capture Preview",
+      "ko": "캡처 미리보기 설정",
+      "sourceHash": "dafcd005208e9e4f06cd6a7212b1f70b09ab833ca2ea56c0a0359f16440a208f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:set-up-a-capture-preview:0025:0001",
+      "source": "To preview the content a camera is capturing, AVFoundation provides a Core Animation layer subclass called [`AVCaptureVideoPreviewLayer`](avcapturevideopreviewlayer.md).",
+      "ko": "카메라가 캡처하는 콘텐츠를 미리보려면 AVFoundation은 [`AVCaptureVideoPreviewLayer`](avcapturevideopreviewlayer.md)라는 Core Animation 레이어 하위 클래스를 제공합니다.",
+      "sourceHash": "a5a509a24334f633cbbfcc65ed82fa8064cbda1bc6386dfdbfa8ab584a05dc32",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:set-up-a-capture-preview:0025:0002",
+      "source": "SwiftUI doesn’t support using layers directly, so instead, the app hosts this layer in a [`UIView`](https://developer.apple.com/documentation/UIKit/UIView) subclass called `PreviewView`.",
+      "ko": "SwiftUI는 레이어를 직접 사용할 수 없으므로 앱에서는 이 레이어를 `PreviewView`라는 [`UIView`](https://developer.apple.com/documentation/UIKit/UIView) 하위 클래스에 호스팅합니다.",
+      "sourceHash": "1799d078dd3b89c0d59481c01fc6972496775cf2f7bbcfb0126393129e382015",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:set-up-a-capture-preview:0025:0003",
+      "source": "It overrides the [`layerClass`](https://developer.apple.com/documentation/UIKit/UIView/layerClass) property to make the preview layer the backing for the view.",
+      "ko": "[`layerClass`](https://developer.apple.com/documentation/UIKit/UIView/layerClass) 속성을 오버라이드해 미리보기 레이어를 뷰의 백킹 레이어로 설정합니다.",
+      "sourceHash": "1797adbe1583cfc76138fb74f070999ee78ff4419549d6c5eeff1554ff97109b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:set-up-a-capture-preview:0026:0001",
+      "source": "```swift\nclass PreviewView: UIView, PreviewTarget {\n    \n    // Use `AVCaptureVideoPreviewLayer` as the view's backing layer.\n    override class var layerClass: AnyClass {\n        AVCaptureVideoPreviewLayer.self\n    }\n    \n    var previewLayer: AVCaptureVideoPreviewLayer {\n        layer as! AVCaptureVideoPreviewLayer\n    }\n    \n    func setSession(_ session: AVCaptureSession) {\n        // Connects the session with the preview layer, which allows the layer\n        // to provide a live view of the captured content.\n        previewLayer.session = session\n    }\n}\n```",
+      "ko": "```swift\nclass PreviewView: UIView, PreviewTarget {\n    \n    // Use `AVCaptureVideoPreviewLayer` as the view's backing layer.\n    override class var layerClass: AnyClass {\n        AVCaptureVideoPreviewLayer.self\n    }\n    \n    var previewLayer: AVCaptureVideoPreviewLayer {\n        layer as! AVCaptureVideoPreviewLayer\n    }\n    \n    func setSession(_ session: AVCaptureSession) {\n        // Connects the session with the preview layer, which allows the layer\n        // to provide a live view of the captured content.\n        previewLayer.session = session\n    }\n}\n```",
+      "sourceHash": "bee93baa9f00f8a16d24d9a8ab8c1761dbd40ced1fa67ef9b573aec007514c9b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:set-up-a-capture-preview:0027:0001",
+      "source": "To make this view accessible to SwiftUI, the app wraps it as a [`UIViewRepresentable`](https://developer.apple.com/documentation/SwiftUI/UIViewRepresentable) type called `CameraPreview`.",
+      "ko": "이 뷰를 SwiftUI에서 사용할 수 있도록 앱은 `CameraPreview`라는 [`UIViewRepresentable`](https://developer.apple.com/documentation/SwiftUI/UIViewRepresentable) 타입으로 래핑합니다.",
+      "sourceHash": "dae9a87359ff77c628314f96c64bc9a22ba087b6951afdbb192251766814f250",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:set-up-a-capture-preview:0028:0001",
+      "source": "```swift\nstruct CameraPreview: UIViewRepresentable {\n    \n    private let source: PreviewSource\n    \n    init(source: PreviewSource) {\n        self.source = source\n    }\n    \n    func makeUIView(context: Context) -> PreviewView {\n        let preview = PreviewView()\n        // Connect the preview layer to the capture session.\n        source.connect(to: preview)\n        return preview\n    }\n    \n    func updateUIView(_ previewView: PreviewView, context: Context) {\n        // No implementation needed.\n    }\n}\n```",
+      "ko": "```swift\nstruct CameraPreview: UIViewRepresentable {\n    \n    private let source: PreviewSource\n    \n    init(source: PreviewSource) {\n        self.source = source\n    }\n    \n    func makeUIView(context: Context) -> PreviewView {\n        let preview = PreviewView()\n        // Connect the preview layer to the capture session.\n        source.connect(to: preview)\n        return preview\n    }\n    \n    func updateUIView(_ previewView: PreviewView, context: Context) {\n        // No implementation needed.\n    }\n}\n```",
+      "sourceHash": "81d0ea92d2f86f7a77a6afa5c9433942ab38d1dfc63503d96efc75d8c83042bd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:set-up-a-capture-preview:0029:0001",
+      "source": "To connect the preview to the capture session without directly exposing the capture service’s protected state, the sample defines app-specific `PreviewSource` and `PreviewTarget` protocols.",
+      "ko": "미리보기를 캡처 세션에 연결하면서 캡처 서비스의 보호 상태를 직접 노출하지 않기 위해, 샘플은 앱 전용 `PreviewSource`와 `PreviewTarget` 프로토콜을 정의합니다.",
+      "sourceHash": "20e9bcaab2a457bea3eec4dadc69ddba5ed7076c8af50c06846f19fdaaffe235",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:set-up-a-capture-preview:0029:0002",
+      "source": "The app passes the `CameraPreview` a preview source, which provides a reference to the capture session.",
+      "ko": "앱은 캡처 세션에 대한 참조를 제공하는 `PreviewSource`를 `CameraPreview`에 전달합니다.",
+      "sourceHash": "ea94fa96f0232ad841bde8367c3b99fd396f242365b73f2642447975fc46fb68",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:set-up-a-capture-preview:0029:0003",
+      "source": "Calling the preview source’s `connect(to:)` method sets the capture session on the `PreviewView` instance.",
+      "ko": "`PreviewSource`의 `connect(to:)` 메서드를 호출하면 `PreviewView` 인스턴스에 캡처 세션이 설정됩니다.",
+      "sourceHash": "1d659fe4a8453e208def3182a64459718d33abd727a646ac3eea5fc3c649d750",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:request-authorization:0030:0001",
+      "source": "Request Authorization",
+      "ko": "권한 부여 요청",
+      "sourceHash": "f2326a9b09eea877f9a01f94a21ad0c21a9c9f8d4a56dd544f66290152ad6c44",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:request-authorization:0031:0001",
+      "source": "The initial capture configuration is complete, but before the app can successfully start the capture session, it needs to determine whether it has authorization to use device inputs.",
+      "ko": "초기 캡처 구성이 완료되었지만 앱이 캡처 세션을 성공적으로 시작하려면 장치 입력을 사용할 권한이 있는지 판정해야 합니다.",
+      "sourceHash": "4edcef08f6101b6dd30da0403554e2e87df88d7a2c462cd9a5a45f96bc7a741c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:request-authorization:0031:0002",
+      "source": "The system requires that a person explicitly authorize the app to capture input from cameras and microphones.",
+      "ko": "시스템은 카메라와 마이크의 입력을 캡처하려면 사용자가 앱에 대해 명시적으로 권한을 부여해야 한다고 요구합니다.",
+      "sourceHash": "522fe45acf5c5c5b1460978ae92bdd288ce1ab2a67f5706c985beb39be9f015d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:request-authorization:0031:0003",
+      "source": "To determine the app’s status, the capture service defines an asynchronous `isAuthorized` property as follows:",
+      "ko": "앱의 상태를 판정하기 위해 캡처 서비스는 다음과 같이 비동기 `isAuthorized` 속성을 정의합니다.",
+      "sourceHash": "a3d6765c4ac9af0e83c08e4eb27637d2adbf9d543da6c7cb89845a245f5aaf01",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:request-authorization:0032:0001",
+      "source": "```swift\nvar isAuthorized: Bool {\n    get async {\n        let status = AVCaptureDevice.authorizationStatus(for: .video)\n        // Determine whether a person previously authorized camera access.\n        var isAuthorized = status == .authorized\n        // If the system hasn't determined their authorization status,\n        // explicitly prompt them for approval.\n        if status == .notDetermined {\n            isAuthorized = await AVCaptureDevice.requestAccess(for: .video)\n        }\n        return isAuthorized\n    }\n}\n```",
+      "ko": "```swift\nvar isAuthorized: Bool {\n    get async {\n        let status = AVCaptureDevice.authorizationStatus(for: .video)\n        // Determine whether a person previously authorized camera access.\n        var isAuthorized = status == .authorized\n        // If the system hasn't determined their authorization status,\n        // explicitly prompt them for approval.\n        if status == .notDetermined {\n            isAuthorized = await AVCaptureDevice.requestAccess(for: .video)\n        }\n        return isAuthorized\n    }\n}\n```",
+      "sourceHash": "6e7e58c67dbc20be98a3e9f1d525bbaf5bbb7d0750ef19f9aeeb0fc44bf4280e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:request-authorization:0033:0001",
+      "source": "The property’s implementation uses the methods of [`AVCaptureDevice`](avcapturedevice.md) to check the current status, and if the app hasn’t made a determination, requests authorization from the user.",
+      "ko": "이 속성의 구현은 [`AVCaptureDevice`](avcapturedevice.md) 메서드를 사용해 현재 상태를 확인하고, 앱이 아직 판정되지 않은 경우 사용자에게 권한 부여를 요청합니다.",
+      "sourceHash": "644d337c84af768d9e3fed0a38615823926bc8ad914c38a67ec5050910ff14aa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:request-authorization:0033:0002",
+      "source": "If the app has authorization, it starts the capture session to begin the flow of data.",
+      "ko": "앱에 권한이 있으면 데이터 흐름을 시작하기 위해 캡처 세션을 시작합니다.",
+      "sourceHash": "8860e29354dd84dae8ea48e5d0c3cbc83a99009ecbee85f05192c10985db78a2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:request-authorization:0033:0003",
+      "source": "If not, it shows an error message in the user interface.",
+      "ko": "권한이 없으면 사용자 인터페이스에 오류 메시지를 표시합니다.",
+      "sourceHash": "1664f6fcd292615de21d84f5fbf9d76a8b8bf29a868a1a4180a5bcbbaf247d28",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:request-authorization:0034:0001",
+      "source": "To learn more about the configuration required to access cameras and microphones, see [`Requesting authorization to capture and save media`](requesting-authorization-to-capture-and-save-media.md).",
+      "ko": "카메라와 마이크 접근에 필요한 구성에 대한 자세한 내용은 [`Requesting authorization to capture and save media`](requesting-authorization-to-capture-and-save-media.md)를 참조합니다.",
+      "sourceHash": "6f4288d6d9e48a4c392ec55dd6b5a41fc08249cb31eb87769664e9166113761d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:change-the-capture-mode:0035:0001",
+      "source": "Change the Capture Mode",
+      "ko": "캡처 모드 변경",
+      "sourceHash": "1fcb7222dc378fa9d2fd43743ece653130c1a841ed952d35ecc716194d404239",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:change-the-capture-mode:0036:0001",
+      "source": "The app starts in photo capture mode.",
+      "ko": "앱은 사진 캡처 모드로 시작합니다.",
+      "sourceHash": "5a24052761a9a25ba966a56d32f94df35c0493fc3f9357eb139518b88d7589f1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:change-the-capture-mode:0036:0002",
+      "source": "Changing modes requires a reconfiguration of the capture session as follows:",
+      "ko": "모드를 변경하려면 캡처 세션을 다음과 같이 다시 구성해야 합니다.",
+      "sourceHash": "f4e7bc72302501ad7d054d3b56e975bfc79059a2453fd3c05825ce1761bf9a12",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:change-the-capture-mode:0037:0001",
+      "source": "```swift\nfunc setCaptureMode(_ captureMode: CaptureMode) throws {\n    \n    self.captureMode = captureMode\n    \n    // Change the configuration atomically.\n    captureSession.beginConfiguration()\n    defer { captureSession.commitConfiguration() }\n    \n    // Configure the capture session for the selected capture mode.\n    switch captureMode {\n    case .photo:\n        // The app needs to remove the movie capture output to perform Live Photo capture.\n        captureSession.sessionPreset = .photo\n        captureSession.removeOutput(movieCapture.output)\n    case .video:\n        captureSession.sessionPreset = .high\n        try addOutput(movieCapture.output)\n    }\n\n    // Update the advertised capabilities after reconfiguration.\n    updateCaptureCapabilities()\n}\n```",
+      "ko": "```swift\nfunc setCaptureMode(_ captureMode: CaptureMode) throws {\n    \n    self.captureMode = captureMode\n    \n    // Change the configuration atomically.\n    captureSession.beginConfiguration()\n    defer { captureSession.commitConfiguration() }\n    \n    // Configure the capture session for the selected capture mode.\n    switch captureMode {\n    case .photo:\n        // The app needs to remove the movie capture output to perform Live Photo capture.\n        captureSession.sessionPreset = .photo\n        captureSession.removeOutput(movieCapture.output)\n    case .video:\n        captureSession.sessionPreset = .high\n        try addOutput(movieCapture.output)\n    }\n\n    // Update the advertised capabilities after reconfiguration.\n    updateCaptureCapabilities()\n}\n```",
+      "sourceHash": "c7d7a8dc411beaac1a86818f48ac2fb32a3b2fff1c7308cd540be7969605465a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:change-the-capture-mode:0038:0001",
+      "source": "In photo capture mode, the app sets the [`photo`](avcapturesession/preset/photo.md) preset on the capture session, which optimizes the capture pipeline for high-quality photo output.",
+      "ko": "사진 캡처 모드에서는 캡처 세션에 [`photo`](avcapturesession/preset/photo.md) 프리셋을 설정해 캡처 파이프라인을 고해상도 사진 출력에 맞게 최적화합니다.",
+      "sourceHash": "aa2ed87998d58dbbe6c7e9363ac257c9fc6c86703e2286635d653cd9e6f7f5ab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:change-the-capture-mode:0038:0002",
+      "source": "It also removes the movie capture output, which prevents the photo output from performing Live Photo capture.",
+      "ko": "또한 동영상 캡처 출력도 제거해 사진 출력이 Live Photo 캡처를 수행하지 않도록 합니다.",
+      "sourceHash": "1b18b8e461522c4057e083155d62d926889023540568d9e0d6e2fa96a028d166",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:change-the-capture-mode:0038:0003",
+      "source": "In video capture mode, it sets the session preset to [`high`](avcapturesession/preset/high.md) and adds the movie file capture output to the session.",
+      "ko": "비디오 캡처 모드에서는 세션 프리셋을 [`high`](avcapturesession/preset/high.md)로 설정하고 동영상 파일 캡처 출력을 세션에 추가합니다.",
+      "sourceHash": "b4296670469637f575e71e8c679b45f44ec84471caabb7fe2ff372de85acedfe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:select-a-new-camera:0039:0001",
+      "source": "Select a New Camera",
+      "ko": "새 카메라 선택",
+      "sourceHash": "4c99d3d24391507049991d44d4fc8f2c8221bbde9ab987627b5bfa183362f852",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-a-new-camera:0040:0001",
+      "source": "The app provides a button that lets people switch between the front and back cameras and, in iPadOS, connected external cameras.",
+      "ko": "앱은 사용자가 전면 카메라와 후면 카메라를 전환하고, iPadOS에서는 연결된 외부 카메라도 전환할 수 있도록 버튼을 제공합니다.",
+      "sourceHash": "1b8fab305ea991b19026f08d62c9baf3d714cc83358a412be7ca03f07e5bae76",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-a-new-camera:0040:0002",
+      "source": "To change the active camera, the app reconfigures the session as follows:",
+      "ko": "활성 카메라를 변경하려면 앱이 다음과 같이 세션을 재구성합니다.",
+      "sourceHash": "68c89b53899721d4d32a4deaec350b58f0aa0be645cca1626b94716d0ff8ed95",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:select-a-new-camera:0041:0001",
+      "source": "```swift\n// Changes the device the service uses for video capture.\nprivate func changeCaptureDevice(to device: AVCaptureDevice) {\n    // The service must have a valid video input prior to calling this method.\n    guard let currentInput = activeVideoInput else { fatalError() }\n    \n    // Bracket the following configuration in a begin/commit configuration pair.\n    captureSession.beginConfiguration()\n    defer { captureSession.commitConfiguration() }\n    \n    // Remove the existing video input before attempting to connect a new one.\n    captureSession.removeInput(currentInput)\n    do {\n        // Attempt to connect a new input and device to the capture session.\n        activeVideoInput = try addInput(for: device)\n        // Configure a new rotation coordinator for the new device.\n        createRotationCoordinator(for: device)\n        // Register for device observations.\n        observeSubjectAreaChanges(of: device)\n        // Update the service's advertised capabilities.\n        updateCaptureCapabilities()\n    } catch {\n        // Reconnect the existing camera on failure.\n        captureSession.addInput(currentInput)\n    }\n}\n```",
+      "ko": "```swift\n// Changes the device the service uses for video capture.\nprivate func changeCaptureDevice(to device: AVCaptureDevice) {\n    // The service must have a valid video input prior to calling this method.\n    guard let currentInput = activeVideoInput else { fatalError() }\n    \n    // Bracket the following configuration in a begin/commit configuration pair.\n    captureSession.beginConfiguration()\n    defer { captureSession.commitConfiguration() }\n    \n    // Remove the existing video input before attempting to connect a new one.\n    captureSession.removeInput(currentInput)\n    do {\n        // Attempt to connect a new input and device to the capture session.\n        activeVideoInput = try addInput(for: device)\n        // Configure a new rotation coordinator for the new device.\n        createRotationCoordinator(for: device)\n        // Register for device observations.\n        observeSubjectAreaChanges(of: device)\n        // Update the service's advertised capabilities.\n        updateCaptureCapabilities()\n    } catch {\n        // Reconnect the existing camera on failure.\n        captureSession.addInput(currentInput)\n    }\n}\n```",
+      "sourceHash": "12e6997b7e5067e29c43743c2b04d92947da45bcf7f395688b140d693bca74ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:select-a-new-camera:0042:0001",
+      "source": "[`AVCaptureSession`](avcapturesession.md) only allows attaching a single camera input at a time, so this method begins by removing the existing camera’s input.",
+      "ko": "[`AVCaptureSession`](avcapturesession.md)은 한 번에 단일 카메라 입력만 허용하므로, 이 메서드는 기존 카메라의 입력을 제거하는 것으로 시작합니다.",
+      "sourceHash": "91129add5ed1b8b1cb6061a207e766f9b2fbc7a323a86c6e6f7e82d7d2fa951f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-a-new-camera:0042:0002",
+      "source": "It then attempts to add an input for the new device and, if successful, performs some internal configuration to reflect the device change.",
+      "ko": "그다음 새 장치에 대한 입력 추가를 시도한 뒤, 성공하면 장치 변경을 반영하도록 일부 내부 구성을 수행합니다.",
+      "sourceHash": "70daf979f8ed71c23ea415c546795b270019f2d4f42f23975b73e1d76db18732",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-a-new-camera:0042:0003",
+      "source": "If the capture session can’t add the new device, it reconnects the removed input.",
+      "ko": "캡처 세션이 새 장치를 추가할 수 없으면 제거된 입력을 다시 연결합니다.",
+      "sourceHash": "49f0651cc724f2ed2f9298375d1336fac05f1e194c3767fc403c74c3ab3ce94e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:select-a-new-camera:0043:0001",
+      "source": "**Note**: If your app requires capturing from multiple cameras simultaneously, use [`AVCaptureMultiCamSession`](avcapturemulticamsession.md) instead.",
+      "ko": "**Note**: 앱에서 여러 카메라를 동시에 캡처해야 하는 경우에는 [`AVCaptureMultiCamSession`](avcapturemulticamsession.md) 대신 사용합니다.",
+      "sourceHash": "8d9726afc4e44023564bb535e91e7f2037efafad6b738db01564c0657189d78f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:capture-a-photo:0044:0001",
+      "source": "Capture a Photo",
+      "ko": "사진 촬영",
+      "sourceHash": "51a7a5101edeaf17a86744bbc2063cd524738f2809411ada68a61f2b3351230d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-a-photo:0045:0001",
+      "source": "The capture service delegates handling of the app’s photo capture features to the `PhotoCapture` object, which manages the life cycle of and interaction with an [`AVCapturePhotoOutput`](avcapturephotooutput.md).",
+      "ko": "캡처 서비스는 앱의 사진 촬영 기능 처리를 `PhotoCapture` 객체에 위임하며, 이 객체는 [`AVCapturePhotoOutput`](avcapturephotooutput.md)와의 상호작용과 수명 주기를 관리합니다.",
+      "sourceHash": "f4607656ff4a9ed94ed41f287c156ca60fcd90cd22a9b5aba8de3370feae548c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-a-photo:0045:0002",
+      "source": "The app captures photos with this object by calling its [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) method, passing it an object that describes photo capture settings to enable and a delegate for the system to call as capture proceeds.",
+      "ko": "앱은 이 객체의 [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) 메서드를 호출하여 사진을 캡처합니다. 이때 캡처 설정을 설명하는 객체와 캡처 진행 중 시스템이 호출할 델리게이트를 전달합니다.",
+      "sourceHash": "95110589d012282d48d4176b1fc8a8fd4b16b2ce3ee8eb0fcac03b91f85d7762",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-a-photo:0045:0003",
+      "source": "To use this delegate-based API in an `async` context , the app wraps this call with a checked throwing continuation as follows:",
+      "ko": "이 델리게이트 기반 API를 `async` 컨텍스트에서 사용하려면, 앱은 다음과 같이 checked throwing continuation으로 이 호출을 래핑합니다.",
+      "sourceHash": "afd26dfb3e4621319645ddd25f83a5159b2781eb7c391116afee716b1296ea7b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:capture-a-photo:0046:0001",
+      "source": "```swift\n/// The app calls this method when the user taps the photo capture button.\nfunc capturePhoto(with features: EnabledPhotoFeatures) async throws -> Photo {\n    // Wrap the delegate-based capture API in a continuation to use it in an async context.\n    try await withCheckedThrowingContinuation { continuation in\n        \n        // Create a settings object to configure the photo capture.\n        let photoSettings = createPhotoSettings(with: features)\n        \n        let delegate = PhotoCaptureDelegate(continuation: continuation)\n        monitorProgress(of: delegate)\n        \n        // Capture a new photo with the specified settings.\n        photoOutput.capturePhoto(with: photoSettings, delegate: delegate)\n    }\n}\n```",
+      "ko": "```swift\n/// The app calls this method when the user taps the photo capture button.\nfunc capturePhoto(with features: EnabledPhotoFeatures) async throws -> Photo {\n    // Wrap the delegate-based capture API in a continuation to use it in an async context.\n    try await withCheckedThrowingContinuation { continuation in\n        \n        // Create a settings object to configure the photo capture.\n        let photoSettings = createPhotoSettings(with: features)\n        \n        let delegate = PhotoCaptureDelegate(continuation: continuation)\n        monitorProgress(of: delegate)\n        \n        // Capture a new photo with the specified settings.\n        photoOutput.capturePhoto(with: photoSettings, delegate: delegate)\n    }\n}\n```",
+      "sourceHash": "6fb26af9b4ba735699b7c92e52bf36eb66f0d91cadb76e5f173b2947e55a5159",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:capture-a-photo:0047:0001",
+      "source": "When the system finishes capturing a photo, it calls the delegate’s [`photoOutput(_:didFinishCaptureFor:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishcapturefor:error:).md) method.",
+      "ko": "시스템이 사진 캡처를 마치면 델리게이트의 [`photoOutput(_:didFinishCaptureFor:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishcapturefor:error:).md) 메서드를 호출합니다.",
+      "sourceHash": "46dd92b7146136cf1faa225c2ff901d3b2858a6ec354117b32f01729a4b28d65",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-a-photo:0047:0002",
+      "source": "The delegate object’s implementation of this method uses the continuation to resume execution by returning a photo or throwing an error.",
+      "ko": "이 메서드의 델리게이트 객체 구현은 continuation을 사용해 사진을 반환하거나 오류를 발생시켜 실행을 재개합니다.",
+      "sourceHash": "036f73069406b3fc425b68357c5561a3e30c201c23e32e43530eabbad6910a8e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:capture-a-photo:0048:0001",
+      "source": "```swift\nfunc photoOutput(_ output: AVCapturePhotoOutput, didFinishCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?) {\n\n    // If an error occurs, resume the continuation by throwing an error, and return.\n    if let error {\n        continuation.resume(throwing: error)\n        return\n    }\n    \n    /// Create a photo object to save to the `MediaLibrary`.\n    let photo = Photo(data: photoData, isProxy: isProxyPhoto, livePhotoMovieURL: livePhotoMovieURL)\n    // Resume the continuation by returning the captured photo.\n    continuation.resume(returning: photo)\n}\n```",
+      "ko": "```swift\nfunc photoOutput(_ output: AVCapturePhotoOutput, didFinishCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings, error: Error?) {\n\n    // If an error occurs, resume the continuation by throwing an error, and return.\n    if let error {\n        continuation.resume(throwing: error)\n        return\n    }\n    \n    /// Create a photo object to save to the `MediaLibrary`.\n    let photo = Photo(data: photoData, isProxy: isProxyPhoto, livePhotoMovieURL: livePhotoMovieURL)\n    // Resume the continuation by returning the captured photo.\n    continuation.resume(returning: photo)\n}\n```",
+      "sourceHash": "fc65fcf8b827ae294c2a3886bd15009636f55c13f92b67effc0226bfd5306230",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:capture-a-photo:0049:0001",
+      "source": "To learn more about capturing photos with AVFoundation, see [`Capturing still and Live Photos`](capturing-still-and-live-photos.md).",
+      "ko": "AVFoundation으로 사진을 캡처하는 자세한 내용은 [`Capturing still and Live Photos`](capturing-still-and-live-photos.md)를 참조하십시오.",
+      "sourceHash": "629fc473984383e6f916e47125beb78db53290dd2b7f4644d4aef2a79595f73a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:record-a-movie:0050:0001",
+      "source": "Record a Movie",
+      "ko": "동영상 녹화",
+      "sourceHash": "764b8f287a0fe7c8112f13e6fc4b6ef9bb7540995abc0c40829e3596e2ad19fa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:record-a-movie:0051:0001",
+      "source": "The capture service delegates handling of the app’s video capture features to the `MovieCapture` object, which manages the life cycle of and interaction with an [`AVCaptureMovieFileOutput`](avcapturemoviefileoutput.md).",
+      "ko": "캡처 서비스는 앱의 비디오 캡처 기능 처리를 `MovieCapture` 객체에 위임하며, 이 객체는 [`AVCaptureMovieFileOutput`](avcapturemoviefileoutput.md)와의 상호작용과 수명 주기를 관리합니다.",
+      "sourceHash": "bdaf19f78d33e3a1434d00d5fe1563353dff1ab23a180f52bdd6e0a0bef6f68e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:record-a-movie:0051:0002",
+      "source": "To start recording a movie, the app calls the movie file output’s [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md) method, which takes a URL to write the move to and a delegate for the system to call when recording completes.",
+      "ko": "동영상 녹화를 시작하려면 앱은 영화 파일 출력의 [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md) 메서드를 호출합니다. 이 메서드는 영상을 저장할 URL과, 녹화가 완료되면 시스템이 호출할 델리게이트를 받습니다.",
+      "sourceHash": "182410d228d8376ad97dbd69afd39d7b1ffb28563a6fe9961385fb6f46c2b5a2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:record-a-movie:0052:0001",
+      "source": "```swift\n/// Starts movie recording.\nfunc startRecording() {\n    // Return early if already recording.\n    guard !movieOutput.isRecording else { return }\n\n    // Start a timer to update the recording time.\n    startMonitoringDuration()\n    \n    delegate = MovieCaptureDelegate()\n    movieOutput.startRecording(to: URL.movieFileURL, recordingDelegate: delegate!)\n}\n```",
+      "ko": "```swift\n/// Starts movie recording.\nfunc startRecording() {\n    // Return early if already recording.\n    guard !movieOutput.isRecording else { return }\n\n    // Start a timer to update the recording time.\n    startMonitoringDuration()\n    \n    delegate = MovieCaptureDelegate()\n    movieOutput.startRecording(to: URL.movieFileURL, recordingDelegate: delegate!)\n}\n```",
+      "sourceHash": "0254f1f4192d3f10c602f3fb1e373f3f531e48e040425acde49882b30faf636c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:record-a-movie:0053:0001",
+      "source": "To finish recording the video, the app calls the movie file output’s [`stopRecording()`](avcapturefileoutput/stoprecording().md) method, which causes the system to call the delegate to handle the captured output.",
+      "ko": "동영상 녹화를 마치려면 앱은 영화 파일 출력의 [`stopRecording()`](avcapturefileoutput/stoprecording().md) 메서드를 호출하며, 이때 시스템이 델리게이트를 호출해 캡처된 출력을 처리합니다.",
+      "sourceHash": "162a3cd2332fdcb4e950c0268c40da2fa73f08e909220803a26e9900fd6cc878",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:record-a-movie:0053:0002",
+      "source": "To adapt this delegate-based callback, the app wraps this interaction in a checked throwing continuation as follows:",
+      "ko": "이 델리게이트 기반 콜백을 사용하려면 앱은 다음과 같이 해당 상호작용을 checked throwing continuation으로 감쌉니다.",
+      "sourceHash": "929b94c7f48e7183bef70648761c865cd936da65345723a67e8bb7eeac85fbb9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:record-a-movie:0054:0001",
+      "source": "```swift\n/// Stops movie recording.\n/// - Returns: A `Movie` object that represents the captured movie.\nfunc stopRecording() async throws -> Movie {\n    // Use a continuation to adapt the delegate-based capture API to an async interface.\n    return try await withCheckedThrowingContinuation { continuation in\n        // Set the continuation on the delegate to handle the capture result.\n        delegate?.continuation = continuation\n        \n        /// Stops recording, which causes the output to call the `MovieCaptureDelegate` object.\n        movieOutput.stopRecording()\n        stopMonitoringDuration()\n    }\n}\n```",
+      "ko": "```swift\n/// Stops movie recording.\n/// - Returns: A `Movie` object that represents the captured movie.\nfunc stopRecording() async throws -> Movie {\n    // Use a continuation to adapt the delegate-based capture API to an async interface.\n    return try await withCheckedThrowingContinuation { continuation in\n        // Set the continuation on the delegate to handle the capture result.\n        delegate?.continuation = continuation\n        \n        /// Stops recording, which causes the output to call the `MovieCaptureDelegate` object.\n        movieOutput.stopRecording()\n        stopMonitoringDuration()\n    }\n}\n```",
+      "sourceHash": "37bf91bb54c25bc754947954fc49abd1db28a04d0fab316be9ed5cedb974f220",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:record-a-movie:0055:0001",
+      "source": "When the app calls the movie file output’s [`stopRecording()`](avcapturefileoutput/stoprecording().md) method, the system calls the delegate, which resumes execution either by returning a movie or throwing an error.",
+      "ko": "앱이 영화 파일 출력의 [`stopRecording()`](avcapturefileoutput/stoprecording().md) 메서드를 호출하면 시스템이 델리게이트를 호출하고, 델리게이트는 동영상을 반환하거나 오류를 발생시켜 실행을 재개합니다.",
+      "sourceHash": "234aff7a1bb2a52355f1054390d4516a89b5a246bab611f60e5e534277b55ec4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:record-a-movie:0056:0001",
+      "source": "```swift\nfunc fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {\n    if let error {\n        // If an error occurs, throw it to the caller.\n        continuation?.resume(throwing: error)\n    } else {\n        // Return a new movie object.\n        continuation?.resume(returning: Movie(url: outputFileURL))\n    }\n}\n```",
+      "ko": "```swift\nfunc fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {\n    if let error {\n        // If an error occurs, throw it to the caller.\n        continuation?.resume(throwing: error)\n    } else {\n        // Return a new movie object.\n        continuation?.resume(returning: Movie(url: outputFileURL))\n    }\n}\n```",
+      "sourceHash": "aa0c36b627fe2245bd6dca71784eccbea449c5f89ec2ba8db2fca5c97765b99b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0057:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0058:0001",
+      "source": "[Setting up a capture session](setting-up-a-capture-session.md)",
+      "ko": "[캡처 세션 설정](setting-up-a-capture-session.md)",
+      "sourceHash": "a94c965cb4d0e732541a32b00f59641da840ef02abd92429e7b00112b8896e69",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0059:0001",
+      "source": "Configure input devices, output media, preview views, and basic settings before capturing photos or video.",
+      "ko": "사진 또는 동영상을 캡처하기 전에 입력 장치, 출력 미디어, 미리보기 뷰, 기본 설정을 구성합니다.",
+      "sourceHash": "bcf37d0cc6c0f680c7b4ece4297fa8cfa1226bf89c82bec2b9e76e75bda38a75",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0060:0001",
+      "source": "[Accessing the camera while multitasking on iPad](../AVKit/accessing-the-camera-while-multitasking-on-ipad.md)",
+      "ko": "[iPad에서 멀티태스킹 중 카메라 접근](../AVKit/accessing-the-camera-while-multitasking-on-ipad.md)",
+      "sourceHash": "98a66cedb6f9b471d0e27f7b6d9e15c79fb0df4745cc3e8e57b40e8b5017e08f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0061:0001",
+      "source": "Operate the camera in Split View, Slide Over, Picture in Picture, and Stage Manager modes.",
+      "ko": "카메라를 Split View, Slide Over, Picture in Picture, Stage Manager 모드에서 작동합니다.",
+      "sourceHash": "4ecc692939c6a0f232c31e9ed3090631fdd65ea40203409b109827639289c9e5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0062:0001",
+      "source": "[Capturing Cinematic video](capturing-cinematic-video.md)",
+      "ko": "[시네마틱 동영상 캡처](capturing-cinematic-video.md)",
+      "sourceHash": "62300c047faff5375a4e14106a9b36f323357839cef92f2419302adb7a4b0c4d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0063:0001",
+      "source": "Capture video with an adjustable depth of field and focus points.",
+      "ko": "심도와 초점점을 조정할 수 있는 동영상을 캡처합니다.",
+      "sourceHash": "93ce1fc640bedd8422bb32ae2f63bfd5e39b72c1a51ebd1a4c48321b792603d4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0064:0001",
+      "source": "[AVMultiCamPiP: Capturing from Multiple Cameras](avmulticampip-capturing-from-multiple-cameras.md)",
+      "ko": "[AVMultiCamPiP: 여러 카메라에서 캡처](avmulticampip-capturing-from-multiple-cameras.md)",
+      "sourceHash": "07f6cef6d5274eaa5127ca27faa5d6c1b04f9a872fc098b8bd7461c329781f3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0065:0001",
+      "source": "Simultaneously record the output from the front and back cameras into a single movie file by using a multi-camera capture session.",
+      "ko": "다중 카메라 캡처 세션을 사용해 전면 카메라와 후면 카메라의 출력을 하나의 동영상 파일로 동시에 녹화합니다.",
+      "sourceHash": "480b9991a00f253747a1e03c60fc89489c293dc76aed39a4b8ca97597a70d632",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0066:0001",
+      "source": "[AVCamBarcode: detecting barcodes and faces](avcambarcode-detecting-barcodes-and-faces.md)",
+      "ko": "[AVCamBarcode: 바코드 및 얼굴 감지](avcambarcode-detecting-barcodes-and-faces.md)",
+      "sourceHash": "11685b4b8581acd7381e201e811315e660765e0ef12a8a9050dadfc4f5637244",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0067:0001",
+      "source": "Identify machine readable codes or faces by using the camera.",
+      "ko": "카메라를 사용해 기계 판독 가능한 코드나 얼굴을 식별합니다.",
+      "sourceHash": "e3b4d1c27b28857689e1b964663c0379cf87ce528094471c0deb6908d5906841",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0068:0001",
+      "source": "[class AVCaptureSession](avcapturesession.md)",
+      "ko": "[class AVCaptureSession](avcapturesession.md)",
+      "sourceHash": "9658b2f0d672ed2951164698cf684b91c4273c875e071b209d17c5e8d6b213ef",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0069:0001",
+      "source": "An object that configures capture behavior and coordinates the flow of data from input devices to capture outputs.",
+      "ko": "캡처 동작을 구성하고 입력 장치에서 캡처 출력으로의 데이터 흐름을 조정하는 객체입니다.",
+      "sourceHash": "20431f9aa72986631de04437aa21c3c47aea9cf3d44b6b937d8206a3f2fedf80",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0070:0001",
+      "source": "[class AVCaptureMultiCamSession](avcapturemulticamsession.md)",
+      "ko": "[class AVCaptureMultiCamSession](avcapturemulticamsession.md)",
+      "sourceHash": "d3c18d42ccbf0f10244928f436da0ad77ad1b5a7b3cb53a5a5c5c5db9a5c7bd9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0071:0001",
+      "source": "A capture session that supports simultaneous capture from multiple inputs of the same media type.",
+      "ko": "동일한 미디어 유형의 여러 입력에서 동시 캡처를 지원하는 캡처 세션입니다.",
+      "sourceHash": "b0bef67c720b5cd8246c8c7fcb96bdd9ffd93fec78ea00b665f3dc73191a01b1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0072:0001",
+      "source": "[class AVCaptureInput](avcaptureinput.md)",
+      "ko": "[class AVCaptureInput](avcaptureinput.md)",
+      "sourceHash": "b4c731ce656802c75d15773aa65e1eb396a3a037e273b11a5784637552374316",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0073:0001",
+      "source": "An abstract superclass for objects that provide input data to a capture session.",
+      "ko": "캡처 세션에 입력 데이터를 제공하는 객체의 추상 슈퍼클래스입니다.",
+      "sourceHash": "e9dda4940cc6821df6f4648f8f5f142da2c143bff77ce84900bbcb1a4d852984",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0074:0001",
+      "source": "[class AVCaptureOutput](avcaptureoutput.md)",
+      "ko": "[class AVCaptureOutput](avcaptureoutput.md)",
+      "sourceHash": "8c7d501128923b1e1ba3ab356553740d260c53a8e4d27969ff36fab0c41611c3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0075:0001",
+      "source": "An abstract superclass for objects that provide media output destinations for a capture session.",
+      "ko": "캡처 세션에 미디어 출력 대상을 제공하는 객체의 추상 슈퍼클래스입니다.",
+      "sourceHash": "db3a7315f5c14309046abcd13267261ae8cf96b6a745caab3680c8b73a88656b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0076:0001",
+      "source": "[class AVCaptureConnection](avcaptureconnection.md)",
+      "ko": "[class AVCaptureConnection](avcaptureconnection.md)",
+      "sourceHash": "20d3b618936b3d99823aa155968185704ac5fcc794400fd23c2f332fca6a4b95",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0077:0001",
+      "source": "An object that represents a connection from a capture input to a capture output.",
+      "ko": "캡처 입력에서 캡처 출력으로의 연결을 나타내는 객체입니다.",
+      "sourceHash": "ee45ee7c297d4e5fa76c27984022de242082583d889cf35cb7f779f2a309e2de",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0078:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0079:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcam-building-a-camera-app)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcam-building-a-camera-app)*",
+      "sourceHash": "a01b764569bb9efae0e34e519caca072999ff9ee909a87935d4011798598ad45",
+      "status": "preserved"
+    }
+  ]
+}

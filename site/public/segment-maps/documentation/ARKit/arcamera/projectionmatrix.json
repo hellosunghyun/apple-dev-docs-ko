@@ -1,0 +1,162 @@
+{
+  "docId": "documentation/ARKit/arcamera/projectionmatrix.md",
+  "title": "projectionMatrix",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arcamera/projectionmatrix",
+  "segments": [
+    {
+      "id": "seg:heading:projectionmatrix:0000:0001",
+      "source": "projectionMatrix",
+      "ko": "projectionMatrix",
+      "sourceHash": "ab791c27851d2a13bcfceafdee007aecf2e46d88c9ff6c7a4e06f84c6a21c863",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:projectionmatrix:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: property",
+      "ko": "**Framework**: ARKit **Kind**: property",
+      "sourceHash": "eebebd0c04c444b8ad7332b72cb6b5efed96fb65bd16793fa46eb608d4454b7e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:projectionmatrix:0002:0001",
+      "source": "A transform matrix appropriate for rendering 3D content to match the image captured by the camera.",
+      "ko": "카메라로 캡처한 이미지와 일치하도록 3D 콘텐츠를 렌더링하기에 적합한 변환 행렬입니다.",
+      "sourceHash": "718985e74ee62978343f1485fe970a039b1dfe4a93f0bf9afea71235d5e3d9b0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:projectionmatrix:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:projectionmatrix:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:projectionmatrix:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:projectionmatrix:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar projectionMatrix: simd_float4x4 { get }\n```",
+      "ko": "```swift\nvar projectionMatrix: simd_float4x4 { get }\n```",
+      "sourceHash": "795a2a5eee5e2bf45f5c614d0767add95dd8246babd7023925d9baeb39fb0818",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Reading this property’s value is equivalent to calling the `projectionMatrix(withViewportSize:orientation:zNear:zFar:)` method, using the camera’s [`imageResolution`](arcamera/imageresolution.md) and [`intrinsics`](arcamera/intrinsics.md) properties to derive size and orientation, and passing default values of `0.001` and `1000.0` for the near and far clipping planes.",
+      "ko": "이 속성의 값을 읽으면 카메라의 [`imageResolution`](arcamera/imageresolution.md) 및 [`intrinsics`](arcamera/intrinsics.md) 속성을 사용해 크기와 방향을 유도하고, 근거리 및 원거리 클리핑 평면의 기본값으로 `0.001`, `1000.0`을 전달한 다음 `projectionMatrix(withViewportSize:orientation:zNear:zFar:)` 메서드를 호출한 것과 동일합니다.",
+      "sourceHash": "5c2029aeb866f1f24becd7ae6013679cdde0daa4967247d6933b470ee6e19e89",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[func projectionMatrix(for: UIInterfaceOrientation, viewportSize: CGSize, zNear: CGFloat, zFar: CGFloat) -> simd_float4x4](arcamera/projectionmatrix(for:viewportsize:znear:zfar:).md)",
+      "ko": "[func projectionMatrix(for: UIInterfaceOrientation, viewportSize: CGSize, zNear: CGFloat, zFar: CGFloat) -> simd_float4x4](arcamera/projectionmatrix(for:viewportsize:znear:zfar:).md)",
+      "sourceHash": "0f4069db1cd66ca094a321bccfc7f7746ab5bc8232505f9341ec3dece38ef7af",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "Returns a transform matrix appropriate for rendering 3D content to match the image captured by the camera, using the specified parameters.",
+      "ko": "지정한 매개변수를 사용해 카메라로 캡처한 이미지와 일치하도록 3D 콘텐츠를 렌더링하기 위한 변환 행렬을 반환합니다.",
+      "sourceHash": "074d70418f8799d04132473c30af3728f401c7035870debbd503dfe2f2dc7726",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[func viewMatrix(for: UIInterfaceOrientation) -> simd_float4x4](arcamera/viewmatrix(for:).md)",
+      "ko": "[func viewMatrix(for: UIInterfaceOrientation) -> simd_float4x4](referenceimage/init(cgimage:physicalsize:orientation:).md)",
+      "sourceHash": "4720693b0e8d180d59cf38d62257f28fb13e65efd8fd8e8d17dc4abd7ff3be4a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Returns a transform matrix for converting from world space to camera space.",
+      "ko": "월드 공간에서 카메라 공간으로 변환하는 변환 행렬을 반환합니다.",
+      "sourceHash": "f6626e7f53d4eb591b70b3bb048c19086fe4eb5e76662dbae6f7d7b5a2ab8925",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func projectPoint(simd_float3, orientation: UIInterfaceOrientation, viewportSize: CGSize) -> CGPoint](arcamera/projectpoint(_:orientation:viewportsize:).md)",
+      "ko": "[func projectPoint(simd_float3, orientation: UIInterfaceOrientation, viewportSize: CGSize) -> CGPoint](referenceimage/init(pixelbuffer:physicalsize:orientation:).md)",
+      "sourceHash": "3ddb8abfe68b2a39ad6ae9b255b149da08066212ed9d6534676e4a94a691b8be",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Returns the projection of a point from the 3D world space detected by ARKit into the 2D space of a view rendering the scene.",
+      "ko": "ARKit이 감지한 3D 월드 공간의 점을 장면을 렌더링하는 보기의 2D 공간으로 투영한 결과를 반환합니다.",
+      "sourceHash": "8ae40ef734359c4e04bbf585278352fe0bcad56af0b7cd4b65feaf690e3b7ccd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func unprojectPoint(CGPoint, ontoPlane: simd_float4x4, orientation: UIInterfaceOrientation, viewportSize: CGSize) -> simd_float3?](arcamera/unprojectpoint(_:ontoplane:orientation:viewportsize:).md)",
+      "ko": "[func unprojectPoint(CGPoint, ontoPlane: simd_float4x4, orientation: UIInterfaceOrientation, viewportSize: CGSize) -> simd_float3?](arcamera/unprojectpoint(_:ontoplane:orientation:viewportsize:).md)",
+      "sourceHash": "87139ca6f69926f0972551e5a8a8c080d91e5062ee438fb474ec1b91b6fffc2d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Returns the projection of a point from the 2D space of a view rendering the scene onto a plane in the 3D world space detected by ARKit.",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/referenceimage/loadreferenceimages(ingroupnamed:bundle:))*",
+      "sourceHash": "a9fdbfb419e5f6170aa94ea77804513dc951d3b52e75a7e13452bc807476e535",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0018:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arcamera/projectionmatrix)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arcamera/projectionmatrix)*",
+      "sourceHash": "b153306066a01c6b5e49e9b8f9dd7d369b2b221701c3f77e5215adb308c19d9f",
+      "status": "preserved"
+    }
+  ]
+}

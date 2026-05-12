@@ -1,0 +1,540 @@
+{
+  "docId": "documentation/ARKit/configuration-objects.md",
+  "title": "Configuration Objects",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/configuration-objects",
+  "segments": [
+    {
+      "id": "seg:heading:configuration-objects:0000:0001",
+      "source": "Configuration Objects",
+      "ko": "구성 객체",
+      "sourceHash": "37b7495e1ce9ade486e44083d7e171ea339cd77a69443a9737a0cd4b34c0aec4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configuration-objects:0001:0001",
+      "source": "**Framework**: ARKit",
+      "ko": "**Framework**: ARKit",
+      "sourceHash": "f52f1f198768fecfb3eca7e0900afdc8bbc7fd0775dd02734574f44e18a1beee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configuration-objects:0002:0001",
+      "source": "Configure your augmented reality session to detect and track specific types of content.",
+      "ko": "증강 현실 세션을 구성해 특정 유형의 콘텐츠를 감지하고 추적합니다.",
+      "sourceHash": "872d6ea060ce7f77bf568475a8450ac4ef505b82443ece888d6b5c8965a8d125",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "Configuration objects define how ARKit sets up and runs your augmented reality session.",
+      "ko": "구성 객체는 ARKit가 증강 현실 세션을 설정하고 실행하는 방식을 정의합니다.",
+      "sourceHash": "e27344640bac3948858aa505f528e83dd4ee1b38e0abe8976caa4d9b3edf0a91",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "Although [`ARWorldTrackingConfiguration`](arworldtrackingconfiguration.md) provides the widest range of features in a rear-camera experience, each feature consumes device energy and compute cycles.",
+      "ko": "`[`ARWorldTrackingConfiguration`](arworldtrackingconfiguration.md)`는 후면 카메라 환경에서 가장 폭넓은 기능을 제공하지만, 각 기능은 디바이스 에너지와 연산 주기를 사용합니다.",
+      "sourceHash": "2b6475b1d1a1837d1c85c8cc1f5f1d1817bfec655872b498db074b4c5859051d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0003",
+      "source": "So to maximize device uptime and performance, enable additional options sparingly.",
+      "ko": "따라서 디바이스 사용 시간을 최대화하고 성능을 유지하려면 추가 옵션은 신중하게 활성화해야 합니다.",
+      "sourceHash": "54d321b61d70736ede7969f434ea845e7969060547b652138da71d75b12fe2bf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0001",
+      "source": "If another AR configuration fulfills your requirements with a more concise feature set, use that configuration instead.",
+      "ko": "요구 사항을 더 간결한 기능 집합으로 충족하는 다른 AR 구성이 있다면 그 구성을 사용합니다.",
+      "sourceHash": "ededea6aee75feca32e60e14013616d85957e6c048f616f62e8d86777ec1e24b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0002",
+      "source": "For example, use [`ARBodyTrackingConfiguration`](arbodytrackingconfiguration.md) instead of a world-tracking configuration for 3D motion-capture if you don’t need user face-tracking, collaboration, or scene reconstruction.",
+      "ko": "예를 들어 사용자 얼굴 추적, 협업, 또는 장면 재구성이 필요하지 않은 경우 3D 모션 캡처에서는 world-tracking 구성 대신 [`ARBodyTrackingConfiguration`](arbodytrackingconfiguration.md)을 사용합니다.",
+      "sourceHash": "052d8872c8913e386a78e6adc39f4103a38769afcb9b8f0b097c97b57bf94123",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:select-frame-features:0006:0001",
+      "source": "Select Frame Features",
+      "ko": "프레임 기능 선택",
+      "sourceHash": "46c54afac23fa2ae5d43b0744401031309939cfaec2ad0bd4300785a9033bc11",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-frame-features:0007:0001",
+      "source": "Some configurations support subfeatures that relate to a session’s frame.",
+      "ko": "일부 구성은 세션의 프레임과 관련된 하위 기능을 지원합니다.",
+      "sourceHash": "a7d06095249463163c1adfafd9d3cd56d2cc7dc5cf1f63cefebf86afaeca4d91",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-frame-features:0007:0002",
+      "source": "Enable these features by setting the following flags in the configuration’s [`frameSemantics`](arconfiguration/framesemantics-swift.property.md):",
+      "ko": "구성의 [`frameSemantics`](arconfiguration/framesemantics-swift.property.md)에서 다음 플래그를 설정해 이러한 기능을 활성화합니다.",
+      "sourceHash": "90d774346c8c0c230e3ce799555ad0a786ab16cde67c01ff10aeff2ed2032b0d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:select-frame-features:0008:0001",
+      "source": "**[`bodyDetection`](arconfiguration/framesemantics-swift.struct/bodydetection.md)**: Enables 2D human body tracking.",
+      "ko": "**[`bodyDetection`](arconfiguration/framesemantics-swift.struct/bodydetection.md)**: 2D 인간 신체 추적을 활성화합니다.",
+      "sourceHash": "ef52182c5be290374aab52cb542a1b18a7d975be46b46278b66f96f5551fdd52",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:select-frame-features:0008:0002",
+      "source": "**[`personSegmentation`](arconfiguration/framesemantics-swift.struct/personsegmentation.md)**: Enables people occlusion.",
+      "ko": "**[`personSegmentation`](arconfiguration/framesemantics-swift.struct/personsegmentation.md)**: 사람 오클루전을 활성화합니다.",
+      "sourceHash": "21bfe3597e4a5f8e5a3854bc9264ff9a971691169babf49d72dac54bbe058af2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:select-frame-features:0008:0003",
+      "source": "**[`personSegmentationWithDepth`](arconfiguration/framesemantics-swift.struct/personsegmentationwithdepth.md)**: Enables people occlusion based on whether the people in the camera feed are closer to the camera than the virtual content.",
+      "ko": "**[`personSegmentationWithDepth`](arconfiguration/framesemantics-swift.struct/personsegmentationwithdepth.md)**: 카메라 피드의 사람이 가상 콘텐츠보다 카메라에 더 가까운지 여부를 기준으로 사람 오클루전을 활성화합니다.",
+      "sourceHash": "e6cd5030f0f20487299acec7d349c10ed904076f79f6def1e8bf8b0a11d72c7b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select-frame-features:0009:0001",
+      "source": "Use [`supportsFrameSemantics(_:)`](arconfiguration/supportsframesemantics(_:).md) to verify whether the iOS device supports the [`ARConfiguration.FrameSemantics`](arconfiguration/framesemantics-swift.struct.md) you desire before setting [`frameSemantics`](arconfiguration/framesemantics-swift.property.md).",
+      "ko": "[`frameSemantics`](arconfiguration/framesemantics-swift.property.md)를 설정하기 전에 [`ARConfiguration.FrameSemantics`](arconfiguration/framesemantics-swift.struct.md) 지원 여부를 확인하려면 [`supportsFrameSemantics(_:)`](arconfiguration/supportsframesemantics(_:).md) 를 사용합니다.",
+      "sourceHash": "0bddb8ed7997d7a4c16540b23ec2286f31373160156c3030e7a7f5161da5bd81",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:select-frame-features:0010:0001",
+      "source": "❗ **Important**: To maximize device responsiveness, refrain from turning on people occlusion for single-user experiences when you don’t expect people in the scene.",
+      "ko": "❗ **중요**: 장면에 사람이 없을 것으로 예상되는 단일 사용자 경험에서는 디바이스 반응 속도를 높이기 위해 사람 오클루전을 활성화하지 않아야 합니다.",
+      "sourceHash": "29ab96391626732e0d9abad3e1e1b22d544f8038627fdb6d82c0527adb08f548",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:switch-configurations-at-runtime:0011:0001",
+      "source": "Switch Configurations at Runtime",
+      "ko": "런타임에 구성 전환",
+      "sourceHash": "ae8f719af0a6dbdf5eb1a5e2af97f850f29f964f0f1b3de57b59625c47f8ca31",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:switch-configurations-at-runtime:0012:0001",
+      "source": "To toggle features like plane detection, frame semantics, and environment texturing, you switch your configuration at runtime by calling [`runWithConfiguration:`](arsession/runwithconfiguration:.md) on your existing session.",
+      "ko": "평면 감지, 프레임 시맨틱, 환경 텍스처링과 같은 기능을 전환하려면 기존 세션에서 [`runWithConfiguration:`](arsession/runwithconfiguration:.md) 를 호출해 런타임에 구성을 전환합니다.",
+      "sourceHash": "f9a10d89a90c0449f53605194bdb3a46287fa74ce79fd34ae63db1f7122aa81b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:switch-configurations-at-runtime:0012:0002",
+      "source": "Where possible, ARKit maintains all the information collected during the session under the prior configuration, such as information about the physical environment and anchors.",
+      "ko": "가능한 경우 ARKit는 물리적 환경과 앵커에 대한 정보처럼 이전 구성에서 세션 중 수집된 모든 정보를 유지합니다.",
+      "sourceHash": "1aa2ef5a0df6c5b37f38609605abac863eacfd0460ae35a59b3546da6c06f57f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:switch-configurations-at-runtime:0013:0001",
+      "source": "💡 **Tip**: You can gracefully downgrade the AR experience in the event of low-power or thermal events.",
+      "ko": "💡 **팁**: 저전력 또는 과열 이벤트가 발생하면 AR 경험을 점진적으로 낮은 수준으로 전환할 수 있습니다.",
+      "sourceHash": "a2a53c30b777b71cfdda0383d6d8dd481f391d9131309a767d61fc6dd17536ab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:switch-configurations-at-runtime:0013:0002",
+      "source": "For example, you could temporarily switch from a world-tracking configuration to a position-tracking configuration ([`ARPositionalTrackingConfiguration`](arpositionaltrackingconfiguration.md)) if your app can function at a basic level in that limited capacity until the device cools down.",
+      "ko": "예를 들어 앱이 제한된 기능에서도 기본 수준으로 동작할 수 있다면, 기기가 냉각될 때까지 잠시 world-tracking 구성을 position-tracking 구성([`ARPositionalTrackingConfiguration`](arpositionaltrackingconfiguration.md))으로 전환할 수 있습니다.",
+      "sourceHash": "a964f2e63491e84ec36d0c8bae7973a266a15da5bc7a470020ab9ddfaffb7f1b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:switch-configurations-at-runtime:0014:0001",
+      "source": "If your session switches between face- and world-tracking configurations, the session doesn’t maintain state.",
+      "ko": "세션이 face-tracking 구성과 world-tracking 구성 사이를 전환하면 세션은 상태를 유지하지 않습니다.",
+      "sourceHash": "71ccd3881b3936cad9441c04faa4a675106e614b99a1a65a5b61bb3cd8982a1f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:enable-high-quality-video-and-custom-capture-settings:0015:0001",
+      "source": "Enable High Quality Video and Custom Capture Settings",
+      "ko": "고품질 비디오 및 사용자 지정 캡처 설정 사용",
+      "sourceHash": "200b56a77245c118a323efae6990993fa0f275cf3ae887aff86039bdbaaa3958",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0016:0001",
+      "source": "In iOS 16, you can enable a 4K and high dynamic range (HDR) video format.",
+      "ko": "iOS 16에서는 4K 및 고동적 범위(HDR) 비디오 형식을 사용할 수 있습니다.",
+      "sourceHash": "de31336462492842736ec7256f8a9dc09fa761c330aa59c6e2a1638919b246e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0016:0002",
+      "source": "In addition, you can customize your session’s video settings through the underlying AV capture device.",
+      "ko": "또한 기본 AV 캡처 장치를 통해 세션의 비디오 설정을 사용자 지정할 수 있습니다.",
+      "sourceHash": "63836afcf702f96666ef7e4c0e9764a8412b55cc43053e5d8046b3490252b46d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0017:0001",
+      "source": "To determine whether your session supports 4K, call [`recommendedVideoFormatFor4KResolution`](arconfiguration/recommendedvideoformatfor4kresolution.md).",
+      "ko": "세션이 4K를 지원하는지 확인하려면 [`recommendedVideoFormatFor4KResolution`](arconfiguration/recommendedvideoformatfor4kresolution.md)를 호출합니다.",
+      "sourceHash": "43ccdd1e885dcaf792792a0e9e857812a5c17ed994fd04c9ba0d94ef62f64e67",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:enable-high-quality-video-and-custom-capture-settings:0018:0001",
+      "source": "```swift\nguard let hiResFormat = ARWorldTrackingConfiguration.recommendedVideoFormatFor4KResolution else {\n   print(\"4K video format not supported.\"); return }\n```",
+      "ko": "```swift\nguard let hiResFormat = ARWorldTrackingConfiguration.recommendedVideoFormatFor4KResolution else {\n   print(\"4K video format not supported.\"); return }\n```",
+      "sourceHash": "cc3e4dfc63f2341faf06c09e03948dea68262a1db94c00765e73371528ab1b62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0019:0001",
+      "source": "Then, create a configuration with the format.",
+      "ko": "그런 다음 해당 형식으로 구성을 생성합니다.",
+      "sourceHash": "af5f955cadcfd74dd016f68357e10c85e1566a896cc8928982e8b8d118f53513",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0019:0002",
+      "source": "You can also indicate the intent to enable HDR by setting [`videoHDRAllowed`](arconfiguration/videohdrallowed.md) to `true`.",
+      "ko": "또한 [`videoHDRAllowed`](arconfiguration/videohdrallowed.md)를 `true`로 설정해 HDR 사용 의도를 지정할 수도 있습니다.",
+      "sourceHash": "030338b11e8bda41bbdf71dbff7eb91fb5a677643b9362977b0028c13630414d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:enable-high-quality-video-and-custom-capture-settings:0020:0001",
+      "source": "```swift\nvar config = ARWorldTrackingConfiguration()\nconfig.videoFormat = hiResFormat\nconfig.videoHDRAllowed = true\nsession.run(config)\n```",
+      "ko": "```swift\nvar config = ARWorldTrackingConfiguration()\nconfig.videoFormat = hiResFormat\nconfig.videoHDRAllowed = true\nsession.run(config)\n```",
+      "sourceHash": "9a55486c6701bd6b2ff425527077bd070582aacb390188d3a178b73caf4504bd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0021:0001",
+      "source": "If the device supports a configurable capture session, the [`configurableCaptureDeviceForPrimaryCamera`](arconfiguration/configurablecapturedeviceforprimarycamera.md) provides the underlying capture device that you can adjust as needed.",
+      "ko": "기기가 구성 가능한 캡처 세션을 지원하면 [`configurableCaptureDeviceForPrimaryCamera`](arconfiguration/configurablecapturedeviceforprimarycamera.md)가 필요에 따라 조정할 수 있는 기본 캡처 장치를 제공합니다.",
+      "sourceHash": "9ac707a0a303cc21003ff9dd9005cdf485a0e62d0604ba3c3d2c1360f581da0f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:enable-high-quality-video-and-custom-capture-settings:0022:0001",
+      "source": "```swift\nif let device = ARWorldTrackingConfiguration.configurableCaptureDeviceForPrimaryCamera {\n   do { try device.lockForConfiguration()\n      // Configure capture settings here.\n      device.unlockForConfiguration()\n   } catch { /* Error handling. */ }\n}\n```",
+      "ko": "```swift\nif let device = ARWorldTrackingConfiguration.configurableCaptureDeviceForPrimaryCamera {\n   do { try device.lockForConfiguration()\n      // Configure capture settings here.\n      device.unlockForConfiguration()\n   } catch { /* Error handling. */ }\n}\n```",
+      "sourceHash": "bd7455e0445b2549954f476129d1190e6bae5229207eb5c6075bce4ad485b380",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:capture-high-resolution-still-frames:0023:0001",
+      "source": "Capture High Resolution Still Frames",
+      "ko": "고해상도 스틸 프레임 캡처",
+      "sourceHash": "3551a7d89f46e76c7f6bf80aaf78d8656552e08f03d156a02e9e2033af2c9fa5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-high-resolution-still-frames:0024:0001",
+      "source": "In iOS 16, you can enable high-resolution frame capture by calling [`recommendedVideoFormatForHighResolutionFrameCapturing`](arconfiguration/recommendedvideoformatforhighresolutionframecapturing.md) on your configuration.",
+      "ko": "iOS 16에서는 구성(configuration)에서 [`recommendedVideoFormatForHighResolutionFrameCapturing`](arconfiguration/recommendedvideoformatforhighresolutionframecapturing.md)를 호출해 고해상도 프레임 캡처를 활성화할 수 있습니다.",
+      "sourceHash": "cd4bf819777ec3d7a7fd933ef8c2b09d61e9bfea1a8e8b4335d435562ec310ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-high-resolution-still-frames:0024:0002",
+      "source": "If the device supports high-resolution stills, the function returns a video format you can use to start a session:",
+      "ko": "기기가 고해상도 정지 프레임을 지원하면, 함수가 세션을 시작할 때 사용할 수 있는 비디오 형식을 반환합니다:",
+      "sourceHash": "5cc00f56839e055f6f53312396bea5d747f86b3dace9bf4f523147f4d76edd1e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:capture-high-resolution-still-frames:0025:0001",
+      "source": "```swift\nguard let hiResFormat = type(of: config).recommendedVideoFormatForHighResolutionFrameCapturing else {\n    fatalError(\"The device doesn't support high-resolution stills.\") }\nconfig.videoFormat = hiResFormat\narSession.run(config)\n```",
+      "ko": "```swift\nguard let hiResFormat = type(of: config).recommendedVideoFormatForHighResolutionFrameCapturing else {\n    fatalError(\"The device doesn't support high-resolution stills.\") }\nconfig.videoFormat = hiResFormat\narSession.run(config)\n```",
+      "sourceHash": "86e74cddf8bcd484d161629701497368483123711bb9a543ad3a52b9d694033e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:capture-high-resolution-still-frames:0026:0001",
+      "source": "During the session, capture a high-resolution still frame at any time by calling [`captureHighResolutionFrame(completion:)`](arsession/capturehighresolutionframe(completion:).md):",
+      "ko": "세션 동안 [`captureHighResolutionFrame(completion:)`](arsession/capturehighresolutionframe(completion:).md)를 호출해 언제든지 고해상도 정지 프레임을 캡처할 수 있습니다:",
+      "sourceHash": "1b7154fc22781d943ea597b7ea5cff27f70232609992b641e585901bc3d6ca23",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:capture-high-resolution-still-frames:0027:0001",
+      "source": "```swift\narSession.captureHighResolutionFrame { (frame, error) in\n    if let frame = frame {\n        saveHiResFrame(frame)\n    } else { /* Error handling. */ }\n```",
+      "ko": "```swift\narSession.captureHighResolutionFrame { (frame, error) in\n    if let frame = frame {\n        saveHiResFrame(frame)\n    } else { /* Error handling. */ }\n```",
+      "sourceHash": "82bbc17695b54cc19e75d4e8e17fd67684f325024b60f538c984d63e6e10293d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:topics:0028:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:common-configuration-details:0029:0001",
+      "source": "Common Configuration Details",
+      "ko": "공통 구성 세부 정보",
+      "sourceHash": "7ea1294a562f8374a67505b31e665e38f9eec9f33875147fc5abbc5fc10d2b8c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:common-configuration-details:0030:0001",
+      "source": "[class ARConfiguration](arconfiguration.md)",
+      "ko": "[class ARConfiguration](arconfiguration.md)",
+      "sourceHash": "66c8d24509e34474f9a8e6a9bd8c86acc1c2189f5dce76a9ae75e857bbe2504d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:common-configuration-details:0031:0001",
+      "source": "The base object that contains information about how to configure an augmented reality session.",
+      "ko": "증강 현실 세션을 구성하는 방법에 대한 정보를 포함하는 기본 객체입니다.",
+      "sourceHash": "cc52bd3bd5cc4a86bfd53d4e10e791fe520d8467a2060a19a86c6c6ef458db86",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:spatial-tracking:0032:0001",
+      "source": "Spatial Tracking",
+      "ko": "공간 추적",
+      "sourceHash": "d5df4061200835e4c3379e68af5886767223f45d6dd5a215357d0b799a8a5d37",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:spatial-tracking:0033:0001",
+      "source": "[Understanding World Tracking](understanding-world-tracking.md)",
+      "ko": "[Understanding World Tracking](understanding-world-tracking.md)",
+      "sourceHash": "f2d6c38ad39ae6fc8ec8ff0610cc213500cbf170d8d6faf752a719739e18a576",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:spatial-tracking:0034:0001",
+      "source": "Discover features and best practices for building rear-camera AR experiences.",
+      "ko": "후면 카메라 AR 경험을 구축하기 위한 기능과 모범 사례를 설명합니다.",
+      "sourceHash": "4159a8957ccaaea31dac11f0233f7e75674af88325146bccaf54795b50b39074",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:spatial-tracking:0035:0001",
+      "source": "[class ARWorldTrackingConfiguration](arworldtrackingconfiguration.md)",
+      "ko": "[class ARWorldTrackingConfiguration](arworldtrackingconfiguration.md)",
+      "sourceHash": "f7c7933a867b2977d2d21437fad80aa8a25d75799f01b1f221f81652c42f52b4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:spatial-tracking:0036:0001",
+      "source": "A configuration that tracks the position of a device in relation to objects in the environment.",
+      "ko": "환경의 객체와의 관계에서 장치의 위치를 추적하는 구성입니다.",
+      "sourceHash": "3e3d25fde9b43e68a96b468c70405a9cbdd8d8f09beab0450a4f6534f1651f86",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:spatial-tracking:0037:0001",
+      "source": "[class ARGeoTrackingConfiguration](argeotrackingconfiguration.md)",
+      "ko": "[class ARGeoTrackingConfiguration](argeotrackingconfiguration.md)",
+      "sourceHash": "774f34fe66311a24aca754bcd710ccab7205e32173cea17913b09a812d75c494",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:spatial-tracking:0038:0001",
+      "source": "A configuration that tracks locations with GPS, map data, and a device’s compass.",
+      "ko": "GPS, 지도 데이터 및 장치의 나침반을 사용해 위치를 추적하는 구성입니다.",
+      "sourceHash": "8967eff788c2f61549fc66c401c8a54b9e4115060a7937ea3180c800881ec867",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:spatial-tracking:0039:0001",
+      "source": "[class AROrientationTrackingConfiguration](arorientationtrackingconfiguration.md)",
+      "ko": "[class AROrientationTrackingConfiguration](arorientationtrackingconfiguration.md)",
+      "sourceHash": "a41ab0f05a8ba27c7ca00c7485da1760ac113f310c8f36d832ca3a6e9a984816",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:spatial-tracking:0040:0001",
+      "source": "A configuration that tracks only the device’s orientation using the rear-facing camera.",
+      "ko": "후면 카메라를 사용해 장치의 방향만 추적하는 구성입니다.",
+      "sourceHash": "92e5777d96d5212881a6091cabaf39cb8ec63d2c47ebba6966108c4233bc471a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:spatial-tracking:0041:0001",
+      "source": "[class ARPositionalTrackingConfiguration](arpositionaltrackingconfiguration.md)",
+      "ko": "[class ARPositionalTrackingConfiguration](arpositionaltrackingconfiguration.md)",
+      "sourceHash": "e891bf79c4a88bdca55ff513885044a219834c74b2075ec74f02c40f69bcd044",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:spatial-tracking:0042:0001",
+      "source": "A configuration that tracks only the device’s position in 3D space.",
+      "ko": "3D 공간에서 장치의 위치만 추적하는 구성입니다.",
+      "sourceHash": "bfa8bfbf09df7eb173edfe50f5fe347678705f02f187507651fd3e998eb79ba0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:body-and-face-tracking:0043:0001",
+      "source": "Body and Face Tracking",
+      "ko": "신체 및 얼굴 추적",
+      "sourceHash": "1b99ac327891c5e621eaeeed3acea11171a190a11629ad96303721a41cc2a290",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:body-and-face-tracking:0044:0001",
+      "source": "[class ARBodyTrackingConfiguration](arbodytrackingconfiguration.md)",
+      "ko": "[class ARBodyTrackingConfiguration](arbodytrackingconfiguration.md)",
+      "sourceHash": "72d3793e613b1be3959b30f3ec4d91bbb9825e486203487a8340673a11ac3c14",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:body-and-face-tracking:0045:0001",
+      "source": "A configuration that tracks human body poses, planar surfaces, and images using the rear-facing camera.",
+      "ko": "후면 카메라를 사용해 사람의 신체 자세, 평면 표면 및 이미지를 추적하는 구성입니다.",
+      "sourceHash": "693cc40e6d66011463634cae4eefcf6c3b559068cd4822b3dbc6f2972c52e7b0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:body-and-face-tracking:0046:0001",
+      "source": "[class ARFaceTrackingConfiguration](arfacetrackingconfiguration.md)",
+      "ko": "[class ARFaceTrackingConfiguration](arfacetrackingconfiguration.md)",
+      "sourceHash": "2622529f0d9078baa774b7b76eb2c0a29b63fb19cf25ec8f3595aee2b2ecf15c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:body-and-face-tracking:0047:0001",
+      "source": "A configuration that tracks facial movement and expressions using the front camera.",
+      "ko": "전면 카메라를 사용해 얼굴 움직임과 표정을 추적하는 구성입니다.",
+      "sourceHash": "414393620c8d6a77208e1e449cd0b6eccd97ff0e669ff36b6ed1e7210e1054e4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:image-recognition:0048:0001",
+      "source": "Image Recognition",
+      "ko": "이미지 인식",
+      "sourceHash": "d1c3c87f279c4ccf0d683f98f6c775f691f31a150d495130d1ad853e6db65586",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:image-recognition:0049:0001",
+      "source": "[class ARImageTrackingConfiguration](arimagetrackingconfiguration.md)",
+      "ko": "[class ARImageTrackingConfiguration](arimagetrackingconfiguration.md)",
+      "sourceHash": "816f98daa76bf6dd83610d0183939f5400e518b81add8272ddcc939cdc8e0f21",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:image-recognition:0050:0001",
+      "source": "A configuration that tracks known images using the rear-facing camera.",
+      "ko": "후면 카메라를 사용해 알려진 이미지를 추적하는 구성입니다.",
+      "sourceHash": "e94a6c923b1e142d9d59a457f4350e601325c9608930520972d57498b8ab7ac0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:object-detection:0051:0001",
+      "source": "Object Detection",
+      "ko": "객체 감지",
+      "sourceHash": "40550eed966fdeb965087fafebf6a7f611ddebcc9d49b4003d328c9f52592440",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:object-detection:0052:0001",
+      "source": "[class ARObjectScanningConfiguration](arobjectscanningconfiguration.md)",
+      "ko": "[class ARObjectScanningConfiguration](arobjectscanningconfiguration.md)",
+      "sourceHash": "6a7857427cafe23205f7925599b2ed80ba39bf4ab24cd1aaf7365aeaf673333e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:object-detection:0053:0001",
+      "source": "A configuration that recognizes objects and collects high-fidelity data about specific objects using the rear-facing camera.",
+      "ko": "후면 카메라를 사용해 특정 객체를 인식하고 해당 객체의 고충실도 데이터를 수집하는 구성입니다.",
+      "sourceHash": "d24ab6d64bb15ca81bb191d09c008445e5181a8c74096c94f619d9620d90a8a1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0054:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0055:0001",
+      "source": "[Choosing Which Camera Feed to Augment](choosing-which-camera-feed-to-augment.md)",
+      "ko": "[Choosing Which Camera Feed to Augment](choosing-which-camera-feed-to-augment.md)",
+      "sourceHash": "9c7f9fb29386e874f231e41a106cd057b6ff08f4db4d4b3403ef5de47f147391",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0056:0001",
+      "source": "Add visual effects to the user’s environment in an AR experience through the front or rear camera.",
+      "ko": "전면 또는 후면 카메라를 통해 AR 경험에서 사용자 환경에 시각 효과를 추가합니다.",
+      "sourceHash": "9d2099991dc2aafbb215f6701f6cf7ee59043d4399c80779ac070d1efa322e9c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0057:0001",
+      "source": "[Managing Session Life Cycle and Tracking Quality](managing-session-life-cycle-and-tracking-quality.md)",
+      "ko": "[Managing Session Life Cycle and Tracking Quality](managing-session-life-cycle-and-tracking-quality.md)",
+      "sourceHash": "e121db8695ba2345e09e6288d9eabed6e3abc6e7c24a926e0446aa1f4ec6c526",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0058:0001",
+      "source": "Keep the user informed on the current session state and recover from interruptions.",
+      "ko": "현재 세션 상태를 사용자에게 알리고 중단에서 복구할 수 있습니다.",
+      "sourceHash": "5942b386e09022901038170fdb890463afb99ca70a575027126a5eb171c9db92",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0059:0001",
+      "source": "[Displaying an AR Experience with Metal](displaying-an-ar-experience-with-metal.md)",
+      "ko": "[Displaying an AR Experience with Metal](displaying-an-ar-experience-with-metal.md)",
+      "sourceHash": "874a876d58032b97c53753f93fcea10d07386a366bf964a31b68dc88982c2646",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0060:0001",
+      "source": "Control rendering of your app’s virtual content on top of a camera feed.",
+      "ko": "카메라 피드 위에 앱의 가상 콘텐츠 렌더링을 제어합니다.",
+      "sourceHash": "7654e50a45f4154875860d4c6ccc169007146af7c36141addbd4554ec09b3e36",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0061:0001",
+      "source": "[class ARSession](arsession.md)",
+      "ko": "[class ARSession](arsession.md)",
+      "sourceHash": "c8a9418b7bf43bfb4fa8fb0df9730d8f74c7c29f61056ce322f9d1bb03823008",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0062:0001",
+      "source": "The object that manages the major tasks associated with every AR experience, such as motion tracking, camera passthrough, and image analysis.",
+      "ko": "이 객체는 모션 추적, 카메라 패스스루, 이미지 분석과 같은 AR 경험의 핵심 작업을 관리합니다.",
+      "sourceHash": "be06b3e2299b570999594006c2bd898eccc1edb5b09fa7de13085b588b501642",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0063:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0064:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/configuration-objects)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/configuration-objects)*",
+      "sourceHash": "4d7845cd3a06582f1db75470b13eb3f5eb6bd1deacffbb07eac1439a9e4000ed",
+      "status": "preserved"
+    }
+  ]
+}

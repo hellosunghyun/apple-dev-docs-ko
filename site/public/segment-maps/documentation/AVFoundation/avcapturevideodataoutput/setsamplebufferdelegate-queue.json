@@ -1,0 +1,246 @@
+{
+  "docId": "documentation/AVFoundation/avcapturevideodataoutput/setsamplebufferdelegate-queue.md",
+  "title": "setSampleBufferDelegate(:queue:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturevideodataoutput/setsamplebufferdelegate-queue",
+  "segments": [
+    {
+      "id": "seg:heading:setsamplebufferdelegatequeue:0000:0001",
+      "source": "setSampleBufferDelegate(_:queue:)",
+      "ko": "setSampleBufferDelegate(_:queue:)",
+      "sourceHash": "274c924f83f537757f9df7769ef44d95c87dbf883928dc27f8ece39908e91086",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setsamplebufferdelegatequeue:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setsamplebufferdelegatequeue:0002:0001",
+      "source": "Sets the sample buffer delegate and the queue for invoking callbacks.",
+      "ko": "sample buffer delegate와 콜백 호출용 큐를 설정합니다.",
+      "sourceHash": "9f8824a777313587f513cfc18923b08909a455c5647aae7f4d1da47b7ae9e064",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setsamplebufferdelegatequeue:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setsamplebufferdelegatequeue:0004:0001",
+      "source": "iOS 4.0+",
+      "ko": "iOS 4.0+",
+      "sourceHash": "0c0ed66d9f4133c5a709449f69be4759ac3625b24734b8390d2f7e23b33c3545",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setsamplebufferdelegatequeue:0004:0002",
+      "source": "iPadOS 4.0+",
+      "ko": "iPadOS 4.0+",
+      "sourceHash": "dfe042d2e3f40a7e917ced53f052a0d5f5ba8d69dfa62a3b59fb59de8ef49851",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setsamplebufferdelegatequeue:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setsamplebufferdelegatequeue:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setsamplebufferdelegatequeue:0004:0005",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setsamplebufferdelegatequeue:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc setSampleBufferDelegate(_ sampleBufferDelegate: (any AVCaptureVideoDataOutputSampleBufferDelegate)?, queue sampleBufferCallbackQueue: dispatch_queue_t?)\n```",
+      "ko": "```swift\nfunc setSampleBufferDelegate(_ sampleBufferDelegate: (any AVCaptureVideoDataOutputSampleBufferDelegate)?, queue sampleBufferCallbackQueue: dispatch_queue_t?)\n```",
+      "sourceHash": "60ed9a5f8ae829be17149084bbb5ac4c25294174458570e66b9f7997529dc022",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "When a new video sample buffer is captured, it is sent to the sample buffer delegate using [`captureOutput(_:didOutput:from:)`](avcapturevideodataoutputsamplebufferdelegate/captureoutput(_:didoutput:from:).md).",
+      "ko": "새 비디오 sample buffer가 캡처되면 [`captureOutput(_:didOutput:from:)`](avcapturevideodataoutputsamplebufferdelegate/captureoutput(_:didoutput:from:).md)를 통해 sample buffer가 sample buffer delegate로 전송됩니다.",
+      "sourceHash": "db734f4541bfb9b70177904b5c53efebe9fb244ab5de0d6fecedc4f972eada3e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "All delegate methods are invoked on the specified dispatch queue.",
+      "ko": "모든 delegate 메서드는 지정된 dispatch queue에서 호출됩니다.",
+      "sourceHash": "fd516f51f63fcba30a447bfcb47be8c93a2cfa928199fdcc693c209b9094a9fa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "If the queue is blocked when new frames are captured, those frames will be automatically dropped at a time determined by the value of the [`alwaysDiscardsLateVideoFrames`](avcapturevideodataoutput/alwaysdiscardslatevideoframes.md) property.",
+      "ko": "큐가 차단된 상태에서 새 프레임이 캡처되면, 해당 프레임은 [`alwaysDiscardsLateVideoFrames`](avcapturevideodataoutput/alwaysdiscardslatevideoframes.md) 속성 값에 따라 자동으로 삭제됩니다.",
+      "sourceHash": "2c858b270f4d86c955b9f89019b21dd355be1bbd45bf915164bd7b04861c2b9f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "This allows you to process existing frames on the same queue without having to manage the potential memory usage increases that would otherwise occur when that processing is unable to keep up with the rate of incoming frames.",
+      "ko": "이렇게 하면 들어오는 프레임 처리 속도를 따라가지 못할 때 기존 프레임을 처리하는 동안 발생할 수 있는 잠재적 메모리 사용량 증가를 별도로 관리하지 않아도 동일한 큐에서 처리할 수 있습니다.",
+      "sourceHash": "9198d279441c2b9df2188946226e64a81abf8a6551a7121d8d2b0302a3fdfe37",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "If your frame processing is consistently unable to keep up with the rate of incoming frames, you should consider using the [`minFrameDuration`](avcapturevideodataoutput/minframeduration.md) property, which will generally yield better performance characteristics and more consistent frame rates than frame dropping alone.",
+      "ko": "프레임 처리 속도가 지속적으로 들어오는 프레임 속도를 따라가지 못한다면 [`minFrameDuration`](avcapturevideodataoutput/minframeduration.md) 속성을 사용하는 것이 좋습니다. 이 방법은 프레임 드롭만 사용하는 경우보다 일반적으로 성능 특성이 더 좋고 프레임 속도가 더 일관됩니다.",
+      "sourceHash": "7bb14d74b5fb8ce6cd11cea86045890b0ba495d6dccbf0e651e26af6c077acb7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "If you need to minimize the chances of frames being dropped, you should specify a queue on which a sufficiently small amount of processing is being done outside of receiving sample buffers.",
+      "ko": "프레임이 버려질 가능성을 최소화하려면 sample buffer를 받는 처리 외부에서 충분히 적은 양의 처리가 수행되는 큐를 지정해야 합니다.",
+      "sourceHash": "0fd9bd763f11f9946ae6b0887ec5d20fa8d9c467da3b9aa3b9348bfbe978c672",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "However, if you migrate extra processing to another queue, you are responsible for ensuring that memory usage does not grow without bound from frames that have not been processed.",
+      "ko": "그러나 추가 처리를 다른 큐로 이동하면, 처리되지 않은 프레임으로 인해 메모리 사용량이 무한정 증가하지 않도록 보장할 책임이 있습니다.",
+      "sourceHash": "335a1963fa2f809e3165c082c59bfa37726e87267835cf440326d1b84abbd49c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:special-considerations:0012:0001",
+      "source": "Special Considerations",
+      "ko": "특수 고려 사항",
+      "sourceHash": "f3c615768b92c39df31205c10dbee0fea2eda512f16a940378982ce671b3ab9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:special-considerations:0013:0001",
+      "source": "This method uses [`dispatch_retain`](https://developer.apple.com/documentation/Dispatch/dispatch_retain) and [`dispatch_release`](https://developer.apple.com/documentation/Dispatch/dispatch_release) to manage the queue.",
+      "ko": "이 메서드는 큐를 관리하기 위해 [`dispatch_retain`](https://developer.apple.com/documentation/Dispatch/dispatch_retain) 및 [`dispatch_release`](https://developer.apple.com/documentation/Dispatch/dispatch_release)를 사용합니다.",
+      "sourceHash": "a1c3e4bafabfcbdc209d3d0a08ac1c936fc2f3d16e0da2cfee623569cf494d4e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0014:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0015:0001",
+      "source": "`sampleBufferDelegate`: An object conforming to the [`AVCaptureVideoDataOutputSampleBufferDelegate`](avcapturevideodataoutputsamplebufferdelegate.md) protocol that will receive sample buffers after they are captured.",
+      "ko": "`sampleBufferDelegate`: 캡처 후 sample buffer를 수신할 [`AVCaptureVideoDataOutputSampleBufferDelegate`](avcapturevideodataoutputsamplebufferdelegate.md) 프로토콜을 준수하는 객체입니다.",
+      "sourceHash": "dd06c1fd20dc5914862dcf9ba55391655906e582412a1c82779a1e27b1bbfdd2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0015:0002",
+      "source": "`sampleBufferCallbackQueue`: The queue on which callbacks should be invoked. You must use a serial dispatch queue, to guarantee that video frames will be delivered in order. The sampleBufferCallbackQueue parameter may not be `NULL`, except when setting the `sampleBufferDelegate` to `nil`.",
+      "ko": "`sampleBufferCallbackQueue`: 콜백이 호출될 큐입니다. 비디오 프레임이 순서대로 전달되도록 직렬 dispatch queue를 사용해야 합니다. `sampleBufferDelegate`를 `nil`로 설정할 때를 제외하고 `sampleBufferCallbackQueue` 매개변수는 `NULL`일 수 없습니다.",
+      "sourceHash": "8a8b813a6c21d2db8abb6214ba9a2d2acb2e8069177e6abcaf256a2cb944179a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0016:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[var sampleBufferDelegate: (any AVCaptureVideoDataOutputSampleBufferDelegate)?](avcapturevideodataoutput/samplebufferdelegate.md)",
+      "ko": "[var sampleBufferDelegate: (any AVCaptureVideoDataOutputSampleBufferDelegate)?](avcapturevideodataoutput/samplebufferdelegate.md)",
+      "sourceHash": "52358d780571b20b62f3dcdc8d8a0d4307ca23406012dd0fdf2766f47be156d3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "The capture object’s delegate.",
+      "ko": "캡처 객체의 delegate입니다.",
+      "sourceHash": "8b812b777e02088b06421ea0223285b86d0e1c0017ef0d9ebca7eb6340b82ae4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[var sampleBufferCallbackQueue: dispatch_queue_t?](avcapturevideodataoutput/samplebuffercallbackqueue.md)",
+      "ko": "[var sampleBufferCallbackQueue: dispatch_queue_t?](avcapturevideodataoutput/samplebuffercallbackqueue.md)",
+      "sourceHash": "b4e4c9a8e2019b5045748b32fc9b086ebffa6eec7a7599c9c78f857c8ee01a2f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "The queue on which the system invokes delegate callbacks.",
+      "ko": "시스템이 delegate 콜백을 호출하는 큐입니다.",
+      "sourceHash": "b0d82f7190ab799d1df9df389fb1bf9da8f8c5315a14cefd18da306e28aaee0a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[protocol AVCaptureVideoDataOutputSampleBufferDelegate](avcapturevideodataoutputsamplebufferdelegate.md)",
+      "ko": "[protocol AVCaptureVideoDataOutputSampleBufferDelegate](avcapturevideodataoutputsamplebufferdelegate.md)",
+      "sourceHash": "d59d09491446541636dbf8eaeceef860a9bf90f2ef3ceaad4afd8bf8e09029e6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "Methods for receiving sample buffers from, and monitoring the status of, a video data output.",
+      "ko": "비디오 데이터 출력에서 sample buffer를 수신하고 상태를 모니터링하는 메서드입니다.",
+      "sourceHash": "1e76410f26eb053cc71aea2ade362830a281fa9c5ca7200384b44325d079dbe7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0023:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturevideodataoutput/setsamplebufferdelegate(_:queue:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturevideodataoutput/setsamplebufferdelegate(_:queue:))*",
+      "sourceHash": "ab0fd4be3c16e25dd04f62be32d15925e67583b25c743d636cba0e19434cbf26",
+      "status": "failed"
+    }
+  ]
+}

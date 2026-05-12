@@ -1,0 +1,428 @@
+{
+  "docId": "documentation/AVFoundation/capturing-photos-with-depth.md",
+  "title": "Capturing photos with depth",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/capturing-photos-with-depth",
+  "segments": [
+    {
+      "id": "seg:heading:capturing-photos-with-depth:0000:0001",
+      "source": "Capturing photos with depth",
+      "ko": "깊이 사진 촬영",
+      "sourceHash": "53cb39b52da65b1028edb42f237df2f56aba425b3d2362f4717af1a9b794d587",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capturing-photos-with-depth:0001:0001",
+      "source": "**Framework**: AVFoundation",
+      "ko": "**프레임워크**: AVFoundation",
+      "sourceHash": "d1a1a81bcb090684ac27d86fff88465af08239993e5a6442a93dc76635a7ffc2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capturing-photos-with-depth:0002:0001",
+      "source": "Get a depth map with a photo to create effects like the system camera’s Portrait mode (on compatible devices).",
+      "ko": "사진에 깊이 맵을 적용하면 시스템 카메라의 Portrait 모드와 같은 효과를 만들 수 있습니다(지원되는 기기).",
+      "sourceHash": "7c09137a045923f320b6716763c5e5dbe3d8bed881d963abf9b4fa1f9b13a813",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "On iOS devices with a back-facing dual camera or a front-facing TrueDepth camera, the capture system can record depth information.",
+      "ko": "후면 듀얼 카메라 또는 전면 TrueDepth 카메라가 있는 iOS 기기에서는 캡처 시스템이 깊이 정보를 기록할 수 있습니다.",
+      "sourceHash": "7fba22e685566961da9c0490d8d915cd7768654d3d833f26ac75f7030be60aa8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "A depth map is like an image; however, instead of each pixel providing a color, it indicates distance from the camera to that part of the image (either in absolute terms, or relative to other pixels in the depth map).",
+      "ko": "깊이 맵은 이미지와 유사하지만, 각 픽셀이 색상을 제공하는 대신 카메라에서 해당 이미지 지점까지의 거리를 나타냅니다(절대값이거나 깊이 맵 내 다른 픽셀에 대한 상대값).",
+      "sourceHash": "bc77a4363e909ffddc18dade11766897adc7e24b6f26ba6c05cc7bf24fba4cc3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0001",
+      "source": "You can use a depth map together with a photo to create image-processing effects that treat foreground and background elements of a photo differently, like the Portrait mode in the iOS Camera app.",
+      "ko": "깊이 맵을 사진과 함께 사용하면 iOS 카메라 앱의 Portrait 모드처럼 전경과 배경 요소를 다르게 처리하는 이미지 처리 효과를 만들 수 있습니다.",
+      "sourceHash": "6403f21c7e16aeb8a5d0e66033f9d9b6911c461135dc5a845844a19eb6f9eb1e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0002",
+      "source": "By saving color and depth data separately, you can even apply and change these effects long after a photo has been captured.",
+      "ko": "색상 데이터와 깊이 데이터를 분리해 저장하면 촬영이 완료된 후에도 이러한 효과를 적용하고 변경할 수 있습니다.",
+      "sourceHash": "69cdad6d92e5f3acbed077ffda23d62f895727e4ba193a49a9f72f0d57a734f4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0001",
+      "source": "![Figure showing how iOS creates a Portrait photo effect using a color camera image and a depth map](https://docs-assets.developer.apple.com/published/d06edb877980433bf589ec401cb91f66/media-2978410%402x.png)",
+      "ko": "![iOS가 색상 카메라 이미지와 깊이 맵을 사용해 Portrait 사진 효과를 생성하는 방법을 보여주는 그림](https://docs-assets.developer.apple.com/published/d06edb877980433bf589ec401cb91f66/media-2978410%402x.png)",
+      "sourceHash": "4e03b1134d75f4fff916fbfd51f0fb131ca558b2493cb9b793d4f4b30aa943f2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0001",
+      "source": "You can add depth capture to many of the other photography workflows covered in [`Capturing still and Live Photos`](capturing-still-and-live-photos.md) by adding the following steps.",
+      "ko": "[`Capturing still and Live Photos`](capturing-still-and-live-photos.md)에서 다루는 여러 촬영 워크플로우에 다음 단계를 추가하여 깊이 캡처를 통합할 수 있습니다.",
+      "sourceHash": "4756a2c4eb39b9a68232aef2b38c4eb948a3c8a0728bc4888145b3b64079330a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:prepare-for-depth-photo-capture:0008:0001",
+      "source": "Prepare for Depth Photo Capture",
+      "ko": "깊이 사진 캡처 준비",
+      "sourceHash": "b84b61ffafa8b586d7e1f97cd281b2892547203565eedd7cd4b2962eb54a4246",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:prepare-for-depth-photo-capture:0009:0001",
+      "source": "To capture depth maps, you’ll need to first select a [`builtInDualCamera`](avcapturedevice/devicetype-swift.struct/builtindualcamera.md) or [`builtInTrueDepthCamera`](avcapturedevice/devicetype-swift.struct/builtintruedepthcamera.md) capture device as your session’s video input.",
+      "ko": "깊이 맵을 캡처하려면 먼저 [`builtInDualCamera`](avcapturedevice/devicetype-swift.struct/builtindualcamera.md) 또는 [`builtInTrueDepthCamera`](avcapturedevice/devicetype-swift.struct/builtintruedepthcamera.md) 캡처 장치를 세션의 비디오 입력으로 선택해야 합니다.",
+      "sourceHash": "00c0553d65a152bd5319394cee2411ee2719a8f37798d2f67e34afecc9d16aa0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:prepare-for-depth-photo-capture:0009:0002",
+      "source": "Even if an iOS device has a dual camera or TrueDepth camera, selecting the default back- or front-facing camera doesn’t enable depth capture.",
+      "ko": "iOS 기기에 듀얼 카메라 또는 TrueDepth 카메라가 있어도 기본 후면/전면 카메라를 선택하면 깊이 캡처가 활성화되지 않습니다.",
+      "sourceHash": "98d3d1757dde80bbe0456d34c519a272df2f03a326f7b12e6cdb5df349dfece9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:prepare-for-depth-photo-capture:0010:0001",
+      "source": "Capturing depth also requires an internal reconfiguration of the capture pipeline, briefly delaying capture and interrupting any in-progress captures.",
+      "ko": "깊이 캡처에는 캡처 파이프라인의 내부 재구성이 추가로 필요하며, 이로 인해 캡처가 잠시 지연되고 진행 중인 캡처가 중단됩니다.",
+      "sourceHash": "2a69e4880cac59cdeba9e01ac32644164c92257cd67e6761199e091a3bc43af7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:prepare-for-depth-photo-capture:0010:0002",
+      "source": "Before shooting your first depth photo, make sure you configure the pipeline appropriately by enabling depth capture on your [`AVCapturePhotoOutput`](avcapturephotooutput.md) object.",
+      "ko": "첫 번째 깊이 사진을 촬영하기 전에 [`AVCapturePhotoOutput`](avcapturephotooutput.md) 객체에서 깊이 캡처를 활성화하여 파이프라인을 적절히 구성해야 합니다.",
+      "sourceHash": "552993661035c860faead9f06974ea39d5f663d7103ca1bbbccf25d5b02c3680",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:prepare-for-depth-photo-capture:0011:0001",
+      "source": "```swift\n// Select a depth-capable capture device.\nguard let videoDevice = AVCaptureDevice.default(.builtInDualCamera,\n    for: .video, position: .back)\n    else { fatalError(\"No dual camera.\") }\nguard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice),\n    self.captureSession.canAddInput(videoDeviceInput)\n    else { fatalError(\"Can't add video input.\") }\nself.captureSession.beginConfiguration()\nself.captureSession.addInput(videoDeviceInput)\n\n// Set up photo output for depth data capture.\nlet photoOutput = AVCapturePhotoOutput()\nguard self.captureSession.canAddOutput(photoOutput)\n    else { fatalError(\"Can't add photo output.\") }\nself.captureSession.addOutput(photoOutput)\nself.captureSession.sessionPreset = .photo\n// Enable delivery of depth data after adding the output to the capture session.\nphotoOutput.isDepthDataDeliveryEnabled = photoOutput.isDepthDataDeliverySupported\nself.captureSession.commitConfiguration()\n```",
+      "ko": "```swift\n// Select a depth-capable capture device.\nguard let videoDevice = AVCaptureDevice.default(.builtInDualCamera,\n    for: .video, position: .back)\n    else { fatalError(\"No dual camera.\") }\nguard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice),\n    self.captureSession.canAddInput(videoDeviceInput)\n    else { fatalError(\"Can't add video input.\") }\nself.captureSession.beginConfiguration()\nself.captureSession.addInput(videoDeviceInput)\n\n// Set up photo output for depth data capture.\nlet photoOutput = AVCapturePhotoOutput()\nguard self.captureSession.canAddOutput(photoOutput)\n    else { fatalError(\"Can't add photo output.\") }\nself.captureSession.addOutput(photoOutput)\nself.captureSession.sessionPreset = .photo\n// Enable delivery of depth data after adding the output to the capture session.\nphotoOutput.isDepthDataDeliveryEnabled = photoOutput.isDepthDataDeliverySupported\nself.captureSession.commitConfiguration()\n```",
+      "sourceHash": "cd1cf972080d9cd64f631ca4cbd61b4c5a24937416bc050e298626fca173c306",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:blockquote:prepare-for-depth-photo-capture:0012:0001",
+      "source": "**Note**: Enabling depth capture on a dual camera locks the zoom factor of both the wide and telephoto cameras.",
+      "ko": "**참고**: 듀얼 카메라에서 깊이 캡처를 활성화하면 광각 카메라와 망원 카메라의 줌 계수가 모두 고정됩니다.",
+      "sourceHash": "5d00514b7e0dce939ffcf8d49ffbfda395a04befaf553cb5b3241c408857ab00",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:choose-settings:0013:0001",
+      "source": "Choose Settings",
+      "ko": "설정 선택",
+      "sourceHash": "40d9f58beb614d0b2ad7a1f3f5537f8e61212fb7bd0e392ba863735719cf75b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:choose-settings:0014:0001",
+      "source": "Once your photo output is ready for depth capture, you can request that any individual photos capture a depth map along with the color image.",
+      "ko": "사진 출력이 깊이 캡처 준비가 되면 개별 사진마다 색상 이미지와 함께 깊이 맵 캡처를 요청할 수 있습니다.",
+      "sourceHash": "575e86e96f87173f7a0f9e76145ab2352641fd6cb55ba1439bb5ea8f82ad4db4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:choose-settings:0014:0002",
+      "source": "Create an [`AVCapturePhotoSettings`](avcapturephotosettings.md) object, choosing the format for the color image.",
+      "ko": "색상 이미지의 형식을 선택하여 [`AVCapturePhotoSettings`](avcapturephotosettings.md) 객체를 생성합니다.",
+      "sourceHash": "aaa2b53bf0beae684a4b0e723f4eda26d8c47a201dc6dbbae4a79415ea47f114",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:choose-settings:0014:0003",
+      "source": "Then, enable depth capture and depth output (and any other settings you’d like for that photo) and call the [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) method.",
+      "ko": "그다음 해당 사진에 대해 필요한 다른 설정과 함께 깊이 캡처 및 깊이 출력을 활성화한 뒤 [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) 메서드를 호출합니다.",
+      "sourceHash": "0e7f8997efc708dd5d969369c70ad8e08410c7a9b23889f66a72257d3ea83843",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:choose-settings:0015:0001",
+      "source": "```swift\nlet photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])\nphotoSettings.isDepthDataDeliveryEnabled = photoOutput.isDepthDataDeliverySupported\n\n// Shoot the photo, using a custom class to handle capture delegate callbacks.\nlet captureProcessor = PhotoCaptureProcessor()\nphotoOutput.capturePhoto(with: photoSettings, delegate: captureProcessor)\n```",
+      "ko": "```swift\nlet photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])\nphotoSettings.isDepthDataDeliveryEnabled = photoOutput.isDepthDataDeliverySupported\n\n// Shoot the photo, using a custom class to handle capture delegate callbacks.\nlet captureProcessor = PhotoCaptureProcessor()\nphotoOutput.capturePhoto(with: photoSettings, delegate: captureProcessor)\n```",
+      "sourceHash": "50c35c8a2dcf7847f08e0365e8620c3a6cb888d6a696745ebe3af1072aad2a5d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:handle-results:0016:0001",
+      "source": "Handle Results",
+      "ko": "결과 처리",
+      "sourceHash": "72832417f80c9dccf27924af012f8f61adf8e5851cdde1a4bf41d84a3245e6f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-results:0017:0001",
+      "source": "After a capture, the photo output calls your delegate’s [`photoOutput(_:didFinishProcessingPhoto:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishprocessingphoto:error:).md) method, providing the photo and captured depth data as an [`AVCapturePhoto`](avcapturephoto.md) object.",
+      "ko": "캡처 후 사진 출력은 delegate의 [`photoOutput(_:didFinishProcessingPhoto:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishprocessingphoto:error:).md) 메서드를 호출해 사진과 캡처된 깊이 데이터를 [`AVCapturePhoto`](avcapturephoto.md) 객체로 제공합니다.",
+      "sourceHash": "713c4f37a16ea2360458ee40607adfe323310f3657223f38bfaacbe916a069cb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-results:0018:0001",
+      "source": "If you plan to use the captured depth data immediately—for example, to display a preview of a depth-based image processing effect—you can find it in the photo object’s [`depthData`](avcapturephoto/depthdata.md) property.",
+      "ko": "캡처된 깊이 데이터를 즉시 사용할 계획이라면(예: 깊이 기반 이미지 처리 효과의 미리보기를 표시하려는 경우), 사진 객체의 [`depthData`](avcapturephoto/depthdata.md) 속성에서 확인할 수 있습니다.",
+      "sourceHash": "09cfd84d5d9fbf69d97cd810620460772c0915ec5583b33c84095c83606684e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-results:0019:0001",
+      "source": "Otherwise, the capture output embeds depth data and depth-related metadata when you use the [`fileDataRepresentation()`](avcapturephoto/filedatarepresentation().md) method to produce file data for saving the photo.",
+      "ko": "그렇지 않으면 캡처 출력은 사진 저장을 위한 파일 데이터를 만들 때 [`fileDataRepresentation()`](avcapturephoto/filedatarepresentation().md) 메서드로 깊이 데이터와 깊이 관련 메타데이터를 포함합니다.",
+      "sourceHash": "92b0bedc5919afd27d969bdc116c93c71d49e933380e0665d05ae7cb265aa6cb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-results:0019:0002",
+      "source": "If you add the resulting file to the Photos library, other apps (including the system Photos app) automatically recognize the depth data within and can apply depth-based image processing effects.",
+      "ko": "결과 파일을 사진 라이브러리에 추가하면 시스템 Photos 앱을 포함한 다른 앱이 깊이 데이터를 자동으로 인식해 깊이 기반 이미지 처리 효과를 적용할 수 있습니다.",
+      "sourceHash": "441b762642466cb5ee92ca1ab20ac3952fffe14a28122a0924ad1412cb93e8af",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-results:0019:0003",
+      "source": "(If you need to disable this option, see the [`embedsDepthDataInPhoto`](avcapturephotosettings/embedsdepthdatainphoto.md) setting).",
+      "ko": "(이 옵션을 비활성화해야 하는 경우 [`embedsDepthDataInPhoto`](avcapturephotosettings/embedsdepthdatainphoto.md) 설정을 확인합니다.)",
+      "sourceHash": "4085b2796f07527c79cbd9ac3872e489af5ee315706bb2f88f40f3c583df907c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:about-disparity-depth-and-accuracy:0020:0001",
+      "source": "About Disparity Depth and Accuracy",
+      "ko": "시차 깊이 및 정확도",
+      "sourceHash": "c834e8faa46ddf194d1ae101c14e693cb2c6e8d69eadfbc3935a62d285272b3b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0021:0001",
+      "source": "When you enable depth capture with the back-facing dual camera on compatible devices (see [`iOS Device Compatibility Reference`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599)), the system captures imagery using both cameras.",
+      "ko": "호환되는 기기에서 후면 듀얼 카메라로 깊이 캡처를 활성화하면(참조: [`iOS Device Compatibility Reference`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599)), 시스템은 두 카메라를 모두 사용해 이미지를 캡처합니다.",
+      "sourceHash": "4dbfa06d54aa23cf2981e3cf4a1e9c5b2ab419f542a6391557cbee9848b7b966",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0021:0002",
+      "source": "Because the two parallel cameras are a small distance apart on the back of the device, similar features found in both images show a parallax shift: objects that are closer to the camera shift by a greater distance between the two images.",
+      "ko": "기기 후면의 두 평행 카메라는 간격이 매우 짧기 때문에 두 이미지에 모두 나타나는 유사한 특징에서 시차 이동이 발생합니다. 카메라에 가까운 객체일수록 두 이미지 간 이동 거리가 더 큽니다.",
+      "sourceHash": "11375e12ee19b1721ff621e239a2cee039bc55535366c15e4e2b75e50a353367",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0021:0003",
+      "source": "The capture system uses this difference, or *disparity*, to infer the relative distances from the camera to objects in the image, as shown below.",
+      "ko": "캡처 시스템은 아래에 표시된 바와 같이 이 차이, 즉 *disparity*를 사용해 이미지의 객체와 카메라 사이의 상대 거리를 추론합니다.",
+      "sourceHash": "699f953d538536bc6d9581b36073b9b7abf9a26df1a93d902ce2028bbd962751",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0022:0001",
+      "source": "![Figure showing how parallax differences between two photos create a depth map](https://docs-assets.developer.apple.com/published/94f213d5be82fedf7626347d3b221af4/media-2978411%402x.png)",
+      "ko": "![두 장의 사진에서 시차 차이가 깊이 맵을 만드는 방식](https://docs-assets.developer.apple.com/published/94f213d5be82fedf7626347d3b221af4/media-2978411%402x.png)",
+      "sourceHash": "77b4b596130b52e3573d80ca2dd2f9fdaa037638174552c6621b3f3031ae7043",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0023:0001",
+      "source": "Each point in a depth map captured by a dual camera device measures disparity units of 1/meters, and offers [`AVDepthData.Accuracy.relative`](avdepthdata/accuracy/relative.md) accuracy.",
+      "ko": "듀얼 카메라 장치로 캡처한 깊이 맵의 각 지점은 1/미터 단위의 disparity 값을 측정하며, [`AVDepthData.Accuracy.relative`](avdepthdata/accuracy/relative.md) 정확도를 제공합니다.",
+      "sourceHash": "d64abafe3d9cd39eac57b760ab1f882f66077b1c15274392a2f343273903422f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0023:0002",
+      "source": "An individual point isn’t a good estimate of real-world distance, but the variation between points is consistent enough to use for depth-based image processing effects.",
+      "ko": "개별 포인트는 실제 거리의 정확한 추정치가 아니지만, 포인트 간의 변화는 깊이 기반 이미지 처리 효과에 사용할 만큼 충분히 일관적입니다.",
+      "sourceHash": "0e42a2ce75b819d8ac96ed91872e24d881eb733b23455fca2548302b4c2089a3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0024:0001",
+      "source": "The TrueDepth camera projects an infrared light pattern in front of the camera and images that pattern with an infrared camera.",
+      "ko": "TrueDepth 카메라는 카메라 앞에 적외선 패턴을 투사하고 적외선 카메라로 그 패턴을 촬영합니다.",
+      "sourceHash": "7f66e81de9df4478d15998c7960b6fadf1c8e4f851319da76c0c418ad22bdd3d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0024:0002",
+      "source": "By observing how objects in the scene distorts the pattern, the capture system can calculate the distance rom the camera to each point in the image.",
+      "ko": "장면의 객체가 패턴을 왜곡하는 방식을 관찰함으로써 캡처 시스템은 이미지 내 각 지점까지의 카메라 거리를 계산할 수 있습니다.",
+      "sourceHash": "7f52d8c8557c08ad989c3b45776ed97c5d31d0e38b910b04fd159200f4f40516",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0025:0001",
+      "source": "The TrueDepth camera produces disparity maps by default so that the resulting depth data is similar to that produced by a dual camera device.",
+      "ko": "TrueDepth 카메라는 기본적으로 disparity 맵을 생성하여, 결과 깊이 데이터가 듀얼 카메라 장치에서 생성된 데이터와 유사해지도록 합니다.",
+      "sourceHash": "9429e5001ed1a0bc7c4eedc0064905aae50a917b84463f2cc6e0a3665af14a0d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0025:0002",
+      "source": "However, unlike a dual camera device, the TrueDepth camera can directly measure depth (in meters) with [`AVDepthData.Accuracy.absolute`](avdepthdata/accuracy/absolute.md) accuracy.",
+      "ko": "그러나 듀얼 카메라 장치와 달리 TrueDepth 카메라는 [`AVDepthData.Accuracy.absolute`](avdepthdata/accuracy/absolute.md) 정확도로 미터 단위의 깊이를 직접 측정할 수 있습니다.",
+      "sourceHash": "42a457e12afc6a08e7574350a250bb69620f1a240580d329b8e11f78414d6e09",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:about-disparity-depth-and-accuracy:0025:0003",
+      "source": "To capture depth instead of disparity, set the [`activeDepthDataFormat`](avcapturedevice/activedepthdataformat.md) of the capture device before starting your capture session:",
+      "ko": "disparity가 아닌 depth를 캡처하려면 캡처 세션을 시작하기 전에 capture 장치의 [`activeDepthDataFormat`](avcapturedevice/activedepthdataformat.md)을 설정합니다.",
+      "sourceHash": "80944dc3b280287a9a861988ca2068e3cd2d29478dc659ef1f59aa9b0d12b8f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:about-disparity-depth-and-accuracy:0026:0001",
+      "source": "```swift\n// Select a depth (not disparity) format that works with the active color format.\nlet availableFormats = captureDevice.activeFormat.supportedDepthDataFormats\n\nlet depthFormat = availableFormats.filter { format in\n    let pixelFormatType =\n        CMFormatDescriptionGetMediaSubType(format.formatDescription)\n    \n    return (pixelFormatType == kCVPixelFormatType_DepthFloat16 ||\n            pixelFormatType == kCVPixelFormatType_DepthFloat32)\n}.first\n\n// Set the capture device to use that depth format.\ncaptureSession.beginConfiguration()\ncaptureDevice.activeDepthDataFormat = depthFormat\ncaptureSession.commitConfiguration()\n```",
+      "ko": "```swift\n// Select a depth (not disparity) format that works with the active color format.\nlet availableFormats = captureDevice.activeFormat.supportedDepthDataFormats\n\nlet depthFormat = availableFormats.filter { format in\n    let pixelFormatType =\n        CMFormatDescriptionGetMediaSubType(format.formatDescription)\n    \n    return (pixelFormatType == kCVPixelFormatType_DepthFloat16 ||\n            pixelFormatType == kCVPixelFormatType_DepthFloat32)\n}.first\n\n// Set the capture device to use that depth format.\ncaptureSession.beginConfiguration()\ncaptureDevice.activeDepthDataFormat = depthFormat\ncaptureSession.commitConfiguration()\n```",
+      "sourceHash": "d4c7d50e8c50e9083331c023fc25e11d2fca02d484b691d4e3be42af835c11ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0027:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[Creating auxiliary depth data manually](creating-auxiliary-depth-data-manually.md)",
+      "ko": "[Creating auxiliary depth data manually](creating-auxiliary-depth-data-manually.md)",
+      "sourceHash": "380e0e51e70aecb7327ff313b4e30be751c038022d7b7fe3a682919537032935",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Generate a depth image and attach it to your own image.",
+      "ko": "자체 이미지에 깊이 이미지를 생성해 첨부합니다.",
+      "sourceHash": "943c146990e3ce775d3879a8c4cdef71a4694163db16b395c4c2aba3837aa02b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[Capturing depth using the LiDAR camera](capturing-depth-using-the-lidar-camera.md)",
+      "ko": "[Capturing depth using the LiDAR camera](capturing-depth-using-the-lidar-camera.md)",
+      "sourceHash": "03748d46e7a03ab69f9ee6cc81c13635e8f32249fe3e850308ba648339a24552",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Access the LiDAR camera on supporting devices to capture precise depth data.",
+      "ko": "지원 기기에서 LiDAR 카메라에 접근해 정밀한 깊이 데이터를 캡처합니다.",
+      "sourceHash": "bcf45eb14666aca0f9b4b8b893ca195410ba17277c0eaf92ea045b5b50707199",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[AVCamFilter: Applying filters to a capture stream](avcamfilter-applying-filters-to-a-capture-stream.md)",
+      "ko": "[AVCamFilter: Applying filters to a capture stream](avcamfilter-applying-filters-to-a-capture-stream.md)",
+      "sourceHash": "12d7c483b71a65e0f194a23c9d62a02eaa8c9bd406459eca3f178dfc0eed12f4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Render a capture stream with rose-colored filtering and depth effects.",
+      "ko": "전면 TrueDepth 카메라에서 스트리밍되는 캡처 스트림에 로즈 톤 필터링과 깊이 효과를 적용해 렌더링합니다.",
+      "sourceHash": "089a67d996e7d11f216dbe5b2458233fceec3745a8463eeb884906c7f702d49a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[Streaming depth data from the TrueDepth camera](streaming-depth-data-from-the-truedepth-camera.md)",
+      "ko": "[Streaming depth data from the TrueDepth camera](streaming-depth-data-from-the-truedepth-camera.md)",
+      "sourceHash": "fef6ee51e6bdf5d318349b69174ca1ac60d3ead793cf8a2eb04517eeca6769b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Visualize depth data in 2D and 3D from the TrueDepth camera.",
+      "ko": "TrueDepth 카메라에서 2D 및 3D로 깊이 데이터를 시각화합니다.",
+      "sourceHash": "d00e58b5e0c06c365305abd30dc715c6647ad71a3bead7ea1d2ad1717a0c1e82",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[Enhancing live video by leveraging TrueDepth camera data](enhancing-live-video-by-leveraging-truedepth-camera-data.md)",
+      "ko": "[Enhancing live video by leveraging TrueDepth camera data](enhancing-live-video-by-leveraging-truedepth-camera-data.md)",
+      "sourceHash": "733dc744573713a7bf843f76bc64e68d73a15e696541087532a6da1ddbe3bc82",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Apply your own background to a live capture feed streamed from the front-facing TrueDepth camera.",
+      "ko": "전면 TrueDepth 카메라에서 스트리밍되는 라이브 캡처 피드에 사용자 배경을 적용합니다.",
+      "sourceHash": "b0c6a215b0b9465c59688232257a6f7a55c489d7127c9d15183d2d10c6bd490d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[class AVCaptureDepthDataOutput](avcapturedepthdataoutput.md)",
+      "ko": "[class AVCaptureDepthDataOutput](avcapturedepthdataoutput.md)",
+      "sourceHash": "e28d36ab9d526bf8ac755b31bd4da2ac4af079b5a4cacfc8494173b1dc9da47f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "A capture output that records scene depth information on compatible camera devices.",
+      "ko": "호환되는 카메라 장치에서 장면 깊이 정보를 기록하는 캡처 출력입니다.",
+      "sourceHash": "0453a5631b0ff0d91b96fb6831be0100c29c3fa7d8d3053245d263a6dacfd799",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[class AVDepthData](avdepthdata.md)",
+      "ko": "[class AVDepthData](avdepthdata.md)",
+      "sourceHash": "35f30a606949e292d7106686c28e096e9f25b5a9014837a1b3519a9a914a8619",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "A container for per-pixel distance or disparity information captured by compatible camera devices.",
+      "ko": "호환되는 카메라 장치가 캡처한 픽셀 단위 거리 또는 시차 정보의 컨테이너입니다.",
+      "sourceHash": "d22377593fb915a25c44bbb11d247d30c0990f79e85ad528ea36d4184a70cc85",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[class AVCameraCalibrationData](avcameracalibrationdata.md)",
+      "ko": "[class AVCameraCalibrationData](avcameracalibrationdata.md)",
+      "sourceHash": "83dd946421068fbc3367efd61c347c52559f36c49e6398b87f2a8ce9d6bc22de",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "Information about the camera characteristics used to capture images and depth data.",
+      "ko": "이미지와 깊이 데이터 캡처에 사용되는 카메라 특성에 대한 정보입니다.",
+      "sourceHash": "272c0a7155acb7465debca53114c20bb6f8ba7e2b18c3a26e862a3c11d27cda7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0044:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/capturing-photos-with-depth)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/capturing-photos-with-depth)*",
+      "sourceHash": "243292a57195bed0fb40baafbbbc014b3d9480f0c7d4d511b07d336e622d4fd3",
+      "status": "preserved"
+    }
+  ]
+}

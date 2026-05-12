@@ -1,0 +1,211 @@
+{
+  "docId": "documentation/AVFoundation/avassetresourceloadingcontentinformationrequest/isentirelengthavailableondemand.md",
+  "title": "isEntireLengthAvailableOnDemand",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetresourceloadingcontentinformationrequest/isentirelengthavailableondemand",
+  "segments": [
+    {
+      "id": "seg:heading:isentirelengthavailableondemand:0000:0001",
+      "source": "isEntireLengthAvailableOnDemand",
+      "ko": "isEntireLengthAvailableOnDemand",
+      "sourceHash": "cbbd3b618c68c712adfa744d0b4d327d05ebe3b0305b8d018af40d97e5ec99df",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:isentirelengthavailableondemand:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:isentirelengthavailableondemand:0002:0001",
+      "source": "A Boolean value that indicates whether asset data loading can expect data immediately.",
+      "ko": "에셋 데이터 로딩이 즉시 데이터를 기대할 수 있는지 나타내는 부울 값입니다.",
+      "sourceHash": "2a5915bf67dc49d5884d1eb7fbbf05cbada017c1438fcf6ca15791a4e79fc9de",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:isentirelengthavailableondemand:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isentirelengthavailableondemand:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isentirelengthavailableondemand:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isentirelengthavailableondemand:0004:0003",
+      "source": "Mac Catalyst 16.0+",
+      "ko": "Mac Catalyst 16.0+",
+      "sourceHash": "87ecab2e4ea7b5b949ac3608f01726f8e88b11cb3d4b8233535e965e0f50886b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isentirelengthavailableondemand:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isentirelengthavailableondemand:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isentirelengthavailableondemand:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar isEntireLengthAvailableOnDemand: Bool { get set }\n```",
+      "ko": "```swift\nvar isEntireLengthAvailableOnDemand: Bool { get set }\n```",
+      "sourceHash": "5812bf91ac47a8b3a686c65d6024e179aecd63e3144501b0a72ef05c8bf977e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Before you finish loading an [`AVAssetResourceLoadingRequest`](avassetresourceloadingrequest.md), if its [`contentInformationRequest`](avassetresourceloadingrequest/contentinformationrequest.md) isn’t `nil`, set the value to [`true`](https://developer.apple.com/documentation/Swift/true) to indicate that all asset data is available.",
+      "ko": "[`AVAssetResourceLoadingRequest`](avassetresourceloadingrequest.md)를 로딩 완료하기 전에, 해당 [`contentInformationRequest`](avassetresourceloadingrequest/contentinformationrequest.md)가 `nil`이 아니면 모든 에셋 데이터가 사용 가능함을 나타내도록 값을 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정합니다.",
+      "sourceHash": "f75baece3037201f30acc912095193b078512b4f8a78566e117a3aa4c2f91d78",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "This may be [`true`](https://developer.apple.com/documentation/Swift/true) because the data is fully cached, or because the custom URL scheme ultimately refers to files on local storage, which allows for significant data flow optimizations.",
+      "ko": "이는 데이터가 완전히 캐시되어 있거나, 사용자 지정 URL 스킴이 최종적으로 로컬 저장소의 파일을 참조하기 때문에 큰 데이터 흐름 최적화가 가능하므로 [`true`](https://developer.apple.com/documentation/Swift/true)일 수 있습니다.",
+      "sourceHash": "38e18b75019c722773d99794dc020db37666463b6272b611e3eca11836941663",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "For backward compatibility, this property defaults to [`false`](https://developer.apple.com/documentation/Swift/false).",
+      "ko": "역호환성을 위해 이 속성의 기본값은 [`false`](https://developer.apple.com/documentation/Swift/false)입니다.",
+      "sourceHash": "e406436b9abb8421c2f4b390fda84eac6f27e4e0586e1440f3ddab9eb390b314",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var allowedContentTypes: [String]?](avassetresourceloadingcontentinformationrequest/allowedcontenttypes.md)",
+      "ko": "[var allowedContentTypes: [String]?](avassetwriter/metadata.md)",
+      "sourceHash": "de54a2a53423b209f3a5f80bf8fe5c0f871710e3e4c709b778ac5cafeb613415",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "The types of data that are accepted as a valid response for the requested resource.",
+      "ko": "요청한 리소스에 대한 유효한 응답으로 허용되는 데이터 유형입니다.",
+      "sourceHash": "3a0523d8489d3f7a6962e001a80d2888610b0bea6959b8fef27f2c065e327933",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var contentType: String?](avassetresourceloadingcontentinformationrequest/contenttype.md)",
+      "ko": "[var contentType: String?](avassetresourceloadingcontentinformationrequest/contenttype.md)",
+      "sourceHash": "42ea8e323a1eb9772d121387095d7f1aa2854fd2bbd8bb51d415790ac6079d83",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "The UTI that specifies the type of data contained by the requested resource.",
+      "ko": "요청한 리소스가 포함하는 데이터 유형을 지정하는 UTI입니다.",
+      "sourceHash": "e47ea6b8160b609dccab4472330fd499c2759e69a67a3eef2769a4dbc331a85a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var contentLength: Int64](avassetresourceloadingcontentinformationrequest/contentlength.md)",
+      "ko": "[var contentLength: Int64](avassetresourceloadingcontentinformationrequest/contentlength.md)",
+      "sourceHash": "5a3fb3c3492d73f98cd9fa39183808ad7dea8e19b1eda628103b3f24404ddf53",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The length, in bytes, of the requested resource.",
+      "ko": "요청한 리소스의 길이를 바이트 단위로 나타낸 값입니다.",
+      "sourceHash": "77b44c19a7f963dbc559201f891f6130aa1c988dd2adc81dc689eff3249266a4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[var isByteRangeAccessSupported: Bool](avassetresourceloadingcontentinformationrequest/isbyterangeaccesssupported.md)",
+      "ko": "[var isByteRangeAccessSupported: Bool](avassetresourceloadingcontentinformationrequest/isbyterangeaccesssupported.md)",
+      "sourceHash": "a9216d26a774d885fc03171be9632ab324a25eda3ed9e22e8be3f9075c95338c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "A Boolean value that indicates whether random access to arbitrary ranges of bytes of the resource is supported.",
+      "ko": "리소스의 임의 바이트 범위에 대한 임의 접근이 지원되는지 나타내는 부울 값입니다.",
+      "sourceHash": "863c870395f1fc9f2a70e515aba4b9e6451013ace643afc22849f603b1ffdb09",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[var renewalDate: Date?](avassetresourceloadingcontentinformationrequest/renewaldate.md)",
+      "ko": "[var renewalDate: Date?](avassetresourceloadingcontentinformationrequest/renewaldate.md)",
+      "sourceHash": "7ef6232c5af776598262df391d19830baf2a7b8098a1d621e13760d98c786c55",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "The date at which a new resource loading request will be issued for resources that expire, if the media system still requires it.",
+      "ko": "미디어 시스템이 계속 필요로 할 경우 만료되는 리소스에 대해 새 리소스 로딩 요청이 발급되는 날짜입니다.",
+      "sourceHash": "5b892cf4df999cb43f388e6878b537f188bbefb672ab1c9b6483cfa765135072",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0021:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetresourceloadingcontentinformationrequest/isentirelengthavailableondemand)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetresourceloadingcontentinformationrequest/isentirelengthavailableondemand)*",
+      "sourceHash": "8e6259617fecf86e6312be9708cfcf5a3939d09d97a4f8b6f46dbe2937f7048a",
+      "status": "preserved"
+    }
+  ]
+}

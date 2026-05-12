@@ -1,0 +1,309 @@
+{
+  "docId": "documentation/Accelerate/bnnsactivationfunction/rectifiedlinear.md",
+  "title": "rectifiedLinear",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsactivationfunction/rectifiedlinear",
+  "segments": [
+    {
+      "id": "seg:heading:rectifiedlinear:0000:0001",
+      "source": "rectifiedLinear",
+      "ko": "rectifiedLinear",
+      "sourceHash": "43f8e1b6c94c6f3ae8cd0e47a33ec68919639ee31588f9e4ab12b3e97ee5449b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rectifiedlinear:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: property",
+      "ko": "**Framework**: Accelerate **Kind**: property",
+      "sourceHash": "212bd4766b05f535b78c985192a09764b9923e72d858ffc2b7fc8016b93be0af",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rectifiedlinear:0002:0001",
+      "source": "An activation function that returns its input when that is greater than or equal to zero, otherwise it returns zero.",
+      "ko": "입력이 0 이상이면 입력을 반환하고, 그렇지 않으면 0을 반환하는 활성화 함수입니다.",
+      "sourceHash": "0a874696e98e3eb00ba2a0b604c931e305e28d51cdc2d78286f9cc23eebe2fec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:rectifiedlinear:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:rectifiedlinear:0004:0001",
+      "source": "iOS 10.0+",
+      "ko": "iOS 10.0+",
+      "sourceHash": "15e2b63b966efd6cadb08b2da63ceeef2c0cd4d8cb66c4d5cdb143020e883acb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:rectifiedlinear:0004:0002",
+      "source": "iPadOS 10.0+",
+      "ko": "iPadOS 10.0+",
+      "sourceHash": "c3d62141271e1019e3bb1a762c72d79ee3522feb4faafb39c46567ce18387f92",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:rectifiedlinear:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rectifiedlinear:0004:0004",
+      "source": "macOS 10.12+",
+      "ko": "macOS 10.12+",
+      "sourceHash": "51bf670c7a7e82316fce5cadc625588deed5e08ff14f452868ac8417f95357a7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:rectifiedlinear:0004:0005",
+      "source": "tvOS 10.0+",
+      "ko": "tvOS 10.0+",
+      "sourceHash": "d1a7eced7578f36895aaf3e63b04e8fb117f734cbd59d4226a2f188b5f7d2e8f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:rectifiedlinear:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rectifiedlinear:0004:0007",
+      "source": "watchOS 3.0+",
+      "ko": "watchOS 3.0+",
+      "sourceHash": "f5065b96913eb5dd10311b6694d2b1cf9b615a8eb0e13c476b894add036272df",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstatic var rectifiedLinear: BNNSActivationFunction { get }\n```",
+      "ko": "```swift\nstatic var rectifiedLinear: BNNSActivationFunction { get }\n```",
+      "sourceHash": "924dbe6724e5232911a71731c16bcec6f0fbc38c37a6cdde2a4886fffa3f0db8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This constant defines an activation function that returns values using the following operation:",
+      "ko": "Solves the system of equations `A*X=B` or `A'*X=B`, depending on the value of `TransA`.",
+      "sourceHash": "9981aac84f6ad9e2a42f41769513eea80233d2b2808ab59f24c4a2b13e2051e2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0009:0001",
+      "source": "```c\n0 if x<0, and x if x>=0\n```",
+      "ko": "```c\n0 if x<0, and x if x>=0\n```",
+      "sourceHash": "155c1c99c453ae689c820e74bb511ee9c8daa005b82463bbe3a80eab18a0c9ec",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "The following illustrates the output that the activation function generates from inputs in the range `-10...10`:",
+      "ko": "다음은 입력 범위 `-10...10`에서 활성화 함수가 생성하는 출력을 보여줍니다.",
+      "sourceHash": "9bca4b75c81156f1d263859ebe5fcd52d395fb2ca463ef9d91a924fe2cb73a8a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "![Graph that shows input values for the activation function on horizontal axis and its output values on vertical axis. ](https://docs-assets.developer.apple.com/published/ac09c4df1ca2b7594664399eac737778/media-3394575%402x.png)",
+      "ko": "![Graph that shows input values for the activation function on horizontal axis and its output values on vertical axis. ](https://docs-assets.developer.apple.com/published/ac09c4df1ca2b7594664399eac737778/media-3394575%402x.png)",
+      "sourceHash": "810b3fc41d5b1f21b51e3ca609682d6728f93d811f03d829327547a882731524",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[static var abs: BNNSActivationFunction](bnnsactivationfunction/abs.md)",
+      "ko": "[static var abs: BNNSActivationFunction](bnnsactivationfunction/abs.md)",
+      "sourceHash": "ba38c0c10b1595159f44636fd13f785f60a3c65a54e676f3e1bc4b578c841e2a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "An activation function that returns the absolute value of its input.",
+      "ko": "입력의 절대값을 반환하는 활성화 함수입니다.",
+      "sourceHash": "0ba978e207cbf22e44d51070492dda26420e4cd68f8ddbf65ef102dc27b8a0a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[static var clamp: BNNSActivationFunction](bnnsactivationfunction/clamp.md)",
+      "ko": "[static var clamp: BNNSActivationFunction](bnnsactivationfunction/clamp.md)",
+      "sourceHash": "835714f145f3477b8e80ab77a446a9aeeb2cba3c9e1c0b96bc908c78fb1c0ef5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "An activation function that returns its input clamped to a specified range.",
+      "ko": "입력을 지정된 범위로 제한한 값을 반환하는 활성화 함수입니다.",
+      "sourceHash": "e062c6af5df2f644348b34691ce99c1e1f7ac3827be2dedf2edcc9040d755d6c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[static var identity: BNNSActivationFunction](bnnsactivationfunction/identity.md)",
+      "ko": "[static var identity: BNNSActivationFunction](bnnsactivationfunction/identity.md)",
+      "sourceHash": "13b932ad18cb6a5d1e524c414ff791a1a585c5bfcfe2630caeb6533fd4d71e84",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "An activation function that returns its input.",
+      "ko": "입력을 그대로 반환하는 활성화 함수입니다.",
+      "sourceHash": "1f9ec375bfb91887d715083616683f01e633eee8c794d08622561b9a8e4e935e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[static var integerLinearSaturate: BNNSActivationFunction](bnnsactivationfunction/integerlinearsaturate.md)",
+      "ko": "[static var integerLinearSaturate: BNNSActivationFunction](bnnsactivationfunction/integerlinearsaturate.md)",
+      "sourceHash": "373cb40569cb769b608247560c5be8a2b6378d4180cf84439b6c1f0c30fba76e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "An activation function that returns an arithmetic shift, preserving sign.",
+      "ko": "부호를 유지하는 산술 시프트를 반환하는 활성화 함수입니다.",
+      "sourceHash": "b32652c1ae240c31aec0e95cfe4598c5b2aef50f9df0e112b3675c7512c6609f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[static var integerLinearSaturatePerChannel: BNNSActivationFunction](bnnsactivationfunction/integerlinearsaturateperchannel.md)",
+      "ko": "[static var integerLinearSaturatePerChannel: BNNSActivationFunction](bnnsactivationfunction/integerlinearsaturateperchannel.md)",
+      "sourceHash": "620281ab8f326487b4fbdeae3e3d00b30c46f4bfd4a3f517b293fe08521e0694",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "An activation function that returns an arithmetic shift, preserving sign for each channel.",
+      "ko": "채널별로 부호를 유지하는 산술 시프트를 반환하는 활성화 함수입니다.",
+      "sourceHash": "e6ec06245ba4359abbfacebeb85e6c5c1418c4ce16a72e31d7003170f3145405",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[static var leakyRectifiedLinear: BNNSActivationFunction](bnnsactivationfunction/leakyrectifiedlinear.md)",
+      "ko": "[static var leakyRectifiedLinear: BNNSActivationFunction](bnnsactivationfunction/leakyrectifiedlinear.md)",
+      "sourceHash": "9ba8efc6dffb16a81dd13dc1edf1e9cac560ae2014b25da5769130659fb59644",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "An activation function that returns its input when that is greater than or equal to zero, otherwise it returns its input multiplied by a specified value.",
+      "ko": "입력이 0 이상이면 입력을 반환하고, 그렇지 않으면 지정한 값과 곱한 입력을 반환하는 활성화 함수입니다.",
+      "sourceHash": "7fe6148b2706f6acc4c7cd50a1f1f833e63682ec638bc5906421f38e12ede4bc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[static var linear: BNNSActivationFunction](bnnsactivationfunction/linear.md)",
+      "ko": "[static var linear: BNNSActivationFunction](bnnsactivationfunction/linear.md)",
+      "sourceHash": "9b1cba65bb811cb7eb650501124fab44e0a9f009439fe969a0c931e0d0e9d765",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "An activation function that returns its input multiplied by a specified value.",
+      "ko": "입력을 지정한 값과 곱해 반환하는 활성화 함수입니다.",
+      "sourceHash": "9fcf1ba8c7e393c52f663fd32ef050e857c7e0ccd5f9a3f68901bc8d78dbfe21",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[static var scaledTanh: BNNSActivationFunction](bnnsactivationfunction/scaledtanh.md)",
+      "ko": "[static var scaledTanh: BNNSActivationFunction](bnnsactivationfunction/scaledtanh.md)",
+      "sourceHash": "c0b354e63ca72af1be7fde7faec48e5dd5ab4bea208f6e03a3d3c4464507491f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "An activation function that returns the scaled hyperbolic tangent of its input.",
+      "ko": "입력의 스케일링된 하이퍼볼릭 탄젠트 값을 반환하는 활성화 함수입니다.",
+      "sourceHash": "57a01eb9b65a361ef589d502d6754d830a3b44c4930299cc90e996afa937a3b1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0029:0001",
+      "source": "[static var sigmoid: BNNSActivationFunction](bnnsactivationfunction/sigmoid.md)",
+      "ko": "[static var sigmoid: BNNSActivationFunction](bnnsactivationfunction/sigmoid.md)",
+      "sourceHash": "21d43d84424b1f532dd51a2da4bd9732f489d5a5f6cdee856b6fc47296904cbb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "An activation function that returns the sigmoid function of its input.",
+      "ko": "입력의 시그모이드 함수를 반환하는 활성화 함수입니다.",
+      "sourceHash": "e80c9b3b5939e19486768135d1bb741a296c42e61763aff21022039710840e32",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0031:0001",
+      "source": "[static var softmax: BNNSActivationFunction](bnnsactivationfunction/softmax.md)",
+      "ko": "[static var softmax: BNNSActivationFunction](bnnsactivationfunction/softmax.md)",
+      "sourceHash": "402cbc7ba2c8c3204b0f6e362415c4d7d8e54acae2d37af3831ded24b73d1f67",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0032:0001",
+      "source": "An activation function that returns the softmax function of its input.",
+      "ko": "입력의 softmax 함수를 반환하는 활성화 함수입니다.",
+      "sourceHash": "92bbe88b554008db47664ffeb765d846e4e060a709b13dab86ac10bea0b5cc41",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0033:0001",
+      "source": "[static var tanh: BNNSActivationFunction](bnnsactivationfunction/tanh.md)",
+      "ko": "[static var tanh: BNNSActivationFunction](bnnsactivationfunction/tanh.md)",
+      "sourceHash": "89db748e052ca67c70e82ee9d6fb15ad211fa94e0792f95b2a35f4ba78575765",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0034:0001",
+      "source": "An activation function that returns the hyperbolic tangent of its input.",
+      "ko": "입력의 하이퍼볼릭 탄젠트 값을 반환하는 활성화 함수입니다.",
+      "sourceHash": "12f6306f4cdf399b699b6adcd7ed16589fc6e398cd7fa9f667cbd39b05d05f92",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0035:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0036:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsactivationfunction/rectifiedlinear)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsactivationfunction/rectifiedlinear)*",
+      "sourceHash": "c550dd3578bb42e599e8ab6820c41f961c008ccd35abcfbf32e9e49d868ce7c6",
+      "status": "preserved"
+    }
+  ]
+}

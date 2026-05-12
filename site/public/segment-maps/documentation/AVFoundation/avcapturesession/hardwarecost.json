@@ -1,0 +1,183 @@
+{
+  "docId": "documentation/AVFoundation/avcapturesession/hardwarecost.md",
+  "title": "hardwareCost",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturesession/hardwarecost",
+  "segments": [
+    {
+      "id": "seg:heading:hardwarecost:0000:0001",
+      "source": "hardwareCost",
+      "ko": "hardwareCost",
+      "sourceHash": "2bac707194dc7345c667294d0eed3ff83c78264a62e6e29f6a5c4a7a767788f4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:hardwarecost:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:hardwarecost:0002:0001",
+      "source": "A value that indicates the percentage of the session’s available hardware budget in use.",
+      "ko": "세션의 사용 가능한 하드웨어 예산 중 사용 중인 비율을 나타내는 값입니다.",
+      "sourceHash": "7d19b2a805541b795ad62a22f18663646bcbb7b224c9dad5dc155c547ab87a61",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:hardwarecost:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:hardwarecost:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:hardwarecost:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:hardwarecost:0004:0003",
+      "source": "Mac Catalyst 16.0+",
+      "ko": "Mac Catalyst 16.0+",
+      "sourceHash": "87ecab2e4ea7b5b949ac3608f01726f8e88b11cb3d4b8233535e965e0f50886b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:hardwarecost:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar hardwareCost: Float { get }\n```",
+      "ko": "```swift\nvar hardwareCost: Float { get }\n```",
+      "sourceHash": "29cf3fe715c57dea46c91f0b199b54603e73ede6c272bf54703523f641089d89",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This property provides a floating-point value from `0.0` to `1.0` that indicates the percentage of a capture session’s hardware that it currently uses.",
+      "ko": "이 속성은 캡처 세션이 현재 사용하는 하드웨어의 비율을 나타내는 `0.0`에서 `1.0` 사이의 부동 소수점 값을 제공합니다.",
+      "sourceHash": "ab7383e56c86e102a33edb7e8bf26c58e1073eb2cdd344b44592c0650a8d68d6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "When the value is greater than `1.0`, the capture session can’t run in its current configuration due to hardware constraints.",
+      "ko": "값이 `1.0`보다 크면 하드웨어 제약으로 인해 캡처 세션을 현재 구성에서 실행할 수 없습니다.",
+      "sourceHash": "863a8da023c54eeb9ccbe10529fad4dc33fd2ceac685ecd77573207a988a0040",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "Attempting to start the session while it’s in this state results in a runtime error.",
+      "ko": "이 상태에서 세션 시작을 시도하면 런타임 오류가 발생합니다.",
+      "sourceHash": "b29a1f47332d1943d4139dbb3a8f92e581e99df5808f5623ec4515bac0aadcb6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Factors that contribute to the hardware cost include:",
+      "ko": "하드웨어 비용에 기여하는 요인은 다음과 같습니다:",
+      "sourceHash": "bd1654e7ae81e3318206f7c60e8b476f1b54f0a6465f1a538fa9b0916e0efd66",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0010:0001",
+      "source": "The active formats of the source devices. Some formats use the full sensor (4:3) and others a crop (16:9). Cropped formats require lower hardware bandwidth, and therefore lower the cost.",
+      "ko": "소스 디바이스의 활성 포맷입니다. 일부 포맷은 전체 센서(4:3)를 사용하고, 일부는 크롭(16:9)됩니다. 크롭 포맷은 필요한 하드웨어 대역폭이 낮아 비용이 낮아집니다.",
+      "sourceHash": "4ee23f9f988f1a165e5f9b29a6e3cb7c11c693c91a0a1c452ac127168bfb961f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0010:0002",
+      "source": "The maximum frame rate of the source devices’ active formats. The hardware cost increases when using high frame rates.",
+      "ko": "소스 디바이스 활성 포맷의 최대 프레임 속도입니다. 높은 프레임 속도를 사용할수록 하드웨어 비용이 증가합니다.",
+      "sourceHash": "e63d470b7e4b0acee7e6706b0ee8f8f4fd7d19281d13902cea9bd3655d15b569",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0010:0003",
+      "source": "Whether the source devices uses binned formats. Binned formats require substantially less hardware bandwidth, and therefore result in a lower cost.",
+      "ko": "소스 디바이스가 비닝 포맷을 사용하는지 여부입니다. 비닝 포맷은 하드웨어 대역폭을 크게 덜 필요로 하므로 비용이 낮아집니다.",
+      "sourceHash": "1bf9e95954dd334f1e07a47fa1fe7d73523624502b002c8815f5d3e4eb095704",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0010:0004",
+      "source": "The number of sources configured to deliver streaming disparity and depth using [`AVCaptureDepthDataOutput`](avcapturedepthdataoutput.md). The higher the number of cameras configured to produce depth, the higher the cost.",
+      "ko": "[`AVCaptureDepthDataOutput`](avcapturedepthdataoutput.md)을 사용해 스트리밍 시차와 깊이 정보를 전달하도록 구성된 소스 수입니다. 깊이를 생성하도록 구성된 카메라 수가 많을수록 비용이 높아집니다.",
+      "sourceHash": "ae68c1eb0c9c1b1801483e53e1f7f0b4c9938f02aaa89ef8624dc5282c7c08c3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "To reduce the hardware cost, consider picking a sensor-cropped or binned [`activeFormat`](avcapturedevice/activeformat.md).",
+      "ko": "하드웨어 비용을 줄이려면 센서 크롭 또는 비닝된 [`activeFormat`](avcapturedevice/activeformat.md)을 선택하는 방안을 고려합니다.",
+      "sourceHash": "15fddea207904b10a907392c46349aa4444774151a0278579be2f718748d8b71",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "You may also use a device input’s [`videoMinFrameDurationOverride`](avcapturedeviceinput/videominframedurationoverride.md) property to artificially limit the maximum frame rate of a source device to a lower value.",
+      "ko": "또한 디바이스 입력의 [`videoMinFrameDurationOverride`](avcapturedeviceinput/videominframedurationoverride.md) 속성을 사용하여 소스 디바이스의 최대 프레임 속도를 더 낮은 값으로 인위적으로 제한할 수 있습니다.",
+      "sourceHash": "19a95a1bd0b831090d1e346a998c2ce6ae71d40e1efdd8a1778cd1bd03c6184a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0003",
+      "source": "By doing so, you only pay the hardware cost for the maximum frame rate you intend to use.",
+      "ko": "이렇게 하면 사용하려는 최대 프레임 속도에 해당하는 하드웨어 비용만 적용됩니다.",
+      "sourceHash": "b13656a0ab4b69f0b311e47cfadeb04d739a0a0803e221f8d17d21bfa423164a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0001",
+      "source": "**Note**: [`AVCaptureSession`](avcapturesession.md) only computes a nonzero hardware cost when you add multiple [`AVCaptureVideoDataOutput`](avcapturevideodataoutput.md) objects to the session, or an [`AVCaptureMovieFileOutput`](avcapturemoviefileoutput.md) instance and one or more instances of [`AVCaptureVideoDataOutput`](avcapturevideodataoutput.md).",
+      "ko": "**참고**: [`AVCaptureSession`](avcapturesession.md)은 세션에 여러 개의 [`AVCaptureVideoDataOutput`](avcapturevideodataoutput.md) 객체를 추가한 경우, 또는 [`AVCaptureMovieFileOutput`](avcapturemoviefileoutput.md) 인스턴스와 하나 이상의 [`AVCaptureVideoDataOutput`](avcapturevideodataoutput.md) 인스턴스를 함께 추가한 경우에만 0이 아닌 하드웨어 비용을 계산합니다.",
+      "sourceHash": "093b2be3efae0106054c255473a3390f44364404313262fd0860ebf13538d755",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:discussion:0013:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesession/hardwarecost)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesession/hardwarecost)*",
+      "sourceHash": "d658d9b13efb1bd276ffdcee5f69055cb424474b57cd3740e410f7f618daf119",
+      "status": "preserved"
+    }
+  ]
+}

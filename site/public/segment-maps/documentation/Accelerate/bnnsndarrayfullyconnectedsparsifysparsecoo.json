@@ -1,0 +1,407 @@
+{
+  "docId": "documentation/Accelerate/bnnsndarrayfullyconnectedsparsifysparsecoo.md",
+  "title": "BNNSNDArrayFullyConnectedSparsifySparseCOO(:::::::::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsndarrayfullyconnectedsparsifysparsecoo",
+  "segments": [
+    {
+      "id": "seg:heading:bnnsndarrayfullyconnectedsparsifysparsecoo:0000:0001",
+      "source": "BNNSNDArrayFullyConnectedSparsifySparseCOO(_:_:_:_:_:_:_:_:_:)",
+      "ko": "BNNSNDArrayFullyConnectedSparsifySparseCOO(_:_:_:_:_:_:_:_:_:)",
+      "sourceHash": "00d1069a1508c47f6d9425cfc95cb5a9ab09ab929271bb1b741467a50f0f6138",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnsndarrayfullyconnectedsparsifysparsecoo:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: func",
+      "ko": "**Framework**: Accelerate **Kind**: func",
+      "sourceHash": "92505afed2b9832f88ee8e8741948f4ea109b670dc30717430f0006e8f343391",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnsndarrayfullyconnectedsparsifysparsecoo:0002:0001",
+      "source": "Converts a sparse tensor from the standardized coordinate list (COO) layout to a device-specific sparse layout that BNNS fully connected layers use.",
+      "ko": "표준 좌표 목록(COO) 레이아웃에서 BNNS 완전 연결 계층이 사용하는 기기별 희소 레이아웃으로 희소 텐서를 변환합니다.",
+      "sourceHash": "a0dcee27741d8cbe8faf6bfcc261503bfa847c563df9cf980537dec12febaccb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnsndarrayfullyconnectedsparsifysparsecoo:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsndarrayfullyconnectedsparsifysparsecoo:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsndarrayfullyconnectedsparsifysparsecoo:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsndarrayfullyconnectedsparsifysparsecoo:0004:0003",
+      "source": "Mac Catalyst 16.0+",
+      "ko": "Mac Catalyst 16.0+",
+      "sourceHash": "87ecab2e4ea7b5b949ac3608f01726f8e88b11cb3d4b8233535e965e0f50886b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsndarrayfullyconnectedsparsifysparsecoo:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsndarrayfullyconnectedsparsifysparsecoo:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsndarrayfullyconnectedsparsifysparsecoo:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsndarrayfullyconnectedsparsifysparsecoo:0004:0007",
+      "source": "watchOS 9.0+",
+      "ko": "watchOS 9.0+",
+      "sourceHash": "74f54147ec06c7528917e10d68b6a402263ae2503dac544ef616ac2a86563097",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc BNNSNDArrayFullyConnectedSparsifySparseCOO(_ in_dense_shape: UnsafePointer<BNNSNDArrayDescriptor>, _ in_indices: UnsafePointer<BNNSNDArrayDescriptor>, _ in_values: UnsafePointer<BNNSNDArrayDescriptor>, _ out: UnsafeMutablePointer<BNNSNDArrayDescriptor>, _ sparse_params: UnsafePointer<BNNSSparsityParameters>?, _ batch_size: Int, _ workspace: UnsafeMutableRawPointer?, _ workspace_size: Int, _ filter_params: UnsafePointer<BNNSFilterParameters>?) -> Int32\n```",
+      "ko": "```swift\nfunc BNNSNDArrayFullyConnectedSparsifySparseCOO(_ in_dense_shape: UnsafePointer<BNNSNDArrayDescriptor>, _ in_indices: UnsafePointer<BNNSNDArrayDescriptor>, _ in_values: UnsafePointer<BNNSNDArrayDescriptor>, _ out: UnsafeMutablePointer<BNNSNDArrayDescriptor>, _ sparse_params: UnsafePointer<BNNSSparsityParameters>?, _ batch_size: Int, _ workspace: UnsafeMutableRawPointer?, _ workspace_size: Int, _ filter_params: UnsafePointer<BNNSFilterParameters>?) -> Int32\n```",
+      "sourceHash": "37dfb780afaffed261b54ee7e26ab641f23defacf0f826ea16a072f0594dd170",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "The growing energy and performance costs of deep learning are driving its design towards more efficient models to minimize memory footprint and computational overhead.",
+      "ko": "딥러닝의 에너지 및 성능 비용이 증가함에 따라 메모리 사용량과 계산 오버헤드를 최소화하기 위해 더 효율적인 모델 설계가 가속화되고 있습니다.",
+      "sourceHash": "5615af0317f3a62caf1cef44b0b6f85c46ecdec3e02234fba4cdcb8d4c28d074",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Sparsity is a widely used approach to deliver a significant reduction in model size, and to corresponding gains in computational, storage, and energy efficiency, without significant loss of accuracy.",
+      "ko": "희소성은 모델 크기를 크게 줄이면서 정확도를 크게 손실하지 않고 계산, 저장, 에너지 효율을 높이는 널리 사용되는 방식입니다.",
+      "sourceHash": "8cf7fb4263b3c7f9f32dfc1c3b7a8bf8164f16afc59ab467a4325e3a2b98d50f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Pruning is a fundamental technique that’s used to make parameters, such as weights, sparse.",
+      "ko": "Pruning은 가중치와 같은 매개변수를 희소하게 만드는 기본 기법입니다.",
+      "sourceHash": "3c2c803dba2445cfed421f89747fa84fc56277ac6f988f30b34fdc53463ab0b0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "Pruning a parameter involves setting some of its values to zero and it’s only the nonzero values that are stored and participate in inference.",
+      "ko": "파라미터를 가지치기하면 일부 값을 0으로 설정하며, 0이 아닌 값만 저장되어 추론에 참여합니다.",
+      "sourceHash": "120049bbd1bf7355bb3952df2b04596f3b739bb1e7d19b75dca9e131908839b4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Frameworks that sparsify parameters prune values based on their magnitude and location.",
+      "ko": "매개변수 희소화 프레임워크는 값의 크기와 위치를 기반으로 값을 가지치기합니다.",
+      "sourceHash": "a69a0f5186700ecef3b220c38733bea2c12dcdc27a3debbdbb0bfc5715159571",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "To gain the greatest improvement in performance, chunk pruned values together, to allow the CPU to skip reading an entire tile.",
+      "ko": "성능 향상을 최대화하려면 가지치기한 값을 청크로 묶어 CPU가 전체 타일을 건너뛰어 읽도록 해야 합니다.",
+      "sourceHash": "b6459610486aa090927240cf61af8299600aab151ccb0f1aa31ee700aa96a84f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "BNNS doesn’t directly support the standard sparse layouts coordinate list (COO) or compressed sparse row (CSR).",
+      "ko": "BNNS는 표준 희소 레이아웃인 좌표 목록(COO)이나 압축 희소 행(CSR) 형식을 직접 지원하지 않습니다.",
+      "sourceHash": "d10022ec729bb54b5c7caf4c34ce050729290e42ba75a533605962eb6da34905",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "Instead, BNNS provides functions that convert COO and CSR data to an optimized, opaque layout that you use with the existing machine learning primitives such as fully connected.",
+      "ko": "대신 BNNS는 완전 연결과 같은 기존 머신러닝 프리미티브에서 사용할 수 있도록 COO 및 CSR 데이터를 최적화된 불투명 레이아웃으로 변환하는 함수를 제공합니다.",
+      "sourceHash": "13f76b98338dce8e373d375a12b059ef34186c0481e573d6c4ad1399dfb2df7e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0001",
+      "source": "For example, the following diagonal, single-precision matrix requires 1024 bytes of storage:",
+      "ko": "```swift\n 1.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  2.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  3.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  4.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  5.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  6.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  7.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  8.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  9.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 10.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 11.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 12.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 13.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 14.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 15.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 16.0\n```",
+      "sourceHash": "40c83210dd893846c59c81e28ce7b9206a512ee98905f4cd7e239a207429bbe5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0013:0001",
+      "source": "```swift\n 1.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  2.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  3.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  4.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  5.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  6.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  7.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  8.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  9.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 10.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 11.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 12.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 13.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 14.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 15.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 16.0\n```",
+      "ko": "```swift\n 1.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  2.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  3.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  4.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  5.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  6.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  7.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  8.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  9.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 10.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 11.0,  0.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 12.0,  0.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 13.0,  0.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 14.0,  0.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 15.0,  0.0\n 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, 16.0\n```",
+      "sourceHash": "4e38f1d48cf85d35846e0a5d623ac353d24f475c36d8dc0d726b629fff31a2f1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0001",
+      "source": "You can represent the same values in COO format as three arrays: the nonzero values, the column indices, and the row indices.",
+      "ko": "동일한 값을 COO 형식으로는 비영(0이 아닌) 값 배열, 열 인덱스 배열, 행 인덱스 배열의 세 배열로 표현할 수 있습니다.",
+      "sourceHash": "82fd7c1b41b8e6d8268fcad8d32f1ee7273a5fe6c302853a903004231735fba2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0002",
+      "source": "Note that BNNS requires interleaved column and row indices.",
+      "ko": "BNNS는 열 인덱스와 행 인덱스가 교차된 형태를 요구합니다.",
+      "sourceHash": "45c6af7fb0d8d8adb2bdb6bdef057e56cf0d4409c37d84e5f8c07f218e213781",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0015:0001",
+      "source": "```swift\nlet weightsData: [Float] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n\nlet columnIndices: [Int32] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\nlet rowIndices: [Int32]    = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nlet indices: [Int32] = zip(columnIndices, rowIndices).flatMap { [$0, $1] }\n        \nlet nnz = weightsData.count        \nvar inputWeights = BNNSNDArrayDescriptor.allocate(initializingFrom: weightsData,\n                                                  shape: .vector(nnz))\n```",
+      "ko": "```swift\nlet weightsData: [Float] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n\nlet columnIndices: [Int32] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\nlet rowIndices: [Int32]    = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nlet indices: [Int32] = zip(columnIndices, rowIndices).flatMap { [$0, $1] }\n        \nlet nnz = weightsData.count        \nvar inputWeights = BNNSNDArrayDescriptor.allocate(initializingFrom: weightsData,\n                                                  shape: .vector(nnz))\n```",
+      "sourceHash": "3cbf531d862e7b871849c9ce99bf4fe195e1061771387e392d0e68adbe61dfa2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0016:0001",
+      "source": "To convert the COO weights to the BNNS opaque format for fully connected, create array descriptors for the input weights shape and indices, and call [`BNNSNDArrayFullyConnectedSparsifySparseCOO(_:_:_:_:_:_:_:_:_:)`](bnnsndarrayfullyconnectedsparsifysparsecoo(_:_:_:_:_:_:_:_:_:).md).",
+      "ko": "완전 연결에 대해 COO 가중치를 BNNS opaque 형식으로 변환하려면 입력 가중치 모양과 인덱스의 배열 설명자를 생성한 뒤 [`BNNSNDArrayFullyConnectedSparsifySparseCOO(_:_:_:_:_:_:_:_:_:)`](bnnsndarrayfullyconnectedsparsifysparsecoo(_:_:_:_:_:_:_:_:_:).md)를 호출합니다.",
+      "sourceHash": "ced6954b7c45d0ca9bbb70e097479d1f2527470133f91e43710e3086d7506bbb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0017:0001",
+      "source": "```swift\nvar inputDenseShape = BNNSNDArrayDescriptor(dataType: BNNSDataType.float,\n                                            shape: .matrixRowMajor(16, 16))\nvar inputIndices = BNNSNDArrayDescriptor.allocate(initializingFrom: indices,\n                                                  shape: .matrixRowMajor(nnz, 2))\n\nvar sparsifiedWeights = BNNSNDArrayDescriptor()\n\nvar sparseParams = BNNSSparsityParameters()\nBNNSNDArrayFullyConnectedSparsifySparseCOO(&inputDenseShape,\n                                           &inputIndices,\n                                           &inputWeights,\n                                           &sparsifiedWeights,\n                                           &sparseParams,\n                                           1,\n                                           nil, nil)\n```",
+      "ko": "```swift\nvar inputDenseShape = BNNSNDArrayDescriptor(dataType: BNNSDataType.float,\n                                            shape: .matrixRowMajor(16, 16))\nvar inputIndices = BNNSNDArrayDescriptor.allocate(initializingFrom: indices,\n                                                  shape: .matrixRowMajor(nnz, 2))\n\nvar sparsifiedWeights = BNNSNDArrayDescriptor()\n\nvar sparseParams = BNNSSparsityParameters()\nBNNSNDArrayFullyConnectedSparsifySparseCOO(&inputDenseShape,\n                                           &inputIndices,\n                                           &inputWeights,\n                                           &sparsifiedWeights,\n                                           &sparseParams,\n                                           1,\n                                           nil, nil)\n```",
+      "sourceHash": "080bc2cab93ac5cbfea1f41149945c7fc974a73fb7f63b478b6429f3ff28726a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0018:0001",
+      "source": "On return, `sparsifiedWeights` contains the weights that you pass to [`BNNSLayerParametersFullyConnected`](bnnslayerparametersfullyconnected.md).",
+      "ko": "반환 시 `sparsifiedWeights`에는 [`BNNSLayerParametersFullyConnected`](bnnslayerparametersfullyconnected.md)에 전달할 가중치가 포함됩니다.",
+      "sourceHash": "5c8ea8936d480bd414edac9ddbab35001468b7fcff43f47c8d99dc266b6b0825",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0018:0002",
+      "source": "In this example, the data size of `sparsifiedWeights` is 144 bytes.",
+      "ko": "이 예제에서 `sparsifiedWeights`의 데이터 크기는 144 바이트입니다.",
+      "sourceHash": "ffea1d36af053229521d8b26eae9eec2b9a8547e68c866f9f95147445bd678db",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0019:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0020:0001",
+      "source": "`in_dense_shape`: An array descriptor that specifies the dense shape (that is, the size and layout) of the input array.",
+      "ko": "`in_dense_shape`: 입력 배열의 dense shape(즉 크기와 레이아웃)을 지정하는 배열 설명자입니다.",
+      "sourceHash": "14bae08887a3e192ec157ab1fc38d9baa3f01c654212d821eefe64bc7d33921b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0020:0002",
+      "source": "`in_indices`: A 2D array descriptor with the shape `[NNZ, rank]` that contains the interleaved indices of the nonzero input values. For row-major ordering, the even elements correspond to the column indices and the odd elements correspond to the row indices. For column-major ordering, the even elements correspond to the row indices and the odd elements correspond to the column indices.",
+      "ko": "`in_indices`: 입력 nonzero 값의 교차 인덱스를 포함하는 `[NNZ, rank]` 모양의 2D 배열 설명자입니다. 행 우선(row-major) 순서에서는 짝수 요소가 열 인덱스에, 홀수 요소가 행 인덱스에 해당합니다. 열 우선(column-major) 순서에서는 짝수 요소가 행 인덱스에, 홀수 요소가 열 인덱스에 해당합니다.",
+      "sourceHash": "f9e5e9bc65c168834104ee5caca46755a61fdf4f9517625a376e11bc9f55e2aa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0020:0003",
+      "source": "`in_values`: A 1D array descriptor with the shape `[NNZ]` that contains the nonzero input values.",
+      "ko": "`in_values`: nonzero 입력 값을 포함하는 `[NNZ]` 모양의 1D 배열 설명자입니다.",
+      "sourceHash": "5f96bb3f7556a02d17375b816ab113819dce6320d78469530cbb4bc6743ea2d4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0020:0004",
+      "source": "`out`: On return, an array descriptor that contains device optimized BNNS sparse fully connected weights.",
+      "ko": "`out`: 반환 시 장치 최적화된 BNNS sparse fully connected 가중치를 포함하는 배열 설명자입니다.",
+      "sourceHash": "62d433d4432356a84caee2004f4e7e4313a0f8cc5aba60572bb1de5d76cd8bfa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0020:0005",
+      "source": "`sparse_params`: An optional data structure that contains a hint to the sparsity pattern.",
+      "ko": "`sparse_params`: 희소성 패턴에 대한 힌트를 제공하는 선택적 데이터 구조입니다.",
+      "sourceHash": "be09a16caac18eb89263d56645b1cc35a13280940e3b571d62afadd63626426a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0020:0006",
+      "source": "`batch_size`: The expected batch size.",
+      "ko": "`batch_size`: 예상 배치 크기입니다.",
+      "sourceHash": "2a6f601c1c1e69069889180597feb274450afdf0f4a2682554e991a4071b3150",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0020:0007",
+      "source": "`workspace`: An optional pointer to scratch memory that’s at least twice the size of the dense input. Set to `nil` to specify that BNNS allocates and frees the scratch memory it requires.",
+      "ko": "`workspace`: dense 입력 크기의 최소 두 배 이상의 scratch memory를 가리키는 선택적 포인터입니다. `nil`로 설정하면 BNNS가 필요한 scratch memory를 할당하고 해제하도록 지정합니다.",
+      "sourceHash": "727e9a9e5f45fff0fb447cf497d39025e4ca5fa098d18f8f8129129a8cf9a8ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0020:0008",
+      "source": "`workspace_size`: The size, in bytes, of any scratch memory that you pass. If workspace is `nil`, this function ignores the `workspace_size` parameter.",
+      "ko": "`workspace_size`: 전달한 scratch memory의 크기를 바이트 단위로 지정합니다. `workspace`가 `nil`인 경우 이 함수는 `workspace_size` 매개변수를 무시합니다.",
+      "sourceHash": "f392b4974d5a586a39ab9d05a9408c20a34d383a0846fe55d185af8fa8a65383",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0020:0009",
+      "source": "`filter_params`: The runtime filter parameters.",
+      "ko": "`filter_params`: 런타임 필터 매개변수입니다.",
+      "sourceHash": "3c0dabbc12581ed2de55bd1a371d916887bd8cbd283bb5e01f24bac76014b42d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0021:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[func BNNSNDArrayGetDataSize(UnsafePointer<BNNSNDArrayDescriptor>) -> Int](bnnsndarraygetdatasize(_:).md)",
+      "ko": "[func BNNSNDArrayGetDataSize(UnsafePointer<BNNSNDArrayDescriptor>) -> Int](bnnsndarraygetdatasize(_:).md)",
+      "sourceHash": "d49f006c5f33b9b7a7e88ba6a81471114d990b35410561945178485c4da9196b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Returns the size, in bytes, that an array descriptor requires.",
+      "ko": "배열 설명자가 요구하는 크기를 바이트 단위로 반환합니다.",
+      "sourceHash": "615f7ca9a09b2a6baf737a5e94cd3519f8692f0792624adc7705b873c67e7c3b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[func BNNSNDArrayFullyConnectedSparsifySparseCSR(UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSSparsityParameters>?, Int, UnsafeMutableRawPointer?, Int, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnsndarrayfullyconnectedsparsifysparsecsr(_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSNDArrayFullyConnectedSparsifySparseCSR(UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSSparsityParameters>?, Int, UnsafeMutableRawPointer?, Int, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnsndarrayfullyconnectedsparsifysparsecsr(_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "36978431c54de804ba2498c5cd4b669b13c56447457d5bb34a90adad7eeac7b0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Converts a sparse tensor from the standardized compressed sparse row (CSR) layout to a device-specific sparse layout that BNNS fully connected layers use.",
+      "ko": "표준화된 압축 희소 행렬(CSR) 레이아웃의 희소 텐서를 BNNS fully connected 레이어가 사용하는 장치별 희소 레이아웃으로 변환합니다.",
+      "sourceHash": "7f25255d3f7667bd545955d31e90c1bcf3aa0eb3aab55a0e39225eae5ff2b248",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[static func sparsify(batchSize: Int, inputLayout: BNNS.SparseLayout, inputDenseShape: BNNSNDArrayDescriptor, inputValues: BNNSNDArrayDescriptor, output: inout BNNSNDArrayDescriptor, sparseParameters: BNNS.SparseParameters?, workspace: UnsafeMutableRawBufferPointer?, filterParameters: BNNSFilterParameters?) throws](bnns/fullyconnectedlayer/sparsify(batchsize:inputlayout:inputdenseshape:inputvalues:output:sparseparameters:workspace:filterparameters:).md)",
+      "ko": "[static func sparsify(batchSize: Int, inputLayout: BNNS.SparseLayout, inputDenseShape: BNNSNDArrayDescriptor, inputValues: BNNSNDArrayDescriptor, output: inout BNNSNDArrayDescriptor, sparseParameters: BNNS.SparseParameters?, workspace: UnsafeMutableRawBufferPointer?, filterParameters: BNNSFilterParameters?) throws](bnns/fullyconnectedlayer/sparsify(batchsize:inputlayout:inputdenseshape:inputvalues:output:sparseparameters:workspace:filterparameters:).md)",
+      "sourceHash": "529443d3ae454e2bbb210629948594704d3cbe8d247d233dfcf17b834bf82b2a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Converts a sparse tensor from a standardized sparse layout to a device-specific sparse layout that Fully Connected uses.",
+      "ko": "표준화된 희소 레이아웃의 희소 텐서를 Fully Connected가 사용하는 장치별 희소 레이아웃으로 변환합니다.",
+      "sourceHash": "f82a9c95e98b930899159a5210365a42c07a638a5e88d36afb5e97558fda4f16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[struct SparseParameters](bnns/sparseparameters.md)",
+      "ko": "[struct SparseParameters](bnns/sparseparameters.md)",
+      "sourceHash": "5c5ab4c4003ce38e1bfa934a0c47896de8779f661cae2c5a4efa7490d8709647",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "A data structure that provides a hint to the sparsity function.",
+      "ko": "sparsity 함수에 대한 힌트를 제공하는 데이터 구조입니다.",
+      "sourceHash": "1f2d97315fb71b269baa86aaa6b7988cecd0bfcef73ba65f28941387e5262140",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[BNNS.SparseLayout](bnns/sparselayout.md)",
+      "ko": "[BNNS.SparseLayout](bnns/sparselayout.md)",
+      "sourceHash": "e0ae12d3a98354951bd3a22f61452e52d73bc17c764bf88f0899e923f7e3a75e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Constants that specify standardized sparse layouts that BNNS can convert to opaque.",
+      "ko": "BNNS가 opaque로 변환할 수 있는 표준화된 희소 레이아웃을 지정하는 상수입니다.",
+      "sourceHash": "a8a00a554b8767613f30b2cbf2d6721ab6ea1c61a165d419675f7f425b5da607",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[BNNS.SparsityType](bnns/sparsitytype.md)",
+      "ko": "[BNNS.SparsityType](bnns/sparsitytype.md)",
+      "sourceHash": "605a02ef76772a9875088706137f9a721e1d1e6817947f29de95f850597d99cb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Constants that specify patterns in the sparsity.",
+      "ko": "sparsity의 패턴을 지정하는 상수입니다.",
+      "sourceHash": "9ad4b2a4c36a0248fbd4c03e96488fa32f36bcd6df974697ac540fd434634688",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[var BNNSSparsityTypeUnstructured: BNNSSparsityType](bnnssparsitytypeunstructured.md)",
+      "ko": "[var BNNSSparsityTypeUnstructured: BNNSSparsityType](bnnssparsitytypeunstructured.md)",
+      "sourceHash": "41de7c97862c500d3b9f12eced086109c35516f50fe69c490c96417a1f3cf23d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0035:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0036:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsndarrayfullyconnectedsparsifysparsecoo(_:_:_:_:_:_:_:_:_:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/bnnsndarrayfullyconnectedsparsifysparsecoo(_:_:_:_:_:_:_:_:_:))*",
+      "sourceHash": "ca9109e9b3100a0b4b47985928b5d7e733c3567b30a2c7da6378f6aad145826e",
+      "status": "machine_translated"
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "docId": "documentation/AVFoundation/avcapturesession/runtimeerrornotification.md",
+  "title": "runtimeErrorNotification",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturesession/runtimeerrornotification",
+  "segments": [
+    {
+      "id": "seg:heading:runtimeerrornotification:0000:0001",
+      "source": "runtimeErrorNotification",
+      "ko": "runtimeErrorNotification",
+      "sourceHash": "d514c8b968209f3fb4791a15578485ae00c04c57a76cf2da81b8bf32c404d82b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:runtimeerrornotification:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:runtimeerrornotification:0002:0001",
+      "source": "A notification the system posts when an error occurs during a capture session.",
+      "ko": "캡처 세션 중 오류가 발생할 때 시스템이 게시하는 알림입니다.",
+      "sourceHash": "54cb1a12c1aeecbd693f1ad172b00356938e61e360fe64cc934ae4b5e7572ca6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:runtimeerrornotification:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:runtimeerrornotification:0004:0001",
+      "source": "iOS 4.0+",
+      "ko": "iOS 4.0+",
+      "sourceHash": "0c0ed66d9f4133c5a709449f69be4759ac3625b24734b8390d2f7e23b33c3545",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:runtimeerrornotification:0004:0002",
+      "source": "iPadOS 4.0+",
+      "ko": "iPadOS 4.0+",
+      "sourceHash": "dfe042d2e3f40a7e917ced53f052a0d5f5ba8d69dfa62a3b59fb59de8ef49851",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:runtimeerrornotification:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:runtimeerrornotification:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:runtimeerrornotification:0004:0005",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:runtimeerrornotification:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass let runtimeErrorNotification: NSNotification.Name\n```",
+      "ko": "```swift\nclass let runtimeErrorNotification: NSNotification.Name\n```",
+      "sourceHash": "97014b3e55542f619046de06377178882558879431f7f93481175f99f663f4fc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Retrieve the underlying error from the notification’s user information dictionary using the key [`AVCaptureSessionErrorKey`](avcapturesessionerrorkey.md).",
+      "ko": "알림의 사용자 정보 사전에서 키 [`AVCaptureSessionErrorKey`](avcapturesessionerrorkey.md)를 사용해 기본 오류를 검색합니다.",
+      "sourceHash": "e25c71553ee8ec9335056be49889526b489cfa5702e4a766eee9db429b891134",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:user-info-keys:0010:0001",
+      "source": "User info keys",
+      "ko": "사용자 정보 키",
+      "sourceHash": "55e7be9572ab86757881543db5363f1b7a78207f4b7c63e95ead7fe225adaf85",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:user-info-keys:0011:0001",
+      "source": "[let AVCaptureSessionErrorKey: String](avcapturesessionerrorkey.md)",
+      "ko": "[let AVCaptureSessionErrorKey: String](avcapturesessionerrorkey.md)",
+      "sourceHash": "13aa91d68f13ff9ad71a4f61599ca1dd84774d7d64bd29448ed52bfe52e04fd9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:user-info-keys:0012:0001",
+      "source": "Key to retrieve the error object from a [`runtimeErrorNotification`](avcapturesession/runtimeerrornotification.md) user info dictionary.",
+      "ko": "[`runtimeErrorNotification`](avcapturesession/runtimeerrornotification.md) 사용자 정보 사전에서 오류 객체를 검색할 수 있는 키입니다.",
+      "sourceHash": "bd1dab381e1926b5b468ceffc00e6b5cd4ce34aa24d7a853a6af443816fe3909",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var isRunning: Bool](avcapturesession/isrunning.md)",
+      "ko": "[var isRunning: Bool](avcapturesession/isrunning.md)",
+      "sourceHash": "0fd6e72530f1a0c81156591adb544014fd3280726905dfec4a887b3c24011fb9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A Boolean value that indicates whether the capture session is in a running state.",
+      "ko": "캡처 세션이 실행 중인지 나타내는 Boolean 값입니다.",
+      "sourceHash": "9ca5fe0e8306ce19f1dfc4d4f205595d991d2f448dbf3ec8f8f2df9084349d14",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var isInterrupted: Bool](avcapturesession/isinterrupted.md)",
+      "ko": "[var isInterrupted: Bool](avcapturesession/isinterrupted.md)",
+      "sourceHash": "f2a7bfecb7f93b15a35706d19569c4ca480f458feaff7d9fbbea9c86221771f0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "A Boolean value that indicates whether the capture session is in an interrupted state.",
+      "ko": "캡처 세션이 중단 상태인지 나타내는 Boolean 값입니다.",
+      "sourceHash": "bae8a8a5515a0f16f177733e5cb632e453e514b49ba7591a675ccd3a4372be72",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[class let didStartRunningNotification: NSNotification.Name](avcapturesession/didstartrunningnotification.md)",
+      "ko": "[class let didStartRunningNotification: NSNotification.Name](avcapturesession/didstartrunningnotification.md)",
+      "sourceHash": "59897e0378df40793ab0975ba2558c6c4374f7919e7497f6c3cf0d88561e0bb1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A notification the system posts when a capture session starts.",
+      "ko": "캡처 세션이 시작될 때 시스템이 게시하는 알림입니다.",
+      "sourceHash": "db4e2eb5b71fbc2db9775d7baca3175357e414d46285af15e15999f5d459d9a5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[class let didStopRunningNotification: NSNotification.Name](avcapturesession/didstoprunningnotification.md)",
+      "ko": "[class let didStopRunningNotification: NSNotification.Name](avcapturesession/didstoprunningnotification.md)",
+      "sourceHash": "1295a572230d42b73cb474534e1421335a4e2d9785e7d5ef2713384451bc2f01",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "A notification the system posts when a capture session stops.",
+      "ko": "캡처 세션이 중지될 때 시스템이 게시하는 알림입니다.",
+      "sourceHash": "302021ae26b936d6f60c403dc7acbec2bb4215f097d3a6778f369bad6ea8196e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[class let wasInterruptedNotification: NSNotification.Name](avcapturesession/wasinterruptednotification.md)",
+      "ko": "[class let wasInterruptedNotification: NSNotification.Name](avcapturesession/wasinterruptednotification.md)",
+      "sourceHash": "a5b95aaaa7cc88bbe24e77b6c97d9532b302bb60ab32e776ff78d050dfb34a8f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "A notification the system posts when it interrupts a capture session.",
+      "ko": "캡처 세션이 중단될 때 시스템이 게시하는 알림입니다.",
+      "sourceHash": "15dcae62c7bf3ad585e37628ec3f0c57944517281af19450650e769396db766e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[class let interruptionEndedNotification: NSNotification.Name](avcapturesession/interruptionendednotification.md)",
+      "ko": "[class let interruptionEndedNotification: NSNotification.Name](avcapturesession/interruptionendednotification.md)",
+      "sourceHash": "461ac6b25c3d7ac226eb35008e3d9e84de297abb2f91abc6efaaddca4b220565",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "A notification the system posts when an interruption to a capture session finishes.",
+      "ko": "캡처 세션의 중단이 종료될 때 시스템이 게시하는 알림입니다.",
+      "sourceHash": "a87e0467eb19f44378f28ae3fd3867582e674e356a8891056166c86293991af7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0026:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesession/runtimeerrornotification)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesession/runtimeerrornotification)*",
+      "sourceHash": "25ef0ecbfd3cc0e4221006294a3eae6362a4303e9ee3bfa5ef4d510c61b75cbf",
+      "status": "preserved"
+    }
+  ]
+}

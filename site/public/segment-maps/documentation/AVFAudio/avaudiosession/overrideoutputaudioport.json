@@ -1,0 +1,253 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosession/overrideoutputaudioport.md",
+  "title": "overrideOutputAudioPort(:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosession/overrideoutputaudioport",
+  "segments": [
+    {
+      "id": "seg:heading:overrideoutputaudioport:0000:0001",
+      "source": "overrideOutputAudioPort(_:)",
+      "ko": "overrideOutputAudioPort(_:)",
+      "sourceHash": "4f0276421e66e08ce710e937b37f18993488883e9ef6c5030b3536dc43d4393d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overrideoutputaudioport:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: method",
+      "ko": "**Framework**: AVFAudio **Kind**: method",
+      "sourceHash": "9e980d3b5301173f9b270d0909000bbb41e1c6922361d4fa1df1df34f70dafc7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overrideoutputaudioport:0002:0001",
+      "source": "Temporarily changes the current audio route.",
+      "ko": "현재 오디오 경로를 일시적으로 변경합니다.",
+      "sourceHash": "fb5f9bdc035562ff7db27919b98247074ea794c1f434676382bcb685c37df9a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overrideoutputaudioport:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overrideoutputaudioport:0004:0001",
+      "source": "iOS 6.0+",
+      "ko": "iOS 6.0+",
+      "sourceHash": "3d4dd430bbebf24548d6073001d3b7ca25d38a35fb48c99fbca116f560f382fc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overrideoutputaudioport:0004:0002",
+      "source": "iPadOS 6.0+",
+      "ko": "iPadOS 6.0+",
+      "sourceHash": "92f0fefc8cc53859b925f1f60e72b8af1e1ccc88febb363e541aab64498551ae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overrideoutputaudioport:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overrideoutputaudioport:0004:0004",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overrideoutputaudioport:0004:0005",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overrideoutputaudioport:0004:0006",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc overrideOutputAudioPort(_ portOverride: AVAudioSession.PortOverride) throws\n```",
+      "ko": "```swift\nfunc overrideOutputAudioPort(_ portOverride: AVAudioSession.PortOverride) throws\n```",
+      "sourceHash": "21c55c3abc0a4e73b188a3b50459dc9c065dac162060295574c8c46e78ebce8b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "If your app uses the [`playAndRecord`](avaudiosession/category-swift.struct/playandrecord.md) category, calling this method with the [`AVAudioSession.PortOverride.speaker`](avaudiosession/portoverride/speaker.md) option causes the system to route audio to the built-in speaker and microphone regardless of other settings.",
+      "ko": "앱이 [`playAndRecord`](avaudiosession/category-swift.struct/playandrecord.md) 카테고리를 사용하는 경우, [`AVAudioSession.PortOverride.speaker`](avaudiosession/portoverride/speaker.md) 옵션으로 이 메서드를 호출하면 시스템은 다른 설정에 상관없이 오디오를 내장 스피커와 마이크로 라우팅합니다.",
+      "sourceHash": "40a3b532c9015b0df8a00251633c9c9333ab83b79abe2ff0acf944638963d41e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "This change remains in effect only until the current route changes or you call this method again with the [`AVAudioSession.PortOverride.none`](avaudiosession/portoverride/none.md) option.",
+      "ko": "이 변경은 현재 경로가 바뀌거나 [`AVAudioSession.PortOverride.none`](avaudiosession/portoverride/none.md) 옵션으로 이 메서드를 다시 호출할 때까지만 유지됩니다.",
+      "sourceHash": "83574ed51db02f4f84ced170742cf61911629a1c4fee116469fe73be0eda859f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "If you’d prefer to permanently enable this behavior, you should instead set the category’s [`defaultToSpeaker`](avaudiosession/categoryoptions-swift.struct/defaulttospeaker.md) option.",
+      "ko": "이 동작을 영구적으로 사용하려면 카테고리의 [`defaultToSpeaker`](avaudiosession/categoryoptions-swift.struct/defaulttospeaker.md) 옵션을 대신 설정해야 합니다.",
+      "sourceHash": "dbba4df6ad48e4673294cf2f33495cbf1171482935d17a3864659a28fb4ea4ab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "Setting this option routes to the speaker rather than the receiver if no other accessory such as headphones are in use.",
+      "ko": "이 옵션을 설정하면 헤드폰 등의 다른 액세서리가 사용되지 않을 때 수신기 대신 스피커로 라우팅됩니다.",
+      "sourceHash": "885aa3e6742ae3e7b1af028f06fdb6fcdee204559813a68fb9465123820328d5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0010:0001",
+      "source": "**Note**: The preferred method for routing audio to the speaker instead of the receiver for speakerphone functionality is through the use of the [`Media Player`](https://developer.apple.com/documentation/MediaPlayer) framework’s [`MPVolumeView`](https://developer.apple.com/documentation/MediaPlayer/MPVolumeView) class.",
+      "ko": "**참고**: 스피커폰 기능에서 오디오를 수신기 대신 스피커로 라우팅하려면 [`Media Player`](https://developer.apple.com/documentation/MediaPlayer) 프레임워크의 [`MPVolumeView`](https://developer.apple.com/documentation/MediaPlayer/MPVolumeView) 클래스를 사용하는 것이 바람직합니다.",
+      "sourceHash": "8ca77cf855618f88bcc754b46d4e78b90b68c7c179377207bed102392637a2b1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0011:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0012:0001",
+      "source": "`portOverride`: The override option for audio output. For a list of constants, see [`AVAudioSession.PortOverride`](avaudiosession/portoverride.md).",
+      "ko": "`portOverride`: 오디오 출력에 대한 오버라이드 옵션입니다. 상수 목록은 [`AVAudioSession.PortOverride`](avaudiosession/portoverride.md)에서 확인합니다.",
+      "sourceHash": "db173cd499d9daa5fe7723275e0b56d3c6ea06be7c986c4c377c9b2be89d509c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0013:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:data-types:0014:0001",
+      "source": "Data Types",
+      "ko": "데이터 유형",
+      "sourceHash": "3111c97240bfb242e90f47f63378d515b83e7f5a269e9cfd7cf10c05188eb40e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:data-types:0015:0001",
+      "source": "[AVAudioSession.PortOverride](avaudiosession/portoverride.md)",
+      "ko": "[AVAudioSession.PortOverride](avaudiosession/portoverride.md)",
+      "sourceHash": "97be01e2ff668e61771b141fc17409db54370a33af12a2b09f96a16cfaf2a362",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:data-types:0016:0001",
+      "source": "Constants for use with the [`overrideOutputAudioPort(_:)`](avaudiosession/overrideoutputaudioport(_:).md) method.",
+      "ko": "[`overrideOutputAudioPort(_:)`](avaudiosession/overrideoutputaudioport(_:).md) 메서드에 사용할 수 있는 상수입니다.",
+      "sourceHash": "99ecca4dc4478af256fcc3885be98e51423da3071323c705256215585f38de3d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0017:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var outputDataSources: [AVAudioSessionDataSourceDescription]?](avaudiosession/outputdatasources.md)",
+      "ko": "[var outputDataSources: [AVAudioSessionDataSourceDescription]?](avaudiosession/outputdatasources.md)",
+      "sourceHash": "f61cd55b9f3dbc6ece0631a083938d8b4b8a3d50519d53122e6d926e610aecc2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "An array of available output data sources for the current audio route.",
+      "ko": "현재 오디오 경로에서 사용할 수 있는 출력 데이터 소스의 배열입니다.",
+      "sourceHash": "9babe3b17d1d04594cd74edecbec66f37006635c145d7b6f5e8b3686d0923799",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[var outputDataSource: AVAudioSessionDataSourceDescription?](avaudiosession/outputdatasource.md)",
+      "ko": "[var outputDataSource: AVAudioSessionDataSourceDescription?](avaudiosession/outputdatasource.md)",
+      "sourceHash": "ac0dc9c219d1a8314f1c57daeca6fa7f232d7b5ac5a6fe8d2f5581a9d9581ccf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "The currently selected output data source.",
+      "ko": "현재 선택된 출력 데이터 소스입니다.",
+      "sourceHash": "24fc83ffeac045b89132a9cd8da45c169f8450c8b5826d8f4c50dc5f4213b79d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[func setOutputDataSource(AVAudioSessionDataSourceDescription?) throws](avaudiosession/setoutputdatasource(_:).md)",
+      "ko": "[func setOutputDataSource(AVAudioSessionDataSourceDescription?) throws](avaudiosession/setoutputdatasource(_:).md)",
+      "sourceHash": "9d755bc4bd711883609d048b799327a7ad618d17f77526616cbff8187fa9b508",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Sets the output data source for an audio session.",
+      "ko": "오디오 세션의 출력 데이터 소스를 설정합니다.",
+      "sourceHash": "2d850b9b3568a86b5342ba1e8da804c01f42e01663491c9d93c60772db99cb92",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[class AVAudioSessionDataSourceDescription](avaudiosessiondatasourcedescription.md)",
+      "ko": "[class AVAudioSessionDataSourceDescription](avaudiosessiondatasourcedescription.md)",
+      "sourceHash": "8397a8be61507e9927ce243bdc3119b6f7803494d9b88e8c189a3aa07ccb9a3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "An object that defines a data source for an audio input or output, giving information such as the source’s name, location, and orientation.",
+      "ko": "오디오 입력 또는 출력의 데이터 소스를 정의하며, 소스의 이름, 위치, 방향 등의 정보를 제공하는 객체입니다.",
+      "sourceHash": "495f903472d28c330c3e43afc583067262cd34fce4c218dfa97df19090a09538",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0026:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/overrideoutputaudioport(_:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfaudio/avaudiosession/overrideoutputaudioport(_:))*",
+      "sourceHash": "8ae0d70098e98c16c6c6ad81106c3a22ad032a60670519821a87abc5b9759991",
+      "status": "machine_translated"
+    }
+  ]
+}

@@ -1,0 +1,848 @@
+{
+  "docId": "documentation/AVFoundation/avassetexportsession.md",
+  "title": "AVAssetExportSession",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetexportsession",
+  "segments": [
+    {
+      "id": "seg:heading:avassetexportsession:0000:0001",
+      "source": "AVAssetExportSession",
+      "ko": "AVAssetExportSession",
+      "sourceHash": "7094bb11a1513251e4c90823e4877f12a881889dbfeeaaf79f851ca9f27d2d8a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avassetexportsession:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avassetexportsession:0002:0001",
+      "source": "An object that exports assets in a format that you specify using an export preset.",
+      "ko": "내보내기 프리셋을 사용해 지정한 형식으로 자산을 내보내는 개체입니다.",
+      "sourceHash": "d65aa2664d70c5f4b9a9f310c77605e06b249f8118b6e2600840a8ddc8b48e86",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avassetexportsession:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetexportsession:0004:0001",
+      "source": "iOS 4.0+",
+      "ko": "iOS 4.0+",
+      "sourceHash": "0c0ed66d9f4133c5a709449f69be4759ac3625b24734b8390d2f7e23b33c3545",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetexportsession:0004:0002",
+      "source": "iPadOS 4.0+",
+      "ko": "iPadOS 4.0+",
+      "sourceHash": "dfe042d2e3f40a7e917ced53f052a0d5f5ba8d69dfa62a3b59fb59de8ef49851",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetexportsession:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetexportsession:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetexportsession:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetexportsession:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAssetExportSession\n```",
+      "ko": "```swift\nclass AVAssetExportSession\n```",
+      "sourceHash": "6fa6b96af446847de7aa85bbe578c5664f2921cff8032cfda384b3bccf501276",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Exporting video to alternative formats](exporting-video-to-alternative-formats.md)",
+      "ko": "[Exporting video to alternative formats](exporting-video-to-alternative-formats.md)",
+      "sourceHash": "3b9dc8c444d99917fdd99beca5a5361970ed2c873a6e8f0ffea52d446f190ec6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0009:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "You configure this object to export an instance of [`AVAsset`](avasset.md) by setting an export preset, an output file type, and an output URL.",
+      "ko": "이 개체는 내보내기 프리셋, 출력 파일 형식 및 출력 URL을 설정하여 [`AVAsset`](avasset.md) 인스턴스를 내보내도록 구성합니다.",
+      "sourceHash": "2f0f04d3430f5e1855ceb041b16505c1a90f2ee8da654fb50856d0b48434a548",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0011:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-an-export-session:0012:0001",
+      "source": "Creating an export session",
+      "ko": "내보내기 세션 만들기",
+      "sourceHash": "ff256e587bb84336238967ec436cedaf7e20a4e7bd351768530d6141e5c95be4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-export-session:0013:0001",
+      "source": "[init?(asset: AVAsset, presetName: String)](avassetexportsession/init(asset:presetname:).md)",
+      "ko": "[init?(asset: AVAsset, presetName: String)](avassetexportsession/init(asset:presetname:).md)",
+      "sourceHash": "780956503f8d9fa324bd1c557cdbd995cad4ccb70f8222974b2e713fb8c19f2b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-an-export-session:0014:0001",
+      "source": "Creates an export session with a preset configuration.",
+      "ko": "프리셋 구성으로 내보내기 세션을 생성합니다.",
+      "sourceHash": "7ed4a94029e55793a8022917f27244ccae9e39c92599e7325b6a862249328774",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-export-session:0015:0001",
+      "source": "[Export presets](export-presets.md)",
+      "ko": "[Export presets](export-presets.md)",
+      "sourceHash": "62c05943d319fc8dd6d081edf3ca7fec54eaa14f0270e7ab7ddf7f0b424fc5d4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-an-export-session:0016:0001",
+      "source": "Configure an export session to output media in standard sizes and formats.",
+      "ko": "내보내기 세션을 구성하여 표준 크기 및 형식으로 미디어를 출력합니다.",
+      "sourceHash": "b0515b8c1f13c86400cce485038e30e18034be5a44e6de24a6d6c66e89edbc24",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:accessing-export-presets:0017:0001",
+      "source": "Accessing export presets",
+      "ko": "내보내기 프리셋 접근",
+      "sourceHash": "eeaa72815bc65d24fe1ade5219764ec7b1462c989f157d0bb09fdfe8a15002af",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-export-presets:0018:0001",
+      "source": "[var presetName: String](avassetexportsession/presetname.md)",
+      "ko": "[var presetName: String](avassetexportsession/presetname.md)",
+      "sourceHash": "8e8f94a49ca744f029b0a58dc9491b94d8262faae658b68911d313b6535420a5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-export-presets:0019:0001",
+      "source": "The name of the preset that the asset export session uses.",
+      "ko": "자산 내보내기 세션에서 사용하는 프리셋의 이름입니다.",
+      "sourceHash": "8518479b0bd883d41bd308523fe50e9d0e73eb0655ccc74e191a3c0a873c1ab0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-export-presets:0020:0001",
+      "source": "[func determineCompatibleFileTypes(completionHandler: ([AVFileType]) -> Void)](avassetexportsession/determinecompatiblefiletypes(completionhandler:).md)",
+      "ko": "[func determineCompatibleFileTypes(completionHandler: ([AVFileType]) -> Void)](avassetexportsession/determinecompatiblefiletypes(completionhandler:).md)",
+      "sourceHash": "314b404c65df5d8bece27fad4e81b7315c4daeb4b7d72767c0f0b6d92eafbcc3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:accessing-export-presets:0021:0001",
+      "source": "Determines the output file types an asset export session supports writing in its current configuration.",
+      "ko": "자산 내보내기 세션이 현재 구성에서 쓸 수 있는 출력 파일 형식을 결정합니다.",
+      "sourceHash": "d8e22e5f161dcd7c75ad387cd70f189c3db78cbd3f78bb9b55d879bf7feac8dc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-export-presets:0022:0001",
+      "source": "[class func allExportPresets() -> [String]](avassetexportsession/allexportpresets.md)",
+      "ko": "[class func allExportPresets() -> [String]](avassetexportsession/allexportpresets.md)",
+      "sourceHash": "52f1eb0ae8511ebd5000fd8f7bb3618bc65da1a384af60fe02cdeac0a248f4ef",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:accessing-export-presets:0023:0001",
+      "source": "Returns all available export preset names.",
+      "ko": "자산을 출력 파일 형식의 컨테이너로 내보낼 때 내보내기 프리셋의 호환성을 결정합니다.",
+      "sourceHash": "ac25ec4a364b861a1bd8e749a694830fe830ab723dcfe37a279108d0d3edf716",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-export-presets:0024:0001",
+      "source": "[class func determineCompatibility(ofExportPreset: String, with: AVAsset, outputFileType: AVFileType?, completionHandler: (Bool) -> Void)](avassetexportsession/determinecompatibility(ofexportpreset:with:outputfiletype:completionhandler:).md)",
+      "ko": "[class func determineCompatibility(ofExportPreset: String, with: AVAsset, outputFileType: AVFileType?, completionHandler: (Bool) -> Void)](avassetexportsession/determinecompatibility(ofexportpreset:with:outputfiletype:completionhandler:).md)",
+      "sourceHash": "40fb2f7fb3532355eda3da19933a200e31867580af92e286d8882d5ce0ee3fc2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:accessing-export-presets:0025:0001",
+      "source": "Determines an export preset’s compatibility to export the asset in a container of the output file type.",
+      "ko": "출력 파일 형식의 컨테이너에서 자산을 내보내기 위한 내보내기 프리셋의 호환성을 결정합니다.",
+      "sourceHash": "aed7e43422a24468205c74f32b1099947a99b9d9176c925ac67c5702df3fe83c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-export-presets:0026:0001",
+      "source": "[class func exportPresets(compatibleWith: AVAsset) -> [String]](avassetexportsession/exportpresets(compatiblewith:).md)",
+      "ko": "[class func exportPresets(compatibleWith: AVAsset) -> [String]](avassetexportsession/exportpresets(compatiblewith:).md)",
+      "sourceHash": "1441cfa7b64d8f45489fa987d405ed0bf915d4115f2eb26e7af1a813064df068",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:accessing-export-presets:0027:0001",
+      "source": "Returns compatible export presets for the asset.",
+      "ko": "자산에 대해 호환되는 내보내기 프리셋을 반환합니다.",
+      "sourceHash": "2e07ee2c8045aa16e39fe4cb50002e90866d776d328bcac7a5cb64a5eaf3ef4b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-output:0028:0001",
+      "source": "Configuring output",
+      "ko": "출력 구성",
+      "sourceHash": "cc347776792b7dde756ee604528357a3758b2ad20922d5ecb8d68d5ed3d84732",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0029:0001",
+      "source": "[var outputURL: URL?](avassetexportsession/outputurl.md)",
+      "ko": "[var outputURL: URL?](avassetexportsession/outputurl.md)",
+      "sourceHash": "38d7040379daae67fb2e1c8fe2f4132623649891968cda27ecfea5c3b0fb3628",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0030:0001",
+      "source": "A URL where an asset export session writes its output.",
+      "ko": "자산 내보내기 세션이 출력물을 쓰는 URL입니다.",
+      "sourceHash": "4a8c09e24aba76b1ed8501a2d086988a61ee070d3aaa9042b0511bcacc275147",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0031:0001",
+      "source": "[var outputFileType: AVFileType?](avassetexportsession/outputfiletype.md)",
+      "ko": "[var outputFileType: AVFileType?](avassetexportsession/outputfiletype.md)",
+      "sourceHash": "a2b0640a751c398e3dd3b4ab3b9857d3abf24818167c6090a98cd13f8e92538f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0032:0001",
+      "source": "The file type of the output an asset export session writes.",
+      "ko": "자산 내보내기 세션이 쓰는 출력 파일 형식입니다.",
+      "sourceHash": "144dc95e0382f6d2c23cc9e6a28bfcf7489ad0ffc873644e680ecbaad33e2a75",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0033:0001",
+      "source": "[var supportedFileTypes: [AVFileType]](avassetexportsession/supportedfiletypes.md)",
+      "ko": "[var supportedFileTypes: [AVFileType]](avassetexportsession/supportedfiletypes.md)",
+      "sourceHash": "e5c6eef4984f1aa455f028f6d9d3ef33094430f4f55167b7c7816d6027c083ac",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0034:0001",
+      "source": "An array containing the types of files the session can write.",
+      "ko": "세션이 쓸 수 있는 파일 형식을 포함하는 배열입니다.",
+      "sourceHash": "3e4431044fbae63d8af12cf84ef221d6e341f862afbeed1b38911ac149f7316a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0035:0001",
+      "source": "[var allowsParallelizedExport: Bool](avassetexportsession/allowsparallelizedexport.md)",
+      "ko": "[var allowsParallelizedExport: Bool](avassetexportsession/allowsparallelizedexport.md)",
+      "sourceHash": "d00e855962dcc2ce04d1f6feb8478445053d9dd1a99f75366605afc22ff2909c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0036:0001",
+      "source": "A Boolean value that indicates whether the session can parallelize its export operation.",
+      "ko": "세션이 내보내기 작업을 병렬로 수행할 수 있는지 나타내는 Boolean 값입니다.",
+      "sourceHash": "96976d2ef081bf764e9e200ffbf7ee7c3d9e6a352cf2bafea0afa3c3a5b7f3f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0037:0001",
+      "source": "[var shouldOptimizeForNetworkUse: Bool](avassetexportsession/shouldoptimizefornetworkuse.md)",
+      "ko": "[var shouldOptimizeForNetworkUse: Bool](avassetexportsession/shouldoptimizefornetworkuse.md)",
+      "sourceHash": "068800e531d1e5237841b569995fb72225b73949c2448729ed6e14d8df98870f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0038:0001",
+      "source": "A Boolean value that indicates whether to optimize the movie for network use.",
+      "ko": "영화 영상을 네트워크 사용에 맞게 최적화할지 나타내는 Boolean 값입니다.",
+      "sourceHash": "af135b9c0c410e097024176d0074b1fea7fa2c9ecb4b13cb582beb8ed510f8c6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0039:0001",
+      "source": "[var canPerformMultiplePassesOverSourceMediaData: Bool](avassetexportsession/canperformmultiplepassesoversourcemediadata.md)",
+      "ko": "[var canPerformMultiplePassesOverSourceMediaData: Bool](avassetexportsession/canperformmultiplepassesoversourcemediadata.md)",
+      "sourceHash": "5d30201e68840dbd4fb698a79a5c45a0f21f1508d4892e93ba286d9f8f602523",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0040:0001",
+      "source": "A Boolean value that indicates whether the export session can perform multiple passes over the source media to achieve better results.",
+      "ko": "세션이 더 나은 결과를 위해 원본 미디어를 여러 번 처리할 수 있는지 나타내는 Boolean 값입니다.",
+      "sourceHash": "1a7c6f94940d9a5663c45a5b681972f2ea30b829187f31d0ee1c78b1b35e933e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0041:0001",
+      "source": "[var timeRange: CMTimeRange](avassetexportsession/timerange.md)",
+      "ko": "[var timeRange: CMTimeRange](avassetexportsession/timerange.md)",
+      "sourceHash": "7c41ce26025634756a0c2be5a89ee286cf6dde7ab96f569147100fe29ca87fe6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0042:0001",
+      "source": "The time range of the source asset to export.",
+      "ko": "내보낼 원본 자산의 시간 범위입니다.",
+      "sourceHash": "1bf34e3d94e110857563e66d4363cbcc061c2f5129e169b295c0613277e348ff",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0043:0001",
+      "source": "[var fileLengthLimit: Int64](avassetexportsession/filelengthlimit.md)",
+      "ko": "[var fileLengthLimit: Int64](avassetexportsession/filelengthlimit.md)",
+      "sourceHash": "d0a63ab3b50ab742a3a6c3daee905764a3757bf2e9a5a5bfdface33df65bbbac",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0044:0001",
+      "source": "The file length that the output of the session must not exceed.",
+      "ko": "세션의 출력이 초과해서는 안 되는 파일 길이입니다.",
+      "sourceHash": "63a2468df03de4e06aea3a6f836d0fe739ddcdb1dd24c6754abca2ff7654f881",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-output:0045:0001",
+      "source": "[var directoryForTemporaryFiles: URL?](avassetexportsession/directoryfortemporaryfiles.md)",
+      "ko": "[var directoryForTemporaryFiles: URL?](avassetexportsession/directoryfortemporaryfiles.md)",
+      "sourceHash": "5a4bf93dccb3123d899b68e1b026132a4f43028be796bc0c03a82f4e87c98ccb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-output:0046:0001",
+      "source": "A directory suitable to store temporary files that the export process generates.",
+      "ko": "내보내기 프로세스에서 생성되는 임시 파일을 저장하기에 적합한 디렉터리입니다.",
+      "sourceHash": "cbfafe1d8f6777c77547d766b732d8cddbd87ea6fd4c4fa39770ad18b779494a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-metadata:0047:0001",
+      "source": "Configuring metadata",
+      "ko": "메타데이터 구성",
+      "sourceHash": "1d8a6b191d3585bcd919b9fe826d7a5ba389b71d3a389ffd3481e6a8dd636c5f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-metadata:0048:0001",
+      "source": "[var metadata: [AVMetadataItem]?](avassetexportsession/metadata.md)",
+      "ko": "[var metadata: [AVMetadataItem]?](avassetexportsession/metadata.md)",
+      "sourceHash": "c4893f92f34ccf3e8b8ad52cc96de090c097d622e3eb94a3e586c764339b0b79",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configuring-metadata:0049:0001",
+      "source": "The metadata an export session writes to the output container file.",
+      "ko": "내보내기 세션이 출력 컨테이너 파일에 기록하는 메타데이터입니다.",
+      "sourceHash": "5bde0d025679b765279095c4c865100e7b69fc86562b0ccf2f8eea4b9c2265c4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-metadata:0050:0001",
+      "source": "[var metadataItemFilter: AVMetadataItemFilter?](avassetexportsession/metadataitemfilter.md)",
+      "ko": "[var metadataItemFilter: AVMetadataItemFilter?](avassetexportsession/metadataitemfilter.md)",
+      "sourceHash": "49e0822503225333bf6f6d675b30b1e846165c67903b5c7e6d11026369cc9e27",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-metadata:0051:0001",
+      "source": "An object the export session uses to filter the metadata items it transfers to the output asset.",
+      "ko": "내보내기 세션이 출력 자산으로 전달하는 메타데이터 항목을 필터링하는 데 사용하는 개체입니다.",
+      "sourceHash": "cc84b2c14348fcfd4734b386a7d6df44e93cd61dd9ea249a3c3034f96881259e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-video-output:0052:0001",
+      "source": "Configuring video output",
+      "ko": "비디오 출력 구성",
+      "sourceHash": "2d79423244a819bd877f975294848d9130f49a0c3d28334550d558d08d706b65",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-video-output:0053:0001",
+      "source": "[var videoComposition: AVVideoComposition?](avassetexportsession/videocomposition.md)",
+      "ko": "[var videoComposition: AVVideoComposition?](avassetexportsession/videocomposition.md)",
+      "sourceHash": "d66b608398ff40bd472be589a5f1b7663fd2a1fd01820f12c04e2346d74c8acc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-video-output:0054:0001",
+      "source": "An optional object that provides instructions for how to composite frames of video.",
+      "ko": "비디오 프레임을 합성하는 방법을 지정하는 선택적 개체입니다.",
+      "sourceHash": "b98d6612d1313cf0a9ec3cd6beeb162a65a0dfd4649153d9d780826199ce0b0e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-video-output:0055:0001",
+      "source": "[var customVideoCompositor: (any AVVideoCompositing)?](avassetexportsession/customvideocompositor.md)",
+      "ko": "[var customVideoCompositor: (any AVVideoCompositing)?](avassetexportsession/customvideocompositor.md)",
+      "sourceHash": "c43e6b84329f726fbbb69eb9d2643b80bac1288afa72fe508d475ba00b318e5a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-video-output:0056:0001",
+      "source": "An optional custom object to use when compositing video frames.",
+      "ko": "비디오 프레임을 합성할 때 사용할 선택적 사용자 지정 개체입니다.",
+      "sourceHash": "82aa57db7d9f94fde75e4827ddc619dd3fc7cf41eab6f449c7fa7669c583baaf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-track-groups:0057:0001",
+      "source": "Configuring track groups",
+      "ko": "트랙 그룹 구성",
+      "sourceHash": "90702f83c916beb733ad8f7dfdc93fb7969e082f102531b2abe202378ece6344",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-track-groups:0058:0001",
+      "source": "[var audioTrackGroupHandling: AVAssetTrackGroupOutputHandling](avassetexportsession/audiotrackgrouphandling.md)",
+      "ko": "[var audioTrackGroupHandling: AVAssetTrackGroupOutputHandling](avassetexportsession/audiotrackgrouphandling.md)",
+      "sourceHash": "2b496c8d30af99873585431a7c527aac4979213bb0fffb8deda0db0804c54150",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-track-groups:0059:0001",
+      "source": "A policy that defines how the session exports alternate audio tracks.",
+      "ko": "세션이 대체 오디오 트랙을 내보내는 방식을 정의하는 정책입니다.",
+      "sourceHash": "aba955f6458f3ced4007028b32649fb829d96d346a824647ee8c4a1d1f84e6cd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-track-groups:0060:0001",
+      "source": "[struct AVAssetTrackGroupOutputHandling](avassettrackgroupoutputhandling.md)",
+      "ko": "[struct AVAssetTrackGroupOutputHandling](avassettrackgroupoutputhandling.md)",
+      "sourceHash": "add97f9178fe99aec95f85d89da49fbc0cdc1b051c5d038d3d61dfe5f54e9006",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-track-groups:0061:0001",
+      "source": "A type that specifies policies for how an export session processes alternate tracks in a track group.",
+      "ko": "트랙 그룹에서 대체 트랙을 처리하는 방식에 대한 정책을 지정하는 유형입니다.",
+      "sourceHash": "5cc5ce1c1be7e6d20d8004b93ce409d7e8356554b5d089a79d22aa3f807bc30b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-audio-output:0062:0001",
+      "source": "Configuring audio output",
+      "ko": "오디오 출력 구성",
+      "sourceHash": "b9db3f928c8feb152fdd933302502aff0b337a4eafc3e04ce9ef9b37a95d089f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-audio-output:0063:0001",
+      "source": "[var audioMix: AVAudioMix?](avassetexportsession/audiomix.md)",
+      "ko": "[var audioMix: AVAudioMix?](avassetexportsession/audiomix.md)",
+      "sourceHash": "5bafb44654dcad0326a5ded2a952399337175207fcb271083acaa5678b3c988e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-output:0064:0001",
+      "source": "The parameters for audio mixing and an indication of whether to enable nondefault audio mixing for export.",
+      "ko": "오디오 믹싱 매개변수와 내보내기에서 기본값이 아닌 오디오 믹싱을 사용 설정할지 여부를 나타내는 값입니다.",
+      "sourceHash": "edcc2a828e1fef36c6d21f1ed411e95014d1b4cb5220d3d3c18a578e1c2e0213",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-audio-output:0065:0001",
+      "source": "[var audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm](avassetexportsession/audiotimepitchalgorithm.md)",
+      "ko": "[var audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm](avassetexportsession/audiotimepitchalgorithm.md)",
+      "sourceHash": "5a40654d9c63b7a56cf955f97a725bc8f58d53d935224470a4536885407a7f76",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-output:0066:0001",
+      "source": "A processing algorithm for managing audio pitch for scaled audio edits.",
+      "ko": "스케일링된 오디오 편집에서 오디오 피치를 관리하기 위한 처리 알고리즘입니다.",
+      "sourceHash": "3e011505ad3dfe88ec5c9771dec9c2bed0d6fb4d3b682f5c6613e83b727d49ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:exporting-media:0067:0001",
+      "source": "Exporting media",
+      "ko": "미디어 내보내기",
+      "sourceHash": "ff11cfe26847d485b3e1950f1d1cfd67b2e41f2ead3f0324f2c4d5c16da34fc6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:exporting-media:0068:0001",
+      "source": "[func export(to: URL, as: AVFileType, isolation: isolated (any Actor)?) async throws](avassetexportsession/export(to:as:isolation:).md)",
+      "ko": "[func export(to: URL, as: AVFileType, isolation: isolated (any Actor)?) async throws](avassetexportsession/export(to:as:isolation:).md)",
+      "sourceHash": "e2218d17fe5cca9e01c83d8cd1d71b3db4c61ff63751109f9a47843fb3bdedab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:exporting-media:0069:0001",
+      "source": "Exports the asset to the output location in the specified file type.",
+      "ko": "자산을 지정한 파일 형식으로 출력 위치에 내보냅니다.",
+      "sourceHash": "2c8d83bad9ea6887dd4e170d66566484a245684255ae9db507410998039b038e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:exporting-media:0070:0001",
+      "source": "[func cancelExport()](avassetexportsession/cancelexport.md)",
+      "ko": "[func cancelExport()](avassetexportsession/cancelexport.md)",
+      "sourceHash": "940b0b72cd562bcd91b3c194bcd09fab9086235f2db108b69270b6456eabd9c8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:exporting-media:0071:0001",
+      "source": "Cancels the execution of an export session.",
+      "ko": "내보내기 세션의 실행을 취소합니다.",
+      "sourceHash": "622e5e318e5aec29bbffc57936dc9c59785d37313e5d74b7a51529fc294383b4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:exporting-media:0072:0001",
+      "source": "[func exportAsynchronously(completionHandler: () -> Void)](avassetexportsession/exportasynchronously(completionhandler:).md)",
+      "ko": "[func exportAsynchronously(completionHandler: () -> Void)](avassetexportsession/exportasynchronously(completionhandler:).md)",
+      "sourceHash": "c5a64b7e1c8279f1e030927e636bf82d40ab42a16e296a213cb0820084bf2907",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:exporting-media:0073:0001",
+      "source": "Starts the asynchronous execution of an export session.",
+      "ko": "내보내기 세션의 비동기 실행을 시작합니다.",
+      "sourceHash": "e2a71672b8866b84addfb15941964a04fb671fb4d15cf5d384c6131b611ac23a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:monitoring-export-progress:0074:0001",
+      "source": "Monitoring export progress",
+      "ko": "내보내기 진행 상태 모니터링",
+      "sourceHash": "95de1c5999ae4729075913ab26be71ef2cf2dd42c40f63b052d22b667a02d68a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:monitoring-export-progress:0075:0001",
+      "source": "[func states(updateInterval: TimeInterval) -> some Sendable & AsyncSequence<AVAssetExportSession.State, Never>",
+      "ko": "[func states(updateInterval: TimeInterval) -> some Sendable & AsyncSequence<AVAssetExportSession.State, Never>",
+      "sourceHash": "81d76dc9daf122eaad45860f915b56bda8cf51bbcc722d85cb9ddb109ac4024f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:monitoring-export-progress:0076:0001",
+      "source": "](avassetexportsession/states(updateinterval:).md) Monitors the progress state of an export operation.",
+      "ko": "](avassetexportsession/states(updateinterval:).md) 내보내기 작업의 진행 상태를 모니터링합니다.",
+      "sourceHash": "d39e0e2e889fb7551ddb8d4a20fe8d98eea2a3d7234c7979f1a2509319f22394",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:monitoring-export-progress:0077:0001",
+      "source": "[AVAssetExportSession.State](avassetexportsession/state.md)",
+      "ko": "[AVAssetExportSession.State](avassetexportsession/state.md)",
+      "sourceHash": "c3c7745b9978b0dd59b0a12d392c8494a746fd0f0e5c66c2508ca10b5927e107",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:monitoring-export-progress:0078:0001",
+      "source": "Constants that indicate the state of an export operation.",
+      "ko": "내보내기 작업의 상태를 나타내는 상수입니다.",
+      "sourceHash": "fecf92b60d5722a19eab92585b359842a8cfd625b00b40188f686045de55a68c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:monitoring-export-progress:0079:0001",
+      "source": "[var status: AVAssetExportSession.Status](avassetexportsession/status-swift.property.md)",
+      "ko": "[var status: AVAssetExportSession.Status](avassetexportsession/status-swift.property.md)",
+      "sourceHash": "effbe526ad3a1f9c560025b7a3cee06470705a02c6e2cb0e3f558f44b7035f84",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:monitoring-export-progress:0080:0001",
+      "source": "The status of the export session.",
+      "ko": "내보내기 세션의 상태입니다.",
+      "sourceHash": "0d0d8fd31fc29b2219670b01e93f4b2fe0b556276971300e0b05bd6a6035fc08",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:monitoring-export-progress:0081:0001",
+      "source": "[AVAssetExportSession.Status](avassetexportsession/status-swift.enum.md)",
+      "ko": "[AVAssetExportSession.Status](avassetexportsession/status-swift.enum.md)",
+      "sourceHash": "d6f45a23d2af40f79e1df86ea65c24557cea199f86eeca1e868e6fb513bccffd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:monitoring-export-progress:0082:0001",
+      "source": "Values that indicate the state of an export session.",
+      "ko": "내보내기 세션의 상태를 나타내는 값입니다.",
+      "sourceHash": "76fd3f3c41da546e9027ebc915412c034be5c5bc80c905a53c2db825a4ac8fe7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:monitoring-export-progress:0083:0001",
+      "source": "[var progress: Float](avassetexportsession/progress.md)",
+      "ko": "[var progress: Float](avassetexportsession/progress.md)",
+      "sourceHash": "9b2ecba367094657902a22ec7e8f97e93b5369908968b50d200c9b1a88f2f055",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:monitoring-export-progress:0084:0001",
+      "source": "A value that indicates the progress of the export.",
+      "ko": "내보내기 진행률을 나타내는 값입니다.",
+      "sourceHash": "047d708b210bf510793552109445cb3f763fbd97a5ada4c54827db84e717390a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:monitoring-export-progress:0085:0001",
+      "source": "[var error: (any Error)?](avassetexportsession/error.md)",
+      "ko": "[var error: (any Error)?](avassetexportsession/error.md)",
+      "sourceHash": "fe773e5ff042533f881aa94eb6faf1047969bf26a72fe2ca05499e9181f3675b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:monitoring-export-progress:0086:0001",
+      "source": "An optional error object.",
+      "ko": "선택적 오류 개체입니다.",
+      "sourceHash": "a20c55cea38d6cb53b114d2d980bf6f5fea01883b380db7258bf48dd81fb08f2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:estimating-file-length-and-duration:0087:0001",
+      "source": "Estimating file length and duration",
+      "ko": "파일 길이 및 기간 추정",
+      "sourceHash": "6b843d55722015b41d8bbd7e56ac759b8b77e22811e08ffc14af6b64b691aae7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:estimating-file-length-and-duration:0088:0001",
+      "source": "[func estimateOutputFileLength(completionHandler: (Int64, (any Error)?) -> Void)](avassetexportsession/estimateoutputfilelength(completionhandler:).md)",
+      "ko": "[func estimateOutputFileLength(completionHandler: (Int64, (any Error)?) -> Void)](avassetexportsession/estimateoutputfilelength(completionhandler:).md)",
+      "sourceHash": "47a35a7051586329fa3c8192fcc19d2c2acd65c38d13970876d226a076c244e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:estimating-file-length-and-duration:0089:0001",
+      "source": "Starts estimating the output file length of the export while considering the asset, preset, and time range configuration of the export session.",
+      "ko": "자산, 프리셋 및 시간 범위 구성을 고려해 내보내기의 출력 파일 길이 추정을 시작합니다.",
+      "sourceHash": "c0344a64af48ba2b108708a866a42a2ae6303eabed10a8ae8c33c71d4a97b3f9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:estimating-file-length-and-duration:0090:0001",
+      "source": "[var estimatedOutputFileLength: Int64](avassetexportsession/estimatedoutputfilelength.md)",
+      "ko": "[var estimatedOutputFileLength: Int64](avassetexportsession/estimatedoutputfilelength.md)",
+      "sourceHash": "e6a9f2a8ef64d2afaf8100c9349adde885d5d67e549836e538c3493fbce8040e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:estimating-file-length-and-duration:0091:0001",
+      "source": "The estimated length of the exported file, in bytes.",
+      "ko": "내보낸 파일의 추정 길이(바이트)입니다.",
+      "sourceHash": "54c4cf85cb3dc16a0a20a211f98bab794420cdf1ae8c4d1637d036a84ab7c359",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:estimating-duration:0092:0001",
+      "source": "Estimating duration",
+      "ko": "기간 추정",
+      "sourceHash": "cc5ec591f2bf9228095db05c2a4badb2787c4984d0224f0b82def1fa958a85b5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:estimating-duration:0093:0001",
+      "source": "[func estimateMaximumDuration(completionHandler: (CMTime, (any Error)?) -> Void)](avassetexportsession/estimatemaximumduration(completionhandler:).md)",
+      "ko": "[func estimateMaximumDuration(completionHandler: (CMTime, (any Error)?) -> Void)](avassetexportsession/estimatemaximumduration(completionhandler:).md)",
+      "sourceHash": "4c0ed0bffb879567f5591ff6cbed15f1962b19c8957aa58b2611e7001e79fd41",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:estimating-duration:0094:0001",
+      "source": "Starts estimating the maximum duration of the export while considering the asset, preset, and time range configuration of the export session.",
+      "ko": "자산, 프리셋 및 시간 범위 구성을 고려해 내보내기의 최대 기간 추정을 시작합니다.",
+      "sourceHash": "2f2ed3aacc35773e8fb443ee716a614abd26d0f4d4d90be69d7bfdfcc33e2271",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:estimating-duration:0095:0001",
+      "source": "[var maxDuration: CMTime](avassetexportsession/maxduration.md)",
+      "ko": "[var maxDuration: CMTime](avassetexportsession/maxduration.md)",
+      "sourceHash": "f3199e258f35fe46226f7f87d77b06f30e287358ef27e1ed50f30441acedd825",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:estimating-duration:0096:0001",
+      "source": "Provides an estimate of the maximum duration of the exported media.",
+      "ko": "내보낸 미디어의 최대 기간에 대한 추정값을 제공합니다.",
+      "sourceHash": "227c522e8abecc33bde94b4bce135e1de3953dd3f2afcd5f9b32d1b902e73bbe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:accessing-the-asset:0097:0001",
+      "source": "Accessing the asset",
+      "ko": "자산 액세스",
+      "sourceHash": "3a7fd1c4673f27283bfd8568773fe7407c8747c2dd1379d04acfa02fa8c7d944",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-the-asset:0098:0001",
+      "source": "[var asset: AVAsset](avassetexportsession/asset.md)",
+      "ko": "[var asset: AVAsset](avassetexportsession/asset.md)",
+      "sourceHash": "3891c60f67057d4148782b4b213bb9442f98474c960e3b6ff7cfb5222e2ad767",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-the-asset:0099:0001",
+      "source": "An asset that a session exports.",
+      "ko": "세션이 내보내는 자산입니다.",
+      "sourceHash": "1292002a60b81c84423815ea5ed75652605ad656d8ad7d523ad0fcc21449cdd3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0100:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0101:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0102:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0103:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0104:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0104:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0104:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0104:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0104:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0104:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0105:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0106:0001",
+      "source": "[Exporting video to alternative formats](exporting-video-to-alternative-formats.md)",
+      "ko": "[Exporting video to alternative formats](exporting-video-to-alternative-formats.md)",
+      "sourceHash": "3b9dc8c444d99917fdd99beca5a5361970ed2c873a6e8f0ffea52d446f190ec6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0107:0001",
+      "source": "Convert an existing movie file to a different format.",
+      "ko": "기존 동영상 파일을 다른 형식으로 변환합니다.",
+      "sourceHash": "5c91c9e1938f8a5b2ab0245aa9fed62e8f0d3ef3317862d38c32df87c18ef37d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0108:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0109:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetexportsession)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetexportsession)*",
+      "sourceHash": "9d893d4fb1d5dcaaf31274ecf50d55435e81585d855a349e91abe8382c41ef64",
+      "status": "preserved"
+    }
+  ]
+}

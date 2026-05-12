@@ -1,0 +1,435 @@
+{
+  "docId": "documentation/ARKit/argeometryelement.md",
+  "title": "ARGeometryElement",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/argeometryelement",
+  "segments": [
+    {
+      "id": "seg:heading:argeometryelement:0000:0001",
+      "source": "ARGeometryElement",
+      "ko": "ARGeometryElement",
+      "sourceHash": "d0961b240fb4a1507f4780477260788f923fb06098968e8515daba72bb019d78",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:argeometryelement:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: class",
+      "ko": "**Framework**: ARKit **Kind**: class",
+      "sourceHash": "cd2a2f048fbda3c62dc609eaaff263f2176c4a42225cdd27e4a416ceaee5a3f8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:argeometryelement:0002:0001",
+      "source": "A container for index data, such as vertex indices of a face.",
+      "ko": "면의 정점 인덱스와 같은 인덱스 데이터에 대한 컨테이너입니다.",
+      "sourceHash": "22c1bb965a1af00db927cb6881ef53b0f2813b28fd3b633327ef0c1a69ab8c19",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:argeometryelement:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:argeometryelement:0004:0001",
+      "source": "iOS 13.4+",
+      "ko": "iOS 13.4+",
+      "sourceHash": "3db505a5e51210afad0df89ce64634ab84c15dffd32f283bad36fe8504d00622",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:argeometryelement:0004:0002",
+      "source": "iPadOS 13.4+",
+      "ko": "iPadOS 13.4+",
+      "sourceHash": "c454b0839c045c80fa850158dba69def792a99ab0102660c624e86c74dffcd31",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:argeometryelement:0004:0003",
+      "source": "Mac Catalyst 13.4+",
+      "ko": "Mac Catalyst 13.4+",
+      "sourceHash": "245b3d1541f53ffd87acd718826f391c16f4de1b87de8edebe0c199dcf81ddd9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass ARGeometryElement\n```",
+      "ko": "```swift\nclass ARGeometryElement\n```",
+      "sourceHash": "a23c639597c1956c7dccb56423af1b876b537ce7257fc3daf5f63472d37d6f59",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "[`ARMeshGeometry`](armeshgeometry.md) uses geometry-elements to store face data (see [`faces`](armeshgeometry/faces.md)).",
+      "ko": "[`ARMeshGeometry`](armeshgeometry.md)는 면 데이터를 저장하기 위해 geometry-elements를 사용합니다(자세한 내용은 [`faces`](armeshgeometry/faces.md) 참조).",
+      "sourceHash": "91e4ebaae10c6ad4d165a6da2ba1490ee3f9baa06ef560aefcdf6da4a3c92e15",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "Each face is defined by the primitive type, for example, [`ARGeometryPrimitiveType.triangle`](argeometryprimitivetype/triangle.md).",
+      "ko": "각 면은 primitive type으로 정의됩니다. 예를 들어 [`ARGeometryPrimitiveType.triangle`](argeometryprimitivetype/triangle.md)입니다.",
+      "sourceHash": "1f70bd845d84b5763e7a8648fb506a6140f0e3f8b6aebb68ab6b06cf009ea58e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "To demonstrate, an [`ARMeshGeometry`](armeshgeometry.md) instance with two triangle-type faces results in the following configuration:",
+      "ko": "예시로, 삼각형 형식의 면 두 개를 가진 [`ARMeshGeometry`](armeshgeometry.md) 인스턴스는 다음 구성으로 표시됩니다.",
+      "sourceHash": "76f4462e4e41819b3bb6a0d8b34677bc105330a54d720a5042034504398ca232",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0001",
+      "source": "`faces` [`count`](argeometryelement/count.md) `= 2`",
+      "ko": "`faces` [`count`](argeometryelement/count.md) `= 2`",
+      "sourceHash": "246041485e14fc299fc896060f8c85e9e65ca2a0d582a910ce0eaccfccc5594b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0002",
+      "source": "`faces` [`indexCountPerPrimitive`](argeometryelement/indexcountperprimitive.md) `= 3` (because [`primitiveType`](argeometryelement/primitivetype.md) is [`ARGeometryPrimitiveType.triangle`](argeometryprimitivetype/triangle.md))",
+      "ko": "`faces` [`indexCountPerPrimitive`](argeometryelement/indexcountperprimitive.md) `= 3` (because [`primitiveType`](argeometryelement/primitivetype.md) is [`ARGeometryPrimitiveType.triangle`](argeometryprimitivetype/triangle.md))",
+      "sourceHash": "5636cf9192cba3e57d3ca5aa2b213ec7f0f1d50f2f55f374797845f2b42ee943",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0003",
+      "source": "`faces` [`bytesPerIndex`](argeometryelement/bytesperindex.md) `= 4` (because vertex indices are the type [`UInt32`](https://developer.apple.com/documentation/Swift/UInt32))",
+      "ko": "`faces` [`bytesPerIndex`](argeometryelement/bytesperindex.md) `= 4` (정점 인덱스가 [`UInt32`](https://developer.apple.com/documentation/Swift/UInt32) 유형이므로)",
+      "sourceHash": "f7cb4e833d52885757136ed1962362088a69121886a481d024e3b85300605f29",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0004",
+      "source": "The buffer’s total size in bytes `=` [`count`](argeometryelement/count.md) `*` [`indexCountPerPrimitive`](argeometryelement/indexcountperprimitive.md) `*` [`bytesPerIndex`](argeometryelement/bytesperindex.md) (which in this case, is `2 * 3 * 4 = 24` bytes)",
+      "ko": "버퍼의 총 바이트 크기 `=` [`count`](argeometryelement/count.md) `*` [`indexCountPerPrimitive`](argeometryelement/indexcountperprimitive.md) `*` [`bytesPerIndex`](argeometryelement/bytesperindex.md) (이 경우 `2 * 3 * 4 = 24` 바이트)",
+      "sourceHash": "fb2a6a1767f5d7bd164b53a3a0b3bd60cd06adbf5abe9376cd0562f8d2031dee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0011:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:accessing-index-data:0012:0001",
+      "source": "Accessing Index Data",
+      "ko": "인덱스 데이터 액세스",
+      "sourceHash": "498f534b0b3c1cc16a4d55fc8e36dd21e0df4340d0eece10c2e458aaff05066b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-index-data:0013:0001",
+      "source": "[subscript(Int) -> [Int32]](argeometryelement/subscript(_:).md)",
+      "ko": "[subscript(Int) -> [Int32]](argeometryelement/subscript(_:).md)",
+      "sourceHash": "86b33cd711533d289157b5330ab815d827781a098f27d0a9c1340340261ea134",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:accessing-index-data:0014:0001",
+      "source": "Provides an array of vertex indices that respresents the geometric primitive at the subscripted index.",
+      "ko": "지정한 하위 스크립트 인덱스의 기하 원시 요소를 나타내는 정점 인덱스 배열을 제공합니다.",
+      "sourceHash": "f423c06ae3106e5fe51dc2f5b0f91e55b2ad0425381cb29014418a9c0873bc42",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-index-data:0015:0001",
+      "source": "[var buffer: any MTLBuffer](argeometryelement/buffer.md)",
+      "ko": "[var buffer: any MTLBuffer](argeometryelement/buffer.md)",
+      "sourceHash": "eeca0e5565ac5b04d1402968b65298005c513fe3a8c0c002db5681806cda61e5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-index-data:0016:0001",
+      "source": "A Metal buffer containing primitive data.",
+      "ko": "기하 원시 데이터를 포함하는 Metal 버퍼입니다.",
+      "sourceHash": "7bcea7079bb848467524c21cd77499dbaaedcbba06fa2c2db77e6766a0203c2f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-index-information:0017:0001",
+      "source": "Getting Index Information",
+      "ko": "인덱스 정보 가져오기",
+      "sourceHash": "9db4899f3b7f0f756b98629d47595c5b5baeac2d9085385d6d875bb06df07cb1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-index-information:0018:0001",
+      "source": "[var bytesPerIndex: Int](argeometryelement/bytesperindex.md)",
+      "ko": "[var bytesPerIndex: Int](argeometryelement/bytesperindex.md)",
+      "sourceHash": "95b556462dd88491a75606e25cdf6f3c0dbb2d4585f83c1c112bde04ca446361",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-index-information:0019:0001",
+      "source": "The number of bytes for each index.",
+      "ko": "각 인덱스의 바이트 수입니다.",
+      "sourceHash": "771c7f7313aa2a34ffe1f6094615a5108a95688f3ac23f832b5530565ddaea2f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-index-information:0020:0001",
+      "source": "[var count: Int](argeometryelement/count.md)",
+      "ko": "[var count: Int](argeometryelement/count.md)",
+      "sourceHash": "e515d1b8f1e66cf4c253e405574006a0ca65f1cb3fba914857f50e20d9a680e6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-index-information:0021:0001",
+      "source": "The number of primitives in the buffer.",
+      "ko": "버퍼의 primitive 수입니다.",
+      "sourceHash": "d92d18ba1e5de06304cfbd0c9aff0f2d9c65fa092e23f06d1eae49e24f347905",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-index-information:0022:0001",
+      "source": "[var indexCountPerPrimitive: Int](argeometryelement/indexcountperprimitive.md)",
+      "ko": "[var indexCountPerPrimitive: Int](argeometryelement/indexcountperprimitive.md)",
+      "sourceHash": "d6715154ac3c4982c1cdfeeaded210c5ea9ac876392146c2014ac4c0e83b568c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-index-information:0023:0001",
+      "source": "The number of indices for each primitive.",
+      "ko": "각 primitive의 인덱스 수입니다.",
+      "sourceHash": "71b946ae38af66d198c49016a5f8c6317994998e45ab54134f9967bab666fd11",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-index-information:0024:0001",
+      "source": "[var primitiveType: ARGeometryPrimitiveType](argeometryelement/primitivetype.md)",
+      "ko": "[var primitiveType: ARGeometryPrimitiveType](argeometryelement/primitivetype.md)",
+      "sourceHash": "78e1ddc5cecafcd78efe803e8476823b5275c39c97400f87d9b99e74601a6943",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-index-information:0025:0001",
+      "source": "The geometry’s type of data (triangle, or line).",
+      "ko": "기하 데이터의 유형(삼각형 또는 선)입니다.",
+      "sourceHash": "83f715618f8078de5c3caa2f0eaa3f98f40cdde693303cb5f08e27cf9f488b8e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-index-information:0026:0001",
+      "source": "[enum ARGeometryPrimitiveType](argeometryprimitivetype.md)",
+      "ko": "[enum ARGeometryPrimitiveType](argeometryprimitivetype.md)",
+      "sourceHash": "84d1ebd0798b908563ac3ab07e332019cf0d7c5b7848c8517d491448df5b3424",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-index-information:0027:0001",
+      "source": "The kind of connection between vertices.",
+      "ko": "정점 간 연결의 종류입니다.",
+      "sourceHash": "7eadaf005e6261b4269c63ac6d9ad83afbec3857a4de947959079c4f77461adb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:initializers:0028:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0029:0001",
+      "source": "[init?(coder: NSCoder)](argeometryelement/init(coder:).md)",
+      "ko": "[init?(coder: NSCoder)](argeometryelement/init(coder:).md)",
+      "sourceHash": "448b5501a9b8eb04974c8e515c82c208d32d4f75caec1fb270a41fb936fec5b5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0030:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0031:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0032:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0033:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0034:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0034:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0034:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0034:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0034:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0034:0006",
+      "source": "[NSCoding](../Foundation/NSCoding.md)",
+      "ko": "[NSCoding](../Foundation/NSCoding.md)",
+      "sourceHash": "af607052cedc51e60ff863609cb573f7fdea5ddf489103c8b59416e9aa32e36a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0034:0007",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0034:0008",
+      "source": "[NSSecureCoding](../Foundation/NSSecureCoding.md)",
+      "ko": "[NSSecureCoding](../Foundation/NSSecureCoding.md)",
+      "sourceHash": "e80dfbc2e883ff92db27afe0edc4d86a1a41b3b289cd23f70bb52edcc387180a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0034:0009",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0034:0010",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0035:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[var classification: ARGeometrySource?](armeshgeometry/classification.md)",
+      "ko": "[var classification: ARGeometrySource?](armeshgeometry/classification.md)",
+      "sourceHash": "dbb1dedc3ae87c5d6e0399255a1eff43f103d966196f90a0495c6080a2e00ed4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Classification for each face in the mesh.",
+      "ko": "메시의 각 면에 대한 분류입니다.",
+      "sourceHash": "bb870698cd2b0f15cfb39c569e65dbec291595ca4fe38bb0e5bf3ab25583487c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[enum ARMeshClassification](armeshclassification.md)",
+      "ko": "[enum ARMeshClassification](armeshclassification.md)",
+      "sourceHash": "896b8d87cf9fe25ea0f9331a77d37c7b8730e18be0249ea1c7c5437617418e3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Enumeration of different classes of real-world objects that ARKit can identify.",
+      "ko": "ARKit이 식별할 수 있는 실제 객체의 다양한 클래스에 대한 열거입니다.",
+      "sourceHash": "ce3d0dc5167da890e68c6ba734576449d0621683c7c099fc9223bdd20a178984",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[var faces: ARGeometryElement](armeshgeometry/faces.md)",
+      "ko": "[var faces: ARGeometryElement](armeshgeometry/faces.md)",
+      "sourceHash": "0f5a00645c389541a934e7acdfbe0a88363cc9f0e94278cfe8de5efe1200da64",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "An object that contains a buffer of vertex indices of the geometry’s faces.",
+      "ko": "기하면의 정점 인덱스 버퍼를 포함하는 객체입니다.",
+      "sourceHash": "2d0827d58e48c0c1988fbaa7943614d8ca0e8f3d7d543389a589d82a1f0824ae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[var normals: ARGeometrySource](armeshgeometry/normals.md)",
+      "ko": "[var normals: ARGeometrySource](armeshgeometry/normals.md)",
+      "sourceHash": "8ed499d42b7150371f631619e1bdd730d66811cfecf15ef21ea4b3424e0e9dbe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "Rays that define which direction is outside for each face.",
+      "ko": "각 면의 바깥 방향을 정의하는 광선입니다.",
+      "sourceHash": "c76c519d2882e23d8fff777724083f8f6be922b126ffaa3240e102249ce8cf69",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0044:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/argeometryelement)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/argeometryelement)*",
+      "sourceHash": "e4f7727cd7fa68ba00578a12a3714033b5cfde7c758c1145ff944fde4e93fbed",
+      "status": "preserved"
+    }
+  ]
+}

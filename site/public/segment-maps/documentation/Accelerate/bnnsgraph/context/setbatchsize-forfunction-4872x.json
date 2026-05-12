@@ -1,0 +1,169 @@
+{
+  "docId": "documentation/Accelerate/bnnsgraph/context/setbatchsize-forfunction-4872x.md",
+  "title": "setBatchSize(:forFunction:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsgraph/context/setbatchsize-forfunction-4872x",
+  "segments": [
+    {
+      "id": "seg:heading:setbatchsizeforfunction:0000:0001",
+      "source": "setBatchSize(_:forFunction:)",
+      "ko": "setBatchSize(_:forFunction:)",
+      "sourceHash": "355929c80f23d9972917f41c3f2363399a345cf1fc49502c0a0688b2e70b2ced",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setbatchsizeforfunction:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setbatchsizeforfunction:0002:0001",
+      "source": "Sets the batch size for a graph.",
+      "ko": "그래프의 배치 크기를 설정합니다.",
+      "sourceHash": "7c6f6f0bb018062d75a455cf646d4aa030bb82ea58d0333b86b268440d8786af",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setbatchsizeforfunction:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setbatchsizeforfunction:0004:0001",
+      "source": "iOS 18.0+",
+      "ko": "iOS 18.0+",
+      "sourceHash": "1b3f7d89e639b0fbca8c8e42d8d9491fcff80bdc07373dbd869c8a39ca2beb40",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setbatchsizeforfunction:0004:0002",
+      "source": "iPadOS 18.0+",
+      "ko": "iPadOS 18.0+",
+      "sourceHash": "54a351c44693b5ce37dfff89a84379ba390a94f1a19625c16296b998317728b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setbatchsizeforfunction:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:setbatchsizeforfunction:0004:0004",
+      "source": "macOS 15.0+",
+      "ko": "macOS 15.0+",
+      "sourceHash": "611bc4e7b6bcedb648f4dce973a22cfae896f6a2e0e055f5096e7622aed421d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setbatchsizeforfunction:0004:0005",
+      "source": "tvOS 18.0+",
+      "ko": "tvOS 18.0+",
+      "sourceHash": "8b3d386766205786b7eadc109362e800473eedafe7e0a03e888e738fd4823103",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setbatchsizeforfunction:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:setbatchsizeforfunction:0004:0007",
+      "source": "watchOS 11.0+",
+      "ko": "watchOS 11.0+",
+      "sourceHash": "b3687b5ecbb58255b42f98afa978e1c9714fab262e16ed94cff576ee748d7861",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc setBatchSize(_ batchSize: Int, forFunction function: String? = nil) async\n```",
+      "ko": "```swift\nfunc setBatchSize(_ batchSize: Int, forFunction function: String? = nil) async\n```",
+      "sourceHash": "2a1e325ff84c9b6b5113593ee2107ccdc24dbd39e349bb37425c79a820c34639",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This is a special case of `setDynamicShapes(_:forFunction:)` where the only dynamic sizes that occur are the first index of their tensor (that is, the batch dimension) and are all equal.",
+      "ko": "이는 `setDynamicShapes(_:forFunction:)`의 특수한 경우로, 동적 크기가 텐서의 첫 번째 인덱스(즉 배치 차원)에서만 발생하고 모두 동일합니다.",
+      "sourceHash": "fe25c372ad376c15d01a566c83d07683de199370eea58915703728495f937615",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "This allows just passing a single `batchSize` constant.",
+      "ko": "단일 `batchSize` 상수만 전달하면 됩니다.",
+      "sourceHash": "5bb7f868bc53fb7541eac8c0150712d8d07c7b30aed897adabf600fc60058510",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "This function has no effect if you pass a `batchSize` value that’s less than zero.",
+      "ko": "`batchSize` 값이 0보다 작으면 이 함수는 영향을 주지 않습니다.",
+      "sourceHash": "fe6ae8ee87a08a17488177d9dead2166f103f40c981bb24fbdf9c89f99b283ec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0010:0001",
+      "source": "**Note**: `BNNSGraphContextSetBatchSize`",
+      "ko": "**참고**: `BNNSGraphContextSetBatchSize`",
+      "sourceHash": "1c66a018bff30471250bc8c1de9c5d90f7b2da3257f63baace721f360d57d9e2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0011:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0012:0001",
+      "source": "`batchSize`: The batch size.",
+      "ko": "`batchSize`: 배치 크기입니다.",
+      "sourceHash": "7b7f09fc84c62b1e6cc6c51c8a00f50ae1e5d06290fc6cd846f5426edc004d98",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0012:0002",
+      "source": "`function`: The specific function to set shapes for. You may set this to `nil` if there is only one function.",
+      "ko": "`function`: 형상을 설정할 특정 함수입니다. 함수가 하나만 있는 경우에는 `nil`로 지정할 수 있습니다.",
+      "sourceHash": "e40fa93fa6cba885fbfb38194211f0d2a764acb198ec85ffe62c8bd3dec0d06c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:parameters:0013:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:parameters:0014:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/context/setbatchsize(_:forfunction:)-4872x)*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/bnnsgraph/context/setbatchsize(_:forfunction:)-4872x)*",
+      "sourceHash": "8fcafaf54e28509dbe5b0c3bc5e722e938a7431bcc1dbe1842e843f6b0489a32",
+      "status": "machine_translated"
+    }
+  ]
+}

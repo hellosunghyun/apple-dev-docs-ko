@@ -1,0 +1,162 @@
+{
+  "docId": "documentation/AVFoundation/avdelegatingplaybackcoordinatorbufferingcommand/completionduedate.md",
+  "title": "completionDueDate",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avdelegatingplaybackcoordinatorbufferingcommand/completionduedate",
+  "segments": [
+    {
+      "id": "seg:heading:completionduedate:0000:0001",
+      "source": "completionDueDate",
+      "ko": "completionDueDate",
+      "sourceHash": "3d96e4651fa5d11aa72ec70b383932546f8fd393dc6389584276132c475f78a4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:completionduedate:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:completionduedate:0002:0001",
+      "source": "The deadline by which the coordinator expects the delegate to complete execution of a command.",
+      "ko": "조정자가 명령 실행을 완료해야 하는 마감일입니다.",
+      "sourceHash": "3fa51198020ab2a353ded6aa497f9cf3a64321a297c5f8cca0c8ef0ad097ca01",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:completionduedate:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:completionduedate:0004:0001",
+      "source": "iOS 15.0+",
+      "ko": "iOS 15.0+",
+      "sourceHash": "86b54448da2eb8626f00177bd04f05a8e48cee585c11805cf3f3e0d890c4e777",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:completionduedate:0004:0002",
+      "source": "iPadOS 15.0+",
+      "ko": "iPadOS 15.0+",
+      "sourceHash": "c7cbc9927b4ccc77db75d1ebf30fcc53090d5edd108c73c553dc668c46926af8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:completionduedate:0004:0003",
+      "source": "Mac Catalyst 15.0+",
+      "ko": "Mac Catalyst 15.0+",
+      "sourceHash": "9d0a6a3a1920dff6b27072e4fe1bcdd8a15ec1e6a32ea0e948a78c43ac895f9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:completionduedate:0004:0004",
+      "source": "macOS 12.0+",
+      "ko": "macOS 12.0+",
+      "sourceHash": "adffa1c4f69a9ee1f27b5e361c29af9b83d00fb7441c2e24713b7acb91ac5100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:completionduedate:0004:0005",
+      "source": "tvOS 15.0+",
+      "ko": "tvOS 15.0+",
+      "sourceHash": "129e8b0216e52c06ca36ea909fe3bc08430cea5008b00272663c5ef8fc40009b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:completionduedate:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar completionDueDate: Date? { get }\n```",
+      "ko": "```swift\nvar completionDueDate: Date? { get }\n```",
+      "sourceHash": "e0807bc60ce107ce469a3f166c00abf25042482bd1fb02633bb918418e5a1836",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "A command that expects buffering in preparation for playback requires that the delegate call the command’s completion handler by the deadline.",
+      "ko": "재생을 위해 버퍼링이 필요함을 예상하는 명령은 조정자가 기한 내에 해당 명령의 완료 핸들러를 호출해야 합니다.",
+      "sourceHash": "c3038d394012eb2065cb182a7550448c71828d18ccd0d030d4a06d36e4dbfb19",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The delegate needs to complete the command by this date to keep up with the group.",
+      "ko": "조정자는 이 날짜까지 명령을 완료해야 그룹과 동기화됩니다.",
+      "sourceHash": "6fd74f979649789795c0eca0fd949f4c28050aae33a6c1913a69d9e232f888ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "Alternatively, have the delegate begin a stall recovery suspension, and communicate that state to the other participants.",
+      "ko": "대신 조정자가 정지 복구 대기(stall recovery suspension)를 시작하고 해당 상태를 다른 참가자에게 전달해야 합니다.",
+      "sourceHash": "fa47fde241d1e39368a5747c8040eeb482b9a55bbec418ce726f52326e3b0508",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Completing the command after this date means that the coordinator likely sends a play command that isn’t for the current state.",
+      "ko": "이 날짜 이후에 명령을 완료하면 조정자가 현재 상태에 맞지 않는 재생 명령을 보낼 가능성이 높습니다.",
+      "sourceHash": "dfed1c4a6c1549667fcae7bd5fec42153199c10a0bbc184217c11062e78edd7c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var anticipatedPlaybackRate: Float](avdelegatingplaybackcoordinatorbufferingcommand/anticipatedplaybackrate.md)",
+      "ko": "[var anticipatedPlaybackRate: Float](avdelegatingplaybackcoordinatorbufferingcommand/anticipatedplaybackrate.md)",
+      "sourceHash": "3f82e8a7075b619f23dfd0f37153eae722e407e9b7d8f4d427d7fbe04284f8a3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "The rate at which the coordinator expects the current item to play.",
+      "ko": "조정자가 현재 항목을 재생할 것으로 예상하는 비율입니다.",
+      "sourceHash": "b9f71207009e402bcb318979c7629cecbc95f437f9bed81ab13e03e9c8d677f8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0013:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avdelegatingplaybackcoordinatorbufferingcommand/completionduedate)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avdelegatingplaybackcoordinatorbufferingcommand/completionduedate)*",
+      "sourceHash": "fbe1ac0cfdc5c44e57c674239d662f2d029f41fa0a42044314a012ca7ca533f5",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "docId": "documentation/ARKit/arframe/estimateddepthdata.md",
+  "title": "estimatedDepthData",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arframe/estimateddepthdata",
+  "segments": [
+    {
+      "id": "seg:heading:estimateddepthdata:0000:0001",
+      "source": "estimatedDepthData",
+      "ko": "estimatedDepthData",
+      "sourceHash": "f729b4184204a9f8483bbfcf3a5e1b72ca86a795d5d56a8e4c6311dcbb824294",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:estimateddepthdata:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: property",
+      "ko": "**Framework**: ARKit **Kind**: property",
+      "sourceHash": "eebebd0c04c444b8ad7332b72cb6b5efed96fb65bd16793fa46eb608d4454b7e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:estimateddepthdata:0002:0001",
+      "source": "A buffer that represents the estimated depth values from the camera feed that you use to occlude virtual content.",
+      "ko": "가상 콘텐츠를 가리는 데 사용하는 카메라 피드의 추정 깊이 값을 나타내는 버퍼입니다.",
+      "sourceHash": "18cb10ca2090b3f4d518c475fb94ea3052636246e16a1479a323d41e4b7caca9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:estimateddepthdata:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:estimateddepthdata:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:estimateddepthdata:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:estimateddepthdata:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar estimatedDepthData: CVPixelBuffer? { get }\n```",
+      "ko": "```swift\nvar estimatedDepthData: CVPixelBuffer? { get }\n```",
+      "sourceHash": "810b039aa4b1f07e256a8cf0cff3ed77aa86c22dfa048eeb9e800b226265c57a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Each non-background pixel in the segmentation buffer maps to a depth value in this buffer.",
+      "ko": "분할 버퍼의 비배경 픽셀 각각은 이 버퍼의 깊이 값에 매핑됩니다.",
+      "sourceHash": "4f3851472c2274c0ba6a20d318ea0f84d7e7471bce0b1bd86da7cea37b7edb79",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Use this to occlude people from the rendering of your app’s virtual content.",
+      "ko": "이 값을 사용해 앱의 가상 콘텐츠 렌더링에서 사람을 가립니다.",
+      "sourceHash": "b25ec6dc31a98e3385501ff16db6f4499e589da4769473eac45b47d1254ca324",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "If you implement a custom renderer, you apply this property by using alpha and depth mattes provided with [`ARMatteGenerator`](armattegenerator.md).",
+      "ko": "사용자 지정 렌더러를 구현하는 경우 [`ARMatteGenerator`](armattegenerator.md)에서 제공하는 alpha 및 depth 마트를 사용해 이 속성을 적용합니다.",
+      "sourceHash": "c5b804fe9317b716d75d7073ef209df7a176338829f3c65382b8e317367d41bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Apps using one of the standard renderers don’t need this property to occlude virtual content with people.",
+      "ko": "표준 렌더러 중 하나를 사용하는 앱은 사람과 가상 콘텐츠를 가리는 데 이 속성이 필요하지 않습니다. 표준 렌더러([`ARView`](https://developer.apple.com/documentation/RealityKit/ARView), [`ARSCNView`](arscnview.md), [`ARSKView`](arskview.md))는 구성의 [`frameSemantics`](arconfiguration/framesemantics-swift.property.md)에 [`personSegmentation`](arconfiguration/framesemantics-swift.struct/personsegmentation.md) 또는 [`personSegmentationWithDepth`](arconfiguration/framesemantics-swift.struct/personsegmentationwithdepth.md)를 추가하면 사람 가림을 활성화합니다.",
+      "sourceHash": "f184693b31d6ded949367b85826a7b252126347ef188ea225b7dbfbaed92f945",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "The standard renderers ([`ARView`](https://developer.apple.com/documentation/RealityKit/ARView), [`ARSCNView`](arscnview.md), and [`ARSKView`](arskview.md)) enable people occlusion when you add [`personSegmentation`](arconfiguration/framesemantics-swift.struct/personsegmentation.md) or [`personSegmentationWithDepth`](arconfiguration/framesemantics-swift.struct/personsegmentationwithdepth.md) to your configuration’s [`frameSemantics`](arconfiguration/framesemantics-swift.property.md).",
+      "ko": "표준 렌더러([`ARView`](https://developer.apple.com/documentation/RealityKit/ARView), [`ARSCNView`](arscnview.md), [`ARSKView`](arskview.md))는 구성의 [`frameSemantics`](arconfiguration/framesemantics-swift.property.md)에 [`personSegmentation`](arconfiguration/framesemantics-swift.struct/personsegmentation.md) 또는 [`personSegmentationWithDepth`](arconfiguration/framesemantics-swift.struct/personsegmentationwithdepth.md)을 추가하면 사람 오클루전을 활성화합니다.",
+      "sourceHash": "b07a82ca3e6e1189382e7142c3bb5bdec831fd94d55cf80082f1d6e61ca7d1f6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var detectedBody: ARBody2D?](arframe/detectedbody.md)",
+      "ko": "[var detectedBody: ARBody2D?](arframe/detectedbody.md)",
+      "sourceHash": "f1a08ae67181732f5918ec2bb8a68ef991c0121d4bc9104630d091a0246c336a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "The screen position information of a body that ARKit recognizes in the camera image.",
+      "ko": "ARKit가 카메라 이미지에서 인식한 신체의 화면 위치 정보입니다.",
+      "sourceHash": "b96e37d367dc1e751c25055ba0bee91c4458284b4d8dc02d4f48cd0be09774d0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[class ARBody2D](arbody2d.md)",
+      "ko": "[class ARBody2D](arbody2d.md)",
+      "sourceHash": "327e5e2c6e30198837695fcb84b5ca06b1cd6cfc167a5d71571778389a2c94a5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "The screen-space representation of a person ARKit recognizes in the camera feed.",
+      "ko": "ARKit가 카메라 피드에서 인식한 사람의 화면 공간 표현입니다.",
+      "sourceHash": "9083d0308e10fa36ee60e3e1a94d19ebf5e8bc2d80ed2ab1fc452d24fdf16001",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var segmentationBuffer: CVPixelBuffer?](arframe/segmentationbuffer.md)",
+      "ko": "[var segmentationBuffer: CVPixelBuffer?](arframe/segmentationbuffer.md)",
+      "sourceHash": "d91e6d5a56e6e5dd1d92b2302f20859c25ec96fb2a400b442b72aaec7cc52453",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "A buffer that contains pixel information identifying the shape of objects from the camera feed that you use to occlude virtual content.",
+      "ko": "가상 콘텐츠를 가리는 데 사용되는 카메라 피드 객체의 형태를 식별하는 픽셀 정보를 포함하는 버퍼입니다.",
+      "sourceHash": "171b82bf98e555948f829aa3a084b5d9f3bada4b1693d2df72275de4af369058",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[ARFrame.SegmentationClass](arframe/segmentationclass.md)",
+      "ko": "[ARFrame.SegmentationClass](arframe/segmentationclass.md)",
+      "sourceHash": "fe0d96b1e927e9771a157d7017a19b1a92d6c757b627a0085cf9d4b0b2aa5c1b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A categorization of a pixel that defines a type of content you use to occlude your app’s virtual content.",
+      "ko": "앱의 가상 콘텐츠를 가리는 데 사용하는 콘텐츠 유형을 정의하는 픽셀의 분류입니다.",
+      "sourceHash": "60fbe661ddf142ce970a872ed0b53b418b381df1883bd2964498f0ff7ef2b8d8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arframe/estimateddepthdata)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arframe/estimateddepthdata)*",
+      "sourceHash": "45fd8852f3030c4b37d3874305064bda3ee6ba8d8ad580d84c70dfce1c4aadd5",
+      "status": "preserved"
+    }
+  ]
+}

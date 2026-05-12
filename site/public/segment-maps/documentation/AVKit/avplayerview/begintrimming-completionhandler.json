@@ -1,0 +1,162 @@
+{
+  "docId": "documentation/AVKit/avplayerview/begintrimming-completionhandler.md",
+  "title": "beginTrimming(completionHandler:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avkit/avplayerview/begintrimming-completionhandler",
+  "segments": [
+    {
+      "id": "seg:heading:begintrimmingcompletionhandler:0000:0001",
+      "source": "beginTrimming(completionHandler:)",
+      "ko": "beginTrimming(completionHandler:)",
+      "sourceHash": "2c7fa9aa853bd8f069cd68ee605797844641b7790a970b318ae6fc102530e02e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:begintrimmingcompletionhandler:0001:0001",
+      "source": "**Framework**: AVKit **Kind**: method",
+      "ko": "**Framework**: AVKit **Kind**: method",
+      "sourceHash": "13a13fd435f140de81e767ebd7c5623120855db836b9e84c16d8bf0dac6b5b58",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:begintrimmingcompletionhandler:0002:0001",
+      "source": "Puts the player view into trimming mode.",
+      "ko": "플레이어 보기를 트리밍 모드로 전환합니다.",
+      "sourceHash": "93488e5aaa4a29386c3b67122068c41cc01644d4e0cd3f3dbc5eb4641e71e8e9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:begintrimmingcompletionhandler:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:begintrimmingcompletionhandler:0004:0001",
+      "source": "macOS 10.9+",
+      "ko": "macOS 10.9+",
+      "sourceHash": "ea7fd68a1169efd58a43f910e0a50ba2367a86a9bb7ffee8a512f04ee4f12758",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc beginTrimming() async -> AVPlayerViewTrimResult\n```",
+      "ko": "```swift\nfunc beginTrimming() async -> AVPlayerViewTrimResult\n```",
+      "sourceHash": "17291187c75f44b46a6eb9ac2e017f02bc2ff7c3a865134193dc070ce97a2df4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Implementing Trimming in a macOS Player](implementing-trimming-in-a-macos-player.md)",
+      "ko": "[Implementing Trimming in a macOS Player](implementing-trimming-in-a-macos-player.md)",
+      "sourceHash": "002d0b15c6ee94c6a0642a6acdfde7484eaa74f1e9884289f665db1296f89425",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "An example implementation of the handler block is as follows:",
+      "ko": "핸들러 블록의 예제 구현은 다음과 같습니다.",
+      "sourceHash": "4ccca065ef44f54d764d05522b8a0fd7b435e06220a82dc2154b830394c9236d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0011:0001",
+      "source": "```swift\n@IBAction func beginTrimming(_ sender: AnyObject) {\n    playerView.beginTrimming { result in\n        if result == .okButton {\n            // user selected Trim button (AVPlayerViewTrimResult.okButton)...\n        } else {\n            // user selected Cancel button (AVPlayerViewTrimResult.cancelButton)...\n        }\n    }\n}\n```",
+      "ko": "```swift\n@IBAction func beginTrimming(_ sender: AnyObject) {\n    playerView.beginTrimming { result in\n        if result == .okButton {\n            // user selected Trim button (AVPlayerViewTrimResult.okButton)...\n        } else {\n            // user selected Cancel button (AVPlayerViewTrimResult.cancelButton)...\n        }\n    }\n}\n```",
+      "sourceHash": "8f98a2485fc9ab1f835225f7622f09434ad65fb0971aaffbeb36ff6c19631319",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0001",
+      "source": "This method blocks until the user selects either the Trim or the Cancel button.",
+      "ko": "이 메서드는 사용자가 Trim 또는 Cancel 버튼 중 하나를 선택할 때까지 블록됩니다.",
+      "sourceHash": "f836ab7c782f79d4171b63f2957d2515243186fd73e04422294ae8d2285b1217",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0013:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0014:0001",
+      "source": "`handler`: The callback the system invokes when the user selects the Trim or Cancel button in the trimming UI. The result passed to the closure indicates whether the user clicked the Trim or Cancel button.",
+      "ko": "`handler`: 트리밍 UI에서 사용자가 Trim 또는 Cancel 버튼을 선택하면 시스템이 호출하는 콜백입니다. 클로저에 전달되는 결과는 사용자가 Trim 또는 Cancel 버튼을 클릭했는지 여부를 나타냅니다.",
+      "sourceHash": "0f2230986e9d4fe24014db8a75db193d3d64906dcb6e99ebf4dfc76f259beafe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0015:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var canBeginTrimming: Bool](avplayerview/canbegintrimming.md)",
+      "ko": "[var canBeginTrimming: Bool](avplayerview/canbegintrimming.md)",
+      "sourceHash": "c07249adcad0676765d7127d428df9dadd90b338de77502217bfd3b4048ad58c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "A Boolean value that indicates whether the player view can begin trimming.",
+      "ko": "플레이어 뷰가 트리밍을 시작할 수 있는지 나타내는 부울 값입니다.",
+      "sourceHash": "32215dd60e6457988844e609da8d4396ccdc061c12df1ce250e6cc135767b74b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[enum AVPlayerViewTrimResult](avplayerviewtrimresult.md)",
+      "ko": "[enum AVPlayerViewTrimResult](avplayerviewtrimresult.md)",
+      "sourceHash": "27ab0a89eeed4d96a0ccb87c2ccb954cbbceb8b25027e2aa8210f226ed6e7146",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Constants that specify an action a user takes when trimming media in a player view.",
+      "ko": "플레이어 보기에서 미디어를 트리밍할 때 사용자가 수행한 동작을 지정하는 상수입니다.",
+      "sourceHash": "e35ce093ec72848a2c06505efc428bc0c1f2365050e4f2c25f1fa9e0844f8907",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avplayerview/begintrimming(completionhandler:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avplayerview/begintrimming(completionhandler:))*",
+      "sourceHash": "20caf07dfebcf0020a66b77f2723c3fbd1a729851bd17112b726ee34c42f2504",
+      "status": "machine_translated"
+    }
+  ]
+}

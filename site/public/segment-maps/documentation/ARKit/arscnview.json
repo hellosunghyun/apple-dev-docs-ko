@@ -1,0 +1,729 @@
+{
+  "docId": "documentation/ARKit/arscnview.md",
+  "title": "ARSCNView",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arscnview",
+  "segments": [
+    {
+      "id": "seg:heading:arscnview:0000:0001",
+      "source": "ARSCNView",
+      "ko": "ARSCNView",
+      "sourceHash": "73b95ddb2c93d617ff3d860fb6b2d9d0aa4d593022f424d9f91d64ef8c12c624",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:arscnview:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: class",
+      "ko": "**Framework**: ARKit **Kind**: class",
+      "sourceHash": "cd2a2f048fbda3c62dc609eaaff263f2176c4a42225cdd27e4a416ceaee5a3f8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:arscnview:0002:0001",
+      "source": "A view that blends virtual 3D content from SceneKit into your augmented reality experience.",
+      "ko": "SceneKit의 가상 3D 콘텐츠를 AR 경험에 결합하는 뷰입니다.",
+      "sourceHash": "d0cecdb97150fc43ec4232d82791882a5012cc4e70bc951a45653cb0264ea8f1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:arscnview:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:arscnview:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:arscnview:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:arscnview:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass ARSCNView\n```",
+      "ko": "```swift\nclass ARSCNView\n```",
+      "sourceHash": "9377e3b3a537086d9823dbdcd51108d81534c6b956adfb57334460ff0bdf8745",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:blockquote:overview:0008:0001",
+      "source": "❗ **Important**: SceneKit is deprecated, use [`RealityKit`](https://developer.apple.com/documentation/RealityKit) instead.",
+      "ko": "❗ **중요**: SceneKit은 더 이상 사용되지 않으므로, [`RealityKit`](https://developer.apple.com/documentation/RealityKit) 대신 사용해야 합니다.",
+      "sourceHash": "9044504a22866fbaf6eeb024052984c17e12733b1d86ee7bd09de2ad5e9b014e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0008:0002",
+      "source": "For more information, see WWDC25 session 288: [`Bring your SceneKit projects to RealityKit`](https://developer.apple.comhttps://developer.apple.com/videos/play/wwdc2025/288/).",
+      "ko": "자세한 내용은 WWDC25 세션 288: [`Bring your SceneKit projects to RealityKit`](https://developer.apple.comhttps://developer.apple.com/videos/play/wwdc2025/288/)를 참고할 수 있습니다.",
+      "sourceHash": "9442b9482d96da8853cbe26d03a8eb01c9df8fef4c7af6b52bee8ee8fff413f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "The [`ARSCNView`](arscnview.md) class provides an easy way to create augmented reality experiences that blend virtual 3D content with a device camera view of the real world.",
+      "ko": "[`ARSCNView`](arscnview.md) 클래스는 가상 3D 콘텐츠를 실세계 카메라 뷰와 결합한 AR 경험을 손쉽게 생성할 수 있는 방법을 제공합니다.",
+      "sourceHash": "b340e6d05ebfde3969c0feeab8221b43cc89c58b8eb7ec7276bbc4ab39c7381d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "When you run the view’s provided [`ARSession`](arsession.md) object:",
+      "ko": "뷰에서 제공되는 [`ARSession`](arsession.md) 객체를 실행하면:",
+      "sourceHash": "a2eacadb624757549383ece9303f7af74f20befd27a490075a939b3d3341cb7d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0001",
+      "source": "The view automatically renders the live video feed from the device camera as the scene background.",
+      "ko": "뷰는 장면 배경으로 장치 카메라의 실시간 비디오 피드를 자동으로 렌더링합니다.",
+      "sourceHash": "421c4bde7352b9809ae232ce67e12aefd964387ae86d16ae6c60e86062a53d56",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0002",
+      "source": "The world coordinate system of the view’s SceneKit scene directly responds to the AR world coordinate system established by the session configuration.",
+      "ko": "뷰의 SceneKit 장면의 월드 좌표계는 세션 구성에서 설정한 AR 월드 좌표계에 직접 반응합니다.",
+      "sourceHash": "7448891c5c3eacf15bfa7891deedbd5d356f483389d6041274899434ee12adf8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0003",
+      "source": "The view automatically moves its SceneKit camera to match the real-world movement of the device.",
+      "ko": "뷰는 장치의 실제 이동에 맞춰 SceneKit 카메라를 자동으로 이동합니다.",
+      "sourceHash": "4b8b7cdbb729189116a3b1af3384f826c0774ddaefc48592cbf9835b6c86a00e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0001",
+      "source": "ARKit automatically matches SceneKit’s coordinate space to the real world, so after you place your app’s virtual content, it maintains the illusion of resting in the real-world as the user moves the device.",
+      "ko": "ARKit는 SceneKit의 좌표 공간을 실세계에 자동으로 정렬하므로, 앱의 가상 콘텐츠를 배치한 뒤에도 사용자가 장치를 이동할 때 실세계 위에 있는 것처럼 보이는 상태를 유지합니다.",
+      "sourceHash": "5586e372e5ec8945f5195c4d6dd17aab57d018d375ade9f4fed30edbba834fc6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0002",
+      "source": "See [`Providing 3D Virtual Content with SceneKit`](providing-3d-virtual-content-with-scenekit.md).",
+      "ko": "[`Providing 3D Virtual Content with SceneKit`](providing-3d-virtual-content-with-scenekit.md)를 참조하세요.",
+      "sourceHash": "7eb0b1d638b993ca0e5a8679247859710fa0591e803f70cec6051c383ef23628",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0012:0001",
+      "source": "You don’t necessarily need to use the [`ARAnchor`](aranchor.md) class to track positions of objects you add to the scene, but by implementing [`ARSCNViewDelegate`](arscnviewdelegate.md) methods, you can add SceneKit content to any anchors that are automatically detected by ARKit.",
+      "ko": "씬에 추가한 객체의 위치를 추적하기 위해 반드시 [`ARAnchor`](aranchor.md) 클래스를 사용할 필요는 없지만, [`ARSCNViewDelegate`](arscnviewdelegate.md) 메서드를 구현하면 ARKit가 자동으로 감지한 앵커에 SceneKit 콘텐츠를 추가할 수 있습니다.",
+      "sourceHash": "23fdda35d5b9f54a72af7cebadb0329b48d573485aa366ca6f77910b2ae380f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0013:0001",
+      "source": "Because ARKit requires Metal, use only Metal features of SceneKit.",
+      "ko": "ARKit는 Metal이 필요하므로 SceneKit의 Metal 기능만 사용해야 합니다.",
+      "sourceHash": "fdcfcb68bb16d7a395790c9aa0e836c4053eb6342f8fbee32e67a8e7b25c78cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0013:0002",
+      "source": "For example:",
+      "ko": "예를 들어:",
+      "sourceHash": "652744a2ab28954bbafd780fd76c15c2bd557594532f907f10ead1989727af95",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0014:0001",
+      "source": "This class supports only [`SCNProgram`](https://developer.apple.com/documentation/SceneKit/SCNProgram) instances with Metal Shading Language code.",
+      "ko": "이 클래스는 Metal Shading Language 코드가 포함된 [`SCNProgram`](https://developer.apple.com/documentation/SceneKit/SCNProgram) 인스턴스만 지원합니다.",
+      "sourceHash": "a5ea41e7f7174d64cfbc0dfda2a53632751fa2c2ac0516260219dc4bbb2465c2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0014:0002",
+      "source": "If you set the [`preferredRenderingAPI`](https://developer.apple.com/documentation/SceneKit/SCNView/Option/preferredRenderingAPI) property to [`SCNRenderingAPI.openGLES2`](https://developer.apple.com/documentation/SceneKit/SCNRenderingAPI/openGLES2), the framework reverts the value to  [`SCNRenderingAPI.metal`](https://developer.apple.com/documentation/SceneKit/SCNRenderingAPI/metal).",
+      "ko": "[`preferredRenderingAPI`](https://developer.apple.com/documentation/SceneKit/SCNView/Option/preferredRenderingAPI) 속성을 [`SCNRenderingAPI.openGLES2`](https://developer.apple.com/documentation/SceneKit/SCNRenderingAPI/openGLES2)로 설정하면, 프레임워크는 값을 [`SCNRenderingAPI.metal`](https://developer.apple.com/documentation/SceneKit/SCNRenderingAPI/metal)로 되돌립니다.",
+      "sourceHash": "36fed7e71351ca31d0c045956f342354d4439886aed92482ff5ac4fd26f6ba53",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0015:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:essentials:0016:0001",
+      "source": "Essentials",
+      "ko": "Essentials",
+      "sourceHash": "98d94f75c7b40b96ad04b4190653038fc4b9cd142b300892b4c7acafdf0c25fe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:essentials:0017:0001",
+      "source": "[Providing 3D Virtual Content with SceneKit](providing-3d-virtual-content-with-scenekit.md)",
+      "ko": "[Providing 3D Virtual Content with SceneKit](providing-3d-virtual-content-with-scenekit.md)",
+      "sourceHash": "da22ca6ce12a615dc036f9a63a357f5c93c09d4c5823fd99bb8a820cd1e0e326",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:essentials:0018:0001",
+      "source": "Use SceneKit to add realistic three-dimensional objects to your AR experience.",
+      "ko": "SceneKit을 사용해 AR 경험에 사실적인 3차원 객체를 추가합니다.",
+      "sourceHash": "44148e01d58c5dfe9590430b23a7d1afc6a17064649ff387ae623354679927fa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:essentials:0019:0001",
+      "source": "[var session: ARSession](arscnview/session.md)",
+      "ko": "[var session: ARSession](arscnview/session.md)",
+      "sourceHash": "5d646a66819183095f0522c049c5607e599b239375271113a54bdc71bfc155ae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:essentials:0020:0001",
+      "source": "The AR session that manages motion tracking and camera image processing for the view’s contents.",
+      "ko": "뷰 콘텐츠의 모션 추적과 카메라 이미지 처리를 관리하는 AR 세션입니다.",
+      "sourceHash": "32b1beffec6e77dac955b8adf7476a002311af09e674e6f8a7504af9904a4254",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:essentials:0021:0001",
+      "source": "[var scene: SCNScene](arscnview/scene.md)",
+      "ko": "[var scene: SCNScene](arscnview/scene.md)",
+      "sourceHash": "13206c4ca170aecaa99c5dfea7168e1d6d2ccd80e1a146199337c2497e787f77",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:essentials:0022:0001",
+      "source": "The SceneKit scene to be displayed in the view.",
+      "ko": "뷰에 표시할 SceneKit 장면입니다.",
+      "sourceHash": "f79445ba3576f5967053ade4738375c9c70b2d6b3fe3a96aeb701e7d6d6670f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:responding-to-ar-updates:0023:0001",
+      "source": "Responding to AR Updates",
+      "ko": "AR 업데이트에 반응하기",
+      "sourceHash": "fab6aca408abdfc09cf1c32d2f5af46932e19f3f29d6b7a4a638820d34b4fbe8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:responding-to-ar-updates:0024:0001",
+      "source": "[var delegate: (any ARSCNViewDelegate)?](arscnview/delegate.md)",
+      "ko": "[var delegate: (any ARSCNViewDelegate)?](arscnview/delegate.md)",
+      "sourceHash": "289be90894d39d5b4c2fb7f366f96b362c52b5d6c4f9c42f0889e7f019d30c05",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:responding-to-ar-updates:0025:0001",
+      "source": "An object you provide to mediate synchronization of the view’s AR scene information with SceneKit content.",
+      "ko": "뷰의 AR 장면 정보를 SceneKit 콘텐츠와 동기화하도록 중재하는 객체입니다.",
+      "sourceHash": "c9adba5c5649a92aef226cb089b1f1074ee1db8b9c339adf5d6d75f4d79f2c9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:responding-to-ar-updates:0026:0001",
+      "source": "[protocol ARSCNViewDelegate](arscnviewdelegate.md)",
+      "ko": "[protocol ARSCNViewDelegate](arscnviewdelegate.md)",
+      "sourceHash": "54a5a32913527ecb95f5ffb2407b4bfa03b0d93dbff1b97b7722009d8e4d5b79",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:responding-to-ar-updates:0027:0001",
+      "source": "Methods you can implement to mediate the automatic synchronization of SceneKit content with an AR session.",
+      "ko": "SceneKit 콘텐츠와 AR 세션 간 자동 동기화를 중재하기 위해 구현할 수 있는 메서드입니다.",
+      "sourceHash": "77372c2d9aab6722dcdc9e9f061986d46afde99e1bb3f60e5751d3fb97eaed33",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:finding-real-world-surfaces:0028:0001",
+      "source": "Finding Real-World Surfaces",
+      "ko": "실세계 표면 찾기",
+      "sourceHash": "5fb6105e49c053436d7570ff6f60fdfe760798a41b3adb282df740f8a4836d0c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:finding-real-world-surfaces:0029:0001",
+      "source": "[func hitTest(CGPoint, types: ARHitTestResult.ResultType) -> [ARHitTestResult]](arscnview/hittest(_:types:).md)",
+      "ko": "[func hitTest(CGPoint, types: ARHitTestResult.ResultType) -> [ARHitTestResult]](arscnview/hittest(_:types:).md)",
+      "sourceHash": "b4c52935c46e26dc06e7cfbad834628c100fd56bbac94beabdd8b250ef58d2eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:finding-real-world-surfaces:0030:0001",
+      "source": "Searches for real-world objects or AR anchors in the captured camera image corresponding to a point in the SceneKit view.",
+      "ko": "캡처된 카메라 이미지에서 SceneKit 뷰의 점에 해당하는 실세계 객체 또는 AR 앵커를 검색합니다.",
+      "sourceHash": "141b56c7d24cd516b5bb609dd8769941d5b701aff7b186a1e7fdc1cec8d8fa9e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:finding-real-world-surfaces:0031:0001",
+      "source": "[func raycastQuery(from: CGPoint, allowing: ARRaycastQuery.Target, alignment: ARRaycastQuery.TargetAlignment) -> ARRaycastQuery?](arscnview/raycastquery(from:allowing:alignment:).md)",
+      "ko": "[func raycastQuery(from: CGPoint, allowing: ARRaycastQuery.Target, alignment: ARRaycastQuery.TargetAlignment) -> ARRaycastQuery?](arscnview/raycastquery(from:allowing:alignment:).md)",
+      "sourceHash": "edb78f52759a91ae4ae9ad80c3879599bda269144b32c4db008ea32f8bbb8808",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:finding-real-world-surfaces:0032:0001",
+      "source": "Creates a raycast query that originates from a point on the view, aligned with the center of the camera’s field of view.",
+      "ko": "뷰의 한 점에서 시작되어 카메라 시야 중심과 정렬되는 raycast 쿼리를 생성합니다.",
+      "sourceHash": "58169e9c1b22c88727db23323444e620e8af4a3fea43b293a085978a57a0245e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:mapping-content-to-real-world-positions:0033:0001",
+      "source": "Mapping Content to Real-World Positions",
+      "ko": "콘텐츠를 실제 월드 위치에 매핑",
+      "sourceHash": "83f6ab9f554ab79cec555d96de9e9296781c3d1b8e5ca826a2676d5ba7b65578",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:mapping-content-to-real-world-positions:0034:0001",
+      "source": "[func anchor(for: SCNNode) -> ARAnchor?](arscnview/anchor(for:).md)",
+      "ko": "[func anchor(for: SCNNode) -> ARAnchor?](arscnview/anchor(for:).md)",
+      "sourceHash": "4b1f01f8d0463beef99a3a4e2ac23e620416c5bfa5e3b9fbdb71b79134701a5e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:mapping-content-to-real-world-positions:0035:0001",
+      "source": "Returns the AR anchor associated with the specified SceneKit node, if any.",
+      "ko": "지정된 SceneKit 노드에 연결된 AR anchor가 있으면 반환합니다.",
+      "sourceHash": "a4f104b322334f365eb6465df6957becd27bd64780c192e4dcb0335d464fd2be",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:mapping-content-to-real-world-positions:0036:0001",
+      "source": "[func node(for: ARAnchor) -> SCNNode?](arscnview/node(for:).md)",
+      "ko": "[func node(for: ARAnchor) -> SCNNode?](arscnview/node(for:).md)",
+      "sourceHash": "58bb0d2ff8ee5afd4dabf35947e60e18bbd7c41039d58611292b4f1d0ecf5da8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:mapping-content-to-real-world-positions:0037:0001",
+      "source": "Returns the SceneKit node associated with the specified AR anchor, if any.",
+      "ko": "지정된 AR anchor에 연결된 SceneKit 노드가 있으면 반환합니다.",
+      "sourceHash": "5d9b697be241614de80493c5de44af898b212fdbda5ed9c6a6e4198ec3caec6a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:mapping-content-to-real-world-positions:0038:0001",
+      "source": "[func unprojectPoint(CGPoint, ontoPlane: simd_float4x4) -> simd_float3?](arscnview/unprojectpoint(_:ontoplane:).md)",
+      "ko": "[func unprojectPoint(CGPoint, ontoPlane: simd_float4x4) -> simd_float3?](arscnview/unprojectpoint(_:ontoplane:).md)",
+      "sourceHash": "bdda61437ff2abbe255f84d3813c701cb9370df20f36035414b2f2c87e405058",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:mapping-content-to-real-world-positions:0039:0001",
+      "source": "Returns the projection of a point from 2D view onto a plane in the 3D world space detected by ARKit.",
+      "ko": "ARKit에서 감지한 3D 월드 공간의 평면에 2D 뷰의 점을 투영한 값을 반환합니다.",
+      "sourceHash": "f95d6eaa627e328674a5093d6c2be5315c13ea1d113d676981f09a530cd06793",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:managing-lighting:0040:0001",
+      "source": "Managing Lighting",
+      "ko": "조명 관리",
+      "sourceHash": "9da497034e64fbf356d2937d3bff03791390afd2326849fb05808a47e5fbd87e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-lighting:0041:0001",
+      "source": "[var automaticallyUpdatesLighting: Bool](arscnview/automaticallyupdateslighting.md)",
+      "ko": "[var automaticallyUpdatesLighting: Bool](arscnview/automaticallyupdateslighting.md)",
+      "sourceHash": "6012e645ee231550c4d5c186aedbbbaac13dff240229a2c86f3ba2040e54e2ec",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-lighting:0042:0001",
+      "source": "A Boolean value that specifies whether ARKit creates and updates SceneKit lights in the view’s scene.",
+      "ko": "뷰의 scene에서 SceneKit 조명을 생성하고 업데이트할지를 지정하는 부울 값입니다.",
+      "sourceHash": "efb1abec81846e4a5c842bdd43a1553368187e2ed3f92983621fad6acd461333",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:debugging-ar-display:0043:0001",
+      "source": "Debugging AR Display",
+      "ko": "AR 표시 디버깅",
+      "sourceHash": "2fb5a478f3a054a30ae82270b1a194199f02e3da6374d52d6646181a24e53275",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:debugging-ar-display:0044:0001",
+      "source": "[typealias ARSCNDebugOptions](arscndebugoptions.md)",
+      "ko": "[typealias ARSCNDebugOptions](arscndebugoptions.md)",
+      "sourceHash": "781aac8d4d8ab7f3cabc27f1d0eefbb786222e0bb22fd7147afbc8dbdf781e25",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:debugging-ar-display:0045:0001",
+      "source": "Options for drawing overlay content to aid debugging of AR tracking in a SceneKit view.",
+      "ko": "SceneKit 뷰에서 AR 추적 디버깅을 돕기 위해 오버레이 콘텐츠를 그리기 위한 옵션입니다.",
+      "sourceHash": "87e35889e71da0a1882974033ce96ea094ff83167756575956530e55acf56b4e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:managing-rendering-effects:0046:0001",
+      "source": "Managing Rendering Effects",
+      "ko": "렌더링 효과 관리",
+      "sourceHash": "34223dbe6042df746e8593563c79748a48d81b86db98832f72c7977d2642618f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-rendering-effects:0047:0001",
+      "source": "[var rendersMotionBlur: Bool](arscnview/rendersmotionblur.md)",
+      "ko": "[var rendersMotionBlur: Bool](arscnview/rendersmotionblur.md)",
+      "sourceHash": "5e00ad32369ff3c8d0fccbdc024aebfb6f11df6f8a20d534767bc15bee6e433a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-rendering-effects:0048:0001",
+      "source": "Determines whether the view renders motion blur.",
+      "ko": "뷰가 모션 블러를 렌더링하는지 여부를 결정합니다.",
+      "sourceHash": "e87b302cb33079f7a7bf46f4925e3a65808d9f9da355f56df5f0546dbba249c7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-rendering-effects:0049:0001",
+      "source": "[var rendersCameraGrain: Bool](arscnview/renderscameragrain.md)",
+      "ko": "[var rendersCameraGrain: Bool](arscnview/renderscameragrain.md)",
+      "sourceHash": "3b69d0863e407dd498e6b8dc09000d0eb6e922c48dfd9cc93a54cca0a553c703",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-rendering-effects:0050:0001",
+      "source": "A flag that determines whether SceneKit applies image noise characteristics to your app’s virtual content.",
+      "ko": "SceneKit이 앱의 가상 콘텐츠에 이미지 노이즈 특성을 적용할지 여부를 결정하는 플래그입니다.",
+      "sourceHash": "06dae46971af6b5f0786427ead5907652061d13e8b5c2e340d1e6f1f591fae85",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0051:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0052:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0053:0001",
+      "source": "[SCNView](../SceneKit/SCNView.md)",
+      "ko": "[SCNView](../SceneKit/SCNView.md)",
+      "sourceHash": "e4ed58f7c80ca518100e4afcae11c80a0c3cfc8c202f197ae57ccc860ca64c49",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0054:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0001",
+      "source": "[ARSessionProviding](arsessionproviding.md)",
+      "ko": "[ARSessionProviding](arsessionproviding.md)",
+      "sourceHash": "761ba41e9cda94103db1bbded5571a43d6d77d5928bf4a5cf5d55027014f026a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0002",
+      "source": "[CALayerDelegate](../QuartzCore/CALayerDelegate.md)",
+      "ko": "[CALayerDelegate](../QuartzCore/CALayerDelegate.md)",
+      "sourceHash": "23ae8af101394f7708672d8f4d037fb0efbf8b056ed50c8266a3400a7191a2f9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0003",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0004",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0005",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0006",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0007",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0008",
+      "source": "[NSCoding](../Foundation/NSCoding.md)",
+      "ko": "[NSCoding](../Foundation/NSCoding.md)",
+      "sourceHash": "af607052cedc51e60ff863609cb573f7fdea5ddf489103c8b59416e9aa32e36a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0009",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0010",
+      "source": "[NSTouchBarProvider](../AppKit/NSTouchBarProvider.md)",
+      "ko": "[NSTouchBarProvider](../AppKit/NSTouchBarProvider.md)",
+      "sourceHash": "9dfa71bff55736eefa318deb22be5caf2296f09da678d4ebc3ad1a417e23f402",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0011",
+      "source": "[SceneKit.SCNSceneRenderer](doc://com.apple.arkit/objc(pl)SCNSceneRenderer)",
+      "ko": "[SceneKit.SCNSceneRenderer](doc://com.apple.arkit/objc(pl)SCNSceneRenderer)",
+      "sourceHash": "47e24dda12b47f63a5fba313038bf9f15b5b5585fba9ad0d2ba972233a9c731b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0012",
+      "source": "[SceneKit.SCNTechniqueSupport](doc://com.apple.arkit/objc(pl)SCNTechniqueSupport)",
+      "ko": "[SceneKit.SCNTechniqueSupport](doc://com.apple.arkit/objc(pl)SCNTechniqueSupport)",
+      "sourceHash": "81cad63eb615d8fa2e9b7b2e00489432d33942ec5c4da522f1135bf26cb0e39e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0013",
+      "source": "[UIAccessibilityIdentification](../UIKit/UIAccessibilityIdentification.md)",
+      "ko": "[UIAccessibilityIdentification](../UIKit/UIAccessibilityIdentification.md)",
+      "sourceHash": "3efcb02643db2a17d6aed73fb2754946f09a44b3faa2d4b41236af008e1eeb1d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0014",
+      "source": "[UIActivityItemsConfigurationProviding](../UIKit/UIActivityItemsConfigurationProviding.md)",
+      "ko": "[UIActivityItemsConfigurationProviding](../UIKit/UIActivityItemsConfigurationProviding.md)",
+      "sourceHash": "6da50384a148d0b45c69b9339a63d7ed41f484ae636fe242a1a0e1f45d7a0057",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0015",
+      "source": "[UIAppearance](../UIKit/UIAppearance.md)",
+      "ko": "[UIAppearance](../UIKit/UIAppearance.md)",
+      "sourceHash": "f6d850dee22408321a5f222092a2dff6774eba549c16ae2f73fefb81a09e1e60",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0016",
+      "source": "[UICoordinateSpace](../UIKit/UICoordinateSpace.md)",
+      "ko": "[UICoordinateSpace](../UIKit/UICoordinateSpace.md)",
+      "sourceHash": "22fb554efb7e4a220db6407a209f8fb16d527f73a5a345b064cdc883df0ec44d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0017",
+      "source": "[UIDynamicItem](../UIKit/UIDynamicItem.md)",
+      "ko": "[UIDynamicItem](../UIKit/UIDynamicItem.md)",
+      "sourceHash": "a3a8317290b721ee9adabda57a2c31590a260b65e02ed9887041ca074457da2e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0018",
+      "source": "[UIFocusEnvironment](../UIKit/UIFocusEnvironment.md)",
+      "ko": "[UIFocusEnvironment](../UIKit/UIFocusEnvironment.md)",
+      "sourceHash": "b23439c88a64d088ef07fb2dd3d78208399ba0991ebac64a336b6f61045c8c24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0019",
+      "source": "[UIFocusItem](../UIKit/UIFocusItem.md)",
+      "ko": "[UIFocusItem](../UIKit/UIFocusItem.md)",
+      "sourceHash": "438fedb5db746132c9fad4215b5ce78d729b6d8ad281ebc3e9673f67766eede8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0020",
+      "source": "[UIFocusItemContainer](../UIKit/UIFocusItemContainer.md)",
+      "ko": "[UIFocusItemContainer](../UIKit/UIFocusItemContainer.md)",
+      "sourceHash": "47021e813f9f0503a18eed55e1bac1844bd479628e7da28416e905baabf1cc07",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0021",
+      "source": "[UIKit.UIAppearanceContainer](doc://com.apple.arkit/objc(pl)UIAppearanceContainer)",
+      "ko": "[UIKit.UIAppearanceContainer](doc://com.apple.arkit/objc(pl)UIAppearanceContainer)",
+      "sourceHash": "d6b920076b6888c9f17caa6e67392d9f2d07cf4617bbfdfc84fa9f2bc71f37aa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0022",
+      "source": "[UILargeContentViewerItem](../UIKit/UILargeContentViewerItem.md)",
+      "ko": "[UILargeContentViewerItem](../UIKit/UILargeContentViewerItem.md)",
+      "sourceHash": "064b76dddf7939dc1c6401ac65a886c138e0304d477f2e8e8e806fdb4be9bc9b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0023",
+      "source": "[UIPasteConfigurationSupporting](../UIKit/UIPasteConfigurationSupporting.md)",
+      "ko": "[UIPasteConfigurationSupporting](../UIKit/UIPasteConfigurationSupporting.md)",
+      "sourceHash": "813eefbe03e89ced9174b1580d4703092d29ab1ebeebb562041059c6ffcdb444",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0024",
+      "source": "[UIPopoverPresentationControllerSourceItem](../UIKit/UIPopoverPresentationControllerSourceItem.md)",
+      "ko": "[UIPopoverPresentationControllerSourceItem](../UIKit/UIPopoverPresentationControllerSourceItem.md)",
+      "sourceHash": "93e0f286eeb8730339e2c2360bab314e2499281af4add181e74583e5e1747444",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0025",
+      "source": "[UIResponderStandardEditActions](../UIKit/UIResponderStandardEditActions.md)",
+      "ko": "[UIResponderStandardEditActions](../UIKit/UIResponderStandardEditActions.md)",
+      "sourceHash": "f87cb2422bade02d44a2dfe76b8635eb7a3b276f8c58a3fd979e57b413a88d44",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0026",
+      "source": "[UITraitChangeObservable](../UIKit/UITraitChangeObservable-67e94.md)",
+      "ko": "[UITraitChangeObservable](../UIKit/UITraitChangeObservable-67e94.md)",
+      "sourceHash": "b95bf76aa3f174ab593767424085f297f694ecdcf0cd5652103a78bb253a3c3c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0027",
+      "source": "[UITraitEnvironment](../UIKit/UITraitEnvironment.md)",
+      "ko": "[UITraitEnvironment](../UIKit/UITraitEnvironment.md)",
+      "sourceHash": "5ba9bc4969ede92f6885617a66b278e81466d41bd53277d55a664478437100e5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0055:0028",
+      "source": "[UIUserActivityRestoring](../UIKit/UIUserActivityRestoring.md)",
+      "ko": "[UIUserActivityRestoring](../UIKit/UIUserActivityRestoring.md)",
+      "sourceHash": "bdf2cd719048e157f3a777b7c6cb5cfa951647cf53367651bfa6dd36a25d0fa6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0056:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0057:0001",
+      "source": "[struct RealityView](../RealityKit/RealityView.md)",
+      "ko": "[struct RealityView](../RealityKit/RealityView.md)",
+      "sourceHash": "7e99511635fdc8bf53445d4a96b3eb2979b7110eb5bbe255eea8ab4da79e778a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0058:0001",
+      "source": "A view that contains RealityKit content.",
+      "ko": "RealityKit 콘텐츠를 포함하는 뷰입니다.",
+      "sourceHash": "5fcda9e115b3f991c03e449a56eef7d4029568499fdabfb0aff7373e8ba81a65",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0059:0001",
+      "source": "[class ARView](../RealityKit/ARView.md)",
+      "ko": "[class ARView](../RealityKit/ARView.md)",
+      "sourceHash": "e50f75c958c936987e364907dc8c0ef7dfe53b86bd44b94e6768ae929caf7f77",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0060:0001",
+      "source": "A view that enables you to display an AR experience with RealityKit.",
+      "ko": "RealityKit으로 AR 경험을 표시할 수 있는 뷰입니다.",
+      "sourceHash": "51c5992d59bbbfcf75ec6069569c94ceca811dd5a6f820cdef9a0a3f71b33cad",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0061:0001",
+      "source": "[class ARSKView](arskview.md)",
+      "ko": "[class ARSKView](arskview.md)",
+      "sourceHash": "b417d48596911f6b5e3fa51193a5c8c226fec63de4548da7e1dbdff037ac8c30",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0062:0001",
+      "source": "A view that blends virtual 2D content from SpriteKit into the 3D space of an augmented reality experience.",
+      "ko": "SpriteKit의 가상 2D 콘텐츠를 증강 현실 경험의 3D 공간에 결합하는 뷰입니다.",
+      "sourceHash": "e695b5e05361fc45e53505279261962ed22c758d738562e317a8c38859e588bd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0063:0001",
+      "source": "[class ARCoachingOverlayView](arcoachingoverlayview.md)",
+      "ko": "[class ARCoachingOverlayView](arcoachingoverlayview.md)",
+      "sourceHash": "1546f4266a018d31e273b952f9dbb42f2997ae651167019af3d8fa0e78d233f0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0064:0001",
+      "source": "A view that displays standardized onboarding instructions to direct users toward a specific goal.",
+      "ko": "특정 목표를 향해 사용자를 안내하는 표준 온보딩 안내를 표시하는 뷰입니다.",
+      "sourceHash": "218e6ccab831904e1564ffe2017d9eb5e409917579bce6201c0c7b96aa47a61e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0065:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0066:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arscnview)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arscnview)*",
+      "sourceHash": "5de08e24df2fd0ebd3dd62620d7d126ec51634b384fae257cf67c0bd73a02e97",
+      "status": "preserved"
+    }
+  ]
+}

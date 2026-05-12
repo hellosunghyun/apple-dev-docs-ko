@@ -1,0 +1,127 @@
+{
+  "docId": "documentation/ARKit/arscnview/raycastquery-fromallowingalignment.md",
+  "title": "raycastQuery(from:allowing:alignment:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arscnview/raycastquery-fromallowingalignment",
+  "segments": [
+    {
+      "id": "seg:heading:raycastqueryfromallowingalignment:0000:0001",
+      "source": "raycastQuery(from:allowing:alignment:)",
+      "ko": "raycastQuery(from:allowing:alignment:)",
+      "sourceHash": "ef085cacb8fe16a1ccdcae6ab2f399a57ff798cd620fb33e65d15901da693072",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:raycastqueryfromallowingalignment:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: method",
+      "ko": "**Framework**: ARKit **Kind**: method",
+      "sourceHash": "9b335dd0cadec1f426ce27810957dcda749fe1d5008130ce607d61fcd8b52bea",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:raycastqueryfromallowingalignment:0002:0001",
+      "source": "Creates a raycast query that originates from a point on the view, aligned with the center of the camera’s field of view.",
+      "ko": "뷰의 한 지점에서 시작되고 카메라 시야의 중심과 정렬되는 raycast 쿼리를 생성합니다.",
+      "sourceHash": "58169e9c1b22c88727db23323444e620e8af4a3fea43b293a085978a57a0245e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:raycastqueryfromallowingalignment:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:raycastqueryfromallowingalignment:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:raycastqueryfromallowingalignment:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:raycastqueryfromallowingalignment:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc raycastQuery(from point: CGPoint, allowing target: ARRaycastQuery.Target, alignment: ARRaycastQuery.TargetAlignment) -> ARRaycastQuery?\n```",
+      "ko": "```swift\nfunc raycastQuery(from point: CGPoint, allowing target: ARRaycastQuery.Target, alignment: ARRaycastQuery.TargetAlignment) -> ARRaycastQuery?\n```",
+      "sourceHash": "07f01f24f756c2d75d702e309f8c3cfc274798b66d85f0c19199447223d86294",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "When you call this function, ARKit creates a ray that extends in the positive z-direction from the argument screen space point, to determine if any of the argument targets exist in the physical environment anywhere along the ray.",
+      "ko": "이 함수를 호출하면 ARKit는 인수로 지정한 화면 공간 지점에서 양의 z축 방향으로 확장되는 광선을 생성해, 물리적 환경에서 광선 상에 인수로 지정한 대상이 있는지 확인합니다.",
+      "sourceHash": "1a51554d3701bb7a6ccc8f0568f7a117d7789ca2f95b3b4420163290291769cd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "If so, ARKit returns a 3D position where the ray intersects the target.",
+      "ko": "대상이 존재하면 ARKit는 광선이 대상과 교차하는 3D 위치를 반환합니다.",
+      "sourceHash": "95f813d20d8576f4adc212e571c661aacaa48ccb40c13d2e6ceac3292a23da4f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[func hitTest(CGPoint, types: ARHitTestResult.ResultType) -> [ARHitTestResult]](arscnview/hittest(_:types:).md)",
+      "ko": "[func hitTest(CGPoint, types: ARHitTestResult.ResultType) -> [ARHitTestResult]](avaudiorecorderdelegate/audiorecorderendinterruption(_:).md)",
+      "sourceHash": "b4c52935c46e26dc06e7cfbad834628c100fd56bbac94beabdd8b250ef58d2eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "Searches for real-world objects or AR anchors in the captured camera image corresponding to a point in the SceneKit view.",
+      "ko": "SceneKit 뷰의 한 점에 해당하는 캡처된 카메라 이미지에서 실제 환경 객체 또는 AR 앵커를 검색합니다.",
+      "sourceHash": "141b56c7d24cd516b5bb609dd8769941d5b701aff7b186a1e7fdc1cec8d8fa9e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0012:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arscnview/raycastquery(from:allowing:alignment:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arscnview/raycastquery(from:allowing:alignment:))*",
+      "sourceHash": "2b7f10554d450160546be95d6fb2a33abefe355f02fa250013c2a3b2997e443b",
+      "status": "machine_translated"
+    }
+  ]
+}

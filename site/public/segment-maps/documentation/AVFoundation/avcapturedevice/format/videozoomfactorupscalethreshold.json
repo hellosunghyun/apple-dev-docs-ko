@@ -1,0 +1,204 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedevice/format/videozoomfactorupscalethreshold.md",
+  "title": "videoZoomFactorUpscaleThreshold",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedevice/format/videozoomfactorupscalethreshold",
+  "segments": [
+    {
+      "id": "seg:heading:videozoomfactorupscalethreshold:0000:0001",
+      "source": "videoZoomFactorUpscaleThreshold",
+      "ko": "videoZoomFactorUpscaleThreshold",
+      "sourceHash": "2eb451ce96aff34d4e58d85afe117637135aa33f1f37611f1aae11b50fae0bcd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:videozoomfactorupscalethreshold:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:videozoomfactorupscalethreshold:0002:0001",
+      "source": "A threshold at which the system upscales pixel data.",
+      "ko": "시스템이 픽셀 데이터를 업스케일링하는 임계값입니다.",
+      "sourceHash": "6939f3a3d409cff68a1f7d84b4960a28ca8b97e3129ccba21c99680c6c799d82",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:videozoomfactorupscalethreshold:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:videozoomfactorupscalethreshold:0004:0001",
+      "source": "iOS 7.0+",
+      "ko": "iOS 7.0+",
+      "sourceHash": "1ceb179e72300483bbe4de83f94fa14777f1aa4ad49f5b26a004a90764f51fe7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:videozoomfactorupscalethreshold:0004:0002",
+      "source": "iPadOS 7.0+",
+      "ko": "iPadOS 7.0+",
+      "sourceHash": "1f72093de273c2b8a1b0f4acad220b3881241f056b2b2168b48b64219a2708c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:videozoomfactorupscalethreshold:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:videozoomfactorupscalethreshold:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar videoZoomFactorUpscaleThreshold: CGFloat { get }\n```",
+      "ko": "```swift\nvar videoZoomFactorUpscaleThreshold: CGFloat { get }\n```",
+      "sourceHash": "52e414ff37f503088579f3a5455feadff5fb8d3fcea5d4f4cd171945e2ec0c80",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "The device achieves a zoom effect by cropping around the center of the image captured by the sensor.",
+      "ko": "기기는 센서로 캡처한 이미지의 중심을 기준으로 잘라냄으로써 줌 효과를 구현합니다.",
+      "sourceHash": "6d74d48099a6057c7f0fab609b254ce0075eb11e02f1d48c244a845cb29270df",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "At low zoom factors, the cropped images is equal to or larger than the output size.",
+      "ko": "낮은 줌 배율에서는 잘린 이미지 크기가 출력 크기와 같거나 더 큽니다.",
+      "sourceHash": "bd72e6cf790ae98aa101909f423c3ee7388c69b4773e36ab2889433141c987b2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "At higher zoom factors, the device must scale the cropped image up to the output size, resulting in a loss of image quality.",
+      "ko": "더 높은 줌 배율에서는 기기가 잘린 이미지를 출력 크기로 확대해야 하므로 이미지 품질이 저하됩니다.",
+      "sourceHash": "5b1231146dcfcf9fa5987f0a666eb561289542e00fa5054052ace7919eae9656",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0004",
+      "source": "This property indicates the factors at which upscaling occurs.",
+      "ko": "이 속성은 업스케일링이 발생하는 배율을 나타냅니다.",
+      "sourceHash": "b4cc93de065c9a9385d05c552cab60738591b18fa5b533e387576ca9d81e3e07",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[var systemRecommendedVideoZoomRange: ClosedRange<CGFloat>?](avcapturedevice/format/systemrecommendedvideozoomrange.md)",
+      "ko": "[var systemRecommendedVideoZoomRange: ClosedRange<CGFloat>?](avcapturedevice/format/systemrecommendedvideozoomrange.md)",
+      "sourceHash": "f21147cf4b68d14919a920c31ae26c06c20360c07efa2e57dcc1d46f321b6a73",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "The system’s recommended zoom range for this device format.",
+      "ko": "이 디바이스 형식에 대해 시스템이 권장하는 줌 범위입니다.",
+      "sourceHash": "c5c54b92f128a05e9f1f1babf09f35db818450949ee1bc6d7ed7a3aa76ce47f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var videoMaxZoomFactor: CGFloat](avcapturedevice/format/videomaxzoomfactor.md)",
+      "ko": "[var videoMaxZoomFactor: CGFloat](avcapturedevice/format/videomaxzoomfactor.md)",
+      "sourceHash": "5695120221b8407b6cddd320de1bd9de60016150c14fd833889b3fe2aa41eb03",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "A maximum zoom factor the format allows.",
+      "ko": "형식에서 허용되는 최대 줌 배율입니다.",
+      "sourceHash": "ccd5686e864456b754ba7870dea3daab1bcf7816d73559f7ff48c94940a8a357",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var secondaryNativeResolutionZoomFactors: [CGFloat]](avcapturedevice/format/secondarynativeresolutionzoomfactors.md)",
+      "ko": "[var secondaryNativeResolutionZoomFactors: [CGFloat]](avcapturedevice/format/secondarynativeresolutionzoomfactors.md)",
+      "sourceHash": "02bcf3494a06755c360b7691ce1230bfb3b697b2d258de0dd73c05e17ed9fb12",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "The zoom factors at which this device transitions to secondary native resolution modes.",
+      "ko": "이 디바이스가 보조 기본 해상도 모드로 전환되는 줌 배율입니다.",
+      "sourceHash": "c2ef85c69790728f65f49da7012e83bce31ca36c67f527f68a67503b2e86e54c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var supportedVideoZoomRangesForDepthDataDelivery: [ClosedRange<CGFloat>]](avcapturedevice/format/supportedvideozoomrangesfordepthdatadelivery.md)",
+      "ko": "[var supportedVideoZoomRangesForDepthDataDelivery: [ClosedRange<CGFloat>]](avcapturedevice/isflashmodesupported(_:).md)",
+      "sourceHash": "d44e2bc767b0649940481fdbf357511b845d97683ac07eb729de959c195075b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "The zoom ranges that support the delivery of depth data.",
+      "ko": "깊이 데이터 전달을 지원하는 줌 범위입니다.",
+      "sourceHash": "ce2e795b0617a08802a99b0322c6d27ddfd3a3ad5e14b37e674bdfa7ce06cb01",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var zoomFactorsOutsideOfVideoZoomRangesForDepthDeliverySupported: Bool](avcapturedevice/format/zoomfactorsoutsideofvideozoomrangesfordepthdeliverysupported.md)",
+      "ko": "[var zoomFactorsOutsideOfVideoZoomRangesForDepthDeliverySupported: Bool](avcapturedevice/format/zoomfactorsoutsideofvideozoomrangesfordepthdeliverysupported.md)",
+      "sourceHash": "b7402a2256979e18a01b9fd46b602a3cd08c40412972b11cbf0da272b1568539",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A Boolean value that indicates whether the format supports zoom factors outside the range supported for depth delivery.",
+      "ko": "형식이 깊이 전달에 지원되는 범위를 벗어나는 줌 배율을 지원하는지 나타내는 불리언 값입니다.",
+      "sourceHash": "55445da5a09e2dce400f0023349e796a4a066503d6a7babff5e5f1a94a36b006",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/format/videozoomfactorupscalethreshold)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/format/videozoomfactorupscalethreshold)*",
+      "sourceHash": "49d54d6763e471024fcc1fc76a92c929f059fcc0a7723ebdf1b14c8104522c51",
+      "status": "preserved"
+    }
+  ]
+}

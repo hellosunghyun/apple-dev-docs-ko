@@ -1,0 +1,519 @@
+{
+  "docId": "documentation/AVFAudio/avspeechsynthesisvoice.md",
+  "title": "AVSpeechSynthesisVoice",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avspeechsynthesisvoice",
+  "segments": [
+    {
+      "id": "seg:heading:avspeechsynthesisvoice:0000:0001",
+      "source": "AVSpeechSynthesisVoice",
+      "ko": "AVSpeechSynthesisVoice",
+      "sourceHash": "1166d93a679278b3ae0807a15e8454f736a393fda314f3ca9c5a9b94b3537bac",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avspeechsynthesisvoice:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avspeechsynthesisvoice:0002:0001",
+      "source": "A distinct voice for use in speech synthesis.",
+      "ko": "음성 합성에서 사용할 수 있는 고유한 음성입니다.",
+      "sourceHash": "405717ad9581bf07495f4da32f26e4a69ec4498491fa8f5890c988b201beb6e0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avspeechsynthesisvoice:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisvoice:0004:0001",
+      "source": "iOS 7.0+",
+      "ko": "iOS 7.0+",
+      "sourceHash": "1ceb179e72300483bbe4de83f94fa14777f1aa4ad49f5b26a004a90764f51fe7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisvoice:0004:0002",
+      "source": "iPadOS 7.0+",
+      "ko": "iPadOS 7.0+",
+      "sourceHash": "1f72093de273c2b8a1b0f4acad220b3881241f056b2b2168b48b64219a2708c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisvoice:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisvoice:0004:0004",
+      "source": "macOS 10.14+",
+      "ko": "macOS 10.14+",
+      "sourceHash": "627f17252db61b06e5a3a3bd4b059e0908f48979a7960122571777674bb41473",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisvoice:0004:0005",
+      "source": "tvOS ?+",
+      "ko": "tvOS ?+",
+      "sourceHash": "e197a5f363006a02e522e5f07b216c8e4a4e9a6a147fcb43f9877e395882682a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisvoice:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisvoice:0004:0007",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVSpeechSynthesisVoice\n```",
+      "ko": "```swift\nclass AVSpeechSynthesisVoice\n```",
+      "sourceHash": "23f21228b2327461755f8080839c5ab5e7bbf1beed96d235229b17cc6083f62c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "The primary factors that distinguish a voice in speech synthesis are language, locale, and quality.",
+      "ko": "This class is a subclass of [`URLSessionTask`](https://developer.apple.com/documentation/Foundation/URLSessionTask) that you use to download HTTP Live Streaming assets.",
+      "sourceHash": "8bbc42986eea17cfde32cf3081e077d0acb10750aa75a0077d9ee3f1b2474b98",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "Create an instance of `AVSpeechSynthesisVoice` to select a voice that’s appropriate for the text and the language, and set it as the value of the [`voice`](avspeechutterance/voice.md) property on an [`AVSpeechUtterance`](avspeechutterance.md) instance.",
+      "ko": "You create instances of this class by calling [`makeAssetDownloadTask(downloadConfiguration:)`](avassetdownloadurlsession/makeassetdownloadtask(downloadconfiguration:).md) on the download session.",
+      "sourceHash": "ea52d3e325c327e72c57533b9382bbf3388a6cd5674e8defe6b3a17e4b94008f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0003",
+      "source": "The voice may optionally reflect a local variant of the language, such as Australian or South African English.",
+      "ko": "해당 음성은 Australian 또는 South African English와 같은 언어의 지역 변종을 선택적으로 반영할 수 있습니다.",
+      "sourceHash": "aeeb2bbda4033fa8775a68a8050b9c6f1d13fe9006a3f7e463ebf58f4d2c800f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0004",
+      "source": "For a complete list of supported languages, see [`Languages Supported by VoiceOver`](https://developer.apple.comhttps://support.apple.com/en-us/HT206175).",
+      "ko": "지원되는 언어의 전체 목록은 [`Languages Supported by VoiceOver`](https://developer.apple.comhttps://support.apple.com/en-us/HT206175)에서 확인할 수 있습니다.",
+      "sourceHash": "b1054b8e882be23e9266cbcc91c58c96262311671af49a268a14dc5c3c7bb31c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:obtaining-voices:0010:0001",
+      "source": "Obtaining voices",
+      "ko": "음성 가져오기",
+      "sourceHash": "d5af7ab89d6511f9c8b769b846f61a85867e113b0221182dcc53fbe1391b86b5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:obtaining-voices:0011:0001",
+      "source": "[init?(identifier: String)](avspeechsynthesisvoice/init(identifier:).md)",
+      "ko": "[init?(identifier: String)](avspeechsynthesisvoice/init(identifier:).md)",
+      "sourceHash": "d95e5dbd7285590e7d6db3e3fbffabd9934b6cd59cdf621da4d7f540ecd80da3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:obtaining-voices:0012:0001",
+      "source": "Retrieves a voice for the identifier you specify.",
+      "ko": "지정한 식별자에 대한 음성을 검색합니다.",
+      "sourceHash": "6829a8ada3a468ed336e06f46766bf0d18997cfd1835d68ef0b66662f512f3b0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:obtaining-voices:0013:0001",
+      "source": "[init?(language: String?)](avspeechsynthesisvoice/init(language:).md)",
+      "ko": "[init?(language: String?)](avspeechsynthesisvoice/init(language:).md)",
+      "sourceHash": "46453bf3dc1119f90e59ac3e33d0f72e16dcd2fe652652b18a3b81d993383420",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:obtaining-voices:0014:0001",
+      "source": "Retrieves a voice for the BCP 47 code language code you specify.",
+      "ko": "지정한 BCP 47 언어 코드에 대한 음성을 검색합니다.",
+      "sourceHash": "166174650fa2ed667e6dd34c3524621b7e9a72ea07cc25701a2ed3b8455cb0d8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:obtaining-voices:0015:0001",
+      "source": "[class func speechVoices() -> [AVSpeechSynthesisVoice]](avspeechsynthesisvoice/speechvoices.md)",
+      "ko": "[class func speechVoices() -> [AVSpeechSynthesisVoice]](avspeechsynthesisvoice/speechvoices.md)",
+      "sourceHash": "ef9ba103f7c2a309c7322cce1bb023b12dedca3843ab611748b45aee5f73394a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:obtaining-voices:0016:0001",
+      "source": "Retrieves all available voices on the device.",
+      "ko": "기기에서 사용할 수 있는 모든 음성을 검색합니다.",
+      "sourceHash": "b4916b0e38ecf3efd423c52a8573203da2dc7316b9530559354a595d49d8648a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:obtaining-voices:0017:0001",
+      "source": "[let AVSpeechSynthesisVoiceIdentifierAlex: String](avspeechsynthesisvoiceidentifieralex.md)",
+      "ko": "[let AVSpeechSynthesisVoiceIdentifierAlex: String](avspeechsynthesisvoiceidentifieralex.md)",
+      "sourceHash": "e03323f9f847e2de9e86dce7157db648b2fdd84e92ad6d93f6125e9ab646004d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:obtaining-voices:0018:0001",
+      "source": "The voice that the system identifies as Alex.",
+      "ko": "시스템이 Alex로 식별하는 음성입니다.",
+      "sourceHash": "dc92f649dad8faa171db470b380e10308d873b555ff26d6cda59cc31b99fa89c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:inspecting-voices:0019:0001",
+      "source": "Inspecting voices",
+      "ko": "음성 검사",
+      "sourceHash": "edf70aee65d7e43e16d7233ef74b1342893b71406cbb812a74e7bbb115fc2dfc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-voices:0020:0001",
+      "source": "[var identifier: String](avspeechsynthesisvoice/identifier.md)",
+      "ko": "[var identifier: String](avspeechsynthesisvoice/identifier.md)",
+      "sourceHash": "0ee0065d6be70a330ff4039e8ac974d57da31da3f369f7b831fa755ae78f7802",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-voices:0021:0001",
+      "source": "The unique identifier of a voice.",
+      "ko": "음성의 고유 식별자입니다.",
+      "sourceHash": "efdb88446dd9b22f95caea606d8f7cdaa50b64205884eb5f28657fb87d507811",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-voices:0022:0001",
+      "source": "[var name: String](avspeechsynthesisvoice/name.md)",
+      "ko": "[var name: String](avspeechsynthesisvoice/name.md)",
+      "sourceHash": "0c4ea602ec67d4d95db1d2efdc89ae2eb12510c9389965b286a541ee4f853621",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-voices:0023:0001",
+      "source": "The name of a voice.",
+      "ko": "음성의 이름입니다.",
+      "sourceHash": "3b5bfe5e08c9ac228569a9d35d5d4b7ca7a85615d2ceeb8927cd010ab9dc52ae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-voices:0024:0001",
+      "source": "[var quality: AVSpeechSynthesisVoiceQuality](avspeechsynthesisvoice/quality.md)",
+      "ko": "[var quality: AVSpeechSynthesisVoiceQuality](avspeechsynthesisvoice/quality.md)",
+      "sourceHash": "655c3737bb69b2012a8e550a333f7000dc55d874025fb2a7affb7395158bbcbd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-voices:0025:0001",
+      "source": "The speech quality of a voice.",
+      "ko": "음성의 음성 품질입니다.",
+      "sourceHash": "b43bcf0d532cf15b130d704387db5c177d8dd04ab2dd2050c4f13d53f58ad272",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-voices:0026:0001",
+      "source": "[var gender: AVSpeechSynthesisVoiceGender](avspeechsynthesisvoice/gender.md)",
+      "ko": "[var gender: AVSpeechSynthesisVoiceGender](avspeechsynthesisvoice/gender.md)",
+      "sourceHash": "2981f06dc23c2ab186ebdca5743ce62a0f001bf3724a6a7155f87984b9c16956",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-voices:0027:0001",
+      "source": "The gender for a voice.",
+      "ko": "음성의 성별입니다.",
+      "sourceHash": "69bcbc54c09845eb7ac94b3511f49ee84383a1cac5cf1c5c97b5aa210dfc570f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-voices:0028:0001",
+      "source": "[var voiceTraits: AVSpeechSynthesisVoice.Traits](avspeechsynthesisvoice/voicetraits.md)",
+      "ko": "[var voiceTraits: AVSpeechSynthesisVoice.Traits](avspeechsynthesisvoice/voicetraits.md)",
+      "sourceHash": "da1f0c50d7d1ee332ebac17ddcd50478debc4b494f2604970a1e8fd32c0f6c3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-voices:0029:0001",
+      "source": "The traits of a voice.",
+      "ko": "음성의 특성입니다.",
+      "sourceHash": "b6312b83d1843d374906bd7ef0aa1413f04c99040d8bf40392c77d9398f7c438",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-voices:0030:0001",
+      "source": "[var audioFileSettings: [String : Any]](avspeechsynthesisvoice/audiofilesettings.md)",
+      "ko": "[var audioFileSettings: [String : Any]](avspeechsynthesisvoice/audiofilesettings.md)",
+      "sourceHash": "46a5818a4409ee65e2d3582da3123ad3167b21f943be23c4108f7eadeccffb3d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:inspecting-voices:0031:0001",
+      "source": "A dictionary that contains audio file settings.",
+      "ko": "오디오 파일 설정이 포함된 사전입니다.",
+      "sourceHash": "6e878838cb6971c2af727bb694de665b325c894dc98b0d4388e8db44389be0cb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-voices:0032:0001",
+      "source": "[enum AVSpeechSynthesisVoiceQuality](avspeechsynthesisvoicequality.md)",
+      "ko": "[enum AVSpeechSynthesisVoiceQuality](avspeechsynthesisvoicequality.md)",
+      "sourceHash": "3ccdc73d7359184f1c05a9951947b5e07c77dc7f094a39169ea4e9f5ee963565",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-voices:0033:0001",
+      "source": "The speech quality of a voice.",
+      "ko": "음성의 음성 품질입니다.",
+      "sourceHash": "b43bcf0d532cf15b130d704387db5c177d8dd04ab2dd2050c4f13d53f58ad272",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-voices:0034:0001",
+      "source": "[enum AVSpeechSynthesisVoiceGender](avspeechsynthesisvoicegender.md)",
+      "ko": "[enum AVSpeechSynthesisVoiceGender](avspeechsynthesisvoicegender.md)",
+      "sourceHash": "875f2c907460ee29cba1f73d6c56b3c43348c2fc97e85c392b4f4ed6974c4c32",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-voices:0035:0001",
+      "source": "The gender for a voice.",
+      "ko": "음성의 성별입니다.",
+      "sourceHash": "69bcbc54c09845eb7ac94b3511f49ee84383a1cac5cf1c5c97b5aa210dfc570f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-voices:0036:0001",
+      "source": "[AVSpeechSynthesisVoice.Traits](avspeechsynthesisvoice/traits.md)",
+      "ko": "[AVSpeechSynthesisVoice.Traits](avspeechsynthesisvoice/traits.md)",
+      "sourceHash": "64348a9f3cce470fb1ba96daf8d854acfca167d142bb629b6f325e52b921fa43",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-voices:0037:0001",
+      "source": "Traits that describe a voice.",
+      "ko": "음성을 설명하는 특성입니다.",
+      "sourceHash": "15ee3632e7d99dac7fc18c8322080eec25c7691bf82c6598a44f7798d1572855",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:working-with-language-codes:0038:0001",
+      "source": "Working with language codes",
+      "ko": "언어 코드 작업",
+      "sourceHash": "a6b3a0e899c00ce252994595fdd4b9a4c90294518155bc7c9fb351ef8ffabb10",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:working-with-language-codes:0039:0001",
+      "source": "[class func currentLanguageCode() -> String](avspeechsynthesisvoice/currentlanguagecode.md)",
+      "ko": "[class func currentLanguageCode() -> String](avspeechsynthesisvoice/currentlanguagecode.md)",
+      "sourceHash": "e22801674c53c380a3963d06f31801ba25598ad4a2e7c28c7d785dba9489905e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:working-with-language-codes:0040:0001",
+      "source": "Returns the language and locale code for the user’s current locale.",
+      "ko": "사용자의 현재 로케일에 대한 언어 및 로케일 코드를 반환합니다.",
+      "sourceHash": "37c8b32c921bbaa9956b0e142c07ef4ffb24c52ab6ee530f5b4c07d42e8e4c58",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:working-with-language-codes:0041:0001",
+      "source": "[var language: String](avspeechsynthesisvoice/language.md)",
+      "ko": "[var language: String](avspeechsynthesisvoice/language.md)",
+      "sourceHash": "009f94eb8f76a3354c3bbb83af9b8f5013d025c955c924d984d6d79038294b92",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:working-with-language-codes:0042:0001",
+      "source": "A BCP 47 code that contains the voice’s language and locale.",
+      "ko": "음성의 언어 및 로케일을 포함하는 BCP 47 코드입니다.",
+      "sourceHash": "7197a1fa268d4da91624c83158fb30bb1e8b816956bd099287753c6135939f06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:initializers:0043:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0044:0001",
+      "source": "[init?(coder: NSCoder)](avspeechsynthesisvoice/init(coder:).md)",
+      "ko": "[init?(coder: NSCoder)](avspeechsynthesisvoice/init(coder:).md)",
+      "sourceHash": "0d23435f8098760117c0cd9771d677538b06997a0055b8f29567f4883b5c98ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0045:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0046:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0047:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0048:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0006",
+      "source": "[NSCoding](../Foundation/NSCoding.md)",
+      "ko": "[NSCoding](../Foundation/NSCoding.md)",
+      "sourceHash": "af607052cedc51e60ff863609cb573f7fdea5ddf489103c8b59416e9aa32e36a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0007",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0008",
+      "source": "[NSSecureCoding](../Foundation/NSSecureCoding.md)",
+      "ko": "[NSSecureCoding](../Foundation/NSSecureCoding.md)",
+      "sourceHash": "e80dfbc2e883ff92db27afe0edc4d86a1a41b3b289cd23f70bb52edcc387180a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0009",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0010",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0050:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0051:0001",
+      "source": "[class AVSpeechUtterance](avspeechutterance.md)",
+      "ko": "[class AVSpeechUtterance](avspeechutterance.md)",
+      "sourceHash": "3257fc48f18e11953c6cf1625378434b96105bfde3e1d194b18a6e50815a864a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0052:0001",
+      "source": "An object that encapsulates the text for speech synthesis and parameters that affect the speech.",
+      "ko": "음성 합성에 필요한 텍스트와 음성에 영향을 주는 매개변수를 캡슐화하는 객체입니다.",
+      "sourceHash": "1da0c07802b664b21f0db6029d13acf9c12a56b111f5ce6b2315a858e6cee44e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0053:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0054:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avspeechsynthesisvoice)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avspeechsynthesisvoice)*",
+      "sourceHash": "490f3a2bf29429cd9489f4aa5cb0560ee946354cce7498e53b8f33678f963a93",
+      "status": "preserved"
+    }
+  ]
+}

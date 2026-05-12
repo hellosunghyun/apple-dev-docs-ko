@@ -1,0 +1,316 @@
+{
+  "docId": "documentation/AVFAudio/avaudioplayernode/schedulesegment-startingframeframecountatcompletioncallbacktypecompletionhandler.md",
+  "title": "scheduleSegment(:startingFrame:frameCount:at:completionCallbackType:completionHandler:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudioplayernode/schedulesegment-startingframeframecountatcompletioncallbacktypecompletionhandler",
+  "segments": [
+    {
+      "id": "seg:heading:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0000:0001",
+      "source": "scheduleSegment(_:startingFrame:frameCount:at:completionCallbackType:completionHandler:)",
+      "ko": "scheduleSegment(_:startingFrame:frameCount:at:completionCallbackType:completionHandler:)",
+      "sourceHash": "c91e106a90584879c3173cde95610bffd1866fe51841eff66e7c98277b268875",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: method",
+      "ko": "**Framework**: AVFAudio **Kind**: method",
+      "sourceHash": "9e980d3b5301173f9b270d0909000bbb41e1c6922361d4fa1df1df34f70dafc7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0002:0001",
+      "source": "Schedules the playing of an audio file segment with a callback option you specify.",
+      "ko": "지정한 콜백 옵션으로 오디오 파일 세그먼트 재생을 예약합니다.",
+      "sourceHash": "f7e8be66a5198e68b36932706ad9e2771305c48fe83fc915cbbc3762a7a89eb5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0004:0004",
+      "source": "macOS 10.13+",
+      "ko": "macOS 10.13+",
+      "sourceHash": "23711ad8ad80199ce092027e03a626cd50cd126e092245e0901de2515c6d69d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0004:0005",
+      "source": "tvOS 11.0+",
+      "ko": "tvOS 11.0+",
+      "sourceHash": "f8613ea6967abbd6daada1f1969b72355a9ba3fff48c588fc3608e03084c22ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:schedulesegmentstartingframeframecountatcompletioncallbacktypecompletionhandler:0004:0007",
+      "source": "watchOS 4.0+",
+      "ko": "watchOS 4.0+",
+      "sourceHash": "6e82232663b452f4277a975a1caf6a9a283ad5665ddd0b8d870d4ca5b8a1f7c4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc scheduleSegment(_ file: AVAudioFile, startingFrame startFrame: AVAudioFramePosition, frameCount numberFrames: AVAudioFrameCount, at when: AVAudioTime?, completionCallbackType callbackType: AVAudioPlayerNodeCompletionCallbackType) async -> AVAudioPlayerNodeCompletionCallbackType\n```",
+      "ko": "```swift\nfunc scheduleSegment(_ file: AVAudioFile, startingFrame startFrame: AVAudioFramePosition, frameCount numberFrames: AVAudioFrameCount, at when: AVAudioTime?, completionCallbackType callbackType: AVAudioPlayerNodeCompletionCallbackType) async -> AVAudioPlayerNodeCompletionCallbackType\n```",
+      "sourceHash": "2e3e8b6d95b0c09b8c359fdca7f7798c4abee2aacfb4469d97f39e04db8f35aa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0008:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0009:0001",
+      "source": "`file`: The file to play.",
+      "ko": "`file`: 재생할 파일입니다.",
+      "sourceHash": "d63166edd55c68eb12d537c87e459d7f4182d935754bf8521451691f2fa59d57",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0009:0002",
+      "source": "`startFrame`: The starting frame position in the stream.",
+      "ko": "`startFrame`: 스트림에서 시작 프레임 위치입니다.",
+      "sourceHash": "672f4bbf5144823ea410e1de38739c85dfb9d13219af4097aaaa6dbb1ae1a1c7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0009:0003",
+      "source": "`numberFrames`: The number of frames to play.",
+      "ko": "`numberFrames`: 재생할 프레임 수입니다.",
+      "sourceHash": "6ff68e12bc6d32de57b5f833d855cc89efc38e9a445402f9a98b3e13824ab729",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0009:0004",
+      "source": "`when`: The time the region plays.",
+      "ko": "`when`: 구간이 재생되는 시간입니다.",
+      "sourceHash": "2d46e58e5d471c1ae187eb22c850a9bffe3dda4d9e60c2c54d227e3f321bb941",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0009:0005",
+      "source": "`callbackType`: The option to specify when the system must call the completion handler.",
+      "ko": "`callbackType`: 시스템이 완료 핸들러를 호출해야 하는 시점을 지정하는 옵션입니다.",
+      "sourceHash": "c8f076911bf1667c1cca19170cd57d318d6835a42d8e3ab07b75527ca688132a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0009:0006",
+      "source": "`completionHandler`: The handler the system calls after the player schedules the segment for playback on the render thread, or the player stops.",
+      "ko": "`completionHandler`: 시스템이 렌더 스레드에서 세그먼트 재생을 예약한 후 또는 플레이어가 중지될 때 호출하는 핸들러입니다.",
+      "sourceHash": "6e1448fd3514556c81b5bec68e169ba01fa407c46d2f75326277dde65012a968",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "관련 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[func scheduleFile(AVAudioFile, at: AVAudioTime?, completionHandler: (() -> Void)?)](avaudioplayernode/schedulefile(_:at:completionhandler:).md)",
+      "ko": "[func scheduleFile(AVAudioFile, at: AVAudioTime?, completionHandler: (() -> Void)?)](avaudioplayernode/schedulefile(_:at:completionhandler:).md)",
+      "sourceHash": "0cc22bd2076c2992c879d1713a1e6b7eb4e4752496099e19497b510eb11cdea0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "Schedules the playing of an entire audio file.",
+      "ko": "전체 오디오 파일 재생을 예약합니다.",
+      "sourceHash": "80c4fb80f1347cfffe68d1490288acf7b1ba44f88fdbe58ada497615321dd304",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func scheduleFile(AVAudioFile, at: AVAudioTime?, completionCallbackType: AVAudioPlayerNodeCompletionCallbackType, completionHandler: ((AVAudioPlayerNodeCompletionCallbackType) -> Void)?)](avaudioplayernode/schedulefile(_:at:completioncallbacktype:completionhandler:).md)",
+      "ko": "[func scheduleFile(AVAudioFile, at: AVAudioTime?, completionCallbackType: AVAudioPlayerNodeCompletionCallbackType, completionHandler: ((AVAudioPlayerNodeCompletionCallbackType) -> Void)?)](avaudioplayernode/schedulefile(_:at:completioncallbacktype:completionhandler:).md)",
+      "sourceHash": "91419669f887954ef4659fddcf15b61b7288ee1af6dda0488712a346421da6aa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Schedules the playing of an entire audio file with a callback option you specify.",
+      "ko": "지정한 콜백 옵션으로 전체 오디오 파일의 재생을 예약합니다.",
+      "sourceHash": "9800ceeb62a04c24e3161b77e697ade81171c4c7a2f6d7d213a65e2dfc93ae82",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func scheduleSegment(AVAudioFile, startingFrame: AVAudioFramePosition, frameCount: AVAudioFrameCount, at: AVAudioTime?, completionHandler: (() -> Void)?)](avaudioplayernode/schedulesegment(_:startingframe:framecount:at:completionhandler:).md)",
+      "ko": "[func scheduleSegment(AVAudioFile, startingFrame: AVAudioFramePosition, frameCount: AVAudioFrameCount, at: AVAudioTime?, completionHandler: (() -> Void)?)](avaudioplayernode/schedulesegment(_:startingframe:framecount:at:completionhandler:).md)",
+      "sourceHash": "6fe021955c9714af2c842da2eb85f7bd55bda9ec6aefdce982540b65b3bb348c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Schedules the playing of an audio file segment.",
+      "ko": "오디오 파일 세그먼트 재생을 예약합니다.",
+      "sourceHash": "16d80cffe68aa4ac85c23da6674ddf43da712cd6d59d8466c356bb503e52c82f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func scheduleBuffer(AVAudioPCMBuffer, at: AVAudioTime?, options: AVAudioPlayerNodeBufferOptions, completionHandler: (() -> Void)?)](avaudioplayernode/schedulebuffer(_:at:options:completionhandler:).md)",
+      "ko": "[func scheduleBuffer(AVAudioPCMBuffer, at: AVAudioTime?, options: AVAudioPlayerNodeBufferOptions, completionHandler: (() -> Void)?)](avaudioplayernode/schedulebuffer(_:at:options:completionhandler:).md)",
+      "sourceHash": "6a4ba180b0ed9fd91b9327f3e7563931528c27573b53959858636f740abc3afe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Schedules the playing samples from an audio buffer at the time and playback options you specify.",
+      "ko": "지정한 시간과 재생 옵션으로 오디오 버퍼의 샘플 재생을 예약합니다.",
+      "sourceHash": "7f9256ae6d7337bb5f403d198fcfda04a301cf10d0063a4a6739661aea61f5c8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[func scheduleBuffer(AVAudioPCMBuffer, completionHandler: (() -> Void)?)](avaudioplayernode/schedulebuffer(_:completionhandler:).md)",
+      "ko": "[func scheduleBuffer(AVAudioPCMBuffer, completionHandler: (() -> Void)?)](avaudioplayernode/schedulebuffer(_:completionhandler:).md)",
+      "sourceHash": "07593cdcf29147448c6432b32bc6fd83de3ffa3c35d0ba029dfa3b3d4839b6a8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "Schedules the playing samples from an audio buffer.",
+      "ko": "오디오 버퍼의 샘플 재생을 예약합니다.",
+      "sourceHash": "2366c84bb84e59ce8035182389e68fed5a6f8bf480d04318e15d5464a34a3b7b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[func scheduleBuffer(AVAudioPCMBuffer, at: AVAudioTime?, options: AVAudioPlayerNodeBufferOptions, completionCallbackType: AVAudioPlayerNodeCompletionCallbackType, completionHandler: ((AVAudioPlayerNodeCompletionCallbackType) -> Void)?)](avaudioplayernode/schedulebuffer(_:at:options:completioncallbacktype:completionhandler:).md)",
+      "ko": "[func scheduleBuffer(AVAudioPCMBuffer, at: AVAudioTime?, options: AVAudioPlayerNodeBufferOptions, completionCallbackType: AVAudioPlayerNodeCompletionCallbackType, completionHandler: ((AVAudioPlayerNodeCompletionCallbackType) -> Void)?)](avaudioplayernode/schedulebuffer(_:at:options:completioncallbacktype:completionhandler:).md)",
+      "sourceHash": "05cda1de8f40e5c88e0aa2147a993117be6e1c003e6776de27d7ac51817bbb56",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "Schedules the playing samples from an audio buffer with the playback options you specify.",
+      "ko": "지정한 재생 옵션으로 오디오 버퍼의 샘플 재생을 예약합니다.",
+      "sourceHash": "2e6cdf5f4d67965ae6601041f2d02a749f57f88d36fd606ebd9912f28a68f1f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[func scheduleBuffer(AVAudioPCMBuffer, completionCallbackType: AVAudioPlayerNodeCompletionCallbackType, completionHandler: ((AVAudioPlayerNodeCompletionCallbackType) -> Void)?)](avaudioplayernode/schedulebuffer(_:completioncallbacktype:completionhandler:).md)",
+      "ko": "[func scheduleBuffer(AVAudioPCMBuffer, completionCallbackType: AVAudioPlayerNodeCompletionCallbackType, completionHandler: ((AVAudioPlayerNodeCompletionCallbackType) -> Void)?)](avaudioplayernode/schedulebuffer(_:completioncallbacktype:completionhandler:).md)",
+      "sourceHash": "7ffd6f2971c7d17e619c2a265e8046c6f6f5ca0d04328926fc253361702173c2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "Schedules the playing samples from an audio buffer with the callback option you specify.",
+      "ko": "지정한 콜백 옵션으로 오디오 버퍼의 샘플 재생을 예약합니다.",
+      "sourceHash": "cfeb4a33787207d858ccd69ac48d97b24a6a286e7db3b3ccade6d037a2c4b3d2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[struct AVAudioPlayerNodeBufferOptions](avaudioplayernodebufferoptions.md)",
+      "ko": "[struct AVAudioPlayerNodeBufferOptions](avaudioplayernodebufferoptions.md)",
+      "sourceHash": "7f3ad304bd8d6fba3b60496a6032ad8339d9ff7d269a4e0a3b7c614b76c5b7d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "The buffer options that control the playback scheduling.",
+      "ko": "재생 스케줄링을 제어하는 버퍼 옵션입니다.",
+      "sourceHash": "5ecdc4d8d4a2696b3f510e3263a89ea9517d02d19ca3948b81ad6e181020fd0f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[enum AVAudioPlayerNodeCompletionCallbackType](avaudioplayernodecompletioncallbacktype.md)",
+      "ko": "[enum AVAudioPlayerNodeCompletionCallbackType](avaudioplayernodecompletioncallbacktype.md)",
+      "sourceHash": "36df7e6005cfed8a194e9f635c301dec0a25b5c9710a8516cbce5a308a57b2e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "Constants that specify when the framework must invoke the completion handler.",
+      "ko": "프레임워크가 완료 핸들러를 호출할 시점을 지정하는 상수입니다.",
+      "sourceHash": "5bdfa47d5fd4476f736e9d3c7267e40225ad00950752b2ebebc563d5aeba554f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0029:0001",
+      "source": "[typealias AVAudioPlayerNodeCompletionHandler](avaudioplayernodecompletionhandler.md)",
+      "ko": "[typealias AVAudioPlayerNodeCompletionHandler](avaudioplayernodecompletionhandler.md)",
+      "sourceHash": "e3b124fa948871ede2218e300bd76f9c0cf30ee42954b40cbf1b6b626ccaff36",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "The callback handler for buffer or file completion.",
+      "ko": "버퍼 또는 파일 완료를 위한 콜백 핸들러입니다.",
+      "sourceHash": "11c70c43a0a9a75507352c0d2c5f1f322f8e0b799e8f70ad0fc814e811b021ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0031:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0032:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudioplayernode/schedulesegment(_:startingframe:framecount:at:completioncallbacktype:completionhandler:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfaudio/avaudioplayernode/schedulesegment(_:startingframe:framecount:at:completioncallbacktype:completionhandler:))*",
+      "sourceHash": "03ccacf6e064432f0114051e0959f3c257e20a7f2665bb158b9fbf354dfff59a",
+      "status": "machine_translated"
+    }
+  ]
+}

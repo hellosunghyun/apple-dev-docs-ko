@@ -1,0 +1,218 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosession/setcategory.md",
+  "title": "setCategory(:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosession/setcategory",
+  "segments": [
+    {
+      "id": "seg:heading:setcategory:0000:0001",
+      "source": "setCategory(_:)",
+      "ko": "setCategory(_:)",
+      "sourceHash": "c63b1ab92e596047d5157ecc8bc86bf61a3e41a13fa5d7868a0a3a0053ea0601",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setcategory:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: method",
+      "ko": "**Framework**: AVFAudio **Kind**: method",
+      "sourceHash": "9e980d3b5301173f9b270d0909000bbb41e1c6922361d4fa1df1df34f70dafc7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setcategory:0002:0001",
+      "source": "Sets the audio session’s category.",
+      "ko": "오디오 세션의 카테고리를 설정합니다.",
+      "sourceHash": "e434353785283a06344b63324ecd844c1049679a0be04a9ae1a91a0b55b98057",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setcategory:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcategory:0004:0001",
+      "source": "iOS 3.0+",
+      "ko": "iOS 3.0+",
+      "sourceHash": "ae19509ce80932442ef4f738fde238c4f294382d7da4e323476a453cde8960d3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcategory:0004:0002",
+      "source": "iPadOS 3.0+",
+      "ko": "iPadOS 3.0+",
+      "sourceHash": "61b8252b29350668ac7c3fa03277af5556f0a47513c2946aadaad405936a1623",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcategory:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcategory:0004:0004",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcategory:0004:0005",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcategory:0004:0006",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc setCategory(_ category: AVAudioSession.Category) throws\n```",
+      "ko": "```swift\nfunc setCategory(_ category: AVAudioSession.Category) throws\n```",
+      "sourceHash": "f080dee6687af8cc984d56d8e4b1584a1ce96442c77d88a421cb5d8d630d770b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "The audio session’s category defines how the app uses audio.",
+      "ko": "If `true`, the synthesizer is speaking or is in a paused state with utterances in its queue.",
+      "sourceHash": "9887575e53d7656f5ae6465d20dbc4b133e3e12c057bf847138eb1c2b1615d70",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Typically, you set the category before activating the session.",
+      "ko": "If `false`, the synthesizer isn’t speaking and it doesn’t have any utterances in its queue.",
+      "sourceHash": "938eff895f4fbe959c1d5cb643ff7b87b252f7e07a7a427b124b0460ac734b59",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "You can also set the category while the session is active, but this results in an immediate route change.",
+      "ko": "세션이 활성 상태일 때도 카테고리를 설정할 수 있지만, 이 경우 라우트가 즉시 변경됩니다.",
+      "sourceHash": "ac9252672ba2ef566fa04fe037fd88d8f01a304172ee3b07087c83f67e9600ae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0001",
+      "source": "**Note**: Instead of setting your [`category`](avaudiosession/category-swift.property.md) and [`mode`](avaudiosession/mode-swift.property.md) properties independently, set them at the same time using the [`setCategory(_:mode:options:)`](avaudiosession/setcategory(_:mode:options:).md) or [`setCategory(_:mode:policy:options:)`](avaudiosession/setcategory(_:mode:policy:options:).md) method.",
+      "ko": "**Note**: [`category`](avaudiosession/category-swift.property.md) 및 [`mode`](avaudiosession/mode-swift.property.md) 속성을 각각 개별적으로 설정하지 말고, [`setCategory(_:mode:options:)`](avaudiosession/setcategory(_:mode:options:).md) 또는 [`setCategory(_:mode:policy:options:)`](avaudiosession/setcategory(_:mode:policy:options:).md) 메서드를 사용해 동시에 설정해야 합니다.",
+      "sourceHash": "8e8dbfd9762b4752b41a8c46cbc5ad30bbbeb98de58eff1e1addd4e4cd2ef185",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`category`: The category to apply to the audio session. See [`AVAudioSession.Category`](avaudiosession/category-swift.struct.md) for supported category values.",
+      "ko": "`category`: 오디오 세션에 적용할 카테고리입니다. 지원되는 카테고리 값은 [`AVAudioSession.Category`](avaudiosession/category-swift.struct.md)에서 확인할 수 있습니다.",
+      "sourceHash": "40ea15efa16f26e5af152ceb72584f5e995d87b6cefd3887c795dffa5ad822f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "관련 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func setCategory(AVAudioSession.Category, mode: AVAudioSession.Mode, policy: AVAudioSession.RouteSharingPolicy, options: AVAudioSession.CategoryOptions) throws](avaudiosession/setcategory(_:mode:policy:options:).md)",
+      "ko": "[func setCategory(AVAudioSession.Category, mode: AVAudioSession.Mode, policy: AVAudioSession.RouteSharingPolicy, options: AVAudioSession.CategoryOptions) throws](avaudiosession/setcategory(_:mode:policy:options:).md)",
+      "sourceHash": "bded5b9d54e005c1847f3da4f57367d51988476f6ff63b981ce54e575b74eef7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Sets the session category, mode, route-sharing policy, and options.",
+      "ko": "세션의 카테고리, 모드, 라우트 공유 정책 및 옵션을 설정합니다.",
+      "sourceHash": "f4f02600071dcacf0cfa47a492aef7e6d17f7aacb3fb4a0b5e3c34a88720d7e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func setCategory(AVAudioSession.Category, mode: AVAudioSession.Mode, options: AVAudioSession.CategoryOptions) throws](avaudiosession/setcategory(_:mode:options:).md)",
+      "ko": "[func setCategory(AVAudioSession.Category, mode: AVAudioSession.Mode, options: AVAudioSession.CategoryOptions) throws](avaudiosession/setcategory(_:mode:options:).md)",
+      "sourceHash": "02541b81ca20caed277396957b438a8c0c8b5bb8aab1dfc9de858240a7debce8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Sets the audio session’s category, mode, and options.",
+      "ko": "오디오 세션의 카테고리, 모드 및 옵션을 설정합니다.",
+      "sourceHash": "56c434d0ee795cb8d625f8c25a9f50f92773f8ea5521ba1ae87cbcb8af8bc19b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func setCategory(AVAudioSession.Category, options: AVAudioSession.CategoryOptions) throws](avaudiosession/setcategory(_:options:).md)",
+      "ko": "[func setCategory(AVAudioSession.Category, options: AVAudioSession.CategoryOptions) throws](avaudiosession/setcategory(_:options:).md)",
+      "sourceHash": "9944916cd822ccd484e0d7ab902ed2f3df038b037e72c49283c5628d42444032",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Sets the audio session’s category with the specified options.",
+      "ko": "오디오 세션의 카테고리를 지정한 옵션으로 설정합니다.",
+      "sourceHash": "965ba5c62ea1e0f4f31f860bfb1c020648bad894f745afb5921750ff6f8d7f4f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[func setMode(AVAudioSession.Mode) throws](avaudiosession/setmode(_:).md)",
+      "ko": "[func setMode(AVAudioSession.Mode) throws](avaudiosession/setmode(_:).md)",
+      "sourceHash": "b78c9e5efb2a61355cf6595909b33d8abe534975c6e93dbc2cf24e58414e637b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "Sets the audio session’s mode.",
+      "ko": "오디오 세션의 모드를 설정합니다.",
+      "sourceHash": "369f9d3cbe59d63cf1935eb7111f423c5b8e33b994bdfe8af4d8ef7ef9c0bc78",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0021:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/setcategory(_:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfaudio/avaudiosession/setcategory(_:))*",
+      "sourceHash": "52de43b16d490a4b76767556d6f7e3b091fbe643435dd612b93d49906f7f8efc",
+      "status": "machine_translated"
+    }
+  ]
+}

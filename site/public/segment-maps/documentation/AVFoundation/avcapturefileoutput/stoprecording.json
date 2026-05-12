@@ -1,0 +1,211 @@
+{
+  "docId": "documentation/AVFoundation/avcapturefileoutput/stoprecording.md",
+  "title": "stopRecording()",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturefileoutput/stoprecording",
+  "segments": [
+    {
+      "id": "seg:heading:stoprecording:0000:0001",
+      "source": "stopRecording()",
+      "ko": "stopRecording()",
+      "sourceHash": "5429196c2973f85e75e417ab7fed06778d41877138180f5339c50d25c5dd910f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:stoprecording:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:stoprecording:0002:0001",
+      "source": "Tells the receiver to stop recording to the current file.",
+      "ko": "현재 파일에 대한 녹화를 중지하도록 수신자에게 지시합니다.",
+      "sourceHash": "e2a17a9ef01427d11dfcc9aac0ced603b7f1387cb6d2c02a567c98c4b4a2e196",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:stoprecording:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoprecording:0004:0001",
+      "source": "iOS 4.0+",
+      "ko": "iOS 4.0+",
+      "sourceHash": "0c0ed66d9f4133c5a709449f69be4759ac3625b24734b8390d2f7e23b33c3545",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoprecording:0004:0002",
+      "source": "iPadOS 4.0+",
+      "ko": "iPadOS 4.0+",
+      "sourceHash": "dfe042d2e3f40a7e917ced53f052a0d5f5ba8d69dfa62a3b59fb59de8ef49851",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoprecording:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoprecording:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoprecording:0004:0005",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc stopRecording()\n```",
+      "ko": "```swift\nfunc stopRecording()\n```",
+      "sourceHash": "63c305674d1113a8d4f000c791a7da21e351eac3c156f8c9335a3b7f1b075ff8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "You can call this method when they want to stop recording new samples to the current file, and do not want to continue recording to another file.",
+      "ko": "현재 파일에 새 샘플 녹화를 중단하고 다른 파일로 계속 녹화하지 않으려는 경우 이 메서드를 호출할 수 있습니다.",
+      "sourceHash": "8eedfb50cfab2e4841220795c7f97e152bccd72e6b1baf2eb3bf8835094800af",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "If you want to switch from one file to another, you should not call this method.",
+      "ko": "한 파일에서 다른 파일로 전환하려는 경우에는 이 메서드를 호출하지 않아야 합니다.",
+      "sourceHash": "2c900421db1a74f286baa281f596ec9955fc75c2261568839e2b279b061c5f65",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "Instead you should simply call [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md) with the new file URL.",
+      "ko": "대신 새 파일 URL을 사용해 [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md)만 호출하면 됩니다. 이 메서드를 호출하거나, [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md)로 파일을 변경했거나 오류가 발생해 중지된 경우, 파일에 포함되어야 하는 남은 데이터가 백그라운드에서 기록됩니다.",
+      "sourceHash": "92a6f913119e2ee01445219f3f659a23dbea19672e5439dc1f9317d64ad71ecf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "When recording is stopped either by calling this method, by changing files using [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md), or because of an error, the remaining data that needs to be included to the file will be written in the background.",
+      "ko": "The value of this property is [`invalid`](https://developer.apple.com/documentation/CoreMedia/CMTime/invalid) if the track can’t calculate its minimum frame duration, or if it’s unknown.",
+      "sourceHash": "3eca5d06f97c28fb1ba0eb4e7198609fe87d81bdc1992a821aa31883eb147f20",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "Therefore, before using the file, you must wait until the delegate that was specified in [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md) is notified when all data has been written to the file using the [`fileOutput(_:didFinishRecordingTo:from:error:)`](avcapturefileoutputrecordingdelegate/fileoutput(_:didfinishrecordingto:from:error:).md) method.",
+      "ko": "따라서 이 파일을 사용하기 전에 [`startRecording(to:recordingDelegate:)`](avcapturefileoutput/startrecording(to:recordingdelegate:).md)에서 지정한 델리게이트가 [`fileOutput(_:didFinishRecordingTo:from:error:)`](avcapturefileoutputrecordingdelegate/fileoutput(_:didfinishrecordingto:from:error:).md) 메서드를 통해 파일에 모든 데이터가 기록되었음을 알릴 때까지 기다려야 합니다.",
+      "sourceHash": "729349190a86be19bac31ade5d924435d9d20b33748dd399bc55939a67e837f1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "In macOS, if this method is called within the captureOutput:didOutputSampleBuffer:fromConnection: delegate method, the last samples written to the current file are guaranteed to be those that were output immediately before those in the sample buffer passed to that method.",
+      "ko": "Use the filtering methods [`AVMediaSelectionGroup`](avmediaselectiongroup.md) defines to filter the group’s options according to playability, locale, and additional media characteristics.",
+      "sourceHash": "2364de0a21d34baae7907d797fcfa5d2e09dfce110d6e4ec7820ca7cdd649232",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var isRecording: Bool](avcapturefileoutput/isrecording.md)",
+      "ko": "[var isRecording: Bool](avcapturefileoutput/isrecording.md)",
+      "sourceHash": "7a51b21d184771a1679ac2ffb4742643f39ccc5fc0c4c9a4cdf56e8253e6f71f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Indicates whether recording is in progress.",
+      "ko": "녹화 진행 중 여부를 나타냅니다.",
+      "sourceHash": "0957ac7c21b160ce554e725a9827e5a709cef403b0010211cfaabea4ebbee1b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func startRecording(to: URL, recordingDelegate: any AVCaptureFileOutputRecordingDelegate)](avcapturefileoutput/startrecording(to:recordingdelegate:).md)",
+      "ko": "[func startRecording(to: URL, recordingDelegate: any AVCaptureFileOutputRecordingDelegate)](avcapturefileoutput/startrecording(to:recordingdelegate:).md)",
+      "sourceHash": "2de3138fcb27420ac96dd100e9f751aac6308e71db7e664adac40e5fde75b21a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Starts recording media to the specified output URL.",
+      "ko": "지정한 출력 URL에 미디어 녹화를 시작합니다.",
+      "sourceHash": "08d08d124232a74b3cbf0447fc6be31f4ee1854f04494f40fa15002606d2bc82",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func pauseRecording()](avcapturefileoutput/pauserecording.md)",
+      "ko": "[func pauseRecording()](avcapturefileoutput/pauserecording.md)",
+      "sourceHash": "515b8ce5b21e188a1605899745f14ddd21918d420008fe4270db552a998ce797",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Pauses recording to the current output file.",
+      "ko": "현재 출력 파일의 녹화를 일시 중지합니다.",
+      "sourceHash": "d81c26e09b7b58303f03bed59359cfdc8d62b4fe6eb5d2d9d37d0f9ab1c49051",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func resumeRecording()](avcapturefileoutput/resumerecording.md)",
+      "ko": "[func resumeRecording()](avcapturefileoutput/resumerecording.md)",
+      "sourceHash": "955a796d82a1b74a5a0ac6e9049a36becb66649d55bf44a42b9b649a8d6b8b23",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Resumes recording to the current output file after it was previously paused using [`pauseRecording()`](avcapturefileoutput/pauserecording().md).",
+      "ko": "이전에 [`pauseRecording()`](avcapturefileoutput/pauserecording().md)을 사용해 일시 중지된 뒤, 현재 출력 파일에 대한 녹화를 다시 시작합니다.",
+      "sourceHash": "7bb74a8c40a882f1b4a8d4cbdb9869d203d7cb0d71a96bd0b035adec4b5438a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturefileoutput/stoprecording())*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturefileoutput/stoprecording())*",
+      "sourceHash": "4aa4ca5ce0102248653779601698b9f8795dd57a330f21414626001ab932fe91",
+      "status": "machine_translated"
+    }
+  ]
+}

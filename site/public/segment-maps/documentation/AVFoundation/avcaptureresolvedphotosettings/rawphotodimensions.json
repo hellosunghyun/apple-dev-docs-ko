@@ -1,0 +1,267 @@
+{
+  "docId": "documentation/AVFoundation/avcaptureresolvedphotosettings/rawphotodimensions.md",
+  "title": "rawPhotoDimensions",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcaptureresolvedphotosettings/rawphotodimensions",
+  "segments": [
+    {
+      "id": "seg:heading:rawphotodimensions:0000:0001",
+      "source": "rawPhotoDimensions",
+      "ko": "rawPhotoDimensions",
+      "sourceHash": "d9a2c19186f5f36bd7820c5fb80bb23fbb268f35485314bcdc89d6d141435441",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rawphotodimensions:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rawphotodimensions:0002:0001",
+      "source": "The size, in pixels, of the RAW-format photo image that the capture delivers.",
+      "ko": "캡처가 전달하는 RAW 형식 사진 이미지의 픽셀 단위 크기입니다.",
+      "sourceHash": "3525995168518879f2f5a7b4f25ecdf9fc23c2bcb2e2a38e620ce05a751387ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:rawphotodimensions:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:rawphotodimensions:0004:0001",
+      "source": "iOS 10.0+",
+      "ko": "iOS 10.0+",
+      "sourceHash": "15e2b63b966efd6cadb08b2da63ceeef2c0cd4d8cb66c4d5cdb143020e883acb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:rawphotodimensions:0004:0002",
+      "source": "iPadOS 10.0+",
+      "ko": "iPadOS 10.0+",
+      "sourceHash": "c3d62141271e1019e3bb1a762c72d79ee3522feb4faafb39c46567ce18387f92",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:rawphotodimensions:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:rawphotodimensions:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar rawPhotoDimensions: CMVideoDimensions { get }\n```",
+      "ko": "```swift\nvar rawPhotoDimensions: CMVideoDimensions { get }\n```",
+      "sourceHash": "6fce454dd5d47c403a4e5ec0ff8ce2d460685744d3509f1a5b64d9df734bcb9d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "The output dimensions of a captured image are set at the moment of capture, depending on device orientation and capture session configuration.",
+      "ko": "캡처된 이미지의 출력 차원은 캡처 시점에 장치 방향과 캡처 세션 구성에 따라 설정됩니다.",
+      "sourceHash": "313e3929c576aface2c4102760343b01fac14fc528bc205810e7d501c8f21348",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "(For example, when the capture session includes a video output and video stabilization is in use, captured photos are smaller.)",
+      "ko": "(예를 들어 캡처 세션에 비디오 출력이 포함되고 비디오 안정화가 사용 중이면 캡처된 사진이 더 작아집니다.)",
+      "sourceHash": "c1b9f76172e9530d5abbf2d00453c32b3adb3dc4096093dab52eb9492249e3e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "This property provides the dimensions of the image to be delivered in the [`photoOutput(_:didFinishProcessingPhoto:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishprocessingphoto:error:).md) method.",
+      "ko": "The value of this property is [`invalid`](https://developer.apple.com/documentation/CoreMedia/CMTime/invalid) if the track can’t calculate its minimum frame duration, or if it’s unknown.",
+      "sourceHash": "dc2a60d000aa4dfdb315fc1eb70426a511cf93f0dbca1486792106457a99bfe1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "Use this property in earlier delegate methods to find the size of the image before delivery.",
+      "ko": "이 속성은 전달되기 전에 이미지 크기를 확인하려고 이전 delegate 메서드에서 사용합니다.",
+      "sourceHash": "465dcd198c566662fc619aa83966748e4fce40698b955c23030aa1047e21ccbc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "If you do not request capture in RAW format, this property’s value has zero width and zero height.",
+      "ko": "Use the filtering methods [`AVMediaSelectionGroup`](avmediaselectiongroup.md) defines to filter the group’s options according to playability, locale, and additional media characteristics.",
+      "sourceHash": "35613518b86c1b0ba0429c7fe523e945f91f3eef3f07e036cd747b101eb702a4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var photoDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/photodimensions.md)",
+      "ko": "[var photoDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/photodimensions.md)",
+      "sourceHash": "d3e377af894d52146df32907eb3af1040f0a9d8631304c6fc522625c4d76289a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "The size, in pixels, of the photo image (in a processed format, such as JPEG) that the capture delivers.",
+      "ko": "캡처가 제공하는 사진 이미지의 크기(처리 형식 예: JPEG)입니다.",
+      "sourceHash": "1193d25e54eca7c363d70004ea517613f9494b526e8960a122100f9cf92c420a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var deferredPhotoProxyDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/deferredphotoproxydimensions.md)",
+      "ko": "[var deferredPhotoProxyDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/deferredphotoproxydimensions.md)",
+      "sourceHash": "83d562234da1e36b160a08ce0502143072f936aa79f9466ba1dd1e9137de2e6a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "The resolved dimensions of the photo proxy when using deferred photo delivery.",
+      "ko": "지연된 사진 전달 시 photo proxy의 해결된 크기입니다.",
+      "sourceHash": "829a8e8b6db993a3da8424492bfaa26bc37ff78a414ac411fd0b48a4562d3524",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var previewDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/previewdimensions.md)",
+      "ko": "[var previewDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/previewdimensions.md)",
+      "sourceHash": "d85ebb11da438e45e68b380138c9419ec0d685919f0056c49b6a3824ffec5382",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "The size, in pixels, of the preview image that the system delivers with the capture.",
+      "ko": "캡처와 함께 시스템이 제공하는 미리보기 이미지의 픽셀 단위 크기입니다.",
+      "sourceHash": "7de412f1927369eff2e43c811d55a0c4e3ed5c467fd7a8372d3f554fb2ee5908",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var embeddedThumbnailDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/embeddedthumbnaildimensions.md)",
+      "ko": "[var embeddedThumbnailDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/embeddedthumbnaildimensions.md)",
+      "sourceHash": "f7dba86c4ef90afd8ab21cf4913d64f4151c0f3a0e7270e7f9797a4a88280c97",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "The size, in pixels, of the thumbnail image that the capture delivers.",
+      "ko": "캡처가 전달하는 썸네일 이미지의 픽셀 단위 크기입니다.",
+      "sourceHash": "4b17e1d3ef3678730678f59b4c1ae1ed9e8a57accb89d2f1a581c7389b94aa9a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[var rawEmbeddedThumbnailDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/rawembeddedthumbnaildimensions.md)",
+      "ko": "[var rawEmbeddedThumbnailDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/rawembeddedthumbnaildimensions.md)",
+      "sourceHash": "22a2630fd7651770cfaaf11190bf3b64af05f316778ba76ab1ae4720307b22e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "The size, in pixels, of the RAW-format embedded thumbnail image that the capture delivers.",
+      "ko": "캡처가 전달하는 RAW 형식 임베디드 썸네일 이미지의 픽셀 단위 크기입니다.",
+      "sourceHash": "2acfeb2b476210240f4e07beb69e673b092f40d7d0dc4e7692de10c1873daa2e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[var livePhotoMovieDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/livephotomoviedimensions.md)",
+      "ko": "[var livePhotoMovieDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/livephotomoviedimensions.md)",
+      "sourceHash": "250f0668e7b65f2a93432dd908a0dd356935a32704744d051dc8397e3f50d5d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "The size, in pixels, of the Live Photo movie content that the capture delivers.",
+      "ko": "캡처가 전달하는 Live Photo 동영상 콘텐츠의 픽셀 단위 크기입니다.",
+      "sourceHash": "1de455d9b47e57983b4116f8ca6454ad442f610c6e0f92a89e61d146f9f49ca1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[var portraitEffectsMatteDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/portraiteffectsmattedimensions.md)",
+      "ko": "[var portraitEffectsMatteDimensions: CMVideoDimensions](avcaptureresolvedphotosettings/portraiteffectsmattedimensions.md)",
+      "sourceHash": "1e91d92b0650285edf44c15da854ae85fe1fe6875ace73411f6c1068241d1164",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "The size, in pixels, of the portrait effects matte that the capture delivers.",
+      "ko": "캡처가 전달하는 portrait effects matte의 픽셀 단위 크기입니다.",
+      "sourceHash": "048ed1f27f73e55b876c3ae9b1158f1bf4b319e5f51b2d79ed847bd33b838b5f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[func dimensionsForSemanticSegmentationMatte(ofType: AVSemanticSegmentationMatte.MatteType) -> CMVideoDimensions](avcaptureresolvedphotosettings/dimensionsforsemanticsegmentationmatte(oftype:).md)",
+      "ko": "[func dimensionsForSemanticSegmentationMatte(ofType: AVSemanticSegmentationMatte.MatteType) -> CMVideoDimensions](avcaptureresolvedphotosettings/dimensionsforsemanticsegmentationmatte(oftype:).md)",
+      "sourceHash": "272e69fb642b021e3484af5ca7c1ad5dbebe5e12626b644bab5739db5b60d597",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Retrieves the resolved dimensions of the semantic segmentation mattes that the photo output delivers.",
+      "ko": "사진 출력이 제공하는 시맨틱 세그멘테이션 matte의 해결된 크기를 검색합니다.",
+      "sourceHash": "4e658d73fc51eb5833a629eb0f75f6319fc325f2dc70bc45c3c41ae4882c90ee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[var photoProcessingTimeRange: CMTimeRange](avcaptureresolvedphotosettings/photoprocessingtimerange.md)",
+      "ko": "[var photoProcessingTimeRange: CMTimeRange](avcaptureresolvedphotosettings/photoprocessingtimerange.md)",
+      "sourceHash": "cb568271167684d29c69c9d1126a0f69e1c785801ec6c8ce937a2bb58ae36a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "The time range in which to expect the system to deliver the photo to the delegate.",
+      "ko": "덜리게이트에서 사진이 전달될 것으로 예상되는 시간 범위입니다.",
+      "sourceHash": "82b2269f20243dfc6530304ba50c42b8f9d3dd12c851ec3d47ba851924347b4e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0030:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcaptureresolvedphotosettings/rawphotodimensions)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcaptureresolvedphotosettings/rawphotodimensions)*",
+      "sourceHash": "65031d855508efebe7ba1fd035e567e320f09cd72b8ba9a2f5f6b229b229eb61",
+      "status": "preserved"
+    }
+  ]
+}

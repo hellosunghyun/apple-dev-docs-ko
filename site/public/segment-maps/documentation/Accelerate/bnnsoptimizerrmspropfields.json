@@ -1,0 +1,540 @@
+{
+  "docId": "documentation/Accelerate/bnnsoptimizerrmspropfields.md",
+  "title": "BNNSOptimizerRMSPropFields",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsoptimizerrmspropfields",
+  "segments": [
+    {
+      "id": "seg:heading:bnnsoptimizerrmspropfields:0000:0001",
+      "source": "BNNSOptimizerRMSPropFields",
+      "ko": "BNNSOptimizerRMSPropFields",
+      "sourceHash": "c9ddea60370eff8895f835fb5a66af6204b5542c71ec4f268a79c55231ac7afc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnsoptimizerrmspropfields:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: struct",
+      "ko": "**Framework**: Accelerate **Kind**: struct",
+      "sourceHash": "552e77ceae39944166096a32a2a95b04a8afea8b9af39ee8057b5d5d688445fe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnsoptimizerrmspropfields:0002:0001",
+      "source": "A structure that contains the fields of a root mean square propagation (RMSProp) optimizer.",
+      "ko": "Root Mean Square Propagation (RMSProp) 옵티마이저의 필드를 포함하는 구조체입니다.",
+      "sourceHash": "858787d1ab270116d21d7996c2c0738883b0a6086c00965419263f851a180809",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnsoptimizerrmspropfields:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsoptimizerrmspropfields:0004:0001",
+      "source": "iOS 14.0+",
+      "ko": "iOS 14.0+",
+      "sourceHash": "a09fb717eefa07878cab396c9697a744dfc726f6a8a77c093ef12e8124ffd90b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsoptimizerrmspropfields:0004:0002",
+      "source": "iPadOS 14.0+",
+      "ko": "iPadOS 14.0+",
+      "sourceHash": "3bd5f9207436aaf3fd80bdb95d64d5d280ff80afc32e998b4c7ef682ec2802e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsoptimizerrmspropfields:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsoptimizerrmspropfields:0004:0004",
+      "source": "macOS 11.0+",
+      "ko": "macOS 11.0+",
+      "sourceHash": "b9d0915cd0d28054ced64852a8b4eb668d9bff9c754aec6f95028c5b01456c88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsoptimizerrmspropfields:0004:0005",
+      "source": "tvOS 14.0+",
+      "ko": "tvOS 14.0+",
+      "sourceHash": "c82f0586cea06e7e3b23ac73e15255e7ccbb56eadf9421eeb43c4793905535a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsoptimizerrmspropfields:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsoptimizerrmspropfields:0004:0007",
+      "source": "watchOS 7.0+",
+      "ko": "watchOS 7.0+",
+      "sourceHash": "c062c9b3a973acc1ffdf60071a0ce7943a5b195f1b0ce07f283267c446e33961",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstruct BNNSOptimizerRMSPropFields\n```",
+      "ko": "```swift\nstruct BNNSOptimizerRMSPropFields\n```",
+      "sourceHash": "7c9fedbbb17d7eb47559a6288551e18d3077b8c48b334c47a27f76484eeb78c6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:topics:0007:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:initializers:0008:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0009:0001",
+      "source": "[init(learning_rate: Float, alpha: Float, epsilon: Float, centered: Bool, momentum: Float, gradient_scale: Float, regularization_scale: Float, clip_gradients: Bool, clip_gradients_min: Float, clip_gradients_max: Float, regularization_func: BNNSOptimizerRegularizationFunction)](bnnsoptimizerrmspropfields/init(learning_rate:alpha:epsilon:centered:momentum:gradient_scale:regularization_scale:clip_gradients:clip_gradients_min:clip_gradients_max:regularization_func:).md)",
+      "ko": "[init(learning_rate: Float, alpha: Float, epsilon: Float, centered: Bool, momentum: Float, gradient_scale: Float, regularization_scale: Float, clip_gradients: Bool, clip_gradients_min: Float, clip_gradients_max: Float, regularization_func: BNNSOptimizerRegularizationFunction)](bnnsoptimizerrmspropfields/init(learning_rate:alpha:epsilon:centered:momentum:gradient_scale:regularization_scale:clip_gradients:clip_gradients_min:clip_gradients_max:regularization_func:).md)",
+      "sourceHash": "db4fe2c22ec1af5326d106478bc6097c6acc15c408a1996b1707b9c865fd9fbf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:initializers:0010:0001",
+      "source": "Returns a new RMSProp optimizer fields structure from the specified parameters.",
+      "ko": "지정된 매개변수로부터 새 RMSProp 옵티마이저 필드 구조체를 반환합니다.",
+      "sourceHash": "892830d0a496dffde18f3140f55df93b9015251f899429363628c01887a6d19a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:initializers:0011:0001",
+      "source": "[init()](bnnsoptimizerrmspropfields/init.md)",
+      "ko": "[init()](bnnsoptimizerrmspropfields/init.md)",
+      "sourceHash": "301e58cbbbf67f57867b499d75a703f70fabc478490d8ec9c1aaf833ce1a5682",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:initializers:0012:0001",
+      "source": "Returns a new RMSProp optimizer fields structure.",
+      "ko": "새로운 RMSProp 옵티마이저 필드 구조체를 반환합니다.",
+      "sourceHash": "b9a576a4f937a31be60fbd48bf3bbc3af2fef1558e2f74a4f7e6f58271dd7167",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:instance-properties:0013:0001",
+      "source": "Instance Properties",
+      "ko": "인스턴스 속성",
+      "sourceHash": "093c2192f38e17fa2389cc524a76e2fe2ca3d129365f6ee47ffab107ed55cbc5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0014:0001",
+      "source": "[var learning_rate: Float](bnnsoptimizerrmspropfields/learning_rate.md)",
+      "ko": "[var learning_rate: Float](bnnsoptimizerrmspropfields/learning_rate.md)",
+      "sourceHash": "9357821ff35d198be5ac38e06ac7af8ad88623489a6c23400d6446e956e34217",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0015:0001",
+      "source": "A value that specifies the learning rate.",
+      "ko": "학습률을 지정하는 값입니다.",
+      "sourceHash": "3a8f2c295583c2ee7cd2694b152c3dbfd400e4a058984e40a6c1fb651b2c1493",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0016:0001",
+      "source": "[var alpha: Float](bnnsoptimizerrmspropfields/alpha.md)",
+      "ko": "[var alpha: Float](bnnsoptimizerrmspropfields/alpha.md)",
+      "sourceHash": "0473285d097123746adc587e986810768a99d1631789789beca780a23a952bff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0017:0001",
+      "source": "A constant that specifies smoothing.",
+      "ko": "평활화를 지정하는 상수입니다.",
+      "sourceHash": "d595f1e4dc32f286e19882476eb28ffb9d80e7bb5cc871d206aceecfc780b992",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0018:0001",
+      "source": "[var epsilon: Float](bnnsoptimizerrmspropfields/epsilon.md)",
+      "ko": "[var epsilon: Float](bnnsoptimizerrmspropfields/epsilon.md)",
+      "sourceHash": "259ca918e5591cf36fdc48ec5da78e8808ab79d53cfb9a8db41aa40940c382a1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0019:0001",
+      "source": "A term that the optimizer adds to the denominator.",
+      "ko": "옵티마이저가 분모에 더하는 항입니다.",
+      "sourceHash": "45be9c56cebac48b003a36524f04a0aa474be1d1b4988ac184e546e62376a8f1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0020:0001",
+      "source": "[var centered: Bool](bnnsoptimizerrmspropfields/centered.md)",
+      "ko": "[var centered: Bool](bnnsoptimizerrmspropfields/centered.md)",
+      "sourceHash": "54e1b7b0871d03b36c501e193c8a02ca0a602be5c285b55e4107befc90b5a9c3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0021:0001",
+      "source": "A Boolean value that specifies whether to use the centered variant.",
+      "ko": "Centered 변형을 사용할지 여부를 지정하는 Boolean 값입니다.",
+      "sourceHash": "f7075ba289c760e3a802b4e34fc36ef6a7ffa55978681a3ab2d805bcc4eb5312",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0022:0001",
+      "source": "[var momentum: Float](bnnsoptimizerrmspropfields/momentum.md)",
+      "ko": "[var momentum: Float](bnnsoptimizerrmspropfields/momentum.md)",
+      "sourceHash": "3e5b907cc0a318e4533fc5b6aada10085aea4b7a737a1e9afb2822f1fe8416cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0023:0001",
+      "source": "The rate of momentum decay.",
+      "ko": "모멘텀 감쇠율입니다.",
+      "sourceHash": "8ab0723e2b7df4e7eac8d2d49a504602e769f369aff79a6dfa01451fa60f882d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0024:0001",
+      "source": "[var gradient_scale: Float](bnnsoptimizerrmspropfields/gradient_scale.md)",
+      "ko": "[var gradient_scale: Float](bnnsoptimizerrmspropfields/gradient_scale.md)",
+      "sourceHash": "6bdbe7a2fe479337395c51da236637ceb131006b9ce737faf2252304bc37416a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0025:0001",
+      "source": "A value that specifies the gradient scaling factor.",
+      "ko": "그래디언트 스케일링 계수를 지정하는 값입니다.",
+      "sourceHash": "132126f6f4d0e8d8b35b70b6dfc1a5056f6e8fbdab4254f8ec7f2bca313c06b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0026:0001",
+      "source": "[var regularization_scale: Float](bnnsoptimizerrmspropfields/regularization_scale.md)",
+      "ko": "[var regularization_scale: Float](bnnsoptimizerrmspropfields/regularization_scale.md)",
+      "sourceHash": "e1dab9e1d0bfe81a254caf410b71773026fd54dc458ac7124a72b92450b1df35",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0027:0001",
+      "source": "A value that specifies the regularization scaling factor.",
+      "ko": "정규화 스케일링 계수를 지정하는 값입니다.",
+      "sourceHash": "17f77f40a102e7deb4af125afb9deb4dab1b014be07a63ec4effff89457eecbe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0028:0001",
+      "source": "[var clip_gradients: Bool](bnnsoptimizerrmspropfields/clip_gradients.md)",
+      "ko": "[var clip_gradients: Bool](bnnsoptimizerrmspropfields/clip_gradients.md)",
+      "sourceHash": "1386f865454be15224672873faf82a455761ed0858b54c6ced98774e25d2d779",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0029:0001",
+      "source": "A Boolean value that specifies whether to clip the gradient between minimum and maximum values.",
+      "ko": "최솟값과 최댓값 사이에서 그래디언트를 클리핑할지 여부를 지정하는 Boolean 값입니다.",
+      "sourceHash": "476e4a60f950958ec84b38d211115b8b9f5b93f81661b350e47a1c734d591b4d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0030:0001",
+      "source": "[var clip_gradients_min: Float](bnnsoptimizerrmspropfields/clip_gradients_min.md)",
+      "ko": "[var clip_gradients_min: Float](bnnsoptimizerrmspropfields/clip_gradients_min.md)",
+      "sourceHash": "0433e203dd1f664529015bdf49b09cf4a8ef101f6412ed433220ac61ebe32b26",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0031:0001",
+      "source": "The values for the minimum gradient.",
+      "ko": "최소 그래디언트 값입니다.",
+      "sourceHash": "3fa8cc1c3adf6e85921576e50ca61dd08aa49c8789e5a9f186628f32505e798c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0032:0001",
+      "source": "[var clip_gradients_max: Float](bnnsoptimizerrmspropfields/clip_gradients_max.md)",
+      "ko": "[var clip_gradients_max: Float](bnnsoptimizerrmspropfields/clip_gradients_max.md)",
+      "sourceHash": "4d69ab1dae2be90840014fe536adf867b604a5b70aae4f0da73957d8fdcd1844",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0033:0001",
+      "source": "The values for the maximum gradient.",
+      "ko": "최대 그래디언트 값입니다.",
+      "sourceHash": "32bc23364d5c7396b3170da201c13458d6533b4bee1bed08dd8585f70ea090b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0034:0001",
+      "source": "[var regularization_func: BNNSOptimizerRegularizationFunction](bnnsoptimizerrmspropfields/regularization_func.md)",
+      "ko": "[var regularization_func: BNNSOptimizerRegularizationFunction](bnnsoptimizerrmspropfields/regularization_func.md)",
+      "sourceHash": "fb47969f3af0d7a228417a6087d96789c4f0381b1de78c02cd6c145c01f5c838",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0035:0001",
+      "source": "The variable that specifies the regularization function.",
+      "ko": "정규화 함수를 지정하는 변수입니다.",
+      "sourceHash": "ca592c87f590a8c13dc969c6672666b0f4d4cb29bcd834b8d59f50d51121468d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0036:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0037:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0038:0001",
+      "source": "[BitwiseCopyable](../Swift/BitwiseCopyable.md)",
+      "ko": "[BitwiseCopyable](../Swift/BitwiseCopyable.md)",
+      "sourceHash": "d9b7e5b67f3eac8ea3e97e986bfddf0caad0dc17c0fe8215d67737774d123fa2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0038:0002",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0039:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[struct AdamOptimizer](bnns/adamoptimizer.md)",
+      "ko": "[struct AdamOptimizer](bnns/adamoptimizer.md)",
+      "sourceHash": "03aea9937c92cf36a8534a308dcfa92710b53b2aa718298bdeadd860b88605db",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "An optimizer that uses the Adam optimization algorithm.",
+      "ko": "Adam 최적화 알고리즘을 사용하는 옵티마이저입니다.",
+      "sourceHash": "104bd23766c0a1506059389cc0ce6486232194be241e7aea3f41a68efb09911b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[struct AdamWOptimizer](bnns/adamwoptimizer.md)",
+      "ko": "[struct AdamWOptimizer](bnns/adamwoptimizer.md)",
+      "sourceHash": "a6977e2fd9f116becc60cf8fcd439bbf9411bf44d5093f5b0c193ceb0708416a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "An optimizer that uses the AdamW optimization algorithm.",
+      "ko": "AdamW 최적화 알고리즘을 사용하는 옵티마이저입니다.",
+      "sourceHash": "bdda2d8901901d7f130d731454e8075ae80c37062d29e090569e7cbee813b6e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[struct RMSPropOptimizer](bnns/rmspropoptimizer.md)",
+      "ko": "[struct RMSPropOptimizer](bnns/rmspropoptimizer.md)",
+      "sourceHash": "a8f3086c5a0b759f645c425008140c6b337a9b1ec0c161327cb19daa47044969",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "An optimizer that uses the root mean square propagation (RMSProp) optimization method.",
+      "ko": "루트 평균 제곱 전파(RMSProp) 최적화 방법을 사용하는 옵티마이저입니다.",
+      "sourceHash": "ff51d5e0f58cbbc0c6d25938f0a386b85ef3cb5e3192c4faf0a609c9abc36990",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0046:0001",
+      "source": "[struct SGDMomentumOptimizer](bnns/sgdmomentumoptimizer.md)",
+      "ko": "[struct SGDMomentumOptimizer](bnns/sgdmomentumoptimizer.md)",
+      "sourceHash": "bc262541afd862126b2c92f15c8ee987dadd011d5f0891a2b1f4495541ec6207",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "An optimizer that uses the stochastic gradient descent (SGD) with the momentum optimization method.",
+      "ko": "모멘텀 최적화 방식을 사용하는 확률적 경사 하강법(SGD) 옵티마이저입니다.",
+      "sourceHash": "a2f7fde7e712c26ac45b194c583a43ce6d4b11986665f7a6ea204f4695dae1a8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0048:0001",
+      "source": "[protocol BNNSOptimizer](bnnsoptimizer.md)",
+      "ko": "[protocol BNNSOptimizer](bnnsoptimizer.md)",
+      "sourceHash": "5a80bc364d63414337e1dfde8351e79a9e5f57b41b7537c6a63424b4f86a540c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:see-also:0048:0002",
+      "source": "[struct BNNSOptimizerRegularizationFunction](bnnsoptimizerregularizationfunction.md)",
+      "ko": "[struct BNNSOptimizerRegularizationFunction](bnnsoptimizerregularizationfunction.md)",
+      "sourceHash": "3e61358afde64df9a3df9b1c33b38f7fc5c631f65018b185276b28c1ed7c5300",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0049:0001",
+      "source": "A structure that contains optimizer regularization functions.",
+      "ko": "옵티마이저 정규화 함수를 포함하는 구조체입니다.",
+      "sourceHash": "4e69ae5b80af5d0b28ad28713bc172a58d83c3aac771f5be3eb60a4b29c4685e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0050:0001",
+      "source": "[struct BNNSOptimizerAdamFields](bnnsoptimizeradamfields.md)",
+      "ko": "[struct BNNSOptimizerAdamFields](bnnsoptimizeradamfields.md)",
+      "sourceHash": "1c5b237949fa22f232553269b0791edf290de4308a8c92bbd7c043388cbf3e30",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0051:0001",
+      "source": "A structure that contains the fields of an Adam optimizer.",
+      "ko": "Adam 옵티마이저의 필드가 포함된 구조체입니다.",
+      "sourceHash": "b2a112584b1a66318142b7d9b5bda1fbebf7852a65e92998db91ff46c070be43",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0052:0001",
+      "source": "[struct BNNSOptimizerAdamWithClippingFields](bnnsoptimizeradamwithclippingfields.md)",
+      "ko": "[struct BNNSOptimizerAdamWithClippingFields](bnnsoptimizeradamwithclippingfields.md)",
+      "sourceHash": "b377550a4462404b0810a7e13b9be75c67ea870c970919f8c7a855f926876e19",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0053:0001",
+      "source": "A structure that contains the fields of an Adam or AdamW optimizer that optionally clips the gradient by value or by norm.",
+      "ko": "값 또는 노름 기준으로 기울기를 선택적으로 클리핑하는 Adam 또는 AdamW 옵티마이저의 필드가 포함된 구조체입니다.",
+      "sourceHash": "fc5ca52e8c80231c7d2ac07d56be8fc8b27d73a29fcc11e09e4d2b1a003466de",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0054:0001",
+      "source": "[struct BNNSOptimizerRMSPropWithClippingFields](bnnsoptimizerrmspropwithclippingfields.md)",
+      "ko": "[struct BNNSOptimizerRMSPropWithClippingFields](bnnsoptimizerrmspropwithclippingfields.md)",
+      "sourceHash": "63ae86c9096eca1248e2035d2e4de17bde695b52c12a1949c426f7a2bffa8a4a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0055:0001",
+      "source": "A structure that contains the fields of a root mean square propagation (RMSProp) optimizer that optionally clips the gradient by value or by norm.",
+      "ko": "값 또는 노름 기준으로 기울기를 선택적으로 클리핑하는 RMSProp 옵티마이저의 필드가 포함된 구조체입니다.",
+      "sourceHash": "24d559d35382e11e0aed65283e93ea6c485b178d3ae2a212baec71404fb3c388",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0056:0001",
+      "source": "[struct BNNSOptimizerSGDMomentumFields](bnnsoptimizersgdmomentumfields.md)",
+      "ko": "[struct BNNSOptimizerSGDMomentumFields](bnnsoptimizersgdmomentumfields.md)",
+      "sourceHash": "687429afb3fa7f5a65b90565ed5ce61dd9eacdb93cee25704c36cfdbbc872984",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0057:0001",
+      "source": "A structure that contains the fields of a stochastic gradient descent (SGD) with momentum optimizer.",
+      "ko": "모멘텀 기반 확률적 경사 하강법(SGD) 옵티마이저의 필드가 포함된 구조체입니다.",
+      "sourceHash": "c7dd02a763d32d916bb69a97553a47491f7d334b247e43e58a17d8e8f9c0df7a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0058:0001",
+      "source": "[struct BNNSOptimizerSGDMomentumWithClippingFields](bnnsoptimizersgdmomentumwithclippingfields.md)",
+      "ko": "[struct BNNSOptimizerSGDMomentumWithClippingFields](bnnsoptimizersgdmomentumwithclippingfields.md)",
+      "sourceHash": "7b6bc18e8be3ac15d478d2b5ae0b5de1c72aacf51d304e8a40e47e0f810c1509",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0059:0001",
+      "source": "A structure that contains the fields of a stochastic gradient descent (SGD) with momentum optimizer that optionally clips the gradient by value or by norm.",
+      "ko": "값 또는 노름 기준으로 기울기를 선택적으로 클리핑하는 모멘텀 기반 확률적 경사 하강법(SGD) 옵티마이저의 필드가 포함된 구조체입니다.",
+      "sourceHash": "2127a594751be472753911024d9ac8157b97e0f159ab77e77349033c6e642a63",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0060:0001",
+      "source": "[struct BNNSOptimizerSGDMomentumVariant](bnnsoptimizersgdmomentumvariant.md)",
+      "ko": "[struct BNNSOptimizerSGDMomentumVariant](bnnsoptimizersgdmomentumvariant.md)",
+      "sourceHash": "d5ebdde907859ed2b3d4d3a76ba7bbcb9e20bcff64cb6c105983c6716b3eee67",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0061:0001",
+      "source": "Constants that define SGD momentum variants.",
+      "ko": "SGD 모멘텀 변형을 정의하는 상수입니다.",
+      "sourceHash": "fbc7c1d019a9e01da915301ef9488986cc2a8840fb76eede0b49e31a4ea87c8a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0062:0001",
+      "source": "[func BNNSOptimizerStep(BNNSOptimizerFunction, UnsafeRawPointer, Int, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>>, UnsafeMutablePointer<UnsafePointer<BNNSNDArrayDescriptor>>, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>?>?, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnsoptimizerstep(_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSOptimizerStep(BNNSOptimizerFunction, UnsafeRawPointer, Int, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>>, UnsafeMutablePointer<UnsafePointer<BNNSNDArrayDescriptor>>, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>?>?, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnsoptimizerstep(_:_:_:_:_:_:_:).md)",
+      "sourceHash": "bc264db32635acaf89c66059c20ec8eb87bffeb39b454efbc5b0d798431c8a06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0063:0001",
+      "source": "Applies a single optimization step to one or more parameters.",
+      "ko": "하나 이상의 매개변수에 대해 단일 최적화 단계를 적용합니다.",
+      "sourceHash": "873172b7ada2cd770f5945dc1c5377dea3d11d700b8f2b8ad32baa0597c19a5d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0064:0001",
+      "source": "[struct BNNSOptimizerFunction](bnnsoptimizerfunction.md)",
+      "ko": "[struct BNNSOptimizerFunction](bnnsoptimizerfunction.md)",
+      "sourceHash": "0df2716f525e03bbe5b85665a2fd4945f0318c9b0169a286a6990ba561d47e53",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0065:0001",
+      "source": "A structure that contains optimizer functions.",
+      "ko": "옵티마이저 함수가 포함된 구조체입니다.",
+      "sourceHash": "f2e2f5c3643f47c33cbc3f362996f44d507ea78a59f644663d8c1afa1228af2a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0066:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0067:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsoptimizerrmspropfields)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsoptimizerrmspropfields)*",
+      "sourceHash": "e245f2685c134fc63f5637658965876a6ec8dcae1d301bb917a6dfb1fdbe252f",
+      "status": "preserved"
+    }
+  ]
+}

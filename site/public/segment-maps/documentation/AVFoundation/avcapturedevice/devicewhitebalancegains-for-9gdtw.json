@@ -1,0 +1,246 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedevice/devicewhitebalancegains-for-9gdtw.md",
+  "title": "deviceWhiteBalanceGains(for:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedevice/devicewhitebalancegains-for-9gdtw",
+  "segments": [
+    {
+      "id": "seg:heading:devicewhitebalancegainsfor:0000:0001",
+      "source": "deviceWhiteBalanceGains(for:)",
+      "ko": "deviceWhiteBalanceGains(for:)",
+      "sourceHash": "980484c1f8a3cf8ebf07393523094ce5b548598a5d430e3ed9a6e234bce41e17",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:devicewhitebalancegainsfor:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:devicewhitebalancegainsfor:0002:0001",
+      "source": "Converts device-independent chromaticity values to device-specific white balance RGB gain values.",
+      "ko": "디바이스 독립적인 크로마틱성 값을 디바이스별 화이트 밸런스 RGB 게인 값으로 변환합니다.",
+      "sourceHash": "4f4f9d25123c41937f6e58e25d6a0d2ac4089bc7484646614ed1e447988c9b37",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:devicewhitebalancegainsfor:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:devicewhitebalancegainsfor:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:devicewhitebalancegainsfor:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:devicewhitebalancegainsfor:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:devicewhitebalancegainsfor:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc deviceWhiteBalanceGains(for chromaticityValues: AVCaptureDevice.WhiteBalanceChromaticityValues) -> AVCaptureDevice.WhiteBalanceGains\n```",
+      "ko": "```swift\nfunc deviceWhiteBalanceGains(for chromaticityValues: AVCaptureDevice.WhiteBalanceChromaticityValues) -> AVCaptureDevice.WhiteBalanceGains\n```",
+      "sourceHash": "7fb1731351ec29249737d8568432326fb7bf1a1b88591e8fe452e541da969c6d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "A structure that contains device-specific RGB gain values.",
+      "ko": "디바이스별 RGB 게인 값을 포함하는 구조체입니다.",
+      "sourceHash": "5683a769bdad482882a61dbe4acf5b1b055070627590648a3bf914a51d43fa48",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "This property specifies the current red, green, and blue gain values used for white balance.",
+      "ko": "이 속성은 화이트 밸런스에 사용되는 현재 빨간색, 초록색, 파란색 게인 값을 지정합니다.",
+      "sourceHash": "659b57652556268e281e94047767e5a3f3df3430df44a0db71e3dde2e64e0592",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "You can use the values to adjust color casts for a given scene.",
+      "ko": "이 값을 사용하여 특정 장면의 색상 캐스트를 조정할 수 있습니다.",
+      "sourceHash": "b97f80ca5db9146afd47ceb7a667df71b0a130ea6cc8cdd47538c1fdf4366e1e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "Each channel supports values between `1.0` and -[`maxWhiteBalanceGain`](avcapturedevice/maxwhitebalancegain.md).",
+      "ko": "각 채널은 `1.0`에서 -[`maxWhiteBalanceGain`](avcapturedevice/maxwhitebalancegain.md)까지의 값을 지원합니다.",
+      "sourceHash": "51e320b019bebb86ffbfe3c8d225d24e7bdf7613b11f09da42443367068f95c9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0001",
+      "source": "This property is key-value observable.",
+      "ko": "이 속성은 키-값 관찰 가능한 값입니다.",
+      "sourceHash": "da10f6fb15a1291aedea3de21f0a99a0321c2e86790d0f3fd44477cca7d3c9a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0013:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0014:0001",
+      "source": "`chromaticityValues`: The chromaticity values for which to get white balance RGB gain values.",
+      "ko": "`chromaticityValues`: 화이트 밸런스 RGB 게인 값을 얻기 위한 크로마틱성 값입니다.",
+      "sourceHash": "502008a2f9030bde4f05d7fdc7b957ea1e07a199cf7cc058c65b27248fbea9b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0015:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func chromaticityValues(for: AVCaptureDevice.WhiteBalanceGains) -> AVCaptureDevice.WhiteBalanceChromaticityValues](avcapturedevice/chromaticityvalues(for:).md)",
+      "ko": "[func chromaticityValues(for: AVCaptureDevice.WhiteBalanceGains) -> AVCaptureDevice.WhiteBalanceChromaticityValues](avcapturedevice/chromaticityvalues(for:).md)",
+      "sourceHash": "5e89930a43a100d032a4be1ada1a22cf400d85da954bfa43ffbcac83975b7b32",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Converts device-specific white balance RGB gain values to device-independent chromaticity values.",
+      "ko": "디바이스별 화이트 밸런스 RGB 게인 값을 디바이스 독립적인 크로마틱성 값으로 변환합니다.",
+      "sourceHash": "98f66142b320aca9e69aacab19b437b1e92f65285ce9d7ebec698a8f00f64583",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func temperatureAndTintValues(for: AVCaptureDevice.WhiteBalanceGains) -> AVCaptureDevice.WhiteBalanceTemperatureAndTintValues](avcapturedevice/temperatureandtintvalues(for:).md)",
+      "ko": "[func temperatureAndTintValues(for: AVCaptureDevice.WhiteBalanceGains) -> AVCaptureDevice.WhiteBalanceTemperatureAndTintValues](avcapturedevice/temperatureandtintvalues(for:).md)",
+      "sourceHash": "f06d6ed233013c480164a5d3b5604bbcbda519370dff19544b4d95dff79a9ba1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Converts device-specific white balance RGB gain values to device-independent temperature and tint values.",
+      "ko": "디바이스별 화이트 밸런스 RGB 게인 값을 디바이스 독립적인 온도 및 틴트 값으로 변환합니다.",
+      "sourceHash": "640372c5f2bdef2e0070ec92c33b70103f6dcaa81162a8a035c7e311d6ced6eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[func deviceWhiteBalanceGains(for: AVCaptureDevice.WhiteBalanceTemperatureAndTintValues) -> AVCaptureDevice.WhiteBalanceGains](avcapturedevice/devicewhitebalancegains(for:)-3wtsa.md)",
+      "ko": "[func deviceWhiteBalanceGains(for: AVCaptureDevice.WhiteBalanceTemperatureAndTintValues) -> AVCaptureDevice.WhiteBalanceGains](avcapturedevice/devicewhitebalancegains(for:)-3wtsa.md)",
+      "sourceHash": "52d78c83dc57de97de8c7286718163ac883ca7aa0840b349e4d0f64b24c6cb54",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Converts device-independent temperature and tint values to device-specific white balance RGB gain values.",
+      "ko": "디바이스 독립적인 온도 및 틴트 값을 디바이스별 화이트 밸런스 RGB 게인 값으로 변환합니다.",
+      "sourceHash": "93883e64a8ba8e3ab79cd306510710ac0c9bdb6c3e8e3bf6341855d79f37830e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[AVCaptureDevice.WhiteBalanceGains](avcapturedevice/whitebalancegains.md)",
+      "ko": "[AVCaptureDevice.WhiteBalanceGains](avcapturedevice/whitebalancegains.md)",
+      "sourceHash": "cdcff7e477bce33584bc9d480e2ab913f4b2dbca35e81a38cbbc0891511270a7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "A structure that defines RGB white balance gain values.",
+      "ko": "RGB 화이트 밸런스 게인 값들을 정의하는 구조체입니다.",
+      "sourceHash": "8b3c1dc9b979c06109097c0acd5bf0dc9c43e323c0516f8d0993fb21d1d0d522",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[AVCaptureDevice.WhiteBalanceChromaticityValues](avcapturedevice/whitebalancechromaticityvalues.md)",
+      "ko": "[AVCaptureDevice.WhiteBalanceChromaticityValues](avcapturedevice/whitebalancechromaticityvalues.md)",
+      "sourceHash": "2e6813918deb962b5cc67292d9ee6c839b89079bab883a2c34c4ca2e16c4b3e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "A structure that defines CIE 1931 xy chromaticity values.",
+      "ko": "CIE 1931 xy 색도 값을 정의하는 구조체입니다.",
+      "sourceHash": "d8adfdb0e6b2de7ec6b0b42519ebbb8510c2047d5c72d95747e325226b7abea3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[AVCaptureDevice.WhiteBalanceTemperatureAndTintValues](avcapturedevice/whitebalancetemperatureandtintvalues.md)",
+      "ko": "[AVCaptureDevice.WhiteBalanceTemperatureAndTintValues](avcapturedevice/whitebalancetemperatureandtintvalues.md)",
+      "sourceHash": "d10d669807812bc5e88d248d82d4687bd88e4c9ea038b5cbc264638d440be178",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "A structure that defines temperature and tint values correlated to a white-balance color.",
+      "ko": "화이트 밸런스 색상과 연관된 온도 및 틴트 값을 정의하는 구조체입니다.",
+      "sourceHash": "7d29fe6f9e3efe939437c207820b05a04e8f68db6f215c6c25112f3dbe7b7fa0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0028:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/devicewhitebalancegains(for:)-9gdtw)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/devicewhitebalancegains(for:)-9gdtw)*",
+      "sourceHash": "26bc7f941512ccbb7e2c832e70213538bd93f6c61eddc57ad201c1bff333cb91",
+      "status": "machine_translated"
+    }
+  ]
+}

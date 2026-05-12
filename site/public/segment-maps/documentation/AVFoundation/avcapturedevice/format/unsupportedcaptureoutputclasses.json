@@ -1,0 +1,120 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedevice/format/unsupportedcaptureoutputclasses.md",
+  "title": "unsupportedCaptureOutputClasses",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedevice/format/unsupportedcaptureoutputclasses",
+  "segments": [
+    {
+      "id": "seg:heading:unsupportedcaptureoutputclasses:0000:0001",
+      "source": "unsupportedCaptureOutputClasses",
+      "ko": "unsupportedCaptureOutputClasses",
+      "sourceHash": "a4ac7d028215160e6fef6ff414dc5314376774fa096354adbd3f912c040cc638",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:unsupportedcaptureoutputclasses:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:unsupportedcaptureoutputclasses:0002:0001",
+      "source": "The list of capture output subclasses not allowed for capture with this format, if any.",
+      "ko": "이 형식으로 캡처할 수 없는 캡처 출력 하위 클래스 목록입니다(해당되는 경우).",
+      "sourceHash": "2105090564c0768d5a60ad1a8400bac8a0de7e8c38d4ce8e93695a3142be1177",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:unsupportedcaptureoutputclasses:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:unsupportedcaptureoutputclasses:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:unsupportedcaptureoutputclasses:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:unsupportedcaptureoutputclasses:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:unsupportedcaptureoutputclasses:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar unsupportedCaptureOutputClasses: [AnyClass] { get }\n```",
+      "ko": "```swift\nvar unsupportedCaptureOutputClasses: [AnyClass] { get }\n```",
+      "sourceHash": "7d46e150f05cbf8d5312d036c4ab13a09935bc2a67815b46cbd0455b85fcae7d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "As a rule, capture formats with a given [`mediaType`](avcapturedevice/format/mediatype.md) are available for use with all [`AVCaptureOutput`](avcaptureoutput.md) subclasses that accept that media type.",
+      "ko": "A preview layer begins displaying content when you call the capture session’s [`startRunning()`](avcapturesession/startrunning().md) method.",
+      "sourceHash": "65e34a8de6732b34cca320041f71b90479d13e389218d8a66e8c9fdca6a1be83",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "However, this isn’t always the case.",
+      "ko": "If you associate the layer with an instance of [`AVCaptureMultiCamSession`](avcapturemulticamsession.md), the system guarantees that all video preview layers display content by the time the blocking call to [`startRunning()`](avcapturesession/startrunning().md) or [`commitConfiguration()`](avcapturesession/commitconfiguration().md) returns.",
+      "sourceHash": "77e78c3ef0732c8c85abc3b833f6e859d78c446d74d5f2aa5e191edd3898a267",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "For example, formats for high-resolution photo capture may not support the [`AVCaptureMovieFileOutput`](avcapturemoviefileoutput.md) class due to bandwidth limitations.",
+      "ko": "예를 들어 대역폭 제한으로 인해 고해상도 사진 캡처용 형식은 [`AVCaptureMovieFileOutput`](avcapturemoviefileoutput.md) 클래스를 지원하지 않을 수 있습니다.",
+      "sourceHash": "c7ade6bb4ef6aa7713ed8394b30ab813d27af4a5c91fface650038a89c0311b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:discussion:0009:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/format/unsupportedcaptureoutputclasses)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/format/unsupportedcaptureoutputclasses)*",
+      "sourceHash": "11d44bb10dbe62801ca38d8dd02414ac9dc2727d1af7ea08ebcc5b57aa42e7ce",
+      "status": "preserved"
+    }
+  ]
+}

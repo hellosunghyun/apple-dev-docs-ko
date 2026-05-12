@@ -1,0 +1,113 @@
+{
+  "docId": "documentation/AVFoundation/avcontentkeyrequest/respondbyrequestingpersistablecontentkeyrequest-1ci4q.md",
+  "title": "respondByRequestingPersistableContentKeyRequest()",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcontentkeyrequest/respondbyrequestingpersistablecontentkeyrequest-1ci4q",
+  "segments": [
+    {
+      "id": "seg:heading:respondbyrequestingpersistablecontentkeyrequest:0000:0001",
+      "source": "respondByRequestingPersistableContentKeyRequest()",
+      "ko": "respondByRequestingPersistableContentKeyRequest()",
+      "sourceHash": "42e662ab16570928d343e91269e2d5a4dc51eac8a4cdb9783d2a448fdbe0772c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:respondbyrequestingpersistablecontentkeyrequest:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:respondbyrequestingpersistablecontentkeyrequest:0002:0001",
+      "source": "Tells the receiver that the app requires a persistable content key request object for processing.",
+      "ko": "앱이 처리에 persistable content key request 객체를 사용해야 함을 수신자에게 알립니다.",
+      "sourceHash": "2a51cf7768df48fb77faf4eeb913bf480692674ddd73435ce26d442f4fd5e579",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:respondbyrequestingpersistablecontentkeyrequest:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:respondbyrequestingpersistablecontentkeyrequest:0004:0001",
+      "source": "iOS 10.3+",
+      "ko": "iOS 10.3+",
+      "sourceHash": "708f6f3b2348898a25a9d480992882729a9adc6ca038a2e3fc44a5270f30c3bc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:respondbyrequestingpersistablecontentkeyrequest:0004:0002",
+      "source": "iPadOS 10.3+",
+      "ko": "iPadOS 10.3+",
+      "sourceHash": "79c45743ae27984d27fcbb5e463bb0653506fcfed14cb396a2427bd28c6b9115",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:respondbyrequestingpersistablecontentkeyrequest:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc respondByRequestingPersistableContentKeyRequest()\n```",
+      "ko": "```swift\nfunc respondByRequestingPersistableContentKeyRequest()\n```",
+      "sourceHash": "141e4e3924cbf33fbed675a3a2b8b7a36b6a5ac3a91ee5196f8481126089d8d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "To create a key that persists across multiple playback sessions, use this method to request an [`AVPersistableContentKeyRequest`](avpersistablecontentkeyrequest.md) object.",
+      "ko": "The value of this UTI is `com.microsoft.waveform-audio`.",
+      "sourceHash": "73f91a9482ceb5c1141fbe1d8df4e1a719481a05d53af15fb0e02dd2cb099f70",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "If the underlying protocol supports persistable content keys, the delegate receives a persistable content key request via the [`contentKeySession(_:didProvide:)`](avcontentkeysessiondelegate/contentkeysession(_:didprovide:)-2wdgz.md) method.",
+      "ko": "Files of this type have a `.wav`, `.wave`, or `.bwf` extension.",
+      "sourceHash": "00c91a4bb9e3c0ab9cd0c36034e251f048f8378bb62644ac42d02a686fd7608e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "An [`internalInconsistencyException`](https://developer.apple.com/documentation/Foundation/NSExceptionName/internalInconsistencyException) is returned if your delegate does not respond to [`contentKeySession(_:didProvide:)`](avcontentkeysessiondelegate/contentkeysession(_:didprovide:)-2wdgz.md).",
+      "ko": "delegate가 [`contentKeySession(_:didProvide:)`](avcontentkeysessiondelegate/contentkeysession(_:didprovide:)-2wdgz.md)에 응답하지 않으면 [`internalInconsistencyException`](https://developer.apple.com/documentation/Foundation/NSExceptionName/internalInconsistencyException)이(가) 반환됩니다.",
+      "sourceHash": "390dc39914d4f9af601586826967f64a6baa3cf796765d0bf6f7bafa7da93633",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:discussion:0009:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcontentkeyrequest/respondbyrequestingpersistablecontentkeyrequest()-1ci4q)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcontentkeyrequest/respondbyrequestingpersistablecontentkeyrequest()-1ci4q)*",
+      "sourceHash": "5c32350b724e2e898ea77f7775d07fa19297d3d67d4bfdcfe03b14efcb0a46be",
+      "status": "machine_translated"
+    }
+  ]
+}

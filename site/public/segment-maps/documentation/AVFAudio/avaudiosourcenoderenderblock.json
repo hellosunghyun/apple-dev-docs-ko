@@ -1,0 +1,204 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosourcenoderenderblock.md",
+  "title": "AVAudioSourceNodeRenderBlock",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosourcenoderenderblock",
+  "segments": [
+    {
+      "id": "seg:heading:avaudiosourcenoderenderblock:0000:0001",
+      "source": "AVAudioSourceNodeRenderBlock",
+      "ko": "AVAudioSourceNodeRenderBlock",
+      "sourceHash": "115c002d890ca7d744be16788e9c52c7e2b29507353b2007de0d3ea3e9c91459",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiosourcenoderenderblock:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: typealias",
+      "ko": "**Framework**: AVFAudio **Kind**: typealias",
+      "sourceHash": "75c43000948d269ae13bdb05d824bebe3c97bf93a66237cc6f07499f59a5c7fa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiosourcenoderenderblock:0002:0001",
+      "source": "A block that supplies audio data to an audio source node.",
+      "ko": "오디오 소스 노드에 오디오 데이터를 제공하는 블록입니다.",
+      "sourceHash": "a4c73ef95371ea14f629169bc92d953f3c58bdde257844b6c1797e2c8b0eb318",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudiosourcenoderenderblock:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosourcenoderenderblock:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosourcenoderenderblock:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosourcenoderenderblock:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosourcenoderenderblock:0004:0004",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosourcenoderenderblock:0004:0005",
+      "source": "tvOS 13.0+",
+      "ko": "tvOS 13.0+",
+      "sourceHash": "030e6b7e51c85f674522c209ef14fc0e355ebd196e0259389daeaae4f69ad826",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosourcenoderenderblock:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosourcenoderenderblock:0004:0007",
+      "source": "watchOS 6.0+",
+      "ko": "watchOS 6.0+",
+      "sourceHash": "b51a82766977554dbe76aec20d5bc0ad6fe4984dddfcf6db82130e544b0631e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\ntypealias AVAudioSourceNodeRenderBlock = (UnsafeMutablePointer<ObjCBool>, UnsafePointer<AudioTimeStamp>, AVAudioFrameCount, UnsafeMutablePointer<AudioBufferList>) -> OSStatus\n```",
+      "ko": "```swift\ntypealias AVAudioSourceNodeRenderBlock = (UnsafeMutablePointer<ObjCBool>, UnsafePointer<AudioTimeStamp>, AVAudioFrameCount, UnsafeMutablePointer<AudioBufferList>) -> OSStatus\n```",
+      "sourceHash": "c9e576ac83f4fdc2756bb7b8ee1c86eff812c204e8790bd9912619a3e8e51c82",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "An `OSStatus` result code.",
+      "ko": "A voice for the specified identifier if the identifier is valid and the voice is available on the device; otherwise, `nil`.",
+      "sourceHash": "6c335fcd080a15703cd129bf4e037d268e6a847316ec300d8db364df7a23dd16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0002",
+      "source": "When returning an error, consider the audio data invalid.",
+      "ko": "오류를 반환하는 경우 오디오 데이터는 유효하지 않은 것으로 간주합니다.",
+      "sourceHash": "45ef94cfa81f4010e530bc2a0de792c5f8653b0177194a9848d649bcb45a6d80",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0009:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0010:0001",
+      "source": "`isSilence`: The Boolean value that indicates whether the buffer contains only silence.",
+      "ko": "`identifier`: The unique identifier for a voice.",
+      "sourceHash": "52bd078cd9ed0caba533d2e8f57f6ae3355b676a595f10bd5378eedb14730d46",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0002",
+      "source": "`timestamp`: The HAL time the audio data renders.",
+      "ko": "`timestamp`: 오디오 데이터를 렌더링하는 HAL 시간입니다.",
+      "sourceHash": "d50cf296865bbb402b4b014bb29d8b94358b9bec4b6911cacdd1a9206859b6f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0003",
+      "source": "`frameCount`: The number of sample frames of audio data the engine requests.",
+      "ko": "`frameCount`: 엔진이 요청하는 오디오 데이터의 샘플 프레임 수입니다.",
+      "sourceHash": "f7fbf2b135b38a0858c3ee1166a472bc755bd87c2026a117533dcbc56d8adcd3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0004",
+      "source": "`outputData`: The output data.",
+      "ko": "`outputData`: 출력 데이터입니다.",
+      "sourceHash": "ccfdf28255f9480079df22be4d11503c75b6296481ef66b6c622e5f102d09f83",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "관련 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[init(renderBlock: AVAudioSourceNodeRenderBlock)](avaudiosourcenode/init(renderblock:).md)",
+      "ko": "[init(renderBlock: AVAudioSourceNodeRenderBlock)](avspeechsynthesisvoice/init(language:).md)",
+      "sourceHash": "38aab185875fcffd94031b7d23f4d1d4eb8231e1738ddfd3652149d64bd2810e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Creates an audio source node with a block that supplies audio data.",
+      "ko": "오디오 데이터를 제공하는 블록으로 오디오 소스 노드를 생성합니다.",
+      "sourceHash": "f0a9abbd22b76196abf257b0e63773880f37cf10ff2055d222f24ea101390bfb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[init(format: AVAudioFormat, renderBlock: AVAudioSourceNodeRenderBlock)](avaudiosourcenode/init(format:renderblock:).md)",
+      "ko": "[init(format: AVAudioFormat, renderBlock: AVAudioSourceNodeRenderBlock)](avspeechsynthesisvoice/speechvoices.md)",
+      "sourceHash": "5b8e46c46045d2c1bc03b61558bb343a184fa54f06aa6fbd22a43d56bfd74172",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Creates an audio source node with the audio format and a block that supplies audio data.",
+      "ko": "오디오 형식과 오디오 데이터를 제공하는 블록으로 오디오 소스 노드를 생성합니다.",
+      "sourceHash": "4659cbdd19086b745dc3cde090c93584e34d271d9c0a53871c195b6a0e7e84d7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0016:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosourcenoderenderblock)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosourcenoderenderblock)*",
+      "sourceHash": "7ae257f3a6827e531530109c4c9bafd7d6aaed1bd3313a1acbafc2097029b473",
+      "status": "preserved"
+    }
+  ]
+}

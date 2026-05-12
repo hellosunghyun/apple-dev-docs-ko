@@ -1,0 +1,519 @@
+{
+  "docId": "documentation/AVFoundation/avcapturetimecodegenerator.md",
+  "title": "AVCaptureTimecodeGenerator",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturetimecodegenerator",
+  "segments": [
+    {
+      "id": "seg:heading:avcapturetimecodegenerator:0000:0001",
+      "source": "AVCaptureTimecodeGenerator",
+      "ko": "AVCaptureTimecodeGenerator",
+      "sourceHash": "814044f6d7a2104289d6be0b11561354c65223cae22ce1824d23ae5313426acd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avcapturetimecodegenerator:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avcapturetimecodegenerator:0002:0001",
+      "source": "Generates and synchronizes timecode data from various sources for precise video and audio synchronization.",
+      "ko": "정밀한 비디오 및 오디오 동기화를 위해 다양한 소스에서 timecode 데이터를 생성하고 동기화합니다.",
+      "sourceHash": "b9ee7e164d178491f84ae6803aab781d009d0577a165870420eb6b05348ce494",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avcapturetimecodegenerator:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturetimecodegenerator:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturetimecodegenerator:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturetimecodegenerator:0004:0003",
+      "source": "Mac Catalyst 26.0+",
+      "ko": "Mac Catalyst 26.0+",
+      "sourceHash": "41da0bcbe19513a5638f4ac052319884e486b3cc05252ef6209b23e7b2b1d8e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturetimecodegenerator:0004:0004",
+      "source": "macOS 26.0+",
+      "ko": "macOS 26.0+",
+      "sourceHash": "6fcc4a770cbd02feaac4df78b954d37ef26fc9755008ee17612223162fd4ed2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturetimecodegenerator:0004:0005",
+      "source": "tvOS 26.0+",
+      "ko": "tvOS 26.0+",
+      "sourceHash": "28934d9284c51fe0aa7b9363ccc49ea3cd840259287dd4f466466d4888ef2bf8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVCaptureTimecodeGenerator\n```",
+      "ko": "```swift\nclass AVCaptureTimecodeGenerator\n```",
+      "sourceHash": "de4c175771df80acf0dabd17cb0473679e65253aec401284a18f9f719c064eab",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "The [`AVCaptureTimecodeGenerator`](avcapturetimecodegenerator.md) class supports multiple timecode sources, including frame counting, system clock synchronization, and MIDI timecode input (MTC).",
+      "ko": "[`AVCaptureTimecodeGenerator`](avcapturetimecodegenerator.md) 클래스는 프레임 카운팅, 시스템 시계 동기화, MIDI timecode 입력(MTC)을 비롯한 여러 timecode 소스를 지원합니다.",
+      "sourceHash": "e5423a6527b2fb8802a76eac6c1e5c881eda2e3f7dd1de5a11cec92fb19a6877",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "Suitable for playback, recording, or other time-sensitive operations where precise timecode metadata is required.",
+      "ko": "정밀한 timecode 메타데이터가 필요한 재생, 녹화 또는 기타 시간 민감 작업에 적합합니다.",
+      "sourceHash": "23ba42f57fb4a388927c0f1103f9aaa62ed6d576752d6d6ac582816f2d655184",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "Use the [`startSynchronization(source:)`](avcapturetimecodegenerator/startsynchronization(source:).md) method to set up the desired timecode source.",
+      "ko": "원하는 timecode 소스를 구성하려면 [`startSynchronization(source:)`](avcapturetimecodegenerator/startsynchronization(source:).md) 메서드를 사용합니다.",
+      "sourceHash": "b84b605dca893f4dcb1ed8c8c0c1d0bb9fa7c829f97c8e6078557151dc66da16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:generating-timecode:0011:0001",
+      "source": "Generating timecode",
+      "ko": "타임코드 생성",
+      "sourceHash": "007ef47d4623bab476637c9d65b800310749de9bc91a4de18303df23e634fe9a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:generating-timecode:0012:0001",
+      "source": "[func generateInitialTimecode() -> AVCaptureTimecode](avcapturetimecodegenerator/generateinitialtimecode.md)",
+      "ko": "[func generateInitialTimecode() -> AVCaptureTimecode](avcapturetimecodegenerator/generateinitialtimecode.md)",
+      "sourceHash": "b856b4c344b3845504667584cd25dc07c25329e5e1885989c9775cf954ba19c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:generating-timecode:0013:0001",
+      "source": "Generates an initial timecode intended to be the first in a sequence.",
+      "ko": "시퀀스의 첫 번째 timecode가 되도록 의도된 초기 timecode를 생성합니다.",
+      "sourceHash": "3ad4365988da5fa1141d5c58e11ae5cc6414e8cfeb9a728325748645061a1643",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:managing-sources:0014:0001",
+      "source": "Managing sources",
+      "ko": "소스 관리",
+      "sourceHash": "9c6bf33ba8efc471041b742e9601e57ef5f92941ee3c8d5a8249765b86770c76",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-sources:0015:0001",
+      "source": "[var currentSource: AVCaptureTimecode.Source](avcapturetimecodegenerator/currentsource.md)",
+      "ko": "[var currentSource: AVCaptureTimecode.Source](avcapturetimecodegenerator/currentsource.md)",
+      "sourceHash": "c0764964c78dd81089d15980adca5dc6fe9980becaf5a7ff842da2248226233c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-sources:0016:0001",
+      "source": "The active timecode source used by [`AVCaptureTimecodeGenerator`](avcapturetimecodegenerator.md) to maintain clock synchronization for accurate timecode generation.",
+      "ko": "정확한 timecode 생성을 위해 클록 동기화를 유지하는 데 사용되는 [`AVCaptureTimecodeGenerator`](avcapturetimecodegenerator.md)의 활성 timecode 소스입니다.",
+      "sourceHash": "c8077dbc9e8ca96e307b0915b4465143fe7115b5c29729e777766589221adca0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-sources:0017:0001",
+      "source": "[var availableSources: [AVCaptureTimecode.Source]](avcapturetimecodegenerator/availablesources.md)",
+      "ko": "[var availableSources: [AVCaptureTimecode.Source]](avcapturetimecodegenerator/availablesources.md)",
+      "sourceHash": "77dd8e28845448508da6c9a991bd8909c93d7ef5740066dc84806938a043dbe6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:managing-sources:0018:0001",
+      "source": "An array of available timecode synchronization sources that can be used by the timecode generator.",
+      "ko": "timecode 생성기에서 사용할 수 있는 timecode 동기화 소스 배열입니다.",
+      "sourceHash": "fa7cc63e7de55f7d1307982c600367d83179bf68017da64b42e32dfe4381930d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-sources:0019:0001",
+      "source": "[class var frameCountSource: AVCaptureTimecode.Source](avcapturetimecodegenerator/framecountsource.md)",
+      "ko": "[class var frameCountSource: AVCaptureTimecode.Source](avcapturetimecodegenerator/framecountsource.md)",
+      "sourceHash": "e893b7a616a610a94dde3e072d3e66f2f290a2cc2b439d2a7d9608f539d926a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-sources:0020:0001",
+      "source": "A frame counter timecode source that operates independently of any internal or external synchronization.",
+      "ko": "내부 또는 외부 동기화와 독립적으로 작동하는 프레임 카운터 timecode 소스입니다.",
+      "sourceHash": "867626778c17e04d3c7a8e029d3a6619e9a566e8d1092216c4b4078f19678ed9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-sources:0021:0001",
+      "source": "[class var realTimeClockSource: AVCaptureTimecode.Source](avcapturetimecodegenerator/realtimeclocksource.md)",
+      "ko": "[class var realTimeClockSource: AVCaptureTimecode.Source](avcapturetimecodegenerator/realtimeclocksource.md)",
+      "sourceHash": "3124654a13c6ba69d1585885c43761e346bad99b282731c5df3cf7cc9d5ef7c8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-sources:0022:0001",
+      "source": "A predefined timecode source synchronized to the real-time system clock.",
+      "ko": "실시간 시스템 시계에 동기화된 미리 정의된 timecode 소스입니다.",
+      "sourceHash": "4cac7895501a5a14e3e3e5705df85177129bad7ddb19354573ea760d920a4dad",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-sources:0023:0001",
+      "source": "[func startSynchronization(source: AVCaptureTimecode.Source)](avcapturetimecodegenerator/startsynchronization(source:).md)",
+      "ko": "[func startSynchronization(source: AVCaptureTimecode.Source)](avcapturetimecodegenerator/startsynchronization(source:).md)",
+      "sourceHash": "be7a10f71398da8f3621ba2d10da76ceeba6667ce4fdaec4514f99a655b2b920",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:managing-sources:0024:0001",
+      "source": "Synchronizes the generator with the specified timecode source.",
+      "ko": "지정된 timecode 소스와 생성기를 동기화합니다.",
+      "sourceHash": "73b1c9a12e60cf7752da2c51628ddd68ee6082667aa6814e4b61e71e0968fea4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-the-generator:0025:0001",
+      "source": "Configuring the generator",
+      "ko": "생성기 구성",
+      "sourceHash": "486450ff62a536b9629e4087a698e0f82e26e589d8a3d6b545514b72a989b02f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-the-generator:0026:0001",
+      "source": "[var synchronizationTimeout: TimeInterval](avcapturetimecodegenerator/synchronizationtimeout.md)",
+      "ko": "[var synchronizationTimeout: TimeInterval](avcapturetimecodegenerator/synchronizationtimeout.md)",
+      "sourceHash": "f93c10f93f223c4ab357ea2547ec6e9bf423cf838ce78ff19f8217d09c8d390d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-the-generator:0027:0001",
+      "source": "The maximum time interval allowed for source synchronization attempts before timing out.",
+      "ko": "타임아웃되기 전에 소스 동기화 시도에서 허용되는 최대 시간 간격입니다.",
+      "sourceHash": "ae25c3051fbae9d64dffccea1fd42c1286ac6f6fbcad9937ceebd7f7959a9b31",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-the-generator:0028:0001",
+      "source": "[var timecodeAlignmentOffset: TimeInterval](avcapturetimecodegenerator/timecodealignmentoffset.md)",
+      "ko": "[var timecodeAlignmentOffset: TimeInterval](avcapturetimecodegenerator/timecodealignmentoffset.md)",
+      "sourceHash": "929518edce1f7c0b4b238a99a3e87a93834848be6cc8d879a3a139f446d70f55",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-the-generator:0029:0001",
+      "source": "The time offset, in seconds, applied to the generated timecode.",
+      "ko": "생성된 timecode에 적용되는 초 단위 시간 오프셋입니다.",
+      "sourceHash": "2a85433d16951f2caef66a96503e45065430cd728800749ae0c5c6d04db8013c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-the-generator:0030:0001",
+      "source": "[var timecodeFrameDuration: CMTime](avcapturetimecodegenerator/timecodeframeduration.md)",
+      "ko": "[var timecodeFrameDuration: CMTime](avcapturetimecodegenerator/timecodeframeduration.md)",
+      "sourceHash": "916ca63409d4a810819747a194e81c889de99997cae32beb94981ceabdfa4bab",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-the-generator:0031:0001",
+      "source": "The frame duration that the generator will use to generate timecodes.",
+      "ko": "생성기가 timecode를 생성할 때 사용할 프레임 지속 시간입니다.",
+      "sourceHash": "4b410d853804de091ca8482d823bd7032abccf343fb7d3e56f60fefcc48460c9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-the-generator:0032:0001",
+      "source": "[func setDelegate((any AVCaptureTimecodeGeneratorDelegate)?, queue: dispatch_queue_t?)](avcapturetimecodegenerator/setdelegate(_:queue:).md)",
+      "ko": "[func setDelegate((any AVCaptureTimecodeGeneratorDelegate)?, queue: dispatch_queue_t?)](avcapturetimecodegenerator/setdelegate(_:queue:).md)",
+      "sourceHash": "099c4ee60f28ba72ae4d0045088d92a72c9d53b8a319fe858fd844bac9bd6b45",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configuring-the-generator:0033:0001",
+      "source": "Assigns a delegate to receive real-time timecode updates and specifies a queue for callbacks.",
+      "ko": "실시간 timecode 업데이트를 수신하는 delegate를 할당하고 콜백에 대한 큐를 지정합니다.",
+      "sourceHash": "3e4f4e27cc627099bb18dca07637781eb2ee4505d4ab029b31c8f6562c86a521",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:handling-delegate-callbacks:0034:0001",
+      "source": "Handling delegate callbacks",
+      "ko": "delegate 콜백 처리",
+      "sourceHash": "5afbcf8c7e47578c1e16bc41d15e82f60ee90f8836fe4a3ac2ddb1c8e24ee2a6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:handling-delegate-callbacks:0035:0001",
+      "source": "[var delegate: (any AVCaptureTimecodeGeneratorDelegate)?](avcapturetimecodegenerator/delegate.md)",
+      "ko": "[var delegate: (any AVCaptureTimecodeGeneratorDelegate)?](avcapturetimecodegenerator/delegate.md)",
+      "sourceHash": "8554b36ca265ef9efa812bf8577381d9af91047cce7722a3a3428ed6814f4cfb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:handling-delegate-callbacks:0036:0001",
+      "source": "The delegate that receives timecode updates from the timecode generator.",
+      "ko": "timecode 생성기에서 timecode 업데이트를 수신하는 delegate입니다.",
+      "sourceHash": "e3016c0799596e27efb8c42b04130f0e295d30b2cff9a4590f64a68478eb8b38",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:handling-delegate-callbacks:0037:0001",
+      "source": "[var delegateCallbackQueue: dispatch_queue_t?](avcapturetimecodegenerator/delegatecallbackqueue.md)",
+      "ko": "[var delegateCallbackQueue: dispatch_queue_t?](avcapturetimecodegenerator/delegatecallbackqueue.md)",
+      "sourceHash": "810def4c4bddb740169fca2389e2255841666394d863016ddf679fbbe00eb50e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:handling-delegate-callbacks:0038:0001",
+      "source": "The dispatch queue on which delegate callbacks are invoked.",
+      "ko": "delegate 콜백이 호출되는 dispatch queue입니다.",
+      "sourceHash": "47f73f1209706fe7eb5f09ac6cc536b6f80710cd54a70dd7f6ac08e0f18f07d1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0039:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0040:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0041:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0042:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0043:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0043:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0043:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0043:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0043:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0043:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0044:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0045:0001",
+      "source": "[protocol AVCaptureTimecodeGeneratorDelegate](avcapturetimecodegeneratordelegate.md)",
+      "ko": "[protocol AVCaptureTimecodeGeneratorDelegate](avcapturetimecodegeneratordelegate.md)",
+      "sourceHash": "fb868a2ecc3ff3603bcac9cdb89d9c9b2fe9562155131c5fad52a4f03ea5e294",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0046:0001",
+      "source": "A protocol for receiving real-time timecode updates and error notifications from a timecode generator.",
+      "ko": "timecode 생성기에서 실시간 timecode 업데이트 및 오류 알림을 수신하는 프로토콜입니다.",
+      "sourceHash": "0a96b03883890f261d6e7afabfdc072cae44251e5f9ea8ef7514a1e4138b5518",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0047:0001",
+      "source": "[AVCaptureTimecodeGenerator.SynchronizationStatus](avcapturetimecodegenerator/synchronizationstatus.md)",
+      "ko": "[AVCaptureTimecodeGenerator.SynchronizationStatus](avcapturetimecodegenerator/synchronizationstatus.md)",
+      "sourceHash": "f21b0b78a576e216c208d45cd6be2faeba018e30728b9fa2760b96ce5f9e6506",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0048:0001",
+      "source": "Constants defining the synchronization status of a timecode generator .",
+      "ko": "timecode 생성기의 동기화 상태를 정의하는 상수입니다.",
+      "sourceHash": "2671177d6046db2d78170d697890cadf9828c1e6a79ec712f3fc9d2673f6088d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0049:0001",
+      "source": "[AVCaptureTimecode.Source](avcapturetimecode/source.md)",
+      "ko": "[AVCaptureTimecode.Source](avcapturetimecode/source.md)",
+      "sourceHash": "52503ee71bea7e1644fd673b2096fd6911ddbc21330bbe4f361dff5ecceb3b43",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0050:0001",
+      "source": "Describes a timecode source that a timecode generator can synchronize to.",
+      "ko": "timecode 생성기가 동기화할 수 있는 timecode 소스를 설명합니다.",
+      "sourceHash": "c96685d86d5549c7e2163904c2b98a6aec5f17ae55c26df0ea5bf2e0d3a4551c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0051:0001",
+      "source": "[AVCaptureTimecode.SourceType](avcapturetimecode/sourcetype-swift.enum.md)",
+      "ko": "[AVCaptureTimecode.SourceType](avcapturetimecode/sourcetype-swift.enum.md)",
+      "sourceHash": "e8a0086fb6f8db11b8d65983e928ad4e85ebcf206ae9b173bb8869e57891cda8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0052:0001",
+      "source": "Defines possible sources for generating timecode in using a timecode generator.",
+      "ko": "timecode 생성기를 사용해 timecode를 생성할 때 가능한 소스를 정의합니다.",
+      "sourceHash": "9852702d540679512f2181d02b7f6976c51ee273ed72aa6b09f2d102b1fec91e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0053:0001",
+      "source": "[struct AVCaptureTimecode](avcapturetimecode.md)",
+      "ko": "[struct AVCaptureTimecode](avcapturetimecode.md)",
+      "sourceHash": "2dc13d020968836f372c35342d47227b39bc7630de9eb2df924f9b32cb8fad64",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0054:0001",
+      "source": "This structure represents a timecode, adhering to SMPTE standards, which define precise time information and associated timestamps for video or audio synchronization.",
+      "ko": "이 구조체는 SMPTE 표준을 준수하며 비디오 또는 오디오 동기화를 위한 정밀한 시간 정보와 관련 타임스탬프를 정의하는 timecode를 나타냅니다.",
+      "sourceHash": "ff9ec438cea1ae017da990de711526ada54ba8cbaadd0cdd92968a3133382665",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0055:0001",
+      "source": "[static func advanced(AVCaptureTimecode, by: Int64) -> AVCaptureTimecode](avcapturetimecode/advanced(_:by:).md)",
+      "ko": "[static func advanced(AVCaptureTimecode, by: Int64) -> AVCaptureTimecode](avcapturetimecode/advanced(_:by:).md)",
+      "sourceHash": "5cc636ccf6daf2fb67317c45af99c10076dbbaf18ee37b0fd52ac2ea933de86b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0056:0001",
+      "source": "Generates a new timecode by adding a specified number of frames to the given timecode, handling overflow for seconds, minutes, and hours.",
+      "ko": "주어진 timecode에 지정한 프레임 수를 더해 초/분/시 오버플로우를 처리하면서 새 timecode를 생성합니다.",
+      "sourceHash": "0f6d0a87ad7868657b613b6ee21ebdb9f1a4b78e5c9a668dd9f9a3691ad03af3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0057:0001",
+      "source": "[static func createMetadataSampleBuffer(from: AVCaptureTimecode, associatedWithPresentationTimeStamp: CMTime) -> Unmanaged<CMSampleBuffer>?](avcapturetimecode/createmetadatasamplebuffer(from:associatedwithpresentationtimestamp:).md)",
+      "ko": "[static func createMetadataSampleBuffer(from: AVCaptureTimecode, associatedWithPresentationTimeStamp: CMTime) -> Unmanaged<CMSampleBuffer>?](avcapturetimecode/createmetadatasamplebuffer(from:associatedwithpresentationtimestamp:).md)",
+      "sourceHash": "7c4be4a221dc41dc09838623da77f00efa169189d8b53ac9d2953db6dc43e202",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0058:0001",
+      "source": "Creates a sample buffer containing Timecode Media Description metadata for integration with a video track.",
+      "ko": "비디오 트랙 통합을 위한 Timecode Media Description 메타데이터가 포함된 sample buffer를 생성합니다.",
+      "sourceHash": "a3cd55c5fdb558741a92f801b2630e7773a94bc60ffada6b9157de816fb536ef",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0059:0001",
+      "source": "[static func createMetadataSampleBuffer(from: AVCaptureTimecode, forDuration: CMTime) -> Unmanaged<CMSampleBuffer>?](avcapturetimecode/createmetadatasamplebuffer(from:forduration:).md)",
+      "ko": "[static func createMetadataSampleBuffer(from: AVCaptureTimecode, forDuration: CMTime) -> Unmanaged<CMSampleBuffer>?](avcapturetimecode/createmetadatasamplebuffer(from:forduration:).md)",
+      "sourceHash": "2ac6744e9f30349957adf03bc0db27fb37933d79806626798770858b74592ca5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0060:0001",
+      "source": "Creates a sample buffer containing Timecode Media Description metadata for a specified duration.",
+      "ko": "지정한 기간 동안 Timecode Media Description 메타데이터가 포함된 sample buffer를 생성합니다.",
+      "sourceHash": "1c8257620e81b7abfc7dd526b8c0949351ae00c493d2dc1b91cbd27c0a2d7900",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0061:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0062:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturetimecodegenerator)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturetimecodegenerator)*",
+      "sourceHash": "9fd174f235829b7ebc2ca214170c38b38198ead94b65dd779c2928dcf3780cb3",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "docId": "documentation/Accelerate/vdsp/add-multiplication-result-8dau.md",
+  "title": "add(multiplication::result:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vdsp/add-multiplication-result-8dau",
+  "segments": [
+    {
+      "id": "seg:heading:addmultiplicationresult:0000:0001",
+      "source": "add(multiplication:_:result:)",
+      "ko": "add(multiplication:_:result:)",
+      "sourceHash": "262b620f24a1d15e8de01c4411f59bd25fa551c2891b80a3959f73950e5074c8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:addmultiplicationresult:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:addmultiplicationresult:0002:0001",
+      "source": "Calculates the single-precision element-wise sum of the product of two vectors, and a scalar value.",
+      "ko": "이 함수는 두 벡터의 곱셈 결과에 스칼라 값을 더한 다음 요소별 단정밀도 합을 계산합니다.",
+      "sourceHash": "60fb7285da29eec838fe0a5ccd61367d7cd1c800db8ade659b3d078918396b54",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:addmultiplicationresult:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:addmultiplicationresult:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:addmultiplicationresult:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:addmultiplicationresult:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:addmultiplicationresult:0004:0004",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:addmultiplicationresult:0004:0005",
+      "source": "tvOS 13.0+",
+      "ko": "tvOS 13.0+",
+      "sourceHash": "030e6b7e51c85f674522c209ef14fc0e355ebd196e0259389daeaae4f69ad826",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:addmultiplicationresult:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:addmultiplicationresult:0004:0007",
+      "source": "watchOS 6.0+",
+      "ko": "watchOS 6.0+",
+      "sourceHash": "b51a82766977554dbe76aec20d5bc0ad6fe4984dddfcf6db82130e544b0631e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstatic func add<T, U, V>(multiplication: (a: T, b: U), _ scalar: Float, result: inout V) where T : AccelerateBuffer, U : AccelerateBuffer, V : AccelerateMutableBuffer, T.Element == Float, U.Element == Float, V.Element == Float\n```",
+      "ko": "```swift\nstatic func add<T, U, V>(multiplication: (a: T, b: U), _ scalar: Float, result: inout V) where T : AccelerateBuffer, U : AccelerateBuffer, V : AccelerateMutableBuffer, T.Element == Float, U.Element == Float, V.Element == Float\n```",
+      "sourceHash": "91bebf638dd77c1bc5bfabce7490811462b15f78d2aa427e8df15b0531ece30b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This function calculates the element-wise product of vectors `A` and `B`, adds scalar value `C` to the product, and writes the result to vector `D`.",
+      "ko": "이 함수는 벡터 `A`와 `B`의 요소별 곱을 계산하고, 스칼라 값 `C`를 곱셈 결과에 더한 후 결과를 벡터 `D`에 기록합니다.",
+      "sourceHash": "c4eaba536e684b90e7baad5f6f440007549ad68c0fc32f455a51970835f51372",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0009:0001",
+      "source": "```swift\n for (n = 0; n < N; ++n)\n    D[n] = A[n] * B[n] + C;\n```",
+      "ko": "```swift\n for (n = 0; n < N; ++n)\n    D[n] = A[n] * B[n] + C;\n```",
+      "sourceHash": "6f2f82c42d453853706422af105772a81a094a7b97f0d90725084790d2fc6e24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "![A diagram showing the operation of this function.",
+      "ko": "![이 함수의 동작을 보여주는 다이어그램입니다.",
+      "sourceHash": "4383a37a5bdb4c14507e3e2f5e569f875a88eb2c5e5803a98e18010e1f5ae9f2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "There are four rows.",
+      "ko": "행이 네 개 있습니다.",
+      "sourceHash": "9e0f9736804d6f84727760f803f00fae350cb55cd2c4e02aba71d9cf26c86ef0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0003",
+      "source": "The top row represents the input vectors, A and B, with three boxes of each.",
+      "ko": "첫 번째 행은 입력 벡터 `A`와 `B`를 나타내며 각각 세 개의 상자를 가집니다.",
+      "sourceHash": "47b09ec3aa206c12e8a14447bc13afb6632b250ca00a9cbc98e5be29d1dae17a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0004",
+      "source": "The second row represents the operation that multiplies A and B, with three boxes, as well as the input scalar C with one box.",
+      "ko": "두 번째 행은 `A`와 `B`를 곱하는 연산을 세 개의 상자로, 그리고 입력 스칼라 `C`를 한 개의 상자로 표시합니다.",
+      "sourceHash": "e3b814bdb293650baf5f5c2804ec18d84212c85ba70634a94b7862fb202dfb51",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0005",
+      "source": "The third row represents the addition operation as three boxes.",
+      "ko": "세 번째 행은 덧셈 연산을 세 개의 상자로 나타냅니다.",
+      "sourceHash": "caf6b2cf9cb12d1c29433d3cf24b02df06106f012dde5204cc90cefa1a2d0f7b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0006",
+      "source": "The bottom row represents the output vector D as three boxes.",
+      "ko": "마지막 행은 출력 벡터 `D`를 세 개의 상자로 나타냅니다.",
+      "sourceHash": "48be2b9f82ef28b314c58e392ed86031203e3e6ab329105ec051caa45d56252c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0007",
+      "source": "The diagram has connecting lines from the input vectors to the operations, and from the operations to the output vector. ](https://docs-assets.developer.apple.com/published/99bc516d97b0d8928cf6579a5da72c0f/media-4387441%402x.png)",
+      "ko": "이 다이어그램에는 입력 벡터에서 연산으로, 그리고 연산에서 출력 벡터로 연결되는 선이 표시됩니다. ](https://docs-assets.developer.apple.com/published/99bc516d97b0d8928cf6579a5da72c0f/media-4387441%402x.png)",
+      "sourceHash": "50e47e504a6614535bb1747ada10d32d8ec200266af706588b4b3c855a56e336",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "The following code shows an example of using this function:",
+      "ko": "다음 코드는 이 함수를 사용하는 예입니다.",
+      "sourceHash": "6a6645d7323dbaedfa632f913e9d50a0fccbb63d6d54e3c2e4adcf1d87ef8ec5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0012:0001",
+      "source": "```swift\n    let count = 5\n    \n    let a: [Float] = [ 1,  2,  3,  4,  5]\n    let b: [Float] = [10, 20, 30, 40, 50]\n    let c: Float = 5\n    \n    let d = [Float](unsafeUninitializedCapacity: count) {\n        buffer, initializedCount in\n        \n        vDSP.add(multiplication: (a, b),\n                 c,\n                 result: &buffer)\n        \n        initializedCount = count\n    }\n    \n    // Prints \"[15.0, 45.0, 95.0, 165.0, 255.0]\".\n    print(d)\n```",
+      "ko": "```swift\n    let count = 5\n    \n    let a: [Float] = [ 1,  2,  3,  4,  5]\n    let b: [Float] = [10, 20, 30, 40, 50]\n    let c: Float = 5\n    \n    let d = [Float](unsafeUninitializedCapacity: count) {\n        buffer, initializedCount in\n        \n        vDSP.add(multiplication: (a, b),\n                 c,\n                 result: &buffer)\n        \n        initializedCount = count\n    }\n    \n    // Prints \"[15.0, 45.0, 95.0, 165.0, 255.0]\".\n    print(d)\n```",
+      "sourceHash": "d1e09469dc89422b6ab73fb29bf5723db88dfb8ea67a9d1eca8e000536187fbc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0013:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0014:0001",
+      "source": "`multiplication`: A tuple that contains the vectors `A` and `B` in `D = (A * B) + C`.",
+      "ko": "`multiplication`: `D = (A * B) + C`에서 벡터 `A`와 `B`를 포함하는 튜플입니다.",
+      "sourceHash": "7644416cac94a0b9db05c69ad770a7830e644ab8ff070d0978f4847288759c66",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0014:0002",
+      "source": "`scalar`: The input scalar value `C` in `D = (A * B) + C`.",
+      "ko": "`scalar`: `D = (A * B) + C`의 입력 스칼라 값 `C`입니다.",
+      "sourceHash": "5dae78134126d31f62876e58be3fc477a4e4d4b083c5c57bbe4a4d0e83c993bf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0014:0003",
+      "source": "`result`: The output vector `D` in `D = (A * B) + C`.",
+      "ko": "`result`: `D = (A * B) + C`의 출력 벡터 `D`입니다.",
+      "sourceHash": "580c051e63af89392e190f9caa32380723f1789caca7193d451853ace22d15d6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0015:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[static func add<U>(Double, U) -> [Double]](vdsp/add(_:_:)-9mv1a.md)",
+      "ko": "[static func add<U>(Double, U) -> [Double]](vdsp/add(_:_:)-9mv1a.md)",
+      "sourceHash": "d18c902478114693e8d2877733c321f9358e3a4e1cddc5aab9acbe5640ac44f2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Returns the double-precision element-wise sum of a vector and a scalar value.",
+      "ko": "벡터와 스칼라 값의 요소별 배정밀도 합을 반환합니다.",
+      "sourceHash": "249a0cec5220b070e351900c666327515bb0227716e50bb34ef70f9d2ec9f49a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[static func add<T, U>(T, U) -> [Double]](vdsp/add(_:_:)-2ftxc.md)",
+      "ko": "[static func add<T, U>(T, U) -> [Double]](vdsp/add(_:_:)-2ftxc.md)",
+      "sourceHash": "c5f849c6cfc6033478dd79e49b638415a77a7e1df24d3cfc1671e9e29904df23",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Returns the double-precision element-wise sum of two vectors.",
+      "ko": "두 벡터의 요소별 배정밀도 합을 반환합니다.",
+      "sourceHash": "69ca4551d90744860ab1ad790a0d617746a53578a2455be7af21cc1ed7410ed3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[static func add<U>(Float, U) -> [Float]](vdsp/add(_:_:)-53nh9.md)",
+      "ko": "[static func add<U>(Float, U) -> [Float]](vdsp/add(_:_:)-53nh9.md)",
+      "sourceHash": "03a04a6c9bab4434e48efaf05572b8986a02f00b308d2a0e07d63e847a7b0bec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Returns the single-precision element-wise sum of a vector and a scalar value.",
+      "ko": "벡터와 스칼라 값의 요소별 단정밀도 합을 반환합니다.",
+      "sourceHash": "a03fc53a4058d3ffe77ef252751cc63682bbf9faf60c21f1b69c0ff1a2abc1d5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[static func add<T, U>(T, U) -> [Float]](vdsp/add(_:_:)-7swvf.md)",
+      "ko": "[static func add<T, U>(T, U) -> [Float]](vdsp/add(_:_:)-7swvf.md)",
+      "sourceHash": "82f35379c3f8f15c55cc7631813c1724060be2f0b6134967b02a1dd80f82e836",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Returns the single-precision element-wise sum of two vectors.",
+      "ko": "두 벡터의 요소별 단정밀도 합을 반환합니다.",
+      "sourceHash": "898e86f35c8eade5e1de169efa8144f2849600a779378009588d8c03aa33c088",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[static func add<U, V>(Double, U, result: inout V)](vdsp/add(_:_:result:)-2531u.md)",
+      "ko": "[static func add<U, V>(Double, U, result: inout V)](vdsp/add(_:_:result:)-2531u.md)",
+      "sourceHash": "ac007ff89b9f905b1455688f835c639127e0549512ef72f1d9ee1f8d73ecff73",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Calculates the single-precision element-wise sum of a vector and a scalar value.",
+      "ko": "벡터와 스칼라 값의 요소별 단정밀도 합을 계산합니다.",
+      "sourceHash": "ab0b3fdb3ce4257e6fb9624ef0692f0f6f1230824d0104a8e42b32b1739ca8cb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[static func add<U, V>(Float, U, result: inout V)](vdsp/add(_:_:result:)-2w0o9.md)",
+      "ko": "[static func add<U, V>(Float, U, result: inout V)](vdsp/add(_:_:result:)-2w0o9.md)",
+      "sourceHash": "d4104970ffae0df917eab8bfed44f5ba4b4b7b636853ce63f30808ddc2ea3f68",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Calculates the single-precision element-wise sum of a vector and a scalar value.",
+      "ko": "벡터와 스칼라 값의 요소별 단정밀도 합을 계산합니다.",
+      "sourceHash": "ab0b3fdb3ce4257e6fb9624ef0692f0f6f1230824d0104a8e42b32b1739ca8cb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[static func add<T, U, V>(T, U, result: inout V)](vdsp/add(_:_:result:)-338hl.md)",
+      "ko": "[static func add<T, U, V>(T, U, result: inout V)](vdsp/add(_:_:result:)-3vzwi.md)",
+      "sourceHash": "fb555c7e2e2479efe3dfa6cace3573f299a9a2e2f83ee634bba20db8ef761d98",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Calculates the double-precision element-wise sum of two vectors.",
+      "ko": "두 벡터의 배정밀도 요소별 합을 계산합니다.",
+      "sourceHash": "41593d0986ea33a8974c149a6265621f47227fa0573488847800d78713f65640",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[static func add<T, U, V>(T, U, result: inout V)](vdsp/add(_:_:result:)-3vzwi.md)",
+      "ko": "[static func add<T, U, V>(T, U, result: inout V)](vdsp/add(_:to:count:result:)-g1dk.md)",
+      "sourceHash": "0fb2df3a06cddf6d8d7f1e35568cf95765f6c87622ff22524b2ba85bb97ce840",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Calculates the single-precision element-wise sum of two vectors.",
+      "ko": "두 벡터의 단정밀도 요소별 합을 계산합니다.",
+      "sourceHash": "875a3b71f859681b18e9a79b575cf96591dde63ee477076eacfa176c5708cae6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[static func add(DSPSplitComplex, to: DSPSplitComplex, count: Int, result: inout DSPSplitComplex)](vdsp/add(_:to:count:result:)-g1dk.md)",
+      "ko": "[static func add(DSPSplitComplex, to: DSPSplitComplex, count: Int, result: inout DSPSplitComplex)](vdsp/add(_:to:count:result:)-75np9.md)",
+      "sourceHash": "00f7b5c9f17d7c9c74ed561ed2977b2e7b39f263cafec337349814fd2286495a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Calculates the single-precision element-wise sum of the supplied complex vectors.",
+      "ko": "지정된 복소 벡터의 단정밀도 요소별 합을 계산합니다.",
+      "sourceHash": "5e4a0ddb2a8d7e433e5a7d4cf4c27a8531e20b3956896505aebdc2b1d1005e39",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[static func add(DSPDoubleSplitComplex, to: DSPDoubleSplitComplex, count: Int, result: inout DSPDoubleSplitComplex)](vdsp/add(_:to:count:result:)-75np9.md)",
+      "ko": "[static func add<DSPDoubleSplitComplex, to: DSPDoubleSplitComplex, count: Int, result: inout DSPDoubleSplitComplex>](vdsp/add(multiplication:_:)-4e3tj.md)",
+      "sourceHash": "2dbc6481170e6186ebeff994b932d1446576fd9a96e542053bae37c344a816ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Calculates the double-precision element-wise sum of the supplied complex vectors.",
+      "ko": "지정된 복소 벡터의 배정밀도 요소별 합을 계산합니다.",
+      "sourceHash": "146e59a372561a88990800929877162ed03b0ac2c6d5158a34b49c6921b66c20",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[static func add<U>(multiplication: (a: U, b: Double), Double) -> [Double]](vdsp/add(multiplication:_:)-4e3tj.md)",
+      "ko": "[static func add<U>(multiplication: (a: U, b: Double), Double) -> [Double]](vdsp/add(multiplication:_:)-1bsuq.md)",
+      "sourceHash": "ef5b31e89fc1bcbfd8fdc3823d5a445c3d59777f825c58ff1a92a1e50619687d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Returns the double-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "ko": "벡터와 스칼라 값의 곱셈 결과에 벡터를 더한 배정밀도 요소별 덧셈을 반환합니다.",
+      "sourceHash": "a0b6f7af096e665f231d28a531e4f62679deaa0a4a60e3d2212cc9845c70aab7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[static func add<T, U>(multiplication: (a: T, b: Double), U) -> [Double]](vdsp/add(multiplication:_:)-1bsuq.md)",
+      "ko": "[static func add<T, U>(multiplication: (a: T, b: Double), U) -> [Double]](vdsp/add(multiplication:_:)-9dxlr.md)",
+      "sourceHash": "eabe6ffd79940bf9e9a87a25874d87651adba4006493048e5a5ba7db7a838c21",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Returns the double-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "ko": "벡터와 스칼라 값의 곱셈 결과에 벡터를 더한 배정밀도 요소별 덧셈을 반환합니다.",
+      "sourceHash": "a0b6f7af096e665f231d28a531e4f62679deaa0a4a60e3d2212cc9845c70aab7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[static func add<T, U>(multiplication: (a: T, b: U), Double) -> [Double]](vdsp/add(multiplication:_:)-9dxlr.md)",
+      "ko": "[static func add<T, U>(multiplication: (a: T, b: U), Double) -> [Double]](vdsp/add(multiplication:_:)-4667v.md)",
+      "sourceHash": "23df05481a5d5bf2853ab427f9c120fd89592c5c5645665d23c3468c3fd26960",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "Returns the double-precision element-wise sum of the product of two vectors, and a scalar value.",
+      "ko": "두 벡터의 곱셈 결과와 스칼라 값을 더한 배정밀도 요소별 합을 반환합니다.",
+      "sourceHash": "8839251a6e958ed24974259d3b0de9e1efeeb2532b1e4b491900add57dd9a7f6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[static func add<S, T, U>(multiplication: (a: S, b: T), U) -> [Double]](vdsp/add(multiplication:_:)-4667v.md)",
+      "ko": "[static func add<S, T, U>(multiplication: (a: S, b: T), U) -> [Double]](vdsp/add(multiplication:_:)-4667v.md)",
+      "sourceHash": "d25432c2bcf955d4ac2283e9934f42a950e11236f9e7fb64c47370efdc731e16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "Returns the double-precision element-wise sum of a vector and the product of two vectors.",
+      "ko": "한 벡터와 두 벡터 곱의 배정밀도 요소별 합을 반환합니다.",
+      "sourceHash": "b360aea6d232c3c6e032dca6cf776f680a357a98bf1a46e880d64dbdbf5e22cd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[static func add<U>(multiplication: (a: U, b: Float), Float) -> [Float]](vdsp/add(multiplication:_:)-3tw93.md)",
+      "ko": "[static func add<U>(multiplication: (a: U, b: Float), Float) -> [Float]](vdsp/add(multiplication:_:)-3tw93.md)",
+      "sourceHash": "c084defc7909422f16bb63bcd9127a942660e689e002be6dd513551fae659b83",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "Returns the single-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "ko": "벡터와 스칼라 값의 곱셈 결과에 벡터를 더한 단정밀도 요소별 덧셈을 반환합니다.",
+      "sourceHash": "41e5ac7f8ff81439425e8ed25496f2fd6248f27ebcf16da6468d9db99852958f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0046:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/add(multiplication:_:result:)-8dau)*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/vdsp/add(multiplication:_:result:)-8dau)*",
+      "sourceHash": "1df8ff6ce188e492b6ce71e47ecc7467e80844baa97ac4ce89191330a82ae208",
+      "status": "machine_translated"
+    }
+  ]
+}

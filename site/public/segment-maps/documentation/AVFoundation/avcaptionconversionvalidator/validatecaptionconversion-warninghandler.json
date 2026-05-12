@@ -1,0 +1,190 @@
+{
+  "docId": "documentation/AVFoundation/avcaptionconversionvalidator/validatecaptionconversion-warninghandler.md",
+  "title": "validateCaptionConversion(warningHandler:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcaptionconversionvalidator/validatecaptionconversion-warninghandler",
+  "segments": [
+    {
+      "id": "seg:heading:validatecaptionconversionwarninghandler:0000:0001",
+      "source": "validateCaptionConversion(warningHandler:)",
+      "ko": "validateCaptionConversion(warningHandler:)",
+      "sourceHash": "a80f1e3f2d80f9f801a87ff5679685d0888c2378392f8486e9d758a52ec6260e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:validatecaptionconversionwarninghandler:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:validatecaptionconversionwarninghandler:0002:0001",
+      "source": "Validates the object’s captions.",
+      "ko": "개체의 캡션을 유효성 검사합니다.",
+      "sourceHash": "84910f35c694ce7a923e72e92e823c2942fba97aa787bf2eb43c8c37834cc964",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:validatecaptionconversionwarninghandler:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:validatecaptionconversionwarninghandler:0004:0001",
+      "source": "iOS 18.0+",
+      "ko": "iOS 18.0+",
+      "sourceHash": "1b3f7d89e639b0fbca8c8e42d8d9491fcff80bdc07373dbd869c8a39ca2beb40",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:validatecaptionconversionwarninghandler:0004:0002",
+      "source": "iPadOS 18.0+",
+      "ko": "iPadOS 18.0+",
+      "sourceHash": "54a351c44693b5ce37dfff89a84379ba390a94f1a19625c16296b998317728b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:validatecaptionconversionwarninghandler:0004:0003",
+      "source": "Mac Catalyst 15.0+",
+      "ko": "Mac Catalyst 15.0+",
+      "sourceHash": "9d0a6a3a1920dff6b27072e4fe1bcdd8a15ec1e6a32ea0e948a78c43ac895f9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:validatecaptionconversionwarninghandler:0004:0004",
+      "source": "macOS 12.0+",
+      "ko": "macOS 12.0+",
+      "sourceHash": "adffa1c4f69a9ee1f27b5e361c29af9b83d00fb7441c2e24713b7acb91ac5100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc validateCaptionConversion(warningHandler handler: @escaping @Sendable (AVCaptionConversionWarning?) -> Void)\n```",
+      "ko": "```swift\nfunc validateCaptionConversion(warningHandler handler: @escaping @Sendable (AVCaptionConversionWarning?) -> Void)\n```",
+      "sourceHash": "657a7483cba5bf3bf2638b1404fa2fe0d8fa3448e0a69759828dfadc172bc5ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "When the object finishes validating and reports all warnings, it invokes the callback once with a value of `nil` for its warning parameter.",
+      "ko": "By default, this value contains the array of devices that the [`supportedFallbackPrimaryConstituentDevices`](avcapturedevice/supportedfallbackprimaryconstituentdevices.md) property provides.",
+      "sourceHash": "aa17808c702e5501c4003dce6624f845e241b9fb31d98e5d0d6368162272616c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "When this occurs, the validator’s [`status`](avcaptionconversionvalidator/status-swift.property.md) value changes to [`AVCaptionConversionValidator.Status.completed`](avcaptionconversionvalidator/status-swift.enum/completed.md).",
+      "ko": "이때 검증기의 [`status`](avcaptionconversionvalidator/status-swift.property.md) 값은 [`AVCaptionConversionValidator.Status.completed`](avcaptionconversionvalidator/status-swift.enum/completed.md)로 변경됩니다.",
+      "sourceHash": "74db9a30fef38e635cfbb484a19d43f95d6b96f55d2450949457be66faa3dabd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Stop an in-progress validation operation by calling [`stopValidating()`](avcaptionconversionvalidator/stopvalidating().md).",
+      "ko": "진행 중인 유효성 검사 작업을 중지하려면 [`stopValidating()`](avcaptionconversionvalidator/stopvalidating().md)을 호출합니다.",
+      "sourceHash": "12a5cf53e4ab9806d8266b7c77fbb2da539c229da55f27a06db1dd92b2e4a6be",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0010:0001",
+      "source": "❗ **Important**: It’s only valid to call this method when the validator’s state is [`AVCaptionConversionValidator.Status.unknown`](avcaptionconversionvalidator/status-swift.enum/unknown.md).",
+      "ko": "❗ **중요**: 검증기의 상태가 [`AVCaptionConversionValidator.Status.unknown`](avcaptionconversionvalidator/status-swift.enum/unknown.md)일 때만 이 메서드를 호출할 수 있습니다.",
+      "sourceHash": "84b26061e6db1ba6d6cae96d00b3b6491c2831a7c3986adac53417a6aea1ba66",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0011:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0012:0001",
+      "source": "`handler`: The callback the system invokes when it finishes validation.",
+      "ko": "`handler`: 시스템이 유효성 검사가 완료되면 호출하는 콜백입니다.",
+      "sourceHash": "a3da8719bec3cdbeadfb9089a8955d88ba96bb3f7bce8e9b013b3da64d5eefec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var warnings: [AVCaptionConversionWarning]](avcaptionconversionvalidator/warnings.md)",
+      "ko": "[var warnings: [AVCaptionConversionWarning]](avcaptionconversionvalidator/warnings.md)",
+      "sourceHash": "33df3e1a8d30cdc9ab67063e81a91e92ed7e6513f1b5f99c0d1345579ecc5528",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "The collection of warnings the validator encountered.",
+      "ko": "검증기가 발견한 경고의 컬렉션입니다.",
+      "sourceHash": "2ebc6395417cd7acdbb9f00273797f4a76f61e1ca0966d044a1b037a2bd13d94",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[class AVCaptionConversionWarning](avcaptionconversionwarning.md)",
+      "ko": "[class AVCaptionConversionWarning](avcaptionconversionwarning.md)",
+      "sourceHash": "b42e5d43a84a4937335b50b6439c8a162dd7ea772011afeeee392d704146b155",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "An object that represents a conversion warning produced by a validator.",
+      "ko": "검증기에서 생성한 변환 경고를 나타내는 객체입니다.",
+      "sourceHash": "4d7cafc53b87c2ebe0adbae923957b4cc1c4e7de6cd56441e3e9686d33fa7d00",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func stopValidating()](avcaptionconversionvalidator/stopvalidating.md)",
+      "ko": "[func stopValidating()](avcaptionconversionvalidator/stopvalidating.md)",
+      "sourceHash": "7f4da134009eacac457a5e2d74192a81234c075cb98a70dd00be3a831e50698e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Stops the active validation operation.",
+      "ko": "현재 유효성 검사 작업을 중지합니다.",
+      "sourceHash": "c8ff03c218b40206859423b3c50a711b8dc8ce42bf3f8cfb0d1465b0a68edadc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcaptionconversionvalidator/validatecaptionconversion(warninghandler:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avcaptionconversionvalidator/validatecaptionconversion(warninghandler:))*",
+      "sourceHash": "cf6d66abc920d7ae63586fc32f3a2cda117beb3b393018be53cd9cca40ac9f09",
+      "status": "machine_translated"
+    }
+  ]
+}

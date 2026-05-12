@@ -1,0 +1,162 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedevice/devicewhitebalancegains.md",
+  "title": "deviceWhiteBalanceGains",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedevice/devicewhitebalancegains",
+  "segments": [
+    {
+      "id": "seg:heading:devicewhitebalancegains:0000:0001",
+      "source": "deviceWhiteBalanceGains",
+      "ko": "deviceWhiteBalanceGains",
+      "sourceHash": "c76ae36d18ec7f3026929e7d1dbe9a5c9c59ef3e06e5230f5fe89a2371a433ef",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:devicewhitebalancegains:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:devicewhitebalancegains:0002:0001",
+      "source": "The current device-specific RGB white balance gain values in use.",
+      "ko": "현재 사용 중인 장치별 RGB 화이트 밸런스 게인 값입니다.",
+      "sourceHash": "e676aecbc1a89ce27a2c346c6dbb940676e956d593e7a7dd2e515bacc8d2e76f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:devicewhitebalancegains:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:devicewhitebalancegains:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:devicewhitebalancegains:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:devicewhitebalancegains:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:devicewhitebalancegains:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar deviceWhiteBalanceGains: AVCaptureDevice.WhiteBalanceGains { get }\n```",
+      "ko": "```swift\nvar deviceWhiteBalanceGains: AVCaptureDevice.WhiteBalanceGains { get }\n```",
+      "sourceHash": "026d26e98c6185655c0445dfa1a9943c00739e474c243c838d14d01d036bb3d0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This property specifies the current red, green, and blue gain values used for white balance.",
+      "ko": "이 속성은 화이트 밸런스에 사용되는 현재 빨간색, 녹색, 파란색 게인 값을 지정합니다.",
+      "sourceHash": "659b57652556268e281e94047767e5a3f3df3430df44a0db71e3dde2e64e0592",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "You can use the values to adjust color casts for a given scene.",
+      "ko": "If you require specifying capture settings not covered by a capture session preset, you can set the [`activeFormat`](avcapturedevice/activeformat.md) property to any of the formats in this array.",
+      "sourceHash": "b97f80ca5db9146afd47ceb7a667df71b0a130ea6cc8cdd47538c1fdf4366e1e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "Each channel supports values between 1.0 and -[`maxWhiteBalanceGain`](avcapturedevice/maxwhitebalancegain.md).",
+      "ko": "각 채널은 1.0에서 [`maxWhiteBalanceGain`](avcapturedevice/maxwhitebalancegain.md) 사이의 값을 지원합니다.",
+      "sourceHash": "006c082625901f69fbf6520395242af32f9e580bd53ce6eede7001533832a2fc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "This property is key-value observable.",
+      "ko": "이 속성은 key-value 관찰이 가능합니다.",
+      "sourceHash": "da10f6fb15a1291aedea3de21f0a99a0321c2e86790d0f3fd44477cca7d3c9a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var grayWorldDeviceWhiteBalanceGains: AVCaptureDevice.WhiteBalanceGains](avcapturedevice/grayworlddevicewhitebalancegains.md)",
+      "ko": "[var grayWorldDeviceWhiteBalanceGains: AVCaptureDevice.WhiteBalanceGains](avcapturedevice/grayworlddevicewhitebalancegains.md)",
+      "sourceHash": "c9606afa360a3a5262d673ad8693d5f52e0d2093a2b7e4253348e25e40beb30c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "The current device-specific white balance values required for a neutral gray white point.",
+      "ko": "중립 회색 화이트 포인트에 필요한 현재 장치별 화이트 밸런스 값입니다.",
+      "sourceHash": "34f8216d0e8a6bcd5ce500df7cebfe279a6366e701ace7b752c8952b8b5dc446",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var maxWhiteBalanceGain: Float](avcapturedevice/maxwhitebalancegain.md)",
+      "ko": "[var maxWhiteBalanceGain: Float](avcapturedevice/maxwhitebalancegain.md)",
+      "sourceHash": "93bc916c6fa517b2f727f7360afeec9d35ab01fca46a9f9fed5ada4642c9f576",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "The maximum supported value to which you can set a color channel.",
+      "ko": "색상 채널을 설정할 수 있는 최대 지원 값입니다.",
+      "sourceHash": "761cc3fadd345a0d1a5ac001e920ae4195c2559942eb5c0eeb76ef841e8e56f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0015:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/devicewhitebalancegains)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/devicewhitebalancegains)*",
+      "sourceHash": "cd189f5b8d00a202e5269ab17f49196fd01582dd02618d6271466e816d0b90fc",
+      "status": "preserved"
+    }
+  ]
+}

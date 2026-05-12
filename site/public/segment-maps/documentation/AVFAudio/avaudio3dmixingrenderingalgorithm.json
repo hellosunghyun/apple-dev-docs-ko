@@ -1,0 +1,484 @@
+{
+  "docId": "documentation/AVFAudio/avaudio3dmixingrenderingalgorithm.md",
+  "title": "AVAudio3DMixingRenderingAlgorithm",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudio3dmixingrenderingalgorithm",
+  "segments": [
+    {
+      "id": "seg:heading:avaudio3dmixingrenderingalgorithm:0000:0001",
+      "source": "AVAudio3DMixingRenderingAlgorithm",
+      "ko": "AVAudio3DMixingRenderingAlgorithm",
+      "sourceHash": "ef34362363326c2f60b909b1c426ea1ccb302d7d183d1175996a21402091e278",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudio3dmixingrenderingalgorithm:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: enum",
+      "ko": "**Framework**: AVFAudio **Kind**: enum",
+      "sourceHash": "1c563eccfff57885b17d78fc755954d0f08daaf9e050ec222d82bc5a5cd73779",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudio3dmixingrenderingalgorithm:0002:0001",
+      "source": "The types of rendering algorithms available per input bus of the environment node.",
+      "ko": "environment node의 입력 버스마다 사용 가능한 렌더링 알고리즘 유형입니다.",
+      "sourceHash": "651759c46b4e167c9de379c1062718af82fdf6b1b69cf680b90a65d8daff536b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudio3dmixingrenderingalgorithm:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudio3dmixingrenderingalgorithm:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudio3dmixingrenderingalgorithm:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudio3dmixingrenderingalgorithm:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudio3dmixingrenderingalgorithm:0004:0004",
+      "source": "macOS 10.10+",
+      "ko": "macOS 10.10+",
+      "sourceHash": "928cfc2e204a2d523c05071eb21f65479a96f581dc23a43fa1848eecc5216dcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudio3dmixingrenderingalgorithm:0004:0005",
+      "source": "tvOS ?+",
+      "ko": "tvOS ?+",
+      "sourceHash": "e197a5f363006a02e522e5f07b216c8e4a4e9a6a147fcb43f9877e395882682a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:avaudio3dmixingrenderingalgorithm:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudio3dmixingrenderingalgorithm:0004:0007",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nenum AVAudio3DMixingRenderingAlgorithm\n```",
+      "ko": "```swift\nenum AVAudio3DMixingRenderingAlgorithm\n```",
+      "sourceHash": "a38d7eacd2e1d73f5d63795570416fab4be41d96616cbb1a8a001836fd32a275",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "The rendering algorithms differ in quality and CPU cost.",
+      "ko": "렌더링 알고리즘은 품질과 CPU 비용에서 서로 다릅니다.",
+      "sourceHash": "4ecc3311db3e47c3fad05712879804a324345c4b1ce43a7eeb808c89192fdf50",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "[`AVAudio3DMixingRenderingAlgorithm.equalPowerPanning`](avaudio3dmixingrenderingalgorithm/equalpowerpanning.md) is the simplest panning algorithm and the least expensive computationally.",
+      "ko": "[`AVAudio3DMixingRenderingAlgorithm.equalPowerPanning`](avaudio3dmixingrenderingalgorithm/equalpowerpanning.md)는 가장 단순한 패닝 알고리즘이며 계산 비용이 가장 낮습니다.",
+      "sourceHash": "806064dca0198be1dc333b2145ad9527e97d790b3cd712a72398b4b83d0ff3b0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "When rendering to multichannel hardware, most of the rendering algorithms only render to channels 1 and 2, excluding [`AVAudio3DMixingRenderingAlgorithm.soundField`](avaudio3dmixingrenderingalgorithm/soundfield.md) and [`AVAudio3DMixingRenderingAlgorithm.auto`](avaudio3dmixingrenderingalgorithm/auto.md).",
+      "ko": "멀티채널 하드웨어로 렌더링할 때 대부분의 렌더링 알고리즘은 채널 1과 2만 렌더링하며 [`AVAudio3DMixingRenderingAlgorithm.soundField`](avaudio3dmixingrenderingalgorithm/soundfield.md)와 [`AVAudio3DMixingRenderingAlgorithm.auto`](avaudio3dmixingrenderingalgorithm/auto.md)는 제외됩니다.",
+      "sourceHash": "166e885944491bfae4e8e6b209e2bfd994b4eea70b6c95020e0d357a87538d59",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:rendering-algorithms:0011:0001",
+      "source": "Rendering Algorithms",
+      "ko": "렌더링 알고리즘",
+      "sourceHash": "c78dc950ce332c6f0fda161bd14c34c9a78932f7f732b55659556030633042d1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rendering-algorithms:0012:0001",
+      "source": "[AVAudio3DMixingRenderingAlgorithm.auto](avaudio3dmixingrenderingalgorithm/auto.md)",
+      "ko": "[AVAudio3DMixingRenderingAlgorithm.auto](avaudio3dmixingrenderingalgorithm/auto.md)",
+      "sourceHash": "7254eecdd9f65f4c40ebcb34982eab93bda814bdb9925fbc4cd7167d7fbbaddc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rendering-algorithms:0013:0001",
+      "source": "Automatically selects the highest-quality rendering algorithm available for the current playback hardware.",
+      "ko": "현재 재생 하드웨어에서 사용 가능한 최고 품질의 렌더링 알고리즘을 자동으로 선택합니다.",
+      "sourceHash": "3705461ffa8f7e5b374c3a1b76721ded865b70446b9379571dc4062f9e4b6e3a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rendering-algorithms:0014:0001",
+      "source": "[AVAudio3DMixingRenderingAlgorithm.equalPowerPanning](avaudio3dmixingrenderingalgorithm/equalpowerpanning.md)",
+      "ko": "[AVAudio3DMixingRenderingAlgorithm.equalPowerPanning](avaudio3dmixingrenderingalgorithm/equalpowerpanning.md)",
+      "sourceHash": "81e2564addca6eeb01ac9d9990772efd2656fe0416f2101d66b556149c57d13e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rendering-algorithms:0015:0001",
+      "source": "An algorithm that pans the data of the mixer bus into a stereo field.",
+      "ko": "믹서 버스의 데이터를 스테레오 필드로 패닝하는 알고리즘입니다.",
+      "sourceHash": "320cb20d09a0d44551c53d279d42fc0f594ed48ae21984223a3d721f5b112211",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rendering-algorithms:0016:0001",
+      "source": "[AVAudio3DMixingRenderingAlgorithm.HRTF](avaudio3dmixingrenderingalgorithm/hrtf.md)",
+      "ko": "[AVAudio3DMixingRenderingAlgorithm.HRTF](avaudio3dmixingrenderingalgorithm/hrtf.md)",
+      "sourceHash": "7789f2c50cca3ffbb89ed96f68c50fc37a0800770853e706ef0e76317dc2a679",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rendering-algorithms:0017:0001",
+      "source": "A high-quality algorithm that uses filtering to emulate 3D space in headphones.",
+      "ko": "헤드폰에서 필터링을 사용해 3D 공간을 모사하는 고품질 알고리즘입니다.",
+      "sourceHash": "d85ce9d7014302f76952742ca3a81e94d3466ffbeaf0507a4044dc39d5ab450e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rendering-algorithms:0018:0001",
+      "source": "[AVAudio3DMixingRenderingAlgorithm.HRTFHQ](avaudio3dmixingrenderingalgorithm/hrtfhq.md)",
+      "ko": "[AVAudio3DMixingRenderingAlgorithm.HRTFHQ](avaudio3dmixingrenderingalgorithm/hrtfhq.md)",
+      "sourceHash": "cec567db0bb9e620a9aef7475d61065c2240c9900bcc8b98e5bed93c4f55ab88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rendering-algorithms:0019:0001",
+      "source": "A higher-quality head-related transfer function rendering algorithm.",
+      "ko": "더 높은 품질의 헤드-관련 전달 함수(HRTF) 렌더링 알고리즘입니다.",
+      "sourceHash": "8e367f3a8f01dc94b7a6b22125b964f716c9f6a23ef0c34246fb0a2db6a1534e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rendering-algorithms:0020:0001",
+      "source": "[AVAudio3DMixingRenderingAlgorithm.soundField](avaudio3dmixingrenderingalgorithm/soundfield.md)",
+      "ko": "[AVAudio3DMixingRenderingAlgorithm.soundField](avaudio3dmixingrenderingalgorithm/soundfield.md)",
+      "sourceHash": "734a0debbf9f49a8514f5b34e9737d8d04dac274afe13fcc4c84059ca3080760",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rendering-algorithms:0021:0001",
+      "source": "An algorithm that renders to multichannel hardware.",
+      "ko": "멀티채널 하드웨어로 렌더링하는 알고리즘입니다.",
+      "sourceHash": "b4eddcfe237f33a62c233b5c1afa12105d3d6d7d2fc2402edb037bcc0562ce16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rendering-algorithms:0022:0001",
+      "source": "[AVAudio3DMixingRenderingAlgorithm.sphericalHead](avaudio3dmixingrenderingalgorithm/sphericalhead.md)",
+      "ko": "[AVAudio3DMixingRenderingAlgorithm.sphericalHead](avaudio3dmixingrenderingalgorithm/sphericalhead.md)",
+      "sourceHash": "5cb534392eef64307ff0a4eb55c230f3827cf661879b48e84f39a7ef1cb2aaae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rendering-algorithms:0023:0001",
+      "source": "An algorithm that emulates 3D space in headphones by simulating interaural time delays and other spatial cues.",
+      "ko": "양측 귀 간 시간 지연 및 기타 공간 단서를 시뮬레이션하여 헤드폰에서 3D 공간을 모사하는 알고리즘입니다.",
+      "sourceHash": "2a287ebc0d78a8ccb6f0f25498f5f1ea8d27f0de1dd28606dc7214d9000b3d48",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rendering-algorithms:0024:0001",
+      "source": "[AVAudio3DMixingRenderingAlgorithm.stereoPassThrough](avaudio3dmixingrenderingalgorithm/stereopassthrough.md)",
+      "ko": "[AVAudio3DMixingRenderingAlgorithm.stereoPassThrough](avaudio3dmixingrenderingalgorithm/stereopassthrough.md)",
+      "sourceHash": "0eadfaf58e438a085ebf1a8ca4dd2bf13dbb8cc060d18fd8acfd9597ca7962f6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rendering-algorithms:0025:0001",
+      "source": "An algorithm to use when the source data doesn’t need localization.",
+      "ko": "소스 데이터에 로컬라이징이 필요하지 않을 때 사용하는 알고리즘입니다.",
+      "sourceHash": "716803bbba12b9ceeeb5a5279f2d301db747f3aa2afe617eaba123359ce079a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:initializers:0026:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0027:0001",
+      "source": "[init?(rawValue: Int)](avaudio3dmixingrenderingalgorithm/init(rawvalue:).md)",
+      "ko": "[init?(rawValue: Int)](avaudio3dmixingrenderingalgorithm/init(rawvalue:).md)",
+      "sourceHash": "7aa9f15ed097828671b07ba8f6800e4dd550925c2f5fc89e53c43411035e2a77",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0028:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0029:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0001",
+      "source": "[BitwiseCopyable](../Swift/BitwiseCopyable.md)",
+      "ko": "[BitwiseCopyable](../Swift/BitwiseCopyable.md)",
+      "sourceHash": "d9b7e5b67f3eac8ea3e97e986bfddf0caad0dc17c0fe8215d67737774d123fa2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0002",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0003",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0004",
+      "source": "[RawRepresentable](../Swift/RawRepresentable.md)",
+      "ko": "[RawRepresentable](../Swift/RawRepresentable.md)",
+      "sourceHash": "2efbecf64dd0eb3d11b01bb6240e6ba86ad9aec560e5474e4cc5434b032779aa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0005",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0006",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0031:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[class AVAudioEnvironmentNode](avaudioenvironmentnode.md)",
+      "ko": "[class AVAudioEnvironmentNode](avaudioenvironmentnode.md)",
+      "sourceHash": "b72803462d90260e3c268579ecdfc2ba33a5ec4f3779249a0d89125b72f208d0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "An object that simulates a 3D audio environment.",
+      "ko": "3D 오디오 환경을 시뮬레이션하는 객체입니다.",
+      "sourceHash": "286feb2bfa15a483ff091ecad67d2ad05e36bb0866ff9b3b95715539210d747c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[class AVAudioEnvironmentDistanceAttenuationParameters](avaudioenvironmentdistanceattenuationparameters.md)",
+      "ko": "[class AVAudioEnvironmentDistanceAttenuationParameters](avaudioenvironmentdistanceattenuationparameters.md)",
+      "sourceHash": "5fa92b61b271bf6a9ad3d002d9ec729ee772d81d74d921181414a0eff08e45d7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "An object that specifies the amount of attenuation distance, the gradual loss in audio intensity, and other characteristics.",
+      "ko": "감쇠 거리, 오디오 강도의 점진적 감소, 기타 특성을 지정하는 객체입니다.",
+      "sourceHash": "b19e08ac5f7afdf3b06774d7c7f523b2e9f3e73d1515dfef091ff48dd0df48c7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[class AVAudioEnvironmentReverbParameters](avaudioenvironmentreverbparameters.md)",
+      "ko": "[class AVAudioEnvironmentReverbParameters](avaudioenvironmentreverbparameters.md)",
+      "sourceHash": "fc109bc0924fce81f33bc72f160ddeca6787dd4c7361e3da7e17f9d0a224e6a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "A class that encapsulates the parameters that you use to control the reverb of the environment node class.",
+      "ko": "environment node 클래스의 리버브를 제어하는 데 사용하는 매개변수를 캡슐화하는 클래스입니다.",
+      "sourceHash": "82e22d31f40887e3f8ffb36a9a6a94f018098fb7fc7d561311700aff9a191575",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[protocol AVAudio3DMixing](avaudio3dmixing.md)",
+      "ko": "[protocol AVAudio3DMixing](avaudio3dmixing.md)",
+      "sourceHash": "5f4963a080c0d3c7fadb4162a60f3c353b4d3b5a533e50e37501f11de98511a7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "A collection of properties that define 3D mixing properties.",
+      "ko": "3D 믹싱 속성을 정의하는 속성 모음입니다.",
+      "sourceHash": "6bc6a779cb7d33f8a14e4084ed8a55a78915617879dfe5d900d793ec4395edcd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[struct AVAudio3DPoint](avaudio3dpoint.md)",
+      "ko": "[struct AVAudio3DPoint](avaudio3dpoint.md)",
+      "sourceHash": "0f06b173cb782f6b1c57e2d48b93f772dd00bc8a1c963e42ab2be67598e0fc16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "A structure that represents a point in 3D space.",
+      "ko": "3D 공간의 한 점을 나타내는 구조체입니다.",
+      "sourceHash": "7d7212defe29c204b19900b7b0642f003e9d3ccbef691b88be962503d485238b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[struct AVAudio3DVectorOrientation](avaudio3dvectororientation.md)",
+      "ko": "[struct AVAudio3DVectorOrientation](avaudio3dvectororientation.md)",
+      "sourceHash": "c810353e638156fb85a8c8b20b4904040f53fb9b0c785477c8a4cde81e3ff16b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "A structure that represents two orthogonal vectors that describe the orientation of the listener in 3D space.",
+      "ko": "3D 공간에서 청취자의 방향을 설명하는 두 개의 직교 벡터를 나타내는 구조체입니다.",
+      "sourceHash": "3897831a7f07c44e138a8aa6ab04536950e2c537bef6e7d743f79909b091bb7c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[struct AVAudio3DAngularOrientation](avaudio3dangularorientation.md)",
+      "ko": "[struct AVAudio3DAngularOrientation](avaudio3dangularorientation.md)",
+      "sourceHash": "96307cd345939ea720950aa490be40406176e0a9bcc2ad18fe90b2fb9115ce3f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "A structure that represents the angular orientation of the listener in 3D space.",
+      "ko": "3D 공간에서 청취자의 각도 방향을 나타내는 구조체입니다.",
+      "sourceHash": "4087408081071f38844afd422ab9d0adbb20417d639d30627fdc4f2faa8f09fc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0046:0001",
+      "source": "[enum AVAudio3DMixingSourceMode](avaudio3dmixingsourcemode.md)",
+      "ko": "[enum AVAudio3DMixingSourceMode](avaudio3dmixingsourcemode.md)",
+      "sourceHash": "d2ae6d7032fd531ad1d499e6c9bc335dd7a31d50133e09d3c60de9d06393182e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "The source modes for the input bus of the audio environment node.",
+      "ko": "오디오 환경 노드의 입력 버스에 대한 소스 모드입니다.",
+      "sourceHash": "a47b720c287ff42f7006ebdfca1ad5e031a89efc761390f8c14b57477f5bbbff",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0048:0001",
+      "source": "[enum AVAudioEnvironmentOutputType](avaudioenvironmentoutputtype.md)",
+      "ko": "[enum AVAudioEnvironmentOutputType](avaudioenvironmentoutputtype.md)",
+      "sourceHash": "28519ccfb47948a0620378099e86cf9a6e7b9a9c2b3cfdd82d5d402099a1c35a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0049:0001",
+      "source": "The output types for using with the automatic 3D mixing rendering algorithm.",
+      "ko": "자동 3D 믹싱 렌더링 알고리즘과 함께 사용되는 출력 유형입니다.",
+      "sourceHash": "5e2c21fb17f2c5970baf37d37575dd6702c9ae0e43e2c617ce339a0507f130c1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0050:0001",
+      "source": "[enum AVAudio3DMixingPointSourceInHeadMode](avaudio3dmixingpointsourceinheadmode.md)",
+      "ko": "[enum AVAudio3DMixingPointSourceInHeadMode](avaudio3dmixingpointsourceinheadmode.md)",
+      "sourceHash": "736858981a237638552713f734e69ec4cef4cdd11c0b3a949cf739b8efdac481",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0051:0001",
+      "source": "The in-head modes for a point source.",
+      "ko": "점 음원의 in-head 모드입니다.",
+      "sourceHash": "b0cf1c82f6e66905078298840a3661e7cf5b3441867cb4926dc668d3df8dba9f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0052:0001",
+      "source": "[typealias AVAudio3DVector](avaudio3dvector.md)",
+      "ko": "[typealias AVAudio3DVector](avaudio3dvector.md)",
+      "sourceHash": "96a87ac342e6c57c4bf62c238fd49c93e3a3fa169d72de5e46eb09c848d73eb2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0053:0001",
+      "source": "A structure that represents a vector in 3D space, in degrees.",
+      "ko": "3D 공간의 벡터를 각도로 나타내는 구조체입니다.",
+      "sourceHash": "e1520c7ed6501b278a1e96afc9c5828f759a7c1f8e496e605366b8feacadee55",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0054:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0055:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudio3dmixingrenderingalgorithm)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudio3dmixingrenderingalgorithm)*",
+      "sourceHash": "1be0944e67ffc71fb5a311e90fd08e628ef1ec9022f92f0cd1fbf9016edbedd9",
+      "status": "preserved"
+    }
+  ]
+}

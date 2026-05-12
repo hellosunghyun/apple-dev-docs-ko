@@ -1,0 +1,337 @@
+{
+  "docId": "documentation/AVFAudio/avaudioconnectionpoint.md",
+  "title": "AVAudioConnectionPoint",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudioconnectionpoint",
+  "segments": [
+    {
+      "id": "seg:heading:avaudioconnectionpoint:0000:0001",
+      "source": "AVAudioConnectionPoint",
+      "ko": "AVAudioConnectionPoint",
+      "sourceHash": "1d2c93b2eda229f0a768c7381183e844ee239ca620615ba3a0b762a1129bf7ed",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudioconnectionpoint:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudioconnectionpoint:0002:0001",
+      "source": "A representation of either a source or destination connection point in the audio engine.",
+      "ko": "오디오 엔진에서 소스 또는 목적지 연결점의 표현 중 하나입니다.",
+      "sourceHash": "6277c7c524545d0dd9481c478e298446d0c937da3f31654291bafaf320281444",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudioconnectionpoint:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudioconnectionpoint:0004:0001",
+      "source": "iOS 9.0+",
+      "ko": "iOS 9.0+",
+      "sourceHash": "5e500d43331f50d418de64f036136c59cae8019e851cea2322bbe52f3417e342",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudioconnectionpoint:0004:0002",
+      "source": "iPadOS 9.0+",
+      "ko": "iPadOS 9.0+",
+      "sourceHash": "76a293c18c4e8a4dc7d9f40b220cc7f9eb91580e5b0a3041a6d046bf6969a307",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudioconnectionpoint:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudioconnectionpoint:0004:0004",
+      "source": "macOS 10.11+",
+      "ko": "macOS 10.11+",
+      "sourceHash": "677aa32b7b6dcf49f156af2d6b166cd7ef887ee428e06683ee3a6c2a627f226a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudioconnectionpoint:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudioconnectionpoint:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudioconnectionpoint:0004:0007",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAudioConnectionPoint\n```",
+      "ko": "```swift\nclass AVAudioConnectionPoint\n```",
+      "sourceHash": "11647c5af05f2b934c021813e3caa6c38a9b92fd366e1d114701acab537e2a6a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Instances of this class are immutable.",
+      "ko": "이 class의 인스턴스는 변경할 수 없습니다.",
+      "sourceHash": "8c4af2a840fddfcd9949fe172cd1d943a9a11ee9a3a04b3c4d2d66aaf2b13ce3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-connection-point:0010:0001",
+      "source": "Creating a Connection Point",
+      "ko": "연결점 생성",
+      "sourceHash": "d33243b7f5d6349a359758d1adb68594100e7de8df5f7cd46175fca0d4057eec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-connection-point:0011:0001",
+      "source": "[init(node: AVAudioNode, bus: AVAudioNodeBus)](avaudioconnectionpoint/init(node:bus:).md)",
+      "ko": "[init(node: AVAudioNode, bus: AVAudioNodeBus)](avaudioconnectionpoint/init(node:bus:).md)",
+      "sourceHash": "651264acdbea126e03afebc93dab7c9428a3f270aa3c5d01c3addae766e66942",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-connection-point:0012:0001",
+      "source": "Creates a connection point object.",
+      "ko": "연결점 객체를 생성합니다.",
+      "sourceHash": "e4df550244da29b6a62dd8828a29df5d0dbfda3356bdfe4ce62ce88ba426d040",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-connection-point-properties:0013:0001",
+      "source": "Getting Connection Point Properties",
+      "ko": "연결점 속성 가져오기",
+      "sourceHash": "427c9329b05dabaf1f93bdde2f891813f1bb5a341aed635ce05b1b2bbe4de4ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-connection-point-properties:0014:0001",
+      "source": "[func inputConnectionPoint(for: AVAudioNode, inputBus: AVAudioNodeBus) -> AVAudioConnectionPoint?](avaudioengine/inputconnectionpoint(for:inputbus:).md)",
+      "ko": "[func inputConnectionPoint(for: AVAudioNode, inputBus: AVAudioNodeBus) -> AVAudioConnectionPoint?](avaudioengine/inputconnectionpoint(for:inputbus:).md)",
+      "sourceHash": "b9ca8ce1ed45d73fd20524a6ec04c1f01272df9e8e11945a77d3beabcf7266fe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:getting-connection-point-properties:0015:0001",
+      "source": "Returns connection information about a node’s input bus.",
+      "ko": "노드의 입력 버스에 대한 연결 정보를 반환합니다.",
+      "sourceHash": "8e03176940bf4e322c4ec06c18929916bf041802e24291d04dac07371853595f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-connection-point-properties:0016:0001",
+      "source": "[func outputConnectionPoints(for: AVAudioNode, outputBus: AVAudioNodeBus) -> [AVAudioConnectionPoint]](avaudioengine/outputconnectionpoints(for:outputbus:).md)",
+      "ko": "[func outputConnectionPoints(for: AVAudioNode, outputBus: AVAudioNodeBus) -> [AVAudioConnectionPoint]](avaudioengine/outputconnectionpoints(for:outputbus:).md)",
+      "sourceHash": "f2c0f825bed8cd9ccf213acafced0534d4d4c5103f2202bbf1fc9c3fb08ec6bf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:getting-connection-point-properties:0017:0001",
+      "source": "Returns connection information about a node’s output bus.",
+      "ko": "노드의 출력 버스에 대한 연결 정보를 반환합니다.",
+      "sourceHash": "cbe986505beced263f47b120d0423844dfa3a09d2ada63f475c5cff66ac164d4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-connection-point-properties:0018:0001",
+      "source": "[var bus: AVAudioNodeBus](avaudioconnectionpoint/bus.md)",
+      "ko": "[var bus: AVAudioNodeBus](avaudioconnectionpoint/bus.md)",
+      "sourceHash": "0c31d82d63829da5a27299c1e50eccb7dac43970ae2076943ebb3e0064f0ff2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-connection-point-properties:0019:0001",
+      "source": "The bus on the node in the connection point.",
+      "ko": "연결점의 버스입니다.",
+      "sourceHash": "9d367c07bf36ea9afaa904812aa521c80f82c45d0dce0d3364c6cacc45968e74",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-connection-point-properties:0020:0001",
+      "source": "[var node: AVAudioNode?](avaudioconnectionpoint/node.md)",
+      "ko": "[var node: AVAudioNode?](avaudioconnectionpoint/node.md)",
+      "sourceHash": "be9255e364f81637066558163feeae56a7338bd91913dc9d6cce90e69bfc79ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-connection-point-properties:0021:0001",
+      "source": "The node in the connection point.",
+      "ko": "연결점의 노드입니다.",
+      "sourceHash": "81e57d68ad5028e91cb7336a36b967092dfc1938607e711652aa653ea1811037",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0022:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0023:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0024:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0025:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0026:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0026:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0026:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0026:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0026:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0026:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0027:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[func connect(AVAudioNode, to: [AVAudioConnectionPoint], fromBus: AVAudioNodeBus, format: AVAudioFormat?)](avaudioengine/connect(_:to:frombus:format:).md)",
+      "ko": "[func connect(AVAudioNode, to: [AVAudioConnectionPoint], fromBus: AVAudioNodeBus, format: AVAudioFormat?)](avaudioengine/connect(_:to:frombus:format:).md)",
+      "sourceHash": "53dc5eb84a756bb07f58f066d86e599e4f7fbb494db84aea60edf91a132ff81b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Establishes a connection between a source node and multiple destination nodes.",
+      "ko": "소스 노드와 여러 대상 노드 간의 연결을 설정합니다.",
+      "sourceHash": "0f87ab3788cc809b2c5f9fd7e9add512af6d2da4f5464cd0b1a5e47758ce9afa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[func inputConnectionPoint(for: AVAudioNode, inputBus: AVAudioNodeBus) -> AVAudioConnectionPoint?](avaudioengine/inputconnectionpoint(for:inputbus:).md)",
+      "ko": "[func inputConnectionPoint(for: AVAudioNode, inputBus: AVAudioNodeBus) -> AVAudioConnectionPoint?](avaudioengine/inputconnectionpoint(for:inputbus:).md)",
+      "sourceHash": "b9ca8ce1ed45d73fd20524a6ec04c1f01272df9e8e11945a77d3beabcf7266fe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Returns connection information about a node’s input bus.",
+      "ko": "노드의 입력 버스에 대한 연결 정보를 반환합니다.",
+      "sourceHash": "8e03176940bf4e322c4ec06c18929916bf041802e24291d04dac07371853595f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[func outputConnectionPoints(for: AVAudioNode, outputBus: AVAudioNodeBus) -> [AVAudioConnectionPoint]](avaudioengine/outputconnectionpoints(for:outputbus:).md)",
+      "ko": "[func outputConnectionPoints(for: AVAudioNode, outputBus: AVAudioNodeBus) -> [AVAudioConnectionPoint]](avaudioengine/outputconnectionpoints(for:outputbus:).md)",
+      "sourceHash": "f2c0f825bed8cd9ccf213acafced0534d4d4c5103f2202bbf1fc9c3fb08ec6bf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Returns connection information about a node’s output bus.",
+      "ko": "노드의 출력 버스에 대한 연결 정보를 반환합니다.",
+      "sourceHash": "cbe986505beced263f47b120d0423844dfa3a09d2ada63f475c5cff66ac164d4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0034:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudioconnectionpoint)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudioconnectionpoint)*",
+      "sourceHash": "b3939f326ce32306951347ab65efbf6bec8b9e8400263e4b2534535ad85f2724",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "docId": "documentation/ARKit/choosing-which-camera-feed-to-augment.md",
+  "title": "Choosing Which Camera Feed to Augment",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/choosing-which-camera-feed-to-augment",
+  "segments": [
+    {
+      "id": "seg:heading:choosing-which-camera-feed-to-augment:0000:0001",
+      "source": "Choosing Which Camera Feed to Augment",
+      "ko": "증강할 카메라 피드 선택",
+      "sourceHash": "b6b702c42006675f1a58bf3fda56e88f91354d42875a6b59bf8534e236b05b0f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:choosing-which-camera-feed-to-augment:0001:0001",
+      "source": "**Framework**: ARKit",
+      "ko": "**프레임워크**: ARKit",
+      "sourceHash": "f52f1f198768fecfb3eca7e0900afdc8bbc7fd0775dd02734574f44e18a1beee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:choosing-which-camera-feed-to-augment:0002:0001",
+      "source": "Add visual effects to the user’s environment in an AR experience through the front or rear camera.",
+      "ko": "AR 경험에서 전면 또는 후면 카메라를 통해 사용자 환경에 시각 효과를 추가합니다.",
+      "sourceHash": "9d2099991dc2aafbb215f6701f6cf7ee59043d4399c80779ac070d1efa322e9c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "iOS devices come equipped with multiple cameras, and for each ARKit session you need to choose which camera’s feed to augment.",
+      "ko": "iOS 기기는 여러 카메라가 장착되어 있으며, 각 ARKit 세션마다 어떤 카메라 피드를 증강할지 선택해야 합니다.",
+      "sourceHash": "559178f143a1d608eef388661cc7aac39e58b2331fa24a27d1a9fe80343677b4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "ARKit 3 and later provide simultaneous anchors from all cameras (see [`Combining user face-tracking and world tracking`](combining-user-face-tracking-and-world-tracking.md)), but you still must choose one camera feed to show to the user at a time.",
+      "ko": "ARKit 3 이상에서는 모든 카메라의 앵커를 동시에 제공합니다(참조: [`Combining user face-tracking and world tracking`](combining-user-face-tracking-and-world-tracking.md)), 그러나 한 번에 사용자에게 표시할 카메라 피드는 한 가지만 선택해야 합니다.",
+      "sourceHash": "ea4729805dd8a9eca9abcf81f01e57d0734bba081e3db4058037b94cbbc36c63",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:augmented-reality-with-the-rear-camera:0005:0001",
+      "source": "Augmented Reality with the Rear Camera",
+      "ko": "후면 카메라로 구현하는 증강 현실",
+      "sourceHash": "efba47019749caad7be29bf226d027073209cc69cef84f4268985bacd2aba7e0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:augmented-reality-with-the-rear-camera:0006:0001",
+      "source": "The most common kinds of AR experience display a view from the device’s rear camera, augmented by other visual content, giving the user a new way to see and interact with the world around them.",
+      "ko": "가장 일반적인 AR 경험은 장치의 후면 카메라 영상을 기반으로, 다른 시각 콘텐츠를 겹쳐 사용자에게 주변 세상을 새롭게 보고 상호작용할 수 있는 방식을 제공합니다.",
+      "sourceHash": "bdb62ff392b10b401bec12d59f922c48095adf972bed3a2ca405e4fb402bf022",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:augmented-reality-with-the-rear-camera:0007:0001",
+      "source": "[`ARWorldTrackingConfiguration`](arworldtrackingconfiguration.md) provides this kind of experience: ARKit tracks the real-world the user inhabits, and matches it with a coordinate space for you to place virtual content.",
+      "ko": "[`ARWorldTrackingConfiguration`](arworldtrackingconfiguration.md)은 이러한 경험을 제공합니다. ARKit은 사용자가 있는 실제 세계를 추적하고, 가상 콘텐츠를 배치할 좌표 공간과 일치시킵니다.",
+      "sourceHash": "f2791586383921000b5dbb2f1494da477ab129ef39909228c48c06b5158b5d1a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:augmented-reality-with-the-rear-camera:0007:0002",
+      "source": "World tracking also offers features to make AR experiences more immersive, like the ability to recognize objects and images in the user’s environment and respond to real-world lighting conditions.",
+      "ko": "월드 추적은 또한 사용자 환경의 객체와 이미지를 인식하고 실제 조명 조건에 반응하는 기능을 제공해 AR 경험을 더 몰입감 있게 만듭니다.",
+      "sourceHash": "b316c09883bfd0cf1d968b09ce4e589be23fa3c80636f7bbad2968b083d74e95",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:augmented-reality-with-the-front-camera:0008:0001",
+      "source": "Augmented Reality with the Front Camera",
+      "ko": "전면 카메라로 구현하는 증강 현실",
+      "sourceHash": "2cce0398e2919ec2d2374078772553d17dd47b2e90979b6a26b18aa8331cad45",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:augmented-reality-with-the-front-camera:0009:0001",
+      "source": "For iOS devices that have a TrueDepth camera, [`ARFaceTrackingConfiguration`](arfacetrackingconfiguration.md) enables you to augment the front-camera feed, while providing you with real-time tracking for the pose and expression of faces.",
+      "ko": "TrueDepth 카메라가 있는 iOS 기기에서는 [`ARFaceTrackingConfiguration`](arfacetrackingconfiguration.md)을 사용해 전면 카메라 피드를 증강할 수 있으며, 얼굴의 자세와 표정을 실시간으로 추적합니다.",
+      "sourceHash": "c9e069b9e7999ee55efa7b29197c350aafe8ac489c352f3c8a6e30ff0bde0d06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:augmented-reality-with-the-front-camera:0009:0002",
+      "source": "With that information, that you might, for example, choose to overlay realistic virtual masks.",
+      "ko": "이 정보를 이용하면 예를 들어 사실적인 가상 마스크를 오버레이하도록 선택할 수 있습니다.",
+      "sourceHash": "755ef48c19d30014c951a9e11e8a908342514b1c929fa4a28f77c889c47bbc8b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:augmented-reality-with-the-front-camera:0009:0003",
+      "source": "Or, you might omit the camera view and use facial expression data to animate virtual characters, as in the Animoji app for iMessage.",
+      "ko": "또는 카메라 보기를 생략하고 iMessage용 Animoji 앱처럼 얼굴 표정 데이터를 사용해 가상 캐릭터를 애니메이션할 수도 있습니다.",
+      "sourceHash": "6d19234f3f3111375272b1844aac40357b64d84195c7bfc4ee624d03777cd2da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[Managing Session Life Cycle and Tracking Quality](managing-session-life-cycle-and-tracking-quality.md)",
+      "ko": "[Managing Session Life Cycle and Tracking Quality](managing-session-life-cycle-and-tracking-quality.md)",
+      "sourceHash": "e121db8695ba2345e09e6288d9eabed6e3abc6e7c24a926e0446aa1f4ec6c526",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "Keep the user informed on the current session state and recover from interruptions.",
+      "ko": "현재 세션 상태를 사용자에게 알리고 중단에서 복구합니다.",
+      "sourceHash": "5942b386e09022901038170fdb890463afb99ca70a575027126a5eb171c9db92",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[Displaying an AR Experience with Metal](displaying-an-ar-experience-with-metal.md)",
+      "ko": "[Displaying an AR Experience with Metal](displaying-an-ar-experience-with-metal.md)",
+      "sourceHash": "874a876d58032b97c53753f93fcea10d07386a366bf964a31b68dc88982c2646",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Control rendering of your app’s virtual content on top of a camera feed.",
+      "ko": "카메라 피드 위에 앱의 가상 콘텐츠 렌더링을 제어합니다.",
+      "sourceHash": "7654e50a45f4154875860d4c6ccc169007146af7c36141addbd4554ec09b3e36",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[class ARSession](arsession.md)",
+      "ko": "[class ARSession](arsession.md)",
+      "sourceHash": "c8a9418b7bf43bfb4fa8fb0df9730d8f74c7c29f61056ce322f9d1bb03823008",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The object that manages the major tasks associated with every AR experience, such as motion tracking, camera passthrough, and image analysis.",
+      "ko": "이 객체는 모션 추적, 카메라 패스스루, 이미지 분석 등 모든 AR 경험과 관련된 주요 작업을 관리합니다.",
+      "sourceHash": "be06b3e2299b570999594006c2bd898eccc1edb5b09fa7de13085b588b501642",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[Configuration Objects](configuration-objects.md)",
+      "ko": "[Configuration Objects](configuration-objects.md)",
+      "sourceHash": "bda0e335eade86aa055c54de756d2aa1fd91ed97693043deb56adc40f463fadc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Configure your augmented reality session to detect and track specific types of content.",
+      "ko": "증강 현실 세션을 구성하여 특정 유형의 콘텐츠를 감지하고 추적합니다.",
+      "sourceHash": "872d6ea060ce7f77bf568475a8450ac4ef505b82443ece888d6b5c8965a8d125",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/choosing-which-camera-feed-to-augment)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/choosing-which-camera-feed-to-augment)*",
+      "sourceHash": "212b866139efaa74ab6e9a59e197fdc6ae7ed08f86893072fedfc05687e45054",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "docId": "documentation/AppKit/nsdocument/updatechangecount.md",
+  "title": "updateChangeCount(:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appkit/nsdocument/updatechangecount",
+  "segments": [
+    {
+      "id": "seg:heading:updatechangecount:0000:0001",
+      "source": "updateChangeCount(_:)",
+      "ko": "updateChangeCount(_:)",
+      "sourceHash": "3c5f46b5b100e7b83321226c8e4e7ccbadf78e50414af40d9680aefdebe8ed00",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:updatechangecount:0001:0001",
+      "source": "**Framework**: AppKit **Kind**: method",
+      "ko": "**Framework**: AppKit **Kind**: method",
+      "sourceHash": "d0bb5eba5cbec0f2e57076ce9bf28601986c84bd690d2e162e981dbbb6baff21",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:updatechangecount:0002:0001",
+      "source": "Updates the receiver’s change count according to the given change type.",
+      "ko": "수신자의 변경 횟수를 지정된 변경 유형에 따라 업데이트합니다.",
+      "sourceHash": "d0cf5a52f05511370716afc9899451e88370f3c6dc63dab0aeeb8e4b5066d603",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:updatechangecount:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:updatechangecount:0004:0001",
+      "source": "macOS ?+",
+      "ko": "macOS ?+",
+      "sourceHash": "7565f9a2fe151983964ce7f1a1fff21dbf4130de4d3457f25bd88800eafbe279",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc updateChangeCount(_ change: NSDocument.ChangeType)\n```",
+      "ko": "```swift\nfunc updateChangeCount(_ change: NSDocument.ChangeType)\n```",
+      "sourceHash": "18c0f815d63ed656efdc5100d59505f2697c029f99e0559bca8073d2e14710cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "The change count indicates the document’s edited status; if the change count is 0, the document has no changes to save, and if the change count is greater than 0, the document has been edited and is unsaved.",
+      "ko": "The value of this key is an [`NSNumber`](https://developer.apple.com/documentation/Foundation/NSNumber) object.",
+      "sourceHash": "d6498025b02f9454abd39bc8e2c3d626d7079d9295c71e04759cec63d8e3965c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "If you are implementing undo and redo in an app, you should increment the change count every time you create an undo group and decrement the change count when an undo or redo operation is performed.",
+      "ko": "앱에서 실행 취소 및 다시 실행을 구현하는 경우, 실행 취소 그룹을 생성할 때마다 변경 횟수를 증가시키고 실행 취소 또는 다시 실행 작업이 수행될 때 변경 횟수를 감소시켜야 합니다.",
+      "sourceHash": "93788f905eac1aab3649d0c78e5967a43c30a25da26dead3b98f7c979e6a517c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Note that if you are using the `NSDocument` default undo/redo features, setting the document’s edited status by updating the change count happens automatically.",
+      "ko": "`NSDocument`의 기본 실행 취소/다시 실행 기능을 사용하는 경우, 변경 횟수를 업데이트하여 문서의 편집 상태를 설정하는 작업은 자동으로 수행됩니다.",
+      "sourceHash": "68a1c16f4b220e3a4af2fb640f5769a8cfb45d1e3c17e29c4abef3b9c33f6e7f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "You only need to invoke this method when you are not using these features.",
+      "ko": "이 기능을 사용하지 않는 경우에만 이 메서드를 호출하면 됩니다.",
+      "sourceHash": "fce1ce5e747f6988e6978aea31f0f1dc04f5c87a9807931a18137ae59ef93713",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`change`: The type of change made to the document. For a list of values, see [`NSDocument.ChangeType`](nsdocument/changetype.md).",
+      "ko": "`change`: 문서에 수행된 변경 유형입니다. 값 목록은 [`NSDocument.ChangeType`](nsdocument/changetype.md)를 참조합니다.",
+      "sourceHash": "7c1ab05e6cdae0e59c9c5c2171e6c7e11f07ec7f27888df39b5bd7f76c5b44d3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func updateChangeCount(withToken: Any, for: NSDocument.SaveOperationType)](nsdocument/updatechangecount(withtoken:for:).md)",
+      "ko": "[func updateChangeCount(withToken: Any, for: NSDocument.SaveOperationType)](nsdocument/updatechangecount(withtoken:for:).md)",
+      "sourceHash": "1145d8220d1571eb2839752fa76e3bd1367f7b3dd2d3a98df862fd2cf3510c52",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Updates the document’s change count settings after a successful save operation.",
+      "ko": "저장 작업이 성공적으로 완료된 뒤 문서의 변경 횟수 설정을 업데이트합니다.",
+      "sourceHash": "b93f0473629c9a55245bd5b9b3e54d889298a0cdda0dd2bc1f4fb97d7e588db0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[NSDocument.ChangeType](nsdocument/changetype.md)",
+      "ko": "[NSDocument.ChangeType](nsdocument/changetype.md)",
+      "sourceHash": "1afd9e37ca066927171bc8c54424520fbe790adf7c34be7673d202dc7ed754da",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Values that indicate a document’s edit status.",
+      "ko": "문서의 편집 상태를 나타내는 값입니다.",
+      "sourceHash": "0aa3e3f1a13e76b9a4650610b18f639a33b633a133a862af10febda95e8734ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func changeCountToken(for: NSDocument.SaveOperationType) -> Any](nsdocument/changecounttoken(for:).md)",
+      "ko": "[func changeCountToken(for: NSDocument.SaveOperationType) -> Any](nsdocument/changecounttoken(for:).md)",
+      "sourceHash": "9a9346335ab36a3cc581582056bbeb64753ee77c16ec25d2b4819e4aa6fe4145",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Returns an object that encapsulates the current record of document changes at the beginning of a save operation.",
+      "ko": "저장 작업 시작 시점의 문서 변경 기록을 캡슐화한 개체를 반환합니다.",
+      "sourceHash": "59021764dc29d9464e951e11be759957f7f21caa271db7db269a4a8180bfa229",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nsdocument/updatechangecount(_:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nsdocument/updatechangecount(_:))*",
+      "sourceHash": "1c67becc4917b26e2ec6c5ba2b31a0127020137199b6ace497c4d7082b859fbf",
+      "status": "machine_translated"
+    }
+  ]
+}

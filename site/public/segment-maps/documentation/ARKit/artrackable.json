@@ -1,0 +1,267 @@
+{
+  "docId": "documentation/ARKit/artrackable.md",
+  "title": "ARTrackable",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/artrackable",
+  "segments": [
+    {
+      "id": "seg:heading:artrackable:0000:0001",
+      "source": "ARTrackable",
+      "ko": "ARTrackable",
+      "sourceHash": "77180846a1ffbb8d198baa0e6f1a0ef581b4bb65d029b594cd526cc4373a3e49",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:artrackable:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: protocol",
+      "ko": "**Framework**: ARKit **Kind**: protocol",
+      "sourceHash": "0460b301c8ef0a7a034c7d1e7dc84ee6a710958400276bb58da5c0e8508d6e86",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:artrackable:0002:0001",
+      "source": "An interface for objects that track the location of real-world objects or locations.",
+      "ko": "실제 세계 객체 또는 위치를 추적하는 객체를 위한 인터페이스입니다.",
+      "sourceHash": "f326b40d3d2803c8c8b243dda76ab0d89ff02d44514394e845283d5d9ce4a61b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:artrackable:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:artrackable:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:artrackable:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:artrackable:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nprotocol ARTrackable : NSObjectProtocol\n```",
+      "ko": "```swift\nprotocol ARTrackable : NSObjectProtocol\n```",
+      "sourceHash": "e4580eaacfc91996f43bbe66a4da37723bb44fc19a2b4b1c50c3d20b362e4a0e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "This protocol is adopted by ARKit classes, such as the [`ARFaceAnchor`](arfaceanchor.md) class, that represent moving objects in a scene.",
+      "ko": "이 프로토콜은 씬에서 이동 객체를 나타내는 [`ARFaceAnchor`](arfaceanchor.md) 클래스와 같은 ARKit 클래스에서 채택됩니다.",
+      "sourceHash": "559a9cabd58437d2db331dd5cc12d7b2756d0cde3798b3bd12e058e0c65ba4ef",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "ARKit automatically manages representations of such objects in an active AR session, ensuring that changes in the real-world object’s position and orientation (the [`transform`](aranchor/transform.md) property for anchors) are reflected in corresponding ARKit objects.",
+      "ko": "ARKit은 활성 AR 세션에서 이러한 객체의 표현을 자동으로 관리하여, 실제 객체의 위치와 방향 변경(앵커의 [`transform`](aranchor/transform.md) 속성)이 해당 ARKit 객체에 반영되도록 보장합니다.",
+      "sourceHash": "9ec8773d13cff88c86227e19416cf5f1536a4082dca62cf9368bcbc13b4bec96",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "The [`isTracked`](artrackable/istracked.md) property indicates whether the current transform is valid with respect to movement of the real-world object.",
+      "ko": "[`isTracked`](artrackable/istracked.md) 속성은 실제 객체의 움직임에 대해 현재 transform이 유효한지 여부를 나타냅니다.",
+      "sourceHash": "4a6155ae0825a465459267b524ab20c6d1c9e57f88e51771d15ba67437cd9e54",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "Trackable anchor classes affect other ARKit behaviors:",
+      "ko": "Trackable anchor 클래스는 다른 ARKit 동작에 영향을 줍니다.",
+      "sourceHash": "794cef68242346fa899415da3b032db592de2f3daa8d1a2e5dc0d98fb9025091",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0011:0001",
+      "source": "The [`getCurrentWorldMap(completionHandler:)`](arsession/getcurrentworldmap(completionhandler:).md) method automatically includes only non-trackable anchors in the [`ARWorldMap`](arworldmap.md) it creates. (After you create a world map, you can add other anchors to it if you choose.)",
+      "ko": "[`getCurrentWorldMap(completionHandler:)`](arsession/getcurrentworldmap(completionhandler:).md) 메서드는 생성하는 [`ARWorldMap`](arworldmap.md)에 추적 불가 anchor만 자동으로 포함합니다. (world map을 만든 후에는 필요에 따라 다른 anchor를 추가할 수 있습니다.)",
+      "sourceHash": "c154ba4b70dab8d06eda66ecc9c6c4552ec5b75c05624d47de1e2bf21f47601a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0011:0002",
+      "source": "[`ARSCNView`](arscnview.md) and [`ARSKView`](arskview.md) automatically hide the nodes for anchors whose [`isTracked`](artrackable/istracked.md) property is [`false`](https://developer.apple.com/documentation/Swift/false).",
+      "ko": "[`ARSCNView`](arscnview.md) 및 [`ARSKView`](arskview.md)는 [`isTracked`](artrackable/istracked.md) 속성이 [`false`](https://developer.apple.com/documentation/Swift/false)인 anchor의 노드를 자동으로 숨깁니다.",
+      "sourceHash": "6e9384d97a0ed6c38bd09e44627ffb5279773e91cc64ab398bd02664a54f3c19",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0011:0003",
+      "source": "World-tracking sessions use non-trackable anchors to optimize tracking quality in the area around each anchor. Trackable anchors do not affect world tracking.",
+      "ko": "world-tracking 세션은 각 anchor 주변의 추적 품질을 최적화하기 위해 추적 불가 anchor를 사용합니다. trackable anchor는 world tracking에 영향을 주지 않습니다.",
+      "sourceHash": "31d177e6505deada10c9a0b8acb60fcf9630f0bfa5f271d72d49e7a890720603",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0012:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:monitoring-tracking-state:0013:0001",
+      "source": "Monitoring Tracking State",
+      "ko": "추적 상태 모니터링",
+      "sourceHash": "bd2796e76ba4e147e18986dc623c3d5fbf1d68d38c9682e901760e430a9e1989",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:monitoring-tracking-state:0014:0001",
+      "source": "[var isTracked: Bool](artrackable/istracked.md)",
+      "ko": "[var isTracked: Bool](artrackable/istracked.md)",
+      "sourceHash": "8cf9ae9810404cb71a71f023ac470672ffa440f010b5906b8b4504a9acf48484",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:monitoring-tracking-state:0015:0001",
+      "source": "A Boolean value that indicates whether the object’s transform is valid.",
+      "ko": "객체의 transform이 유효한지를 나타내는 Boolean 값입니다.",
+      "sourceHash": "a10f79899279cf1a4c89f7b50e08fc13d27e9d77ab9d8cf19c5a26abfbf2f869",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0016:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0017:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0018:0001",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforming-types:0019:0001",
+      "source": "Conforming Types",
+      "ko": "준수 타입",
+      "sourceHash": "8776043036a10e239895349ba2be06d5d6393f85e38f81f6489be98293407bf8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforming-types:0020:0001",
+      "source": "[ARAppClipCodeAnchor](arappclipcodeanchor.md)",
+      "ko": "[ARAppClipCodeAnchor](arappclipcodeanchor.md)",
+      "sourceHash": "218324ebf972fb8d4006185b677a713226384ecfe95fd78f3fcf9025981dae25",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforming-types:0020:0002",
+      "source": "[ARBodyAnchor](arbodyanchor.md)",
+      "ko": "[ARBodyAnchor](arbodyanchor.md)",
+      "sourceHash": "c172135462b41dd6776c23abe046c19391d158954c4912c80b824c53698a0792",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforming-types:0020:0003",
+      "source": "[ARFaceAnchor](arfaceanchor.md)",
+      "ko": "[ARFaceAnchor](arfaceanchor.md)",
+      "sourceHash": "c54064d5eff3cd8cd70d5a7d8ae29d1d0973c8dca0a96400f4ddbc7a4d13ec4d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforming-types:0020:0004",
+      "source": "[ARGeoAnchor](argeoanchor.md)",
+      "ko": "[ARGeoAnchor](argeoanchor.md)",
+      "sourceHash": "c4ceeeae2cd2707a96a81c5496110f2c8fc26b64de145cdd6465d0c5db98fbb9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforming-types:0020:0005",
+      "source": "[ARImageAnchor](arimageanchor.md)",
+      "ko": "[ARImageAnchor](arimageanchor.md)",
+      "sourceHash": "14ab312c8cc8dd36bc69e55b87583e558bb5e728fefe823dc300261e435256b3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0021:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[class ARAnchor](aranchor.md)",
+      "ko": "[class ARAnchor](aranchor.md)",
+      "sourceHash": "30dbbb2746e6befe845050ef21badb12169d7f1feb04fa43ca5cfd9c38425bd1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "An object that specifies the position and orientation of an item in the physical environment.",
+      "ko": "물리적 환경에서 항목의 위치와 방향을 지정하는 객체입니다.",
+      "sourceHash": "2c6992cb6fff431743e2a61e2c688c3b8d069849cf16ca2e484bbf68078ebf06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[protocol ARAnchorCopying](aranchorcopying.md)",
+      "ko": "[protocol ARAnchorCopying](aranchorcopying.md)",
+      "sourceHash": "72d311304c544314fc7442683ec0d25865c8f51730b8a4a45fef4d524a38c65d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Support for custom anchor subclasses.",
+      "ko": "커스텀 anchor 하위 클래스에 대한 지원입니다.",
+      "sourceHash": "788ee83f7a4b8cb5a3f1e2613eb3c5cb64190c8a6c7eb24bb4d4c20b35996792",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0026:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/artrackable)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/artrackable)*",
+      "sourceHash": "9de22e0b8780d92a86ea733d55ec2248fe94da4bcb00473f5c1678b8c35e38ba",
+      "status": "preserved"
+    }
+  ]
+}

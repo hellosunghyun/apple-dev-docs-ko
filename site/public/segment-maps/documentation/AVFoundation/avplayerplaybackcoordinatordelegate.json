@@ -1,0 +1,211 @@
+{
+  "docId": "documentation/AVFoundation/avplayerplaybackcoordinatordelegate.md",
+  "title": "AVPlayerPlaybackCoordinatorDelegate",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avplayerplaybackcoordinatordelegate",
+  "segments": [
+    {
+      "id": "seg:heading:avplayerplaybackcoordinatordelegate:0000:0001",
+      "source": "AVPlayerPlaybackCoordinatorDelegate",
+      "ko": "AVPlayerPlaybackCoordinatorDelegate",
+      "sourceHash": "8fca22fb7cdb465e855d15c772de9b27f16e0a635dcbc376982a76657448f2eb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avplayerplaybackcoordinatordelegate:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: protocol",
+      "ko": "**Framework**: AVFoundation **Kind**: protocol",
+      "sourceHash": "9fe72dbe3a0e813782809d79461aa3177173d881d27789c4a87f37d98dcfa943",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avplayerplaybackcoordinatordelegate:0002:0001",
+      "source": "A protocol that defines the methods to implement to participate in playback coordination.",
+      "ko": "재생 조정에 참여하기 위해 구현해야 할 메서드를 정의하는 프로토콜입니다.",
+      "sourceHash": "dcd9a108007dcb99ba1b479d9a6aab7f081daf52957b3b176afb2c5ed44d194c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avplayerplaybackcoordinatordelegate:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayerplaybackcoordinatordelegate:0004:0001",
+      "source": "iOS 15.0+",
+      "ko": "iOS 15.0+",
+      "sourceHash": "86b54448da2eb8626f00177bd04f05a8e48cee585c11805cf3f3e0d890c4e777",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayerplaybackcoordinatordelegate:0004:0002",
+      "source": "iPadOS 15.0+",
+      "ko": "iPadOS 15.0+",
+      "sourceHash": "c7cbc9927b4ccc77db75d1ebf30fcc53090d5edd108c73c553dc668c46926af8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayerplaybackcoordinatordelegate:0004:0003",
+      "source": "Mac Catalyst 15.0+",
+      "ko": "Mac Catalyst 15.0+",
+      "sourceHash": "9d0a6a3a1920dff6b27072e4fe1bcdd8a15ec1e6a32ea0e948a78c43ac895f9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayerplaybackcoordinatordelegate:0004:0004",
+      "source": "macOS 12.0+",
+      "ko": "macOS 12.0+",
+      "sourceHash": "adffa1c4f69a9ee1f27b5e361c29af9b83d00fb7441c2e24713b7acb91ac5100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayerplaybackcoordinatordelegate:0004:0005",
+      "source": "tvOS 15.0+",
+      "ko": "tvOS 15.0+",
+      "sourceHash": "129e8b0216e52c06ca36ea909fe3bc08430cea5008b00272663c5ef8fc40009b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayerplaybackcoordinatordelegate:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nprotocol AVPlayerPlaybackCoordinatorDelegate : NSObjectProtocol, Sendable\n```",
+      "ko": "```swift\nprotocol AVPlayerPlaybackCoordinatorDelegate : NSObjectProtocol, Sendable\n```",
+      "sourceHash": "9d6dcfb26b78724a62d1b95550f988b0ece596cb2a87ee72680c12584534b885",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:topics:0007:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:identifying-items:0008:0001",
+      "source": "Identifying items",
+      "ko": "항목 식별",
+      "sourceHash": "021ebd4f7042b83f6c32235827ada9e0384da47ab649624ba54a63a1873dacbe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:identifying-items:0009:0001",
+      "source": "[func playbackCoordinator(AVPlayerPlaybackCoordinator, identifierFor: AVPlayerItem) -> String](avplayerplaybackcoordinatordelegate/playbackcoordinator(_:identifierfor:).md)",
+      "ko": "[func playbackCoordinator(AVPlayerPlaybackCoordinator, identifierFor: AVPlayerItem) -> String](avplayerplaybackcoordinatordelegate/playbackcoordinator(_:identifierfor:).md)",
+      "sourceHash": "2639c53effa3ce749f452445618c795647ee49eb0e0176233607fc956608e34d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:identifying-items:0010:0001",
+      "source": "Returns an identifier for a player item.",
+      "ko": "player item에 대한 식별자를 반환합니다.",
+      "sourceHash": "ff1ffb7d835405db028f0cf6a3b8513cc50e94c89a9f0f62bd3b16f4adc0d5b4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:retrieving-interstitial-time-ranges:0011:0001",
+      "source": "Retrieving interstitial time ranges",
+      "ko": "인터스티셜 시간 범위 검색",
+      "sourceHash": "6de0ac23a485f3a982a30e354c336785b835736864bcacd6b48e3660aa551057",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:retrieving-interstitial-time-ranges:0012:0001",
+      "source": "[func playbackCoordinator(AVPlayerPlaybackCoordinator, interstitialTimeRangesFor: AVPlayerItem) -> [NSValue]](avplayerplaybackcoordinatordelegate/playbackcoordinator(_:interstitialtimerangesfor:).md)",
+      "ko": "[func playbackCoordinator(AVPlayerPlaybackCoordinator, interstitialTimeRangesFor: AVPlayerItem) -> [NSValue]](avplayerplaybackcoordinatordelegate/playbackcoordinator(_:interstitialtimerangesfor:).md)",
+      "sourceHash": "c3525e0158c29d3ca8c52fa4ee68d0fff131d0ad50577d09b269c2d369d37138",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:retrieving-interstitial-time-ranges:0013:0001",
+      "source": "Asks the delegate for time ranges in a player item that don’t correspond to the primary content.",
+      "ko": "플레이어 항목에서 기본 콘텐츠에 해당하지 않는 시간 범위를 대리자에게 요청합니다.",
+      "sourceHash": "a3de640cba65b53624532b119724870a5e98e7d6dbccb0f338a5f04b78210cc7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0014:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0015:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0016:0001",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherits-from:0016:0002",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherits-from:0016:0003",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0017:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var delegate: (any AVPlayerPlaybackCoordinatorDelegate)?](avplayerplaybackcoordinator/delegate.md)",
+      "ko": "[var delegate: (any AVPlayerPlaybackCoordinatorDelegate)?](avplayerplaybackcoordinator/delegate.md)",
+      "sourceHash": "65d70c16784187957a0722f161fac8d858df76e4acfa5044cb682ebed7f85158",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A delegate object for the playback coordinator.",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avspatialvideoconfiguration-swift.struct/init(formatdescription:))*",
+      "sourceHash": "816191b8b855d808b9a4dbadea419d829e2d75a6929a1c1581d7d01db0a26421",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayerplaybackcoordinatordelegate)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayerplaybackcoordinatordelegate)*",
+      "sourceHash": "92c288da13bb74707a5a277015ba9c38fb666939f112d41054392403b78a7e48",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "docId": "documentation/AVKit/avnavigationmarkersgroup/init-titletimednavigationmarkers.md",
+  "title": "init(title:timedNavigationMarkers:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avkit/avnavigationmarkersgroup/init-titletimednavigationmarkers",
+  "segments": [
+    {
+      "id": "seg:heading:inittitletimednavigationmarkers:0000:0001",
+      "source": "init(title:timedNavigationMarkers:)",
+      "ko": "init(title:timedNavigationMarkers:)",
+      "sourceHash": "7ed102ec4e95744ea16968d7a7da8b5cd8fdf3d6d4cf8d881dd9738570a7ff1b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:inittitletimednavigationmarkers:0001:0001",
+      "source": "**Framework**: AVKit **Kind**: init",
+      "ko": "**Framework**: AVKit **Kind**: init",
+      "sourceHash": "253682bac189cc511f91ee4f6c528c44d729639068ec4aedbdea404b937bf8b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inittitletimednavigationmarkers:0002:0001",
+      "source": "Initializes a navigation markers group with the specified title and array of timed navigation markers.",
+      "ko": "지정한 제목과 timedNavigationMarkers 배열로 네비게이션 마커 그룹을 초기화합니다.",
+      "sourceHash": "9050ba05198ff5493f6c6123c9c362bb4e9f156bb26326017c87aabce7696cc6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:inittitletimednavigationmarkers:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inittitletimednavigationmarkers:0004:0001",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\ninit(title: String?, timedNavigationMarkers navigationMarkers: [AVTimedMetadataGroup])\n```",
+      "ko": "```swift\ninit(title: String?, timedNavigationMarkers navigationMarkers: [AVTimedMetadataGroup])\n```",
+      "sourceHash": "0833085f1d228d36783c61bd3ea8aad85e7bbafb10b4b91926d2d4c695da058c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "A new navigation markers group.",
+      "ko": "새로운 네비게이션 마커 그룹입니다.",
+      "sourceHash": "66d12796528f0724db58f1b09b9b6f46800e8e6a813bc8fbbf135c255ebc6445",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "To associate marker groups with an asset for playback, use the [`navigationMarkerGroups`](https://developer.apple.com/documentation/AVFoundation/AVPlayerItem/navigationMarkerGroups) property of an [`AVPlayerItem`](https://developer.apple.com/documentation/AVFoundation/AVPlayerItem) object.",
+      "ko": "재생을 위해 marker 그룹을 에셋과 연동하려면 [`AVPlayerItem`](https://developer.apple.com/documentation/AVFoundation/AVPlayerItem) 객체의 [`navigationMarkerGroups`](https://developer.apple.com/documentation/AVFoundation/AVPlayerItem/navigationMarkerGroups) 속성을 사용합니다.",
+      "sourceHash": "77c92168e42bd308dce5030befd73d16f54dd751329c857a52bd8665d91be9c5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "To create a chapter list, pass `nil` for the `title` parameter and set the group as the first item in the player item’s [`navigationMarkerGroups`](https://developer.apple.com/documentation/AVFoundation/AVPlayerItem/navigationMarkerGroups) array.",
+      "ko": "챕터 목록을 만들려면 `title` 매개변수에 `nil`을 전달하고 플레이어 항목의 [`navigationMarkerGroups`](https://developer.apple.com/documentation/AVFoundation/AVPlayerItem/navigationMarkerGroups) 배열에서 해당 그룹을 첫 번째 항목으로 설정합니다.",
+      "sourceHash": "fe10122b34ab19b3e938d0d6a547854d1e491a351de7e51b6c30752fcfe5db7a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "To provide additional options for navigating media (such as a “Goals Scored” group for a recorded sporting event), provide a unique `title` value for each marker group in the array.",
+      "ko": "미디어 탐색을 위한 추가 옵션(예: 녹화된 스포츠 이벤트의 “Goals Scored” 그룹)을 제공하려면 배열의 각 marker 그룹에 고유한 `title` 값을 지정합니다.",
+      "sourceHash": "77a9c2da3dd467159ce1878c17873412a145409ee3ab89f0eb6645c8d362b4b4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0012:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0013:0001",
+      "source": "`title`: The title to present for the markers group.",
+      "ko": "`title`: 마커 그룹에 표시할 제목입니다.",
+      "sourceHash": "1565f01bf0de360c7dcd08055c9cd9193d3a88462ac332bea326058ece50a016",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0002",
+      "source": "`navigationMarkers`: The array of timed navigation markers for which the group provides navigation.",
+      "ko": "`navigationMarkers`: 그룹이 탐색을 제공하는 timed navigation markers 배열입니다.",
+      "sourceHash": "b689b2d557afbf0569d0743db6e372d1db79837c12c666fdb50537812fc66b9c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0014:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[init(title: String?, dateRangeNavigationMarkers: [AVDateRangeMetadataGroup])](avnavigationmarkersgroup/init(title:daterangenavigationmarkers:).md)",
+      "ko": "[init(title: String?, dateRangeNavigationMarkers: [AVDateRangeMetadataGroup])](avnavigationmarkersgroup/init(title:daterangenavigationmarkers:).md)",
+      "sourceHash": "61b68d34bff4c63c28f6e7d6451514396ac73b3141a018a3fcd13d6bd1fe2f7b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Initializes a navigation markers group with the specified title and array of date range navigation markers.",
+      "ko": "지정된 제목과 날짜 범위 탐색 마커 배열을 사용해 탐색 마커 그룹을 초기화합니다.",
+      "sourceHash": "cbbff5878207020507d6d74e8c95da381f3002fff9d444766fc806c496725431",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0017:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avnavigationmarkersgroup/init(title:timednavigationmarkers:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avkit/avnavigationmarkersgroup/init(title:timednavigationmarkers:))*",
+      "sourceHash": "d41c0c01edea5209e662891128dda9e392e51c5b5de885f711642b6750a10943",
+      "status": "machine_translated"
+    }
+  ]
+}

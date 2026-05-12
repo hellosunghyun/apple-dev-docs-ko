@@ -1,0 +1,239 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedevice/setcameralenssmudgedetectionenabled-detectioninterval.md",
+  "title": "setCameraLensSmudgeDetectionEnabled(:detectionInterval:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedevice/setcameralenssmudgedetectionenabled-detectioninterval",
+  "segments": [
+    {
+      "id": "seg:heading:setcameralenssmudgedetectionenableddetectioninterval:0000:0001",
+      "source": "setCameraLensSmudgeDetectionEnabled(_:detectionInterval:)",
+      "ko": "setCameraLensSmudgeDetectionEnabled(_:detectionInterval:)",
+      "sourceHash": "2bc1953fd16dac0e2d53f11b15356b3f8e80c8ef7dc455926242d7179d3dd19f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setcameralenssmudgedetectionenableddetectioninterval:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setcameralenssmudgedetectionenableddetectioninterval:0002:0001",
+      "source": "Specify whether to enable camera lens smudge detection, and the interval time between each run of detections.",
+      "ko": "카메라 렌즈 스머지 감지를 활성화할지 여부와 각 감지 실행 사이의 간격 시간을 지정합니다.",
+      "sourceHash": "ca6f04a6b4851ed7cbb843c02b83cb8baf858a8dd90fc73e926cd06aef6d27d7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setcameralenssmudgedetectionenableddetectioninterval:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcameralenssmudgedetectionenableddetectioninterval:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcameralenssmudgedetectionenableddetectioninterval:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcameralenssmudgedetectionenableddetectioninterval:0004:0003",
+      "source": "Mac Catalyst 26.0+",
+      "ko": "Mac Catalyst 26.0+",
+      "sourceHash": "41da0bcbe19513a5638f4ac052319884e486b3cc05252ef6209b23e7b2b1d8e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcameralenssmudgedetectionenableddetectioninterval:0004:0004",
+      "source": "macOS 26.0+",
+      "ko": "macOS 26.0+",
+      "sourceHash": "6fcc4a770cbd02feaac4df78b954d37ef26fc9755008ee17612223162fd4ed2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setcameralenssmudgedetectionenableddetectioninterval:0004:0005",
+      "source": "tvOS 26.0+",
+      "ko": "tvOS 26.0+",
+      "sourceHash": "28934d9284c51fe0aa7b9363ccc49ea3cd840259287dd4f466466d4888ef2bf8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc setCameraLensSmudgeDetectionEnabled(_ cameraLensSmudgeDetectionEnabled: Bool, detectionInterval: CMTime)\n```",
+      "ko": "```swift\nfunc setCameraLensSmudgeDetectionEnabled(_ cameraLensSmudgeDetectionEnabled: Bool, detectionInterval: CMTime)\n```",
+      "sourceHash": "d27b19c820d6cc98d8912afb36f79d9f6252e40b55b8d4d4efe51022e797f66c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Each run of detection processes frames over a short period, and produces one detection result.",
+      "ko": "각 감지는 짧은 시간 동안 프레임을 처리한 뒤 단일 감지 결과를 생성합니다.",
+      "sourceHash": "42bea56aa49bcfd47e9a3b0f0693491e1461e6b9d17809bdada14d81a48306f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Use `detectionInterval` to specify the interval time between each run of detections.",
+      "ko": "`detectionInterval`을 사용해 각 감지 실행 사이의 시간 간격을 지정합니다.",
+      "sourceHash": "fc6ec6d77cd604213cd2eaa56536a27b1d8f8aa3fc3011bc8256e2ea88233d49",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "For example, when [`isCameraLensSmudgeDetectionEnabled`](avcapturedevice/iscameralenssmudgedetectionenabled.md) is set to `true` and `detectionInterval` is set to 1 minute, detection runs once per minute, and updates [`AVCaptureCameraLensSmudgeDetectionStatus`](avcapturecameralenssmudgedetectionstatus.md).",
+      "ko": "예를 들어 [`isCameraLensSmudgeDetectionEnabled`](avcapturedevice/iscameralenssmudgedetectionenabled.md)이 `true`로 설정되고 `detectionInterval`이 1분으로 설정되면 감지는 1분마다 한 번 실행되어 [`AVCaptureCameraLensSmudgeDetectionStatus`](avcapturecameralenssmudgedetectionstatus.md)를 업데이트합니다.",
+      "sourceHash": "28ff6a7001d728764f989a8f5baa41a1b105e994418ff602a5e7ae540188b720",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0004",
+      "source": "If `detectionInterval` is set to `kCMTimeInvalid`, detection runs only once after the session starts.",
+      "ko": "`detectionInterval`이 `kCMTimeInvalid`로 설정되면 세션 시작 후 한 번만 감지가 실행됩니다.",
+      "sourceHash": "da88cc3162bcd832031bd77e258bdc41a0c85c6e75dedd225da581d710e68e30",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0005",
+      "source": "If `detectionInterval` is set to `kCMTimeZero`, detection runs continuously.",
+      "ko": "`detectionInterval`이 `kCMTimeZero`로 설정되면 감지가 연속적으로 실행됩니다.",
+      "sourceHash": "d3de843d8d063c84b804fb2fbabadab1ae1772c8c89d1584eabf4c96a83b5250",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "[`AVCaptureDevice`](avcapturedevice.md) throws an `NSInvalidArgumentException` if the [`isCameraLensSmudgeDetectionSupported`](avcapturedevice/format/iscameralenssmudgedetectionsupported.md) property on the current active format returns `false`.",
+      "ko": "[`AVCaptureDevice`](avcapturedevice.md)는 현재 활성 형식에서 [`isCameraLensSmudgeDetectionSupported`](avcapturedevice/format/iscameralenssmudgedetectionsupported.md) 속성이 `false`를 반환하면 `NSInvalidArgumentException`을 발생시킵니다.",
+      "sourceHash": "20a4f5fb22c7c3ff7fc58a89bf77a29d76cd3fd88072052c55ebd5343bb9033b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "Enabling detection requires a lengthy reconfiguration of the capture render pipeline, so you should enable detection before calling [`startRunning()`](avcapturesession/startrunning().md) or within [`beginConfiguration()`](avcapturesession/beginconfiguration().md) and [`commitConfiguration()`](avcapturesession/commitconfiguration().md) while running.",
+      "ko": "Enabling detection requires a lengthy reconfiguration of the capture render pipeline, so you should enable detection before calling [`startRunning()`](avcapturesession/startrunning().md) or within [`beginConfiguration()`](avcapturesession/beginconfiguration().md) and [`commitConfiguration()`](avcapturesession/commitconfiguration().md) while running.",
+      "sourceHash": "929d25179871f0f29cd94661b7aa37997fb32081bb828e4fa407c3caf36d9085",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`cameraLensSmudgeDetectionEnabled`: Specify whether camera lens smudge detection should be enabled.",
+      "ko": "`cameraLensSmudgeDetectionEnabled`: 카메라 렌즈 스머지 감지를 활성화할지 지정합니다.",
+      "sourceHash": "2ed1b2e29f618685c6cf6dc6ea31887348a7aaab43a0ecd9461bd7255ab036d7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0002",
+      "source": "`detectionInterval`: The detection running interval if detection is enabled.",
+      "ko": "`detectionInterval`: 감지가 활성화된 경우의 감지 실행 간격입니다.",
+      "sourceHash": "e9b20b4de1f68dc44183e4e0506137b0b7778b798e012893b6ad7decbc2058b2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var isCameraLensSmudgeDetectionEnabled: Bool](avcapturedevice/iscameralenssmudgedetectionenabled.md)",
+      "ko": "[var isCameraLensSmudgeDetectionEnabled: Bool](avcapturedevice/iscameralenssmudgedetectionenabled.md)",
+      "sourceHash": "86955fe506c3ea0f5ede17ea6835aa30f4b59945bd8a0689ce408b78d1b91fe6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Whether camera lens smudge detection is enabled.",
+      "ko": "카메라 렌즈 스머지 감지가 활성화되었는지 여부입니다.",
+      "sourceHash": "4371600fce11f5d53da0950c7305da01aece3f785ffa4a4948062da98d6b4b69",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var cameraLensSmudgeDetectionInterval: CMTime](avcapturedevice/cameralenssmudgedetectioninterval.md)",
+      "ko": "[var cameraLensSmudgeDetectionInterval: CMTime](avcapturedevice/cameralenssmudgedetectioninterval.md)",
+      "sourceHash": "78b6040cb2e1566fffa9f5de0e0c9cc30d62424b7b2ff82ffe88dc252bad7e09",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The camera lens smudge detection interval.",
+      "ko": "카메라 렌즈 스머지 감지 간격입니다.",
+      "sourceHash": "580358a37b704e08ca1a6607fb1e34c9a61661504c5a03cd36dc5e3dd42e7fd0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[var cameraLensSmudgeDetectionStatus: AVCaptureCameraLensSmudgeDetectionStatus](avcapturedevice/cameralenssmudgedetectionstatus.md)",
+      "ko": "[var cameraLensSmudgeDetectionStatus: AVCaptureCameraLensSmudgeDetectionStatus](avcapturedevice/cameralenssmudgedetectionstatus.md)",
+      "sourceHash": "7e359180dc8f64eeae6aa4df7a82abafc48e5eb7a3f3435f6abcbfcb98a000fc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "A value specifying the status of camera lens smudge detection.",
+      "ko": "카메라 렌즈 스머지 감지 상태를 지정하는 값입니다.",
+      "sourceHash": "35caed6434402fc05229036101e7a4947a44da47f1de77c1098df4321a5b485a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[enum AVCaptureCameraLensSmudgeDetectionStatus](avcapturecameralenssmudgedetectionstatus.md)",
+      "ko": "[enum AVCaptureCameraLensSmudgeDetectionStatus](avcapturecameralenssmudgedetectionstatus.md)",
+      "sourceHash": "c99d35c5514357473b30016736f31c461be36112ee8cd0d51c1e976d91ce7c10",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "Constants indicating the current camera lens smudge detection status.",
+      "ko": "현재 카메라 렌즈 스머지 감지 상태를 나타내는 상수입니다.",
+      "sourceHash": "720b71833a42433f864555e54b1878877e9e404c39f80ef0f34c5790eddea197",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0021:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/setcameralenssmudgedetectionenabled(_:detectioninterval:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/setcameralenssmudgedetectionenabled(_:detectioninterval:))*",
+      "sourceHash": "bd572335bbdcca5af0cbb00bf68e842139d84822840abd5b6248f27665964c48",
+      "status": "machine_translated"
+    }
+  ]
+}

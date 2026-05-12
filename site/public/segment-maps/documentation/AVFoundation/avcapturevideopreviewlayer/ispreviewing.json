@@ -1,0 +1,148 @@
+{
+  "docId": "documentation/AVFoundation/avcapturevideopreviewlayer/ispreviewing.md",
+  "title": "isPreviewing",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturevideopreviewlayer/ispreviewing",
+  "segments": [
+    {
+      "id": "seg:heading:ispreviewing:0000:0001",
+      "source": "isPreviewing",
+      "ko": "isPreviewing",
+      "sourceHash": "5f7e1794156f163d87f64fb9399fe73b9c8c25b1ff3290684cdf12b847dc16b9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:ispreviewing:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:ispreviewing:0002:0001",
+      "source": "A Boolean value that indicates whether the layer is rendering video frames from its source.",
+      "ko": "레이어가 소스에서 비디오 프레임을 렌더링하고 있는지 나타내는 Boolean 값입니다.",
+      "sourceHash": "0b97c86093433506482684a1d8c51730a218c55f01020da2253c30e12a5675bd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:ispreviewing:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:ispreviewing:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:ispreviewing:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:ispreviewing:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:ispreviewing:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar isPreviewing: Bool { get }\n```",
+      "ko": "```swift\nvar isPreviewing: Bool { get }\n```",
+      "sourceHash": "b1343bbe5cfa67b9716862b2278de69c7923dc676c6766bc7e18a889d23c213b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "A preview layer begins displaying content when you call the capture session’s [`startRunning()`](avcapturesession/startrunning().md) method.",
+      "ko": "미리보기 레이어는 캡처 세션의 [`startRunning()`](avcapturesession/startrunning().md) 메서드를 호출하면 콘텐츠 표시를 시작합니다.",
+      "sourceHash": "bb4c5e942d36f90f0cd53eb914c200248bb80304ca38fb7cb1dbca3e6dc6ce99",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "If you associate the layer with an instance of [`AVCaptureMultiCamSession`](avcapturemulticamsession.md), the system guarantees that all video preview layers display content by the time the blocking call to [`startRunning()`](avcapturesession/startrunning().md) or [`commitConfiguration()`](avcapturesession/commitconfiguration().md) returns.",
+      "ko": "레이어를 [`AVCaptureMultiCamSession`](avcapturemulticamsession.md) 인스턴스와 연결하면, 블로킹 호출인 [`startRunning()`](avcapturesession/startrunning().md) 또는 [`commitConfiguration()`](avcapturesession/commitconfiguration().md)이 반환될 때까지 모든 비디오 미리보기 레이어에 콘텐츠가 표시됨이 보장됩니다.",
+      "sourceHash": "cf7168dc9c12f37b39540af37e6ef9ac10f7294957c3560852b8842fb2dcca7c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "While a session is running, you may enable or disable a video preview layer’s connection to start or stop the flow of video to the layer.",
+      "ko": "세션이 실행되는 동안에는 비디오 미리보기 레이어의 연결을 활성화 또는 비활성화하여 레이어로 비디오 흐름이 시작되거나 중지되도록 할 수 있습니다.",
+      "sourceHash": "0c6657dce2f4a4561ce46f007cd80985c52c76611514eb586cc9c7ca27333d31",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "You may key-value observe the connection’s [`isEnabled`](avcaptureconnection/isenabled.md) property to observe this property changing, and synchronize any user interface changes to take place precisely when the video resumes rendering to the video preview layer.",
+      "ko": "연결의 [`isEnabled`](avcaptureconnection/isenabled.md) 속성 변화를 key-value 관찰로 추적할 수 있으며, 비디오가 비디오 미리보기 레이어로 렌더링을 다시 시작할 때 사용자 인터페이스 변경이 정확히 동기화되도록 할 수 있습니다.",
+      "sourceHash": "254ef3ff42eb62d1ff8944fe3813969cd2f5be44544445133df93d73271410b1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "관련 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var videoGravity: AVLayerVideoGravity](avcapturevideopreviewlayer/videogravity.md)",
+      "ko": "[var videoGravity: AVLayerVideoGravity](avcapturevideopreviewlayer/videogravity.md)",
+      "sourceHash": "913cb3261e6e07bc13da43e13c5a18a91bd76a1aa9186b5db79323e46a1e54f4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "A value that indicates how the layer displays video content within its bounds.",
+      "ko": "레이어가 경계 내에서 비디오 콘텐츠를 표시하는 방식을 나타내는 값입니다.",
+      "sourceHash": "d611b4e715ba1c0d634431096567ca77f28f80336114a5e6a15f66a8a7d18284",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0013:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturevideopreviewlayer/ispreviewing)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturevideopreviewlayer/ispreviewing)*",
+      "sourceHash": "b115bc618e6b62dfd5e3a04e2a406cc7ac3cd3566be853a5c1af0362cf0b306c",
+      "status": "preserved"
+    }
+  ]
+}

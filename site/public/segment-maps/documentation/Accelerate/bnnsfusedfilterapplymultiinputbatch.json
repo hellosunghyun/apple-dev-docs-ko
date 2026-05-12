@@ -1,0 +1,302 @@
+{
+  "docId": "documentation/Accelerate/bnnsfusedfilterapplymultiinputbatch.md",
+  "title": "BNNSFusedFilterApplyMultiInputBatch(::::::::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsfusedfilterapplymultiinputbatch",
+  "segments": [
+    {
+      "id": "seg:heading:bnnsfusedfilterapplymultiinputbatch:0000:0001",
+      "source": "BNNSFusedFilterApplyMultiInputBatch(_:_:_:_:_:_:_:_:)",
+      "ko": "BNNSFusedFilterApplyMultiInputBatch(_:_:_:_:_:_:_:_:)",
+      "sourceHash": "f96e5086fad95e21672f7d02bd7a301df17f285db401d2b0e793b4c4bd65896f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnsfusedfilterapplymultiinputbatch:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: func",
+      "ko": "**Framework**: Accelerate **Kind**: func",
+      "sourceHash": "92505afed2b9832f88ee8e8741948f4ea109b670dc30717430f0006e8f343391",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnsfusedfilterapplymultiinputbatch:0002:0001",
+      "source": "Applies a multiple-input fused filter to a set of input objects, writing the result to a set of output objects.",
+      "ko": "다중 입력 fused filter를 입력 객체 집합에 적용하여 결과를 출력 객체 집합에 기록합니다.",
+      "sourceHash": "7e05f3d20c865d0a982a15ecafaf0324044c966e0a3402b30e4d200320fa5847",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnsfusedfilterapplymultiinputbatch:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfusedfilterapplymultiinputbatch:0004:0001",
+      "source": "iOS 15.0+",
+      "ko": "iOS 15.0+",
+      "sourceHash": "86b54448da2eb8626f00177bd04f05a8e48cee585c11805cf3f3e0d890c4e777",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfusedfilterapplymultiinputbatch:0004:0002",
+      "source": "iPadOS 15.0+",
+      "ko": "iPadOS 15.0+",
+      "sourceHash": "c7cbc9927b4ccc77db75d1ebf30fcc53090d5edd108c73c553dc668c46926af8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfusedfilterapplymultiinputbatch:0004:0003",
+      "source": "Mac Catalyst 15.0+",
+      "ko": "Mac Catalyst 15.0+",
+      "sourceHash": "9d0a6a3a1920dff6b27072e4fe1bcdd8a15ec1e6a32ea0e948a78c43ac895f9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfusedfilterapplymultiinputbatch:0004:0004",
+      "source": "macOS 12.0+",
+      "ko": "macOS 12.0+",
+      "sourceHash": "adffa1c4f69a9ee1f27b5e361c29af9b83d00fb7441c2e24713b7acb91ac5100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfusedfilterapplymultiinputbatch:0004:0005",
+      "source": "tvOS 15.0+",
+      "ko": "tvOS 15.0+",
+      "sourceHash": "129e8b0216e52c06ca36ea909fe3bc08430cea5008b00272663c5ef8fc40009b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfusedfilterapplymultiinputbatch:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfusedfilterapplymultiinputbatch:0004:0007",
+      "source": "watchOS 8.0+",
+      "ko": "watchOS 8.0+",
+      "sourceHash": "90537ceec9eedfc2f68972834c96c077f6da97806ac16905f54ad96fe4a01381",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc BNNSFusedFilterApplyMultiInputBatch(_ filter: BNNSFilter?, _ batch_size: Int, _ number_of_inputs: Int, _ in: UnsafeMutablePointer<UnsafeRawPointer>, _ in_stride: UnsafePointer<Int>, _ out: UnsafeMutableRawPointer, _ out_stride: Int, _ training: Bool) -> Int32\n```",
+      "ko": "```swift\nfunc BNNSFusedFilterApplyMultiInputBatch(_ filter: BNNSFilter?, _ batch_size: Int, _ number_of_inputs: Int, _ in: UnsafeMutablePointer<UnsafeRawPointer>, _ in_stride: UnsafePointer<Int>, _ out: UnsafeMutableRawPointer, _ out_stride: Int, _ training: Bool) -> Int32\n```",
+      "sourceHash": "0f6ffe82c8fce0da8325f646646131feb6dec27c0fbbdf33614f8654e69d14dc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0007:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0008:0001",
+      "source": "`filter`: The filter to apply.",
+      "ko": "`filter`: 적용할 필터입니다.",
+      "sourceHash": "f4742df67ec4ab1771530fac8ff698dfd5fa0a3abfa78e057753892ae381caee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0002",
+      "source": "`batch_size`: The number of input-output pairs.",
+      "ko": "`batch_size`: 입력-출력 쌍의 개수입니다.",
+      "sourceHash": "e4c82b521c635ce42b030170c6927281369ced6855f6ed71ea4e5a66dcfe1409",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0003",
+      "source": "`number_of_inputs`: The number of inputs for the multiple-input filter.",
+      "ko": "`number_of_inputs`: 다중 입력 filter의 입력 개수입니다.",
+      "sourceHash": "80ae01f6ad223fd14f3279979707e1ac474bc859bcd31ebd7ee5e60f8ad40254",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0004",
+      "source": "`in`: A pointer to the input data.",
+      "ko": "`in`: 입력 데이터에 대한 포인터입니다.",
+      "sourceHash": "92f1ce0b0fbe4e282306d57580c126383dc258660bc57ac9b5793494ee39bc57",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0005",
+      "source": "`in_stride`: The increment, in values, between inputs.",
+      "ko": "`in_stride`: 입력 간 값 단위의 증가량입니다.",
+      "sourceHash": "a8742af3d26d289979b880f48150b8ded6d3bfe752bd81133cf8521649ec5b18",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0006",
+      "source": "`out`: A pointer to the output data.",
+      "ko": "`out`: 출력 데이터에 대한 포인터입니다.",
+      "sourceHash": "b87e5f71798396de2a0cdb8a33ec5840c8b6a90f2e30005fbd8fa7023ccc2acd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0007",
+      "source": "`out_stride`: The increment, in values, between outputs.",
+      "ko": "`out_stride`: 출력 간 값 단위의 증가량입니다.",
+      "sourceHash": "f241a5b0595240d8c2ef23813e12b289ffeb1781bcd93350e5e3ebfa034d21bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0008",
+      "source": "`training`: A Boolean value that you set to `true` during training.",
+      "ko": "`training`: 학습 중에 `true`로 설정하는 불리언 값입니다.",
+      "sourceHash": "3e8871564930f571f3093052cd3abc940ec7616049de4be12e354caad198e944",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[protocol FusableLayerParameters](fusablelayerparameters.md)",
+      "ko": "[protocol FusableLayerParameters](fusablelayerparameters.md)",
+      "sourceHash": "9759ee52cd6b85687ad2523691ed9001936398d2f960f12db45ff3ecc84164a3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:see-also:0010:0002",
+      "source": "[class FusedParametersLayer](bnns/fusedparameterslayer.md)",
+      "ko": "[class FusedParametersLayer](bnns/fusedparameterslayer.md)",
+      "sourceHash": "78f2c3facf9bd13e776b302cdd3b811e6efd0d57a82204feadfaa22075ebb389",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "A layer object that wraps a fused layer and manages its deinitialization.",
+      "ko": "퓨즈된 레이어를 래핑하고 해당 레이어의 해제를 관리하는 레이어 객체입니다.",
+      "sourceHash": "f6bf57835441e9225f959e80259465eed7266ff5b4836e6208e2da79a1bc4fad",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[class FusedConvolutionNormalizationLayer](bnns/fusedconvolutionnormalizationlayer.md)",
+      "ko": "[class FusedConvolutionNormalizationLayer](bnns/fusedconvolutionnormalizationlayer.md)",
+      "sourceHash": "f23fa552b1f669f2f30a4fababe6c872a12671430fb80d6c9c51b98a656dca54",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "A layer object that wraps a fused, convolution normalization layer and manages its deinitialization.",
+      "ko": "퓨즈된 합성곱 정규화 레이어를 래핑하고 해당 레이어의 해제를 관리하는 레이어 객체입니다.",
+      "sourceHash": "614fd9e12bd67f70f326716f1647a3facae8e50247ca4a7119bad22887a1c7e2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[class FusedFullyConnectedNormalizationLayer](bnns/fusedfullyconnectednormalizationlayer.md)",
+      "ko": "[class FusedFullyConnectedNormalizationLayer](bnns/fusedfullyconnectednormalizationlayer.md)",
+      "sourceHash": "d81bab3a07bec85982201b583312d1db97f20933aca54ea96cd46fbc92c91e39",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A layer object that wraps a fused, fully connected normalization layer and manages its deinitialization.",
+      "ko": "퓨즈된 완전 연결 정규화 레이어를 래핑하고 해당 레이어의 해제를 관리하는 레이어 객체입니다.",
+      "sourceHash": "8fbc8695ea61bd0784780c776dd1421ee3ebfa4ea0fd71d6b9a95fd59915a1e9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[struct BNNSFilterType](bnnsfiltertype.md)",
+      "ko": "[struct BNNSFilterType](bnnsfiltertype.md)",
+      "sourceHash": "d13ea135956fcc4955ec3e1c77d41cd35943af1b442d3826af6dbefbbc0b9646",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Constants that define the component filters of a fused layer.",
+      "ko": "퓨즈 레이어의 구성 필터를 정의하는 상수입니다.",
+      "sourceHash": "915b2ea11c27389de49d11da87b2881374047fe3704dc6e7b69b6f44e215ae1b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func BNNSFilterCreateFusedLayer(Int, UnsafePointer<BNNSFilterType>, UnsafeMutablePointer<UnsafeRawPointer>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatefusedlayer(_:_:_:_:).md)",
+      "ko": "[func BNNSFilterCreateFusedLayer(Int, UnsafePointer<BNNSFilterType>, UnsafeMutablePointer<UnsafeRawPointer>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatefusedlayer(_:_:_:_:).md)",
+      "sourceHash": "0484edd9c7d1b6f87dcce8bb7e3ca9f0c20db9e197cfb7501de50f04d81f0d0c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Returns a new fused layer.",
+      "ko": "새 fused layer를 반환합니다.",
+      "sourceHash": "013116bb6d13efc3c40b720b8857fdc838bc1d1bd27cdc3f2fc195506fc9b244",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[func BNNSFusedFilterApplyBatch(BNNSFilter?, Int, UnsafeRawPointer, Int, UnsafeMutableRawPointer, Int, Bool) -> Int32](bnnsfusedfilterapplybatch(_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSFusedFilterApplyBatch(BNNSFilter?, Int, UnsafeRawPointer, Int, UnsafeMutableRawPointer, Int, Bool) -> Int32](bnnsfusedfilterapplybatch(_:_:_:_:_:_:_:).md)",
+      "sourceHash": "1b0e4c597156f1655f1c1c5dd43e4738199889055323847e29aeb9db59baf72e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Applies a fused filter to a set of input objects, writing the result to a set of output objects.",
+      "ko": "fused filter를 입력 객체 집합에 적용하고, 결과를 출력 객체 집합에 기록합니다.",
+      "sourceHash": "9731d39bcc5517232710b19d3436f1c6efb1f4b67d547b04467a2be280074f21",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[func BNNSFusedFilterApplyBackwardBatch(BNNSFilter?, Int, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, Int, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>, Int, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>?>?) -> Int32](bnnsfusedfilterapplybackwardbatch(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSFusedFilterApplyBackwardBatch(BNNSFilter?, Int, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, Int, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>, Int, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>?>?) -> Int32](bnnsfusedfilterapplybackwardbatch(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "eb436f3cf2597c07cc5a7f4d84337d239c98ba15507dc459a425baf4e392704a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Applies a fused filter backward to generate input gradients.",
+      "ko": "입력 그래디언트를 생성하기 위해 fused filter backward를 적용합니다.",
+      "sourceHash": "84a2f7caf40619f5c300571bb58bbe32985965005a67ccc4fbfb505c6c288907",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[func BNNSFusedFilterApplyBackwardMultiInputBatch(BNNSFilter?, Int, Int, UnsafeMutablePointer<UnsafeRawPointer?>?, UnsafePointer<Int>?, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>>, UnsafePointer<Int>, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>, Int, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>?>?) -> Int32](bnnsfusedfilterapplybackwardmultiinputbatch(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSFusedFilterApplyBackwardMultiInputBatch(BNNSFilter?, Int, Int, UnsafeMutablePointer<UnsafeRawPointer?>?, UnsafePointer<Int>?, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>>, UnsafePointer<Int>, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>, Int, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>?>?) -> Int32](bnnsfusedfilterapplybackwardmultiinputbatch(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "46a83eb2890bab4e20138a7769a8f1e5c53b494a357f0d3111d7748281434741",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Applies a multiple-input fused filter backward to generate input gradients.",
+      "ko": "입력 그래디언트를 생성하기 위해 multiple-input fused filter backward를 적용합니다.",
+      "sourceHash": "c3a024f8261d67d15eb1d71217ae8b4c178c7aeb026ce1fdcb4fc1c91870fc42",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0026:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsfusedfilterapplymultiinputbatch(_:_:_:_:_:_:_:_:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsfusedfilterapplymultiinputbatch(_:_:_:_:_:_:_:_:))*",
+      "sourceHash": "1143d2dba0df78652a4adbbdd3c120d82fa1d0855ba699b0fca0929fd6280508",
+      "status": "machine_translated"
+    }
+  ]
+}

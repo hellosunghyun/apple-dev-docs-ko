@@ -1,0 +1,176 @@
+{
+  "docId": "documentation/AVKit/avpictureinpicturecontroller/stoppictureinpicture.md",
+  "title": "stopPictureInPicture()",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/stoppictureinpicture",
+  "segments": [
+    {
+      "id": "seg:heading:stoppictureinpicture:0000:0001",
+      "source": "stopPictureInPicture()",
+      "ko": "stopPictureInPicture()",
+      "sourceHash": "01faa80dd952160d8525a1a71ecb511fe9662a618fd1693728ff072d00f7f6d0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:stoppictureinpicture:0001:0001",
+      "source": "**Framework**: AVKit **Kind**: method",
+      "ko": "**Framework**: AVKit **Kind**: method",
+      "sourceHash": "13a13fd435f140de81e767ebd7c5623120855db836b9e84c16d8bf0dac6b5b58",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:stoppictureinpicture:0002:0001",
+      "source": "Stops Picture in Picture, if active.",
+      "ko": "활성화되어 있으면 Picture in Picture를 중지합니다.",
+      "sourceHash": "a62ce9defef686aedbf25872c0b75081516cb994a91bbd5d697980ab9878bd17",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:stoppictureinpicture:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoppictureinpicture:0004:0001",
+      "source": "iOS 9.0+",
+      "ko": "iOS 9.0+",
+      "sourceHash": "5e500d43331f50d418de64f036136c59cae8019e851cea2322bbe52f3417e342",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoppictureinpicture:0004:0002",
+      "source": "iPadOS 9.0+",
+      "ko": "iPadOS 9.0+",
+      "sourceHash": "76a293c18c4e8a4dc7d9f40b220cc7f9eb91580e5b0a3041a6d046bf6969a307",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoppictureinpicture:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoppictureinpicture:0004:0004",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoppictureinpicture:0004:0005",
+      "source": "tvOS 14.0+",
+      "ko": "tvOS 14.0+",
+      "sourceHash": "c82f0586cea06e7e3b23ac73e15255e7ccbb56eadf9421eeb43c4793905535a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:stoppictureinpicture:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc stopPictureInPicture()\n```",
+      "ko": "```swift\nfunc stopPictureInPicture()\n```",
+      "sourceHash": "16c50d81e7237c0ebb4b36db1f53fe20fcdbc02ef394e75f3b168b24b969125b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Regardless of how Picture in Picture stops, the controller calls the delegate’s [`pictureInPictureControllerWillStopPictureInPicture(_:)`](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerwillstoppictureinpicture(_:).md) method.",
+      "ko": "Picture in Picture가 어떤 방식으로 중지되더라도 컨트롤러는 대리자의 [`pictureInPictureControllerWillStopPictureInPicture(_:)`](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerwillstoppictureinpicture(_:).md) 메서드를 호출합니다.",
+      "sourceHash": "49637b8e6b67ebc64993d83cc22a42491c8af4ea0727f6c733013b6374663734",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "When the PiP animation completes, the controller finalizes the session by calling the delegate’s [`pictureInPictureControllerDidStopPictureInPicture(_:)`](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerdidstoppictureinpicture(_:).md) method.",
+      "ko": "PiP 애니메이션이 완료되면 컨트롤러는 세션을 마무리하기 위해 대리자의 [`pictureInPictureControllerDidStopPictureInPicture(_:)`](avpictureinpicturecontrollerdelegate/pictureinpicturecontrollerdidstoppictureinpicture(_:).md) 메서드를 호출합니다.",
+      "sourceHash": "2d865435725ae30a867467acc04c9657683bec347df5b51ab3aa35ff8d4efa3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[var canStopPictureInPicture: Bool](avpictureinpicturecontroller/canstoppictureinpicture.md)",
+      "ko": "[var canStopPictureInPicture: Bool](avpictureinpicturecontroller/canstoppictureinpicture.md)",
+      "sourceHash": "c61c04d382275aea6f6ba707255ca4ebf624d6249a1d33ed9a071cfdd5dba2d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "A Boolean value that indicates whether Picture in Picture is active and is able to stop.",
+      "ko": "Picture in Picture가 활성 상태이고 중지할 수 있는지 나타내는 Boolean 값입니다.",
+      "sourceHash": "ec5ebb0f2ddd6caa76fd428b69d197be9e896d1e3b713c11515bc7ee17042a6d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var canStartPictureInPictureAutomaticallyFromInline: Bool](avpictureinpicturecontroller/canstartpictureinpictureautomaticallyfrominline.md)",
+      "ko": "[var canStartPictureInPictureAutomaticallyFromInline: Bool](avpictureinpicturecontroller/canstartpictureinpictureautomaticallyfrominline.md)",
+      "sourceHash": "a7287c8b258849706f1102d1c64f27c7a5861e2f730f7709d2d660fb7feab771",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "A Boolean value that indicates whether Picture in Picture starts automatically when the controller embeds its content inline and the app transitions to the background.",
+      "ko": "컨트롤러가 콘텐츠를 인라인으로 임베드하고 앱이 백그라운드로 전환할 때 Picture in Picture가 자동으로 시작되는지 나타내는 Boolean 값입니다.",
+      "sourceHash": "006c245cc03b239a1df0b3178c9ee92804014829f91bd7acbfbdef84f960041b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func startPictureInPicture()](avpictureinpicturecontroller/startpictureinpicture.md)",
+      "ko": "[func startPictureInPicture()](avpictureinpicturecontroller/startpictureinpicture.md)",
+      "sourceHash": "7fb754e33bc2e39c36c156ed7a90a1b9ceb87ac7e1fbb101124531c3ac9d97d6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Starts Picture in Picture, if possible.",
+      "ko": "가능하면 Picture in Picture를 시작합니다.",
+      "sourceHash": "e3131a1d5c12419856f659da144c147cfdedd1fb3b9d054a414e530d7295da10",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0016:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/stoppictureinpicture())*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avpictureinpicturecontroller/stoppictureinpicture())*",
+      "sourceHash": "cc38a4b0eaf24bea4066f8b615247c287c3e8730ab2e3b027e7665d423012cf0",
+      "status": "machine_translated"
+    }
+  ]
+}

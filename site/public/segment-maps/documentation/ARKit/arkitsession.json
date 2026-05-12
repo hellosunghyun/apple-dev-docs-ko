@@ -1,0 +1,463 @@
+{
+  "docId": "documentation/ARKit/arkitsession.md",
+  "title": "ARKitSession",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arkitsession",
+  "segments": [
+    {
+      "id": "seg:heading:arkitsession:0000:0001",
+      "source": "ARKitSession",
+      "ko": "ARKitSession",
+      "sourceHash": "a1be700a018d3ba93653ad0088de99fbba8a5cfca66ed094d8cc9d48fe33d817",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:arkitsession:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: class",
+      "ko": "**Framework**: ARKit **Kind**: class",
+      "sourceHash": "cd2a2f048fbda3c62dc609eaaff263f2176c4a42225cdd27e4a416ceaee5a3f8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:arkitsession:0002:0001",
+      "source": "The main entry point for receiving data from ARKit.",
+      "ko": "ARKit에서 데이터를 수신하기 위한 기본 진입점입니다.",
+      "sourceHash": "39c2ac95dc2983506daaaa30a0c46c6d64c2ee469d3e27616ece1d5d4336c72e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:arkitsession:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:arkitsession:0004:0001",
+      "source": "macOS 26.0+",
+      "ko": "macOS 26.0+",
+      "sourceHash": "6fcc4a770cbd02feaac4df78b954d37ef26fc9755008ee17612223162fd4ed2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:arkitsession:0004:0002",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfinal class ARKitSession\n```",
+      "ko": "```swift\nfinal class ARKitSession\n```",
+      "sourceHash": "44eef5d8d3ce2175f7e9c117c268b8286a26f678b67aaa54a2092e4285c5595a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Sessions in ARKit require either implicit or explicit authorization.",
+      "ko": "ARKit의 세션은 암시적 권한 부여 또는 명시적 권한 부여가 필요합니다.",
+      "sourceHash": "8772ae50b31cfaa94aa51afb5359acaf7fc2de52f1e25a9b99eb822915dd967f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "To explicitly ask for permission for a particular kind of data and choose when a person is prompted for that permission, call [`requestAuthorization(for:)`](arkitsession/requestauthorization(for:).md) before [`run(_:)`](arkitsession/run(_:).md).",
+      "ko": "특정 유형의 데이터에 대해 명시적으로 사용자 권한 부여를 요청하고 권한 안내를 표시할 시점을 지정하려면 [`run(_:)`](arkitsession/run(_:).md) 전에 [`requestAuthorization(for:)`](arkitsession/requestauthorization(for:).md)를 호출합니다.",
+      "sourceHash": "fbb3b7769fbc4b9308d47914c8cf0902890910c7ad0cf06cea51c039e518e0d8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "The following shows a session that starts by requesting implicit authorization to use world sensing:",
+      "ko": "다음은 월드 센싱을 사용하기 위해 암시적 권한 부여를 요청한 뒤 시작하는 세션입니다.",
+      "sourceHash": "f0885bb0260057f83058fb0ab302fb5b222d47b8b3fdfdb87a796815b2478e5e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:overview:0010:0001",
+      "source": "```swift\nlet planeData = PlaneDetectionProvider(alignments: [.horizontal, .vertical])\n\nTask {\n    do {\n        try await self.session.run([planeData])\n        // Update app based on the planeData.anchorUpdates async sequence.\n    } catch {\n        print(\"ARKitSession error:\", error)\n    }\n}\n```",
+      "ko": "```swift\nlet planeData = PlaneDetectionProvider(alignments: [.horizontal, .vertical])\n\nTask {\n    do {\n        try await self.session.run([planeData])\n        // Update app based on the planeData.anchorUpdates async sequence.\n    } catch {\n        print(\"ARKitSession error:\", error)\n    }\n}\n```",
+      "sourceHash": "eea7fe9b2ee37e5bd39935e9ed6204be6e216d95d165c6ceacd76154eae2b164",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0001",
+      "source": "Because a [`PlaneDetectionProvider`](planedetectionprovider.md) instance’s required authorizations include [`ARKitSession.AuthorizationType.worldSensing`](arkitsession/authorizationtype/worldsensing.md), the system asks someone using your app to permit world sensing before ARKit supplies any of that kind of data.",
+      "ko": "[`PlaneDetectionProvider`](planedetectionprovider.md) 인스턴스의 필수 권한 부여 항목에 [`ARKitSession.AuthorizationType.worldSensing`](arkitsession/authorizationtype/worldsensing.md)이 포함되어 있으므로, 시스템은 ARKit이 해당 유형의 데이터를 제공하기 전에 앱 사용자의 월드 센싱 사용을 허용하도록 요청합니다.",
+      "sourceHash": "f9df728c7ce80eb2c948a89ce35aea0b858e061dc0d7e938653060784248917d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0012:0001",
+      "source": "**Note**: ARKit stops sessions when they’re deinitialized; keep a reference to a session instance for as long as the session needs to run.",
+      "ko": "**참고**: ARKit은 세션이 비활성화되면 세션을 중지합니다. 세션이 실행되는 동안에는 세션 인스턴스에 대한 참조를 유지해야 합니다.",
+      "sourceHash": "1cbd2f4602af6536da949d0eeb0ea37fa234352b4c111eaf7839c4ba91a53025",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0013:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:starting-and-stopping-a-session:0014:0001",
+      "source": "Starting and stopping a session",
+      "ko": "세션 시작 및 중지",
+      "sourceHash": "e74af3c8a49909856c350fe524c668ee1db919906c0f773a5cc57edced269575",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:starting-and-stopping-a-session:0015:0001",
+      "source": "[convenience init()](arkitsession/init.md)",
+      "ko": "[convenience init()](arkitsession/init.md)",
+      "sourceHash": "b734fe1044f3e8eef193c8f42ea2e6c515ed4b70c92dc44e296c49a26d75df23",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:starting-and-stopping-a-session:0016:0001",
+      "source": "Creates a new session.",
+      "ko": "새 세션을 생성합니다.",
+      "sourceHash": "84c228f4f4455ec8493754a10c6d4835fbcd48b9a58f296a73bc3763ccb3b1c6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:starting-and-stopping-a-session:0017:0001",
+      "source": "[func run([any DataProvider]) async throws](arkitsession/run(_:).md)",
+      "ko": "[func run([any DataProvider]) async throws](arkitsession/run(_:).md)",
+      "sourceHash": "a9fa949fccaba4dec3b72a1cd681007b63ca9deab6e58e487cb432138fdc627b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:starting-and-stopping-a-session:0018:0001",
+      "source": "Runs a session with the data providers you supply.",
+      "ko": "제공한 데이터 공급자로 세션을 실행합니다.",
+      "sourceHash": "dbc823c5979b0fc768c031df2417f11219ad4b69493ed4c8f8eb55a30d395151",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:starting-and-stopping-a-session:0019:0001",
+      "source": "[func stop()](arkitsession/stop.md)",
+      "ko": "[func stop()](arkitsession/stop.md)",
+      "sourceHash": "dbe829e964dc1ae8f811a88eb9e6e0c3407a8d159fead417974edcdde5cfb180",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:starting-and-stopping-a-session:0020:0001",
+      "source": "Stops all data providers running in this session.",
+      "ko": "이 세션에서 실행 중인 모든 데이터 공급자를 중지합니다.",
+      "sourceHash": "90bcd658342bf13e505315c310ab836d45c29d8605c15a79445a1c175a48d4c6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:starting-and-stopping-a-session:0021:0001",
+      "source": "[ARKitSession.Error](arkitsession/error.md)",
+      "ko": "[ARKitSession.Error](arkitsession/error.md)",
+      "sourceHash": "22ae459e609ec0e7ef3ebda449874e2b9289afa52ed656edaef68b516c40b3f3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:starting-and-stopping-a-session:0022:0001",
+      "source": "An error that might occur when running data providers on an ARKit session.",
+      "ko": "ARKit 세션에서 데이터 공급자를 실행할 때 발생할 수 있는 오류입니다.",
+      "sourceHash": "bf962e761e565f0bbb852520d1e7b5e41ff70f1b76edebd8d04ec358dd20f5b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-authorization:0023:0001",
+      "source": "Getting authorization",
+      "ko": "권한 부여 가져오기",
+      "sourceHash": "ba4ff7495560ee4f5c8bd911c1379892a75631717fef8736bf0934882fdec346",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-authorization:0024:0001",
+      "source": "[func requestAuthorization(for: [ARKitSession.AuthorizationType]) async -> [ARKitSession.AuthorizationType : ARKitSession.AuthorizationStatus]](arkitsession/requestauthorization(for:).md)",
+      "ko": "[func requestAuthorization(for: [ARKitSession.AuthorizationType]) async -> [ARKitSession.AuthorizationType : ARKitSession.AuthorizationStatus]](arkitsession/requestauthorization(for:).md)",
+      "sourceHash": "664258a6c0328465ee4e134f63f7aca417b04ae5c9f1a47f12bf670b93cd5cdc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:getting-authorization:0025:0001",
+      "source": "Requests authorization from the user to use the specified kinds of ARKit data.",
+      "ko": "지정한 ARKit 데이터 유형을 사용하기 위해 사용자에게 권한 부여를 요청합니다.",
+      "sourceHash": "1a7b9837cb127e282f50f0760e3b55df2c872abc09ab3e2ab69f143c617d2890",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-authorization:0026:0001",
+      "source": "[ARKitSession.AuthorizationType](arkitsession/authorizationtype.md)",
+      "ko": "[ARKitSession.AuthorizationType](arkitsession/authorizationtype.md)",
+      "sourceHash": "448b0d4f04dc9f3bc6d5594d3ccd3fecc9a22a0a4276e602f45b355fe9aed97e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-authorization:0027:0001",
+      "source": "The authorization types you can request from ARKit.",
+      "ko": "ARKit에서 요청할 수 있는 권한 부여 유형입니다.",
+      "sourceHash": "36ca256ef3c4cc0d62c6199da8e1847cc2bb0df47d632d6175a5ca9173b3275e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-authorization:0028:0001",
+      "source": "[func queryAuthorization(for: [ARKitSession.AuthorizationType]) async -> [ARKitSession.AuthorizationType : ARKitSession.AuthorizationStatus]](arkitsession/queryauthorization(for:).md)",
+      "ko": "[func queryAuthorization(for: [ARKitSession.AuthorizationType]) async -> [ARKitSession.AuthorizationType : ARKitSession.AuthorizationStatus]](arkitsession/queryauthorization(for:).md)",
+      "sourceHash": "1dd79949c9f0cff5c54088be35777b85dc3d35e5f7fcb1cdd16ed1bddac31e89",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:getting-authorization:0029:0001",
+      "source": "Checks whether the current session is authorized for particular authorization types without requesting authorization.",
+      "ko": "현재 세션이 특정 권한 부여 유형에 대해 권한이 있는지 권한 요청 없이 확인합니다.",
+      "sourceHash": "41c6a1253fab89f9d18e263654bc2da968a843852767dce153dfb0c1ccd77d2e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-authorization:0030:0001",
+      "source": "[ARKitSession.AuthorizationStatus](arkitsession/authorizationstatus.md)",
+      "ko": "[ARKitSession.AuthorizationStatus](arkitsession/authorizationstatus.md)",
+      "sourceHash": "6193cfc497a65a53e09cdb36e228deec8c02e0ab8ab6d6286df3f6c6d63da57c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-authorization:0031:0001",
+      "source": "The authorization states for a type of ARKit data.",
+      "ko": "ARKit 데이터 유형의 권한 부여 상태입니다.",
+      "sourceHash": "759f841b31b936503b472a76afb6e217e6d8a8bce26d98bb13f633bd2a56e5fd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:observing-a-session:0032:0001",
+      "source": "Observing a session",
+      "ko": "세션 관찰",
+      "sourceHash": "aadda972984641c6ebb18928a3e7d5368508241a7daefb4ab6595197810bb1d1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:observing-a-session:0033:0001",
+      "source": "[var events: ARKitSession.Events](arkitsession/events-swift.property.md)",
+      "ko": "[var events: ARKitSession.Events](arkitsession/events-swift.property.md)",
+      "sourceHash": "4a70b9e6ccaa94237dbb8b43fac55e4060d4edb6724d5076edbbd27a4b88e811",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:observing-a-session:0034:0001",
+      "source": "An asynchronous sequence of events that provide updates to the current authorization status of the session.",
+      "ko": "세션의 현재 권한 부여 상태를 갱신하는 이벤트의 비동기 시퀀스입니다.",
+      "sourceHash": "07e8e6726b4014dba521cc59e1c47562199496679835fd5782ef0f66fea8360e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:observing-a-session:0035:0001",
+      "source": "[ARKitSession.Events](arkitsession/events-swift.struct.md)",
+      "ko": "[ARKitSession.Events](arkitsession/events-swift.struct.md)",
+      "sourceHash": "fb7ae65053189ea355b860e8e5baed84e8b39310ee44aaf486f42772678ab561",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:observing-a-session:0036:0001",
+      "source": "A sequence of events.",
+      "ko": "이벤트의 시퀀스입니다.",
+      "sourceHash": "e7ff0c93348633763ff7df881c1da89e81c263b37ff9c92d8e98bbf25bfb5e0f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:observing-a-session:0037:0001",
+      "source": "[ARKitSession.Event](arkitsession/event.md)",
+      "ko": "[ARKitSession.Event](arkitsession/event.md)",
+      "sourceHash": "4f6e1ecc55d5f0b4aa63d3fc91c591266a3b20163e42112453933193ca64fd78",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:observing-a-session:0038:0001",
+      "source": "Enumeration of possible session events.",
+      "ko": "가능한 세션 이벤트의 열거형입니다.",
+      "sourceHash": "6b1ebe0d750dc358da539eab4c488eaec90d1ab3e7f331b11f6d20a6fb39e83a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:observing-a-session:0039:0001",
+      "source": "[var description: String](arkitsession/description.md)",
+      "ko": "[var description: String](arkitsession/description.md)",
+      "sourceHash": "11f4fd3ac873448af5a0aae491b716e214f615786cf883999e3ceac72fec0958",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:observing-a-session:0040:0001",
+      "source": "A textual representation of this session.",
+      "ko": "이 세션의 텍스트 표현입니다.",
+      "sourceHash": "1ab774332b2fa55cd74a0a8deb4a7a53667d9d102a8287387cb48378c11c32cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:initializers:0041:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0042:0001",
+      "source": "[convenience init(device: RemoteDeviceIdentifier)](arkitsession/init(device:).md)",
+      "ko": "[convenience init(device: RemoteDeviceIdentifier)](arkitsession/init(device:).md)",
+      "sourceHash": "0e3383ebca7dd2cb1d1c199d0809c02bfff051ba85bf4f757ec22bee25dadbe9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:initializers:0043:0001",
+      "source": "Create a new session connected to the specified device.",
+      "ko": "지정된 장치에 연결된 새 세션을 생성합니다.",
+      "sourceHash": "d60222364a0c9ef14de2224ff27fa4bf54dfcd9bfce402ced4667d677a220a08",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:instance-properties:0044:0001",
+      "source": "Instance Properties",
+      "ko": "인스턴스 속성",
+      "sourceHash": "093c2192f38e17fa2389cc524a76e2fe2ca3d129365f6ee47ffab107ed55cbc5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:instance-properties:0045:0001",
+      "source": "[var dataProviders: [any DataProvider]](arkitsession/dataproviders.md)",
+      "ko": "[var dataProviders: [any DataProvider]](arkitsession/dataproviders.md)",
+      "sourceHash": "fda58935fe717686e9c5f78b42b179fac55171035231c8470e8b87af20683adb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0046:0001",
+      "source": "A list of all data providers on this session.",
+      "ko": "이 세션의 모든 데이터 공급자 목록입니다.",
+      "sourceHash": "5131fcbbdb39807897ed1ace9e7814241743b1e3452ee6408daed7405ae99e54",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0047:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0048:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0001",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0002",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0003",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0050:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0051:0001",
+      "source": "[Setting up access to ARKit data](../visionOS/setting-up-access-to-arkit-data.md)",
+      "ko": "[Setting up access to ARKit data](../visionOS/setting-up-access-to-arkit-data.md)",
+      "sourceHash": "1ddd51e1b13e25d360996384d8ba99429cad50e599921d02b53cc8facdc1cb11",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0052:0001",
+      "source": "Check whether your app can use ARKit and respect people’s privacy.",
+      "ko": "앱이 ARKit을 사용할 수 있고 개인정보 보호를 존중하는지 확인합니다.",
+      "sourceHash": "ba1299cbee1bbec0fa7a699004ef5be4ad8892793a843e7df4428c58b7f286e2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0053:0001",
+      "source": "[protocol DataProvider](dataprovider.md)",
+      "ko": "[protocol DataProvider](dataprovider.md)",
+      "sourceHash": "d0959399a330c2687a4732b86e0ad2787173251cc447a1afa96cfca7d47ea52b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0054:0001",
+      "source": "A source of live data from ARKit.",
+      "ko": "ARKit의 실시간 데이터 소스입니다.",
+      "sourceHash": "60b078c233b3d0675b48794694c6533d87c857bd6890619fac5dd0adf9534c73",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0055:0001",
+      "source": "[protocol Anchor](anchor.md)",
+      "ko": "[protocol Anchor](anchor.md)",
+      "sourceHash": "d4429cb5f6ebd21f4a1439b6230a7c975918a71ee33041924aa79fb32cdb2dbe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0056:0001",
+      "source": "The identity, location, and orientation of an object in world space.",
+      "ko": "월드 스페이스에서 객체의 ID, 위치 및 방향입니다.",
+      "sourceHash": "258c2bcee44a2ac68fdaa06020c98248fb62f444485693b4f2ac7698725836fa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0057:0001",
+      "source": "[ARKit in visionOS](arkit-in-visionos.md)",
+      "ko": "[ARKit in visionOS](arkit-in-visionos.md)",
+      "sourceHash": "83749f9d819e115f50b3a2c420f84a54add55b4fb2ac6fa1a8ea4636325704c4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0058:0001",
+      "source": "Create immersive augmented reality experiences.",
+      "ko": "몰입형 증강 현실 경험을 생성합니다.",
+      "sourceHash": "8b1bbf0369ec0bbf824a2568d2e1d3530ad803028f2876ee487c7075b9e8e3e1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0059:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0060:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arkitsession)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arkitsession)*",
+      "sourceHash": "5bf26e76907853d2a9c36ec4f5adb3981ff2c64df816a8b6b3c755c3341b4f1c",
+      "status": "preserved"
+    }
+  ]
+}

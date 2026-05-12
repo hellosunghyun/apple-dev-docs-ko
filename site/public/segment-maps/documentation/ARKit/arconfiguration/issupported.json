@@ -1,0 +1,148 @@
+{
+  "docId": "documentation/ARKit/arconfiguration/issupported.md",
+  "title": "isSupported",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arconfiguration/issupported",
+  "segments": [
+    {
+      "id": "seg:heading:issupported:0000:0001",
+      "source": "isSupported",
+      "ko": "isSupported",
+      "sourceHash": "cbd39305a88e8bdf4e9936f4f9a3fc7a2181973e7f507b94dcb00a1fd801ca01",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:issupported:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: property",
+      "ko": "**Framework**: ARKit **Kind**: property",
+      "sourceHash": "eebebd0c04c444b8ad7332b72cb6b5efed96fb65bd16793fa46eb608d4454b7e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:issupported:0002:0001",
+      "source": "A Boolean value indicating whether the current device supports this session configuration class.",
+      "ko": "현재 기기가 이 세션 구성 클래스를 지원하는지 나타내는 부울 값입니다.",
+      "sourceHash": "bcd240ee60378ae0d0982e3d0b46aa0f15322bba811aabec5d6090521cb608bd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:issupported:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:issupported:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:issupported:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:issupported:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass var isSupported: Bool { get }\n```",
+      "ko": "```swift\nclass var isSupported: Bool { get }\n```",
+      "sourceHash": "b4334c5717a746eff1be592d658bb3fa0cad35fe03862439522143b9fae7b168",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Verifying Device Support and User Permission](verifying-device-support-and-user-permission.md)",
+      "ko": "[Verifying Device Support and User Permission](managing-session-life-cycle-and-tracking-quality.md)",
+      "sourceHash": "d9f8ca44c8252f3a730c25cb53e6b1d59f5b846b707c81cd82fa218ef7b63741",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Different types of AR experiences (which you configure using concrete [`ARConfiguration`](arconfiguration.md) subclasses) can have different hardware requirements.",
+      "ko": "An [`ARWorldMap`](arworldmap.md) encapsulates the state of a running [`ARSession`](arsession.md).",
+      "sourceHash": "b04c9838049a52d957281d22acc4a78a1995f3d7edf92d6985255322737d21d0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "Before attempting to create an AR configuration, verify that the user’s device supports the configuration you plan to use by checking the [`isSupported`](arconfiguration/issupported.md) property of the corresponding configuration class.",
+      "ko": "AR 구성을 생성하기 전에 해당 구성 클래스의 [`isSupported`](arconfiguration/issupported.md) 속성을 확인해 사용하려는 구성이 사용자 기기에서 지원되는지 검증합니다.",
+      "sourceHash": "1c52d9580155a2cc4d2b517c1d4bcc8feb8014de054bfb4a944eadfd72c95006",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "If this property’s value is [`false`](https://developer.apple.com/documentation/Swift/false), the current device does not support the requested configuration.",
+      "ko": "이 속성 값이 [`false`](https://developer.apple.com/documentation/Swift/false)이면, 현재 기기는 요청한 구성을 지원하지 않습니다.",
+      "sourceHash": "a3ed6d697f29c7b5926309aca4993ff78290e367ed82c07c83afc0f325c714ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0001",
+      "source": "❗ **Important**: All ARKit configurations require an iOS device with an A9 or later processor.",
+      "ko": "❗ **중요**: 모든 ARKit 구성은 A9 이상 프로세서를 갖춘 iOS 기기가 필요합니다.",
+      "sourceHash": "cd081d5a583efe84a64832116afc92a4b1c8936729b496ae7ff9ac3b7b2b2ba6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0002",
+      "source": "If your app otherwise supports other devices and offers augmented reality as a secondary feature, use this property to determine whether to offer AR-based features to the user.",
+      "ko": "앱이 다른 기기를 지원하고 AR을 보조 기능으로 제공한다면, 이 속성을 사용해 사용자에게 AR 기반 기능을 제공할지 결정합니다.",
+      "sourceHash": "cf21e955982995b3ed43b6a22302991f2d581c43a6403ccd7c32dccf014bbec8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0003",
+      "source": "If your app requires ARKit for its core functionality, use the `arkit` key in the [`UIRequiredDeviceCapabilities`](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIRequiredDeviceCapabilities) section of your app’s Info.plist to make your app available only on devices that support ARKit.",
+      "ko": "앱의 핵심 기능에 ARKit가 필요하다면 앱의 Info.plist에서 [`UIRequiredDeviceCapabilities`](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIRequiredDeviceCapabilities) 섹션의 `arkit` 키를 사용해 ARKit을 지원하는 기기에서만 앱을 사용할 수 있게 해야 합니다.",
+      "sourceHash": "4f40e975aa774dc4d5f2e381b2717df5aad281b94f8878035c33d42596fadd2f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:discussion:0013:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arconfiguration/issupported)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arconfiguration/issupported)*",
+      "sourceHash": "73cccbe0244d86e2d5ac27c619355284709f61b5c56271d1a07659b80567ced4",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,365 @@
+{
+  "docId": "documentation/AVFAudio/avspeechsynthesisprovideraudiounit.md",
+  "title": "AVSpeechSynthesisProviderAudioUnit",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avspeechsynthesisprovideraudiounit",
+  "segments": [
+    {
+      "id": "seg:heading:avspeechsynthesisprovideraudiounit:0000:0001",
+      "source": "AVSpeechSynthesisProviderAudioUnit",
+      "ko": "AVSpeechSynthesisProviderAudioUnit",
+      "sourceHash": "65d0e0724ee596b773430f8b1208c3512a4cf14db81ce2a75ecbba26b1b5c400",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avspeechsynthesisprovideraudiounit:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avspeechsynthesisprovideraudiounit:0002:0001",
+      "source": "An object that generates speech from text.",
+      "ko": "텍스트에서 음성을 생성하는 객체입니다.",
+      "sourceHash": "0103ad699f8f8dc90e7ee98c9a49c67ceab243e211c18b1883615c4ade8c74b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avspeechsynthesisprovideraudiounit:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisprovideraudiounit:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisprovideraudiounit:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisprovideraudiounit:0004:0003",
+      "source": "Mac Catalyst 16.0+",
+      "ko": "Mac Catalyst 16.0+",
+      "sourceHash": "87ecab2e4ea7b5b949ac3608f01726f8e88b11cb3d4b8233535e965e0f50886b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisprovideraudiounit:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisprovideraudiounit:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avspeechsynthesisprovideraudiounit:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVSpeechSynthesisProviderAudioUnit\n```",
+      "ko": "```swift\nclass AVSpeechSynthesisProviderAudioUnit\n```",
+      "sourceHash": "5d7dca169e8e1e7bb50458aabf12f3083fe720b0b88ef51541c5f095acf0a333",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Use a speech synthesizer audio unit to generate audio buffers that contain speech for a given voice and speech markup.",
+      "ko": "지정된 음성 및 음성 마크업에 대해 음성이 포함된 오디오 버퍼를 생성하려면 음성 합성기 오디오 유닛을 사용합니다.",
+      "sourceHash": "e357ae00212ac842ce02c4d44e176685bb6bb09f8d77657483d55142e2258ca0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "The audio unit receives an [`AVSpeechSynthesisProviderRequest`](avspeechsynthesisproviderrequest.md) as input, and extracts audio buffers through the render block.",
+      "ko": "오디오 유닛은 입력으로 [`AVSpeechSynthesisProviderRequest`](avspeechsynthesisproviderrequest.md)를 받으며 render 블록을 통해 오디오 버퍼를 추출합니다.",
+      "sourceHash": "d1a2b92e19efb5519a1f36c83cd0002db6f9533eb784b5d32e6d0548fd9de043",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "Use [`speechSynthesisOutputMetadataBlock`](avspeechsynthesisprovideraudiounit/speechsynthesisoutputmetadatablock.md) to provide metadata as an array of [`AVSpeechSynthesisMarker`](avspeechsynthesismarker.md).",
+      "ko": "메타데이터를 [`AVSpeechSynthesisMarker`](avspeechsynthesismarker.md) 배열로 제공하려면 [`speechSynthesisOutputMetadataBlock`](avspeechsynthesisprovideraudiounit/speechsynthesisoutputmetadatablock.md)를 사용합니다.",
+      "sourceHash": "2e57354f95a8258adbe8958d41e1ede90f50d407a2055c580ff727c638b641bc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "The system scans and loads voices for audio unit extensions of this type, and the voices it provides are available for use in [`AVSpeechSynthesizer`](avspeechsynthesizer.md) and accessibility technologies like VoiceOver and Speak Screen.",
+      "ko": "시스템은 이 유형의 오디오 유닛 확장에 대한 음성을 스캔하고 로드하며, 해당 음성은 [`AVSpeechSynthesizer`](avspeechsynthesizer.md) 및 VoiceOver, Speak Screen와 같은 접근성 기술에서 사용할 수 있습니다.",
+      "sourceHash": "840d5b6991400b3c0d61ad7ff6d70bfb19770119d6764d666a1fad2aff43e7e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0011:0001",
+      "source": "❗ **Important**: Network access isn’t allowed in speech synthesizers.",
+      "ko": "❗ **중요**: 음성 합성기에서는 네트워크 액세스가 허용되지 않습니다.",
+      "sourceHash": "5698d062720b3a5282216d3db5a4bc7bb0cc16a451db91c56fa62a4d2b09d495",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0012:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:rendering-speech:0013:0001",
+      "source": "Rendering speech",
+      "ko": "음성 렌더링",
+      "sourceHash": "aad7ec048a3b0661ea4e6a91c0caa1034f3e835e4afa2d1a233b60b5ab190f93",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rendering-speech:0014:0001",
+      "source": "[func synthesizeSpeechRequest(AVSpeechSynthesisProviderRequest)](avspeechsynthesisprovideraudiounit/synthesizespeechrequest(_:).md)",
+      "ko": "[func synthesizeSpeechRequest(AVSpeechSynthesisProviderRequest)](avspeechsynthesisprovideraudiounit/synthesizespeechrequest(_:).md)",
+      "sourceHash": "a33db5707e80875b89d0ae1c219ca12e76ea76d95c01d98306b680df8da486db",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:rendering-speech:0015:0001",
+      "source": "Sets the text to synthesize and the voice to use.",
+      "ko": "합성할 텍스트와 사용할 음성을 설정합니다.",
+      "sourceHash": "0a5ce75f7974975d3a449c69e504bc106ad9f9a0e6c1659a96599acf5740c99e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:rendering-speech:0016:0001",
+      "source": "[class AVSpeechSynthesisProviderRequest](avspeechsynthesisproviderrequest.md)",
+      "ko": "[class AVSpeechSynthesisProviderRequest](avspeechsynthesisproviderrequest.md)",
+      "sourceHash": "8db478b29db559c97e66c35f3d9e7a26c0dbbe31e46601f1d1b91badcb0ed756",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:rendering-speech:0017:0001",
+      "source": "An object that represents the text to synthesize and the voice to use.",
+      "ko": "합성할 텍스트와 사용할 음성을 나타내는 개체입니다.",
+      "sourceHash": "dcace284dd57f22de0a1de6a798d870afa8bba5f0a9faef34b785815b668eacb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:supplying-metadata:0018:0001",
+      "source": "Supplying metadata",
+      "ko": "메타데이터 제공",
+      "sourceHash": "2d049230c4c97169fc720403b10e729d088e612b795e0f6aaad2de27559946b1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:supplying-metadata:0019:0001",
+      "source": "[typealias AVSpeechSynthesisProviderOutputBlock](avspeechsynthesisprovideroutputblock.md)",
+      "ko": "[typealias AVSpeechSynthesisProviderOutputBlock](avspeechsynthesisprovideroutputblock.md)",
+      "sourceHash": "6a1ef313ffe0e1dccfb8c7782aa2a95151d221580d86e88bdc598b3f8b97b932",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:supplying-metadata:0020:0001",
+      "source": "A type that represents the method for sending marker information to the host.",
+      "ko": "마커 정보를 호스트로 전송하는 메서드를 나타내는 타입입니다.",
+      "sourceHash": "78503251bae8aff487a50dbd41054e8eb57385bd53c4101cfb9aa44183e3c3f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:supplying-metadata:0021:0001",
+      "source": "[var speechSynthesisOutputMetadataBlock: AVSpeechSynthesisProviderOutputBlock?](avspeechsynthesisprovideraudiounit/speechsynthesisoutputmetadatablock.md)",
+      "ko": "[var speechSynthesisOutputMetadataBlock: AVSpeechSynthesisProviderOutputBlock?](avspeechsynthesisprovideraudiounit/speechsynthesisoutputmetadatablock.md)",
+      "sourceHash": "cff206012554f3d7ad4f9450c9be1b6404d3f8522b305baa88b8ed3bbb13d070",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:supplying-metadata:0022:0001",
+      "source": "A block that subclasses use to send marker information to the host.",
+      "ko": "서브클래스가 호스트로 마커 정보를 전송하는 데 사용하는 블록입니다.",
+      "sourceHash": "e6ef3c7be7a208619895250be7abc0e01791488a982659571692690f349ea6bf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:supplying-metadata:0023:0001",
+      "source": "[class AVSpeechSynthesisMarker](avspeechsynthesismarker.md)",
+      "ko": "[class AVSpeechSynthesisMarker](avspeechsynthesismarker.md)",
+      "sourceHash": "33dd7a6f1cbe7037165e3d4df9dbe56661786e3f46131e9a0e84478565cf92c4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:supplying-metadata:0024:0001",
+      "source": "An object that contains information about the synthesized audio.",
+      "ko": "합성된 오디오에 대한 정보를 포함하는 개체입니다.",
+      "sourceHash": "9094d50aa9042592751c994e0c32c11b424cab67120a0c2c0f1ff769de5853b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-and-setting-voices:0025:0001",
+      "source": "Getting and setting voices",
+      "ko": "음성 가져오기 및 설정",
+      "sourceHash": "d738bd0738d26ff69dc7beac7940c66a2921c070df7f731edd03396072110d62",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-and-setting-voices:0026:0001",
+      "source": "[var speechVoices: [AVSpeechSynthesisProviderVoice]](avspeechsynthesisprovideraudiounit/speechvoices.md)",
+      "ko": "[var speechVoices: [AVSpeechSynthesisProviderVoice]](avspeechsynthesisprovideraudiounit/speechvoices.md)",
+      "sourceHash": "dbd34f573822c62129e040d21d65d97e7cfe599a8da0523996f445ed50375379",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:getting-and-setting-voices:0027:0001",
+      "source": "A list of voices the audio unit provides to the system.",
+      "ko": "시스템에 오디오 유닛이 제공하는 음성 목록입니다.",
+      "sourceHash": "8c333670340415d08e78e333a54851210759f4b94c0a987c3dd265cdfbceff90",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-and-setting-voices:0028:0001",
+      "source": "[class AVSpeechSynthesisProviderVoice](avspeechsynthesisprovidervoice.md)",
+      "ko": "[class AVSpeechSynthesisProviderVoice](avspeechsynthesisprovidervoice.md)",
+      "sourceHash": "3ec0a949fc59e6c95aee24af7ba193c9ea7e33f968e6ad035c45884593f78e92",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-and-setting-voices:0029:0001",
+      "source": "An object that represents a voice that an audio unit provides to its host.",
+      "ko": "오디오 유닛이 호스트에 제공하는 음성을 나타내는 개체입니다.",
+      "sourceHash": "c7199c5d84e3e435ccadcbacabac08b9bb4c13ec1df9476d179f08ab6cb05aae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:cancelling-a-request:0030:0001",
+      "source": "Cancelling a request",
+      "ko": "요청 취소",
+      "sourceHash": "53165d32a3feca2b33a845d91d9c84cbaec7be6011a68ded253796864ff4fab4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:cancelling-a-request:0031:0001",
+      "source": "[func cancelSpeechRequest()](avspeechsynthesisprovideraudiounit/cancelspeechrequest.md)",
+      "ko": "[func cancelSpeechRequest()](avspeechsynthesisprovideraudiounit/cancelspeechrequest.md)",
+      "sourceHash": "a5751e511f2b450219f3f50f97cb5ad5d40db45d174b6d7ba594e71eeedcc530",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:cancelling-a-request:0032:0001",
+      "source": "Informs the audio unit to discard the speech request.",
+      "ko": "음성 요청을 폐기하도록 오디오 유닛에 알립니다.",
+      "sourceHash": "0b314c3f24d8f730858c5f7c562143aa88efd08aaed7d2a44177b363beaf65f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0033:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0034:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0035:0001",
+      "source": "[AUAudioUnit](../AudioToolbox/AUAudioUnit.md)",
+      "ko": "[AUAudioUnit](../AudioToolbox/AUAudioUnit.md)",
+      "sourceHash": "f8c013d94eb84bb558c2545cc47f57c183d640bb3d391ea107668544ae62a402",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0036:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0037:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0037:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0037:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0037:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0037:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0037:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:horizontal_rule:conforms-to:0038:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:conforms-to:0039:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avspeechsynthesisprovideraudiounit)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avspeechsynthesisprovideraudiounit)*",
+      "sourceHash": "76b54e466128b6fe8ce18007480a7588424295c52b43ed0ed5a4064a8a97add2",
+      "status": "preserved"
+    }
+  ]
+}

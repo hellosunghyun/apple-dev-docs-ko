@@ -1,0 +1,211 @@
+{
+  "docId": "documentation/AVFoundation/avmutablecomposition/insertemptytimerange.md",
+  "title": "insertEmptyTimeRange(:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avmutablecomposition/insertemptytimerange",
+  "segments": [
+    {
+      "id": "seg:heading:insertemptytimerange:0000:0001",
+      "source": "insertEmptyTimeRange(_:)",
+      "ko": "insertEmptyTimeRange(_:)",
+      "sourceHash": "4b4dc3b833c11c1f95680998d59ece23782a63d909961d02b1e334369825c166",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:insertemptytimerange:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:insertemptytimerange:0002:0001",
+      "source": "Adds or extends an empty time range within all tracks of the composition.",
+      "ko": "구성의 모든 트랙에서 빈 시간 범위를 추가하거나 확장합니다.",
+      "sourceHash": "6408aa24d39d69530615260cef30e7c5a530641da5afbf19c7f9e7577d2a4755",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:insertemptytimerange:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:insertemptytimerange:0004:0001",
+      "source": "iOS ?+",
+      "ko": "iOS ?+",
+      "sourceHash": "5ab9a52f3ed195087b787f7fc91e6c6787e10947ba89804fc30b0826935fe735",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:insertemptytimerange:0004:0002",
+      "source": "iPadOS ?+",
+      "ko": "iPadOS ?+",
+      "sourceHash": "c073a012e8f78fb65510b62ab5dd5f951cd38fb0306215643d562259e96744f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:insertemptytimerange:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:insertemptytimerange:0004:0004",
+      "source": "macOS ?+",
+      "ko": "macOS ?+",
+      "sourceHash": "7565f9a2fe151983964ce7f1a1fff21dbf4130de4d3457f25bd88800eafbe279",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:insertemptytimerange:0004:0005",
+      "source": "tvOS ?+",
+      "ko": "tvOS ?+",
+      "sourceHash": "e197a5f363006a02e522e5f07b216c8e4a4e9a6a147fcb43f9877e395882682a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:insertemptytimerange:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:insertemptytimerange:0004:0007",
+      "source": "watchOS ?+",
+      "ko": "watchOS ?+",
+      "sourceHash": "a3eeb3d8ec97b0e69f7f72fecf404f7497525e6d0b54f1854aa63b483933227a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc insertEmptyTimeRange(_ timeRange: CMTimeRange)\n```",
+      "ko": "```swift\nfunc insertEmptyTimeRange(_ timeRange: CMTimeRange)\n```",
+      "sourceHash": "e15c1b67fe3628aa1138dc860457f70bf0948b3761703df4a8e2d01ab86e0759",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Inserting an empty time range pushes out existing content by the time range’s duration.",
+      "ko": "빈 시간 범위를 삽입하면 시간 범위의 길이만큼 기존 콘텐츠가 밀려납니다.",
+      "sourceHash": "602a0a5bf5b1a5d7a9b223e1fa6f09c69d7f61167e78ee499d3bbe6da33eda0c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Use this method to reserve a time range in the composition for a subsequently created track to present its media.",
+      "ko": "이 메서드는 이후에 생성된 트랙이 미디어를 표시할 수 있도록 구성에서 시간 범위를 예약할 때 사용합니다.",
+      "sourceHash": "2236b488723013631bf188e816e5309b76ff30b65b2b87f1e8cbc5704c707e4d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0009:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0010:0001",
+      "source": "`timeRange`: The empty time range to insert.",
+      "ko": "`timeRange`: 삽입할 빈 시간 범위입니다.",
+      "sourceHash": "fb302e3b1905836efbaaa94f24a11a5a642f9b71370c714991ce6d5bd65b1b77",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참조 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[func removeTimeRange(CMTimeRange)](avmutablecomposition/removetimerange(_:).md)",
+      "ko": "[func removeTimeRange(CMTimeRange)](avmutablecomposition/removetimerange(_:).md)",
+      "sourceHash": "2a3a951e299732f1d2647632c7a776cb9c79b40bdeaf5b547bca18726e9bc9ad",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Removes a specified time range from all tracks of the composition.",
+      "ko": "구성의 모든 트랙에서 지정한 시간 범위를 제거합니다.",
+      "sourceHash": "704c7bc6bfb7009790c8106c989e919d19ae6af87d00bc1c34e9bfcf6efd0351",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func scaleTimeRange(CMTimeRange, toDuration: CMTime)](avmutablecomposition/scaletimerange(_:toduration:).md)",
+      "ko": "[func scaleTimeRange(CMTimeRange, toDuration: CMTime)](avmutablecomposition/scaletimerange(_:toduration:).md)",
+      "sourceHash": "92fdefcc3a21c0f0bddff82123cdb34efc38912ef9601c0332cfa5fb8dd62b67",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Changes the duration of all tracks in a given time range.",
+      "ko": "주어진 시간 범위에서 모든 트랙의 길이를 변경합니다.",
+      "sourceHash": "bd7d9979db5b308a55b6f6638d6c5187e5567a440dbe656a41e3e3ca05af0606",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func insertTimeRange(CMTimeRange, of: AVAsset, at: CMTime, completionHandler: ((any Error)?) -> Void)](avmutablecomposition/inserttimerange(_:of:at:completionhandler:).md)",
+      "ko": "[func insertTimeRange(CMTimeRange, of: AVAsset, at: CMTime, completionHandler: ((any Error)?) -> Void)](avmutablecomposition/inserttimerange(_:of:at:completionhandler:).md)",
+      "sourceHash": "4115a932fa6ddbcc04ca7dca2c01c7567dafe450f8d8ee40ece5460061ec0cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Inserts all tracks of an asset for a time range into a composition.",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayeritemrenderedlegibleoutput/setdelegate(_:queue:))*",
+      "sourceHash": "5bedb4d7631429e071560389c98353a0e0012c67a9e458535ee8e7644ebf299f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func insertTimeRange(CMTimeRange, of: AVAsset, at: CMTime) throws](avmutablecomposition/inserttimerange(_:of:at:).md)",
+      "ko": "[func insertTimeRange(CMTimeRange, of: AVAsset, at: CMTime) throws](avmutablecomposition/inserttimerange(_:of:at:).md)",
+      "sourceHash": "ef269eea5cc83745ffb10238d87dbf9b4487d7b748d607868cbdac7cbbe01279",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Inserts all the tracks within a given time range of a specified asset into the composition.",
+      "ko": "지정된 자산의 특정 시간 범위 내 모든 트랙을 composition에 삽입합니다.",
+      "sourceHash": "16e65d0c2bbf8ccfd7dd23c03fe7252a7cfc01f36fa83011b5b995132e2273d8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutablecomposition/insertemptytimerange(_:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avmutablecomposition/insertemptytimerange(_:))*",
+      "sourceHash": "986fd74c8feca5de2f4afa0171e4674567bc6b9a3d45ea543eb85a396aba4f41",
+      "status": "machine_translated"
+    }
+  ]
+}

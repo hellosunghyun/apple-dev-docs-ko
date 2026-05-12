@@ -1,0 +1,533 @@
+{
+  "docId": "documentation/Accelerate/simd-library.md",
+  "title": "simd",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/simd-library",
+  "segments": [
+    {
+      "id": "seg:heading:simd:0000:0001",
+      "source": "simd",
+      "ko": "simd",
+      "sourceHash": "457d43cfa783c04e6db6c69ff69946048c8fa90ef9cf82ac90f15c49a8eb8a17",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:simd:0001:0001",
+      "source": "**Framework**: Accelerate",
+      "ko": "**프레임워크**: Accelerate",
+      "sourceHash": "29a5b8860afd67d96c79fe2585ca71addeb9f39a3fe9698cbaba2a7451def11b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:simd:0002:0001",
+      "source": "Perform computations on small vectors and matrices.",
+      "ko": "작은 벡터와 행렬에 대한 계산을 수행합니다.",
+      "sourceHash": "31db2615dee6ecd6509907c3f66957168baf6f0ad95d2335c861363441bf212b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "simd provides types and functions for small vector and matrix computations.",
+      "ko": "simd는 작은 벡터 및 행렬 계산을 위한 타입과 함수를 제공합니다.",
+      "sourceHash": "1c9a1c68da9203c4688ed8887dd43a69eeea28c356a7f9e386462e55b700352d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "The types include integer and floating-point vectors and matrices, and the functions provide basic arithmetic operations, element-wise mathematical operations, and geometric and linear algebra operations.",
+      "ko": "타입에는 정수 및 부동 소수점 벡터와 행렬이 포함되며, 함수는 기본 산술 연산, 요소별 수학 연산, 기하학 및 선형 대수 연산을 제공합니다.",
+      "sourceHash": "120d859a2a5ba91ec5adcd50a750f04bb69d93fd27e900be46247a2f52c449ac",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0001",
+      "source": "simd supports vectors containing up to 16 elements (for single-precision values) or 8 elements (for double-precision values), and matrices up to 4 x 4 elements in size.",
+      "ko": "simd는 단정밀도 값의 경우 최대 16개(배정밀도 값은 최대 8개) 요소를 포함하는 벡터와 최대 4 x 4 크기의 행렬을 지원합니다.",
+      "sourceHash": "591b59bf5f547090a360cb6da333406a9005382d0461f2cb51057ebf84f25cfd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0002",
+      "source": "Other frameworks, such as [`vForce`](vforce-library.md), allow you to work with larger vectors.",
+      "ko": "[`vForce`](vforce-library.md)와 같은 다른 프레임워크를 사용하면 더 큰 벡터로 작업할 수 있습니다.",
+      "sourceHash": "ee021656ea3229269df30990a9d22f2bc05576c89385d37f7cec91f1f0f98f97",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0006:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:boolean-scalar-data-type:0007:0001",
+      "source": "Boolean Scalar Data Type",
+      "ko": "Boolean 스칼라 데이터 타입",
+      "sourceHash": "18f72300a3d671f51ef20faaed752898cd3093bf251af9f5b7535c04d1fe159b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:boolean-scalar-data-type:0008:0001",
+      "source": "[typealias simd_bool](../simd/simd_bool.md)",
+      "ko": "[typealias simd_bool](../simd/simd_bool.md)",
+      "sourceHash": "d095470cde5a3c4bd0001f5d4c5999afadbd30f664336e801f513debaf974226",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:boolean-scalar-data-type:0009:0001",
+      "source": "A Boolean scalar value.",
+      "ko": "Boolean 스칼라 값입니다.",
+      "sourceHash": "363673d2b2e6c9c1405e3860d0c87793eae8c098dd09a8d461927a21eedadf20",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:signed-integer-vectors:0010:0001",
+      "source": "Signed Integer Vectors",
+      "ko": "부호 있는 정수 벡터",
+      "sourceHash": "5cfc611c5b9268605f211ddb881aea824056a3aa5ac66ebb8e4c983932e53e3d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:signed-integer-vectors:0011:0001",
+      "source": "[8-Bit Signed Integer Vectors](8-bit-signed-integer-vectors.md)",
+      "ko": "[8비트 부호 있는 정수 벡터](8-bit-signed-integer-vectors.md)",
+      "sourceHash": "8ae292d0e70d23c9131ba66583689bb1ea27229d5dbcd55c72f2cf6aefc5b193",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:signed-integer-vectors:0012:0001",
+      "source": "Perform operations on vectors that contain signed 8-bit integer elements.",
+      "ko": "부호 있는 8비트 정수 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "9c1ddc1d4a3ba085b7fe225e49c5d6d7322810f3acc352a4995d753f94c12d71",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:signed-integer-vectors:0013:0001",
+      "source": "[16-Bit Signed Integer Vectors](16-bit-signed-integer-vectors.md)",
+      "ko": "[16비트 부호 있는 정수 벡터](16-bit-signed-integer-vectors.md)",
+      "sourceHash": "757b9078047f666d18a13ce99da9ef7cfaa13d026b7c7971dee9deba40c67bb0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:signed-integer-vectors:0014:0001",
+      "source": "Perform operations on vectors that contain signed 16-bit integer elements.",
+      "ko": "부호 있는 16비트 정수 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "33f179eda7488353b7b91115a0c71055cf3d27d0bed4862ab34272392bc93d23",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:signed-integer-vectors:0015:0001",
+      "source": "[32-Bit Signed Integer Vectors](32-bit-signed-integer-vectors.md)",
+      "ko": "[32비트 부호 있는 정수 벡터](32-bit-signed-integer-vectors.md)",
+      "sourceHash": "bef736a039aa331cab08df949e70394f8213089a08dd7a76f1ded7e35476c133",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:signed-integer-vectors:0016:0001",
+      "source": "Perform operations on vectors that contain signed 32-bit integer elements.",
+      "ko": "부호 있는 32비트 정수 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "da3d3695b4d43601ab0166c7088448faff194dd4d6e53239b5f1094a3267a21f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:signed-integer-vectors:0017:0001",
+      "source": "[64-Bit Signed Integer Vectors](64-bit-signed-integer-vectors.md)",
+      "ko": "[64비트 부호 있는 정수 벡터](64-bit-signed-integer-vectors.md)",
+      "sourceHash": "d7488b46a650cbcbdb643e7d6fa6c1d6598f8bf4cc9d31641eaa59679269202b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:signed-integer-vectors:0018:0001",
+      "source": "Perform operations on vectors that contain signed 64-bit integer elements.",
+      "ko": "부호 있는 64비트 정수 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "0d902249c49bc7bfe6c017a83efb65535115a27aa3e12fa03b60b7acc9c2f621",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:unsigned-integer-vectors:0019:0001",
+      "source": "Unsigned Integer Vectors",
+      "ko": "부호 없는 정수 벡터",
+      "sourceHash": "1588206b1be08eb68c1bb89669119c8a88bc349f1c3e2cf0be32219e4d5d40ca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:unsigned-integer-vectors:0020:0001",
+      "source": "[8-Bit Unsigned Integer Vectors](8-bit-unsigned-integer-vectors.md)",
+      "ko": "[8비트 부호 없는 정수 벡터](8-bit-unsigned-integer-vectors.md)",
+      "sourceHash": "dfbdbcf4aa92426efa1d01acb6327bd97ab0abb90ffae4e4b97998f041642a64",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:unsigned-integer-vectors:0021:0001",
+      "source": "Perform operations on vectors that contain unsigned 8-bit integer elements.",
+      "ko": "부호 없는 8비트 정수 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "cdb53c3c0f60953353f1e21379fbdc6f3754220965bc6a9f5eeb470ef478a581",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:unsigned-integer-vectors:0022:0001",
+      "source": "[16-Bit Unsigned Integer Vectors](16-bit-unsigned-integer-vectors.md)",
+      "ko": "[16비트 부호 없는 정수 벡터](16-bit-unsigned-integer-vectors.md)",
+      "sourceHash": "bba0bd990459d1be65eb30eaaf9858a1cdaa1332cd651c15dec651775f5ec398",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:unsigned-integer-vectors:0023:0001",
+      "source": "Perform operations on vectors that contain unsigned 16-bit integer elements.",
+      "ko": "부호 없는 16비트 정수 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "e5d9da380d683f7e61977089b6d491f4dda3f55061598108218a9afb68f243fd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:unsigned-integer-vectors:0024:0001",
+      "source": "[32-Bit Unsigned Integer Vectors](32-bit-unsigned-integer-vectors.md)",
+      "ko": "[32비트 부호 없는 정수 벡터](32-bit-unsigned-integer-vectors.md)",
+      "sourceHash": "b2a5161d28510aa6f3992e3a362e6523b77cd0be4a8b22d40c1634858243b408",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:unsigned-integer-vectors:0025:0001",
+      "source": "Perform operations on vectors that contain unsigned 32-bit integer elements.",
+      "ko": "부호 없는 32비트 정수 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "947b317bda3036eca1c26c54eaaf779668a42d6b489510c7afa31c3599fc3233",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:unsigned-integer-vectors:0026:0001",
+      "source": "[64-Bit Unsigned Integer Vectors](64-bit-unsigned-integer-vectors.md)",
+      "ko": "[64비트 부호 없는 정수 벡터](64-bit-unsigned-integer-vectors.md)",
+      "sourceHash": "efb8ecf0760d5afd40ee306b6669248a90c7b24d6cf531c99139c3d1c9deb942",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:unsigned-integer-vectors:0027:0001",
+      "source": "Perform operations on vectors that contain unsigned 64-bit integer elements.",
+      "ko": "부호 없는 64비트 정수 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "f2d379f37ff59d06f86633a68ce1ffa73e6b443289e3b44940d79d6bb566e76f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:floating-point-vectors:0028:0001",
+      "source": "Floating-Point Vectors",
+      "ko": "부동 소수점 벡터",
+      "sourceHash": "f914f9222ba76475fb992f39d09261d111480fc30407bd2d7cf4b6aad6b035f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:floating-point-vectors:0029:0001",
+      "source": "[Working with Vectors](working-with-vectors.md)",
+      "ko": "[벡터 사용하기](working-with-vectors.md)",
+      "sourceHash": "90d680b39d37bace2225e0add8063616ff962f4b35e4bec6d71e60d6d9e8b42c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:floating-point-vectors:0030:0001",
+      "source": "Use vectors to calculate geometric values, calculate dot products and cross products, and interpolate between values.",
+      "ko": "벡터를 사용해 기하학적 값을 계산하고, 점곱과 외적을 계산하며, 값 사이를 보간합니다.",
+      "sourceHash": "c8408f18abf2785cd767e0e020a5f4069f8c8fd66cca4d905f114a140c24b485",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:floating-point-vectors:0031:0001",
+      "source": "[Half-precision floating-point vectors](half-precision-floating-point-vectors.md)",
+      "ko": "[반정밀도 부동 소수점 벡터](half-precision-floating-point-vectors.md)",
+      "sourceHash": "f6ff7a69d77468c91878724f22ede8d01c4f8bed2854ffd5fefa5277382252a5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:floating-point-vectors:0032:0001",
+      "source": "Perform operations on vectors that contain half-precision floating-point elements.",
+      "ko": "반정밀도 부동 소수점 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "cc17f93511c4e34ebba743db7c73d48b750f3011cddda28f29c449e11ae531c7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:floating-point-vectors:0033:0001",
+      "source": "[Single-precision floating-point vectors](single-precision-floating-point-vectors.md)",
+      "ko": "[단정밀도 부동 소수점 벡터](single-precision-floating-point-vectors.md)",
+      "sourceHash": "309a9808fe72bcb71cffa48e69283e5de180bdc019fc12545fe7cd4d8678b12a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:floating-point-vectors:0034:0001",
+      "source": "Perform operations on vectors that contain single-precision floating-point elements.",
+      "ko": "단정밀도 부동 소수점 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "79e184d821c1c62e2250eaa4b4fafcf62c555ef84a42a2ac51129bca741831f4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:floating-point-vectors:0035:0001",
+      "source": "[Double-precision floating-point vectors](double-precision-floating-point-vectors.md)",
+      "ko": "[배정밀도 부동 소수점 벡터](double-precision-floating-point-vectors.md)",
+      "sourceHash": "d7169d9180d69abc87bae8cd6dcfe37d0071ea5c8abeed7f01970c643ce6922b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:floating-point-vectors:0036:0001",
+      "source": "Perform operations on vectors that contain double-precision floating-point elements.",
+      "ko": "배정밀도 부동 소수점 요소를 포함하는 벡터에 대한 연산을 수행합니다.",
+      "sourceHash": "6a3fae95271ea183384aff185dc38ae484112b26f6d315826f3ba7b82f71dee2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:matrices:0037:0001",
+      "source": "Matrices",
+      "ko": "Matrices",
+      "sourceHash": "6009efe95f18eabbd14c861bdf06ffb187bde46414349c18d90bc54a2672fcd9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:matrices:0038:0001",
+      "source": "[Working with Matrices](working-with-matrices.md)",
+      "ko": "[행렬 사용하기](working-with-matrices.md)",
+      "sourceHash": "a443b22ed27aa4b2d6e4e81c1f8df963e431146080f732b244337347e5fb44f6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:matrices:0039:0001",
+      "source": "Solve simultaneous equations and transform points in space.",
+      "ko": "공간에서 연립 방정식을 풀고 점을 변환합니다.",
+      "sourceHash": "5b63522cedfdaf66ddec6e51566f35d2d3097cf30dbc0631e2149bd2d2b91a0f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:matrices:0040:0001",
+      "source": "[Half-precision floating-point matrices](half-precision-floating-point-matrices.md)",
+      "ko": "[반정밀도 부동 소수점 행렬](half-precision-floating-point-matrices.md)",
+      "sourceHash": "1488c0a3501a59721e19c992c0ffe36bff161b5db20468c038cc0b27b342b744",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:matrices:0041:0001",
+      "source": "Perform operations on matrices that contain half-precision floating-point elements.",
+      "ko": "반정밀도 부동 소수점 요소를 포함하는 행렬에 대한 연산을 수행합니다.",
+      "sourceHash": "4be63e7a42b440d9ba81b85f036260bccdb663072faff9d8c61c83905059e48a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:matrices:0042:0001",
+      "source": "[Single-precision floating-point matrices](single-precision-floating-point-matrices.md)",
+      "ko": "[단정밀도 부동 소수점 행렬](single-precision-floating-point-matrices.md)",
+      "sourceHash": "75f976d273af6e5a223cdf61ccfe3d3f740479a3af7250df0a0cf8390ccf780f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:matrices:0043:0001",
+      "source": "Perform operations on matrices that contain single-precision floating-point elements.",
+      "ko": "단정밀도 부동 소수점 요소를 포함하는 행렬에 대한 연산을 수행합니다.",
+      "sourceHash": "9be829e7130ff4e91a5360c735c790cb82605938c6df717babb12be7f00e803a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:matrices:0044:0001",
+      "source": "[Double-precision floating-point matrices](double-precision-floating-point-matrices.md)",
+      "ko": "[배정밀도 부동 소수점 행렬](double-precision-floating-point-matrices.md)",
+      "sourceHash": "de25ae3d2931673ecb3dcb8a33f681a1a4b1f65a200f3a1ec21ee020fa5c3507",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:matrices:0045:0001",
+      "source": "Perform operations on matrices that contain double-precision floating-point elements.",
+      "ko": "배정밀도 부동 소수점 요소를 포함하는 행렬에 대한 연산을 수행합니다.",
+      "sourceHash": "21e47321a76d74c96fa54a9f78541d2e111c6fdd28146ce3768a421b0a3e39ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:quaternions:0046:0001",
+      "source": "Quaternions",
+      "ko": "Quaternions",
+      "sourceHash": "84caff25cae5116625f3d28a982fb26238e4adeb1c20b064f1d9967c3bea2688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:quaternions:0047:0001",
+      "source": "[Working with Quaternions](working-with-quaternions.md)",
+      "ko": "[쿼터니언 사용하기](working-with-quaternions.md)",
+      "sourceHash": "0ff83cdb232ef675ba1c948bfdfb11073e15bf50e7e5b51d05e9ce72b80b3dbe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:quaternions:0048:0001",
+      "source": "Rotate points around the surface of a sphere, and interpolate between them.",
+      "ko": "구의 표면 주위를 따라 점을 회전하고, 점들 사이를 보간합니다.",
+      "sourceHash": "af091684b9e03899919dfaae4b45a95b7dc11af4e512b147a00272cc57d70b15",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:quaternions:0049:0001",
+      "source": "[Rotating a cube by transforming its vertices](rotating-a-cube-by-transforming-its-vertices.md)",
+      "ko": "[정점 변환으로 큐브 회전하기](rotating-a-cube-by-transforming-its-vertices.md)",
+      "sourceHash": "86cbfaa0a1825fd78470f39e46a7626ea49880f754cff1cec024824d64a6e4df",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:quaternions:0050:0001",
+      "source": "Rotate a cube through a series of keyframes using quaternion interpolation to transition between them.",
+      "ko": "쿼터니언 보간을 사용해 일련의 키프레임을 통해 큐브를 회전합니다.",
+      "sourceHash": "5e07f5b7a1ac23c69292b4e3d685d552dea4d7e815d48b7bc72bfead4bf3360b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:quaternions:0051:0001",
+      "source": "[struct simd_quatf](../simd/simd_quatf.md)",
+      "ko": "[struct simd_quatf](../simd/simd_quatf.md)",
+      "sourceHash": "cb0bb0f0a1b577a6f2aa364b56f275845ed05326f9aeb5a7780d9f349ad7fa0b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:quaternions:0052:0001",
+      "source": "A single-precision quaternion.",
+      "ko": "단정밀도 쿼터니언입니다.",
+      "sourceHash": "cd5ee44e50a9f12cd4b342def2bbabf9341c07b7757f50d076e1cdf097b8cf24",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:quaternions:0053:0001",
+      "source": "[struct simd_quatd](../simd/simd_quatd.md)",
+      "ko": "[struct simd_quatd](../simd/simd_quatd.md)",
+      "sourceHash": "df55f95b2c8714db71703ba90958574121bbc00f70050fd731a62e8175d484b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:quaternions:0054:0001",
+      "source": "A double-precision quaternion.",
+      "ko": "배정밀도 쿼터니언입니다.",
+      "sourceHash": "51a3990b4b6eb03f714d2d35195eb79b4fcd86bdb1dc8cd186e995d7f8ea1dd1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:constants:0055:0001",
+      "source": "Constants",
+      "ko": "Constants",
+      "sourceHash": "c71cedc6c720887d66ff73c9d5d3733403cef90174e0faacbbcf8c5e56a1c8d5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:constants:0056:0001",
+      "source": "[var SIMD_COMPILER_HAS_REQUIRED_FEATURES: Int32](../simd/simd_compiler_has_required_features.md)",
+      "ko": "[var SIMD_COMPILER_HAS_REQUIRED_FEATURES: Int32](../simd/simd_compiler_has_required_features.md)",
+      "sourceHash": "ae33b75794debf3e3f1547f7a211b809fa322ffe369289aaf942622499798575",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:constants:0056:0002",
+      "source": "[var SIMD_LIBRARY_VERSION: Int32](../simd/simd_library_version.md)",
+      "ko": "[var SIMD_LIBRARY_VERSION: Int32](../simd/simd_library_version.md)",
+      "sourceHash": "351c4fa5be73a3849ae846cd40a72a76867353cb7baeaaa4f57d52803a32765c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:macros:0057:0001",
+      "source": "Macros",
+      "ko": "Macros",
+      "sourceHash": "866dcd98eca7475c2199ad8a55fbdea2dca67cbdaa65166aa1864b5b452dfd17",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:macros:0058:0001",
+      "source": "[simd Macros](simd-macros.md)",
+      "ko": "[simd 매크로](simd-macros.md)",
+      "sourceHash": "1858ce51a2a836ddaf23deccfef1c7defe701588259e4dc9d215320896d12487",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0059:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0060:0001",
+      "source": "[Working with Vectors](working-with-vectors.md)",
+      "ko": "[벡터 사용하기](working-with-vectors.md)",
+      "sourceHash": "90d680b39d37bace2225e0add8063616ff962f4b35e4bec6d71e60d6d9e8b42c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0061:0001",
+      "source": "Use vectors to calculate geometric values, calculate dot products and cross products, and interpolate between values.",
+      "ko": "벡터를 사용해 기하학적 값을 계산하고, 점곱과 외적을 계산하며, 값 사이를 보간합니다.",
+      "sourceHash": "c8408f18abf2785cd767e0e020a5f4069f8c8fd66cca4d905f114a140c24b485",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0062:0001",
+      "source": "[Working with Matrices](working-with-matrices.md)",
+      "ko": "[행렬 사용하기](working-with-matrices.md)",
+      "sourceHash": "a443b22ed27aa4b2d6e4e81c1f8df963e431146080f732b244337347e5fb44f6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0063:0001",
+      "source": "Solve simultaneous equations and transform points in space.",
+      "ko": "공간에서 연립 방정식을 풀고 점을 변환합니다.",
+      "sourceHash": "5b63522cedfdaf66ddec6e51566f35d2d3097cf30dbc0631e2149bd2d2b91a0f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0064:0001",
+      "source": "[Working with Quaternions](working-with-quaternions.md)",
+      "ko": "[쿼터니언 사용하기](working-with-quaternions.md)",
+      "sourceHash": "0ff83cdb232ef675ba1c948bfdfb11073e15bf50e7e5b51d05e9ce72b80b3dbe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0065:0001",
+      "source": "Rotate points around the surface of a sphere, and interpolate between them.",
+      "ko": "구의 표면을 따라 점을 회전하고 점들 사이를 보간합니다.",
+      "sourceHash": "af091684b9e03899919dfaae4b45a95b7dc11af4e512b147a00272cc57d70b15",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0066:0001",
+      "source": "[Rotating a cube by transforming its vertices](rotating-a-cube-by-transforming-its-vertices.md)",
+      "ko": "[Rotating a cube by transforming its vertices](rotating-a-cube-by-transforming-its-vertices.md)",
+      "sourceHash": "86cbfaa0a1825fd78470f39e46a7626ea49880f754cff1cec024824d64a6e4df",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0067:0001",
+      "source": "Rotate a cube through a series of keyframes using quaternion interpolation to transition between them.",
+      "ko": "쿼터니언 보간을 사용해 일련의 키프레임 사이를 전환하면서 큐브를 회전합니다.",
+      "sourceHash": "5e07f5b7a1ac23c69292b4e3d685d552dea4d7e815d48b7bc72bfead4bf3360b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0068:0001",
+      "source": "[vForce](vforce-library.md)",
+      "ko": "[vForce](vforce-library.md)",
+      "sourceHash": "ed86190bb40be3fde5e710dfc0a83943b79e97428101603bd94ea6b6ea801298",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0069:0001",
+      "source": "Perform transcendental and trigonometric functions on vectors of any length.",
+      "ko": "임의 길이의 벡터에서 초월 함수와 삼각 함수를 수행합니다.",
+      "sourceHash": "4340772982d7d600c6215431582949f2979c08fc2fcea7a88f9e6e9e9303a2e9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0070:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0071:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/simd-library)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/simd-library)*",
+      "sourceHash": "577f682cfc6dc1103f47e7f875cce1b3fbaa8178af158e6c580ae5cde116421a",
+      "status": "preserved"
+    }
+  ]
+}

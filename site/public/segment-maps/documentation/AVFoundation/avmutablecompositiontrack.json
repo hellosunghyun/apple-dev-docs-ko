@@ -1,0 +1,505 @@
+{
+  "docId": "documentation/AVFoundation/avmutablecompositiontrack.md",
+  "title": "AVMutableCompositionTrack",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avmutablecompositiontrack",
+  "segments": [
+    {
+      "id": "seg:heading:avmutablecompositiontrack:0000:0001",
+      "source": "AVMutableCompositionTrack",
+      "ko": "AVMutableCompositionTrack",
+      "sourceHash": "fe427a705e71596e3891037f53f0aed690eea5202078506c985b8d3343a9601b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmutablecompositiontrack:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmutablecompositiontrack:0002:0001",
+      "source": "A mutable track in a composition that you use to insert, remove, and scale track segments without affecting their low-level representation.",
+      "ko": "저수준 표현에 영향을 주지 않으면서 트랙 세그먼트를 삽입, 제거 및 스케일링할 수 있는 구성의 가변 트랙입니다.",
+      "sourceHash": "8191d79fc6a856d68617772cded54ffd0933fa2175cb029d1d74291f895a760a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avmutablecompositiontrack:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablecompositiontrack:0004:0001",
+      "source": "iOS 4.0+",
+      "ko": "iOS 4.0+",
+      "sourceHash": "0c0ed66d9f4133c5a709449f69be4759ac3625b24734b8390d2f7e23b33c3545",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablecompositiontrack:0004:0002",
+      "source": "iPadOS 4.0+",
+      "ko": "iPadOS 4.0+",
+      "sourceHash": "dfe042d2e3f40a7e917ced53f052a0d5f5ba8d69dfa62a3b59fb59de8ef49851",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablecompositiontrack:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablecompositiontrack:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablecompositiontrack:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablecompositiontrack:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablecompositiontrack:0004:0007",
+      "source": "watchOS 1.0+",
+      "ko": "watchOS 1.0+",
+      "sourceHash": "2dbee682371896bee6965d157efc729a43696cec8b6451157482f77264ffbb65",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVMutableCompositionTrack\n```",
+      "ko": "```swift\nclass AVMutableCompositionTrack\n```",
+      "sourceHash": "da1751ce72e5005a52e6f51f3a1d46ca7bfde4d76628ae53710eb6502ec4049b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Use this object to define constraints for the temporal arrangement of the track segments.",
+      "ko": "이 객체를 사용해 트랙 세그먼트의 시간적 배열에 대한 제약 조건을 정의합니다.",
+      "sourceHash": "8ffa884fa67ac16e96160966c0e9fae487f039f34057456f1e4cf182b41e66c6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "If you set the composition’s track segments, you can test whether they meet the constraints by calling the [`validateSegments(_:)`](avmutablecompositiontrack/validatesegments(_:).md) method.",
+      "ko": "구성의 트랙 세그먼트를 설정한 경우, [`validateSegments(_:)`](avmutablecompositiontrack/validatesegments(_:).md) 메서드를 호출하여 제약 조건 충족 여부를 테스트할 수 있습니다.",
+      "sourceHash": "83a05896aaecb691aa4d1ff8ae7c114bc70c32c15970e9132cbdd3d34c3d9d6d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:configuring-track-properties:0010:0001",
+      "source": "Configuring track properties",
+      "ko": "트랙 속성 구성",
+      "sourceHash": "1b55629e55e59aedc748b3ea60face48d88fb88833b37fb29f384aef4291b027",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-track-properties:0011:0001",
+      "source": "[var isEnabled: Bool](avmutablecompositiontrack/isenabled.md)",
+      "ko": "[var isEnabled: Bool](avmutablecompositiontrack/isenabled.md)",
+      "sourceHash": "470807964994cbedfd63114ce45e486975d592248a53ce1d47e948c03ebf65ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-track-properties:0012:0001",
+      "source": "A Boolean value that indicates whether the tracks is in an enabled state.",
+      "ko": "트랙이 활성화 상태인지 나타내는 부울 값입니다.",
+      "sourceHash": "6576517487dad4aeea4211a6a89048a5d99a4a844c065657149978908962ef45",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-track-properties:0013:0001",
+      "source": "[var naturalTimeScale: CMTimeScale](avmutablecompositiontrack/naturaltimescale.md)",
+      "ko": "[var naturalTimeScale: CMTimeScale](avmutablecompositiontrack/naturaltimescale.md)",
+      "sourceHash": "dbdb75a7505119d5c3551db13de5eca0c87b465b72ca330da7f19b481877aa07",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-track-properties:0014:0001",
+      "source": "The time scale in which you can perform time-based operations without extra numerical conversion.",
+      "ko": "추가 수치 변환 없이 시간 기반 작업을 수행할 수 있는 시간 스케일입니다.",
+      "sourceHash": "d8961c04ebdbeef0dc12a87fad92e4d4afec230d3f24a261a59e943d974f2ef6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-track-properties:0015:0001",
+      "source": "[var languageCode: String?](avmutablecompositiontrack/languagecode.md)",
+      "ko": "[var languageCode: String?](avmutablecompositiontrack/languagecode.md)",
+      "sourceHash": "4afed45d4746da65013f30acde1d1dd7f6e91ad9de6938ca56c5a8a8857b2333",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-track-properties:0016:0001",
+      "source": "The language associated with the track, as an ISO 639-2/T language code.",
+      "ko": "트랙과 연관된 언어를 ISO 639-2/T 언어 코드로 표시한 값입니다.",
+      "sourceHash": "1403a2524098e5d26227ee8e2fe7a43f193f3884819f01c4a81ac980b4c4e22e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-track-properties:0017:0001",
+      "source": "[var extendedLanguageTag: String?](avmutablecompositiontrack/extendedlanguagetag.md)",
+      "ko": "[var extendedLanguageTag: String?](avmutablecompositiontrack/extendedlanguagetag.md)",
+      "sourceHash": "7db336cf6aa85de585898809a8019499a689b70794ef7884de7dab16066088cb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-track-properties:0018:0001",
+      "source": "The language tag associated with the track, as an RFC 4646 language tag.",
+      "ko": "트랙과 연관된 언어 태그이며 RFC 4646 언어 태그 형식입니다.",
+      "sourceHash": "58d517e0e290dd9b1d56b7aa83947cc04b43c7252c9c9fc4d31058261b0a7378",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-track-properties:0019:0001",
+      "source": "[var preferredTransform: CGAffineTransform](avmutablecompositiontrack/preferredtransform.md)",
+      "ko": "[var preferredTransform: CGAffineTransform](avmutablecompositiontrack/preferredtransform.md)",
+      "sourceHash": "3904ffcafa367dc16cb980d258ad2192c27f6c73329f07941a4b4e35591fc6f0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-track-properties:0020:0001",
+      "source": "The preferred transformation of the visual media data for display purposes.",
+      "ko": "표시 목적으로 시각적 미디어 데이터에 대해 선호되는 변환입니다.",
+      "sourceHash": "a91474c05a5fe2e90b7c8b3a674cad88b863ea876b3c92aaae13151f266973be",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-track-properties:0021:0001",
+      "source": "[var preferredVolume: Float](avmutablecompositiontrack/preferredvolume.md)",
+      "ko": "[var preferredVolume: Float](avmutablecompositiontrack/preferredvolume.md)",
+      "sourceHash": "f2b8d23f75ad9b5568a08aeafa9f7ad00898506e7cb064718a69520bb2a674fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-track-properties:0022:0001",
+      "source": "The volume the track prefers for its audible media data.",
+      "ko": "트랙이 자신의 가청 미디어 데이터에 대해 선호하는 볼륨입니다.",
+      "sourceHash": "7892f490144a8bf335d6e372f65bdbc5facbe8e05d05019aad44ba394be2fc72",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:managing-time-ranges:0023:0001",
+      "source": "Managing time ranges",
+      "ko": "시간 범위 관리",
+      "sourceHash": "58a598f343f158135d93be283640ca17f8fc663c739b5c86451a6aada70a9cf6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-time-ranges:0024:0001",
+      "source": "[var segments: [AVCompositionTrackSegment]!](avmutablecompositiontrack/segments.md)",
+      "ko": "[var segments: [AVCompositionTrackSegment]!](avmutablecompositiontrack/segments.md)",
+      "sourceHash": "5c362c5b76190ebf60eb1d06f275cbba46c669217fe4ea2535f4c1fd0d3b7b1e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:managing-time-ranges:0025:0001",
+      "source": "The track segments that a composition track contains.",
+      "ko": "구성 트랙이 포함하는 트랙 세그먼트입니다.",
+      "sourceHash": "0f0dbe70e02e7dd5a5bb594adb58de6b61c1306c2f219153ff78b454762afb04",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-time-ranges:0026:0001",
+      "source": "[func insertEmptyTimeRange(CMTimeRange)](avmutablecompositiontrack/insertemptytimerange(_:).md)",
+      "ko": "[func insertEmptyTimeRange(CMTimeRange)](avmutablecompositiontrack/insertemptytimerange(_:).md)",
+      "sourceHash": "fa6e80a44e08754672f1bf5888178a0a3b3ab2951225d34a587e1116ef9ded14",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:managing-time-ranges:0027:0001",
+      "source": "Adds or extends an empty time range within the track.",
+      "ko": "트랙 내에서 빈 시간 범위를 추가하거나 연장합니다.",
+      "sourceHash": "8c017f404af61408ee83ed5b1583799ffb68b7e4e9dadd64525ff16c76b6e000",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-time-ranges:0028:0001",
+      "source": "[func insertTimeRange(CMTimeRange, of: AVAssetTrack, at: CMTime) throws](avmutablecompositiontrack/inserttimerange(_:of:at:).md)",
+      "ko": "[func insertTimeRange(CMTimeRange, of: AVAssetTrack, at: CMTime) throws](avmutablecompositiontrack/inserttimerange(_:of:at:).md)",
+      "sourceHash": "1d723955979746fe6824fb11516ca5bdcc07c92ad19bc66805c6f75920a86d6f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:managing-time-ranges:0029:0001",
+      "source": "Inserts a time range of media from a source track into a composition track.",
+      "ko": "원본 트랙에서 미디어의 시간 범위를 구성 트랙에 삽입합니다.",
+      "sourceHash": "ca2e7c249d44522cf88b8be45e99482812cf3d1fa9921152f0f3826abb381c7e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-time-ranges:0030:0001",
+      "source": "[func insertTimeRanges([NSValue], of: [AVAssetTrack], at: CMTime) throws](avmutablecompositiontrack/inserttimeranges(_:of:at:).md)",
+      "ko": "[func insertTimeRanges([NSValue], of: [AVAssetTrack], at: CMTime) throws](avmutablecompositiontrack/inserttimeranges(_:of:at:).md)",
+      "sourceHash": "f7536669a59a6f652e48f27d9061bca770d30920ad3b494160ff03ddab8bba3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:managing-time-ranges:0031:0001",
+      "source": "Inserts the time ranges of multiple source tracks into a track of a composition.",
+      "ko": "여러 원본 트랙의 시간 범위를 구성 트랙의 트랙에 삽입합니다.",
+      "sourceHash": "e17bfb6c62548b7efa0d74cd2e7f39427b624201b26e21915358f6e799035473",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-time-ranges:0032:0001",
+      "source": "[func removeTimeRange(CMTimeRange)](avmutablecompositiontrack/removetimerange(_:).md)",
+      "ko": "[func removeTimeRange(CMTimeRange)](avmutablecompositiontrack/removetimerange(_:).md)",
+      "sourceHash": "4f7ad77da619971fda457af333e41c1900a03dda1a617161a0cd561d49dc9fc6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:managing-time-ranges:0033:0001",
+      "source": "Removes a time range of media from a composition track.",
+      "ko": "구성 트랙에서 미디어의 시간 범위를 제거합니다.",
+      "sourceHash": "7b3608f1a4a0f945c08e0870e92f0da13736b475a47ab9d49efe58ab1a5af276",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:managing-time-ranges:0034:0001",
+      "source": "[func scaleTimeRange(CMTimeRange, toDuration: CMTime)](avmutablecompositiontrack/scaletimerange(_:toduration:).md)",
+      "ko": "[func scaleTimeRange(CMTimeRange, toDuration: CMTime)](avmutablecompositiontrack/scaletimerange(_:toduration:).md)",
+      "sourceHash": "390263057af3013b3bcca1e9f2c6138ed53af6fe164adb4375c60dfb0c615252",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:managing-time-ranges:0035:0001",
+      "source": "Changes the duration of a time range of the track.",
+      "ko": "Changes the duration of a time range of the track.",
+      "sourceHash": "0c8de1836643f9abc2edb87feadda474e0b9bbeacd21e9b2625227ad4a5fd420",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:associating-tracks:0036:0001",
+      "source": "Associating tracks",
+      "ko": "Associating tracks",
+      "sourceHash": "ac603474518856784cc6330fe22cf72ed84d35962b23987212160bdb9fb2a513",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:associating-tracks:0037:0001",
+      "source": "[func addTrackAssociation(to: AVCompositionTrack, type: AVAssetTrack.AssociationType)](avmutablecompositiontrack/addtrackassociation(to:type:).md)",
+      "ko": "[func addTrackAssociation(to: AVCompositionTrack, type: AVAssetTrack.AssociationType)](avmutablecompositiontrack/addtrackassociation(to:type:).md)",
+      "sourceHash": "73a009f001121b69eb9ece845754e9795c344bd8f9bb049e1da01d31abd044d2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:associating-tracks:0038:0001",
+      "source": "Establishes a track association of a specific type between two tracks.",
+      "ko": "Establishes a track association of a specific type between two tracks.",
+      "sourceHash": "da3ab47b0fa8fd7f7f835013d85c2b51576295cdb81f2cdd303aa6c01eb08948",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:associating-tracks:0039:0001",
+      "source": "[func removeTrackAssociation(to: AVCompositionTrack, type: AVAssetTrack.AssociationType)](avmutablecompositiontrack/removetrackassociation(to:type:).md)",
+      "ko": "[func removeTrackAssociation(to: AVCompositionTrack, type: AVAssetTrack.AssociationType)](avmutablecompositiontrack/removetrackassociation(to:type:).md)",
+      "sourceHash": "301828503a3f8b8f6aaeb7be5aae2c794b9e6c6d6900ac6c169ecee16ceab0a1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:associating-tracks:0040:0001",
+      "source": "Removes an association from a composition track.",
+      "ko": "Removes an association from a composition track.",
+      "sourceHash": "8edaa9fd204e0f35fad9f0e223e901081f3b39042e71c9e6594ac7e2ba1a44ac",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:replacing-format-descriptions:0041:0001",
+      "source": "Replacing format descriptions",
+      "ko": "Replacing format descriptions",
+      "sourceHash": "8abef55a26eb8b1de6abd073ecc669f34ab49fa0e41af31f460eb2649a4adc02",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:replacing-format-descriptions:0042:0001",
+      "source": "[func replaceFormatDescription(CMFormatDescription, with: CMFormatDescription?)](avmutablecompositiontrack/replaceformatdescription(_:with:).md)",
+      "ko": "[func replaceFormatDescription(CMFormatDescription, with: CMFormatDescription?)](avmutablecompositiontrack/replaceformatdescription(_:with:).md)",
+      "sourceHash": "3cf5acdac34bb3b8a8f65e756938e2d54a58d463a88d40900aa50344a5f34948",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:replacing-format-descriptions:0043:0001",
+      "source": "Replaces a format description with another or cancels a previous replacement.",
+      "ko": "Replaces a format description with another or cancels a previous replacement.",
+      "sourceHash": "93ce02e0820801474599969dfb77bda5d45c14858731b368c2cc7ec270b7e83b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:validating-segments:0044:0001",
+      "source": "Validating segments",
+      "ko": "Validating segments",
+      "sourceHash": "d99af6b626d7b35105e6c055259836c8c330167a53884b786a73b7a19603a03a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:validating-segments:0045:0001",
+      "source": "[func validateSegments([AVCompositionTrackSegment]) throws](avmutablecompositiontrack/validatesegments(_:).md)",
+      "ko": "[func validateSegments([AVCompositionTrackSegment]) throws](avmutablecompositiontrack/validatesegments(_:).md)",
+      "sourceHash": "eaab3cf54ea9dbb91c1ce21e7cd98c7590006abf3c586bd9b00ef1b30ac0640a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:validating-segments:0046:0001",
+      "source": "Returns a Boolean value that indicates whether a given array of track segments conform to the timing rules for a composition track.",
+      "ko": "Returns a Boolean value that indicates whether a given array of track segments conform to the timing rules for a composition track.",
+      "sourceHash": "8f554f7c8f0a11a3b1c0479dcca9f0357738b4d5c6901332a4f8c29c770f7834",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:relationships:0047:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0048:0001",
+      "source": "Inherits From",
+      "ko": "Inherits From",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:inherits-from:0049:0001",
+      "source": "[AVCompositionTrack](avcompositiontrack.md)",
+      "ko": "[AVCompositionTrack](avcompositiontrack.md)",
+      "sourceHash": "2b1e24fe453a4cf650f74de512fb1a50a7bee4f30b3b6498c4673b07e3106266",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0050:0001",
+      "source": "Conforms To",
+      "ko": "Conforms To",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:conforms-to:0051:0001",
+      "source": "[AVAsynchronousKeyValueLoading](avasynchronouskeyvalueloading.md)",
+      "ko": "[AVAsynchronousKeyValueLoading](avasynchronouskeyvalueloading.md)",
+      "sourceHash": "5c4909448479b1cc08624af0e080cb182bc6d716778ffe644a834aee2c38ec9f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0051:0002",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0051:0003",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0051:0004",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0051:0005",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0051:0006",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0051:0007",
+      "source": "[NSCopying](../Foundation/NSCopying.md)",
+      "ko": "[NSCopying](../Foundation/NSCopying.md)",
+      "sourceHash": "a3e3914d750a60e4b250a0090cdf594ea4328ed30cecb20ea43c55afb46b9005",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0051:0008",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0052:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0053:0001",
+      "source": "[class AVMutableComposition](avmutablecomposition.md)",
+      "ko": "[class AVMutableComposition](avmutablecomposition.md)",
+      "sourceHash": "a781b979c9dab4f80227c30d5cb6fe2206dab406490dc2c5e288f4246cacc8bb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0054:0001",
+      "source": "An object that you use to create a new composition from existing assets.",
+      "ko": "An object that you use to create a new composition from existing assets.",
+      "sourceHash": "6b873273eed27f69b3480c68a5b7cb8c595e520ac30cea89b6bba3e546ab9a47",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0055:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0056:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutablecompositiontrack)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutablecompositiontrack)*",
+      "sourceHash": "59c9fdacb45f4fb673563cc61414aca476c5d904d610f1c432c450c069fc2593",
+      "status": "preserved"
+    }
+  ]
+}

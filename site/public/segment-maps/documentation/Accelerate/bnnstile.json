@@ -1,0 +1,260 @@
+{
+  "docId": "documentation/Accelerate/bnnstile.md",
+  "title": "BNNSTile(:::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnstile",
+  "segments": [
+    {
+      "id": "seg:heading:bnnstile:0000:0001",
+      "source": "BNNSTile(_:_:_:)",
+      "ko": "BNNSTile(_:_:_:)",
+      "sourceHash": "488470e37fad0faec407317ef0da072870df2c75d6a3c561978c5663c64266c8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnstile:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: func",
+      "ko": "**Framework**: Accelerate **Kind**: func",
+      "sourceHash": "92505afed2b9832f88ee8e8741948f4ea109b670dc30717430f0006e8f343391",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnstile:0002:0001",
+      "source": "Generates an output tensor by tiling an input tensor multiple times.",
+      "ko": "입력 텐서를 여러 번 타일링하여 출력 텐서를 생성합니다.",
+      "sourceHash": "91d49d8d1d153824c603526e8a0dcda9fecde84138c5797ff8a2153506d5441d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnstile:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnstile:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnstile:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnstile:0004:0003",
+      "source": "Mac Catalyst 16.0+",
+      "ko": "Mac Catalyst 16.0+",
+      "sourceHash": "87ecab2e4ea7b5b949ac3608f01726f8e88b11cb3d4b8233535e965e0f50886b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnstile:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnstile:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnstile:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnstile:0004:0007",
+      "source": "watchOS 9.0+",
+      "ko": "watchOS 9.0+",
+      "sourceHash": "74f54147ec06c7528917e10d68b6a402263ae2503dac544ef616ac2a86563097",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc BNNSTile(_ input: UnsafePointer<BNNSNDArrayDescriptor>, _ output: UnsafeMutablePointer<BNNSNDArrayDescriptor>, _ filter_params: UnsafePointer<BNNSFilterParameters>?) -> Int32\n```",
+      "ko": "```swift\nfunc BNNSTile(_ input: UnsafePointer<BNNSNDArrayDescriptor>, _ output: UnsafeMutablePointer<BNNSNDArrayDescriptor>, _ filter_params: UnsafePointer<BNNSFilterParameters>?) -> Int32\n```",
+      "sourceHash": "c28d098c14773ba44aec1ecc32b68e309ed133d3d8c10b83a97a75696d4d2115",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Use [`BNNSTile(_:_:_:)`](bnnstile(_:_:_:).md) to tile generate a tensor by repeating tiled copies of the input tensor.",
+      "ko": "[`BNNSTile(_:_:_:)`](bnnstile(_:_:_:).md) 함수를 사용해 입력 텐서의 타일 복사본을 반복하여 텐서를 생성합니다.",
+      "sourceHash": "5b1dcf23c9729facd9f3f3a6f611dced970b56aa79cc394bc37db32e39987f71",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The dimensions of the output tensor must be an integer multiple of the corresponding dimension of the input tensor.",
+      "ko": "출력 텐서의 차원은 입력 텐서의 해당 차원의 정수 배수여야 합니다.",
+      "sourceHash": "092143b55c7518046c496e571f42c28a4603d23f526300f5006aa65428310e53",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "For example, the following code tiles a 2 x 3 matrix three times along the first dimension and twice along the second dimension:",
+      "ko": "예를 들어 아래 코드는 2 x 3 행렬을 첫 번째 차원에서 3회, 두 번째 차원에서 2회 타일링합니다.",
+      "sourceHash": "674096eea6300e675f20658c07394a02f7b811b34a4147592280c0f60b73b81e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0010:0001",
+      "source": "```swift\nlet values: [Float] = [1.0, 2.0, 3.0,\n                       4.0, 5.0, 6.0]\n\nvar inputDescriptor = BNNSNDArrayDescriptor.allocate(\n    initializingFrom: values,\n    shape: .matrixRowMajor(2, 3))\n\nvar outputDescriptor = BNNSNDArrayDescriptor.allocateUninitialized(\n    scalarType: Float.self,\n    shape: .matrixRowMajor(6, 6))\n\nBNNSTile(&inputDescriptor, &outputDescriptor, nil)\n\ninputDescriptor.deallocate()\noutputDescriptor.deallocate()\n```",
+      "ko": "```swift\nlet values: [Float] = [1.0, 2.0, 3.0,\n                       4.0, 5.0, 6.0]\n\nvar inputDescriptor = BNNSNDArrayDescriptor.allocate(\n    initializingFrom: values,\n    shape: .matrixRowMajor(2, 3))\n\nvar outputDescriptor = BNNSNDArrayDescriptor.allocateUninitialized(\n    scalarType: Float.self,\n    shape: .matrixRowMajor(6, 6))\n\nBNNSTile(&inputDescriptor, &outputDescriptor, nil)\n\ninputDescriptor.deallocate()\noutputDescriptor.deallocate()\n```",
+      "sourceHash": "c12c7fafabeaa7815bf7ac8fa3a6cde78bed1595889c181b91c8035c89de86a0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "On return, `outputDescriptor` contains the following values:",
+      "ko": "반환되면 `outputDescriptor`에 다음 값이 포함됩니다.",
+      "sourceHash": "ae8e45430ac47de458b8cf7a82865d5ac4882a55dd56f6ea028c0a051fa344dd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0012:0001",
+      "source": "```swift\n[ 1.0, 2.0, 3.0,  1.0, 2.0, 3.0,\n  4.0, 5.0, 6.0,  4.0, 5.0, 6.0,\n\n  1.0, 2.0, 3.0,  1.0, 2.0, 3.0,\n  4.0, 5.0, 6.0,  4.0, 5.0, 6.0,\n\n  1.0, 2.0, 3.0,  1.0, 2.0, 3.0,\n  4.0, 5.0, 6.0,  4.0, 5.0, 6.0 ]\n```",
+      "ko": "```swift\n[ 1.0, 2.0, 3.0,  1.0, 2.0, 3.0,\n  4.0, 5.0, 6.0,  4.0, 5.0, 6.0,\n\n  1.0, 2.0, 3.0,  1.0, 2.0, 3.0,\n  4.0, 5.0, 6.0,  4.0, 5.0, 6.0,\n\n  1.0, 2.0, 3.0,  1.0, 2.0, 3.0,\n  4.0, 5.0, 6.0,  4.0, 5.0, 6.0 ]\n```",
+      "sourceHash": "e96911d0b75c4b0b9ca6207244953854a3eacf99d7e8967e898d0cdc8035f654",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0013:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0014:0001",
+      "source": "`input`: A pointer to the input descriptor.",
+      "ko": "`input`: 입력 디스크립터에 대한 포인터입니다.",
+      "sourceHash": "a0c1c73038b3c0515a2168e3115e60702bc10f4328367d455ddd9bcb57aec67b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0014:0002",
+      "source": "`output`: A pointer to the output descriptor.",
+      "ko": "`output`: 출력 디스크립터에 대한 포인터입니다.",
+      "sourceHash": "3cbb36da08308dd08a3bc1e6d358f1eda169784c0c946bf7ed7f86196a56cf76",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0014:0003",
+      "source": "`filter_params`: The filter runtime parameters.",
+      "ko": "`filter_params`: 필터 런타임 매개변수입니다.",
+      "sourceHash": "042ccf9a7283e9d4a0d969c2e75664512f2669d0be7273f749476b00301637ab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0015:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[BNNS.Error](bnns/error.md)",
+      "ko": "[BNNS.Error](bnns/error.md)",
+      "sourceHash": "1ed390ea12de39e28695373e23fb3fb25af9277b4ab8457d8655a0504abfbb96",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:see-also:0016:0002",
+      "source": "[func BNNSBandPart(Int32, Int32, UnsafePointer<BNNSNDArrayDescriptor>, UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnsbandpart(_:_:_:_:_:).md)",
+      "ko": "[func BNNSBandPart(Int32, Int32, UnsafePointer<BNNSNDArrayDescriptor>, UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnsbandpart(_:_:_:_:_:).md)",
+      "sourceHash": "aea8ee1cf18f59a99defe8e9a02bb22b2c482a2359d02392cc53345db5b93dee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Copies the specified subdiagonals and superdiagonals of a matrix, and sets other elements to zero.",
+      "ko": "행렬의 지정한 하위 대각선과 상위 대각선을 복사하고 다른 모든 요소를 0으로 설정합니다.",
+      "sourceHash": "7182d27403856fabb80b3d8f1ed337764da425ce26fc038b3f6b9a91e66f14c6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func BNNSShuffle(BNNSShuffleType, UnsafePointer<BNNSNDArrayDescriptor>, UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnsshuffle(_:_:_:_:).md)",
+      "ko": "[func BNNSShuffle(BNNSShuffleType, UnsafePointer<BNNSNDArrayDescriptor>, UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnsshuffle(_:_:_:_:).md)",
+      "sourceHash": "4c6cf7562aa45bd1d4b01f1cacf041970ecffde1b3408c9bef4c5d50d397b1e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Rearranges elements in a tensor according to shuffle type.",
+      "ko": "텐서의 요소를 셔플 유형에 따라 재배열합니다.",
+      "sourceHash": "c697da28bf2d2a7513faf95a5f819e19bdec177727e0a7f1b40655846d21d0cf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[struct BNNSShuffleType](bnnsshuffletype.md)",
+      "ko": "[struct BNNSShuffleType](bnnsshuffletype.md)",
+      "sourceHash": "92c25e0c8a6108c9e5271f46f1b1be01a12570691e3a584cf98d24cc47b66f2d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Constants that specify a shuffle type.",
+      "ko": "셔플 유형을 지정하는 상수입니다.",
+      "sourceHash": "03c13262ecce9f7c10cf1f948371853addf994a136898815dfa0a22b366838a9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[func BNNSTileBackward(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnstilebackward(_:_:_:).md)",
+      "ko": "[func BNNSTileBackward(UnsafeMutablePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSNDArrayDescriptor>, UnsafePointer<BNNSFilterParameters>?) -> Int32](bnnstilebackward(_:_:_:).md)",
+      "sourceHash": "b96ea1610973f9cf0fa809ee1c993e8ae89c1894571c4c802ae10e3fe48cddba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Applies a tile filter backward to generate an input gradient.",
+      "ko": "입력 그라디언트를 생성하기 위해 타일 필터 역방향 연산을 적용합니다.",
+      "sourceHash": "86e493adc809af6a7f11d5d5397a360741e823ee26beebc97c7187559d70d4e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0024:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnstile(_:_:_:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/bnnstile(_:_:_:))*",
+      "sourceHash": "91ab690d438ff089b81be60fce4312d68a31e4ffd53b523d7f0b038d2b8c133c",
+      "status": "machine_translated"
+    }
+  ]
+}

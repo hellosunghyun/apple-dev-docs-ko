@@ -1,0 +1,372 @@
+{
+  "docId": "documentation/AVFoundation/capturing-and-saving-live-photos.md",
+  "title": "Capturing and saving Live Photos",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/capturing-and-saving-live-photos",
+  "segments": [
+    {
+      "id": "seg:heading:capturing-and-saving-live-photos:0000:0001",
+      "source": "Capturing and saving Live Photos",
+      "ko": "Live Photo 캡처 및 저장",
+      "sourceHash": "16525096e53d96315fe9e09b8b0ab2ef87f1b05a12eedc51ba30b72071a81018",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capturing-and-saving-live-photos:0001:0001",
+      "source": "**Framework**: AVFoundation",
+      "ko": "**프레임워크**: AVFoundation",
+      "sourceHash": "d1a1a81bcb090684ac27d86fff88465af08239993e5a6442a93dc76635a7ffc2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capturing-and-saving-live-photos:0002:0001",
+      "source": "Capture Live Photos like those created in the system Camera app and save them to the Photos library.",
+      "ko": "시스템 Camera 앱에서 생성되는 것과 같은 Live Photo를 캡처해 Photos 라이브러리에 저장합니다.",
+      "sourceHash": "83d9ab5fca8c0f644087d2dd7021e9706f44548fbc57214d8524be2889666df4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "A Live Photo is a picture that includes motion and sound from the moments just before and after its capture.",
+      "ko": "Live Photo는 촬영 직전과 직후의 순간에서 모션과 소리를 포함하는 사진입니다.",
+      "sourceHash": "38c86bdcae741b6a8d014a24c85cc819ade37ac7375f0be825371d2e16aaef1b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "Your app can capture and record Live Photos using the AVFoundation capture system and the [`AVCapturePhotoOutput`](avcapturephotooutput.md) class.",
+      "ko": "앱은 AVFoundation 캡처 시스템과 [`AVCapturePhotoOutput`](avcapturephotooutput.md) 클래스를 사용해 Live Photo를 캡처하고 기록할 수 있습니다.",
+      "sourceHash": "19aac71d8eb59b95864a335946b2497770937986eb8b7fbc11fd3c0d5ea61de0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0005:0001",
+      "source": "**Note**: If you’re not already familiar with capture sessions, input setup, and photo capture, see [`Setting up a capture session`](setting-up-a-capture-session.md) and [`Capturing still and Live Photos`](capturing-still-and-live-photos.md).",
+      "ko": "**참고**: capture session, 입력 구성, photo capture에 익숙하지 않다면 [`Setting up a capture session`](setting-up-a-capture-session.md) 및 [`Capturing still and Live Photos`](capturing-still-and-live-photos.md)를 참조해야 합니다.",
+      "sourceHash": "a2a7e2cb5969f0373ef1a1d02a276e2144d79989fde8da451a2d90750b9daf46",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:enable-live-photo-capture:0006:0001",
+      "source": "Enable Live Photo Capture",
+      "ko": "Live Photo 캡처 활성화",
+      "sourceHash": "792465bb2debac8d2bb16506737ec7592afc5aeb16fdd31f08c81fd8d3810b3b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enable-live-photo-capture:0007:0001",
+      "source": "For a still photo your capture session needs only a video input, but a Live Photo includes sound, so you’ll need to also connect an audio capture device to your session:",
+      "ko": "정지 사진의 경우 캡처 세션에는 비디오 입력만 있으면 되지만, Live Photo에는 소리가 포함되므로 세션에 오디오 캡처 장치도 연결해야 합니다.",
+      "sourceHash": "64dc355fe46da64a7285124dd1f27c3ed00f854e77e0fd04dae6018c4557635b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:enable-live-photo-capture:0008:0001",
+      "source": "```swift\nenum CameraError: Error {\n    case configurationFailed\n    // ... additional error cases ...\n}\n\nfunc configureSession() throws {\n    captureSession.beginConfiguration()\n    \n    // ... add camera input and photo output ...\n    \n    guard let audioDevice = AVCaptureDevice.default(for: .audio),\n          let audioDeviceInput = try? AVCaptureDeviceInput(device: audioDevice) else {\n              throw CameraError.configurationFailed\n    }\n    \n    if captureSession.canAddInput(audioDeviceInput) {\n        captureSession.addInput(audioDeviceInput)\n    } else {\n        throw CameraError.configurationFailed\n    }\n    \n    // ... configure photo output and start running ...\n    \n    captureSession.commitConfiguration()\n}\n```",
+      "ko": "```swift\nenum CameraError: Error {\n    case configurationFailed\n    // ... additional error cases ...\n}\n\nfunc configureSession() throws {\n    captureSession.beginConfiguration()\n    \n    // ... add camera input and photo output ...\n    \n    guard let audioDevice = AVCaptureDevice.default(for: .audio),\n          let audioDeviceInput = try? AVCaptureDeviceInput(device: audioDevice) else {\n              throw CameraError.configurationFailed\n    }\n    \n    if captureSession.canAddInput(audioDeviceInput) {\n        captureSession.addInput(audioDeviceInput)\n    } else {\n        throw CameraError.configurationFailed\n    }\n    \n    // ... configure photo output and start running ...\n    \n    captureSession.commitConfiguration()\n}\n```",
+      "sourceHash": "012356a3ea7063e7dd7c7ffe6ce1e9dc3edf9e0ad3b79d1eee3ad7a104351bd5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:enable-live-photo-capture:0009:0001",
+      "source": "Because you’re already using a built-in camera device for video (see [`Setting up a capture session`](setting-up-a-capture-session.md)), you can simply use the default audio capture device—the system automatically uses the best microphone configuration for the camera position.",
+      "ko": "Because you’re already using a built-in camera device for video (see [`Setting up a capture session`](setting-up-a-capture-session.md)), you can simply use the default audio capture device—the system automatically uses the best microphone configuration for the camera position.",
+      "sourceHash": "01b4dcc63001865a8948fe7e5ec2201d48d0ff7204b525b5e5c281b3bbfa3da5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enable-live-photo-capture:0010:0001",
+      "source": "Capturing Live Photos requires an internal reconfiguration of the capture pipeline, which takes time and interrupts any in-progress captures.",
+      "ko": "Live Photo 캡처에는 캡처 파이프라인을 내부적으로 재구성해야 하므로 시간이 걸리며 진행 중인 캡처가 중단됩니다.",
+      "sourceHash": "b7498eab5fcb0f4e8087ba19ccb2d1add5e0b4303f40a1c735bc42b83624a53b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enable-live-photo-capture:0010:0002",
+      "source": "Before shooting your first Live Photo, make sure you’ve configured the pipeline appropriately by enabling Live Photo capture on your [`AVCapturePhotoOutput`](avcapturephotooutput.md) object:",
+      "ko": "첫 Live Photo를 촬영하기 전에 [`AVCapturePhotoOutput`](avcapturephotooutput.md) 객체에서 Live Photo 캡처를 활성화하여 파이프라인을 적절히 구성했는지 확인해야 합니다.",
+      "sourceHash": "b7314acf113e6a3f876d11123e897f89abda4d5f2efcd3c1ce3883450369f3f2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:enable-live-photo-capture:0011:0001",
+      "source": "```swift\nlet photoOutput = AVCapturePhotoOutput()\n\n// Attempt to add the photo output to the session.\nif captureSession.canAddOutput(photoOutput) {\n    captureSession.sessionPreset = .photo\n    captureSession.addOutput(photoOutput)\n} else {\n    throw CameraError.configurationFailed\n}\n\n// Configure the photo output's behavior.\nphotoOutput.isHighResolutionCaptureEnabled = true\nphotoOutput.isLivePhotoCaptureEnabled = photoOutput.isLivePhotoCaptureSupported\n\n// Start the capture session.\ncaptureSession.startRunning()\n```",
+      "ko": "```swift\nlet photoOutput = AVCapturePhotoOutput()\n\n// Attempt to add the photo output to the session.\nif captureSession.canAddOutput(photoOutput) {\n    captureSession.sessionPreset = .photo\n    captureSession.addOutput(photoOutput)\n} else {\n    throw CameraError.configurationFailed\n}\n\n// Configure the photo output's behavior.\nphotoOutput.isHighResolutionCaptureEnabled = true\nphotoOutput.isLivePhotoCaptureEnabled = photoOutput.isLivePhotoCaptureSupported\n\n// Start the capture session.\ncaptureSession.startRunning()\n```",
+      "sourceHash": "08499aa3204f423bba1857217a3c7767c4f9b27cfffccd21ee0c0cb419650df7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:capture-a-live-photo:0012:0001",
+      "source": "Capture a Live Photo",
+      "ko": "Live Photo 촬영",
+      "sourceHash": "0ee942ba34a286388a87e8e36692c1d4c30f812d6147eb0f3441e032b95975ec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-a-live-photo:0013:0001",
+      "source": "Once your photo output is ready for Live Photos, you can choose still image or Live Photo capture for each shot.",
+      "ko": "사진 출력이 Live Photos에 대해 준비되면 각 샷마다 정지 이미지 캡처 또는 Live Photo 캡처를 선택할 수 있습니다.",
+      "sourceHash": "60c2dcd805a94e1b83d04b249849591d002374e270cef95aea752da77dc0acda",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-a-live-photo:0013:0002",
+      "source": "To capture a Live Photo, create an [`AVCapturePhotoSettings`](avcapturephotosettings.md) object, choosing the format for the still image portion of the Live Photo and providing a URL for writing the movie portion of the Live Photo.",
+      "ko": "Live Photo을 캡처하려면 [`AVCapturePhotoSettings`](avcapturephotosettings.md) 객체를 만들고, Live Photo의 정지 이미지 부분에 사용할 형식을 선택한 다음 Live Photo의 동영상 부분을 기록할 URL을 제공합니다.",
+      "sourceHash": "841341ca82bd103b9091e6b34425077182128efd3b3a65106936797f436db9f9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:capture-a-live-photo:0013:0003",
+      "source": "Then, call [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) to trigger capture:",
+      "ko": "그런 다음 캡처를 시작하려면 [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) 를 호출합니다.",
+      "sourceHash": "35c12acd32636eef476d9c865731ad0c009dc5c1aca8ec71b95dd40f4d3fec09",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:capture-a-live-photo:0014:0001",
+      "source": "```swift\nlet photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])\nphotoSettings.livePhotoMovieFileURL = // output url\n\n// Shoot the Live Photo, using a custom class to handle capture delegate callbacks.\nlet captureProcessor = LivePhotoCaptureProcessor()\nphotoOutput.capturePhoto(with: photoSettings, delegate: captureProcessor)\n```",
+      "ko": "```swift\nlet photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])\nphotoSettings.livePhotoMovieFileURL = // output url\n\n// Shoot the Live Photo, using a custom class to handle capture delegate callbacks.\nlet captureProcessor = LivePhotoCaptureProcessor()\nphotoOutput.capturePhoto(with: photoSettings, delegate: captureProcessor)\n```",
+      "sourceHash": "42faccbea0335a118c9733ed415ab19323cf5052e5a14618193e4311bd8b2a56",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:handle-live-photo-results:0015:0001",
+      "source": "Handle Live Photo Results",
+      "ko": "Live Photo 결과 처리",
+      "sourceHash": "98b80b0f55a87033a173448740d8a0769f56ee8fe0df7e3c545422802f62e557",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-live-photo-results:0016:0001",
+      "source": "A Live Photo appears to users in the Photos app as a single asset, but it’s actually composed of separate files: the primary still image, and a movie file containing motion and sound from the moments before and after.",
+      "ko": "Live Photo은 Photos 앱에서 단일 에셋으로 보이지만 실제로는 별도의 파일로 구성됩니다. 즉, 기본 정지 이미지와 촬영 직전 및 직후의 동작과 소리를 포함하는 동영상 파일로 이루어집니다.",
+      "sourceHash": "acee2e0e4b4479542174a8f48f73eed553647687e61753d042ded933c7111307",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-live-photo-results:0016:0002",
+      "source": "The capture system delivers these results separately, as soon as each becomes available.",
+      "ko": "캡처 시스템은 각 항목이 사용 가능해지는 즉시 결과를 각각 별도로 전달합니다.",
+      "sourceHash": "21519362cc6e47cb0eb66ea8eec0c56b90f43d2bb9412aaca455f2a79a335fb6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-live-photo-results:0017:0001",
+      "source": "The [`photoOutput(_:didFinishProcessingPhoto:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishprocessingphoto:error:).md) method delivers the still image portion of the Live Photo as an [`AVCapturePhoto`](avcapturephoto.md) object.",
+      "ko": "[`photoOutput(_:didFinishProcessingPhoto:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishprocessingphoto:error:).md) 메서드는 Live Photo의 정지 이미지 부분을 [`AVCapturePhoto`](avcapturephoto.md) 객체로 제공합니다.",
+      "sourceHash": "85427ee031cbe27facbe1ced4a39e11a73d5af0fd29feddb63e002602943a8f5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-live-photo-results:0017:0002",
+      "source": "Because you’ll need to save the still image and movie files together, it’s best to extract the image file data from the [`AVCapturePhoto`](avcapturephoto.md) and keep it until the movie file finishes recording, as shown below.",
+      "ko": "정지 이미지와 동영상 파일을 함께 저장해야 하므로, 아래처럼 [`AVCapturePhoto`](avcapturephoto.md)에서 이미지 파일 데이터를 추출해 동영상 파일 기록이 완료될 때까지 보관하는 것이 가장 좋습니다.",
+      "sourceHash": "95bc5b87bb1b58bd09d2dd07554c0b7685410ab428521465dfe2f84bd7426a9e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-live-photo-results:0017:0003",
+      "source": "(You can also use this method to indicate in your UI that the still image has been captured.)",
+      "ko": "(이 메서드를 사용해 UI에서 정지 이미지가 캡처되었음을 나타낼 수도 있습니다.)",
+      "sourceHash": "15d8cdb1a7e7b9dcbc34a194848f88f562ad58ceb0a8cf90368ab08e6e5cdf2f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:handle-live-photo-results:0018:0001",
+      "source": "```swift\nfunc photoOutput(_ output: AVCapturePhotoOutput,\n                 didFinishProcessingPhoto photo: AVCapturePhoto,\n                 error: Error?) {\n    guard error != nil else {\n        print(\"Error capturing Live Photo still: \\(error!)\");\n        return\n    }\n    \n    // Get and process the captured image data.\n    processImage(photo.fileDataRepresentation())\n}\n```",
+      "ko": "```swift\nfunc photoOutput(_ output: AVCapturePhotoOutput,\n                 didFinishProcessingPhoto photo: AVCapturePhoto,\n                 error: Error?) {\n    guard error != nil else {\n        print(\"Error capturing Live Photo still: \\(error!)\");\n        return\n    }\n    \n    // Get and process the captured image data.\n    processImage(photo.fileDataRepresentation())\n}\n```",
+      "sourceHash": "bcbe926ae646ba5256151beb3d7bfa0ecbab41ec02e004ba84a15f221371030d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:handle-live-photo-results:0019:0001",
+      "source": "The [`photoOutput(_:didFinishProcessingLivePhotoToMovieFileAt:duration:photoDisplayTime:resolvedSettings:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishprocessinglivephototomoviefileat:duration:photodisplaytime:resolvedsettings:error:).md) method fires later, indicating that the URL you specified when triggering the capture now contains a complete movie file.",
+      "ko": "[`photoOutput(_:didFinishProcessingLivePhotoToMovieFileAt:duration:photoDisplayTime:resolvedSettings:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishprocessinglivephototomoviefileat:duration:photodisplaytime:resolvedsettings:error:).md) 메서드는 나중에 호출되어, 캡처를 트리거할 때 지정한 URL에 완전한 동영상 파일이 이제 들어가 있음을 알립니다.",
+      "sourceHash": "1cd1a790ccc9fbc0405adcdccb1884dd0ff17213000047b9ed6aa4824c69cd7a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-live-photo-results:0019:0002",
+      "source": "Once you have both the still image and movie portions of your Live Photo, you can save them together:",
+      "ko": "정지 이미지와 동영상 부분을 모두 확보하면 함께 저장할 수 있습니다.",
+      "sourceHash": "2a7ca586739f237bb1650f4da62b6627cee05ec0b1afdcfa3b46b2ebf21a52e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:handle-live-photo-results:0020:0001",
+      "source": "```swift\nfunc photoOutput(_ output: AVCapturePhotoOutput,\n                 didFinishProcessingLivePhotoToMovieFileAt outputFileURL: URL,\n                 duration: CMTime,\n                 photoDisplayTime: CMTime,\n                 resolvedSettings: AVCaptureResolvedPhotoSettings,\n                 error: Error?) {\n    \n    guard error != nil else {\n        print(\"Error capturing Live Photo movie: \\(error!)\");\n        return\n    }\n    \n    guard let stillImageData = stillImageData else { return }\n    \n    // Save Live Photo.\n    saveLivePhotoToPhotosLibrary(stillImageData: stillImageData,\n                                 livePhotoMovieURL: outputFileURL)\n}\n```",
+      "ko": "```swift\nfunc photoOutput(_ output: AVCapturePhotoOutput,\n                 didFinishProcessingLivePhotoToMovieFileAt outputFileURL: URL,\n                 duration: CMTime,\n                 photoDisplayTime: CMTime,\n                 resolvedSettings: AVCaptureResolvedPhotoSettings,\n                 error: Error?) {\n    \n    guard error != nil else {\n        print(\"Error capturing Live Photo movie: \\(error!)\");\n        return\n    }\n    \n    guard let stillImageData = stillImageData else { return }\n    \n    // Save Live Photo.\n    saveLivePhotoToPhotosLibrary(stillImageData: stillImageData,\n                                 livePhotoMovieURL: outputFileURL)\n}\n```",
+      "sourceHash": "e551c35e4deab7d631b4452abee61b733c212db7f9a72f34265ec3ef60c32d53",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:blockquote:handle-live-photo-results:0021:0001",
+      "source": "**Note**: To display Live Photos after capture, see [`PHLivePhoto`](https://developer.apple.com/documentation/Photos/PHLivePhoto) and [`PHLivePhotoView`](https://developer.apple.com/documentation/PhotosUI/PHLivePhotoView).",
+      "ko": "**Note**: 캡처 후 Live Photo을 표시하려면 [`PHLivePhoto`](https://developer.apple.com/documentation/Photos/PHLivePhoto)와 [`PHLivePhotoView`](https://developer.apple.com/documentation/PhotosUI/PHLivePhotoView)를 참고하세요.",
+      "sourceHash": "a088e3d58674c360d9f6f7b01ca04da2ce00a96d359aa06c79c3c12b3cbbd62b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:save-a-live-photo-to-the-photos-library:0022:0001",
+      "source": "Save a Live Photo to the Photos Library",
+      "ko": "Live Photo을 Photos 라이브러리에 저장",
+      "sourceHash": "e6287d0586e4604ae292ce82fcc5e0282806a2f9b54f81d9bc902d4f1226c421",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:save-a-live-photo-to-the-photos-library:0023:0001",
+      "source": "Use the [`PHAssetCreationRequest`](https://developer.apple.com/documentation/Photos/PHAssetCreationRequest) class to create a single Photos asset consisting of media from multiple files—in the case of a Live Photo, the still image and its paired video.",
+      "ko": "여러 파일의 미디어로 구성된 단일 Photos 에셋을 만들려면 [`PHAssetCreationRequest`](https://developer.apple.com/documentation/Photos/PHAssetCreationRequest) 클래스를 사용합니다. Live Photo의 경우 정지 이미지와 짝이 되는 비디오를 사용합니다.",
+      "sourceHash": "a861f47f94cd555ffeafbd6694f4872ef7e015873b398299daed4ffb9af555a8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:save-a-live-photo-to-the-photos-library:0023:0002",
+      "source": "As in [`Saving captured photos`](saving-captured-photos.md), you’ll need to wrap that request in a [`PHPhotoLibrary`](https://developer.apple.com/documentation/Photos/PHPhotoLibrary) change block, and first make sure that your app has the user’s permission to access Photos.",
+      "ko": "[`Saving captured photos`](saving-captured-photos.md)에서와 마찬가지로, 이 요청은 [`PHPhotoLibrary`](https://developer.apple.com/documentation/Photos/PHPhotoLibrary) 변경 블록에 래핑해야 하며, 먼저 앱이 사용자의 Photos 접근 권한을 보유했는지 확인해야 합니다.",
+      "sourceHash": "dec75e3203d58d4564b7d38593e4a08b190dc8f13cac999c33991f1e27434bcd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:save-a-live-photo-to-the-photos-library:0024:0001",
+      "source": "```swift\nfunc saveLivePhotoToPhotosLibrary(stillImageData: Data, livePhotoMovieURL: URL) {    PHPhotoLibrary.requestAuthorization { status in\n        guard status == .authorized else { return }\n        \n        PHPhotoLibrary.shared().performChanges({\n            // Add the captured photo's file data as the main resource for the Photos asset.\n            let creationRequest = PHAssetCreationRequest.forAsset()\n            creationRequest.addResource(with: .photo, data: stillImageData, options: nil)\n            \n            // Add the movie file URL as the Live Photo's paired video resource.\n            let options = PHAssetResourceCreationOptions()\n            options.shouldMoveFile = true\n            creationRequest.addResource(with: .pairedVideo, fileURL: livePhotoMovieURL, options: options)\n        }) { success, error in\n            // Handle completion.\n        }\n    }\n}\n```",
+      "ko": "```swift\nfunc saveLivePhotoToPhotosLibrary(stillImageData: Data, livePhotoMovieURL: URL) {    PHPhotoLibrary.requestAuthorization { status in\n        guard status == .authorized else { return }\n        \n        PHPhotoLibrary.shared().performChanges({\n            // Add the captured photo's file data as the main resource for the Photos asset.\n            let creationRequest = PHAssetCreationRequest.forAsset()\n            creationRequest.addResource(with: .photo, data: stillImageData, options: nil)\n            \n            // Add the movie file URL as the Live Photo's paired video resource.\n            let options = PHAssetResourceCreationOptions()\n            options.shouldMoveFile = true\n            creationRequest.addResource(with: .pairedVideo, fileURL: livePhotoMovieURL, options: options)\n        }) { success, error in\n            // Handle completion.\n        }\n    }\n}\n```",
+      "sourceHash": "4adc65508ccec2f3f9996de249422a1cfa0afba3545d2e6d190f3bc2da2dec5d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:blockquote:save-a-live-photo-to-the-photos-library:0025:0001",
+      "source": "💡 **Tip**: Use the [`shouldMoveFile`](https://developer.apple.com/documentation/Photos/PHAssetResourceCreationOptions/shouldMoveFile) option so that iOS can transfer the movie file from your app’s sandbox to the system Photos library without an expensive data-copying operation.",
+      "ko": "💡 **Tip**: iOS가 앱 샌드박스에서 시스템 Photos 라이브러리로 동영상 파일을 비싼 데이터 복사 작업 없이 이동할 수 있도록 하려면 [`shouldMoveFile`](https://developer.apple.com/documentation/Photos/PHAssetResourceCreationOptions/shouldMoveFile) 옵션을 사용합니다.",
+      "sourceHash": "aa310ed0c67d6edd260cfc5fa7f90802a489a7e8af78763a64cb37c2ed221f40",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:track-live-photo-progress:0026:0001",
+      "source": "Track Live Photo Progress",
+      "ko": "Live Photo 진행 상태 추적",
+      "sourceHash": "efa3913074a00755ff7ce9b3ae28e72937056d3b3c846ed3c30f4b946067cbd4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:track-live-photo-progress:0027:0001",
+      "source": "Capturing Live Photos adds two additional steps to the process shown in [`Tracking photo capture progress`](tracking-photo-capture-progress.md): after delivery of the still photo result (step 4), the photo output notifies you of movie capture status (step 5) and delivers the movie result (step 6).",
+      "ko": "Live Photo 캡처는 [`Tracking photo capture progress`](tracking-photo-capture-progress.md)에 표시된 프로세스에 두 단계를 추가합니다. 정지 사진 결과가 전달된 뒤(4단계), photo 출력에서 동영상 캡처 상태를 알리고(5단계), 동영상 결과를 전달합니다(6단계).",
+      "sourceHash": "866ef6090c675f504a2be24cfbe4653a7f4f45e6fd237cf7d715bf1aa0e1d76b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:track-live-photo-progress:0027:0002",
+      "source": "(Final cleanup becomes step 7.)",
+      "ko": "(최종 정리는 7단계가 됩니다.)",
+      "sourceHash": "cef8a644d3f4614074a802a3d626775dbb65b68bb1c0100c6ad5ec7a8da14761",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:track-live-photo-progress:0028:0001",
+      "source": "![Diagram of numbered Live Photo capture process steps after calling capturePhoto().](https://docs-assets.developer.apple.com/published/128c17342e87a15ff120b1259fad4824/media-2961960%402x.png)",
+      "ko": "![capturePhoto() 호출 후 번호가 붙은 Live Photo 캡처 프로세스 단계 다이어그램.](https://docs-assets.developer.apple.com/published/128c17342e87a15ff120b1259fad4824/media-2961960%402x.png)",
+      "sourceHash": "1bb299abe46cf20774d0b0e500ad34d35de884f04a01cce8033d07d3ed7b0cef",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:track-live-photo-progress:0029:0001",
+      "source": "When the user captures a Live Photo in the system Camera app, a “Live” indicator appears for a few seconds to let the user know that video and audio are still being recorded.",
+      "ko": "시스템 Camera 앱에서 사용자가 Live Photo을 캡처하면, 몇 초 동안 “Live” 표시기가 나타나 비디오와 오디오가 여전히 녹화 중임을 알려줍니다.",
+      "sourceHash": "6f010e966b467c6ac9f3853103b6dbcec03284bb04549f5c4d027061ad1a872f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:track-live-photo-progress:0029:0002",
+      "source": "To provide a similar interface in your app, implement these methods in your photo capture delegate:",
+      "ko": "앱에서 유사한 인터페이스를 제공하려면 사진 캡처 델리게이트에 다음 메서드를 구현합니다.",
+      "sourceHash": "0057e72f30edd2e47338eedc59b064c58dcbb72712f53f5d03b704cd6a542659",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:track-live-photo-progress:0030:0001",
+      "source": "The [`photoOutput(_:willBeginCaptureFor:)`](avcapturephotocapturedelegate/photooutput(_:willbegincapturefor:).md) method tells you that capture has started: implement this method to show a recording indicator.",
+      "ko": "[`photoOutput(_:willBeginCaptureFor:)`](avcapturephotocapturedelegate/photooutput(_:willbegincapturefor:).md) 메서드는 캡처가 시작되었음을 알려줍니다. 이 메서드를 구현해 녹화 표시기를 표시합니다.",
+      "sourceHash": "f7297e1d3667060dfa16c23053459c701a3278f4db7c4969355282a272120cca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:track-live-photo-progress:0030:0002",
+      "source": "The [`photoOutput(_:didFinishRecordingLivePhotoMovieForEventualFileAt:resolvedSettings:)`](avcapturephotocapturedelegate/photooutput(_:didfinishrecordinglivephotomovieforeventualfileat:resolvedsettings:).md) method tells you that a Live Photo movie is no longer recording: implement this method to hide the indicator. (Note that the movie file is not yet available at this time.)",
+      "ko": "[`photoOutput(_:didFinishRecordingLivePhotoMovieForEventualFileAt:resolvedSettings:)`](avcapturephotocapturedelegate/photooutput(_:didfinishrecordinglivephotomovieforeventualfileat:resolvedsettings:).md) 메서드는 Live Photo 동영상이 더 이상 녹화되지 않음을 알려줍니다. 이 메서드를 구현해 표시기를 숨깁니다(이 시점에는 동영상 파일이 아직 사용할 수 없습니다.). 동시 실행되는 여러 Live Photo 캡처를 처리하려면, 이러한 메서드로 진행 중인 캡처 수를 추적하고 그 수가 0이 될 때만 표시기를 숨기는 방식이 가장 좋습니다.",
+      "sourceHash": "ca6c79261ce7c4738d14362600f624dc4fb6322623387420e4c79f83703a6f15",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:track-live-photo-progress:0031:0001",
+      "source": "You can have multiple Live Photo captures running at the same time, so it’s best to use these methods to keep track of the number of captures “in flight” and hide your indicator only when that number reaches zero:",
+      "ko": "동시에 여러 개의 Live Photo 캡처를 실행할 수 있으므로, 진행 중인 캡처 수를 추적하고 해당 수가 0이 될 때만 인디케이터를 숨기도록 이 메서드들을 사용하는 것이 좋습니다.",
+      "sourceHash": "9b0a23a664ed720b0f4bf4f544e75c3b541cdd4c001b805b50c96dbc925fe59f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:track-live-photo-progress:0032:0001",
+      "source": "```swift\nclass LivePhotoCaptureProcessor: NSObject, AVCapturePhotoCaptureDelegate {\n    // ... other PhotoCaptureDelegate methods and supporting properties ...\n    \n    // A handler to call when Live Photo capture begins and ends.\n    var livePhotoStatusHandler: (Bool) -> () = { _ in }\n    \n    // A property for tracking in-progress captures and updating UI accordingly.\n    var livePhotosInProgress = 0 {\n        didSet {\n            // Update the UI accordingly based on the value of this property\n        }\n    }\n    \n    // Call the handler when PhotoCaptureDelegate methods indicate Live Photo capture is in progress.\n    func photoOutput(_ output: AVCapturePhotoOutput,\n                     willBeginCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings) {\n        let capturingLivePhoto = (resolvedSettings.livePhotoMovieDimensions.width > 0 && resolvedSettings.livePhotoMovieDimensions.height > 0)\n        livePhotoStatusHandler(capturingLivePhoto)\n    }\n    \n    func photoOutput(_ output: AVCapturePhotoOutput,\n                     didFinishRecordingLivePhotoMovieForEventualFileAt outputFileURL: URL,\n                     resolvedSettings: AVCaptureResolvedPhotoSettings) {\n        livePhotoStatusHandler(false)\n    }\n}\n```",
+      "ko": "```swift\nclass LivePhotoCaptureProcessor: NSObject, AVCapturePhotoCaptureDelegate {\n    // ... other PhotoCaptureDelegate methods and supporting properties ...\n    \n    // A handler to call when Live Photo capture begins and ends.\n    var livePhotoStatusHandler: (Bool) -> () = { _ in }\n    \n    // A property for tracking in-progress captures and updating UI accordingly.\n    var livePhotosInProgress = 0 {\n        didSet {\n            // Update the UI accordingly based on the value of this property\n        }\n    }\n    \n    // Call the handler when PhotoCaptureDelegate methods indicate Live Photo capture is in progress.\n    func photoOutput(_ output: AVCapturePhotoOutput,\n                     willBeginCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings) {\n        let capturingLivePhoto = (resolvedSettings.livePhotoMovieDimensions.width > 0 && resolvedSettings.livePhotoMovieDimensions.height > 0)\n        livePhotoStatusHandler(capturingLivePhoto)\n    }\n    \n    func photoOutput(_ output: AVCapturePhotoOutput,\n                     didFinishRecordingLivePhotoMovieForEventualFileAt outputFileURL: URL,\n                     resolvedSettings: AVCaptureResolvedPhotoSettings) {\n        livePhotoStatusHandler(false)\n    }\n}\n```",
+      "sourceHash": "b7d842033aa6cc6b8811146509cc0db4f10ba09041263db34abba29563e28d56",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0033:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[Saving captured photos](saving-captured-photos.md)",
+      "ko": "[Saving captured photos](saving-captured-photos.md)",
+      "sourceHash": "5b8f76486b4e96e275f698a62567ea8393985e8f469f9b29111a7041dd318041",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Add an image and other data from a photo capture to the photo library.",
+      "ko": "사진 캡처에서 이미지와 기타 데이터를 사진 라이브러리에 추가합니다.",
+      "sourceHash": "bf7c7996b1a52003bdbbc826ed182a94203003cc8fe885aae43ed98955c336a6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[Tracking photo capture progress](tracking-photo-capture-progress.md)",
+      "ko": "[Tracking photo capture progress](tracking-photo-capture-progress.md)",
+      "sourceHash": "9422f66c86cf894fa0963dc509d77dd4e1edfd58aa69942d3181e86351679d80",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Monitor key events during capture to provide feedback in your camera UI.",
+      "ko": "캡처 중 주요 이벤트를 모니터링하여 카메라 UI에 피드백을 제공합니다.",
+      "sourceHash": "68be6400e0a197ea248d58d044b4b125a867fe1b0e0b5e4ffba5763f92378e48",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0038:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/capturing-and-saving-live-photos)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/capturing-and-saving-live-photos)*",
+      "sourceHash": "29d54fe89e84354a578388f0b420cbb12204c5dc8ac8a3c1f5b6dc3e0f06181b",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "docId": "documentation/Accelerate/bnnsgraph/builder/tensor/select-1fiqe.md",
+  "title": "select(::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/select-1fiqe",
+  "segments": [
+    {
+      "id": "seg:heading:select:0000:0001",
+      "source": "select(_:_:)",
+      "ko": "select(_:_:)”",
+      "sourceHash": "eb4a7ebeb101789f9e0277fff6a17570110dd75d20e17105c70c1cce64ddbd34",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:select:0002:0001",
+      "source": "Adds a tensor-tensor select operation to the current graph.",
+      "ko": "현재 그래프에 텐서-텐서 select 연산을 추가합니다.",
+      "sourceHash": "ee37c22206d420a40ee947d6b2814bab22613c0ac595be72767f7a9163a2c75b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:select:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:select:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:select:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:select:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:select:0004:0004",
+      "source": "macOS 26.0+",
+      "ko": "macOS 26.0+",
+      "sourceHash": "6fcc4a770cbd02feaac4df78b954d37ef26fc9755008ee17612223162fd4ed2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:select:0004:0005",
+      "source": "tvOS 26.0+",
+      "ko": "tvOS 26.0+",
+      "sourceHash": "28934d9284c51fe0aa7b9363ccc49ea3cd840259287dd4f466466d4888ef2bf8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:select:0004:0006",
+      "source": "visionOS 26.0+",
+      "ko": "visionOS 26.0+",
+      "sourceHash": "b9425c9f5e1a021651fa0b46b55a241daf40672c905286290476062aa2732081",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:select:0004:0007",
+      "source": "watchOS 26.0+",
+      "ko": "watchOS 26.0+",
+      "sourceHash": "11b0182884b71f1fe3bdb589248a553abbab8668b5f83d492ba169654b9790a3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc select<U>(_ valueIfTrue: BNNSGraph.Builder.Tensor<U>, _ valueIfFalse: BNNSGraph.Builder.Tensor<U>) -> BNNSGraph.Builder.Tensor<U> where U : BNNSScalar\n```",
+      "ko": "```swift\nfunc select<U>(_ valueIfTrue: BNNSGraph.Builder.Tensor<U>, _ valueIfFalse: BNNSGraph.Builder.Tensor<U>) -> BNNSGraph.Builder.Tensor<U> where U : BNNSScalar\n```",
+      "sourceHash": "68ec5201e85a12b568d1621ff4daaabcf8e2695d49e578a57062b462cc1f7881",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "For example, the following code returns the `valueIfTrue` elements when the corresponding elements in `z` are `true` and the elements in `valueIfFalse` when the corresponding elements in `z` are `false`:",
+      "ko": "예를 들어, 다음 코드는 `z`의 해당 요소가 `true`일 때 `valueIfTrue` 요소를 반환하고 `z`의 해당 요소가 `false`일 때 `valueIfFalse` 요소를 반환합니다.",
+      "sourceHash": "5eb3374af6679eee3ed56137e740682e3cb5c5a2cbe1164a36648cddacf60a16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0009:0001",
+      "source": "```None\nlet ctx = try BNNSGraph.makeContext {\n\n    builder in\n\n    let z = builder.argument(dataType: Bool.self, shape: [8])\n\n    let x = builder.argument(dataType: Float.self, shape: [8])\n    let y = builder.argument(dataType: Float.self, shape: [8])\n\n    let masked = z.select(x, y)\n\n    return [ masked ]\n}\n\nlet z = BNNSTensor.allocate(initializingFrom: [true, true, false, false,\n                                               true, true, false, false],\n                            shape: [8], stride: [1])\n\nlet x = BNNSTensor.allocate(initializingFrom: [1, 2, 3, 4, 5, 6, 7, 8] as [Float],\n                            shape: [8], stride: [1])\nlet y = BNNSTensor.allocate(initializingFrom: [10, 20, 30, 40, 50, 60, 70, 80] as [Float],\n                            shape: [8], stride: [1])\n\nlet tensor_tensor = BNNSTensor.allocateUninitialized(scalarType: Float.self, shape: [8], stride: [1])\n\nvar args = [tensor_tensor, tensor_scalar, scalar_tensor, z, x, y]\n\ntry ctx.executeFunction(arguments: &args)\n\n// Prints \"[1.0, 2.0, 30.0, 40.0, 5.0, 6.0, 70.0, 80.0]\".\nprint(tensor_tensor.makeArray(of: Float.self))\n\n```",
+      "ko": "```None\nlet ctx = try BNNSGraph.makeContext {\n\n    builder in\n\n    let z = builder.argument(dataType: Bool.self, shape: [8])\n\n    let x = builder.argument(dataType: Float.self, shape: [8])\n    let y = builder.argument(dataType: Float.self, shape: [8])\n\n    let masked = z.select(x, y)\n\n    return [ masked ]\n}\n\nlet z = BNNSTensor.allocate(initializingFrom: [true, true, false, false,\n                                               true, true, false, false],\n                            shape: [8], stride: [1])\n\nlet x = BNNSTensor.allocate(initializingFrom: [1, 2, 3, 4, 5, 6, 7, 8] as [Float],\n                            shape: [8], stride: [1])\nlet y = BNNSTensor.allocate(initializingFrom: [10, 20, 30, 40, 50, 60, 70, 80] as [Float],\n                            shape: [8], stride: [1])\n\nlet tensor_tensor = BNNSTensor.allocateUninitialized(scalarType: Float.self, shape: [8], stride: [1])\n\nvar args = [tensor_tensor, tensor_scalar, scalar_tensor, z, x, y]\n\ntry ctx.executeFunction(arguments: &args)\n\n// Prints \"[1.0, 2.0, 30.0, 40.0, 5.0, 6.0, 70.0, 80.0]\".\nprint(tensor_tensor.makeArray(of: Float.self))\n\n```",
+      "sourceHash": "540a62c5ef46cda5df7ba10001b69f62d8955304b4ec566f835d42f4351432a6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`valueIfTrue`: The values that the operation returns when the corresponding value in `self` is `true`.",
+      "ko": "`valueIfTrue`: 작업에서 `self`의 해당 값이 `true`일 때 반환되는 값입니다.",
+      "sourceHash": "4719644e67fe29f4ab5918315794067f6f36e16d1d01dd642b9ef047f4121d7d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0002",
+      "source": "`valueIfFalse`: The values that the operation returns when the corresponding value in `self` is `false`.",
+      "ko": "`valueIfFalse`: 작업에서 `self`의 해당 값이 `false`일 때 반환되는 값입니다.",
+      "sourceHash": "fb03b2985c5aac8b174b812c1e1e24ef53143a2bd5708716196939a66685dcbd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:parameters:0012:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:parameters:0013:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/select(_:_:)-1fiqe)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/select(_:_:)-1fiqe)*",
+      "sourceHash": "9e41772a98b7f3001ea3855fc0417e58f78c7be4cd10c74afb3bba8f70321f1d",
+      "status": "failed"
+    }
+  ]
+}

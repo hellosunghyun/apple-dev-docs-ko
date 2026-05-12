@@ -1,0 +1,225 @@
+{
+  "docId": "documentation/AVFoundation/avassetwriter/cancelwriting.md",
+  "title": "cancelWriting()",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetwriter/cancelwriting",
+  "segments": [
+    {
+      "id": "seg:heading:cancelwriting:0000:0001",
+      "source": "cancelWriting()",
+      "ko": "cancelWriting()",
+      "sourceHash": "148154e286b3149b255b433c5d9c573675f2d454053aeb8064003ebdea3444d2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:cancelwriting:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:cancelwriting:0002:0001",
+      "source": "Cancels the creation of the output file.",
+      "ko": "출력 파일 생성 작업을 취소합니다.",
+      "sourceHash": "6da28aa6c4dd93f3b2aebdb97f40963d2028ec5b76747305ebd10aa9599be8fd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:cancelwriting:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cancelwriting:0004:0001",
+      "source": "iOS 4.1+",
+      "ko": "iOS 4.1+",
+      "sourceHash": "38f203a255362344ad62b340d6bccb0567d68d47ecc0ee0ed9dbf0ef5316f18e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cancelwriting:0004:0002",
+      "source": "iPadOS 4.1+",
+      "ko": "iPadOS 4.1+",
+      "sourceHash": "251e48df463f9f94669b19e298467b7228539e04f5c478b45073222f583007e1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cancelwriting:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cancelwriting:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cancelwriting:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cancelwriting:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc cancelWriting()\n```",
+      "ko": "```swift\nfunc cancelWriting()\n```",
+      "sourceHash": "65275ed20b047ecfc73a120d22ab727e7f6f902c632b55e0065f97dfc2a72ca3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "If the asset writer is in [`AVAssetWriter.Status.failed`](avassetwriter/status-swift.enum/failed.md) or [`AVAssetWriter.Status.completed`](avassetwriter/status-swift.enum/completed.md) state, calling this method has no effect.",
+      "ko": "This method causes the receiver to resume writing captured samples to the current output file returned by [`outputFileURL`](avcapturefileoutput/outputfileurl.md), after recording was previously paused using [`pauseRecording()`](avcapturefileoutput/pauserecording().md).",
+      "sourceHash": "8483f68b3749dd728bc43db14e7ce3c08dac66904aa6438e662a95130b42032e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Otherwise, invoking it blocks the calling thread until the asset writer finishes canceling the writing session.",
+      "ko": "그렇지 않으면 이 메서드를 호출해 호출 스레드가 에셋 라이터가 쓰기 세션 취소를 완료할 때까지 블록됩니다.",
+      "sourceHash": "4e4dee4d0862826c1b19542465307ad788d50d8a3c035d1c6419584a63dc0596",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "If the asset writer created an output file during the writing process, calling this method deletes the file.",
+      "ko": "에셋 라이터가 쓰기 과정에서 출력 파일을 생성한 경우 이 메서드를 호출하면 해당 파일이 삭제됩니다.",
+      "sourceHash": "e09edea0e80256663f9c017b8c5222554961e20d1efe9ecf2744fddada47bf3c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[func start() throws](avassetwriter/start.md)",
+      "ko": "[func start() throws](avassetwriter/start.md)",
+      "sourceHash": "f3fc20f710d56b44e9bef9ec36b3774bcbc2484db729bfcc61178af5ec05a955",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "Prepares the writer to write media data to its output file.",
+      "ko": "작성기가 출력 파일에 미디어 데이터를 쓰도록 준비합니다.",
+      "sourceHash": "4458536b948b727599487ec2c0af2674f543ffbac481e73ca12e93e72b8ff864",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func startWriting() -> Bool](avassetwriter/startwriting.md)",
+      "ko": "[func startWriting() -> Bool](avassetwriter/startwriting.md)",
+      "sourceHash": "db99e76d8ff2bc91c391457d6d2ac88201c563a0c86ff81fa91257cb6aaa89c9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Tells the writer to start writing its output.",
+      "ko": "라이터에 출력 쓰기를 시작하라고 지시합니다.",
+      "sourceHash": "867ea64802a1ac2787e1b9d9cb5b444907c8ad42a3030becc8f5c01d0f18fb3a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func startSession(atSourceTime: CMTime)](avassetwriter/startsession(atsourcetime:).md)",
+      "ko": "[func startSession(atSourceTime: CMTime)](avassetwriter/startsession(atsourcetime:).md)",
+      "sourceHash": "f15d0918cc4256ddad3d0c55e63c8d53c77c6523dfefe6ef9f04062bfee0641c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Starts an asset-writing session.",
+      "ko": "에셋 쓰기 세션을 시작합니다.",
+      "sourceHash": "cb0d2fdce13bb2783581a617969a48a16108bc75de888b9d3254a050a5ec0d9a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func endSession(atSourceTime: CMTime)](avassetwriter/endsession(atsourcetime:).md)",
+      "ko": "[func endSession(atSourceTime: CMTime)](avassetwriter/endsession(atsourcetime:).md)",
+      "sourceHash": "10f0b582b7067bd7fb6bdeaa2eae52a0cf00815e6f9ae7900d505fd1a15f4149",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Finishes an asset-writing session.",
+      "ko": "에셋 쓰기 세션을 종료합니다.",
+      "sourceHash": "d78098b30397356ae922415b95fcbbdda0f447ffc8491be4ce8f3456ebc2a460",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[func finishWriting(completionHandler: () -> Void)](avassetwriter/finishwriting(completionhandler:).md)",
+      "ko": "[func finishWriting(completionHandler: () -> Void)](avassetwriter/finishwriting(completionhandler:).md)",
+      "sourceHash": "938827e0b73befb273da1d6f8dd736dcab1a04c61c76e25cdae3f1f908501256",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "Marks all unfinished inputs as finished and completes the writing of the output file.",
+      "ko": "미완료 입력을 모두 완료로 표시하고 출력 파일 쓰기를 완료합니다.",
+      "sourceHash": "9a4906b000aca0b9d0cba517e6f37333b2cfc4cc272805871b5070bb923b3b79",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[func finishWriting() -> Bool](avassetwriter/finishwriting.md)",
+      "ko": "[func finishWriting() -> Bool](avassetwriter/finishwriting.md)",
+      "sourceHash": "d573fe12ae8e39bd67c9e4cc8a1ebe8f9599bee06633901cdb95885c6bd65fac",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "Completes the writing of the output file.",
+      "ko": "출력 파일 쓰기를 완료합니다.",
+      "sourceHash": "f45dfc7506e2c542485cc1af4c3885752f5f79b0bd60f74cd310f129d2807f01",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0023:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetwriter/cancelwriting())*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetwriter/cancelwriting())*",
+      "sourceHash": "fe2a46481771fb8eb27b9b1078f7bd7c2f1aab6406bed8799caac19a4f1b1a15",
+      "status": "machine_translated"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "docId": "documentation/ARKit/verifying-device-support-and-user-permission.md",
+  "title": "Verifying Device Support and User Permission",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/verifying-device-support-and-user-permission",
+  "segments": [
+    {
+      "id": "seg:heading:verifying-device-support-and-user-permission:0000:0001",
+      "source": "Verifying Device Support and User Permission",
+      "ko": "장치 지원 및 사용자 권한 확인",
+      "sourceHash": "b6cb62ecca8cd8b736670cba07013fe9a6af9268ab4d618212aff82f39d2fa6b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:verifying-device-support-and-user-permission:0001:0001",
+      "source": "**Framework**: ARKit",
+      "ko": "**프레임워크**: ARKit",
+      "sourceHash": "f52f1f198768fecfb3eca7e0900afdc8bbc7fd0775dd02734574f44e18a1beee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:verifying-device-support-and-user-permission:0002:0001",
+      "source": "Check whether your app can use ARKit and respect user privacy at runtime.",
+      "ko": "앱이 런타임에서 ARKit을 사용할 수 있는지와 사용자 개인정보 보호를 준수할 수 있는지를 확인합니다.",
+      "sourceHash": "7289e6849d1390ac326c2ce366f7aca29ffb28561acdf4cbb1ed743d8265ec82",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "ARKit requires iOS 11.0 or later and an iOS device with an A9 or later processor.",
+      "ko": "ARKit은 iOS 11.0 이상과 A9 이상 프로세서를 탑재한 iOS 기기를 요구합니다.",
+      "sourceHash": "932f3a7f686ce5634e8391bec27440eddae443ae261dd0d3d2932601af89c915",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "Some ARKit features require later iOS versions or specific devices.",
+      "ko": "일부 ARKit 기능은 더 높은 iOS 버전 또는 특정 기기를 요구합니다.",
+      "sourceHash": "cb5bb0f4a7d6ca33e531225b726cacc10040d0cc73f44b322e6d99788051003d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0003",
+      "source": "ARKit also uses a device camera, so you need to configure iOS privacy controls so the user can permit camera access for your app.",
+      "ko": "ARKit은 기기 카메라도 사용하므로 앱에서 사용자가 카메라 접근을 허용할 수 있도록 iOS 개인정보 보호 설정을 구성해야 합니다.",
+      "sourceHash": "9e31882a7b3942df7954607d0acdc4df3c1db5b7873ce7069ca41665f8ce04bd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0001",
+      "source": "How to handle device compatibility support depends on how your app uses ARKit:",
+      "ko": "ARKit를 앱에서 사용하는 방식에 따라 기기 호환성 지원 처리 방법이 달라집니다.",
+      "sourceHash": "484e5fd30ead7febae782f9b11ba4908abecd57e29a0b3b75eb8ef5ff3c691f5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0006:0001",
+      "source": "**If the basic functionality of your app requires AR (using the back camera):** Add the `arkit` key in the [`UIRequiredDeviceCapabilities`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW3) section of your app’s `Info.plist` file. Using this key makes your app available only to ARKit-compatible devices.",
+      "ko": "**앱의 기본 기능이 AR(후면 카메라 사용)를 필요로 하는 경우:** 앱의 `Info.plist` 파일에서 [`UIRequiredDeviceCapabilities`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW3) 섹션에 `arkit` 키를 추가합니다. 이 키를 사용하면 앱이 ARKit와 호환되는 기기에서만 사용할 수 있습니다.",
+      "sourceHash": "5f41f6a897d0574a41955a35097af4f97709dfafa9bf4134a65f39de9a48fade",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0006:0002",
+      "source": "**If augmented reality is a secondary feature of your app:** Check for whether the current device supports the AR configuration you want to use by testing the [`isSupported`](arconfiguration/issupported.md) property of the appropriate [`ARConfiguration`](arconfiguration.md) subclass.",
+      "ko": "**앱에서 증강 현실이 보조 기능인 경우:** 사용하려는 AR 구성에 대한 현재 기기 지원 여부를 적절한 [`ARConfiguration`](arconfiguration.md) 하위 클래스의 [`isSupported`](arconfiguration/issupported.md) 속성을 테스트하여 확인합니다.",
+      "sourceHash": "8800350e3bfb3937238eb1691f7253fa0a9c1e57f47e86ddec51ff888ed68d07",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0006:0003",
+      "source": "**If your app uses face-tracking AR:** Face tracking requires the front-facing TrueDepth camera on iPhone X. Your app remains available on other devices, so you must test the [`ARFaceTrackingConfiguration`](arfacetrackingconfiguration.md).[`isSupported`](arconfiguration/issupported.md) property to determine face-tracking support on the current device.",
+      "ko": "**앱이 face-tracking AR을 사용하는 경우:** 얼굴 추적은 iPhone X의 전면 TrueDepth 카메라가 필요합니다. 앱은 다른 기기에서도 사용 가능하므로 현재 기기에서 얼굴 추적 지원 여부를 확인하려면 [`ARFaceTrackingConfiguration`](arfacetrackingconfiguration.md).[`isSupported`](arconfiguration/issupported.md) 속성을 테스트해야 합니다.",
+      "sourceHash": "c424bab181fb39d1ec149730272ef72b47c2580738cf7d6e9951e37c43f3db81",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0007:0001",
+      "source": "💡 **Tip**: Check the [`isSupported`](arconfiguration/issupported.md) property before offering AR features in your app’s UI, so that users on unsupported devices aren’t disappointed by trying to access those features.",
+      "ko": "💡 **팁**: 앱 UI에서 AR 기능을 제공하기 전에 [`isSupported`](arconfiguration/issupported.md) 속성을 확인하여, 지원되지 않는 기기의 사용자가 해당 기능에 접근하다가 실망하지 않도록 합니다.",
+      "sourceHash": "b5a344cb49bdc32a81b1790703e6a4c64d4a89dc675c5bee204db752eb36c712",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:handle-user-consent-and-privacy:0008:0001",
+      "source": "Handle User Consent and Privacy",
+      "ko": "사용자 동의 및 개인정보 보호 처리",
+      "sourceHash": "4f32541f6cb0019161ff4c00b087167d09aace1f2a5b9f9eaf1a61a363ff250b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-consent-and-privacy:0009:0001",
+      "source": "For your app to use ARKit, the user must explicitly grant your app permission for camera access.",
+      "ko": "앱이 ARKit를 사용하려면 사용자가 앱에 카메라 접근 권한을 명시적으로 부여해야 합니다.",
+      "sourceHash": "8ed2232b7fba2d656932fca9f11959c29650304eacd7dbd56841c644976a5f18",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-consent-and-privacy:0009:0002",
+      "source": "ARKit automatically asks the user for permission the first time your app runs an AR session.",
+      "ko": "ARKit는 앱이 AR 세션을 처음 실행할 때 사용자에게 자동으로 권한을 요청합니다.",
+      "sourceHash": "068dc51ab655e07fe1698da9cec01c08ce70c0b0acb086f390e4252d219be126",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-consent-and-privacy:0010:0001",
+      "source": "iOS requires your app to provide a static message to be displayed when the system asks for camera or microphone permission.",
+      "ko": "iOS는 시스템이 카메라 또는 마이크 권한을 요청할 때 표시할 정적 메시지를 앱에서 제공하도록 요구합니다.",
+      "sourceHash": "8b5127049e0d3caa0a9b303e3cd145b3eb6626e802c7725a2197f60f2637ec1f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-consent-and-privacy:0010:0002",
+      "source": "Your app’s `Info.plist` file must include the [`NSCameraUsageDescription`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/plist/info/NSCameraUsageDescription) key.",
+      "ko": "앱의 `Info.plist` 파일에는 [`NSCameraUsageDescription`](https://developer.apple.comhttps://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/plist/info/NSCameraUsageDescription) 키가 포함되어야 합니다.",
+      "sourceHash": "9fc9c3b3833274e75a38b20dfd7e0078f4233f3e43cba7c6ba19f4c5b6bcdfb6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-consent-and-privacy:0010:0003",
+      "source": "For that key, provide text that explains why your app needs camera access so that the user can feel confident granting permission to your app.",
+      "ko": "해당 키에는 앱이 카메라 접근이 필요한 이유를 설명하여 사용자가 앱에 대한 권한을 신뢰하고 허용할 수 있도록 하는 텍스트를 제공합니다.",
+      "sourceHash": "d6454031734e0a6ea7c6235ba39a24ebbf00564699eec23ad5dd7a64c9748b52",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:handle-user-consent-and-privacy:0011:0001",
+      "source": "**Note**: If you create a new ARKit app using the Xcode template, a default camera usage description is provided for you.",
+      "ko": "**참고**: Xcode 템플릿으로 새 ARKit 앱을 만들면 기본 카메라 사용 설명 메시지가 제공됩니다.",
+      "sourceHash": "2bad3a98af9b40efe433c7e286bc02ae35ef98ad2672908f4de6be7bf34281e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-consent-and-privacy:0012:0001",
+      "source": "If your app uses [`ARFaceTrackingConfiguration`](arfacetrackingconfiguration.md), ARKit provides your app with personal facial information.",
+      "ko": "앱에서 [`ARFaceTrackingConfiguration`](arfacetrackingconfiguration.md)을(를) 사용하면 ARKit는 개인 얼굴 정보를 앱에 제공합니다.",
+      "sourceHash": "0f409681dc0012b043e4b9f9fac01bf5009621365f0aca8390c00ae9077a1ed1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-consent-and-privacy:0012:0002",
+      "source": "If you use ARKit face tracking features, your app must include a privacy policy describing to users how you intend to use face tracking and face data.",
+      "ko": "ARKit 얼굴 추적 기능을 사용하는 경우, 앱에는 얼굴 추적 및 얼굴 데이터를 사용하려는 방식에 대해 사용자에게 설명하는 개인정보 처리방침이 포함되어야 합니다.",
+      "sourceHash": "8c25407e8d9d57a5f3d0d37ee543050e47944f444980379452aff25660828af1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:handle-user-consent-and-privacy:0012:0003",
+      "source": "For details, see the [`Apple Developer Program License Agreement`](https://developer.apple.comhttps://developer.apple.com/terms/).",
+      "ko": "자세한 내용은 [`Apple Developer Program License Agreement`](https://developer.apple.comhttps://developer.apple.com/terms/)를 참조하세요.",
+      "sourceHash": "7b75beaac268338789ca6c33777bd549480506f3e729f1fc0a6cb59533101ded",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[class ARSession](arsession.md)",
+      "ko": "[class ARSession](arsession.md)",
+      "sourceHash": "c8a9418b7bf43bfb4fa8fb0df9730d8f74c7c29f61056ce322f9d1bb03823008",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "The object that manages the major tasks associated with every AR experience, such as motion tracking, camera passthrough, and image analysis.",
+      "ko": "움직임 추적, 카메라 패스스루, 이미지 분석과 같은 AR 경험과 관련된 주요 작업을 관리하는 개체입니다.",
+      "sourceHash": "be06b3e2299b570999594006c2bd898eccc1edb5b09fa7de13085b588b501642",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[class ARAnchor](aranchor.md)",
+      "ko": "[class ARAnchor](aranchor.md)",
+      "sourceHash": "30dbbb2746e6befe845050ef21badb12169d7f1feb04fa43ca5cfd9c38425bd1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "An object that specifies the position and orientation of an item in the physical environment.",
+      "ko": "물리적 환경에서 항목의 위치와 방향을 지정하는 개체입니다.",
+      "sourceHash": "2c6992cb6fff431743e2a61e2c688c3b8d069849cf16ca2e484bbf68078ebf06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[ARKit in iOS](arkit-in-ios.md)",
+      "ko": "[ARKit in iOS](avspeechsynthesisprovidervoice/supportedlanguages.md)",
+      "sourceHash": "7739eab53670af15b33d77ee0e8ef68fc8a9f3a1dbeca7b29ad0adca7c9ca435",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Integrate iOS device camera and motion features to produce augmented reality experiences in your app or game.",
+      "ko": "앱이나 게임에서 iOS 기기 카메라와 모션 기능을 통합해 증강 현실 경험을 만듭니다.",
+      "sourceHash": "fbcf7ef78233587c4da8558159469a126a9e34b2e0b8e44e31e45d0f5d90c738",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/verifying-device-support-and-user-permission)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/verifying-device-support-and-user-permission)*",
+      "sourceHash": "e30e0fd23fa01cb84b3b86b76af807739544b9d0a987e983c5abf672b6457173",
+      "status": "preserved"
+    }
+  ]
+}

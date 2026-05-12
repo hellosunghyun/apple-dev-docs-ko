@@ -1,0 +1,120 @@
+{
+  "docId": "documentation/ARKit/arsessionobserver/session-didoutputaudiosamplebuffer.md",
+  "title": "session(:didOutputAudioSampleBuffer:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arsessionobserver/session-didoutputaudiosamplebuffer",
+  "segments": [
+    {
+      "id": "seg:heading:sessiondidoutputaudiosamplebuffer:0000:0001",
+      "source": "session(_:didOutputAudioSampleBuffer:)",
+      "ko": "session(_:didOutputAudioSampleBuffer:)",
+      "sourceHash": "8d2ca072d7453fe07a208339cdcb5127abe4aa4879ab281647ca57716d2d140c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sessiondidoutputaudiosamplebuffer:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: method",
+      "ko": "**Framework**: ARKit **Kind**: method",
+      "sourceHash": "9b335dd0cadec1f426ce27810957dcda749fe1d5008130ce607d61fcd8b52bea",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:sessiondidoutputaudiosamplebuffer:0002:0001",
+      "source": "Tells the delegate that a new sample buffer of recorded audio is available.",
+      "ko": "새로운 녹음 오디오 샘플 버퍼를 델리게이트에서 사용할 수 있음을 알려줍니다.",
+      "sourceHash": "3ce338b7da12c12fb2c15aa6b9403d21d571fb2de4c89e5150c3448d9b77990f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sessiondidoutputaudiosamplebuffer:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sessiondidoutputaudiosamplebuffer:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sessiondidoutputaudiosamplebuffer:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sessiondidoutputaudiosamplebuffer:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\noptional func session(_ session: ARSession, didOutputAudioSampleBuffer audioSampleBuffer: CMSampleBuffer)\n```",
+      "ko": "```swift\noptional func session(_ session: ARSession, didOutputAudioSampleBuffer audioSampleBuffer: CMSampleBuffer)\n```",
+      "sourceHash": "d6e195da588962cfeff09af3a979cd4aaa854439c5b2c952aef710d047eaf1f0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "ARKit calls this method on your delegate object only if you’re running an AR session with a configuration whose [`providesAudioData`](arconfiguration/providesaudiodata.md) setting is [`true`](https://developer.apple.com/documentation/Swift/true).",
+      "ko": "The value of this property is [`nil`](https://developer.apple.com/documentation/ObjectiveC/nil-227m0) if switching between multiple output sources isn’t currently possible.",
+      "sourceHash": "ba4ab206d55e97f0db3494c6c184fed4a98b3e921564eb54014ebb01f06e9fe7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0009:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0010:0001",
+      "source": "`session`: The session providing information.",
+      "ko": "`session`: 정보를 제공하는 session입니다.",
+      "sourceHash": "600cdb5e7dc9d4f237ff104cf70ff37cfd396f5f23bde3519021d856b6ea49e2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0002",
+      "source": "`audioSampleBuffer`: The sample buffer that was output.",
+      "ko": "`audioSampleBuffer`: 출력된 sample buffer입니다.",
+      "sourceHash": "2c7d6fe67f15089c30ababb2b89d6b13ff0ba3554d3aa06b838b458cd45efaeb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:parameters:0011:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:parameters:0012:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arsessionobserver/session(_:didoutputaudiosamplebuffer:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arsessionobserver/session(_:didoutputaudiosamplebuffer:))*",
+      "sourceHash": "274b60a88ce8a55d0a5040e6c7ec24aad33c668f3476d57fa68aab1080f12e13",
+      "status": "machine_translated"
+    }
+  ]
+}

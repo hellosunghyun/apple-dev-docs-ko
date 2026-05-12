@@ -1,0 +1,288 @@
+{
+  "docId": "documentation/ARKit/geometrysource.md",
+  "title": "GeometrySource",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/geometrysource",
+  "segments": [
+    {
+      "id": "seg:heading:geometrysource:0000:0001",
+      "source": "GeometrySource",
+      "ko": "GeometrySource",
+      "sourceHash": "3b521947d1090dadb23638c0db3a569515e756b6eff60c070b7507951de5b976",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:geometrysource:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: struct",
+      "ko": "**Framework**: ARKit **Kind**: struct",
+      "sourceHash": "7828408ca41f8d0a0b77afe93bd4a9c24e1badc2db803a06e68bc17b2793fa69",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:geometrysource:0002:0001",
+      "source": "A container for geometrical vector data.",
+      "ko": "기하학적 벡터 데이터의 컨테이너입니다.",
+      "sourceHash": "3a0ba28b5ac057e48db6d68d22a0985df9b0df4beefd26226b014894ec691edd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:geometrysource:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:geometrysource:0004:0001",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstruct GeometrySource\n```",
+      "ko": "```swift\nstruct GeometrySource\n```",
+      "sourceHash": "8319b7298e3409c14215ffa6a95c8dcce41827d8277c0b6d74d3a3962691ca41",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Mesh-anchor geometry ([`MeshDescriptor`](https://developer.apple.com/documentation/RealityKit/MeshDescriptor)) uses geometry sources to hold 3D data like vertices and normals in an efficent, array-like format.",
+      "ko": "메시 앵커 지오메트리([`MeshDescriptor`](https://developer.apple.com/documentation/RealityKit/MeshDescriptor))는 정점과 노멀과 같은 3D 데이터를 효율적인 배열 유사 형식으로 보유하기 위해 지오메트리 소스를 사용합니다.",
+      "sourceHash": "1c2c904232a80219c28db70c2bba7928004c5b44b1e18b5b7d238b9bb771917f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "A Metal buffer wraps the data and other properties specify how to interpret that data.",
+      "ko": "Metal 버퍼가 데이터를 래핑하고 다른 속성이 해당 데이터를 해석하는 방법을 지정합니다.",
+      "sourceHash": "260dc4f84f2d92213930a1302662cd169c588d57562de3f0490fc7f9f001d10f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "If [`componentsPerVector`](geometrysource/componentspervector.md) is greater than one, the element type of the geometry-source array is itself a sequence (pairs, triplets, and so on).",
+      "ko": "[`componentsPerVector`](https://docs-assets.developer.apple.com/published/9ec57b947ed7064da9005afeac529989/figure2-annotated.png)가 1보다 크면, 지오메트리 소스 배열의 요소 타입 자체가 시퀀스(쌍, 삼중 등)입니다.",
+      "sourceHash": "09feeefc16cc019736ae45cd36e2a550574d3f3573bdebc37c1c69cd926b305a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inspecting-geometry-data:0011:0001",
+      "source": "Inspecting geometry data",
+      "ko": "지오메트리 데이터 검사",
+      "sourceHash": "983b60dbd8c995b692c424538d310bd086c465ed21f1e5ee4a8003746b134b66",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-geometry-data:0012:0001",
+      "source": "[var buffer: any MTLBuffer](geometrysource/buffer.md)",
+      "ko": "[var buffer: any MTLBuffer](geometrysource/buffer.md)",
+      "sourceHash": "c8e893314982eef2dfd2ef44ea7ffbfbd4764201f2afffa0175671fbe2e59f57",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-geometry-data:0013:0001",
+      "source": "A Metal buffer that contains per-vector data for a geometry source.",
+      "ko": "지오메트리 소스의 벡터별 데이터를 포함하는 Metal 버퍼입니다.",
+      "sourceHash": "e2fd1caadcbd9ba731a15921c867d804c71da262b7820f3083b1e3728e3f1e49",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-geometry-data:0014:0001",
+      "source": "[var count: Int](geometrysource/count.md)",
+      "ko": "[var count: Int](geometrysource/count.md)",
+      "sourceHash": "ad5871b82f617391f81c8dcc2ca3149f23ea41ec09d7bf6289ace6f0eb1325f4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-geometry-data:0015:0001",
+      "source": "The number of vectors in a geometry source.",
+      "ko": "지오메트리 소스의 벡터 수입니다.",
+      "sourceHash": "525e9bf2ae6a81cc7bdc100b3f57b6b1788965642375d450d6a5ed7552418847",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-geometry-data:0016:0001",
+      "source": "[var format: MTLVertexFormat](geometrysource/format.md)",
+      "ko": "[var format: MTLVertexFormat](geometrysource/format.md)",
+      "sourceHash": "73da9538cc76bbd9e7fe6278f56abba5a3e9777007b03788b6c277d7ef3e2d8d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-geometry-data:0017:0001",
+      "source": "The vertex format for data in a geometry source’s buffer.",
+      "ko": "지오메트리 소스 버퍼의 정점 형식입니다.",
+      "sourceHash": "a337855436cff701abcd951eb5f17c7c87eb93ecd1173447b1bd60ed91b76a14",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-geometry-data:0018:0001",
+      "source": "[var componentsPerVector: Int](geometrysource/componentspervector.md)",
+      "ko": "[var componentsPerVector: Int](geometrysource/componentspervector.md)",
+      "sourceHash": "7e173156b4b5da4f6c68c7650d98b15c61f167ea5bcbcd86cdb24815e9da3cfd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-geometry-data:0019:0001",
+      "source": "The number of scalar components in each vector in a geometry source.",
+      "ko": "지오메트리 소스의 각 벡터에 있는 스칼라 구성 요소 수입니다.",
+      "sourceHash": "de5ec493839ffd2634b09289f7474dd33386ffc0d049d225d47495952a405649",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-geometry-data:0020:0001",
+      "source": "[var offset: Int](geometrysource/offset.md)",
+      "ko": "[var offset: Int](geometrysource/offset.md)",
+      "sourceHash": "1ba0d1302f6caf44a7bf0d736da4b8ca12cb3bacb290ec0adf7c5ed6e2255743",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-geometry-data:0021:0001",
+      "source": "The offset, in bytes, from the beginning of a geometry source’s buffer.",
+      "ko": "지오메트리 소스 버퍼 시작점에서 바이트 단위로 측정한 오프셋입니다.",
+      "sourceHash": "f3e74f4e566989f2f48004adf375d59485f3ad891ad01c3df20ac81df885c8ef",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-geometry-data:0022:0001",
+      "source": "[var stride: Int](geometrysource/stride.md)",
+      "ko": "[var stride: Int](geometrysource/stride.md)",
+      "sourceHash": "00244e205368c97f463caba3914879c17a9fbb49a1a1ce1440b7ad7a7ed750be",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-geometry-data:0023:0001",
+      "source": "The number of bytes between one vector and another in a geometry source’s buffer.",
+      "ko": "지오메트리 소스 버퍼에서 한 벡터와 다음 벡터 사이의 바이트 수입니다.",
+      "sourceHash": "7c0521a2c3d29588efa3ccca5aa0cf3c6f0ff88241b85855e2fa86675cf16d88",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-geometry-data:0024:0001",
+      "source": "[var description: String](geometrysource/description.md)",
+      "ko": "[var description: String](geometrysource/description.md)",
+      "sourceHash": "11f027bd583291ccebd108d61b23891ad06833b1449f7b137746e994c463a8ac",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:inspecting-geometry-data:0025:0001",
+      "source": "A textual representation of this geometry source.",
+      "ko": "이 지오메트리 소스의 텍스트 표현입니다.",
+      "sourceHash": "68ab2e7a1160153039bea775e8d9607512be3c0ae463b9a43934cc172c27a466",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0026:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0027:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0001",
+      "source": "[Copyable](../Swift/Copyable.md)",
+      "ko": "[Copyable](../Swift/Copyable.md)",
+      "sourceHash": "97209cb9173a2260422d13e2e0e206fdea5c86a623725a26a8dd32ebdc0c09ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0002",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0003",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0004",
+      "source": "[Escapable](../Swift/Escapable.md)",
+      "ko": "[Escapable](../Swift/Escapable.md)",
+      "sourceHash": "7feb6ca3e734e642d53793abf798a6853704d254bdd241d9c351c5a688861bf1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0005",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0028:0006",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0029:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[struct GeometryElement](geometryelement.md)",
+      "ko": "[struct GeometryElement](geometryelement.md)",
+      "sourceHash": "953053547f6d7000a4dcec0045a2fab87edca195383eb4af31b3d29e0060c39f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "A container for vertex indices of lines or triangles.",
+      "ko": "선 또는 삼각형의 정점 인덱스를 위한 컨테이너입니다.",
+      "sourceHash": "d9052dc3ca2cae18d2531097ae1c135e64ed5c626393afadf4fc81ebaaf9d34e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0032:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/geometrysource)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/geometrysource)*",
+      "sourceHash": "a81a835918e43be2c94ef44ecbef338d5fc300d8bf54032661eadfecb3dd3ace",
+      "status": "preserved"
+    }
+  ]
+}

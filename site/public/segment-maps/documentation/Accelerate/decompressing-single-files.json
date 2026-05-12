@@ -1,0 +1,253 @@
+{
+  "docId": "documentation/Accelerate/decompressing-single-files.md",
+  "title": "Decompressing single files",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/decompressing-single-files",
+  "segments": [
+    {
+      "id": "seg:heading:decompressing-single-files:0000:0001",
+      "source": "Decompressing single files",
+      "ko": "단일 파일 압축 해제",
+      "sourceHash": "539711a9d95dc7954de49b62443f886c96a0a0cee0890851f9097bddf2000b11",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:decompressing-single-files:0001:0001",
+      "source": "**Framework**: Accelerate",
+      "ko": "**프레임워크**: Accelerate",
+      "sourceHash": "29a5b8860afd67d96c79fe2585ca71addeb9f39a3fe9698cbaba2a7451def11b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:decompressing-single-files:0002:0001",
+      "source": "Recreate a single file from a compressed file.",
+      "ko": "압축 파일에서 단일 파일을 재생성합니다.",
+      "sourceHash": "70f97ac3a4829577729ec1966750e27b23716c484b1978ae3424584a0ded8153",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "In this article, you’ll learn how to use AppleArchive to decompress a previously compressed file, and write the decompressed data to a file.",
+      "ko": "이 문서에서는 AppleArchive를 사용하여 이전에 압축된 파일을 압축 해제하고, 압축 해제된 데이터를 파일에 쓰는 방법을 알아봅니다.",
+      "sourceHash": "3fa853486d989c44b5d1dbb17e982abeca412d89317527a5eef516803843272c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0001",
+      "source": "The code below decompresses the file generated using the steps explained in [`Compressing single files`](compressing-single-files.md).",
+      "ko": "아래 코드는 [`Compressing single files`](compressing-single-files.md)에서 설명된 단계를 사용해 생성된 파일을 압축 해제합니다.",
+      "sourceHash": "472bf7dac82508d5a460420f3e58c5328c00744ed2418979ea8ba01076f4f784",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:create-the-file-stream-to-read-the-source-archive:0006:0001",
+      "source": "Create the File Stream to Read the Source Archive",
+      "ko": "원본 아카이브를 읽기 위한 파일 스트림 생성",
+      "sourceHash": "352932cb123dce51393d16e07257269f05f3c9616464299ee6a26cb28b14af1c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:create-the-file-stream-to-read-the-source-archive:0007:0001",
+      "source": "The [`ArchiveByteStream`](https://developer.apple.com/documentation/AppleArchive/ArchiveByteStream) class provides static factory methods that create streams for different functions.",
+      "ko": "[`ArchiveByteStream`](https://developer.apple.com/documentation/AppleArchive/ArchiveByteStream) 클래스는 다양한 기능에 대한 스트림을 생성하는 정적 팩토리 메서드를 제공합니다.",
+      "sourceHash": "c01989a37a57069567d20532f54784566b83f484370fe2229e643a0d546bf329",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:create-the-file-stream-to-read-the-source-archive:0007:0002",
+      "source": "In this case, use [`fileStream(path:mode:options:permissions:)`](https://developer.apple.com/documentation/AppleArchive/ArchiveByteStream/fileStream(path:mode:options:permissions:)) to create a byte stream that reads the source file:",
+      "ko": "이 경우 소스 파일을 읽는 바이트 스트림을 생성하려면 [`fileStream(path:mode:options:permissions:)`](https://developer.apple.com/documentation/AppleArchive/ArchiveByteStream/fileStream(path:mode:options:permissions:))를 사용합니다.",
+      "sourceHash": "2f0d5b003b82b6dc32654cbfc68b650124e114a6767675585cb81ba763a01e3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:create-the-file-stream-to-read-the-source-archive:0008:0001",
+      "source": "```swift\nlet archiveFilePath = FilePath(NSTemporaryDirectory() + \"myFile.pdf.lzfse\")\n\nguard let readFileStream = ArchiveByteStream.fileStream(\n        path: archiveFilePath,\n        mode: .readOnly,\n        options: [ ],\n        permissions: FilePermissions(rawValue: 0o644)) else {\n    return\n}\ndefer {\n    try? readFileStream.close()\n}\n```",
+      "ko": "```swift\nlet archiveFilePath = FilePath(NSTemporaryDirectory() + \"myFile.pdf.lzfse\")\n\nguard let readFileStream = ArchiveByteStream.fileStream(\n        path: archiveFilePath,\n        mode: .readOnly,\n        options: [ ],\n        permissions: FilePermissions(rawValue: 0o644)) else {\n    return\n}\ndefer {\n    try? readFileStream.close()\n}\n```",
+      "sourceHash": "485ee2594919cac109f36f38fddaae2fdc0a948ad0b3e748b5735ea8f7bbf850",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:create-the-file-stream-to-write-the-decompressed-file:0009:0001",
+      "source": "Create the File Stream to Write the Decompressed File",
+      "ko": "압축 해제된 파일을 쓰기 위한 파일 스트림 생성",
+      "sourceHash": "6c79ac7f1f1b1005e3643c6bf60450e52147e3d5daf9d3de6e2be4d776ff3acc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:create-the-file-stream-to-write-the-decompressed-file:0010:0001",
+      "source": "You also use [`fileStream(path:mode:options:permissions:)`](https://developer.apple.com/documentation/AppleArchive/ArchiveByteStream/fileStream(path:mode:options:permissions:)) to create the file stream that writes the decompressed file to the file system.",
+      "ko": "You also use [`fileStream(path:mode:options:permissions:)`](https://developer.apple.com/documentation/AppleArchive/ArchiveByteStream/fileStream(path:mode:options:permissions:)) to create the file stream that writes the decompressed file to the file system.",
+      "sourceHash": "34dc4e98ee78a4413775c48149708cc5e3bddd77f764fe2afab167703114030a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:create-the-file-stream-to-write-the-decompressed-file:0010:0002",
+      "source": "In this case, use the [`writeOnly`](https://developer.apple.com/documentation/System/FileDescriptor/AccessMode/writeOnly) mode:",
+      "ko": "이 경우 [`writeOnly`](https://developer.apple.com/documentation/System/FileDescriptor/AccessMode/writeOnly) 모드를 사용합니다.",
+      "sourceHash": "e49143c6ad7572ad173acd75727433fd412414d7ad09e1aa00b158479843e983",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:create-the-file-stream-to-write-the-decompressed-file:0011:0001",
+      "source": "```swift\nlet destinationFilePath = FilePath(NSTemporaryDirectory() + \"myFile_decompressed.pdf\")\n\nguard let writeFileStream = ArchiveByteStream.fileStream(\n        path: destinationFilePath,\n        mode: .writeOnly,\n        options: [ .create ],\n        permissions: FilePermissions(rawValue: 0o644)) else {\n    return\n}\ndefer {\n    try? writeFileStream.close()\n}\n```",
+      "ko": "```swift\nlet destinationFilePath = FilePath(NSTemporaryDirectory() + \"myFile_decompressed.pdf\")\n\nguard let writeFileStream = ArchiveByteStream.fileStream(\n        path: destinationFilePath,\n        mode: .writeOnly,\n        options: [ .create ],\n        permissions: FilePermissions(rawValue: 0o644)) else {\n    return\n}\ndefer {\n    try? writeFileStream.close()\n}\n```",
+      "sourceHash": "d655eb8e608f47bd81aa13fb6fc6e473c50e578bdbf8caf3e2a010097471a7ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:create-the-decompression-stream:0012:0001",
+      "source": "Create the Decompression Stream",
+      "ko": "압축 해제 스트림 생성",
+      "sourceHash": "961ed0bf97c265f4dcdaf9e332c94b12e8cc1e2c21ab3d9122a5312d53add123",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:create-the-decompression-stream:0013:0001",
+      "source": "Create the decompression stream.",
+      "ko": "압축 해제 스트림을 생성합니다.",
+      "sourceHash": "6f75c8ecc87ff8de16867a38a9103857c4adae016a0555577c9f80432e6f3345",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:create-the-decompression-stream:0013:0002",
+      "source": "Specify the file-reading stream as the input stream that provides the compressed data:",
+      "ko": "압축 데이터를 제공하는 입력 스트림으로 파일 읽기 스트림을 지정합니다.",
+      "sourceHash": "04d430df740b9aeff5b7acf0b1cf5d0500da2664988cb9363a33200928362949",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:create-the-decompression-stream:0014:0001",
+      "source": "```swift\nguard let decompressStream = ArchiveByteStream.decompressionStream(readingFrom: readFileStream) else {\n    print(\"unable to create compress stream\")\n    return\n}\ndefer {\n    try? decompressStream.close()\n}\n```",
+      "ko": "```swift\nguard let decompressStream = ArchiveByteStream.decompressionStream(readingFrom: readFileStream) else {\n    print(\"unable to create compress stream\")\n    return\n}\ndefer {\n    try? decompressStream.close()\n}\n```",
+      "sourceHash": "6918f284663365c8404e9d1917eab570e3550df57e7a9d02241fd300f3e1f274",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:decompress-the-source-archive:0015:0001",
+      "source": "Decompress the Source Archive",
+      "ko": "원본 아카이브 압축 해제",
+      "sourceHash": "6f0ae22bf458aa3b50fee11611dec6951b83f9c156d24c260d4dcc9c73851479",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:decompress-the-source-archive:0016:0001",
+      "source": "Finally, call [`process(readingFrom:writingTo:)`](https://developer.apple.com/documentation/AppleArchive/ArchiveByteStream/process(readingFrom:writingTo:)) to write the output of the decompression stream to the file-writing stream:",
+      "ko": "마지막으로 [`process(readingFrom:writingTo:)`](https://developer.apple.com/documentation/AppleArchive/ArchiveByteStream/process(readingFrom:writingTo:))를 호출하여 압축 해제 스트림의 출력을 파일 쓰기 스트림에 기록합니다.",
+      "sourceHash": "908b558d10f5ee73842fb3f73a2311d92fa8b8f58beb2ec82a7af68f104df363",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:decompress-the-source-archive:0017:0001",
+      "source": "```swift\ndo {\n    _ = try ArchiveByteStream.process(readingFrom: decompressStream,\n                                      writingTo: writeFileStream)\n} catch {\n    print(\"Handle `ArchiveByteStream.process` failed.\")\n}\n```",
+      "ko": "```swift\ndo {\n    _ = try ArchiveByteStream.process(readingFrom: decompressStream,\n                                      writingTo: writeFileStream)\n} catch {\n    print(\"Handle `ArchiveByteStream.process` failed.\")\n}\n```",
+      "sourceHash": "7a04763348190dbdb693a3b2088b6dd787ee0d79e70f690ffd5e904ad816a41c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:decompress-the-source-archive:0018:0001",
+      "source": "On return, `myFile_decompressed.pdf` exists in [`NSTemporaryDirectory()`](https://developer.apple.com/documentation/Foundation/NSTemporaryDirectory()) and contains the decompressed contents of `myFile.pdf.lzfse`.",
+      "ko": "반환되면 `myFile_decompressed.pdf`가 [`NSTemporaryDirectory()`](https://developer.apple.com/documentation/Foundation/NSTemporaryDirectory())에 존재하며 `myFile.pdf.lzfse`의 압축 해제된 내용을 포함합니다.",
+      "sourceHash": "26964681a4502781aa110ecddbd1872245f4097fbf57db042110adc34528415b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0019:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[Compressing single files](compressing-single-files.md)",
+      "ko": "[Compressing single files](compressing-single-files.md)",
+      "sourceHash": "ea11f06550f1e52bb1cdb915dc69074b12a5715eb54bff38f75830393eb58c9b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Compress a single file and store the result on the file system.",
+      "ko": "단일 파일을 압축하고 결과를 파일 시스템에 저장합니다.",
+      "sourceHash": "ef85532e09829ff950854262f7773420c65300f95d2d4f548263ac52a657307a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[Compressing file system directories](compressing-file-system-directories.md)",
+      "ko": "[Compressing file system directories](compressing-file-system-directories.md)",
+      "sourceHash": "23c9f0bce6571e86ce7f13d22529312003d98902c6c71a6ad74fc6b4a182feab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Compress the contents of an entire directory and store the result on the file system.",
+      "ko": "전체 디렉터리의 내용을 압축하고 결과를 파일 시스템에 저장합니다.",
+      "sourceHash": "589d36c9824d031f14c2466abcb28b97f383146f8def057ed4cd679e16df6897",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[Decompressing and extracting an archived directory](decompressing-and-extracting-an-archived-directory.md)",
+      "ko": "[Decompressing and extracting an archived directory](decompressing-and-extracting-an-archived-directory.md)",
+      "sourceHash": "200a6c1a4dbb7354034c030d4ca43e3c8918c9d98932ec98c41d71adc4fb5749",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Recreate an entire file system directory from an archive file.",
+      "ko": "아카이브 파일에서 전체 파일 시스템 디렉터리를 다시 만듭니다.",
+      "sourceHash": "3f2a1f82c7f04676435c7bbe89475abd20ba027b264498f0b6583d9e26aebdd1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[Compressing and saving a string to the file system](compressing-and-saving-a-string-to-the-file-system.md)",
+      "ko": "[Compressing and saving a string to the file system](compressing-and-saving-a-string-to-the-file-system.md)",
+      "sourceHash": "26f2bb311a374d8241195b7452c4d926699a44dc178d1eb918bdaeee900cd6b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Compress the contents of a Unicode string and store the result on the file system.",
+      "ko": "유니코드 문자열의 내용을 압축하고 결과를 파일 시스템에 저장합니다.",
+      "sourceHash": "20044daa9bb0da20a45fdbda95e49eada13cff6bebcdd521f19b59c068b84b5f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[Decompressing and parsing an archived string](decompressing-and-parsing-an-archived-string.md)",
+      "ko": "[Decompressing and parsing an archived string](decompressing-and-parsing-an-archived-string.md)",
+      "sourceHash": "b9473dab92f098bc28a9541ce67d6d0bc6948a80d1849df09bf3169f2c5d8278",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Recreate a string from an archive file.",
+      "ko": "아카이브 파일에서 문자열을 재생성합니다.",
+      "sourceHash": "9e7b5dc5aebd7da119a1e47cb9da68e86fa18bb9e62ed8340b568d1e6ce2676e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0030:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/decompressing-single-files)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/decompressing-single-files)*",
+      "sourceHash": "5f0167b2494faa6455f797118608b8735d7f22a8598d116188cbf29620b0ebf7",
+      "status": "preserved"
+    }
+  ]
+}

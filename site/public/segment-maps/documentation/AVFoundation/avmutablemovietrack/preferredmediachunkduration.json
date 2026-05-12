@@ -1,0 +1,169 @@
+{
+  "docId": "documentation/AVFoundation/avmutablemovietrack/preferredmediachunkduration.md",
+  "title": "preferredMediaChunkDuration",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avmutablemovietrack/preferredmediachunkduration",
+  "segments": [
+    {
+      "id": "seg:heading:preferredmediachunkduration:0000:0001",
+      "source": "preferredMediaChunkDuration",
+      "ko": "preferredMediaChunkDuration",
+      "sourceHash": "62af2c21e6bdc90c86cae1a0674cff80105297ca08b5651460b43628c5a36254",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:preferredmediachunkduration:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:preferredmediachunkduration:0002:0001",
+      "source": "The maximum duration to use for each chunk of sample data written to the file for file types that support media chunk duration.",
+      "ko": "미디어 청크 지속 시간을 지원하는 파일 형식에서 파일에 기록되는 각 샘플 데이터 청크에 사용할 최대 지속 시간입니다.",
+      "sourceHash": "ca5944cc1f244d05e50f3d2f58031b6ca53305c7bac3d88dcdd273a0a5ada092",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:preferredmediachunkduration:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:preferredmediachunkduration:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:preferredmediachunkduration:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:preferredmediachunkduration:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:preferredmediachunkduration:0004:0004",
+      "source": "macOS 10.11+",
+      "ko": "macOS 10.11+",
+      "sourceHash": "677aa32b7b6dcf49f156af2d6b166cd7ef887ee428e06683ee3a6c2a627f226a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:preferredmediachunkduration:0004:0005",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:preferredmediachunkduration:0004:0006",
+      "source": "watchOS 6.0+",
+      "ko": "watchOS 6.0+",
+      "sourceHash": "b51a82766977554dbe76aec20d5bc0ad6fe4984dddfcf6db82130e544b0631e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar preferredMediaChunkDuration: CMTime { get set }\n```",
+      "ko": "```swift\nvar preferredMediaChunkDuration: CMTime { get set }\n```",
+      "sourceHash": "4a046627d324eb7cd978b7e537b3a3e92b3e8f71e54d45c5aa2910724610ad8c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "The total duration of the samples in a chunk can be no greater than the preferred chunk duration, or the duration of a single sample if the single sample’s duration is greater than the preferred chunk duration.",
+      "ko": "청크 내 샘플의 총 지속 시간은 선호 청크 지속 시간을 초과할 수 없습니다. 단일 샘플의 지속 시간이 선호 청크 지속 시간보다 큰 경우 단일 샘플의 지속 시간이 적용됩니다.",
+      "sourceHash": "a9b2eba43804aa0a544f4de6678c1d460bc941e22e38455700968c60f8e4ea30",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The default media chunk duration is `1.0` second.",
+      "ko": "기본 미디어 청크 지속 시간은 `1.0`초입니다.",
+      "sourceHash": "913d4c879aefdadd5f9f952a917451707802e17dbabf101d72342995cfce598f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "Setting a negative or non-numeric value for the chunk duration will cause an error.",
+      "ko": "청크 지속 시간을 음수 또는 숫자가 아닌 값으로 설정하면 오류가 발생합니다.",
+      "sourceHash": "68daf351096065f24ccf2666fba1e31b0d8eb46781c21666502082e573e504cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[var preferredMediaChunkAlignment: Int](avmutablemovietrack/preferredmediachunkalignment.md)",
+      "ko": "[var preferredMediaChunkAlignment: Int](avmutablemovietrack/preferredmediachunkalignment.md)",
+      "sourceHash": "91729d8f0c728c15057fa5829189d4a751a0672bceff2f492a54f00a8008a794",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "The boundary for media chunk alignment for file types that support media chunk alignment.",
+      "ko": "미디어 청크 정렬을 지원하는 파일 형식에서 사용할 미디어 청크 정렬의 경계입니다.",
+      "sourceHash": "64d77cb75f9f3a9e7cce8109af734a2bf6474b93e88eb5c6f92f1003d828ad05",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var preferredMediaChunkSize: Int](avmutablemovietrack/preferredmediachunksize.md)",
+      "ko": "[var preferredMediaChunkSize: Int](avmutablemovietrack/preferredmediachunksize.md)",
+      "sourceHash": "fc6b1221b67c4713f2284cfea95452b95a5e09b88997112f2768ac90e5951458",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "The maximum size to use for each chunk of sample data written to the file for file types that support media chunk duration.",
+      "ko": "미디어 청크 지속 시간을 지원하는 파일 형식에서 파일에 기록되는 각 샘플 데이터 청크의 최대 크기입니다.",
+      "sourceHash": "aec126f892430f9abff65159165d34471a195191f1d6cd6777957fb6d9e5a8fc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0014:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutablemovietrack/preferredmediachunkduration)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutablemovietrack/preferredmediachunkduration)*",
+      "sourceHash": "130b5f63511461b91f700049681546dab692db7cb665db26b55fb56dbf70ee50",
+      "status": "preserved"
+    }
+  ]
+}

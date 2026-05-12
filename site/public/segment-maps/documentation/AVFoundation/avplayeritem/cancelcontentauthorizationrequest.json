@@ -1,0 +1,183 @@
+{
+  "docId": "documentation/AVFoundation/avplayeritem/cancelcontentauthorizationrequest.md",
+  "title": "cancelContentAuthorizationRequest()",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avplayeritem/cancelcontentauthorizationrequest",
+  "segments": [
+    {
+      "id": "seg:heading:cancelcontentauthorizationrequest:0000:0001",
+      "source": "cancelContentAuthorizationRequest()",
+      "ko": "cancelContentAuthorizationRequest()",
+      "sourceHash": "6918a222bb0137ae34cd5f8ef3ca28252df09fa1d73374a0dca8cbc6a7e69065",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:cancelcontentauthorizationrequest:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:cancelcontentauthorizationrequest:0002:0001",
+      "source": "Cancels the currently outstanding content authorization request.",
+      "ko": "현재 보류 중인 콘텐츠 권한 부여 요청을 취소합니다.",
+      "sourceHash": "e3a75c7172d252433c6e027cbbc724e4f3387a05fb8e21faa2a80c8e49887d6d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:cancelcontentauthorizationrequest:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cancelcontentauthorizationrequest:0004:0001",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc cancelContentAuthorizationRequest()\n```",
+      "ko": "```swift\nfunc cancelContentAuthorizationRequest()\n```",
+      "sourceHash": "dc7f3ded7ed4f5e2fa7467f8d6df7310550d586d2d3f339afef5a90c6e5c573b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Calling this method while a content authorization request is pending will cause that request to be cancelled and its completion handler to be invoked with a status of [`AVContentAuthorizationStatus.cancelled`](avcontentauthorizationstatus/cancelled.md).",
+      "ko": "이 메서드를 호출하면 콘텐츠 권한 부여 요청이 대기 중일 때 해당 요청이 취소되고 완료 핸들러가 [`AVContentAuthorizationStatus.cancelled`](avcontentauthorizationstatus/cancelled.md) 상태로 호출됩니다.",
+      "sourceHash": "8aed037d65fa1f5ac7f037500fd4a6818016a5ad2558aeaa7285236f8dff4b56",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "This method does not block.",
+      "ko": "`AVSampleBufferDisplayLayer` keeps track of the occupancy levels of its internal queues for the benefit of clients that enqueue sample buffers from non-real-time sources — that is, clients that can supply sample buffers faster than they are consumed and need to decide when to hold back buffers.",
+      "sourceHash": "5220c48b64c03058ef619f6eccae1eceebfd3977ba8c92732754ee6025b9f695",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var isContentAuthorizedForPlayback: Bool](avplayeritem/iscontentauthorizedforplayback.md)",
+      "ko": "[var isContentAuthorizedForPlayback: Bool](avplayeritem/iscontentauthorizedforplayback.md)",
+      "sourceHash": "f4e7645d26cdde1588f34579f0784d2f5d0d902144ed5250f35d201668c23dfe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "A Boolean value that indicates whether the content has been authorized by the user.",
+      "ko": "콘텐츠가 사용자에 의해 권한 부여되었는지 나타내는 부울 값입니다.",
+      "sourceHash": "91156817e556bff182ae1de144e33bd1f80f54bcc4dd91539d8b9661271af7e0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var isAuthorizationRequiredForPlayback: Bool](avplayeritem/isauthorizationrequiredforplayback.md)",
+      "ko": "[var isAuthorizationRequiredForPlayback: Bool](avplayeritem/isauthorizationrequiredforplayback.md)",
+      "sourceHash": "515453a8675cf5bdbe595bb803f1b71201bb64f24e1bc35fbf7bb9f96d3c2f96",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "A Boolean value that indicates whether authorization is required to play the content.",
+      "ko": "콘텐츠 재생에 권한 부여가 필요한지 나타내는 부울 값입니다.",
+      "sourceHash": "c1406556be130b8a2777151ab8e59a59af8f1f8482a7c2310ed8c2342c4b2c9c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var isApplicationAuthorizedForPlayback: Bool](avplayeritem/isapplicationauthorizedforplayback.md)",
+      "ko": "[var isApplicationAuthorizedForPlayback: Bool](avplayeritem/isapplicationauthorizedforplayback.md)",
+      "sourceHash": "393db6bc2a20243d58e8a56ae0c136a2e50d821277d086bce08055ee76fd99de",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "A Boolean value that indicates whether the application can be used to play the content.",
+      "ko": "애플리케이션으로 콘텐츠를 재생할 수 있는지 나타내는 부울 값입니다.",
+      "sourceHash": "81788320f9848a7de970b7402469690a7a1ec619e5def462bf180be009561905",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func requestContentAuthorizationAsynchronously(withTimeoutInterval: TimeInterval, completionHandler: () -> Void)](avplayeritem/requestcontentauthorizationasynchronously(withtimeoutinterval:completionhandler:).md)",
+      "ko": "[func requestContentAuthorizationAsynchronously(withTimeoutInterval: TimeInterval, completionHandler: () -> Void)](avplayeritem/requestcontentauthorizationasynchronously(withtimeoutinterval:completionhandler:).md)",
+      "sourceHash": "a2cbd2b5d8b173b2fca9c7a7bf1dd339dc23695551b69562cc796a11fe64a2ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Presents the user the opportunity to authorize the content for playback.",
+      "ko": "사용자가 콘텐츠 재생을 위해 권한을 부여할 수 있는 기회를 제공합니다.",
+      "sourceHash": "23f7b96d75d28fc837cf456a24a681ca7fb36e1cb3abfb85a56c626b6bbf8e67",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[var contentAuthorizationRequestStatus: AVContentAuthorizationStatus](avplayeritem/contentauthorizationrequeststatus.md)",
+      "ko": "[var contentAuthorizationRequestStatus: AVContentAuthorizationStatus](avplayeritem/contentauthorizationrequeststatus.md)",
+      "sourceHash": "b97ad164b752e2fc3f2589f72e8f7d606a8aef6a4dad39cb3d23cc8007f96a63",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "The status of the most recent content authorization request.",
+      "ko": "가장 최근 콘텐츠 권한 부여 요청의 상태입니다.",
+      "sourceHash": "5d34c063cf16a05ebe4243f5b70291731ab7b073dd7c970d2f5ddd99e6c2541f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[enum AVContentAuthorizationStatus](avcontentauthorizationstatus.md)",
+      "ko": "[enum AVContentAuthorizationStatus](avcontentauthorizationstatus.md)",
+      "sourceHash": "91cd31410f8b73416947d263841fcbf8a1975b48c49fecb33d9c4cbbd2b1f5c9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "A value representing the status of a content authorization request.",
+      "ko": "콘텐츠 권한 부여 요청의 상태를 나타내는 값입니다.",
+      "sourceHash": "aead5d0cadbfebd660abd75e2f6b5248d41a1273aed65f30c40b82b7f245c031",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0023:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayeritem/cancelcontentauthorizationrequest())*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayeritem/cancelcontentauthorizationrequest())*",
+      "sourceHash": "f6ac80a781a6cf4db6ac816b61c24ced7f99d0a0000da33d939ec023a26b5fc7",
+      "status": "machine_translated"
+    }
+  ]
+}

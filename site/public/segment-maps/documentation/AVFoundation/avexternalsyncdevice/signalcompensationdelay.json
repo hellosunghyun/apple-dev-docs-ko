@@ -1,0 +1,211 @@
+{
+  "docId": "documentation/AVFoundation/avexternalsyncdevice/signalcompensationdelay.md",
+  "title": "signalCompensationDelay",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avexternalsyncdevice/signalcompensationdelay",
+  "segments": [
+    {
+      "id": "seg:heading:signalcompensationdelay:0000:0001",
+      "source": "signalCompensationDelay",
+      "ko": "signalCompensationDelay",
+      "sourceHash": "6b83a153998a95dc379f3f3f2a3964a9eecf7521cd8239607807f1cadde3c984",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:signalcompensationdelay:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:signalcompensationdelay:0002:0001",
+      "source": "Delay to wait before starting the frame capture.",
+      "ko": "프레임 캡처를 시작하기 전에 대기하는 지연 시간입니다.",
+      "sourceHash": "350174a12719eebe12e66bfb2a0608d15b23bce5decd2b6bbcfb7a5f72ad6c41",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:signalcompensationdelay:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:signalcompensationdelay:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:signalcompensationdelay:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:signalcompensationdelay:0004:0003",
+      "source": "Mac Catalyst 26.0+",
+      "ko": "Mac Catalyst 26.0+",
+      "sourceHash": "41da0bcbe19513a5638f4ac052319884e486b3cc05252ef6209b23e7b2b1d8e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:signalcompensationdelay:0004:0004",
+      "source": "macOS 26.0+",
+      "ko": "macOS 26.0+",
+      "sourceHash": "6fcc4a770cbd02feaac4df78b954d37ef26fc9755008ee17612223162fd4ed2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:signalcompensationdelay:0004:0005",
+      "source": "tvOS 26.0+",
+      "ko": "tvOS 26.0+",
+      "sourceHash": "28934d9284c51fe0aa7b9363ccc49ea3cd840259287dd4f466466d4888ef2bf8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar signalCompensationDelay: CMTime { get set }\n```",
+      "ko": "```swift\nvar signalCompensationDelay: CMTime { get set }\n```",
+      "sourceHash": "d13546c1ff5a0173f807f3f44b14da06c33fafc9a852f084fd004deea48a3508",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "An external sync is generally used to configure multiple devices in the real world.",
+      "ko": "The size of each step depends on the receiver’s enabled `AVPlayerItemTrack` objects (see [`tracks`](avplayeritem/tracks.md)).",
+      "sourceHash": "ba7b81bb4e7f35bd978c9527b7111e0213528067419c249f3c7f2a0c98fae294",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "A display and a camera may receive a signal at the same time, but that does not mean the refresh of the display and camera are aligned in a way that does not cause tearing in the recording.",
+      "ko": "Files of this type have an `.itt` extension.",
+      "sourceHash": "afd824ad87222f4e79c914573abe18f977ad6ff0ffe5496cea04d0a21f44569d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "The signal compensation delay can be used to offset the readout of a camera on an intra-frame scale.",
+      "ko": "신호 보상 지연은 카메라의 readout을 프레임 내부 수준에서 오프셋하는 데 사용할 수 있습니다.",
+      "sourceHash": "58cf4a9dc195fc7cef8a4353db760ff4eebabe4417d7079859f3d4aa18e3cb09",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0001",
+      "source": "❗ **Important**: You should always set this property to a value less than the frame duration at which the camera is operating.",
+      "ko": "❗ **중요**: 이 속성은 카메라가 동작 중인 프레임 지속 시간보다 작은 값으로 항상 설정해야 합니다.",
+      "sourceHash": "41f9b994cdf76043de6693dc36d1c01296d844f35846ed34d05b195d8c2d3db7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var clock: CMClock?](avexternalsyncdevice/clock.md)",
+      "ko": "[var clock: CMClock?](avexternalsyncdevice/clock.md)",
+      "sourceHash": "72daef502a3144f4a9cc093f4f24b4643b9b358d74cf5f5118a410f9cb52db09",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "A clock representing the source of time from the external sync device.",
+      "ko": "외부 동기화 장치의 시간 소스를 나타내는 clock입니다.",
+      "sourceHash": "2289c6e472f545c257742efc9e07f694c20d98cb210c1cec730c13b40deaabb1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var productID: UInt32](avexternalsyncdevice/productid.md)",
+      "ko": "[var productID: UInt32](avexternalsyncdevice/productid.md)",
+      "sourceHash": "8f7e58b694a7074f62acdde3bb0d7f98b02c948df1d0240bc7c43bdfd85171ae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "The USB product identifier associated with the external sync device.",
+      "ko": "외부 동기화 장치와 연결된 USB 제품 식별자입니다.",
+      "sourceHash": "b97944ab4b6ed216521dd1e38d05ad6e92e95dc1bcef576d1601d5c6b808f64e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var status: AVExternalSyncDeviceStatus](avexternalsyncdevice/status.md)",
+      "ko": "[var status: AVExternalSyncDeviceStatus](avexternalsyncdevice/status.md)",
+      "sourceHash": "0315b3d8cac2d5eca3a1f23d8f1c24a39cc3b14532c83049deb9991a57d50670",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The status of the externally connected device.",
+      "ko": "외부에 연결된 장치의 상태입니다.",
+      "sourceHash": "6a93ecff543e06eb14ca87fef7f5e56e33f80acbface0003d017b29f51857d7f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[var uuid: UUID](avexternalsyncdevice/uuid.md)",
+      "ko": "[var uuid: UUID](avexternalsyncdevice/uuid.md)",
+      "sourceHash": "596bd8f035da774ab026055e05c7cf2cec4605d29b558abbdbb0d869e0da6297",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "A unique identifier for an external sync device.",
+      "ko": "외부 동기화 장치의 고유 식별자입니다.",
+      "sourceHash": "7000a71db5282de996b15e12d572358ce7f2015443141e407aeb0d414c9eacbf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[var vendorID: UInt32](avexternalsyncdevice/vendorid.md)",
+      "ko": "[var vendorID: UInt32](avexternalsyncdevice/vendorid.md)",
+      "sourceHash": "9c0a17d8883e09ac77431a83b01632f9511ccf99243a948e43752aa4359e09fc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "The USB vendor identifier associated with the external sync device.",
+      "ko": "외부 동기화 장치와 연결된 USB 공급업체 식별자입니다.",
+      "sourceHash": "934672d55983b1f6ca1a18b0a702e7bec0c2fa2f041069dd59971c2271212233",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0021:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avexternalsyncdevice/signalcompensationdelay)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avexternalsyncdevice/signalcompensationdelay)*",
+      "sourceHash": "f08bd7e60ba6d71cdce9a6610f5b655729a1bfc648b206627675ac615ea1f5d6",
+      "status": "preserved"
+    }
+  ]
+}

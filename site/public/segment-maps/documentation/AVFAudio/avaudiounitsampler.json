@@ -1,0 +1,372 @@
+{
+  "docId": "documentation/AVFAudio/avaudiounitsampler.md",
+  "title": "AVAudioUnitSampler",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiounitsampler",
+  "segments": [
+    {
+      "id": "seg:heading:avaudiounitsampler:0000:0001",
+      "source": "AVAudioUnitSampler",
+      "ko": "AVAudioUnitSampler",
+      "sourceHash": "9e7869dbfc53fb0f77cb5d22635e0aebfbad8697bedee71d0e1b331bec4742d3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitsampler:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitsampler:0002:0001",
+      "source": "An object that you configure with one or more instrument samples, based on Apple’s Sampler audio unit.",
+      "ko": "Apple의 Sampler 오디오 유닛을 기반으로 하나 이상의 악기 샘플로 구성하는 객체입니다.",
+      "sourceHash": "683994ebfc45c821620053144e239521f011469f730ef3126d8e10d0e0b58b09",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitsampler:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitsampler:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitsampler:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitsampler:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitsampler:0004:0004",
+      "source": "macOS 10.10+",
+      "ko": "macOS 10.10+",
+      "sourceHash": "928cfc2e204a2d523c05071eb21f65479a96f581dc23a43fa1848eecc5216dcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitsampler:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitsampler:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAudioUnitSampler\n```",
+      "ko": "```swift\nclass AVAudioUnitSampler\n```",
+      "sourceHash": "106ec6f68a3d3ea3c818fd41320cda2a0722b9c4786ffada49d191ba81095704",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "An `AVAudioUnitSampler` is an [`AVAudioUnit`](avaudiounit.md) for Apple’s Sampler audio unit.",
+      "ko": "`AVAudioUnitSampler`는 Apple의 Sampler 오디오 유닛을 위한 [`AVAudioUnit`](avaudiounit.md)입니다.",
+      "sourceHash": "d7b87712695215173c0dd5e943608b96eccf93f28eda376face47bfc15fb3d99",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "You configure the sampler by loading instruments from different types of files.",
+      "ko": "샘플러는 다양한 유형의 파일에서 악기를 로드하여 구성합니다.",
+      "sourceHash": "d4a416d4953d18e912c77796fd11b5b9d6bbc7c9f67d7ffa50c4578ead25450f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "These include an `aupreset` file, DLS, or SF2 sound bank; an EXS24 instrument; a single audio file; or an array of audio files.",
+      "ko": "여기에는 `aupreset` 파일, DLS 또는 SF2 사운드 뱅크, EXS24 악기, 단일 오디오 파일 또는 오디오 파일 배열이 포함됩니다.",
+      "sourceHash": "e960d151d43a0985e2ec0ac397047d7053795631ebcdf326bd8deb9dc80fa532",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "The output of a `AVAudioUnitSampler` is a single stereo bus.",
+      "ko": "`AVAudioUnitSampler`의 출력은 단일 스테레오 버스입니다.",
+      "sourceHash": "ed357fb240db7d6bbf1120de1b9f97bab7ee2762e47886216c988e8171a1d171",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0011:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:configuring-the-sampler-audio-unit:0012:0001",
+      "source": "Configuring the Sampler Audio Unit",
+      "ko": "Sampler 오디오 유닛 구성",
+      "sourceHash": "47f0ee8e3c09b0ac9954d21fb909b31a469fedfdac70164fe204de39b95ee861",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-the-sampler-audio-unit:0013:0001",
+      "source": "[func loadInstrument(at: URL) throws](avaudiounitsampler/loadinstrument(at:).md)",
+      "ko": "[func loadInstrument(at: URL) throws](avaudiounitsampler/loadinstrument(at:).md)",
+      "sourceHash": "6d2fb59a9af1b195eaae407145b4cec1f0074b17cf94c9248670add3fecd7598",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configuring-the-sampler-audio-unit:0014:0001",
+      "source": "Configures the sampler with the specified instrument file.",
+      "ko": "지정된 악기 파일로 샘플러를 구성합니다.",
+      "sourceHash": "44a87a5fcfec3a99cad809f2b9486438bfbc981d4f8331bdd9bc24e411de6df6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-the-sampler-audio-unit:0015:0001",
+      "source": "[func loadAudioFiles(at: [URL]) throws](avaudiounitsampler/loadaudiofiles(at:).md)",
+      "ko": "[func loadAudioFiles(at: [URL]) throws](avaudiounitsampler/loadaudiofiles(at:).md)",
+      "sourceHash": "27b6efd572b6e45dcca86db8bad081aa5126483d6d000fb5c977d10f3f85fe98",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configuring-the-sampler-audio-unit:0016:0001",
+      "source": "Configures the sampler by loading the specified audio files.",
+      "ko": "지정된 오디오 파일을 로드하여 샘플러를 구성합니다.",
+      "sourceHash": "3b154bba2fc9e995e7667e9b6c8411439fa9f22f29504d8e74a5ad64bf0b0a06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-the-sampler-audio-unit:0017:0001",
+      "source": "[func loadSoundBankInstrument(at: URL, program: UInt8, bankMSB: UInt8, bankLSB: UInt8) throws](avaudiounitsampler/loadsoundbankinstrument(at:program:bankmsb:banklsb:).md)",
+      "ko": "[func loadSoundBankInstrument(at: URL, program: UInt8, bankMSB: UInt8, bankLSB: UInt8) throws](avaudiounitsampler/loadsoundbankinstrument(at:program:bankmsb:banklsb:).md)",
+      "sourceHash": "c05fe82e7ec6f3c1745406f55834d0344e1df107ae168c12a0a1ab75f51d26d5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configuring-the-sampler-audio-unit:0018:0001",
+      "source": "Loads a specific instrument from the specified soundbank.",
+      "ko": "지정한 사운드뱅크에서 특정 악기를 로드합니다.",
+      "sourceHash": "ea0355cf7bfe9261e73e674430b1868bd32332767ddce2270e0367041c81351e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-and-setting-sampler-values:0019:0001",
+      "source": "Getting and Setting Sampler Values",
+      "ko": "Sampler 값 가져오기 및 설정",
+      "sourceHash": "c7e70b6b022af23ae6f63be0340f4b6cc05484e04cd0686f920cb389b0131cc6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-and-setting-sampler-values:0020:0001",
+      "source": "[var globalTuning: Float](avaudiounitsampler/globaltuning.md)",
+      "ko": "[var globalTuning: Float](avaudiounitsampler/globaltuning.md)",
+      "sourceHash": "b053fbcedd0283bae6e738f100bccb7008d047a3fa49c9cd705fd0f3cad4663a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-and-setting-sampler-values:0021:0001",
+      "source": "An adjustment for the tuning of all the played notes.",
+      "ko": "연주되는 모든 음의 튜닝을 조정합니다.",
+      "sourceHash": "fb37bebdb263e1d6b782f73b3bb3ef24479dfadf8effbeec203e72022678602c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-and-setting-sampler-values:0022:0001",
+      "source": "[var overallGain: Float](avaudiounitsampler/overallgain.md)",
+      "ko": "[var overallGain: Float](avaudiounitsampler/overallgain.md)",
+      "sourceHash": "39e4b330bdbb013d39980f2f8b4b107bab078de8a357bcfab95d817d5f7edb54",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-and-setting-sampler-values:0023:0001",
+      "source": "An adjustment for the gain of all the played notes, in decibels.",
+      "ko": "연주되는 모든 음의 게인을 데시벨 단위로 조정합니다.",
+      "sourceHash": "aca99dd28f723a88a0a0ba10dfdb88cae7a503635ed258626c0880140cb65fd8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-and-setting-sampler-values:0024:0001",
+      "source": "[var stereoPan: Float](avaudiounitsampler/stereopan.md)",
+      "ko": "[var stereoPan: Float](avaudiounitsampler/stereopan.md)",
+      "sourceHash": "a87536310c2e534165058f17e4350834a34165e358e02b787b5e1f0243061633",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-and-setting-sampler-values:0025:0001",
+      "source": "An adjustment for the stereo panning of all the played notes.",
+      "ko": "연주되는 모든 음의 스테레오 팬닝을 조정합니다.",
+      "sourceHash": "6353f10f9991998605cf193b71519321b05c1dbdbf6584fb6ee9ef6ee0fd2a8a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-and-setting-sampler-values:0026:0001",
+      "source": "[var masterGain: Float](avaudiounitsampler/mastergain.md)",
+      "ko": "[var masterGain: Float](avaudiounitsampler/mastergain.md)",
+      "sourceHash": "b42211d10dedbf7d4fc79f4289737d734da6b42dfe819529b9c91dd3ae82ceb6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-and-setting-sampler-values:0027:0001",
+      "source": "An adjustment for the gain of all the played notes, in decibels.",
+      "ko": "연주되는 모든 음의 게인을 데시벨 단위로 조정합니다.",
+      "sourceHash": "aca99dd28f723a88a0a0ba10dfdb88cae7a503635ed258626c0880140cb65fd8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0028:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0029:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0030:0001",
+      "source": "[AVAudioUnitMIDIInstrument](avaudiounitmidiinstrument.md)",
+      "ko": "[AVAudioUnitMIDIInstrument](avaudiounitmidiinstrument.md)",
+      "sourceHash": "576dc6eeacabc3891708445980c296e7db2ca831ad4c283cce39beb8392fb9e6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0031:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0001",
+      "source": "[AVAudio3DMixing](avaudio3dmixing.md)",
+      "ko": "[AVAudio3DMixing](avaudio3dmixing.md)",
+      "sourceHash": "b2a090303b7721191d3127fa2f68e80dcc487eb87498df2256b43d6db66ebbe3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0002",
+      "source": "[AVAudioMixing](avaudiomixing.md)",
+      "ko": "[AVAudioMixing](avaudiomixing.md)",
+      "sourceHash": "37ac4642d2317d12b78bd1ecdee4b9f970dbb6ba2779c9331a8a35af916beeb5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0003",
+      "source": "[AVAudioStereoMixing](avaudiostereomixing.md)",
+      "ko": "[AVAudioStereoMixing](avaudiostereomixing.md)",
+      "sourceHash": "81a03a19acb930569fa76b4e0a73c71549cef94e1672c4468a1be876a00dc57a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0004",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0005",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0006",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0007",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0008",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0009",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0033:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[class AVAudioSequencer](avaudiosequencer.md)",
+      "ko": "[class AVAudioSequencer](avaudiosequencer.md)",
+      "sourceHash": "0490e014140131d581d7261287d166d3e1f3282cf4eaeb5486f1d69f1a3d09a7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "An object that plays audio from a collection of MIDI events the system organizes into music tracks.",
+      "ko": "시스템이 음악 트랙으로 구성한 MIDI 이벤트 컬렉션에서 오디오를 재생하는 객체입니다.",
+      "sourceHash": "f157e5bceba8be4f46a15c4b9c32730e569dc4e5e0430aba97794e01c2c99a0a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0036:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiounitsampler)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiounitsampler)*",
+      "sourceHash": "7a903327aaaafd4a6ff66198f5b246c37e2ea9a1897f5c1bb4098755e558f33f",
+      "status": "preserved"
+    }
+  ]
+}

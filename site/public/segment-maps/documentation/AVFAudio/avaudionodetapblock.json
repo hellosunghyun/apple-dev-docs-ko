@@ -1,0 +1,183 @@
+{
+  "docId": "documentation/AVFAudio/avaudionodetapblock.md",
+  "title": "AVAudioNodeTapBlock",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudionodetapblock",
+  "segments": [
+    {
+      "id": "seg:heading:avaudionodetapblock:0000:0001",
+      "source": "AVAudioNodeTapBlock",
+      "ko": "AVAudioNodeTapBlock",
+      "sourceHash": "9ed8de93353b1536b4b859318dca02d08c59ce2d91bce3750550e2f364a98767",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudionodetapblock:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: typealias",
+      "ko": "**Framework**: AVFAudio **Kind**: typealias",
+      "sourceHash": "75c43000948d269ae13bdb05d824bebe3c97bf93a66237cc6f07499f59a5c7fa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudionodetapblock:0002:0001",
+      "source": "The block that receives copies of the output of an audio node.",
+      "ko": "오디오 노드의 출력 복사본을 받는 블록입니다.",
+      "sourceHash": "8f998cecc37833bf484f1e83e2e4447caadd642c667a2d15ff8d8bdaaba214b1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudionodetapblock:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudionodetapblock:0004:0001",
+      "source": "iOS ?+",
+      "ko": "iOS ?+",
+      "sourceHash": "5ab9a52f3ed195087b787f7fc91e6c6787e10947ba89804fc30b0826935fe735",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:avaudionodetapblock:0004:0002",
+      "source": "iPadOS ?+",
+      "ko": "iPadOS ?+",
+      "sourceHash": "c073a012e8f78fb65510b62ab5dd5f951cd38fb0306215643d562259e96744f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:avaudionodetapblock:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:avaudionodetapblock:0004:0004",
+      "source": "macOS ?+",
+      "ko": "macOS ?+",
+      "sourceHash": "7565f9a2fe151983964ce7f1a1fff21dbf4130de4d3457f25bd88800eafbe279",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:avaudionodetapblock:0004:0005",
+      "source": "tvOS ?+",
+      "ko": "tvOS ?+",
+      "sourceHash": "e197a5f363006a02e522e5f07b216c8e4a4e9a6a147fcb43f9877e395882682a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:avaudionodetapblock:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:avaudionodetapblock:0004:0007",
+      "source": "watchOS ?+",
+      "ko": "watchOS ?+",
+      "sourceHash": "a3eeb3d8ec97b0e69f7f72fecf404f7497525e6d0b54f1854aa63b483933227a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\ntypealias AVAudioNodeTapBlock = (AVAudioPCMBuffer, AVAudioTime) -> Void\n```",
+      "ko": "```swift\ntypealias AVAudioNodeTapBlock = (AVAudioPCMBuffer, AVAudioTime) -> Void\n```",
+      "sourceHash": "8487a75941deb5ec2d3e2ad59bd6cb01fae38d79d7a063b4f160e963566f2373",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:blockquote:discussion:0008:0001",
+      "source": "❗ **Important**: The framework may invoke this callback on a thread other than the main thread.",
+      "ko": "❗ **중요**: 프레임워크는 이 콜백을 메인 스레드가 아닌 다른 스레드에서 호출할 수 있습니다.",
+      "sourceHash": "c4c5f5a33f779728ba773ba225d9769de9e73639e1f984945a4fac0eb54a0086",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0009:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0010:0001",
+      "source": "`buffer`: A buffer of audio the system captures from the output of an audio node`.`",
+      "ko": "`buffer`: 시스템이 오디오 노드의 출력에서 캡처한 오디오 버퍼입니다``.`",
+      "sourceHash": "d6e4c06849f21148fac9cf819fc01939fa4cc34ef8c3c756cd4e0f0474e4c875",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0002",
+      "source": "`when`: The time the system captures the buffer.",
+      "ko": "`when`: 시스템이 버퍼를 캡처한 시점입니다.",
+      "sourceHash": "0c9a187f283373115a760567903c117b203ef13d2bf36e642db1b653b77de4b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[func installTap(onBus: AVAudioNodeBus, bufferSize: AVAudioFrameCount, format: AVAudioFormat?, block: AVAudioNodeTapBlock)](avaudionode/installtap(onbus:buffersize:format:block:).md)",
+      "ko": "[func installTap(onBus: AVAudioNodeBus, bufferSize: AVAudioFrameCount, format: AVAudioFormat?, block: AVAudioNodeTapBlock)](avaudionode/installtap(onbus:buffersize:format:block:).md)",
+      "sourceHash": "fb552fba33e792a414c0167457a3966732682caa648e41e1b240892be32ba078",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Installs an audio tap on a bus you specify to record, monitor, and observe the output of the node.",
+      "ko": "지정한 버스에 오디오 탭을 설치해 노드 출력을 녹음, 모니터링, 관찰합니다.",
+      "sourceHash": "6c3cc99693085b5da33b368bf3536f0405f8a549e633d959232f7fdaddc99d64",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func removeTap(onBus: AVAudioNodeBus)](avaudionode/removetap(onbus:).md)",
+      "ko": "[func removeTap(onBus: AVAudioNodeBus)](avaudionode/removetap(onbus:).md)",
+      "sourceHash": "205221268fdd1aaed892607af09e69845e5df1920dc9901c7491078bf531cafa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Removes an audio tap on a bus you specify.",
+      "ko": "지정한 버스에서 오디오 탭을 제거합니다.",
+      "sourceHash": "bd0192ba1de6b87609de8e6da6be8c488b42b6e7148b4d3ce17d66ecfd81bcce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0016:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudionodetapblock)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudionodetapblock)*",
+      "sourceHash": "28df3e85db30ef1c61f06f0ded4a32abcd3b13519ada8dca024070527e716c8f",
+      "status": "preserved"
+    }
+  ]
+}

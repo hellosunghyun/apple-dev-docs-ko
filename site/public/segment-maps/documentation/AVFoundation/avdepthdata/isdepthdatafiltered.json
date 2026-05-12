@@ -1,0 +1,204 @@
+{
+  "docId": "documentation/AVFoundation/avdepthdata/isdepthdatafiltered.md",
+  "title": "isDepthDataFiltered",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avdepthdata/isdepthdatafiltered",
+  "segments": [
+    {
+      "id": "seg:heading:isdepthdatafiltered:0000:0001",
+      "source": "isDepthDataFiltered",
+      "ko": "isDepthDataFiltered",
+      "sourceHash": "f1a126073ff3821156a938003a51b8f944af39f108d78f41c656a1f7c9669c49",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:isdepthdatafiltered:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:isdepthdatafiltered:0002:0001",
+      "source": "A Boolean value indicating whether the depth map contains temporally smoothed data.",
+      "ko": "깊이 맵에 시간적으로 평활화된 데이터가 포함되는지 나타내는 부울 값입니다.",
+      "sourceHash": "5932063e94ae1bd610065641c6970f1a80530783e5322b1151677e5071aaad83",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:isdepthdatafiltered:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isdepthdatafiltered:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isdepthdatafiltered:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isdepthdatafiltered:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isdepthdatafiltered:0004:0004",
+      "source": "macOS 10.13+",
+      "ko": "macOS 10.13+",
+      "sourceHash": "23711ad8ad80199ce092027e03a626cd50cd126e092245e0901de2515c6d69d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isdepthdatafiltered:0004:0005",
+      "source": "tvOS 11.0+",
+      "ko": "tvOS 11.0+",
+      "sourceHash": "f8613ea6967abbd6daada1f1969b72355a9ba3fff48c588fc3608e03084c22ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isdepthdatafiltered:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar isDepthDataFiltered: Bool { get }\n```",
+      "ko": "```swift\nvar isDepthDataFiltered: Bool { get }\n```",
+      "sourceHash": "a1f547d1e1c6075e3466a0010c265b053c26508bb87420681fc9bcf34d5d1689",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "The capture system can smooth noise and fill in missing values (caused by low light or lens occlusion) in depth data maps by temporally interpolating between previous and subsequent frames of captured depth data.",
+      "ko": "캡처 시스템은 캡처된 깊이 데이터의 이전 및 후속 프레임을 시간적으로 보간하여 저조도 또는 렌즈 가림으로 인해 발생한 노이즈를 완화하고 누락된 값을 채울 수 있습니다.",
+      "sourceHash": "8107998edcf32d79fd0e5369ff0d3d53d0a999049b7532041f2f0c5a98dd37e0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Use the [`AVCaptureDepthDataOutput`](avcapturedepthdataoutput.md) [`isFilteringEnabled`](avcapturedepthdataoutput/isfilteringenabled.md) property to control filtering for streaming depth capture, or the [`AVCapturePhotoSettings`](avcapturephotosettings.md) [`isDepthDataFiltered`](avdepthdata/isdepthdatafiltered.md) property to control filtering for depth data captured alongside photo capture.",
+      "ko": "스트리밍 깊이 캡처의 필터링은 [`AVCaptureDepthDataOutput`](avcapturedepthdataoutput.md) [`isFilteringEnabled`](avcapturedepthdataoutput/isfilteringenabled.md) 속성으로 제어하며, 사진 캡처와 함께 캡처되는 깊이 데이터의 필터링은 [`AVCapturePhotoSettings`](avcapturephotosettings.md) [`isDepthDataFiltered`](avdepthdata/isdepthdatafiltered.md) 속성으로 제어할 수 있습니다.",
+      "sourceHash": "9563e2d986a4920fc646c880c68ed46d0d0ce52ebf6f9fac4dbd53ef309998ac",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Filtering depth data makes it more useful for applying visual effects to a companion image, but alters the data such that it may no longer be suitable for computer vision tasks.",
+      "ko": "깊이 데이터 필터링은 보조 이미지에 시각 효과를 적용하는 데 더 유용하지만, 데이터가 변경되어 컴퓨터 비전 작업에는 더 이상 적합하지 않을 수 있습니다.",
+      "sourceHash": "56d8ead33718932120aa5b328d308a3178521535258d4583c67e417cb73fde5a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "(In an unfiltered depth map, missing values are represented as `NaN`.)",
+      "ko": "(필터링되지 않은 깊이 맵에서는 누락된 값이 `NaN`으로 표시됩니다.)",
+      "sourceHash": "dc27458ef68a6a6835b673fbd07045b3b5d3c487f7144a69bd7b86deba0f9764",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var depthDataAccuracy: AVDepthData.Accuracy](avdepthdata/depthdataaccuracy.md)",
+      "ko": "[var depthDataAccuracy: AVDepthData.Accuracy](avdepthdata/depthdataaccuracy.md)",
+      "sourceHash": "db87ab274c19de16a0d1949486a461a9724174a1a991b64ffff5edf21109f65f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "The general accuracy of depth data map values.",
+      "ko": "깊이 데이터 맵 값의 일반 정확도입니다.",
+      "sourceHash": "3c86b7c00579201a0e136f86453823eef1abb2e948018d2fc4c3dc3a3d485fde",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[AVDepthData.Accuracy](avdepthdata/accuracy.md)",
+      "ko": "[AVDepthData.Accuracy](avdepthdata/accuracy.md)",
+      "sourceHash": "e617f43469e09380a2be35a4495a3fa55c7b977e94a88f0928c2041b35225634",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Values indicating the general accuracy of a depth data map.",
+      "ko": "깊이 데이터 맵의 일반 정확도를 나타내는 값입니다.",
+      "sourceHash": "2b162c9dfc1e8a6ede2e4196a344dd17f9aa7cee8b48fa9c0264c7fb0d353c33",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var depthDataQuality: AVDepthData.Quality](avdepthdata/depthdataquality.md)",
+      "ko": "[var depthDataQuality: AVDepthData.Quality](avdepthdata/depthdataquality.md)",
+      "sourceHash": "7a59ce2bdfc8ad6bb04c0ec1a9fe510460cf8a700d9c4915cc3abc4332dc1863",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The overall quality of the depth map.",
+      "ko": "깊이 맵의 전체 품질입니다.",
+      "sourceHash": "fc46c4dc4c05db3b46350958372ba541c951088b308a3bbaaf1926a19c1f1cd6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[AVDepthData.Quality](avdepthdata/quality.md)",
+      "ko": "[AVDepthData.Quality](avdepthdata/quality.md)",
+      "sourceHash": "444abc4500bab06e6fce68e00f4a78a3c87028cdcab5b6bd9d709c8f70a76e3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Values indicating the overall quality of a depth data map.",
+      "ko": "깊이 데이터 맵의 전체 품질을 나타내는 값입니다.",
+      "sourceHash": "3eb74b259c08ed4bf6afd2a2d3ef4ec490fb08459ea7926f707a7c9c9c2d39f6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avdepthdata/isdepthdatafiltered)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avdepthdata/isdepthdatafiltered)*",
+      "sourceHash": "2e01704bce66f82011267c8aa5e98c7efe73f01c2edcf6e0da08425f49c3071e",
+      "status": "preserved"
+    }
+  ]
+}

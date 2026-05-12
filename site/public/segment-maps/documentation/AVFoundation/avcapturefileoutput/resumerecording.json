@@ -1,0 +1,190 @@
+{
+  "docId": "documentation/AVFoundation/avcapturefileoutput/resumerecording.md",
+  "title": "resumeRecording()",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturefileoutput/resumerecording",
+  "segments": [
+    {
+      "id": "seg:heading:resumerecording:0000:0001",
+      "source": "resumeRecording()",
+      "ko": "resumeRecording()",
+      "sourceHash": "b2d93a3bed1075363988e30316be25842ff86d52cf4a5bd52083a33d388f0554",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:resumerecording:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:resumerecording:0002:0001",
+      "source": "Resumes recording to the current output file after it was previously paused using [`pauseRecording()`](avcapturefileoutput/pauserecording().md).",
+      "ko": "이 메서드는 [`pauseRecording()`](avcapturefileoutput/pauserecording().md)을 사용해 이전에 일시 정지되었던 후 현재 출력 파일에 대한 기록을 재개합니다.",
+      "sourceHash": "7bb74a8c40a882f1b4a8d4cbdb9869d203d7cb0d71a96bd0b035adec4b5438a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:resumerecording:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resumerecording:0004:0001",
+      "source": "iOS 18.0+",
+      "ko": "iOS 18.0+",
+      "sourceHash": "1b3f7d89e639b0fbca8c8e42d8d9491fcff80bdc07373dbd869c8a39ca2beb40",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resumerecording:0004:0002",
+      "source": "iPadOS 18.0+",
+      "ko": "iPadOS 18.0+",
+      "sourceHash": "54a351c44693b5ce37dfff89a84379ba390a94f1a19625c16296b998317728b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resumerecording:0004:0003",
+      "source": "Mac Catalyst 18.0+",
+      "ko": "Mac Catalyst 18.0+",
+      "sourceHash": "e596dbcea740a74f29295484ff7ecd8a013d1e2e063bab1713983e09b382b0b3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resumerecording:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:resumerecording:0004:0005",
+      "source": "tvOS 18.0+",
+      "ko": "tvOS 18.0+",
+      "sourceHash": "8b3d386766205786b7eadc109362e800473eedafe7e0a03e888e738fd4823103",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc resumeRecording()\n```",
+      "ko": "```swift\nfunc resumeRecording()\n```",
+      "sourceHash": "3aa491e7d16c6779a58b5b828cf37a24b430b89f769a1a7569d0592e5714c509",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This method causes the receiver to resume writing captured samples to the current output file returned by [`outputFileURL`](avcapturefileoutput/outputfileurl.md), after recording was previously paused using [`pauseRecording()`](avcapturefileoutput/pauserecording().md).",
+      "ko": "이 메서드는 [`pauseRecording()`](avcapturefileoutput/pauserecording().md) 후에 기록이 일시 정지되었던 경우, [`outputFileURL`](avcapturefileoutput/outputfileurl.md)가 반환한 현재 출력 파일에 캡처된 샘플 쓰기를 재개하도록 수신자를 설정합니다.",
+      "sourceHash": "a725cbde855411fc686fa6e6860151729b35a9c900e0a27ccd50b765f648ef92",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "This allows you to record multiple media segments that are not contiguous in time to a single file.",
+      "ko": "이를 통해 시간적으로 연속되지 않은 여러 미디어 세그먼트를 하나의 파일에 기록할 수 있습니다.",
+      "sourceHash": "b72dc712828cd41816606cb08616b0c5c341928d58fc2d5daf9f662a451a6481",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "In macOS, if this method is called within the captureOutput:didOutputSampleBuffer:fromConnection: delegate method, the first samples written to the current file are guaranteed to be those contained in the sample buffer passed to that method.",
+      "ko": "macOS에서 이 메서드를 `captureOutput:didOutputSampleBuffer:fromConnection:` 대리자 메서드 내에서 호출하면, 현재 파일에 처음 기록되는 샘플은 해당 메서드에 전달된 샘플 버퍼에 포함된 샘플이 보장됩니다.",
+      "sourceHash": "069e43c0fc43dd296548f4e72bf2dd8e5dc2c616778c51389f62704ae418aa4f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var isRecordingPaused: Bool](avcapturefileoutput/isrecordingpaused.md)",
+      "ko": "[var isRecordingPaused: Bool](avcapturefileoutput/isrecordingpaused.md)",
+      "sourceHash": "d6f78938870ece4c68318eaf44bdbe13ceaeeb19e6fe345a1e4f7c0c080d8898",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "Indicates whether recording to the current output file is paused.",
+      "ko": "현재 출력 파일에 대한 기록이 일시 정지되어 있는지 나타냅니다.",
+      "sourceHash": "a7f11674270f073869774fa7f98c55d242ffece855de440297088175dea56507",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func startRecording(to: URL, recordingDelegate: any AVCaptureFileOutputRecordingDelegate)](avcapturefileoutput/startrecording(to:recordingdelegate:).md)",
+      "ko": "[func startRecording(to: URL, recordingDelegate: any AVCaptureFileOutputRecordingDelegate)](avcapturefileoutput/startrecording(to:recordingdelegate:).md)",
+      "sourceHash": "2de3138fcb27420ac96dd100e9f751aac6308e71db7e664adac40e5fde75b21a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Starts recording media to the specified output URL.",
+      "ko": "지정한 출력 URL에 미디어 기록을 시작합니다.",
+      "sourceHash": "08d08d124232a74b3cbf0447fc6be31f4ee1854f04494f40fa15002606d2bc82",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func stopRecording()](avcapturefileoutput/stoprecording.md)",
+      "ko": "[func stopRecording()](avcapturefileoutput/stoprecording.md)",
+      "sourceHash": "b752d82370e7e76b1b3123df812e84aa052fc9618de3a0e04fa1074b6bc367dd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Tells the receiver to stop recording to the current file.",
+      "ko": "수신자에게 현재 파일에 대한 기록을 중지하라고 지시합니다.",
+      "sourceHash": "e2a17a9ef01427d11dfcc9aac0ced603b7f1387cb6d2c02a567c98c4b4a2e196",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func pauseRecording()](avcapturefileoutput/pauserecording.md)",
+      "ko": "[func pauseRecording()](avcapturefileoutput/pauserecording.md)",
+      "sourceHash": "515b8ce5b21e188a1605899745f14ddd21918d420008fe4270db552a998ce797",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Pauses recording to the current output file.",
+      "ko": "현재 출력 파일에 대한 기록을 일시 정지합니다.",
+      "sourceHash": "d81c26e09b7b58303f03bed59359cfdc8d62b4fe6eb5d2d9d37d0f9ab1c49051",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturefileoutput/resumerecording())*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avcapturefileoutput/resumerecording())*",
+      "sourceHash": "bd142886c1088e73aee06a52837f220cb8d7d9372c17cb093c3bf8eeb67aed09",
+      "status": "machine_translated"
+    }
+  ]
+}

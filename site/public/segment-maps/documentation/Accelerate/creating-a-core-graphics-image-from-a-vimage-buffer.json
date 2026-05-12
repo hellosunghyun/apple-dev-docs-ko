@@ -1,0 +1,232 @@
+{
+  "docId": "documentation/Accelerate/creating-a-core-graphics-image-from-a-vimage-buffer.md",
+  "title": "Creating a Core Graphics Image from a vImage Buffer",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/creating-a-core-graphics-image-from-a-vimage-buffer",
+  "segments": [
+    {
+      "id": "seg:heading:creating-a-core-graphics-image-from-a-vimage-buffer:0000:0001",
+      "source": "Creating a Core Graphics Image from a vImage Buffer",
+      "ko": "vImage 버퍼에서 Core Graphics 이미지 만들기",
+      "sourceHash": "1b8c8241e92ef0c17f3f47e9d308bea86c66726d0d0f0d27ac259295fb4e08f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-core-graphics-image-from-a-vimage-buffer:0001:0001",
+      "source": "**Framework**: Accelerate",
+      "ko": "**프레임워크**: Accelerate",
+      "sourceHash": "29a5b8860afd67d96c79fe2585ca71addeb9f39a3fe9698cbaba2a7451def11b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-core-graphics-image-from-a-vimage-buffer:0002:0001",
+      "source": "Create displayable representations of vImage buffers.",
+      "ko": "vImage 버퍼의 표시 가능한 표현을 생성합니다.",
+      "sourceHash": "1823c63efaa2335a7b83c0d90a3a5ac6ec066fc622a9a444814d9ea018d62854",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "vImage provides a function for creating Core Graphics images from vImage buffers.",
+      "ko": "vImage는 vImage 버퍼에서 Core Graphics 이미지를 생성하는 함수를 제공합니다.",
+      "sourceHash": "4046ab323b50806786f02e31ffb73979e5211101c088cced95aff6a8e2dbab77",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "This function allows you to display the results of a vImage operation to your user.",
+      "ko": "이 함수는 vImage 작업 결과를 사용자에게 표시할 수 있게 합니다.",
+      "sourceHash": "108364f7f604238f5fee4f7dcc5b50a95bbd8b9edf6355b6a4a42fb45757241d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:create-the-image:0005:0001",
+      "source": "Create the Image",
+      "ko": "이미지 생성",
+      "sourceHash": "e1dcc68a07933f280230df064a1dcd332f720cc2747d960a869cb76b01653fbb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:create-the-image:0006:0001",
+      "source": "You create a Core Graphics image from the buffer, and initialize a [`UIImage`](https://developer.apple.com/documentation/UIKit/UIImage) instance from that.",
+      "ko": "버퍼에서 Core Graphics 이미지를 생성한 다음, 해당 이미지로 [`UIImage`](https://developer.apple.com/documentation/UIKit/UIImage) 인스턴스를 초기화합니다.",
+      "sourceHash": "897c828e82edc770b43ff128e47bfb6c7a1126b0cd2134f1a14bbe097beff30e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:create-the-image:0006:0002",
+      "source": "The [`createCGImage(format:flags:)`](vimage_buffer/createcgimage(format:flags:).md) function returns a [`CGImage`](https://developer.apple.com/documentation/CoreGraphics/CGImage) instance based on the supplied Core Graphics image format (for more information, see [`Converting bitmap data between Core Graphics images and vImage buffers`](converting-bitmap-data-between-core-graphics-images-and-vimage-buffers.md)).",
+      "ko": "The [`createCGImage(format:flags:)`](vimage_buffer/createcgimage(format:flags:).md) function returns a [`CGImage`](https://developer.apple.com/documentation/CoreGraphics/CGImage) instance based on the supplied Core Graphics image format (for more information, see [`Converting bitmap data between Core Graphics images and vImage buffers`](converting-bitmap-data-between-core-graphics-images-and-vimage-buffers.md)).",
+      "sourceHash": "ea2bfe251cbe3b357d591652e87ba3a9586c32373e59fbcea559c9c6d8fc64a8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:create-the-image:0007:0001",
+      "source": "The following example shows how to create a Core Graphics image from a vImage buffer:",
+      "ko": "다음 예제는 vImage 버퍼에서 Core Graphics 이미지를 생성하는 방법을 보여줍니다.",
+      "sourceHash": "00ae8adb7b76b1e07d633cfc016738dbc6e910493dd9b612695c3ff2ce3e2b16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:create-the-image:0008:0001",
+      "source": "```swift\nlet result = try? destinationBuffer.createCGImage(format: format)\n\nif let result = result {\n    // Assumes `imageView` is a `UIImageView`\n    imageView.image = UIImage(cgImage: result)\n}\n```",
+      "ko": "```swift\nlet result = try? destinationBuffer.createCGImage(format: format)\n\nif let result = result {\n    // Assumes `imageView` is a `UIImageView`\n    imageView.image = UIImage(cgImage: result)\n}\n```",
+      "sourceHash": "ebe738ab67bd154f1f21f9210a65c3f79b71631b4e9fed7a74c55a4923f3cf6b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[Converting bitmap data between Core Graphics images and vImage buffers](converting-bitmap-data-between-core-graphics-images-and-vimage-buffers.md)",
+      "ko": "[Core Graphics 이미지와 vImage 버퍼 간 비트맵 데이터 변환](converting-bitmap-data-between-core-graphics-images-and-vimage-buffers.md)",
+      "sourceHash": "0450e3ea4de6109f9e5f0c8343b652273ae27e48dba0167e99474573a2c18a65",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "Pass image data between Core Graphics and vImage to create and manipulate images.",
+      "ko": "Core Graphics와 vImage 간에 이미지 데이터를 전달하여 이미지를 생성하고 조작합니다.",
+      "sourceHash": "b1c87a4de9ebfa7ffe6f416eb47733611873a46c6ce40507b5611d5a8382ac7a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[Creating and Populating Buffers from Core Graphics Images](creating-and-populating-buffers-from-core-graphics-images.md)",
+      "ko": "[Core Graphics 이미지에서 버퍼 생성 및 채우기](creating-and-populating-buffers-from-core-graphics-images.md)",
+      "sourceHash": "87df911c279291a895c39d4fe5b9b360ae3238e1ec12a3ddf391e83c7ff2c3f8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Initialize vImage buffers from Core Graphics images.",
+      "ko": "Core Graphics 이미지에서 vImage 버퍼를 초기화합니다.",
+      "sourceHash": "596e9c68192468fd0eaa2425979a805e7732eac971baddb95d2fd667ccd817dd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[Building a Basic Image-Processing Workflow](building-a-basic-image-processing-workflow.md)",
+      "ko": "[기본 이미지 처리 워크플로우 구축](building-a-basic-image-processing-workflow.md)",
+      "sourceHash": "f8255ca50534ae2571f45fcd706c0e1525c6b9f4683ee27e496ef0a0106b50c0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Resize an image with vImage.",
+      "ko": "vImage로 이미지를 크기 조정합니다.",
+      "sourceHash": "297a8507dc026f5c3b84fb22cc3d0a5145107b6a17c801bd8766b00087b9385e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[Applying geometric transforms to images](applying-geometric-transforms-to-images.md)",
+      "ko": "[이미지에 기하학적 변환 적용](applying-geometric-transforms-to-images.md)",
+      "sourceHash": "e86419d39925ce7501df19b24f6e941792349af83a7854a472fe740329522910",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Reflect, shear, rotate, and scale image buffers using vImage.",
+      "ko": "vImage를 사용해 이미지 버퍼를 반사, 전단, 회전 및 스케일링합니다.",
+      "sourceHash": "4379afa5755b4202f049c3b0b6a061616e70d56a8f923fca61015457aa19fc59",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[Compositing images with alpha blending](compositing-images-with-alpha-blending.md)",
+      "ko": "[알파 블렌딩으로 이미지 합성](compositing-images-with-alpha-blending.md)",
+      "sourceHash": "b165dd75761e99cf56b24504c7f4bbce27db5a993eec9843d14763f142677817",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Combine two images by using alpha blending to create a single output.",
+      "ko": "알파 블렌딩을 사용해 두 이미지를 결합해 하나의 출력을 생성합니다.",
+      "sourceHash": "20362d5c98edfab9b6ce94375ca054b33afc74caa9e3785d149cee4520e9e16c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[Compositing images with vImage blend modes](compositing-images-with-vimage-blend-modes.md)",
+      "ko": "[vImage 블렌드 모드로 이미지 합성](compositing-images-with-vimage-blend-modes.md)",
+      "sourceHash": "2963d3a244b3b8bc1fd2397b977322a2ffe93dfa6ec37469866a72ba810a660f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Combine two images by using blend modes to create a single output.",
+      "ko": "블렌드 모드를 사용해 두 이미지를 결환해 하나의 출력을 생성합니다.",
+      "sourceHash": "8fa11fe112144382427f6fc7d226b344a045393f8f21a5d6130ea93952c5ccfb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[Applying vImage operations to regions of interest](applying-vimage-operations-to-regions-of-interest.md)",
+      "ko": "[Applying vImage operations to regions of interest](applying-vimage-operations-to-regions-of-interest.md)",
+      "sourceHash": "91bb3bba556b9f814af7329de3f6c2c650145934daa7e61b569756484c2f1502",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Limit the effect of vImage operations to rectangular regions of interest.",
+      "ko": "Limit the effect of vImage operations to rectangular regions of interest.",
+      "sourceHash": "13a873ae8df7d595407981237f36adbd07999a9db9e02ddda66a890089532e32",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[Optimizing image-processing performance](optimizing-image-processing-performance.md)",
+      "ko": "[Optimizing image-processing performance](optimizing-image-processing-performance.md)",
+      "sourceHash": "6ae0444810900b0efccba454ef3c8d748782c9ca961f0532c45977012971135f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Improve your app’s performance by converting image buffer formats from interleaved to planar.",
+      "ko": "Improve your app’s performance by converting image buffer formats from interleaved to planar.",
+      "sourceHash": "bbb5ea89060b6902c9a8c82258513b1177f74f5334496c7c8d44695b57a46bec",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[vImage](vimage-library.md)",
+      "ko": "[vImage](vimage-library.md)",
+      "sourceHash": "82755fce9673879548ba8bba4416b66542fd7220157094efdbeb9f41d143cc3d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Manipulate large images using the CPU’s vector processor.",
+      "ko": "Manipulate large images using the CPU’s vector processor.",
+      "sourceHash": "859ababb9c160d80395e723ef70958daa975d12c6f0b33fdca59d095c9815046",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0028:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/creating-a-core-graphics-image-from-a-vimage-buffer)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/creating-a-core-graphics-image-from-a-vimage-buffer)*",
+      "sourceHash": "03e8d6faae968bc1ef2c65d767dc29391ed14c5b3530753e0d6c5e8d07f61140",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosession/preparerouteselectionforplayback-completionhandler.md",
+  "title": "prepareRouteSelectionForPlayback(completionHandler:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosession/preparerouteselectionforplayback-completionhandler",
+  "segments": [
+    {
+      "id": "seg:heading:preparerouteselectionforplaybackcompletionhandler:0000:0001",
+      "source": "prepareRouteSelectionForPlayback(completionHandler:)",
+      "ko": "prepareRouteSelectionForPlayback(completionHandler:)",
+      "sourceHash": "03c3e4226d293786f7822bb5b190724e00f2f83135a92451fe9509c22d5ec6b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:preparerouteselectionforplaybackcompletionhandler:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: method",
+      "ko": "**Framework**: AVFAudio **Kind**: method",
+      "sourceHash": "9e980d3b5301173f9b270d0909000bbb41e1c6922361d4fa1df1df34f70dafc7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:preparerouteselectionforplaybackcompletionhandler:0002:0001",
+      "source": "Prepares the route selection for long-form video playback.",
+      "ko": "긴 형식 비디오 재생을 위해 라우트 선택을 준비합니다.",
+      "sourceHash": "54dbb100b0c73da8fa5f7596f8f4f65a15667f973dd219ea9651d44f2e750682",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:preparerouteselectionforplaybackcompletionhandler:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:preparerouteselectionforplaybackcompletionhandler:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:preparerouteselectionforplaybackcompletionhandler:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:preparerouteselectionforplaybackcompletionhandler:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:preparerouteselectionforplaybackcompletionhandler:0004:0004",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc prepareRouteSelectionForPlayback() async -> (Bool, AVAudioSession.RouteSelection)\n```",
+      "ko": "```swift\nfunc prepareRouteSelectionForPlayback() async -> (Bool, AVAudioSession.RouteSelection)\n```",
+      "sourceHash": "3e20137d7b65b736ffd5214029988a47140b5b0f527ef123e066d90e8adfa2cb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "When playing long-form video content, call this method to indicate that playback is about to begin.",
+      "ko": "긴 형식 비디오 콘텐츠를 재생할 때 재생이 곧 시작됨을 알리기 위해 이 메서드를 호출합니다.",
+      "sourceHash": "f20222790b66ad566ac6ef8f0fc295d6671e2090cc7032272cbc1415d5527836",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Doing so provides the system the opportunity to prompt the user for an output destination, if needed, and perform any required routing.",
+      "ko": "이렇게 하면 시스템이 필요한 경우 출력 대상을 사용자에게 요청하고 필요한 라우팅을 수행할 수 있습니다.",
+      "sourceHash": "4d20acba35442681840073007cc7e4f22635af8834e0645ee2cbbabf732938f1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "The system only prompts the user to select a route if you’ve configured the audio session with a long-form video route-sharing policy.",
+      "ko": "시스템은 오디오 세션을 긴 형식 비디오 라우트 공유 정책으로 구성한 경우에만 사용자의 라우트 선택을 요청합니다.",
+      "sourceHash": "04869300380e391c1084c585594e583bd60a97905e553c9fe44f599a29ad9f92",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "After the system configures the needed routing, it calls its completion handler, from which you can begin playback.",
+      "ko": "시스템이 필요한 라우팅 구성을 완료하면 완료 핸들러를 호출하며, 이때부터 재생을 시작할 수 있습니다.",
+      "sourceHash": "ba5770eaefb35e747e2c49402e32c72227ef65c9f8313803999ce6be2f011931",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0010:0001",
+      "source": "```swift\nlet session = AVAudioSession.sharedInstance()\nsession.prepareRouteSelectionForPlayback { shouldStartPlayback, routeSelection in\n    if shouldStartPlayback {\n        // Prepare and present player.\n    }\n}\n```",
+      "ko": "```swift\nlet session = AVAudioSession.sharedInstance()\nsession.prepareRouteSelectionForPlayback { shouldStartPlayback, routeSelection in\n    if shouldStartPlayback {\n        // Prepare and present player.\n    }\n}\n```",
+      "sourceHash": "7f487e4aa076f23ee1af8e6d0a188c23ee44e5297b6cc503d937f38c7740595a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0011:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0012:0001",
+      "source": "`completionHandler`: A completion handler called after the system finishes preparing the playback route. The system passes the completion handler the following parameters: - **`shouldStartPlayback`**: A Boolean value that indicates whether playback should start.",
+      "ko": "`completionHandler`: 시스템이 재생 라우트 준비를 완료한 뒤 호출되는 완료 핸들러입니다. 시스템은 완료 핸들러에 다음 매개변수를 전달합니다. - **`shouldStartPlayback`**: 재생을 시작해야 하는지 나타내는 Boolean 값입니다.",
+      "sourceHash": "f7231355ae0f9008afbf910c0c5e72ec4aeaa8cb079309dfc55b799e814bcfac",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0012:0002",
+      "source": "**`routeSelection`**: A route selection value that indicates the active playback route.",
+      "ko": "**`routeSelection`**: 활성 재생 라우트를 나타내는 라우트 선택 값입니다.",
+      "sourceHash": "d6df5ce83f8ce11e1351d95cbaa3240477e8e6e9a44a1dd36ab85e9ef9f1c010",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func setCategory(AVAudioSession.Category, mode: AVAudioSession.Mode, policy: AVAudioSession.RouteSharingPolicy, options: AVAudioSession.CategoryOptions) throws](avaudiosession/setcategory(_:mode:policy:options:).md)",
+      "ko": "[func setCategory(AVAudioSession.Category, mode: AVAudioSession.Mode, policy: AVAudioSession.RouteSharingPolicy, options: AVAudioSession.CategoryOptions) throws](avaudiosession/setcategory(_:mode:policy:options:).md)",
+      "sourceHash": "bded5b9d54e005c1847f3da4f57367d51988476f6ff63b981ce54e575b74eef7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Sets the session category, mode, route-sharing policy, and options.",
+      "ko": "세션의 카테고리, 모드, 라우트 공유 정책 및 옵션을 설정합니다.",
+      "sourceHash": "f4f02600071dcacf0cfa47a492aef7e6d17f7aacb3fb4a0b5e3c34a88720d7e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[AVAudioSession.RouteSelection](avaudiosession/routeselection.md)",
+      "ko": "[AVAudioSession.RouteSelection](avaudiosession/routeselection.md)",
+      "sourceHash": "e219f0ad060ebb14e6688b26bfcf24153eab3119e50318add09080f4e48384ea",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Constants used to define the active route selection.",
+      "ko": "활성 라우트 선택을 정의하는 데 사용되는 상수입니다.",
+      "sourceHash": "dc049cb3afdb688472ec56d30b0b0726e61095a899fc669fce63a604b1e8c2d4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0018:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/preparerouteselectionforplayback(completionhandler:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/preparerouteselectionforplayback(completionhandler:))*",
+      "sourceHash": "37228e8f5d01ec7f61282e799d29fe727d7891c9d3145005bcf4f3e774a089d5",
+      "status": "machine_translated"
+    }
+  ]
+}

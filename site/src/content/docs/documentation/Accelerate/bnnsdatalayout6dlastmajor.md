@@ -1,0 +1,56 @@
+---
+source_path: "documentation/Accelerate/bnnsdatalayout6dlastmajor.md"
+upstream_sha: "8a29a1d75e67151b588206d3e921a4ff212726be"
+translation_status: machine_translated
+official_url: "https://developer.apple.com/documentation/accelerate/bnnsdatalayout6dlastmajor"
+official: false
+---
+
+> 비공식 번역입니다. 정확한 최신 내용은 원문을 확인하세요.
+
+# <span class="ko-segment" data-segment-id="seg:heading:bnnsdatalayout6dlastmajor:0000:0001">BNNSDataLayout6DLastMajor</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:bnnsdatalayout6dlastmajor:0001:0001">**Framework**: Accelerate **Kind**: var</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:bnnsdatalayout6dlastmajor:0002:0001">6D last-major 텐서를 나타내는 상수입니다.</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:bnnsdatalayout6dlastmajor:0003:0001">**Availability**:</span>
+
+- <span class="ko-segment" data-segment-id="seg:list:bnnsdatalayout6dlastmajor:0004:0001">iOS 14.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:bnnsdatalayout6dlastmajor:0004:0002">iPadOS 14.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:bnnsdatalayout6dlastmajor:0004:0003">Mac Catalyst 14.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:bnnsdatalayout6dlastmajor:0004:0004">macOS 11.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:bnnsdatalayout6dlastmajor:0004:0005">tvOS 14.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:bnnsdatalayout6dlastmajor:0004:0006">visionOS 1.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:bnnsdatalayout6dlastmajor:0004:0007">watchOS 7.0+</span>
+
+## <span class="ko-segment" data-segment-id="seg:heading:declaration:0005:0001">Declaration</span>
+
+```swift
+var BNNSDataLayout6DLastMajor: BNNSDataLayout { get }
+```
+
+#### <span class="ko-segment" data-segment-id="seg:heading:discussion:0007:0001">Discussion</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0008:0001">값 <code>(i, j, k, l, m, n)</code>의 인덱스는 다음과 같습니다.</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0009:0001"><code>i * stride[0] + j * stride[1] + k * stride[2] + l * stride[3] +</code></span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0010:0001"><code>m * stride[4] + n * stride[5]</code>.</span>
+
+- <span class="ko-segment" data-segment-id="seg:list:discussion:0011:0001"><code>size[0]</code>은 첫 번째 차원(<code>i</code>)의 크기입니다.</span>
+- <span class="ko-segment" data-segment-id="seg:list:discussion:0011:0002"><code>size[1]</code>은 두 번째 차원(<code>j</code>)의 크기입니다.</span>
+- <span class="ko-segment" data-segment-id="seg:list:discussion:0011:0003"><code>size[2]</code>은 세 번째 차원(<code>k</code>)의 크기입니다.</span>
+- <span class="ko-segment" data-segment-id="seg:list:discussion:0011:0004"><code>size[3]</code>은 네 번째 차원(<code>l</code>)의 크기입니다.</span>
+- <span class="ko-segment" data-segment-id="seg:list:discussion:0011:0005"><code>size[4]</code>는 다섯 번째 차원(<code>m</code>)의 크기입니다.</span>
+- <span class="ko-segment" data-segment-id="seg:list:discussion:0011:0006"><code>size[5]</code>는 여섯 번째 차원(<code>n</code>)의 크기입니다.</span>
+
+## <span class="ko-segment" data-segment-id="seg:heading:see-also:0012:0001">참고 항목</span>
+
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0013:0001"><a href="bnnsdatalayout6dfirstmajor.md">var BNNSDataLayout6DFirstMajor: BNNSDataLayout</a></span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0014:0001">6D first-major 텐서를 나타내는 상수입니다.</span>
+
+---
+
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0016:0001">*<a href="https://developer.apple.com/documentation/accelerate/bnnsdatalayout6dlastmajor">View on Apple Developer</a>*</span>

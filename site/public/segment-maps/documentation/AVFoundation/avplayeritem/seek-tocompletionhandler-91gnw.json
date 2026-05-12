@@ -1,0 +1,211 @@
+{
+  "docId": "documentation/AVFoundation/avplayeritem/seek-tocompletionhandler-91gnw.md",
+  "title": "seek(to:completionHandler:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avplayeritem/seek-tocompletionhandler-91gnw",
+  "segments": [
+    {
+      "id": "seg:heading:seektocompletionhandler:0000:0001",
+      "source": "seek(to:completionHandler:)",
+      "ko": "seek(to:completionHandler:)",
+      "sourceHash": "7bf148659d47fae99298aaa7cc739a14f3400d2edbb9ca6b663dbc1828f98424",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:seektocompletionhandler:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:seektocompletionhandler:0002:0001",
+      "source": "Sets the current playback time to the specified time.",
+      "ko": "현재 재생 시간을 지정된 시간으로 설정합니다.",
+      "sourceHash": "3133f13eba5dbcfc5f53870f5878680d67e222ebdd66678f4d270d268cf935ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:seektocompletionhandler:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:seektocompletionhandler:0004:0001",
+      "source": "iOS 5.0+",
+      "ko": "iOS 5.0+",
+      "sourceHash": "6b4dd8f1a6495a587082b8fb76320f51b2eebb8f8a2eca687de76b0735bc6a3c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:seektocompletionhandler:0004:0002",
+      "source": "iPadOS 5.0+",
+      "ko": "iPadOS 5.0+",
+      "sourceHash": "16cd4ccb66ebf071a21dd80e86fd8839bac07210b4dac630278303b7d7440f6f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:seektocompletionhandler:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:seektocompletionhandler:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:seektocompletionhandler:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:seektocompletionhandler:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:seektocompletionhandler:0004:0007",
+      "source": "watchOS 1.0+",
+      "ko": "watchOS 1.0+",
+      "sourceHash": "2dbee682371896bee6965d157efc729a43696cec8b6451157482f77264ffbb65",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nnonisolated\nfunc seek(to time: CMTime) async -> Bool\n```",
+      "ko": "```swift\nnonisolated\nfunc seek(to time: CMTime) async -> Bool\n```",
+      "sourceHash": "af213a7af986e6c9132293f908d89c7030524120bf3416af8c984fc17308d286",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Use this method to seek to a specified time in the player item and be notified when the operation completes.",
+      "ko": "이 메서드를 사용하면 플레이어 항목에서 지정된 시간으로 이동하고 작업이 완료될 때 알림을 받을 수 있습니다.",
+      "sourceHash": "697a22d96d0a6eef670db178f3d4833d74b1d160ef8d3a7c19859aaa9a81996e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "If the seek request completes without being interrupted (either by another seek request or by any other operation), the completion handler you provide is executed with the `finished` parameter set to [`true`](https://developer.apple.com/documentation/Swift/true).",
+      "ko": "다른 탐색 요청이나 다른 작업으로 중단되지 않고 탐색 요청이 완료되면, 제공한 completion handler가 `finished` 매개변수가 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정된 상태에서 실행됩니다.",
+      "sourceHash": "5457db9d2c02776065b0b2623653c967d416be43d5eaf6e561e59fc7c07087ad",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "If another seek request is already in progress when you call this method, the completion handler for the in-progress seek request is executed immediately with the `finished` parameter set to [`false`](https://developer.apple.com/documentation/Swift/false).",
+      "ko": "이 메서드를 호출할 때 이미 다른 탐색 요청이 진행 중이면, 진행 중인 탐색 요청의 completion handler가 즉시 실행되며 `finished` 매개변수가 [`false`](https://developer.apple.com/documentation/Swift/false)로 설정됩니다.",
+      "sourceHash": "928683fa645c65cbff02893db89dbbaac901a44c3fb44ba1ac00c7ef13df4717",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`time`: The time to which to seek.",
+      "ko": "`time`: 탐색할 시간입니다.",
+      "sourceHash": "aba4d5ec2272b3eeb8acf018f6bd0200b43b206d56014df7a7ada27995fd6371",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0002",
+      "source": "`completionHandler`: The block to invoke when the seek operation has either been completed or been interrupted. The block takes one argument: - **finished**: Indicates whether the seek operation completed.",
+      "ko": "`completionHandler`: 탐색 작업이 완료되었거나 중단되었을 때 호출되는 블록입니다. 블록은 다음 인수를 하나 받습니다: - **finished**: 탐색 작업이 완료되었는지를 나타냅니다.",
+      "sourceHash": "a9dacb75d5c5d9773dde7af0f363ea1615226f01b483d0777e512238f369e252",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "참조",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func seek(to: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime, completionHandler: ((Bool) -> Void)?)](avplayeritem/seek(to:tolerancebefore:toleranceafter:completionhandler:).md)",
+      "ko": "[func seek(to: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime, completionHandler: ((Bool) -> Void)?)](avplayeritem/seek(to:tolerancebefore:toleranceafter:completionhandler:).md)",
+      "sourceHash": "7c5b6ebf763fe17c0327c3d213ced62c239cbd2062c5fb3c65ff764cba4e8245",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Sets the current playback time within a specified time bound and invokes the specified block when the seek operation completes or is interrupted.",
+      "ko": "지정된 시간 경계 내에서 현재 재생 시간을 설정하고 탐색 작업이 완료되거나 중단될 때 지정한 블록을 호출합니다.",
+      "sourceHash": "d67b246367505c6b6d1ab51624983a1a63ce43d8088601ce28d753efe6db4a8d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func seek(to: Date, completionHandler: ((Bool) -> Void)?) -> Bool](avplayeritem/seek(to:completionhandler:)-1dibq.md)",
+      "ko": "[func seek(to: Date, completionHandler: ((Bool) -> Void)?) -> Bool](avplayeritem/seek(to:completionhandler:)-1dibq.md)",
+      "sourceHash": "a021c4a4f63f48cec27ff4f100f742b4988d376b96741e058dd7b395a740f013",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Sets the current playback time to the time specified by the date object.",
+      "ko": "날짜 객체가 지정한 시간으로 현재 재생 시간을 설정합니다.",
+      "sourceHash": "8875918158602ff18360ebd4be2dd5bab30348d0c755f6d7187349280db88b1f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func cancelPendingSeeks()](avplayeritem/cancelpendingseeks.md)",
+      "ko": "[func cancelPendingSeeks()](avplayeritem/cancelpendingseeks.md)",
+      "sourceHash": "2736765e77d4dd2be3c8df32770494ad00c7408fcb10eeb67bb891a9b1234bde",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Cancels any pending seek requests and invokes the corresponding completion handlers if present.",
+      "ko": "보류 중인 모든 탐색 요청을 취소하고 해당 completion handler가 있으면 실행합니다.",
+      "sourceHash": "156960c3f31fc40608a1dd34d1592aff8f38c8267fca9263e1a29747e9143fa4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayeritem/seek(to:completionhandler:)-91gnw)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayeritem/seek(to:completionhandler:)-91gnw)*",
+      "sourceHash": "c28323ff64578e93e35ff554c44fa23b3d0ca30e26d32a02d3abc178247c2453",
+      "status": "machine_translated"
+    }
+  ]
+}

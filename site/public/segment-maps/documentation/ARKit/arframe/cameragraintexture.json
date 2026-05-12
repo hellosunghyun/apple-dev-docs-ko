@@ -1,0 +1,225 @@
+{
+  "docId": "documentation/ARKit/arframe/cameragraintexture.md",
+  "title": "cameraGrainTexture",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arframe/cameragraintexture",
+  "segments": [
+    {
+      "id": "seg:heading:cameragraintexture:0000:0001",
+      "source": "cameraGrainTexture",
+      "ko": "cameraGrainTexture",
+      "sourceHash": "b6fc19a634c1f30605779115023c99e8e694c103ca1c494a8a7ad9c3c7e931b3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:cameragraintexture:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: property",
+      "ko": "**Framework**: ARKit **Kind**: property",
+      "sourceHash": "eebebd0c04c444b8ad7332b72cb6b5efed96fb65bd16793fa46eb608d4454b7e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:cameragraintexture:0002:0001",
+      "source": "A tileable Metal texture created by ARKit to match the visual characteristics of the current video stream.",
+      "ko": "현재 비디오 스트림의 시각적 특성에 맞춘 ARKit 생성 타일형 Metal 텍스처입니다.",
+      "sourceHash": "13eb7489afb9126b0db132bb9835960d225b265eae436b24dd747e1264b80e92",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:cameragraintexture:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cameragraintexture:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cameragraintexture:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cameragraintexture:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar cameraGrainTexture: (any MTLTexture)? { get }\n```",
+      "ko": "```swift\nvar cameraGrainTexture: (any MTLTexture)? { get }\n```",
+      "sourceHash": "a0e91d9e74210ffead7a27507f8b3356f52fc9f8878e9cf5d712e990f00c77ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Camera grain enhances the visual cohesion of the real and augmented aspects of your user experience by enabling your app’s virtual content to take on similar image noise characteristics that naturally occur in the camera feed.",
+      "ko": "This corresponds to `kAudioDevicePropertyLatency` and `kAudioStreamPropertyLatency`.",
+      "sourceHash": "3fb09c0ffcff9710ca817ab67ce8c42e9019bbbeb0236f3c54c2e338ac66a187",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "![Screenshot showing the before and after cases of applying image noise to an app’s virtual content.](https://docs-assets.developer.apple.com/published/91ac97857a79016f3be51942ca95e735/media-3261294%402x.png)",
+      "ko": "![앱의 가상 콘텐츠에 이미지 노이즈를 적용했을 때의 적용 전후 사례를 보여 주는 스크린샷입니다.](https://docs-assets.developer.apple.com/published/91ac97857a79016f3be51942ca95e735/media-3261294%402x.png)",
+      "sourceHash": "1439c39a1e4aa531457d76e0e0da0fbab58002bcc2e27efd8842c5711f1af92c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "If [`ARSCNView`](arscnview.md) is your renderer, SceneKit applies camera grain to your app’s virtual content by default.",
+      "ko": "렌더러가 [`ARSCNView`](arscnview.md)인 경우, SceneKit은 기본적으로 앱의 가상 콘텐츠에 카메라 grain을 적용합니다.",
+      "sourceHash": "60f3916359a2e10bc09910e37f6665346e254436a91add6d45b3e7e99cbe9d68",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "For more information, see [`rendersCameraGrain`](arscnview/renderscameragrain.md).",
+      "ko": "자세한 내용은 [`rendersCameraGrain`](arscnview/renderscameragrain.md)를 참조합니다.",
+      "sourceHash": "9ab7f12149a950fd2d243b24ae10cbf309dd0718d3cc8cc2db5f8dcb73b99344",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:enable-image-noise-on-a-custom-renderer:0011:0001",
+      "source": "Enable Image Noise on a Custom Renderer",
+      "ko": "커스텀 렌더러에서 이미지 노이즈 활성화",
+      "sourceHash": "914b9dbeedee7424c976550373b31377ff9a5f363afbbc1e5cd0de4aa8e435eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enable-image-noise-on-a-custom-renderer:0012:0001",
+      "source": "For apps that display an AR experience using a custom Metal renderer, ARKit provides you with an [`cameraGrainTexture`](arframe/cameragraintexture.md) that matches the noise it detects in the current video stream.",
+      "ko": "커스텀 Metal 렌더러를 사용하는 앱의 경우, ARKit는 현재 비디오 스트림에서 감지된 노이즈와 일치하는 [`cameraGrainTexture`](arframe/cameragraintexture.md) 를 제공합니다.",
+      "sourceHash": "f3bfb0808afa85aee9e124884f7eea8075f70f795fcf4b382cce26ca62ae7c33",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enable-image-noise-on-a-custom-renderer:0012:0002",
+      "source": "Set the noise texture onto your renderer to apply its characteristics to your virtual content.",
+      "ko": "노이즈 텍스처를 렌더러에 설정하여 그 특성을 가상 콘텐츠에 적용합니다.",
+      "sourceHash": "2ffbc47cbf0438a4644cf2c049d139943100769c702ec4e293c40d2166a76803",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:enable-image-noise-on-a-custom-renderer:0013:0001",
+      "source": "The depth dimension of the image noise texture contains variations that you select at runtime based on the [`cameraGrainIntensity`](arframe/cameragrainintensity.md) of the current frame.",
+      "ko": "이미지 노이즈 텍스처의 깊이 차원에는 현재 프레임의 [`cameraGrainIntensity`](arframe/cameragrainintensity.md)를 기반으로 런타임에서 선택하는 변화가 포함됩니다.",
+      "sourceHash": "07f611c5970fac991f1c036bf1e9b1e8d9a6b8e85e8198a16d6786388f785d03",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0014:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var camera: ARCamera](arframe/camera.md)",
+      "ko": "[var camera: ARCamera](arframe/camera.md)",
+      "sourceHash": "5c2eacede39290770a5cc14bb664a0adc0acc4cc397e532d1b904efeb5f6e0c0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Information about the camera position, orientation, and imaging parameters used to capture the frame.",
+      "ko": "프레임을 캡처할 때 사용되는 카메라 위치, 방향 및 이미지 매개변수에 대한 정보입니다.",
+      "sourceHash": "ae792741c1d07266b2a875b579d3c6a88065dafdbc140a485df7dfbe6e5976f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[var capturedImage: CVPixelBuffer](arframe/capturedimage.md)",
+      "ko": "[var capturedImage: CVPixelBuffer](arframe/capturedimage.md)",
+      "sourceHash": "b63fcf3cd2a486f60ed11085e440af789d4ebe4c1edc62b455a1f925b707ed49",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "A pixel buffer containing the image captured by the camera.",
+      "ko": "카메라로 캡처된 이미지를 포함하는 픽셀 버퍼입니다.",
+      "sourceHash": "5564bcfa63e870831d785a139c85ca1b816b13613450be6db31c85abdcc6225f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[var timestamp: TimeInterval](arframe/timestamp.md)",
+      "ko": "[var timestamp: TimeInterval](arframe/timestamp.md)",
+      "sourceHash": "163c76bb004914e9365812d63f409a3eecdf77e87cebc24ac90485c3cb2ee81f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "The time at which the frame was captured.",
+      "ko": "프레임이 캡처된 시각입니다.",
+      "sourceHash": "6a571b551854948c4b87cfaafa1e94f754a533ea633a751830483e481a1bd63d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[var cameraGrainIntensity: Float](arframe/cameragrainintensity.md)",
+      "ko": "[var cameraGrainIntensity: Float](arframe/cameragrainintensity.md)",
+      "sourceHash": "a445f50149be178757e29a23568afb10771266391f88aa4a165fe487f6c3def5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "A value that specifies the amount of grain present in the camera grain texture.",
+      "ko": "카메라 grain 텍스처에 포함되는 grain 양을 지정하는 값입니다.",
+      "sourceHash": "4b8a026be091b07c5a6a613321ec3f6789ef980c4fdd78a85452fc93123ba214",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[var exifData: [String : Any]](arframe/exifdata.md)",
+      "ko": "[var exifData: [String : Any]](arframe/exifdata.md)",
+      "sourceHash": "9596f15f9a27699588310d53ef17c80a31790be17f52b8796e25de0b82a7b727",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "Auxiliary data for the captured image.",
+      "ko": "캡처된 이미지의 보조 데이터입니다.",
+      "sourceHash": "56997438a515a8046200e6cfcdd15ff42cb908714eeff5e0ef7e7965415c481b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0025:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arframe/cameragraintexture)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arframe/cameragraintexture)*",
+      "sourceHash": "47a4b854437581bb8263f4ca34a0ffaa5ad104aa060bf906a110a6f9819f01f6",
+      "status": "preserved"
+    }
+  ]
+}

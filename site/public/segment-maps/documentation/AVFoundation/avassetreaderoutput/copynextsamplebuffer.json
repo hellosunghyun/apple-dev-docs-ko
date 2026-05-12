@@ -1,0 +1,183 @@
+{
+  "docId": "documentation/AVFoundation/avassetreaderoutput/copynextsamplebuffer.md",
+  "title": "copyNextSampleBuffer()",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetreaderoutput/copynextsamplebuffer",
+  "segments": [
+    {
+      "id": "seg:heading:copynextsamplebuffer:0000:0001",
+      "source": "copyNextSampleBuffer()",
+      "ko": "copyNextSampleBuffer()",
+      "sourceHash": "b4271850c024349ad18ad853806629aea26482bad07b504ecbc87abab0f3a0ef",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:copynextsamplebuffer:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:copynextsamplebuffer:0002:0001",
+      "source": "Copies the next sample buffer from the output.",
+      "ko": "출력에서 다음 샘플 버퍼를 복사합니다.",
+      "sourceHash": "6b88811326b1a506d88a75b92d4e5962744e43c7eb4daccf78973af44d34650e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:copynextsamplebuffer:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:copynextsamplebuffer:0004:0001",
+      "source": "iOS 4.1+",
+      "ko": "iOS 4.1+",
+      "sourceHash": "38f203a255362344ad62b340d6bccb0567d68d47ecc0ee0ed9dbf0ef5316f18e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:copynextsamplebuffer:0004:0002",
+      "source": "iPadOS 4.1+",
+      "ko": "iPadOS 4.1+",
+      "sourceHash": "251e48df463f9f94669b19e298467b7228539e04f5c478b45073222f583007e1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:copynextsamplebuffer:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:copynextsamplebuffer:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:copynextsamplebuffer:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:copynextsamplebuffer:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc copyNextSampleBuffer() -> CMSampleBuffer?\n```",
+      "ko": "```swift\nfunc copyNextSampleBuffer() -> CMSampleBuffer?\n```",
+      "sourceHash": "6b808b1b5105080608f58fb87ddbf73f83a097fc1fa9b57d6a77a784f47ece9f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "The output sample buffer, or `nil` if you’ve read all samples or an error occurs.",
+      "ko": "출력 샘플 버퍼 또는 모든 샘플을 읽었거나 오류가 발생한 경우 `nil`입니다.",
+      "sourceHash": "9eba97ebd2c7a22d8704a7218cf358708b8630c3f8b489fad60c04885ab8f329",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "This method returns `nil` when you’ve read all available sample buffers, or if there’s an error.",
+      "ko": "사용 가능한 모든 샘플 버퍼를 읽은 경우나 오류가 있는 경우 이 메서드는 `nil`을 반환합니다.",
+      "sourceHash": "7092fd4c0ff15c4def3ea64d35b8fd38ad52cd7dfba749b7417c331727fe7673",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "Check the value of the asset reader’s [`status`](avassetreader/status-swift.property.md) property to determine the reason.",
+      "ko": "사유를 확인하려면 에셋 리더의 [`status`](avassetreader/status-swift.property.md) 속성 값을 확인합니다.",
+      "sourceHash": "383b2bbca845538b7c87f3f594592d5f20a8ba271f0255fe20f10d8edd908984",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[AVAssetReaderOutput.Provider](avassetreaderoutput/provider.md)",
+      "ko": "[AVAssetReaderOutput.Provider](avassetreaderoutput/provider.md)",
+      "sourceHash": "81232dee55424f6fe24bb89d7b5e22f686e90d9f2ab970f5f9355a22279190ef",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "An object that reads a collection of samples of a common media type from an asset reader.",
+      "ko": "에셋 리더에서 공통 미디어 유형의 샘플 모음을 읽는 객체입니다.",
+      "sourceHash": "e62527df6866e01368989de4ee29431172c43ca4aa6f71722cae7fdf9691b9e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[AVAssetReaderOutput.RandomAccessController](avassetreaderoutput/randomaccesscontroller.md)",
+      "ko": "[AVAssetReaderOutput.RandomAccessController](avassetreaderoutput/randomaccesscontroller.md)",
+      "sourceHash": "56dc6ed94820846ad98612702b0b5af5302dd65ad701a16a2df621dd32005daf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Object used to reset an output provider to read specified time ranges.",
+      "ko": "지정된 시간 범위를 읽도록 출력 공급자를 재설정하는 데 사용되는 객체입니다.",
+      "sourceHash": "91a3543f2f80f0e1a0f9eb737a1ddfa67eb3373189c69ead6502c14ed031d142",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[AVAssetReaderOutput.SupportedPayload](avassetreaderoutput/supportedpayload.md)",
+      "ko": "[AVAssetReaderOutput.SupportedPayload](avassetreaderoutput/supportedpayload.md)",
+      "sourceHash": "0749217af2f7e85df620288d810d3fb721b09d069dfc54dc1fe1a671f1c50bf0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0017:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetreaderoutput/copynextsamplebuffer())*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avassetreaderoutput/copynextsamplebuffer())*",
+      "sourceHash": "d6dcc3e7e062cb9907a6df68383b47caf44dc2da99f4af4606ba72351ccf5e09",
+      "status": "machine_translated"
+    }
+  ]
+}

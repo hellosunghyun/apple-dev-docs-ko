@@ -1,0 +1,183 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedevice/formats.md",
+  "title": "formats",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedevice/formats",
+  "segments": [
+    {
+      "id": "seg:heading:formats:0000:0001",
+      "source": "formats",
+      "ko": "formats",
+      "sourceHash": "c2792b4380a5e4979b72f851bc50968da762419186b176ed2ee59605d6493b9c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:formats:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:formats:0002:0001",
+      "source": "The capture formats a device supports.",
+      "ko": "장치에서 지원하는 캡처 포맷입니다.",
+      "sourceHash": "c8eaae37bf5c5d64b49c9dd28a402e714b79b499784151434bdd43ed78811cce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:formats:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:formats:0004:0001",
+      "source": "iOS 7.0+",
+      "ko": "iOS 7.0+",
+      "sourceHash": "1ceb179e72300483bbe4de83f94fa14777f1aa4ad49f5b26a004a90764f51fe7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:formats:0004:0002",
+      "source": "iPadOS 7.0+",
+      "ko": "iPadOS 7.0+",
+      "sourceHash": "1f72093de273c2b8a1b0f4acad220b3881241f056b2b2168b48b64219a2708c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:formats:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:formats:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:formats:0004:0005",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:formats:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar formats: [AVCaptureDevice.Format] { get }\n```",
+      "ko": "```swift\nvar formats: [AVCaptureDevice.Format] { get }\n```",
+      "sourceHash": "d1d3b64270009b59f870e846fa2c7474cc02744914c50eaf99e47560305fd2a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "A capture device format describes the details of the video, image, or audio parameters of a specific mode of capture.",
+      "ko": "캡처 장치 포맷은 특정 캡처 모드의 비디오, 이미지 또는 오디오 매개변수의 세부 정보를 설명합니다.",
+      "sourceHash": "ea18711ef454cc169e4752b999be1729b2e4643628d17f2f038f748f9d86efe5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "If you require specifying capture settings not covered by a capture session preset, you can set the [`activeFormat`](avcapturedevice/activeformat.md) property to any of the formats in this array.",
+      "ko": "캡처 세션 프리셋에서 다루지 않는 캡처 설정이 필요한 경우, 이 배열의 형식 중 하나를 [`activeFormat`](avcapturedevice/activeformat.md) 속성으로 설정할 수 있습니다.",
+      "sourceHash": "844bb76acafbb6da52ef04925a791c6b461a23dad7da420a22321695f5b916d3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "This property value is key-value observable.",
+      "ko": "이 속성 값은 key-value 관찰이 가능합니다.",
+      "sourceHash": "7eeeaa892b2f8731f9c7773766e15831c1598fb92182cbb2b87edc3d770d0c14",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var activeFormat: AVCaptureDevice.Format](avcapturedevice/activeformat.md)",
+      "ko": "[var activeFormat: AVCaptureDevice.Format](avcapturedevice/activeformat.md)",
+      "sourceHash": "a0f6cfe91afbd6234a0b260fc2c442c4bb006b6e9d0438207595f4d024227d72",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "The capture format in use by the device.",
+      "ko": "장치에서 사용 중인 캡처 포맷입니다.",
+      "sourceHash": "dec37672ad155636a7419164553e0db465e14d09a7ede55753341370c86f93fc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var activeDepthDataFormat: AVCaptureDevice.Format?](avcapturedevice/activedepthdataformat.md)",
+      "ko": "[var activeDepthDataFormat: AVCaptureDevice.Format?](avcapturedevice/activedepthdataformat.md)",
+      "sourceHash": "e8424ffa252ecf64db39bb11facab6b9b6a82ca13fa9f3a1d18a3defb161de00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "The currently active depth data format of the capture device.",
+      "ko": "캡처 장치의 현재 활성 깊이 데이터 포맷입니다.",
+      "sourceHash": "60f89b4776bd145449e8f38ab299c1f19e69c2108626772dd1fd581e751d430d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[AVCaptureDevice.Format](avcapturedevice/format.md)",
+      "ko": "[AVCaptureDevice.Format](avcapturedevice/format.md)",
+      "sourceHash": "f9b63a6aee5f692d98f8a392715de827337f68f92428be721ec151dce77372af",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "A class that defines media formats and capture settings that capture devices support.",
+      "ko": "캡처 장치가 지원하는 미디어 포맷과 캡처 설정을 정의하는 클래스입니다.",
+      "sourceHash": "7f41eb67cfe1f84d4cfce92971a532639005b70ecf4362f427ec8a07b178dc8e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0017:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/formats)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/formats)*",
+      "sourceHash": "1b55d44734e8f87902dc0a49a43a0c82a74274e5ae47ccdedffe3b3ca448e040",
+      "status": "preserved"
+    }
+  ]
+}

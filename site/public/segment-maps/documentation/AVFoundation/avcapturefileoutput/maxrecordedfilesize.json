@@ -1,0 +1,246 @@
+{
+  "docId": "documentation/AVFoundation/avcapturefileoutput/maxrecordedfilesize.md",
+  "title": "maxRecordedFileSize",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturefileoutput/maxrecordedfilesize",
+  "segments": [
+    {
+      "id": "seg:heading:maxrecordedfilesize:0000:0001",
+      "source": "maxRecordedFileSize",
+      "ko": "maxRecordedFileSize",
+      "sourceHash": "681e32e78f4fd5c7fe49580a5f5d344958e3e2087c70883762984c6bead9fcf6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:maxrecordedfilesize:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:maxrecordedfilesize:0002:0001",
+      "source": "The maximum size, in bytes, of the data that should be recorded by the receiver.",
+      "ko": "수신기가 기록해야 하는 데이터의 최대 크기(바이트)입니다.",
+      "sourceHash": "8289240509392ce4d8387886f5009ad115ef7c89786b5e151d03796bc7cbfefd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:maxrecordedfilesize:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:maxrecordedfilesize:0004:0001",
+      "source": "iOS 4.0+",
+      "ko": "iOS 4.0+",
+      "sourceHash": "0c0ed66d9f4133c5a709449f69be4759ac3625b24734b8390d2f7e23b33c3545",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:maxrecordedfilesize:0004:0002",
+      "source": "iPadOS 4.0+",
+      "ko": "iPadOS 4.0+",
+      "sourceHash": "dfe042d2e3f40a7e917ced53f052a0d5f5ba8d69dfa62a3b59fb59de8ef49851",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:maxrecordedfilesize:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:maxrecordedfilesize:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:maxrecordedfilesize:0004:0005",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar maxRecordedFileSize: Int64 { get set }\n```",
+      "ko": "```swift\nvar maxRecordedFileSize: Int64 { get set }\n```",
+      "sourceHash": "996f200cc38e90990e928891d099fd1c2cd0addf3ced5ff5fa1c7c5afba26b06",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This property specifies a hard limit on the data size of recorded files.",
+      "ko": "이 속성은 기록된 파일의 데이터 크기에 대한 엄격한 상한을 지정합니다.",
+      "sourceHash": "133054549ba23112ca18e3c462db967a9d19ea91fe7dd6721ab0853f855dcf6d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Recording is stopped when the limit is reached and the [`fileOutput(_:didFinishRecordingTo:from:error:)`](avcapturefileoutputrecordingdelegate/fileoutput(_:didfinishrecordingto:from:error:).md) delegate method is invoked with an appropriate error.",
+      "ko": "한계에 도달하면 녹화가 중단되고, [`fileOutput(_:didFinishRecordingTo:from:error:)`](avcapturefileoutputrecordingdelegate/fileoutput(_:didfinishrecordingto:from:error:).md) delegate 메서드가 적절한 오류와 함께 호출됩니다.",
+      "sourceHash": "af7300790e1ef46d4b67806a580db12558716880ed59f943160cd31984fa2489",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "The default value of this property is `0`, which indicates no limit.",
+      "ko": "이 속성의 기본값은 `0`이며, 제한이 없음을 나타냅니다.",
+      "sourceHash": "2400c97274681f982c0109328278dd98eb503616e316fd194a0e5b8382fc929d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[var delegate: (any AVCaptureFileOutputDelegate)?](avcapturefileoutput/delegate.md)",
+      "ko": "[var delegate: (any AVCaptureFileOutputDelegate)?](avcapturefileoutput/delegate.md)",
+      "sourceHash": "5934c45b19a1b0ae6d8950506fd9762634f06fafad5d8ad45659a7bd156eb7d8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "The delegate object for the capture file output.",
+      "ko": "캡처 파일 출력의 delegate 객체입니다.",
+      "sourceHash": "cf9bcee1da7f92e30afaa85c814bfa8cecc8379654d60287a8159a02615afb09",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var maxRecordedDuration: CMTime](avcapturefileoutput/maxrecordedduration.md)",
+      "ko": "[var maxRecordedDuration: CMTime](avcapturefileoutput/maxrecordedduration.md)",
+      "sourceHash": "4484fbcce5a0ab5c2445e8eb446630f02e9529f85b9b06229b82fe079415a559",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "The longest duration allowed for the recording.",
+      "ko": "기록 가능한 최대 기간입니다.",
+      "sourceHash": "f6a604a2025d09660bf21a7a6c9654111fc8b5b90fa7c366947ca5e9b32853f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var minFreeDiskSpaceLimit: Int64](avcapturefileoutput/minfreediskspacelimit.md)",
+      "ko": "[var minFreeDiskSpaceLimit: Int64](avcapturefileoutput/minfreediskspacelimit.md)",
+      "sourceHash": "8d9b56bc22810e0b4ce280e1916bb12e96dd2d045d3030a94fa5925688776276",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "The minimum amount of free space, in bytes, required for recording to continue on a given volume.",
+      "ko": "지정된 볼륨에서 녹화를 계속하려면 필요한 최소 여유 공간(바이트)입니다.",
+      "sourceHash": "56640be6ed5de9ea9d52763938edb63301790c9a093725e96b10f1c20263333c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var outputFileURL: URL?](avcapturefileoutput/outputfileurl.md)",
+      "ko": "[var outputFileURL: URL?](avcapturefileoutput/outputfileurl.md)",
+      "sourceHash": "732d3b774cf3706ed7052a54638b25ea629eb4335f2b8e3ce1693182dcadd79e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "The URL to which output is directed.",
+      "ko": "출력이 기록되는 URL입니다.",
+      "sourceHash": "567da7bb87863fd3220c9223d9f93723e73e9e69a3d6d4c74eccacd45ca77a9b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var recordedDuration: CMTime](avcapturefileoutput/recordedduration.md)",
+      "ko": "[var recordedDuration: CMTime](avcapturefileoutput/recordedduration.md)",
+      "sourceHash": "083a23f057b4302fbef95114f5f48fbb7e1040fc3bfe34a1c2524a86f6dd9378",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Indicates the duration of the media recorded to the current output file.",
+      "ko": "현재 출력 파일에 기록된 미디어의 기간을 나타냅니다.",
+      "sourceHash": "ad8d31cc58950c8e8cb1878e59021b095cce077b46775db7557a22f7484b5adb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[var recordedFileSize: Int64](avcapturefileoutput/recordedfilesize.md)",
+      "ko": "[var recordedFileSize: Int64](avcapturefileoutput/recordedfilesize.md)",
+      "sourceHash": "03842f0714e30a2aa958d10869b2272b54c3f6cd29af18f543855a30ce2886c6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Indicates the size, in bytes, of the data recorded to the current output file.",
+      "ko": "현재 출력 파일에 기록된 데이터 크기(바이트)를 나타냅니다.",
+      "sourceHash": "d9404635203abd6fad2cc3e365ee82f6b1ef5a52ec6d84ac37a16bc481c30972",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[var isRecording: Bool](avcapturefileoutput/isrecording.md)",
+      "ko": "[var isRecording: Bool](avcapturefileoutput/isrecording.md)",
+      "sourceHash": "7a51b21d184771a1679ac2ffb4742643f39ccc5fc0c4c9a4cdf56e8253e6f71f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Indicates whether recording is in progress.",
+      "ko": "녹화가 진행 중인지 여부를 나타냅니다.",
+      "sourceHash": "0957ac7c21b160ce554e725a9827e5a709cef403b0010211cfaabea4ebbee1b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[var isRecordingPaused: Bool](avcapturefileoutput/isrecordingpaused.md)",
+      "ko": "[var isRecordingPaused: Bool](avcapturefileoutput/isrecordingpaused.md)",
+      "sourceHash": "d6f78938870ece4c68318eaf44bdbe13ceaeeb19e6fe345a1e4f7c0c080d8898",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Indicates whether recording to the current output file is paused.",
+      "ko": "현재 출력 파일에 대한 녹화가 일시 중지되었는지 여부를 나타냅니다.",
+      "sourceHash": "a7f11674270f073869774fa7f98c55d242ffece855de440297088175dea56507",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0026:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturefileoutput/maxrecordedfilesize)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturefileoutput/maxrecordedfilesize)*",
+      "sourceHash": "ff74b0e0648dcd22462a032bfca328e156a3952de1d6b0a128273b7b2ba624f5",
+      "status": "preserved"
+    }
+  ]
+}

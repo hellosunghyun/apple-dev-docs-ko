@@ -1,0 +1,344 @@
+{
+  "docId": "documentation/AVFoundation/avcapturecontrol.md",
+  "title": "AVCaptureControl",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturecontrol",
+  "segments": [
+    {
+      "id": "seg:heading:avcapturecontrol:0000:0001",
+      "source": "AVCaptureControl",
+      "ko": "AVCaptureControl",
+      "sourceHash": "80a7f4569c0019fb44bd9e81fa2f6eed9a6f879078fb0ff6b71e275e39fed285",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avcapturecontrol:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avcapturecontrol:0002:0001",
+      "source": "An abstract base class for controls that interact with the camera system.",
+      "ko": "카메라 시스템과 상호 작용하는 컨트롤을 위한 추상 기본 클래스입니다.",
+      "sourceHash": "dd38e732696ef9b7d814b8c0ca793db4d7405d9340c605942cc103b73e646051",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avcapturecontrol:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturecontrol:0004:0001",
+      "source": "iOS 18.0+",
+      "ko": "iOS 18.0+",
+      "sourceHash": "1b3f7d89e639b0fbca8c8e42d8d9491fcff80bdc07373dbd869c8a39ca2beb40",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturecontrol:0004:0002",
+      "source": "iPadOS 18.0+",
+      "ko": "iPadOS 18.0+",
+      "sourceHash": "54a351c44693b5ce37dfff89a84379ba390a94f1a19625c16296b998317728b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturecontrol:0004:0003",
+      "source": "Mac Catalyst 18.0+",
+      "ko": "Mac Catalyst 18.0+",
+      "sourceHash": "e596dbcea740a74f29295484ff7ecd8a013d1e2e063bab1713983e09b382b0b3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturecontrol:0004:0004",
+      "source": "macOS 15.0+",
+      "ko": "macOS 15.0+",
+      "sourceHash": "611bc4e7b6bcedb648f4dce973a22cfae896f6a2e0e055f5096e7622aed421d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avcapturecontrol:0004:0005",
+      "source": "tvOS 18.0+",
+      "ko": "tvOS 18.0+",
+      "sourceHash": "8b3d386766205786b7eadc109362e800473eedafe7e0a03e888e738fd4823103",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVCaptureControl\n```",
+      "ko": "```swift\nclass AVCaptureControl\n```",
+      "sourceHash": "6d527c9a5f11396b19c57a0d8d3f2143d6a9884021620a036ff64bf98391b4a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Enhancing your app experience with the Camera Control](enhancing-your-app-experience-with-the-camera-control.md)",
+      "ko": "[Enhancing your app experience with the Camera Control](enhancing-your-app-experience-with-the-camera-control.md)",
+      "sourceHash": "24fd0079a87294ca881d1973872c31c1f392fad66742ca45225a4f6e489a18d3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0009:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "Capture controls provide the interface for interacting with the camera system from the Camera Control button on iPhone 16 devices.",
+      "ko": "캡처 컨트롤은 iPhone 16 기기의 Camera Control 버튼을 통해 카메라 시스템과 상호 작용할 수 있는 인터페이스를 제공합니다.",
+      "sourceHash": "cc9875a2e56c7ed0358e6ee9ec7f34d7798b3e6ef4d2efbdd75977895eae2176",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0002",
+      "source": "The framework provides several concrete subclasses of this class that allow apps to access built-in functionality and define custom controls.",
+      "ko": "이 프레임워크는 앱이 기본 제공 기능에 접근하고 사용자 정의 컨트롤을 정의할 수 있도록 하는 이 클래스의 구체 하위 클래스를 여러 개 제공합니다.",
+      "sourceHash": "56862fa311f4d7a4edc2ae89a89d24d82ca0d382f2a35b9a702c08f0f3a23635",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0011:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:setting-the-enabled-state:0012:0001",
+      "source": "Setting the enabled state",
+      "ko": "활성화 상태 설정",
+      "sourceHash": "a19d9fe973364910296451e54fb328fdbae50036984e1a6adde74146a4ba4bd5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:setting-the-enabled-state:0013:0001",
+      "source": "[var isEnabled: Bool](avcapturecontrol/isenabled.md)",
+      "ko": "[var isEnabled: Bool](avcapturecontrol/isenabled.md)",
+      "sourceHash": "72b5f61c8a01a7d951c5a1bc54b3119ea0e73bc606be0d57354d7914cff34d11",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setting-the-enabled-state:0014:0001",
+      "source": "A Boolean value that indicates whether this control supports user interaction.",
+      "ko": "이 컨트롤이 사용자 상호작용을 지원하는지 나타내는 부울 값입니다.",
+      "sourceHash": "9020c91eb07ca3fc22130365b57875cc46bb9827d0e2e7d1016241c926e9fdb3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0015:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0016:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0017:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherited-by:0018:0001",
+      "source": "Inherited By",
+      "ko": "상속 대상",
+      "sourceHash": "42035a6fba4e21843f669d8b7e1e57fb192087a3ae79a1ddf62cfa85090744bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherited-by:0019:0001",
+      "source": "[AVCaptureIndexPicker](avcaptureindexpicker.md)",
+      "ko": "[AVCaptureIndexPicker](avcaptureindexpicker.md)",
+      "sourceHash": "485325220add513e7635f0358bf65e2470d35acd36d11ddfdd36242eae845d36",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherited-by:0019:0002",
+      "source": "[AVCaptureSlider](avcaptureslider.md)",
+      "ko": "[AVCaptureSlider](avcaptureslider.md)",
+      "sourceHash": "1b4e3eea5bab5ce92d9811336f91247e27ba4e743702d631a6bea72a257fceaa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherited-by:0019:0003",
+      "source": "[AVCaptureSystemExposureBiasSlider](avcapturesystemexposurebiasslider.md)",
+      "ko": "[AVCaptureSystemExposureBiasSlider](avcapturesystemexposurebiasslider.md)",
+      "sourceHash": "a995f44075c097368558eb86bf022532a5694bb8d9536e683d6223c1712ead1e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:inherited-by:0019:0004",
+      "source": "[AVCaptureSystemZoomSlider](avcapturesystemzoomslider.md)",
+      "ko": "[AVCaptureSystemZoomSlider](avcapturesystemzoomslider.md)",
+      "sourceHash": "45795e2447b6ed1f51cc960c0aabdf96df7f30b8372f9cfd64b811cb680fbe14",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0020:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0021:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0022:0001",
+      "source": "See Also",
+      "ko": "추가 참조",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[Enhancing your app experience with the Camera Control](enhancing-your-app-experience-with-the-camera-control.md)",
+      "ko": "[Enhancing your app experience with the Camera Control](enhancing-your-app-experience-with-the-camera-control.md)",
+      "sourceHash": "24fd0079a87294ca881d1973872c31c1f392fad66742ca45225a4f6e489a18d3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "Provide direct access to your camera app’s features to help people quickly capture the perfect shot.",
+      "ko": "사용자가 완벽한 샷을 빠르게 찍을 수 있도록 카메라 앱의 기능에 직접 액세스할 수 있게 제공합니다.",
+      "sourceHash": "709bd1d6afce8daff5c66e92677598ef9eb628cdbc127b93c9c13c198e9da4ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[class AVCaptureSystemZoomSlider](avcapturesystemzoomslider.md)",
+      "ko": "[class AVCaptureSystemZoomSlider](avcapturesystemzoomslider.md)",
+      "sourceHash": "787f8f369f5168f5f2093cb9f72a4d7ae81b305a9a457eeb0a31ffe4cddd8885",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "A control that adjusts the video zoom factor of a capture device within the system-recommended range.",
+      "ko": "시스템 권장 범위 내에서 캡처 장치의 비디오 줌 배율을 조정하는 컨트롤입니다.",
+      "sourceHash": "0e2f131895e8d0e27bd1676c80d0ea95a1298ff440a20037f5e095c9a6dbd933",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[class AVCaptureSystemExposureBiasSlider](avcapturesystemexposurebiasslider.md)",
+      "ko": "[class AVCaptureSystemExposureBiasSlider](avcapturesystemexposurebiasslider.md)",
+      "sourceHash": "dadcf868463627deb435c8e49f71474ae71638f58a05441e4f999f4f91ff2ff8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "A control that adjusts the exposure bias of a capture device within the system-recommended range.",
+      "ko": "시스템 권장 범위 내에서 캡처 장치의 노출 바이어스를 조정하는 컨트롤입니다.",
+      "sourceHash": "839b01ffa64362bc57bdb73a25905e52cd0746f9e05805b32bab7be1fb4efa99",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0029:0001",
+      "source": "[class AVCaptureSlider](avcaptureslider.md)",
+      "ko": "[class AVCaptureSlider](avcaptureslider.md)",
+      "sourceHash": "403fe71ec1c1b047737e8f7762291cef2b99aed8b4b1a061d674b9a9b5b3cfb7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "A slider control that selects a value from a bounded range.",
+      "ko": "제한된 범위에서 값을 선택하는 슬라이더 컨트롤입니다.",
+      "sourceHash": "b56571bf762e5eaf464d6b5ad326088ea97e5da20a047e50e2127b3d93346367",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0031:0001",
+      "source": "[class AVCaptureIndexPicker](avcaptureindexpicker.md)",
+      "ko": "[class AVCaptureIndexPicker](avcaptureindexpicker.md)",
+      "sourceHash": "55a79b4da605d17b24476ee34af4a951b773b22a1d681d14ec0a670df27ed960",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0032:0001",
+      "source": "A control for selecting from a set of mutually exclusive values by index.",
+      "ko": "상호 배타적인 값 집합에서 인덱스로 값을 선택하는 컨트롤입니다.",
+      "sourceHash": "983b7de78bf05dd84fc809984c4026c9f846f8ccbc50a902b0caf2cc74133900",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0033:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0034:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturecontrol)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturecontrol)*",
+      "sourceHash": "01467120aa2efd39f0563e992974aeff821bd9e1a0b0aed1906f210edf5f2f4f",
+      "status": "preserved"
+    }
+  ]
+}

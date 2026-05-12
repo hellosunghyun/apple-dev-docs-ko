@@ -1,0 +1,162 @@
+{
+  "docId": "documentation/AVFoundation/avcapturesessiondeferredstartdelegate/sessionwillrundeferredstart.md",
+  "title": "sessionWillRunDeferredStart(:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturesessiondeferredstartdelegate/sessionwillrundeferredstart",
+  "segments": [
+    {
+      "id": "seg:heading:sessionwillrundeferredstart:0000:0001",
+      "source": "sessionWillRunDeferredStart(_:)",
+      "ko": "sessionWillRunDeferredStart(_:)",
+      "sourceHash": "3395de8114d636458a19ca53374527409bdec85cb4eddd22c330e825f296ed14",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sessionwillrundeferredstart:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method **Required**: Yes",
+      "ko": "**Framework**: AVFoundation **Kind**: method **Required**: Yes",
+      "sourceHash": "f4dc82c05f72222ea408946a03a514c4417afb87a1c72d42cb87eaad133c8085",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sessionwillrundeferredstart:0002:0001",
+      "source": "This method gets called by the session when deferred start is about to run.",
+      "ko": "이 메서드는 세션에서 지연 시작이 곧 실행되기 직전에 호출됩니다.",
+      "sourceHash": "c0f95aa5d01a8cab065f33d4ebaa7b16b58591f275aa1cae59c7eda8c89f9c93",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sessionwillrundeferredstart:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sessionwillrundeferredstart:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sessionwillrundeferredstart:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sessionwillrundeferredstart:0004:0003",
+      "source": "Mac Catalyst 26.0+",
+      "ko": "Mac Catalyst 26.0+",
+      "sourceHash": "41da0bcbe19513a5638f4ac052319884e486b3cc05252ef6209b23e7b2b1d8e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sessionwillrundeferredstart:0004:0004",
+      "source": "macOS 26.0+",
+      "ko": "macOS 26.0+",
+      "sourceHash": "6fcc4a770cbd02feaac4df78b954d37ef26fc9755008ee17612223162fd4ed2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sessionwillrundeferredstart:0004:0005",
+      "source": "tvOS 26.0+",
+      "ko": "tvOS 26.0+",
+      "sourceHash": "28934d9284c51fe0aa7b9363ccc49ea3cd840259287dd4f466466d4888ef2bf8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc sessionWillRunDeferredStart(_ session: AVCaptureSession)\n```",
+      "ko": "```swift\nfunc sessionWillRunDeferredStart(_ session: AVCaptureSession)\n```",
+      "sourceHash": "6b52aa46442374ee722eecfc2dab473cf4551541e1ed8a1298602a224749a224",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Delegates receive this message when the session has finished the deferred start.",
+      "ko": "세션이 지연 시작을 완료하면 delegate는 이 메시지를 받습니다.",
+      "sourceHash": "3e00457baafff6e00c8d30a6a29407899d462a1acb84b93d03bcdf35472b4cc4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "This message will be sent regardless of whether the session’s [`automaticallyRunsDeferredStart`](avcapturesession/automaticallyrunsdeferredstart.md) property is set.",
+      "ko": "이 메시지는 세션의 [`automaticallyRunsDeferredStart`](avcapturesession/automaticallyrunsdeferredstart.md) 속성 설정 여부와 상관없이 전송됩니다.",
+      "sourceHash": "79534f09dbedbed012cc09256f21b242f3ffc6174554e6347a1f981f5b7fc311",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "See [`setDeferredStartDelegate(_:deferredStartDelegateCallbackQueue:)`](avcapturesession/setdeferredstartdelegate(_:deferredstartdelegatecallbackqueue:).md) documentation for more information.",
+      "ko": "자세한 내용은 [`setDeferredStartDelegate(_:deferredStartDelegateCallbackQueue:)`](avcapturesession/setdeferredstartdelegate(_:deferredstartdelegatecallbackqueue:).md) 문서를 참조합니다.",
+      "sourceHash": "c2ff6d1583d3b7120b7d5940ac21dbb40398c8594824a97a10664c648bf5a3e4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0009:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0010:0001",
+      "source": "`session`: The [`AVCaptureSession`](avcapturesession.md) instance that runs the deferred start.",
+      "ko": "`session`: 지연 시작을 실행하는 [`AVCaptureSession`](avcapturesession.md) 인스턴스입니다.",
+      "sourceHash": "e1dc8f283de8ddac76967892207ac99e4da29d3be16f863d72ce2c572b80aac6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[func sessionDidRunDeferredStart(AVCaptureSession)](avcapturesessiondeferredstartdelegate/sessiondidrundeferredstart(_:).md)",
+      "ko": "[func sessionDidRunDeferredStart(AVCaptureSession)](avcapturesessiondeferredstartdelegate/sessiondidrundeferredstart(_:).md)",
+      "sourceHash": "fcd4b7107da5d2880dda9a82ca8665454dea80537885a19fdbaa00f823b02dbd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "This method gets called by the session when deferred start has finished running.",
+      "ko": "이 메서드는 세션에서 지연 시작 실행이 완료되면 호출됩니다.",
+      "sourceHash": "61e2a0b19dd204c2741d02ecb6bc62beec2100167dd49c9731469f2d6920391e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0014:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesessiondeferredstartdelegate/sessionwillrundeferredstart(_:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesessiondeferredstartdelegate/sessionwillrundeferredstart(_:))*",
+      "sourceHash": "bfafcf0318b6df641978250a6e204fb6c5ae6dd851c69a29d1a0f8df7369b3ef",
+      "status": "machine_translated"
+    }
+  ]
+}

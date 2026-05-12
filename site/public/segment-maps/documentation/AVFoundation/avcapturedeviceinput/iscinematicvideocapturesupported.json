@@ -1,0 +1,232 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedeviceinput/iscinematicvideocapturesupported.md",
+  "title": "isCinematicVideoCaptureSupported",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedeviceinput/iscinematicvideocapturesupported",
+  "segments": [
+    {
+      "id": "seg:heading:iscinematicvideocapturesupported:0000:0001",
+      "source": "isCinematicVideoCaptureSupported",
+      "ko": "isCinematicVideoCaptureSupported",
+      "sourceHash": "ff65499883d84b515d34871a7a18e5ae4e431b60a6211fc5fc4cc9fc71e3c213",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:iscinematicvideocapturesupported:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:iscinematicvideocapturesupported:0002:0001",
+      "source": "A BOOL value specifying whether Cinematic Video capture is supported.",
+      "ko": "Cinematic Video capture를 지원하는지 지정하는 `BOOL` 값입니다.",
+      "sourceHash": "975fd58e437b8537e021b9be33333bf5b21cb4c6c5b9630bd66304926eec17f8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:iscinematicvideocapturesupported:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:iscinematicvideocapturesupported:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:iscinematicvideocapturesupported:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:iscinematicvideocapturesupported:0004:0003",
+      "source": "Mac Catalyst 26.0+",
+      "ko": "Mac Catalyst 26.0+",
+      "sourceHash": "41da0bcbe19513a5638f4ac052319884e486b3cc05252ef6209b23e7b2b1d8e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:iscinematicvideocapturesupported:0004:0004",
+      "source": "macOS 26.0+",
+      "ko": "macOS 26.0+",
+      "sourceHash": "6fcc4a770cbd02feaac4df78b954d37ef26fc9755008ee17612223162fd4ed2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:iscinematicvideocapturesupported:0004:0005",
+      "source": "tvOS 26.0+",
+      "ko": "tvOS 26.0+",
+      "sourceHash": "28934d9284c51fe0aa7b9363ccc49ea3cd840259287dd4f466466d4888ef2bf8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar isCinematicVideoCaptureSupported: Bool { get }\n```",
+      "ko": "```swift\nvar isCinematicVideoCaptureSupported: Bool { get }\n```",
+      "sourceHash": "0063928f4df7cfb5fa7a05f3f1958c07a298e2c302329cb25e25b5b92fa7dd3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "With Cinematic Video capture, you get a simulated depth-of-field effect that keeps your subjects (people, pets, and more) in sharp focus while applying a pleasing blur to the background (or foreground).",
+      "ko": "Cinematic Video 캡처를 사용하면 피사체(사람, 반려동물 등)가 선명하게 초점이 맞춰진 상태를 유지하면서 배경(또는 전경)에 보기 좋은 블러를 적용하는 시뮬레이션된 심도 효과를 얻을 수 있습니다.",
+      "sourceHash": "112d6e01f283f6517a12f0eba967666e8a27a7e786e0f4a1af48653c3d6b8753",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Depending on the focus mode (see [`AVCaptureDevice.CinematicVideoFocusMode`](avcapturedevice/cinematicvideofocusmode.md) for detail), the camera either uses machine learning to automatically detect and focus on subjects in the scene, or it fixes focus on a subject until it exits the scene.",
+      "ko": "This message will be sent regardless of whether the session’s [`automaticallyRunsDeferredStart`](avcapturesession/automaticallyrunsdeferredstart.md) property is set.",
+      "sourceHash": "5bfd644c735d8f9dfcd80f217dc76d2d8755f828d6a4873d549453ecb82131e8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "Cinematic Videos can be played back and edited using the Cinematic framework.",
+      "ko": "See [`setDeferredStartDelegate(_:deferredStartDelegateCallbackQueue:)`](avcapturesession/setdeferredstartdelegate(_:deferredstartdelegatecallbackqueue:).md) documentation for more information.",
+      "sourceHash": "a67efb96b23979eb95e25ed128cb59e986cac1c37742aa44e8735368c6a22417",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "You can adjust the video’s simulated aperture before starting a recording using the [`simulatedAperture`](avcapturedeviceinput/simulatedaperture.md) property.",
+      "ko": "`[`simulatedAperture`](avcapturedeviceinput/simulatedaperture.md)` 속성을 사용해 녹화를 시작하기 전에 비디오의 시뮬레이션 조리개를 조정할 수 있습니다.",
+      "sourceHash": "e396dd78f2c2e0f565bc3b8d0a3ad431d42a222ae360ec465434d7c8ab26b172",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "With Cinematic Video specific focus methods on [`AVCaptureDevice`](avcapturedevice.md), you can dynamically control focus transitions.",
+      "ko": "[`AVCaptureDevice`](avcapturedevice.md)에서 Cinematic Video 전용 초점 메서드를 사용하면 초점 전환을 동적으로 제어할 수 있습니다.",
+      "sourceHash": "2fa05833dd0237744543fb8dc2ca0d9910503173d67bd39b28f3ec5ea1eb7531",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Movie files captured with Cinematic Video enabled can be played back and edited with the [Cinematic framework] (https://developer.apple.com/documentation/cinematic/playing-and-editing-cinematic-mode-video?language=objc).",
+      "ko": "A capture device’s [`focusPointOfInterest`](avcapturedevice/focuspointofinterest.md) and [`exposurePointOfInterest`](avcapturedevice/exposurepointofinterest.md) properties provide a [`CGPoint`](https://developer.apple.com/documentation/CoreFoundation/CGPoint) value where `{0,0}` represents the top-left and `{1,1}` represents the bottom-right of the unrotated image.",
+      "sourceHash": "764ea9ee073c1061e8d1252cce21b06511596e18abdcfb44873e800243270c00",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "This property returns `true` if the session’s current configuration allows Cinematic Video capture.",
+      "ko": "The system takes the layer’s frame size and its [`videoGravity`](avcapturevideopreviewlayer/videogravity.md) into consideration when making the conversion.",
+      "sourceHash": "a5d1e1d73a4ca5542f8c23dee5cc6e35d3d21b745b4c77ba0dfe26b4d8ef0492",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "When switching cameras or formats, this property may change.",
+      "ko": "Use the [`fileDataRepresentation()`](avcapturephoto/filedatarepresentation().md) or [`cgImageRepresentation()`](avcapturephoto/cgimagerepresentation().md) method to obtain compressed image data.",
+      "sourceHash": "c28332018605d7642e6b6b1f3ada127bd2a21f888a5c3152ba59254ef9e7d769",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0003",
+      "source": "When this property changes from `true` to `false`, [`isCinematicVideoCaptureEnabled`](avcapturedeviceinput/iscinematicvideocaptureenabled.md) also reverts to `false`.",
+      "ko": "이 속성이 `true`에서 `false`로 변경되면 [`isCinematicVideoCaptureEnabled`](avcapturedeviceinput/iscinematicvideocaptureenabled.md)도 `false`로 다시 바뀝니다.",
+      "sourceHash": "f5a386468ce1d285acf81fae91fefe4312af640b17fef3011412fd276870d718",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0004",
+      "source": "If you’ve previously opted in for Cinematic Video capture and then change configuration, you may need to set [`isCinematicVideoCaptureEnabled`](avcapturedeviceinput/iscinematicvideocaptureenabled.md) to `true` again.",
+      "ko": "이전에 Cinematic Video 캡처를 사용 설정한 상태에서 구성을 변경한 경우 [`isCinematicVideoCaptureEnabled`](avcapturedeviceinput/iscinematicvideocaptureenabled.md)를 다시 `true`로 설정해야 할 수 있습니다.",
+      "sourceHash": "48ef12f55964e8c2a71255b83bfe8376372f452b37643377ec51da8bdb30043c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0005",
+      "source": "This property is key-value observable.",
+      "ko": "이 속성은 키-값 관찰이 가능합니다.",
+      "sourceHash": "da10f6fb15a1291aedea3de21f0a99a0321c2e86790d0f3fd44477cca7d3c9a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0001",
+      "source": "**Note**: [`AVCaptureDepthDataOutput`](avcapturedepthdataoutput.md) is not supported when [`isCinematicVideoCaptureEnabled`](avcapturedeviceinput/iscinematicvideocaptureenabled.md) is set to `true`.",
+      "ko": "**참고**: [`AVCaptureDepthDataOutput`](avcapturedepthdataoutput.md)는 [`isCinematicVideoCaptureEnabled`](avcapturedeviceinput/iscinematicvideocaptureenabled.md)가 `true`로 설정된 경우 지원되지 않습니다.",
+      "sourceHash": "fa2a01f032739772e6b24bf9a7e9f94cfb51889db34922d581fbd2ff7a7eb4bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0002",
+      "source": "Running an [`AVCaptureSession`](avcapturesession.md) with both of these features throws an `NSInvalidArgumentException`.",
+      "ko": "이 두 기능을 모두 사용해 [`AVCaptureSession`](avcapturesession.md)를 실행하면 `NSInvalidArgumentException`이 발생합니다.",
+      "sourceHash": "c8403f7269e40c56a92a4f8b68ea1c433977cd1bfe6ba0e4ef5dfe6b055c1fb3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var isCinematicVideoCaptureEnabled: Bool](avcapturedeviceinput/iscinematicvideocaptureenabled.md)",
+      "ko": "[var isCinematicVideoCaptureEnabled: Bool](avcapturedeviceinput/iscinematicvideocaptureenabled.md)",
+      "sourceHash": "34b8b4407933a734f21f737064052cc39ba9f5cb084a12335920afd1b3735f11",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A BOOL value specifying whether the Cinematic Video effect is being applied to any movie file output, video data output, metadata output, or video preview layer added to the capture session.",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesessiondeferredstartdelegate/sessionwillrundeferredstart(_:))*",
+      "sourceHash": "ea8a0566d6af260a47ed64117ded01b63bb31eaf2e6f4dc6a1031134685e7711",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var simulatedAperture: Float](avcapturedeviceinput/simulatedaperture.md)",
+      "ko": "[var simulatedAperture: Float](avcapturedeviceinput/simulatedaperture.md)",
+      "sourceHash": "39e184cc985af69a2e28f814d7fa45b7e657e78e97878312f975cf1fdaf0fd9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Shallow depth of field simulated aperture.",
+      "ko": "얕은 심도의 시뮬레이션 조리개입니다.",
+      "sourceHash": "188784d5841cd2435171d1d6c4119f0a27fc223451d2d4f92f7cce8b64f03fa0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0018:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedeviceinput/iscinematicvideocapturesupported)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedeviceinput/iscinematicvideocapturesupported)*",
+      "sourceHash": "94514b9d8210e44c2a7159b33770359638ffc3a656e9d187625f442d67a26a9f",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedevice/fallbackprimaryconstituentdevices.md",
+  "title": "fallbackPrimaryConstituentDevices",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedevice/fallbackprimaryconstituentdevices",
+  "segments": [
+    {
+      "id": "seg:heading:fallbackprimaryconstituentdevices:0000:0001",
+      "source": "fallbackPrimaryConstituentDevices",
+      "ko": "fallbackPrimaryConstituentDevices",
+      "sourceHash": "3c3d0095ebaa1f8bf2981a0fbd18360e78554cf7b9c70645f09729aa14274c30",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:fallbackprimaryconstituentdevices:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:fallbackprimaryconstituentdevices:0002:0001",
+      "source": "The fallback devices to use when a constituent device with a longer focal length becomes limited by its light sensitivity or minimum focus distance.",
+      "ko": "초점 길이가 더 긴 구성 구성요소가 광 민감도나 최소 초점 거리 제한을 받게 될 때 사용할 대체 장치입니다.",
+      "sourceHash": "37432f97d8af2b30f760e1037bbb95e2da611c5627b66f6ed69cafa616fe5aca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:fallbackprimaryconstituentdevices:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:fallbackprimaryconstituentdevices:0004:0001",
+      "source": "iOS 15.0+",
+      "ko": "iOS 15.0+",
+      "sourceHash": "86b54448da2eb8626f00177bd04f05a8e48cee585c11805cf3f3e0d890c4e777",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:fallbackprimaryconstituentdevices:0004:0002",
+      "source": "iPadOS 15.0+",
+      "ko": "iPadOS 15.0+",
+      "sourceHash": "c7cbc9927b4ccc77db75d1ebf30fcc53090d5edd108c73c553dc668c46926af8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:fallbackprimaryconstituentdevices:0004:0003",
+      "source": "Mac Catalyst 15.0+",
+      "ko": "Mac Catalyst 15.0+",
+      "sourceHash": "9d0a6a3a1920dff6b27072e4fe1bcdd8a15ec1e6a32ea0e948a78c43ac895f9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:fallbackprimaryconstituentdevices:0004:0004",
+      "source": "macOS 12.0+",
+      "ko": "macOS 12.0+",
+      "sourceHash": "adffa1c4f69a9ee1f27b5e361c29af9b83d00fb7441c2e24713b7acb91ac5100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:fallbackprimaryconstituentdevices:0004:0005",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar fallbackPrimaryConstituentDevices: [AVCaptureDevice] { get set }\n```",
+      "ko": "```swift\nvar fallbackPrimaryConstituentDevices: [AVCaptureDevice] { get set }\n```",
+      "sourceHash": "1cd41e092172ea56d39495c4e341871c4172fcccef1366765acbb75ba61bbe3f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "By default, this value contains the array of devices that the [`supportedFallbackPrimaryConstituentDevices`](avcapturedevice/supportedfallbackprimaryconstituentdevices.md) property provides.",
+      "ko": "기본적으로 이 값에는 [`supportedFallbackPrimaryConstituentDevices`](avcapturedevice/supportedfallbackprimaryconstituentdevices.md) 속성이 제공하는 장치 배열이 포함됩니다.",
+      "sourceHash": "dc62c39aa1e82c3a17d3c17b6d95ce9f7eeb40fd612dfbea55570b65f1acdfdc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The system throws an exception if you attempt to specify a device other than the ones found in the device array.",
+      "ko": "장치 배열에 없는 장치를 지정하려고 하면 시스템이 예외를 throw합니다.",
+      "sourceHash": "df39bb3818dc8a18d0061947564ca8851c1af135dacda1fc602959212a3016f9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "This property is key-value observable.",
+      "ko": "On iOS, your output settings dictionary may only contain keys listed returned from the [`supportedOutputSettingsKeys(for:)`](avcapturemoviefileoutput/supportedoutputsettingskeys(for:).md) method.",
+      "sourceHash": "da10f6fb15a1291aedea3de21f0a99a0321c2e86790d0f3fd44477cca7d3c9a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[func setPrimaryConstituentDeviceSwitchingBehavior(AVCaptureDevice.PrimaryConstituentDeviceSwitchingBehavior, restrictedSwitchingBehaviorConditions: AVCaptureDevice.PrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions)](avcapturedevice/setprimaryconstituentdeviceswitchingbehavior(_:restrictedswitchingbehaviorconditions:).md)",
+      "ko": "[func setPrimaryConstituentDeviceSwitchingBehavior(AVCaptureDevice.PrimaryConstituentDeviceSwitchingBehavior, restrictedSwitchingBehaviorConditions: AVCaptureDevice.PrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions)](avcapturedevice/setprimaryconstituentdeviceswitchingbehavior(_:restrictedswitchingbehaviorconditions:).md)",
+      "sourceHash": "623c488919e5e11c85da2bef8e68630def3c425e8e531fecaa3fa13222e05fd4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "Sets the switching behavior of the primary constituent device.",
+      "ko": "주요 구성 요소 장치의 전환 동작을 설정합니다.",
+      "sourceHash": "f9e4b211c1b73ca7c18c9c92e7411431100b43a1ba3698b31eef22393f8e016e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var primaryConstituentDeviceSwitchingBehavior: AVCaptureDevice.PrimaryConstituentDeviceSwitchingBehavior](avcapturedevice/primaryconstituentdeviceswitchingbehavior-swift.property.md)",
+      "ko": "[var primaryConstituentDeviceSwitchingBehavior: AVCaptureDevice.PrimaryConstituentDeviceSwitchingBehavior](avcapturedevice/primaryconstituentdeviceswitchingbehavior-swift.property.md)",
+      "sourceHash": "1d003da9f3c7e625f0732fb662453b1250a6feadefa181449cac1ddf7ae59187",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "The switching behavior for the primary constituent device.",
+      "ko": "주요 구성 요소 장치의 전환 동작입니다.",
+      "sourceHash": "89840a86f7c086ec98e9361d841638742c18157ab40cbf5d389f295483a7469e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var primaryConstituentDeviceRestrictedSwitchingBehaviorConditions: AVCaptureDevice.PrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions](avcapturedevice/primaryconstituentdevicerestrictedswitchingbehaviorconditions-swift.property.md)",
+      "ko": "[var primaryConstituentDeviceRestrictedSwitchingBehaviorConditions: AVCaptureDevice.PrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions](avcapturedevice/primaryconstituentdevicerestrictedswitchingbehaviorconditions-swift.property.md)",
+      "sourceHash": "b53d5e901ad61685fc1512c2b2740559b1c749ab4f3d336513a948a5fd6c76cb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The conditions that restrict the primary constituent device’s switching behavior.",
+      "ko": "주요 구성 요소 장치의 전환 동작을 제한하는 조건입니다.",
+      "sourceHash": "a75247c785ba86ab101ff246b539d9effa161da66df8837c41576f4c39da198a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[var activePrimaryConstituentDeviceSwitchingBehavior: AVCaptureDevice.PrimaryConstituentDeviceSwitchingBehavior](avcapturedevice/activeprimaryconstituentdeviceswitchingbehavior.md)",
+      "ko": "[var activePrimaryConstituentDeviceSwitchingBehavior: AVCaptureDevice.PrimaryConstituentDeviceSwitchingBehavior](avcapturedevice/activeprimaryconstituentdeviceswitchingbehavior.md)",
+      "sourceHash": "4e6e8a02d13f1fecdb6db7d0481935af1ea8f7161593b3d29afb0aeff9a8a53f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "The switching behavior of the active constituent device.",
+      "ko": "활성 주요 구성 요소 장치의 전환 동작입니다.",
+      "sourceHash": "3f6379113c8bdd19183e1dec22332f43c61850a0167bcf1aeec074fb813fa7eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[var activePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions: AVCaptureDevice.PrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions](avcapturedevice/activeprimaryconstituentdevicerestrictedswitchingbehaviorconditions.md)",
+      "ko": "[var activePrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions: AVCaptureDevice.PrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions](avcapturedevice/activeprimaryconstituentdevicerestrictedswitchingbehaviorconditions.md)",
+      "sourceHash": "e730317a6acf0d97ec9d997b5f5c1584275bb7fe9c914489ccd517a7aec64829",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "The conditions that restrict camera switching behavior for the active primary constituent device.",
+      "ko": "활성 주요 구성 요소 장치의 카메라 전환 동작을 제한하는 조건입니다.",
+      "sourceHash": "0963cd383a3892f0208688eeecb87ef86f08cf73a2542ecf658b567025c047f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[var activePrimaryConstituent: AVCaptureDevice?](avcapturedevice/activeprimaryconstituent.md)",
+      "ko": "[var activePrimaryConstituent: AVCaptureDevice?](avcapturedevice/activeprimaryconstituent.md)",
+      "sourceHash": "ef27a132a0019cef89fa4683f42884c5db61f72504b12e0985b12d7199ef269b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "A virtual device’s active primary constituent device.",
+      "ko": "가상 장치의 활성 주요 구성 요소 장치입니다.",
+      "sourceHash": "992033d404acb0eebbf830caf46ce013a862bdd7717507cf7139a034f4a9d397",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[AVCaptureDevice.PrimaryConstituentDeviceSwitchingBehavior](avcapturedevice/primaryconstituentdeviceswitchingbehavior-swift.enum.md)",
+      "ko": "[AVCaptureDevice.PrimaryConstituentDeviceSwitchingBehavior](avcapturedevice/primaryconstituentdeviceswitchingbehavior-swift.enum.md)",
+      "sourceHash": "8b8df20e03d4bd4f66fa028a52039c246b426f87a341080981f3fd43d68c9dc9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "Constants that control when to allow a virtual device to switch its active primary constituent device.",
+      "ko": "가상 장치에서 활성 주요 구성 요소 장치로 전환할 수 있는 시점을 제어하는 상수입니다.",
+      "sourceHash": "bec8b94d556ddd3e06c14397d282795640cbd13aaa98561006a5ecb947cd76f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[AVCaptureDevice.PrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions](avcapturedevice/primaryconstituentdevicerestrictedswitchingbehaviorconditions-swift.struct.md)",
+      "ko": "[AVCaptureDevice.PrimaryConstituentDeviceRestrictedSwitchingBehaviorConditions](avcapturedevice/primaryconstituentdevicerestrictedswitchingbehaviorconditions-swift.struct.md)",
+      "sourceHash": "46bdfe47aedbc184306c97015dea4b049320cbae08a8baf56458c6bea4593eb6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "A structure that defines the conditions in which to restrict camera switching.",
+      "ko": "A structure that defines the conditions in which to restrict camera switching.",
+      "sourceHash": "62b774460245b68576d4aaee3133aae01ad023dd250e76e56e2d34461aa45fda",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[var supportedFallbackPrimaryConstituentDevices: [AVCaptureDevice]](avcapturedevice/supportedfallbackprimaryconstituentdevices.md)",
+      "ko": "[var supportedFallbackPrimaryConstituentDevices: [AVCaptureDevice]](avcapturedevice/supportedfallbackprimaryconstituentdevices.md)",
+      "sourceHash": "065df280cbca6337869b031489ac632d1a43229117c43874d48a6f8dfaf74f6d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "The constituent devices available to select as a fallback for a longer focal length primary constituent device.",
+      "ko": "초점 거리가 더 긴 주요 구성 요소 장치의 대체 항목으로 선택할 수 있는 구성 요소 장치입니다.",
+      "sourceHash": "a29bfae8db1d7449437be411268a8a780a99e27924abef3cc0d0989cb9f6fd29",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0029:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/fallbackprimaryconstituentdevices)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/fallbackprimaryconstituentdevices)*",
+      "sourceHash": "d3412d7247e1950460bcd870b404fcb19df953a7a85513279fd5c7dccde8568a",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedevice/setwhitebalancemodelocked-withcompletionhandler.md",
+  "title": "setWhiteBalanceModeLocked(with:completionHandler:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedevice/setwhitebalancemodelocked-withcompletionhandler",
+  "segments": [
+    {
+      "id": "seg:heading:setwhitebalancemodelockedwithcompletionhandler:0000:0001",
+      "source": "setWhiteBalanceModeLocked(with:completionHandler:)",
+      "ko": "setWhiteBalanceModeLocked(with:completionHandler:)",
+      "sourceHash": "22bea973d0290918425112c8767311a761d68be7e8c63ae60a6152542da4783e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setwhitebalancemodelockedwithcompletionhandler:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setwhitebalancemodelockedwithcompletionhandler:0002:0001",
+      "source": "Sets the white balance to locked mode with the specified white balance gains.",
+      "ko": "지정한 화이트 밸런스 게인으로 화이트 밸런스를 잠금 모드로 설정합니다.",
+      "sourceHash": "f9512c83b2ce5df0c249d0e582f8da69b1ef8d25854d2db192fd62a32945d349",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setwhitebalancemodelockedwithcompletionhandler:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setwhitebalancemodelockedwithcompletionhandler:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setwhitebalancemodelockedwithcompletionhandler:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setwhitebalancemodelockedwithcompletionhandler:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setwhitebalancemodelockedwithcompletionhandler:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc setWhiteBalanceModeLocked(with whiteBalanceGains: AVCaptureDevice.WhiteBalanceGains) async -> CMTime\n```",
+      "ko": "```swift\nfunc setWhiteBalanceModeLocked(with whiteBalanceGains: AVCaptureDevice.WhiteBalanceGains) async -> CMTime\n```",
+      "sourceHash": "132f717960e992bb92f6dac64deccd861e60d1f98c817291fdef887c10bbb32c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Each channel in the white balance gains structure supports values between `1.0` and [`maxWhiteBalanceGain`](avcapturedevice/maxwhitebalancegain.md).",
+      "ko": "The delegate is an object conforming to the [`AVCaptureFileOutputDelegate`](avcapturefileoutputdelegate.md) protocol that will be able to monitor and control recording along exact sample boundaries.",
+      "sourceHash": "81796eeffea0f618bfa6371823d8c61f18af963410fb4e1c42d77c6498580b3c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Setting a channel value outside this range generates an exception.",
+      "ko": "이 범위를 벗어난 채널 값을 설정하면 예외가 발생합니다.",
+      "sourceHash": "ac02887c676c2e14f89a0288ece9f4277edc78e97c84289babf7b3221cbf5359",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "The system normalizes gain values to the minimum channel value to avoid brightness changes (for example, `R:2 G:2 B:4` normalizes to `R:1 G:1 B:2`).",
+      "ko": "시스템은 밝기 변화를 방지하기 위해 게인 값을 최소 채널 값으로 정규화합니다(예: `R:2 G:2 B:4`는 `R:1 G:1 B:2`로 정규화됨).",
+      "sourceHash": "6297ffa03b7e34ae25929018d21ae8c8298bef52bc25aa76ea4287ba1111d67d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Before changing the value the white balance gains, you must call [`lockForConfiguration()`](avcapturedevice/lockforconfiguration().md) to acquire exclusive access to the device’s configuration properties.",
+      "ko": "화이트 밸런스 게인 값을 변경하기 전에 장치 구성 속성에 대한 독점 액세스를 얻으려면 [`lockForConfiguration()`](avcapturedevice/lockforconfiguration().md)을 호출해야 합니다.",
+      "sourceHash": "ec25b5780c723d78d2c128be846a3c285c919445ac843e7bb716506e3d6e406c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "Otherwise, setting the value of this property raises an exception.",
+      "ko": "그렇지 않으면 이 프로퍼티 값을 설정할 때 예외가 발생합니다.",
+      "sourceHash": "07c8a70c1fd624718d05b4e76165b247059b50576100aeaa2479d2232ea93b6f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0003",
+      "source": "When you finish configuring the device, call [`unlockForConfiguration()`](avcapturedevice/unlockforconfiguration().md) to release the lock and allow other devices to configure the settings.",
+      "ko": "장치 구성을 마치면 [`unlockForConfiguration()`](avcapturedevice/unlockforconfiguration().md)을 호출해 잠금을 해제하고 다른 장치가 설정을 구성할 수 있도록 합니다.",
+      "sourceHash": "efba3b146536b0131edaf1363957f935d2862f82415f4ce8708d4fc6f453e7ad",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0011:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0012:0001",
+      "source": "`whiteBalanceGains`: The white balance gains to set. Pass a value of [`currentWhiteBalanceGains`](avcapturedevice/currentwhitebalancegains.md) to leave the current white balance unchanged.",
+      "ko": "`whiteBalanceGains`: 설정할 화이트 밸런스 게인입니다. 현재 화이트 밸런스를 유지하려면 [`currentWhiteBalanceGains`](avcapturedevice/currentwhitebalancegains.md) 값을 전달합니다.",
+      "sourceHash": "c99d50662e6ce3bcb132e28dc4a0b1e2f2c90e906e7b596d6d7666b2a537bd13",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0012:0002",
+      "source": "`handler`: A callback the system invokes when the adjustment to the white balance is complete and the [`whiteBalanceMode`](avcapturedevice/whitebalancemode-swift.property.md) set to a locked state. If you call this method multiple times, the system calls the completion handlers in FIFO order. The system passes a time value that matches that of the first buffer to which its applied all settings. It synchronizes the timestamp to the device clock, and you must convert the timestamp to the [`synchronizationClock`](avcapturesession/synchronizationclock.md) prior to comparison with the timestamps of buffers delivered through an [`AVCaptureVideoDataOutput`](avcapturevideodataoutput.md). You can pass `nil` for this parameter if you don’t require this information.",
+      "ko": "`handler`: 화이트 밸런스 조정이 완료되고 [`whiteBalanceMode`](avcapturedevice/whitebalancemode-swift.property.md)가 잠금 상태로 설정되면 시스템이 호출하는 콜백입니다. 이 메서드를 여러 번 호출하면 시스템이 완료 핸들러를 FIFO 순서로 호출합니다. 시스템은 모든 설정이 적용된 첫 번째 버퍼의 시간 값과 일치하는 시간을 전달합니다. 시스템은 이 타임스탬프를 장치 클럭으로 동기화하고, [`AVCaptureVideoDataOutput`](avcapturevideodataoutput.md)를 통해 전달되는 버퍼 타임스탬프와 비교하려면 해당 타임스탬프를 [`synchronizationClock`](avcapturesession/synchronizationclock.md)로 변환해야 합니다. 이 정보가 필요 없다면 이 매개변수에 `nil`을 전달할 수 있습니다.",
+      "sourceHash": "c7f58da10525054390c05fb3750d0768993ab82f5d1d850f2bad80ef3820dd25",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0013:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:white-balance-constants:0014:0001",
+      "source": "White balance constants",
+      "ko": "화이트 밸런스 상수",
+      "sourceHash": "a6d5627048379f9b74ddff2325c94e1a2d3d7477ed67bcfa6c5732ecf11fb140",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:white-balance-constants:0015:0001",
+      "source": "[class let currentWhiteBalanceGains: AVCaptureDevice.WhiteBalanceGains](avcapturedevice/currentwhitebalancegains.md)",
+      "ko": "[class let currentWhiteBalanceGains: AVCaptureDevice.WhiteBalanceGains](avcapturedevice/currentwhitebalancegains.md)",
+      "sourceHash": "b68c32194d69e5c5be7cece7781cb5d9d180b64a044932ec556211f0eb083447",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:white-balance-constants:0016:0001",
+      "source": "A special constant representing the current white balance setting.",
+      "ko": "현재 화이트 밸런스 설정을 나타내는 특수 상수입니다.",
+      "sourceHash": "78c810dac4d4c6b87165dded21d83a024204ad751fd67279079ad8d7f566dfcc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0017:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var isLockingWhiteBalanceWithCustomDeviceGainsSupported: Bool](avcapturedevice/islockingwhitebalancewithcustomdevicegainssupported.md)",
+      "ko": "[var isLockingWhiteBalanceWithCustomDeviceGainsSupported: Bool](avcapturedevice/islockingwhitebalancewithcustomdevicegainssupported.md)",
+      "sourceHash": "16d8fbb86d53478b7ac4b727bb303fc4e24c37e7ed527bda0ec65f817cf6aa7e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A Boolean value that indicates whether the device supports locking white balance to specific gain values.",
+      "ko": "기기가 특정 게인 값으로 화이트 밸런스 잠금을 지원하는지 나타내는 Boolean 값입니다.",
+      "sourceHash": "c64114161932ec3b2c05e26fa252e665a121cc80afd56ecf5bfd16427041fd59",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[func setWhiteBalanceModeLocked(whiteBalanceTemperatureAndTintValues: AVCaptureDevice.WhiteBalanceTemperatureAndTintValues, handler: ((CMTime) -> Void)?)](avcapturedevice/setwhitebalancemodelocked(whitebalancetemperatureandtintvalues:handler:).md)",
+      "ko": "[func setWhiteBalanceModeLocked(whiteBalanceTemperatureAndTintValues: AVCaptureDevice.WhiteBalanceTemperatureAndTintValues, handler: ((CMTime) -> Void)?)](avcapturedevice/setwhitebalancemodelocked(whitebalancetemperatureandtintvalues:handler:).md)",
+      "sourceHash": "7f4587c9a9e6f355296cde808c17ed547d9f2814a3ec16c0b71bd62e0ba67e70",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Sets white balance to locked mode with explicit temperature and tint values.",
+      "ko": "특정 온도 및 틴트 값으로 화이트 밸런스를 잠금 모드로 설정합니다.",
+      "sourceHash": "2c105e157253ea3af3e75525dfb12ab022c6e9c8a62802b087be0ca18e0fa71c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0022:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/setwhitebalancemodelocked(with:completionhandler:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/setwhitebalancemodelocked(with:completionhandler:))*",
+      "sourceHash": "1b97aa81acea6bb33393c517248658e23425489c7c383839c857b00f7489c3fd",
+      "status": "machine_translated"
+    }
+  ]
+}

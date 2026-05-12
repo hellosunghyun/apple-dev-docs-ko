@@ -1,0 +1,225 @@
+{
+  "docId": "documentation/Accelerate/bnnsfilterapplybackwardbatch.md",
+  "title": "BNNSFilterApplyBackwardBatch(::::::::::::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsfilterapplybackwardbatch",
+  "segments": [
+    {
+      "id": "seg:heading:bnnsfilterapplybackwardbatch:0000:0001",
+      "source": "BNNSFilterApplyBackwardBatch(_:_:_:_:_:_:_:_:_:_:_:_:)",
+      "ko": "BNNSFilterApplyBackwardBatch(_:_:_:_:_:_:_:_:_:_:_:_:)",
+      "sourceHash": "8a52753d25c7578119bda19b569936b83468f1ab879a3b97822e739858d48412",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnsfilterapplybackwardbatch:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: func",
+      "ko": "**Framework**: Accelerate **Kind**: func",
+      "sourceHash": "92505afed2b9832f88ee8e8741948f4ea109b670dc30717430f0006e8f343391",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnsfilterapplybackwardbatch:0002:0001",
+      "source": "Applies a filter backward to generate input delta, weights delta and bias delta.",
+      "ko": "필터를 역방향으로 적용해 입력 델타, 가중치 델타 및 바이어스 델타를 생성합니다.",
+      "sourceHash": "7f742f23035a62d6e27c7c091a57204aa9fefd9734e96f1eea8e256b3eb7eb12",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnsfilterapplybackwardbatch:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfilterapplybackwardbatch:0004:0001",
+      "source": "iOS 14.0+",
+      "ko": "iOS 14.0+",
+      "sourceHash": "a09fb717eefa07878cab396c9697a744dfc726f6a8a77c093ef12e8124ffd90b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfilterapplybackwardbatch:0004:0002",
+      "source": "iPadOS 14.0+",
+      "ko": "iPadOS 14.0+",
+      "sourceHash": "3bd5f9207436aaf3fd80bdb95d64d5d280ff80afc32e998b4c7ef682ec2802e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfilterapplybackwardbatch:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfilterapplybackwardbatch:0004:0004",
+      "source": "macOS 11.0+",
+      "ko": "macOS 11.0+",
+      "sourceHash": "b9d0915cd0d28054ced64852a8b4eb668d9bff9c754aec6f95028c5b01456c88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfilterapplybackwardbatch:0004:0005",
+      "source": "tvOS 14.0+",
+      "ko": "tvOS 14.0+",
+      "sourceHash": "c82f0586cea06e7e3b23ac73e15255e7ccbb56eadf9421eeb43c4793905535a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfilterapplybackwardbatch:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsfilterapplybackwardbatch:0004:0007",
+      "source": "watchOS 7.0+",
+      "ko": "watchOS 7.0+",
+      "sourceHash": "c062c9b3a973acc1ffdf60071a0ce7943a5b195f1b0ce07f283267c446e33961",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc BNNSFilterApplyBackwardBatch(_ filter: BNNSFilter?, _ batch_size: Int, _ in: UnsafeRawPointer?, _ in_stride: Int, _ in_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?, _ in_delta_stride: Int, _ out: UnsafeRawPointer?, _ out_stride: Int, _ out_delta: UnsafePointer<BNNSNDArrayDescriptor>, _ out_delta_stride: Int, _ weights_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?, _ bias_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?) -> Int32\n```",
+      "ko": "```swift\nfunc BNNSFilterApplyBackwardBatch(_ filter: BNNSFilter?, _ batch_size: Int, _ in: UnsafeRawPointer?, _ in_stride: Int, _ in_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?, _ in_delta_stride: Int, _ out: UnsafeRawPointer?, _ out_stride: Int, _ out_delta: UnsafePointer<BNNSNDArrayDescriptor>, _ out_delta_stride: Int, _ weights_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?, _ bias_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?) -> Int32\n```",
+      "sourceHash": "029c222057ad4ed526925383f18320dde343e7ecbb4b2c54e564a3e0cf692f76",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0007:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0008:0001",
+      "source": "`filter`: The filter to apply.",
+      "ko": "`filter`: 적용할 필터입니다.",
+      "sourceHash": "f4742df67ec4ab1771530fac8ff698dfd5fa0a3abfa78e057753892ae381caee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0002",
+      "source": "`batch_size`: The number of input-output pairs.",
+      "ko": "`batch_size`: 입력-출력 쌍의 개수입니다.",
+      "sourceHash": "e4c82b521c635ce42b030170c6927281369ced6855f6ed71ea4e5a66dcfe1409",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0003",
+      "source": "`in`: Pointer to input object.",
+      "ko": "`in`: 입력 객체에 대한 포인터입니다.",
+      "sourceHash": "ddd45f07f480df64f8d879087321d027517173d2300bbec4a452c4533422576d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0004",
+      "source": "`in_stride`: Increment, in values, between input objects.",
+      "ko": "`in_stride`: 입력 객체 간 값 단위 간격입니다.",
+      "sourceHash": "66939552fac15b829549e24a8dc24df3b4f7d04b6fb24fa16e88478520b429b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0005",
+      "source": "`in_delta`: The descriptor of the input delta.",
+      "ko": "`in_delta`: 입력 델타의 디스크립터입니다.",
+      "sourceHash": "78c5a180889501f6e98af5f25aac9842a2cdbf71c32e96c60c95f4e7e4c635ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0006",
+      "source": "`in_delta_stride`: Increment, in values, between input delta objects.",
+      "ko": "`in_delta_stride`: 입력 델타 객체 간 값 단위 간격입니다.",
+      "sourceHash": "a24176f9bc2c0fb17c0be4ff6f8c74fb00757d3c7b1950f4634c7964a342f701",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0007",
+      "source": "`out`: Pointer to output object.",
+      "ko": "`out`: 출력 객체에 대한 포인터입니다.",
+      "sourceHash": "520e5e8d213d1d08e7c30ed380bb2041842601a158300e117e4ca5dd333a9f47",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0008",
+      "source": "`out_stride`: Increment, in values, between output objects.",
+      "ko": "`out_stride`: 출력 객체 간 값 단위 간격입니다.",
+      "sourceHash": "983da132f818b98df6162b01956cadbcfe58605e7d242edd63065bce32d9e2c9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0009",
+      "source": "`out_delta`: The descriptor of the output delta.",
+      "ko": "`out_delta`: 출력 델타의 디스크립터입니다.",
+      "sourceHash": "da0bd2792e6473e3d6982155ed4dd29d97c904b652d4d13f580de20dbf979fd3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0010",
+      "source": "`out_delta_stride`: Increment, in values, between output delta objects.",
+      "ko": "`out_delta_stride`: 출력 델타 객체 간 값 단위 간격입니다.",
+      "sourceHash": "30edde4d6da0a72bfcfca44bb17a36b1117bbb674cb71317f95253c34deea42a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0011",
+      "source": "`weights_delta`: The descriptor of the weights delta.",
+      "ko": "`weights_delta`: 가중치 델타의 디스크립터입니다.",
+      "sourceHash": "97e38333f91701702483752777edc73085368b148a91b8d78ecf44d9216ba44c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0012",
+      "source": "`bias_delta`: The descriptor of the bias delta.",
+      "ko": "`bias_delta`: 바이어스 델타의 디스크립터입니다.",
+      "sourceHash": "5808f266e63ed14efe8a92e52c83c9b4c499ea29e5dfe9e2a0581dab03770d19",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[func BNNSFilterApplyBackwardTwoInputBatch(BNNSFilter?, Int, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, Int, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, Int, UnsafeRawPointer?, Int, UnsafePointer<BNNSNDArrayDescriptor>, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, UnsafeMutablePointer<BNNSNDArrayDescriptor>?) -> Int32](bnnsfilterapplybackwardtwoinputbatch(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSFilterApplyBackwardTwoInputBatch(BNNSFilter?, Int, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, Int, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, Int, UnsafeRawPointer?, Int, UnsafePointer<BNNSNDArrayDescriptor>, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, UnsafeMutablePointer<BNNSNDArrayDescriptor>?) -> Int32](bnnsfilterapplybackwardtwoinputbatch(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "01da669228195ae52755db6fde335f27e7c84dc659291a401b3beb2807657c78",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "Applies a filter backward to generate input deltas, weights delta and bias delta.",
+      "ko": "필터를 역방향으로 적용해 입력 델타, 가중치 델타 및 바이어스 델타를 생성합니다.",
+      "sourceHash": "59add8874811fe2f3275f6bbba1509a4dfc837316aaa56f86908926190c9f297",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0012:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsfilterapplybackwardbatch(_:_:_:_:_:_:_:_:_:_:_:_:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/bnnsfilterapplybackwardbatch(_:_:_:_:_:_:_:_:_:_:_:_:))*",
+      "sourceHash": "82bf4d6a494bb4e6c04d63b7001bfe74d2e801716b30689b92ff90dcb8511a2c",
+      "status": "machine_translated"
+    }
+  ]
+}

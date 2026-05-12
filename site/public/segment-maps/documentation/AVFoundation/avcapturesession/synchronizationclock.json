@@ -1,0 +1,169 @@
+{
+  "docId": "documentation/AVFoundation/avcapturesession/synchronizationclock.md",
+  "title": "synchronizationClock",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturesession/synchronizationclock",
+  "segments": [
+    {
+      "id": "seg:heading:synchronizationclock:0000:0001",
+      "source": "synchronizationClock",
+      "ko": "synchronizationClock",
+      "sourceHash": "42098c8da5ca442ec673a0c35eeb7ab45f4c5f6439e2afa5929e8515c1cd8d07",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:synchronizationclock:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:synchronizationclock:0002:0001",
+      "source": "A clock to use for output synchronization.",
+      "ko": "출력 동기화에 사용되는 시계입니다.",
+      "sourceHash": "0a86556714c8950fa41f7114ff962cb1d1c16297672ba238b6a43438ecfb4dd2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:synchronizationclock:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:synchronizationclock:0004:0001",
+      "source": "iOS 15.4+",
+      "ko": "iOS 15.4+",
+      "sourceHash": "c621e3616a7bd03c4a8777a5bc40d08cf49fd1ce1a92148f12b04d7ef232c1b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:synchronizationclock:0004:0002",
+      "source": "iPadOS 15.4+",
+      "ko": "iPadOS 15.4+",
+      "sourceHash": "37ab9c5a7bf8531ff6f2e6e79e0923e5c8d4d6b014166ea83599892952f95ab3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:synchronizationclock:0004:0003",
+      "source": "Mac Catalyst 15.4+",
+      "ko": "Mac Catalyst 15.4+",
+      "sourceHash": "f45dc6234a471501de4f77b239bca8cf28a2b0c682c8fc944c7087734566d30e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:synchronizationclock:0004:0004",
+      "source": "macOS 12.3+",
+      "ko": "macOS 12.3+",
+      "sourceHash": "a709fa6b86824a84fe83f6c15bde78801182bbdb92a5fd13c4eae12197a258c8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:synchronizationclock:0004:0005",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:synchronizationclock:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar synchronizationClock: CMClock? { get }\n```",
+      "ko": "```swift\nvar synchronizationClock: CMClock? { get }\n```",
+      "sourceHash": "a70ae38136ad3b2d2907d675870eba41c3ed065a5e034b8c7ad94fa9fd19602e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "All capture output sample buffer timestamps are on the synchronization clock’s timebase.",
+      "ko": "모든 캡처 출력 샘플 버퍼 타임스탬프는 동기화 시계의 타임베이스를 기준으로 합니다.",
+      "sourceHash": "23fcdfb9fa8aeb085bc1ff82c992452aa5bc348e8bc1a87f13f12dd471e827fe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Use this clock in conjunction with the clock from an [`AVCaptureInput.Port`](avcaptureinput/port.md) object to synchronize capture output with external data sources such as Core Motion samples.",
+      "ko": "이 시계는 [`AVCaptureInput.Port`](avcaptureinput/port.md) 객체의 시계와 함께 사용하여 Core Motion 샘플과 같은 외부 데이터 소스와 캡처 출력을 동기화합니다.",
+      "sourceHash": "38e7d1387cc5745b40ac4986d7450cfcb65210bbd1f9e94abbf4d186b46ed015",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "The example below shows how to reverse synchronize the output timestamps to the original timestamps in the [`captureOutput(_:didOutput:from:)`](avcapturevideodataoutputsamplebufferdelegate/captureoutput(_:didoutput:from:).md) method:",
+      "ko": "다음 예제는 [`captureOutput(_:didOutput:from:)`](avcapturevideodataoutputsamplebufferdelegate/captureoutput(_:didoutput:from:).md) 메서드에서 원래 타임스탬프를 출력 타임스탬프로 역방향 동기화하는 방법을 보여줍니다.",
+      "sourceHash": "9a873bce7d0120525d55c628ad94be08b92934ae9067cfe6ff9b9547ee34ef87",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0010:0001",
+      "source": "```swift\nfunc captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {\n    // Get the original and capture session clocks.\n    guard let port = connection.inputPorts.first,\n          let originalClock = port.clock,\n          let sessionClock = captureSession?.synchronizationClock else { return }\n        \n    // Get the presentation timestamp of the current sample buffer.\n    let syncedPTS = sampleBuffer.presentationTimeStamp\n        \n    // Convert the timestamp to the original timebase.\n    let originalPTS = sessionClock.convertTime(syncedPTS, to: originalClock)\n}\n```",
+      "ko": "```swift\nfunc captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {\n    // Get the original and capture session clocks.\n    guard let port = connection.inputPorts.first,\n          let originalClock = port.clock,\n          let sessionClock = captureSession?.synchronizationClock else { return }\n        \n    // Get the presentation timestamp of the current sample buffer.\n    let syncedPTS = sampleBuffer.presentationTimeStamp\n        \n    // Convert the timestamp to the original timebase.\n    let originalPTS = sessionClock.convertTime(syncedPTS, to: originalClock)\n}\n```",
+      "sourceHash": "d62caf9f4cdb80381ad3cb3579a9e849df3e566bb9565a85ac1a3ac6243e6769",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "This property is key-value observable.",
+      "ko": "이 속성은 key-value 관찰이 가능합니다.",
+      "sourceHash": "da10f6fb15a1291aedea3de21f0a99a0321c2e86790d0f3fd44477cca7d3c9a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var masterClock: CMClock?](avcapturesession/masterclock.md)",
+      "ko": "[var masterClock: CMClock?](avcapturesession/masterclock.md)",
+      "sourceHash": "f3a429b919a9d42865b88e4aa362c21b119a4a67c7aea54453d3e3eda4f0b9ed",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "A clock object used for output synchronization.",
+      "ko": "출력 동기화에 사용되는 시계 객체입니다.",
+      "sourceHash": "504f5ec9db308b2cbfd15cb8756b8650717f38f636d21e605ebec9fa204148f9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0015:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesession/synchronizationclock)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturesession/synchronizationclock)*",
+      "sourceHash": "490825473ea2c19453a9c21d1c75b305a128f8679c37850b057c987deb37afdc",
+      "status": "preserved"
+    }
+  ]
+}

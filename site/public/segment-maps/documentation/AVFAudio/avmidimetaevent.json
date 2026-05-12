@@ -1,0 +1,302 @@
+{
+  "docId": "documentation/AVFAudio/avmidimetaevent.md",
+  "title": "AVMIDIMetaEvent",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avmidimetaevent",
+  "segments": [
+    {
+      "id": "seg:heading:avmidimetaevent:0000:0001",
+      "source": "AVMIDIMetaEvent",
+      "ko": "AVMIDIMetaEvent",
+      "sourceHash": "ec81ea69c8ca3aa3ac7bcea980e6c8aec4958f124d63660c97a5be1371c8d2b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmidimetaevent:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmidimetaevent:0002:0001",
+      "source": "An object that represents MIDI meta event messages.",
+      "ko": "MIDI 메타 이벤트 메시지를 나타내는 객체입니다.",
+      "sourceHash": "428c6e723e35873aad37f4e541f0c3d786e03276b7257e138ac1f77ac5850b78",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avmidimetaevent:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidimetaevent:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidimetaevent:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidimetaevent:0004:0003",
+      "source": "Mac Catalyst 16.0+",
+      "ko": "Mac Catalyst 16.0+",
+      "sourceHash": "87ecab2e4ea7b5b949ac3608f01726f8e88b11cb3d4b8233535e965e0f50886b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidimetaevent:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidimetaevent:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmidimetaevent:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVMIDIMetaEvent\n```",
+      "ko": "```swift\nclass AVMIDIMetaEvent\n```",
+      "sourceHash": "25997d80e18955d7beb47dd5627ee1487f7c2e4d1a07e689280111b009c0104f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "You can’t modify the size and contents of this event once you create it.",
+      "ko": "이 이벤트를 생성한 후에는 크기와 내용을 수정할 수 없습니다.",
+      "sourceHash": "64727032a1f120e2e994302618b797e704e136df62827ebbb116b2b7a0e3d20f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "This doesn’t verify that the content matches the MIDI specification.",
+      "ko": "이것은 내용이 MIDI 사양과 일치하는지 검증하지 않습니다.",
+      "sourceHash": "26bc79e605cac24185167c88aba34b84859aca1bf72c58fce774b6b3cf04939f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "You can only add [`AVMIDIMetaEvent.EventType.tempo`](avmidimetaevent/eventtype/tempo.md), [`AVMIDIMetaEvent.EventType.smpteOffset`](avmidimetaevent/eventtype/smpteoffset.md), or [`AVMIDIMetaEvent.EventType.timeSignature`](avmidimetaevent/eventtype/timesignature.md) to a sequence’s tempo track.",
+      "ko": "시퀀스의 템포 트랙에는 [`AVMIDIMetaEvent.EventType.tempo`](avmidimetaevent/eventtype/tempo.md), [`AVMIDIMetaEvent.EventType.smpteOffset`](avmidimetaevent/eventtype/smpteoffset.md), [`AVMIDIMetaEvent.EventType.timeSignature`](avmidimetaevent/eventtype/timesignature.md)만 추가할 수 있습니다.",
+      "sourceHash": "976c3870b5dc8edcaf7c2686d056afe523661ac463e8832fa69a3ec02ee16286",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-meta-event:0011:0001",
+      "source": "Creating a Meta Event",
+      "ko": "메타 이벤트 생성",
+      "sourceHash": "57452007d84c2e8fe025e48c076314f14163767c156cf0defb5d181d7b4aaab4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-meta-event:0012:0001",
+      "source": "[init(type: AVMIDIMetaEvent.EventType, data: Data)](avmidimetaevent/init(type:data:).md)",
+      "ko": "[init(type: AVMIDIMetaEvent.EventType, data: Data)](avmidimetaevent/init(type:data:).md)",
+      "sourceHash": "e6eafb4006b14eb7526ab747d4424f1b628c9f4e6078ac8c6a8d31e20eeb04cf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-meta-event:0013:0001",
+      "source": "Creates an event with a MIDI meta event type and data.",
+      "ko": "MIDI 메타 이벤트 형식과 데이터로 이벤트를 생성합니다.",
+      "sourceHash": "b2a079b39eab30e8a51ccc889ed9ee56e38ee79ca4fbc1b9d14150400d40f17c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-the-meta-event-type:0014:0001",
+      "source": "Getting the Meta Event Type",
+      "ko": "메타 이벤트 유형 가져오기",
+      "sourceHash": "da9a6639aa45dd480e7bbfc25870f9f551443ce99186e6c1ac84e078d6db5367",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-the-meta-event-type:0015:0001",
+      "source": "[var type: AVMIDIMetaEvent.EventType](avmidimetaevent/type.md)",
+      "ko": "[var type: AVMIDIMetaEvent.EventType](avmidimetaevent/type.md)",
+      "sourceHash": "0f1b7fb3f1b58f90a5d00965da55cfa9325cfeda5cb0d610b0069959b1686d0d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-the-meta-event-type:0016:0001",
+      "source": "The type of meta event.",
+      "ko": "메타 이벤트의 형식입니다.",
+      "sourceHash": "4a04e8d30e2716342912fc3fecf89afd0525b15af6fe62b08fa9665291e03ac3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-the-meta-event-type:0017:0001",
+      "source": "[AVMIDIMetaEvent.EventType](avmidimetaevent/eventtype.md)",
+      "ko": "[AVMIDIMetaEvent.EventType](avmidimetaevent/eventtype.md)",
+      "sourceHash": "9b7f2799f667fa5fbd5a7895361dfad8bea08cfb33bee2f71819e25ac1596401",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-the-meta-event-type:0018:0001",
+      "source": "Constants that represent the types of meta events.",
+      "ko": "메타 이벤트 형식을 나타내는 상수입니다.",
+      "sourceHash": "b7275b3c75ab036715a6ad1892d2aeb4799a9be871abbbaead2decf5bf742203",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0019:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0020:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0021:0001",
+      "source": "[AVMusicEvent](avmusicevent.md)",
+      "ko": "[AVMusicEvent](avmusicevent.md)",
+      "sourceHash": "332f6744efa293f364b3c49e1898bd483b1d8884949d09aed260f6ff161665f7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0022:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0024:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[class AVMIDINoteEvent](avmidinoteevent.md)",
+      "ko": "[class AVMIDINoteEvent](avmidinoteevent.md)",
+      "sourceHash": "b47857cee8835fe15b9966319dc9c86d85e35164dbd016ceeda45e2f8cc3e10f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "An object that represents MIDI note on or off messages.",
+      "ko": "MIDI note on 또는 note off 메시지를 나타내는 객체입니다.",
+      "sourceHash": "8956a5cc133f39a3647fa100ddd704779507a78a1aa17ead08f4333bce1f338f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[class AVMIDISysexEvent](avmidisysexevent.md)",
+      "ko": "[class AVMIDISysexEvent](avmidisysexevent.md)",
+      "sourceHash": "a0d8c023b54940905c78716beade05125f5644749b472ae338482092917aa964",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "An object that represents a MIDI system exclusive message.",
+      "ko": "MIDI system exclusive 메시지를 나타내는 객체입니다.",
+      "sourceHash": "9ed78fe044916a96d6451a4e6496a3085010abd1ed067d822f4c161c242621c1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0029:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avmidimetaevent)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avmidimetaevent)*",
+      "sourceHash": "eb862b3d923174d6a77efed2ee66a4d7233806178d1487bf122e5e5b0e272bc5",
+      "status": "preserved"
+    }
+  ]
+}

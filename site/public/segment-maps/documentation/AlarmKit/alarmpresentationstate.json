@@ -1,0 +1,302 @@
+{
+  "docId": "documentation/AlarmKit/alarmpresentationstate.md",
+  "title": "AlarmPresentationState",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/alarmkit/alarmpresentationstate",
+  "segments": [
+    {
+      "id": "seg:heading:alarmpresentationstate:0000:0001",
+      "source": "AlarmPresentationState",
+      "ko": "AlarmPresentationState",
+      "sourceHash": "d2fb66983b1e4862935464f10ff9527307edfca51a489828879f7d5b4405b0f6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:alarmpresentationstate:0001:0001",
+      "source": "**Framework**: AlarmKit **Kind**: struct",
+      "ko": "**Framework**: AlarmKit **Kind**: struct",
+      "sourceHash": "9bb73e31ec5b0663130110e569d164335b0f691bb3c74245b23c70022465106e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:alarmpresentationstate:0002:0001",
+      "source": "The system managed content state of an alarm Live Activity.",
+      "ko": "알람 라이브 액티비티의 시스템 관리 콘텐츠 상태입니다.",
+      "sourceHash": "6817608edeb12d5b16b5b8544adcf25f64c21234ea350a8f0a2213ea4cf75f83",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:alarmpresentationstate:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:alarmpresentationstate:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:alarmpresentationstate:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstruct AlarmPresentationState\n```",
+      "ko": "```swift\nstruct AlarmPresentationState\n```",
+      "sourceHash": "234ffc1adfafeaf24316da8be4c32aa443b7bfa55fafe59de834ae51dae20cfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "A Live Activity consists of two components: static attributes and dynamic content.",
+      "ko": "라이브 액티비티는 정적 특성과 동적 콘텐츠라는 두 구성 요소로 이루어집니다.",
+      "sourceHash": "28426e514857f6f17d5986968a68320d97fd29e802e874507b631deaec004424",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "Using a sports game as an example, the static attributes represent the team names, while the dynamic content represents the current score that updates throughout the game.",
+      "ko": "스포츠 경기를 예로 들면 정적 특성은 팀 이름을 나타내고, 동적 콘텐츠는 경기가 진행되는 동안 계속 갱신되는 현재 점수를 나타냅니다.",
+      "sourceHash": "ffda2a05a658e908f449586920567f247e94fd536d8b97c7b50662e2c1e96c14",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "For alarms, these components serve distinct purposes:",
+      "ko": "알람의 경우 이 구성 요소는 서로 다른 용도로 사용됩니다.",
+      "sourceHash": "a0c19d743e07affe97668bd608ff2c081f88df9b0cf555a24a3a042d318f0cae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0001",
+      "source": "**Static attributes**: Your app provides this content through [`AlarmAttributes`](alarmattributes.md), including information such as tint color and button labels that remain constant.",
+      "ko": "**정적 특성**: 앱은 tint 색상과 버튼 레이블처럼 유지되는 정보를 포함하여 [`AlarmAttributes`](alarmattributes.md)로 이 콘텐츠를 제공합니다.",
+      "sourceHash": "8a4aedcf525ceb08a3aabf7fcb8dff323aa75393a0b4ed4a25be36ef8d58852e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0010:0002",
+      "source": "**Dynamic content**: AlarmKit provides this content through [`AlarmPresentationState`](alarmpresentationstate.md), including system-managed information such as the alarm [`fireDate`](alarmpresentationstate/mode-swift.enum/countdown/firedate.md) and current presentation mode.",
+      "ko": "**동적 콘텐츠**: AlarmKit은 알람 [`fireDate`](alarmpresentationstate/mode-swift.enum/countdown/firedate.md)와 현재 프레젠테이션 모드처럼 시스템이 관리하는 정보를 포함한 콘텐츠를 [`AlarmPresentationState`](alarmpresentationstate.md)로 제공합니다.",
+      "sourceHash": "5b0fbc7464cfae0e54fb1e1db7e42fb51fb251cd7770ee490df40f1aa3456321",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0001",
+      "source": "The system automatically updates the [`AlarmPresentationState`](alarmpresentationstate.md) as the alarm transitions between different states, such as [`Alarm.State.countdown`](alarm/state-swift.enum/countdown.md), [`Alarm.State.alerting`](alarm/state-swift.enum/alerting.md), and [`Alarm.State.paused`](alarm/state-swift.enum/paused.md).",
+      "ko": "시스템은 알람이 [`Alarm.State.countdown`](alarm/state-swift.enum/countdown.md), [`Alarm.State.alerting`](alarm/state-swift.enum/alerting.md), [`Alarm.State.paused`](alarm/state-swift.enum/paused.md) 같은 상태로 전환될 때 [`AlarmPresentationState`](alarmpresentationstate.md)를 자동으로 업데이트합니다.",
+      "sourceHash": "dd4a1bc68e0573297a665d043c3879cb9e16c98bf60ab70ecbdd06c79b70a165",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0012:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-an-alarm-state:0013:0001",
+      "source": "Creating an alarm state",
+      "ko": "알람 상태 생성",
+      "sourceHash": "9e4260e41fc08dc34af89d662be13365d4a1d83bb0a42642230db3cc9434d724",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-alarm-state:0014:0001",
+      "source": "[init(alarmID: Alarm.ID, mode: AlarmPresentationState.Mode)](alarmpresentationstate/init(alarmid:mode:).md)",
+      "ko": "[init(alarmID: Alarm.ID, mode: AlarmPresentationState.Mode)](alarmpresentationstate/init(alarmid:mode:).md)",
+      "sourceHash": "6a24b02b9498a6fff8637e388e21aa0d9184bbdf967fb97affb18fc5fde76bfc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-an-alarm-state:0015:0001",
+      "source": "Creates an instance of an alarm state.",
+      "ko": "알람 상태의 인스턴스를 생성합니다.",
+      "sourceHash": "2b0ff71e7fb1238410b7d6cb705f4dacbdda41c939527a3d2316915864ed34a3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-alarm-state:0016:0001",
+      "source": "[var alarmID: Alarm.ID](alarmpresentationstate/alarmid.md)",
+      "ko": "[var alarmID: Alarm.ID](alarmpresentationstate/alarmid.md)",
+      "sourceHash": "4b385691b6c488d47b8c75f0fd58746af8c3ee5457356f88593cbf2acf3fd5f0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:creating-an-alarm-state:0017:0001",
+      "source": "The unique ID of the alarm.",
+      "ko": "알람의 고유 ID입니다.",
+      "sourceHash": "d6f20a21824b37f57f8bf50762f732ef2f6476c7d7b0c4a024d6cd2ac41a6c3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-alarm-state:0018:0001",
+      "source": "[var mode: AlarmPresentationState.Mode](alarmpresentationstate/mode-swift.property.md)",
+      "ko": "[var mode: AlarmPresentationState.Mode](alarmpresentationstate/mode-swift.property.md)",
+      "sourceHash": "74edd02267532a8ac39b04a1ec0d9c5d86e1a3e0c72a486645650858840a88ad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:creating-an-alarm-state:0019:0001",
+      "source": "The specific state of the alarm, either alerting, countdown, or paused.",
+      "ko": "알람의 특정 상태이며, alerting, countdown, paused 중 하나입니다.",
+      "sourceHash": "eb36117b458eb3c323526d44e6d40515226df6fc67762c88882f569c78c45451",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-alarm-state:0020:0001",
+      "source": "[AlarmPresentationState.Mode](alarmpresentationstate/mode-swift.enum.md)",
+      "ko": "[AlarmPresentationState.Mode](alarmpresentationstate/mode-swift.enum.md)",
+      "sourceHash": "52de99cf8a9dbbf318003bfab4c6c4fde5fe968ebdd770618e5534abf24bc007",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:creating-an-alarm-state:0021:0001",
+      "source": "A list of all modes the alarm can be in: either alert, countdown, or paused.",
+      "ko": "알람이 될 수 있는 모든 모드의 목록입니다: alert, countdown, paused.",
+      "sourceHash": "4bea046221ef4ba4ff6fae2bb773838309676a93df1e4a68293e6c35977b407e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0022:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0023:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0024:0001",
+      "source": "[Decodable](../Swift/Decodable.md)",
+      "ko": "[Decodable](../Swift/Decodable.md)",
+      "sourceHash": "e3dba0aa7bb6a88fb554e392b552a0be30ec4695377e9a842ac8826c7b159b09",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0024:0002",
+      "source": "[Encodable](../Swift/Encodable.md)",
+      "ko": "[Encodable](../Swift/Encodable.md)",
+      "sourceHash": "bb5eafed64e4b568894b265a65820a642d6f1e945e19d17ef780734154490c7b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0024:0003",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0024:0004",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0024:0005",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0024:0006",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0025:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[struct AlarmPresentation](alarmpresentation.md)",
+      "ko": "[struct AlarmPresentation](alarmpresentation.md)",
+      "sourceHash": "ec562f26cd4d7c4c5daaf0bca4bda5aa3de486957ee482cfe66e42e0fd87fc31",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "An object that describes the content required for the alarm UI.",
+      "ko": "알람 UI에 필요한 콘텐츠를 설명하는 개체입니다.",
+      "sourceHash": "c51ebe3155997cdcff344d5b9562eb0d4b661c5cbc7747c3d6501bb6b4f5a405",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[struct AlarmAttributes](alarmattributes.md)",
+      "ko": "[struct AlarmAttributes](alarmattributes.md)",
+      "sourceHash": "2b4da9c147d41f414f0e9ceaaecfc3924fa3f9af58ca80a8c1cebf0fd6b488d5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "An object that contains all information necessary for the alarm UI.",
+      "ko": "알람 UI에 필요한 모든 정보를 포함하는 개체입니다.",
+      "sourceHash": "2ab36ba7365891715f50ff4d23c8cdad4450598e4b37d0940c0464b11a39be50",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[protocol AlarmMetadata](alarmmetadata.md)",
+      "ko": "[protocol AlarmMetadata](alarmmetadata.md)",
+      "sourceHash": "00ef5e3457b92e22874c8e0cdcb12c941a55d22edc74672085692d87517dd023",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "A metadata object that contains information about an alarm.",
+      "ko": "알람에 대한 정보를 포함하는 메타데이터 개체입니다.",
+      "sourceHash": "c104c74f88228bee6a50495daa672c7decdc2672ecc2bc953b509d05509e61a5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0032:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/alarmkit/alarmpresentationstate)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/alarmkit/alarmpresentationstate)*",
+      "sourceHash": "b5060c465e5dab3e51cf61e3d26c5ee1538f227e1a53e5b31da6eaddc7ef06db",
+      "status": "preserved"
+    }
+  ]
+}

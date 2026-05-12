@@ -1,0 +1,344 @@
+{
+  "docId": "documentation/Accelerate/bnnsapplymultiheadattentionbackward.md",
+  "title": "BNNSApplyMultiheadAttentionBackward(:::::::::::::::::::::::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsapplymultiheadattentionbackward",
+  "segments": [
+    {
+      "id": "seg:heading:bnnsapplymultiheadattentionbackward:0000:0001",
+      "source": "BNNSApplyMultiheadAttentionBackward(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:)",
+      "ko": "BNNSApplyMultiheadAttentionBackward(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_)",
+      "sourceHash": "04f2d3c2b7f2bcbf8956b51d76666932af7f42e673c3378b0840c773551a8d00",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnsapplymultiheadattentionbackward:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: func",
+      "ko": "**Framework**: Accelerate **Kind**: func",
+      "sourceHash": "92505afed2b9832f88ee8e8741948f4ea109b670dc30717430f0006e8f343391",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnsapplymultiheadattentionbackward:0002:0001",
+      "source": "Applies a multihead attention filter backward to generate gradients.",
+      "ko": "멀티헤드 어텐션 필터의 역방향 연산을 적용해 그래디언트를 생성합니다.",
+      "sourceHash": "5850298b0ba2f450af6b3b59ac827c6dc05eb9661fd1cbbac9cbf1d208af35ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:bnnsapplymultiheadattentionbackward:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsapplymultiheadattentionbackward:0004:0001",
+      "source": "iOS 14.0+",
+      "ko": "iOS 14.0+",
+      "sourceHash": "a09fb717eefa07878cab396c9697a744dfc726f6a8a77c093ef12e8124ffd90b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsapplymultiheadattentionbackward:0004:0002",
+      "source": "iPadOS 14.0+",
+      "ko": "iPadOS 14.0+",
+      "sourceHash": "3bd5f9207436aaf3fd80bdb95d64d5d280ff80afc32e998b4c7ef682ec2802e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsapplymultiheadattentionbackward:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsapplymultiheadattentionbackward:0004:0004",
+      "source": "macOS 11.0+",
+      "ko": "macOS 11.0+",
+      "sourceHash": "b9d0915cd0d28054ced64852a8b4eb668d9bff9c754aec6f95028c5b01456c88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsapplymultiheadattentionbackward:0004:0005",
+      "source": "tvOS 14.0+",
+      "ko": "tvOS 14.0+",
+      "sourceHash": "c82f0586cea06e7e3b23ac73e15255e7ccbb56eadf9421eeb43c4793905535a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsapplymultiheadattentionbackward:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsapplymultiheadattentionbackward:0004:0007",
+      "source": "watchOS 7.0+",
+      "ko": "watchOS 7.0+",
+      "sourceHash": "c062c9b3a973acc1ffdf60071a0ce7943a5b195f1b0ce07f283267c446e33961",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc BNNSApplyMultiheadAttentionBackward(_ F: BNNSFilter?, _ batch_size: Int, _ query: UnsafeRawPointer?, _ query_stride: Int, _ query_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>?, _ key: UnsafeRawPointer?, _ key_stride: Int, _ key_mask: UnsafePointer<BNNSNDArrayDescriptor>?, _ key_mask_stride: Int, _ key_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>?, _ value: UnsafeRawPointer?, _ value_stride: Int, _ value_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>?, _ add_to_attention: UnsafePointer<BNNSNDArrayDescriptor>?, _ key_attn_bias_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?, _ value_attn_bias_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?, _ output: UnsafeRawPointer?, _ output_stride: Int, _ output_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>, _ backprop_cache_size: Int, _ backprop_cache: UnsafeMutableRawPointer?, _ workspace_size: UnsafeMutablePointer<Int>?, _ workspace: UnsafeMutableRawPointer?) -> Int32\n```",
+      "ko": "```swift\nfunc BNNSApplyMultiheadAttentionBackward(_ F: BNNSFilter?, _ batch_size: Int, _ query: UnsafeRawPointer?, _ query_stride: Int, _ query_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>?, _ key: UnsafeRawPointer?, _ key_stride: Int, _ key_mask: UnsafePointer<BNNSNDArrayDescriptor>?, _ key_mask_stride: Int, _ key_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>?, _ value: UnsafeRawPointer?, _ value_stride: Int, _ value_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>?, _ add_to_attention: UnsafePointer<BNNSNDArrayDescriptor>?, _ key_attn_bias_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?, _ value_attn_bias_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?, _ output: UnsafeRawPointer?, _ output_stride: Int, _ output_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>, _ backprop_cache_size: Int, _ backprop_cache: UnsafeMutableRawPointer?, _ workspace_size: UnsafeMutablePointer<Int>?, _ workspace: UnsafeMutableRawPointer?) -> Int32\n```",
+      "sourceHash": "c433de72c249366160307fce8835e75903b6f9d5f3a86c950fa90c3b271706ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0007:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0008:0001",
+      "source": "`F`: The filter to apply.",
+      "ko": "`F`: 적용할 필터입니다.",
+      "sourceHash": "b4efdda0491c0b3c5697c6b164e5919131807c7574733bc9fd2332368b7d57ca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0002",
+      "source": "`batch_size`: The number of input-output pairs.",
+      "ko": "`batch_size`: 입력-출력 쌍의 개수입니다.",
+      "sourceHash": "e4c82b521c635ce42b030170c6927281369ced6855f6ed71ea4e5a66dcfe1409",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0003",
+      "source": "`query`: Pointer to data for query input matrix.",
+      "ko": "`query`: query 입력 행렬 데이터에 대한 포인터입니다.",
+      "sourceHash": "3f16926d554f789b35b94a6a85ec898c65c5db9c37ae93925232bc44aa1cfc70",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0004",
+      "source": "`query_stride`: Batch stride for query.",
+      "ko": "`query_stride`: query의 배치 stride입니다.",
+      "sourceHash": "9f9d70c0355a709a4be8ebd366809cbb83f440360f19fb99e9495a91e5e6a03a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0005",
+      "source": "`query_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.",
+      "ko": "`query_param_delta`: 해당 구성 요소의 델타를 저장하는 데 사용되는 데이터 구조에 대한 포인터입니다.",
+      "sourceHash": "41df34e23c1da07d8c3a67e874dc5e211e597f72899d6de326ac60f3bacdfc2a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0006",
+      "source": "`key`: Pointer to data for key input matrix.",
+      "ko": "`key`: key 입력 행렬 데이터에 대한 포인터입니다.",
+      "sourceHash": "33b020511032986a165c96e8b5a4610e05f63722b823d0a2442d3709c649e338",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0007",
+      "source": "`key_stride`: Batch stride for key.",
+      "ko": "`key_stride`: key의 배치 stride입니다.",
+      "sourceHash": "ea220716dab681b26afe9eca076b84ff68512f43b27a73ab540a4882237815a6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0008",
+      "source": "`key_mask`: Mask applied to key for ignoring entries.",
+      "ko": "`key_mask`: key에서 항목을 무시하기 위해 적용되는 마스크입니다.",
+      "sourceHash": "d50e1cc6e0c05d4f0fe2714b97b5e4fbce0ba625216fd0c034dfd2787e7efbd6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0009",
+      "source": "`key_mask_stride`: Batch stride for key mask.",
+      "ko": "`key_mask_stride`: key 마스크의 배치 stride입니다.",
+      "sourceHash": "666af49b974f079d9da13dc9b42f8a73207888ac0cdb9a5320f7dd90095260ae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0010",
+      "source": "`key_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.",
+      "ko": "`key_param_delta`: 해당 구성 요소의 델타를 저장하는 데 사용되는 데이터 구조에 대한 포인터입니다.",
+      "sourceHash": "810c83bd344a938be0a65e4f4f4daaf02dbb9d584527241d76c9834530cb174b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0011",
+      "source": "`value`: Pointer to the data for value input matrix,.",
+      "ko": "`value`: value 입력 행렬 데이터에 대한 포인터입니다.",
+      "sourceHash": "c956b0020b230c67c1d63218401110c4c1985fc1958597ac725f779d1799ff2f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0012",
+      "source": "`value_stride`: Batch stride for value.",
+      "ko": "`value_stride`: value의 배치 stride입니다.",
+      "sourceHash": "bd92e5b0a8bc35bc7b6ade6b7b951849af30918964eb2c21ac58ec15d1230eaf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0013",
+      "source": "`value_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.",
+      "ko": "`value_param_delta`: 해당 구성 요소의 델타를 저장하는 데 사용되는 데이터 구조에 대한 포인터입니다.",
+      "sourceHash": "26ace699f95d6455d1d9a129357e065dd90263ca8cc0b78a95ce3173b5475b76",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0014",
+      "source": "`add_to_attention`: Pointer to the 2D tensor that’s used as part of the mask function prior to softmax in the attention calculation.",
+      "ko": "`add_to_attention`: 어텐션 계산에서 softmax 이전 마스크 함수에 사용되는 2D 텐서에 대한 포인터입니다.",
+      "sourceHash": "0e6aa6389d3ef5fee185d239339335e3549477af5ce94fa5e4732a67acf759d8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0015",
+      "source": "`key_attn_bias_delta`: Pointer to the data structure used to hold deltas for corresponding components.",
+      "ko": "`key_attn_bias_delta`: 해당 구성 요소의 델타를 저장하는 데 사용되는 데이터 구조에 대한 포인터입니다.",
+      "sourceHash": "10291af395a1dbfecaf338ceb2cbd6828e62dca16aac0d351623142b59f30514",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0016",
+      "source": "`value_attn_bias_delta`: Pointer to the data structure used to hold deltas for corresponding components.",
+      "ko": "`value_attn_bias_delta`: 해당 구성 요소의 델타를 저장하는 데 사용되는 데이터 구조에 대한 포인터입니다.",
+      "sourceHash": "31ac806601b53491ffeaf597fd58a5f6b0b417eda1a7f12c0a0c6c320879e345",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0017",
+      "source": "`output`: Pointer to the data for output matrix.",
+      "ko": "`output`: 출력 행렬 데이터에 대한 포인터입니다.",
+      "sourceHash": "4a0ee5d6ec6cb5935e62f22ca92e5a296ae42752ddb0eaff8f54af97afd18a5f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0018",
+      "source": "`output_stride`: Batch stride for output.",
+      "ko": "`output_stride`: output의 배치 stride입니다.",
+      "sourceHash": "56ca579ed7fcdf104a337eaea3d7fd2109e2dcce6a730e9bdd9504022a8a61e0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0019",
+      "source": "`output_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.",
+      "ko": "`output_param_delta`: 해당 구성 요소의 델타를 저장하는 데 사용되는 데이터 구조에 대한 포인터입니다.",
+      "sourceHash": "ea18f363ea13ed1ab1bf6bfc9e2f70868bd618fa66813e497b261a77b0e48dca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0020",
+      "source": "`backprop_cache_size`: The size of the back propagation cache, in bytes.",
+      "ko": "`backprop_cache_size`: 역전파 캐시 크기(바이트 단위)입니다.",
+      "sourceHash": "37d891a8e07a1e3731f5997f078f08d6b32b08327944df3b91c8f7883ac95cfe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0021",
+      "source": "`backprop_cache`: A cache that stores intermediate results that BNNS can use to accelerate a future call to this function.",
+      "ko": "`backprop_cache`: BNNS가 향후 이 함수 호출을 가속화하기 위해 사용할 중간 결과를 저장하는 캐시입니다.",
+      "sourceHash": "ab04b952ae7e2c96340289c0e632c7b02c9786f03f1533332c03f426336066bf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0022",
+      "source": "`workspace_size`: The size of the array workspace, in bytes.",
+      "ko": "`workspace_size`: 배열 워크스페이스 크기(바이트 단위)입니다.",
+      "sourceHash": "d1a0cb881c431d70ca3fdcfae259e81c290a61d2bd4055203ed3fc40ee32f0a9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0023",
+      "source": "`workspace`: A scratch buffer used during the calculation.",
+      "ko": "`workspace`: 계산 중에 사용되는 스크래치 버퍼입니다.",
+      "sourceHash": "6a90d69fcb2e35c72ae4be27d9b452d5bfa92f854e1323e73382f0e859f346dc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[struct BNNSMHAProjectionParameters](bnnsmhaprojectionparameters.md)",
+      "ko": "[struct BNNSMHAProjectionParameters](bnnsmhaprojectionparameters.md)",
+      "sourceHash": "049c8d6e83d8c388fa7ae7efefeacda96eb157a93eee671b25dd19102c4b31aa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "A structure that contains multihead attention projection parameters.",
+      "ko": "멀티헤드 어텐션 투영 매개변수를 포함하는 구조체입니다.",
+      "sourceHash": "5a6af336929cee80b8a12ec0dcfe2550b2b84ce80d2ffcd1592758f8aa861e19",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[struct BNNSLayerParametersMultiheadAttention](bnnslayerparametersmultiheadattention.md)",
+      "ko": "[struct BNNSLayerParametersMultiheadAttention](bnnslayerparametersmultiheadattention.md)",
+      "sourceHash": "f44e652a4c3541b66da8735046a31aa4095df22eb49d919439c36915fd21b522",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "A structure that contains the parameters of a multihead attention layer.",
+      "ko": "멀티헤드 어텐션 레이어 매개변수를 포함하는 구조체입니다.",
+      "sourceHash": "f3ba70b1316b6c0b1c71ce7fb0177d4d4d4a09120efe972de4ccde3c5ecff71d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func BNNSFilterCreateLayerMultiheadAttention(UnsafePointer<BNNSLayerParametersMultiheadAttention>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayermultiheadattention(_:_:).md)",
+      "ko": "[func BNNSFilterCreateLayerMultiheadAttention(UnsafePointer<BNNSLayerParametersMultiheadAttention>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayermultiheadattention(_:_:).md)",
+      "sourceHash": "0e75dc8937b3846f0c6c0c2e1e184feefbb2069992098f300a0ece5a76c3c86c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Returns a new multihead attention layer.",
+      "ko": "새 멀티헤드 어텐션 레이어를 반환합니다.",
+      "sourceHash": "8d726e046118aa175511e3abb265c6349065719c07ae2a9c276259674e101f06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func BNNSApplyMultiheadAttention(BNNSFilter?, Int, UnsafeRawPointer, Int, UnsafeRawPointer, Int, UnsafePointer<BNNSNDArrayDescriptor>?, Int, UnsafeRawPointer, Int, UnsafeMutableRawPointer, Int, UnsafePointer<BNNSNDArrayDescriptor>?, UnsafeMutablePointer<Int>?, UnsafeMutableRawPointer?, UnsafeMutablePointer<Int>?, UnsafeMutableRawPointer?) -> Int32](bnnsapplymultiheadattention(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSApplyMultiheadAttention(BNNSFilter?, Int, UnsafeRawPointer, Int, UnsafeRawPointer, Int, UnsafePointer<BNNSNDArrayDescriptor>?, Int, UnsafeRawPointer, Int, UnsafeMutableRawPointer, Int, UnsafePointer<BNNSNDArrayDescriptor>?, UnsafeMutablePointer<Int>?, UnsafeMutableRawPointer?, UnsafeMutablePointer<Int>?, UnsafeMutableRawPointer?) -> Int32](bnnsapplymultiheadattention(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "1d25eb1248e31bbb11e8629d18e083f0c5d5ab3e70d08b8b6b781c5ff3b68925",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Applies a mutihead attention filter to a set of input objects, writing the result to a set of output objects.",
+      "ko": "멀티헤드 어텐션 필터를 입력 객체 집합에 적용하여 출력 객체 집합에 결과를 기록합니다.",
+      "sourceHash": "b7c41386d83dd012d2944838bdacaccfa952f72bd5a87277e0a79cb26ab6afcb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0018:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsapplymultiheadattentionbackward(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsapplymultiheadattentionbackward(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:))*",
+      "sourceHash": "36588bf4a7c8c779217e3d383491bedd999cb39f64953452aceabbe8caecc0c7",
+      "status": "machine_translated"
+    }
+  ]
+}

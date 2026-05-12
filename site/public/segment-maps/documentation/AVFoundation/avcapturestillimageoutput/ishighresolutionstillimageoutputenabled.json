@@ -1,0 +1,183 @@
+{
+  "docId": "documentation/AVFoundation/avcapturestillimageoutput/ishighresolutionstillimageoutputenabled.md",
+  "title": "isHighResolutionStillImageOutputEnabled",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturestillimageoutput/ishighresolutionstillimageoutputenabled",
+  "segments": [
+    {
+      "id": "seg:heading:ishighresolutionstillimageoutputenabled:0000:0001",
+      "source": "isHighResolutionStillImageOutputEnabled",
+      "ko": "isHighResolutionStillImageOutputEnabled",
+      "sourceHash": "16411021c824b4663a43452e0d495e647e51db5df9f1eb6a6d2885f00b086ad5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:ishighresolutionstillimageoutputenabled:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:ishighresolutionstillimageoutputenabled:0002:0001",
+      "source": "A Boolean value that indicates whether the receiver should emit still images at the highest resolution supported by its source `AVCaptureDevice` objects `activeFormat` property.",
+      "ko": "`AVCaptureStillImageOutput`이 소스 `AVCaptureDevice` 객체의 `activeFormat` 속성이 지원하는 최고 해상도로 정지 이미지를 방출해야 하는지 나타내는 불리언 값입니다.",
+      "sourceHash": "2127936fed3c5abff99743850a8146218e193b484f39a1e54cec1ec2ca1b3a6e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:ishighresolutionstillimageoutputenabled:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:ishighresolutionstillimageoutputenabled:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:ishighresolutionstillimageoutputenabled:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:ishighresolutionstillimageoutputenabled:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:ishighresolutionstillimageoutputenabled:0004:0004",
+      "source": "macOS 10.14+",
+      "ko": "macOS 10.14+",
+      "sourceHash": "627f17252db61b06e5a3a3bd4b059e0908f48979a7960122571777674bb41473",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar isHighResolutionStillImageOutputEnabled: Bool { get set }\n```",
+      "ko": "```swift\nvar isHighResolutionStillImageOutputEnabled: Bool { get set }\n```",
+      "sourceHash": "1c564a9979b83c7289435ad5c7998dc69ca8bf05bf6fbf26b55065a244bb0624",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "By default, `AVCaptureStillImageOutput` emits images with the same dimensions as its source [`AVCaptureDevice`](avcapturedevice.md) instance’s `activeFormat.formatDescription`.",
+      "ko": "기본적으로 `AVCaptureStillImageOutput`은 소스 [`AVCaptureDevice`](avcapturedevice.md) 인스턴스의 `activeFormat.formatDescription`과 동일한 치수의 이미지를 방출합니다.",
+      "sourceHash": "3c080a1431c5b1a571a3e3303a102c4b23691eeaa6fa40afbe1221cd1cfbcb35",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "However, if you set this property to [`true`](https://developer.apple.com/documentation/Swift/true), the receiver emits still images at the capture device’s [`highResolutionStillImageDimensions`](avcapturedevice/format/highresolutionstillimagedimensions.md) value.",
+      "ko": "그러나 이 값을 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정하면 수신기가 캡처 장치의 [`highResolutionStillImageDimensions`](avcapturedevice/format/highresolutionstillimagedimensions.md) 값으로 정지 이미지를 방출합니다.",
+      "sourceHash": "babdc108725359238f2902abb0f0933e00ac7969ad5436db719ed70ecccf3d84",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0001",
+      "source": "**Note**: If you enable video stabilization by setting `preferredVideoStabilizationMode` to [`true`](https://developer.apple.com/documentation/Swift/true) for any output, the high resolution still images emitted by `AVCaptureStillImageOutput` may be smaller by 10% or more.",
+      "ko": "**참고**: `preferredVideoStabilizationMode`를 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정해 어느 출력이든 동영상 안정화를 사용하도록 하면 `AVCaptureStillImageOutput`이 방출하는 고해상도 정지 이미지가 10% 이상 작아질 수 있습니다.",
+      "sourceHash": "ea4f5de33e12d6b2dff9300608f9942ee2c3fd954937f16b9aa6733962fb458b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var availableImageDataCVPixelFormatTypes: [NSNumber]](avcapturestillimageoutput/availableimagedatacvpixelformattypes.md)",
+      "ko": "[var availableImageDataCVPixelFormatTypes: [NSNumber]](avcapturestillimageoutput/availableimagedatacvpixelformattypes.md)",
+      "sourceHash": "b1fcc90452eb714ab03d95d421057ef1c01fbc34e83ebecca126cbad57e4fe1c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "The supported image pixel formats that can be specified as output settings.",
+      "ko": "출력 설정으로 지정할 수 있는 지원 이미지 픽셀 형식입니다.",
+      "sourceHash": "1c300f33aecb8f7e7a1967e407e06e8924dc310db84e26d9270c038d46cce8c7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var availableImageDataCodecTypes: [AVVideoCodecType]](avcapturestillimageoutput/availableimagedatacodectypes.md)",
+      "ko": "[var availableImageDataCodecTypes: [AVVideoCodecType]](avcapturestillimageoutput/availableimagedatacodectypes.md)",
+      "sourceHash": "9668b32c611e3bd2aa2b891d1f5ec2742ed5c09056ca06e5824e971b0491083f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "The supported image codec formats that can be specified as output settings.",
+      "ko": "출력 설정으로 지정할 수 있는 지원 이미지 코덱 형식입니다.",
+      "sourceHash": "f3ec2ee31b1029db8ae63e7d79bc7df24cdd3b6a6797833c31221a51f64274c3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var outputSettings: [String : Any]](avcapturestillimageoutput/outputsettings.md)",
+      "ko": "[var outputSettings: [String : Any]](avcapturestillimageoutput/outputsettings.md)",
+      "sourceHash": "af186c5a1a9b74d52a7400d1ef3e582f156044726dbaa4e28493517befada044",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The compression settings for the output.",
+      "ko": "출력의 압축 설정입니다.",
+      "sourceHash": "456096805c958fc808d82a0951784cf97a59bd605b890a2fbc749c0fe9e20f22",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[Video settings](video-settings.md)",
+      "ko": "[Video settings](video-settings.md)",
+      "sourceHash": "b49470a755c2fa50cd8d0579d1b26b822414da50d6dd7270413f300b2452ecd6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Configure video processing settings using standard key and value constants.",
+      "ko": "표준 키 및 값 상수를 사용해 비디오 처리 설정을 구성합니다.",
+      "sourceHash": "cb0ddb79e0100fb2fcf0affd3e8de4b4f296b5c9d112341a202b27124405fc7c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturestillimageoutput/ishighresolutionstillimageoutputenabled)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturestillimageoutput/ishighresolutionstillimageoutputenabled)*",
+      "sourceHash": "fd7a4fd567169d5f17d42ddb449c2ff76275ee3e511ea20ab460fc6d4c6e1e8b",
+      "status": "preserved"
+    }
+  ]
+}

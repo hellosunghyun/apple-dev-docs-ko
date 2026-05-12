@@ -1,0 +1,288 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosession/mode-swift.struct/measurement.md",
+  "title": "measurement",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosession/mode-swift.struct/measurement",
+  "segments": [
+    {
+      "id": "seg:heading:measurement:0000:0001",
+      "source": "measurement",
+      "ko": "measurement",
+      "sourceHash": "6c5a6990038d66c5ecddf6c983345ed18acc416e188ff1476e3cd7201699aaed",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:measurement:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: property",
+      "ko": "**Framework**: AVFAudio **Kind**: property",
+      "sourceHash": "dbcab8cee850c10188239b4c73df47a01c6d8b4597a46786c5db98ee29c5588e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:measurement:0002:0001",
+      "source": "A mode that indicates that your app is performing measurement of audio input or output.",
+      "ko": "앱이 오디오 입력 또는 출력의 측정을 수행하고 있음을 나타내는 모드입니다.",
+      "sourceHash": "e08a593fa06feebd6cdc6e6bad3e3cde63f9bf4bfa555dd79d3b6a02a34713f8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:measurement:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:measurement:0004:0001",
+      "source": "iOS 5.0+",
+      "ko": "iOS 5.0+",
+      "sourceHash": "6b4dd8f1a6495a587082b8fb76320f51b2eebb8f8a2eca687de76b0735bc6a3c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:measurement:0004:0002",
+      "source": "iPadOS 5.0+",
+      "ko": "iPadOS 5.0+",
+      "sourceHash": "16cd4ccb66ebf071a21dd80e86fd8839bac07210b4dac630278303b7d7440f6f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:measurement:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:measurement:0004:0004",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:measurement:0004:0005",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:measurement:0004:0006",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstatic let measurement: AVAudioSession.Mode\n```",
+      "ko": "```swift\nstatic let measurement: AVAudioSession.Mode\n```",
+      "sourceHash": "8d205411b1c1ec12f5bf5deff01759fb52257bf9a39a29b34df993dce53349de",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Use this mode for apps that need to minimize the amount of system-supplied signal processing to input and output signals.",
+      "ko": "The necessary parameters for this type are [`frequency`](avaudiouniteqfilterparameters/frequency.md) (center), [`bandwidth`](avaudiouniteqfilterparameters/bandwidth.md), and [`gain`](avaudiouniteqfilterparameters/gain.md).",
+      "sourceHash": "ba814c6b66d938ffae08487d15348aacd3240aaefc437bfeccd1cc69dbba3428",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "If recording on devices with more than one built-in microphone, the session uses the primary microphone.",
+      "ko": "두 개 이상의 내장 마이크가 장착된 기기에서 녹음할 때 세션은 기본 마이크를 사용합니다.",
+      "sourceHash": "335f7aa9745ffac5581b9f10bde32ca67b5234d101fbf0210058349819f098e0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "For use with the [`playback`](avaudiosession/category-swift.struct/playback.md), [`record`](avaudiosession/category-swift.struct/record.md), or [`playAndRecord`](avaudiosession/category-swift.struct/playandrecord.md) audio session categories.",
+      "ko": "[`playback`](avaudiosession/category-swift.struct/playback.md), [`record`](avaudiosession/category-swift.struct/record.md), [`playAndRecord`](avaudiosession/category-swift.struct/playandrecord.md) 오디오 세션 카테고리와 함께 사용합니다.",
+      "sourceHash": "76f8d7b09669c9a46e70eb1422e31fd84bd2de0426ee850056ce6ce2e1305498",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0010:0001",
+      "source": "❗ **Important**: This mode disables some dynamics processing on input and output signals, resulting in a lower-output playback level.",
+      "ko": "❗ **중요**: 이 모드는 입력 및 출력 신호의 일부 다이내믹스 처리를 비활성화하여 출력 재생 레벨이 낮아집니다.",
+      "sourceHash": "8bc82d882b2dce467619e08b473d4a9d54995048dfac004110bb4312eaf6cb2f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[static let `default`: AVAudioSession.Mode](avaudiosession/mode-swift.struct/default.md)",
+      "ko": "[static let `default`: AVAudioSession.Mode](avaudiosession/mode-swift.struct/default.md)",
+      "sourceHash": "1c5fddbd078d1d52966b1140fefcef9ca4a0517db94e7797938a4418e892d568",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "The default audio session mode.",
+      "ko": "기본 오디오 세션 모드입니다.",
+      "sourceHash": "b10d802ed1e48ef19ce14150bcef1108e6361ed3485f03fad6f89eaddc7aaf61",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[static let dualRoute: AVAudioSession.Mode](avaudiosession/mode-swift.struct/dualroute.md)",
+      "ko": "[static let dualRoute: AVAudioSession.Mode](avaudiosession/mode-swift.struct/dualroute.md)",
+      "sourceHash": "7d7baffdbcb927872a37ff8af4d144a074b0ccb659f89360aae10d2a979b01dd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A mode that provides simultaneous use of the built-in microphone/speaker and a secondary audio device that supports input and output.",
+      "ko": "입력과 출력을 모두 지원하는 보조 오디오 장치와 내장 마이크/스피커를 동시에 사용할 수 있게 해주는 모드입니다.",
+      "sourceHash": "30c050b1c2d10dec61b1d12becc6442a0b50f5ece94ef66e2170ec1c4d2e29bd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[static let gameChat: AVAudioSession.Mode](avaudiosession/mode-swift.struct/gamechat.md)",
+      "ko": "[static let gameChat: AVAudioSession.Mode](avaudiosession/mode-swift.struct/gamechat.md)",
+      "sourceHash": "ee7869e6260eabbe4a3fc6f2f78ed5699f30136bbd526f4db101059647511652",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "A mode that the GameKit framework sets on behalf of an application that uses GameKit’s voice chat service.",
+      "ko": "GameKit framework가 GameKit 음성 채팅 서비스를 사용하는 애플리케이션을 대신해 설정하는 모드입니다.",
+      "sourceHash": "28fdd29636d792219dd0ad8f968a6ea67cae12f0564f5e3b3c50742e8109f3f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[static let moviePlayback: AVAudioSession.Mode](avaudiosession/mode-swift.struct/movieplayback.md)",
+      "ko": "[static let moviePlayback: AVAudioSession.Mode](avaudiosession/mode-swift.struct/movieplayback.md)",
+      "sourceHash": "4af7a6f82d6a17bf80c10e3bcb9caa7b306bb16870b36e088148144440d87d5b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A mode that indicates that your app is playing back movie content.",
+      "ko": "앱이 동영상 콘텐츠를 재생하고 있음을 나타내는 모드입니다.",
+      "sourceHash": "fc31cbb10246deed62f5410cc1782edb5dd0f008a3d1101e10aef4b51db472a1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[static let shortFormVideo: AVAudioSession.Mode](avaudiosession/mode-swift.struct/shortformvideo.md)",
+      "ko": "[static let shortFormVideo: AVAudioSession.Mode](avaudiosession/mode-swift.struct/shortformvideo.md)",
+      "sourceHash": "2c349e11f9bc210459465be8b813107eeb21849f74e6eadc4a03c67f9d626c97",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Appropriate for applications playing short-form video content.",
+      "ko": "짧은 형태의 비디오 콘텐츠를 재생하는 애플리케이션에 적합합니다.",
+      "sourceHash": "d6b48d8cfb4218915047f43d347791b940a12f9d0cb6be8d60b7981840814760",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[static let spokenAudio: AVAudioSession.Mode](avaudiosession/mode-swift.struct/spokenaudio.md)",
+      "ko": "[static let spokenAudio: AVAudioSession.Mode](avaudiosession/mode-swift.struct/spokenaudio.md)",
+      "sourceHash": "75b7799e454218754aa94066c895e5b4b5e10e39e3fbef9a61e20e25bc278893",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "A mode used for continuous spoken audio to pause the audio when another app plays a short audio prompt.",
+      "ko": "다른 앱이 짧은 오디오 프롬프트를 재생할 때 연속적인 음성 오디오를 일시 정지하는 데 사용되는 모드입니다.",
+      "sourceHash": "4ade33a63873b14731fb934736bac990eaecc2be770657f18d79a6e8a1fa386f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[static let videoChat: AVAudioSession.Mode](avaudiosession/mode-swift.struct/videochat.md)",
+      "ko": "[static let videoChat: AVAudioSession.Mode](avaudiosession/mode-swift.struct/videochat.md)",
+      "sourceHash": "70fdc2401652a014ab9121c15f6143b6fd07b25479700c7a1a9aee2793ade183",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "A mode that indicates that your app is engaging in online video conferencing.",
+      "ko": "앱이 온라인 화상 회의를 수행하고 있음을 나타내는 모드입니다.",
+      "sourceHash": "0e7aa83199140fea92dd2da3c6558f2f14a44000bd9129e908f20d12b8e3788f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[static let videoRecording: AVAudioSession.Mode](avaudiosession/mode-swift.struct/videorecording.md)",
+      "ko": "[static let videoRecording: AVAudioSession.Mode](avaudiosession/mode-swift.struct/videorecording.md)",
+      "sourceHash": "5700cb17b8c83e6b643f1c9023a1777fcdf29855fd9739fa3849711e57d42dbd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "A mode that indicates that your app is recording a movie.",
+      "ko": "앱이 영화를 녹화하고 있음을 나타내는 모드입니다.",
+      "sourceHash": "465b30220b3ee508cf63b451e3c878297763e5636ca2c2da9913fac4b79d05e9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[static let voiceChat: AVAudioSession.Mode](avaudiosession/mode-swift.struct/voicechat.md)",
+      "ko": "[static let voiceChat: AVAudioSession.Mode](avaudiosession/mode-swift.struct/voicechat.md)",
+      "sourceHash": "f908fe8d91f7cf72c5e77761d0cdf855b510fbac955e6e707e1e7bf001a8217c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "A mode that indicates that your app is performing two-way voice communication, such as using Voice over Internet Protocol (VoIP).",
+      "ko": "예를 들어 Voice over Internet Protocol(VoIP)로 앱이 양방향 음성 통신을 수행하고 있음을 나타내는 모드입니다.",
+      "sourceHash": "55c1cd40d38ed96a493522863db6bb8fb937e718350cfaa1a382036dd1cfc1ae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[static let voicePrompt: AVAudioSession.Mode](avaudiosession/mode-swift.struct/voiceprompt.md)",
+      "ko": "[static let voicePrompt: AVAudioSession.Mode](avaudiosession/mode-swift.struct/voiceprompt.md)",
+      "sourceHash": "42a3c5f4a599e7043f06061a815fb3b557c7313520a3cd35444a10e56792462d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "A mode that indicates that your app plays audio using text-to-speech.",
+      "ko": "앱이 텍스트 음성 변환으로 오디오를 재생하고 있음을 나타내는 모드입니다.",
+      "sourceHash": "9e81846ddd753f27afb23b00bca64416c97910c8932176c92ef934136475240e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0032:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/mode-swift.struct/measurement)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/mode-swift.struct/measurement)*",
+      "sourceHash": "5cc712ba85c146babf2c6948a29f7ca0ff4a17c51098826b85b80562ba73f9f8",
+      "status": "preserved"
+    }
+  ]
+}

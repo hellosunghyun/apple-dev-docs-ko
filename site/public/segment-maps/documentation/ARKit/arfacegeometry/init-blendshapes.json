@@ -1,0 +1,148 @@
+{
+  "docId": "documentation/ARKit/arfacegeometry/init-blendshapes.md",
+  "title": "init(blendShapes:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arfacegeometry/init-blendshapes",
+  "segments": [
+    {
+      "id": "seg:heading:initblendshapes:0000:0001",
+      "source": "init(blendShapes:)",
+      "ko": "init(blendShapes:)",
+      "sourceHash": "d45bb5e246b25d5fd28f44d5b27249025e28f0b3f28ceb364dad285a4a1381b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:initblendshapes:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: init",
+      "ko": "**Framework**: ARKit **Kind**: init",
+      "sourceHash": "0ad39046ef55efd166164116083a92360c96b06e20a8f38d73ea5660327f7f1b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:initblendshapes:0002:0001",
+      "source": "Creates a face geometry matching the facial expression described in the specified dictionary.",
+      "ko": "지정된 딕셔너리에 설명된 얼굴 표정과 일치하는 얼굴 지오메트리를 생성합니다.",
+      "sourceHash": "58f59e176db0175b367cfbe03cff63838c608d64b69e55458fed7a332cc5cfa3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:initblendshapes:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initblendshapes:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initblendshapes:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initblendshapes:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\ninit?(blendShapes: [ARFaceAnchor.BlendShapeLocation : NSNumber])\n```",
+      "ko": "```swift\ninit?(blendShapes: [ARFaceAnchor.BlendShapeLocation : NSNumber])\n```",
+      "sourceHash": "1f6bf082dae765918e6bee746c4463d6263683cad141ba684093037362272041",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "A face geometry object, or `nil` if ARKit face tracking is not supported on the current device.",
+      "ko": "현재 기기에서 ARKit 얼굴 추적이 지원되지 않으면 `nil`을 반환하는 얼굴 기하 객체입니다.",
+      "sourceHash": "5c05b7e7a1a108ff394bfd0c68a92543a7574722d94189ef46e84f09d95bca6a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Each key in the `blendShapes` dictionary is an [`ARFaceAnchor.BlendShapeLocation`](arfaceanchor/blendshapelocation.md) constant identifying a facial feature.",
+      "ko": "`blendShapes` 딕셔너리의 각 키는 얼굴 특징을 식별하는 [`ARFaceAnchor.BlendShapeLocation`](arfaceanchor/blendshapelocation.md) 상수입니다.",
+      "sourceHash": "9f61186a899ee807db2bf9438f1bce7bbdc4bda575bfafb26cf6a886b12f5285",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "The corresponding value is the position of that feature relative to its neutral configuration, ranging from `0.0` (neutral) to `1.0` (maximum movement).",
+      "ko": "해당 값은 해당 특징의 중립 구성에 대한 위치로, `0.0`(중립)에서 `1.0`(최대 이동)까지의 범위를 가집니다.",
+      "sourceHash": "9e40029a1d4ad53c4f8048d0a4f90121ac5cc150bc64a5c4d60d6d4b8b057950",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "The format of this dictionary is identical to that provided by the [`ARFaceAnchor`](arfaceanchor.md) [`blendShapes`](arfaceanchor/blendshapes.md) property.",
+      "ko": "이 딕셔너리의 형식은 [`ARFaceAnchor`](arfaceanchor.md) [`blendShapes`](arfaceanchor/blendshapes.md) 속성에서 제공하는 형식과 동일합니다.",
+      "sourceHash": "b5e9dc308378824ed5e1836a20f187e646ee9530604b8ab9fa448cdc5b0a9635",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "You can use that property and this initializer to efficiently save and restore facial expression data; the serialized form of a blend shapes dictionary is more portable than that of the face mesh those coefficients describe.",
+      "ko": "해당 속성과 이 초기화 메서드를 사용하면 얼굴 표정 데이터를 효율적으로 저장하고 복원할 수 있습니다. `blendShapes` 딕셔너리의 직렬화 형식은 해당 계수가 설명하는 얼굴 메시보다 이식성이 더 높습니다.",
+      "sourceHash": "736e9dbb972df1c1d1e517ac7e948cd04a99b19144abe28728cd86e7e4a85f70",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0012:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0013:0001",
+      "source": "`blendShapes`: A dictionary of blend shape coefficients describing a facial expression in terms of the positions of specific facial features. For any coefficient not specified in this dictionary, ARKit assumes a value of `0.0`.",
+      "ko": "`blendShapes`: 특정 얼굴 특징의 위치로 얼굴 표정을 설명하는 blend shape 계수의 딕셔너리입니다. 이 딕셔너리에 지정되지 않은 임의의 계수는 ARKit에서 `0.0`으로 간주합니다.",
+      "sourceHash": "2426658f148592a212f6078a14abd06318de9d47f3c00eecd4dd7a7a9e9543d8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:parameters:0014:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:parameters:0015:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arfacegeometry/init(blendshapes:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/arkit/arfacegeometry/init(blendshapes:))*",
+      "sourceHash": "f84df495fb7fd422944111ee534d697bf1281bc3dfd86efbf0d38aac63263034",
+      "status": "machine_translated"
+    }
+  ]
+}

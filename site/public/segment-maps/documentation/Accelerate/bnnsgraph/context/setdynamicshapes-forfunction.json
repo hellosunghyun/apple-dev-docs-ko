@@ -1,0 +1,253 @@
+{
+  "docId": "documentation/Accelerate/bnnsgraph/context/setdynamicshapes-forfunction.md",
+  "title": "setDynamicShapes(:forFunction:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsgraph/context/setdynamicshapes-forfunction",
+  "segments": [
+    {
+      "id": "seg:heading:setdynamicshapesforfunction:0000:0001",
+      "source": "setDynamicShapes(_:forFunction:)",
+      "ko": "setDynamicShapes(_:forFunction:)",
+      "sourceHash": "7bccf32d311455ffbaafd272320074550aeaa0da0d751cfa6f066336fcd44b2d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setdynamicshapesforfunction:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setdynamicshapesforfunction:0002:0001",
+      "source": "Specifies the dynamic shapes for a graph and, if possible, infers the output shapes.",
+      "ko": "그래프의 동적 형상을 지정하고, 가능한 경우 출력 형상을 추론합니다.",
+      "sourceHash": "eb283425dcbb3d211636655b1647d308e1db0345616177c6921bda20cec0b3b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setdynamicshapesforfunction:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setdynamicshapesforfunction:0004:0001",
+      "source": "iOS 18.0+",
+      "ko": "iOS 18.0+",
+      "sourceHash": "1b3f7d89e639b0fbca8c8e42d8d9491fcff80bdc07373dbd869c8a39ca2beb40",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setdynamicshapesforfunction:0004:0002",
+      "source": "iPadOS 18.0+",
+      "ko": "iPadOS 18.0+",
+      "sourceHash": "54a351c44693b5ce37dfff89a84379ba390a94f1a19625c16296b998317728b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setdynamicshapesforfunction:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:setdynamicshapesforfunction:0004:0004",
+      "source": "macOS 15.0+",
+      "ko": "macOS 15.0+",
+      "sourceHash": "611bc4e7b6bcedb648f4dce973a22cfae896f6a2e0e055f5096e7622aed421d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setdynamicshapesforfunction:0004:0005",
+      "source": "tvOS 18.0+",
+      "ko": "tvOS 18.0+",
+      "sourceHash": "8b3d386766205786b7eadc109362e800473eedafe7e0a03e888e738fd4823103",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setdynamicshapesforfunction:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:setdynamicshapesforfunction:0004:0007",
+      "source": "watchOS 11.0+",
+      "ko": "watchOS 11.0+",
+      "sourceHash": "b3687b5ecbb58255b42f98afa978e1c9714fab262e16ed94cff576ee748d7861",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc setDynamicShapes(_ shapes: [BNNSGraph.Shape], forFunction function: String? = nil) async throws -> [BNNSGraph.Shape]\n```",
+      "ko": "```swift\nfunc setDynamicShapes(_ shapes: [BNNSGraph.Shape], forFunction function: String? = nil) async throws -> [BNNSGraph.Shape]\n```",
+      "sourceHash": "9cdb69ac923e676c62ad8879950004f840d43541dabc54a10c46048b6800c2a6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0007:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0008:0001",
+      "source": "`shapes`: An array of input shapes in the same order as you pass to [`BNNSGraphContextExecute(_:_:_:_:_:_:)`](bnnsgraphcontextexecute(_:_:_:_:_:_:).md). This function reads input shapes with a nonzero rank, and uses the constant or default value from the source model for input shapes with a zero rank. The function generates an error for shapes with a nonzero value that doesn’t match the source model.",
+      "ko": "`shapes`: [`BNNSGraphContextExecute(_:_:_:_:_:_:)`](bnnsgraphcontextexecute(_:_:_:_:_:_:).md)에 전달하는 순서와 동일한 순서로 입력 형상을 나열한 배열입니다. 이 함수는 차원이 0이 아닌 입력 형상을 읽고, 차원이 0인 입력 형상에는 소스 모델의 상수값 또는 기본값을 사용합니다. 소스 모델과 일치하지 않는 0이 아닌 값의 형상에 대해 이 함수는 오류를 생성합니다.",
+      "sourceHash": "0e2e4e0aad5044929e1942b3cef044b82730f591ae89117577de7a36e96afcfc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0002",
+      "source": "`function`: The function. Specify as `nil` if the graph only contains one function.",
+      "ko": "`function`: 함수입니다. 그래프에 함수가 하나만 포함되어 있으면 `nil`로 지정합니다.",
+      "sourceHash": "3893726ba41bb1d4009a61e2e08cca022988b0ae6f5845efde3608a1a09dda0e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "관련 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[func BNNSGraphContextSetDynamicShapes(bnns_graph_context_t, UnsafePointer<CChar>?, Int, UnsafeMutablePointer<bnns_graph_shape_t>) -> Int32](bnnsgraphcontextsetdynamicshapes(_:_:_:_:).md)",
+      "ko": "[func BNNSGraphContextSetDynamicShapes(bnns_graph_context_t, UnsafePointer<CChar>?, Int, UnsafeMutablePointer<bnns_graph_shape_t>) -> Int32](bnnsgraphcontextsetdynamicshapes(_:_:_:_:).md)",
+      "sourceHash": "35cdd5fcc3a45ff430c7206126285684bfb3343624dea7ca2c5903668f2591d4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "Specifies the dynamic shapes for a graph and, if possible, infers, the output shapes.",
+      "ko": "그래프의 동적 형상을 지정하고, 가능한 경우 출력 형상을 추론합니다.",
+      "sourceHash": "a8411087ea174245f44eb62484ce3f9e543044a12ca65c30381765b33d038e05",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[BNNSGraph.Shape](bnnsgraph/shape.md)",
+      "ko": "[BNNSGraph.Shape](bnnsgraph/shape.md)",
+      "sourceHash": "b43b94c64400ffe5b7ddc0623bfcb052449f48761c0202467cf700ebb36b22d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "The specification of the shape of an argument.",
+      "ko": "인수의 형상 명세입니다.",
+      "sourceHash": "317d1598e2c7278129a9b8d6de47dae98dfe55081da5eb89d8f549c809d31821",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func argumentCount(forFunction: String?) -> Int](bnnsgraph/context/argumentcount(forfunction:).md)",
+      "ko": "[func argumentCount(forFunction: String?) -> Int](bnnsgraph/context/argumentcount(forfunction:).md)",
+      "sourceHash": "9acd7316c04abfdbf7ab50a20edcafa2109bade83099e0d83c774d202f8e195a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Returns the number of arguments for the given function argument.",
+      "ko": "주어진 함수 인수의 인수 개수를 반환합니다.",
+      "sourceHash": "9badc557d7faa5068041aa6f1992b055316a309a22669194096c054377a9b3e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func argumentNames(forFunction: String?) -> [String]](bnnsgraph/context/argumentnames(forfunction:).md)",
+      "ko": "[func argumentNames(forFunction: String?) -> [String]](bnnsgraph/context/argumentnames(forfunction:).md)",
+      "sourceHash": "f957aae0964bd970b1f6efc799f97ee13e56c17dac190f06a45b07ff9b212d79",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Returns the names of arguments for the given function argument.",
+      "ko": "주어진 함수 인수의 인수 이름을 반환합니다.",
+      "sourceHash": "39be24a50bb07b797e8b56fcef0222ce67e8aafe8265f45de69b305c0cbb83de",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func argumentPosition(forFunction: String?, argument: String) -> Int](bnnsgraph/context/argumentposition(forfunction:argument:).md)",
+      "ko": "[func argumentPosition(forFunction: String?, argument: String) -> Int](bnnsgraph/context/argumentposition(forfunction:argument:).md)",
+      "sourceHash": "3c140fcdf8cbbd73127d8a9aade5e3f51b829e8fcd10894b8206e840e5e06f74",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Returns the index into the arguments array for the given function argument.",
+      "ko": "주어진 함수 인수에 대한 인수 배열의 인덱스를 반환합니다.",
+      "sourceHash": "2dd0bbc66e3cbaf11e69bbc6ef160478c279ae0a6aa70db10221322cbe445cde",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[var functionCount: Int](bnnsgraph/context/functioncount.md)",
+      "ko": "[var functionCount: Int](bnnsgraph/context/functioncount.md)",
+      "sourceHash": "86091c312c77b7ca7afa98189805f496b31f99a42fb04bf376f3a5d0f6639083",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "The number of input arguments for the given function argument.",
+      "ko": "지정한 함수의 입력 인수 개수입니다.",
+      "sourceHash": "24274853c138b5e70b1fc8ec084be1c56c28aaf2d53da06c50e9974217e5e8bc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[var functionNames: [String]](bnnsgraph/context/functionnames.md)",
+      "ko": "[var functionNames: [String]](bnnsgraph/context/functionnames.md)",
+      "sourceHash": "74533965c7dfc29208d1ff1028c2cb86e1a6bb8b7e0534953218f5f18e89041c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Returns the names of callable functions in the graph.",
+      "ko": "그래프에서 호출 가능한 함수의 이름을 반환합니다.",
+      "sourceHash": "f63df4705d9278fe9b3f18c7457c176a4eee642d8f3dc90a1fd5681dc2684546",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[var checkForNaNsAndInfinities: Bool](bnnsgraph/context/checkfornansandinfinities.md)",
+      "ko": "[var checkForNaNsAndInfinities: Bool](bnnsgraph/context/checkfornansandinfinities.md)",
+      "sourceHash": "94e230b74624e2f2d578cf55bc75868902e0600b71d97315fbbfa407d090d34d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "A Boolean value that specifies that the context checks intermediate tensors for NaNs and infinities.",
+      "ko": "컨텍스트가 중간 텐서를 NaN과 infinity 값에 대해 검사하는지 지정하는 부울 값입니다.",
+      "sourceHash": "d4a3954b2ee584a5219dee40109f451f19bab790f820d99bed690c1bd9779bd8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0026:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/context/setdynamicshapes(_:forfunction:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/context/setdynamicshapes(_:forfunction:))*",
+      "sourceHash": "098e325e834c7f79b98118068c9d6123449425cdd5c17843a2f1e24d349c7781",
+      "status": "machine_translated"
+    }
+  ]
+}

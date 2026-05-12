@@ -1,0 +1,211 @@
+{
+  "docId": "documentation/ARKit/arhittestresult/resulttype/estimatedverticalplane.md",
+  "title": "estimatedVerticalPlane",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arhittestresult/resulttype/estimatedverticalplane",
+  "segments": [
+    {
+      "id": "seg:heading:estimatedverticalplane:0000:0001",
+      "source": "estimatedVerticalPlane",
+      "ko": "estimatedVerticalPlane",
+      "sourceHash": "9ef078c8f3811dd8af43f7977885f4da2bdd57fa45e99be7a6a69ee574e252c0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:estimatedverticalplane:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: property",
+      "ko": "**Framework**: ARKit **Kind**: property",
+      "sourceHash": "eebebd0c04c444b8ad7332b72cb6b5efed96fb65bd16793fa46eb608d4454b7e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:estimatedverticalplane:0002:0001",
+      "source": "A point on a real-world planar surface detected during the search, whose orientation is parallel to gravity.",
+      "ko": "검색 중 감지된 실세계 평면 표면의 점으로, 방향이 중력과 평행한 점입니다.",
+      "sourceHash": "a040781872f77ec0e6f112ff08f0ae36ccc7d1bf9187636b18d6dbb85ea65247",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:estimatedverticalplane:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:estimatedverticalplane:0004:0001",
+      "source": "iOS 11.3+",
+      "ko": "iOS 11.3+",
+      "sourceHash": "fba68f35b90aebab5566c583fc9bc4f244d3043cf51de36da0c77cb658732dfb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:estimatedverticalplane:0004:0002",
+      "source": "iPadOS 11.3+",
+      "ko": "iPadOS 11.3+",
+      "sourceHash": "76b9181264a10f249e90eb787e124760bdfc1f6e5aa8ba446a290b382bb5ca4f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:estimatedverticalplane:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstatic var estimatedVerticalPlane: ARHitTestResult.ResultType { get }\n```",
+      "ko": "```swift\nstatic var estimatedVerticalPlane: ARHitTestResult.ResultType { get }\n```",
+      "sourceHash": "a1e85ea233465573fdafadc3663fd1cb0481e3f2fffd7c9953211b23f2f95db3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "ARKit provides two ways to locate real-world flat surfaces in a scene.",
+      "ko": "ARKit는 장면에서 실세계의 평면 표면을 찾는 두 가지 방법을 제공합니다.",
+      "sourceHash": "d3fc16af134f43a35609f8f06fdfe4a24e055937dfe8a9cd0e2535ef911cb938",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "*Plane detection* (enabled with [`planeDetection`](arworldtrackingconfiguration/planedetection-swift.property.md) on your session configuration) is an ongoing process, continuously analyzing the scene to accurately map the position and extent of any planes in view.",
+      "ko": "세션 구성에서 [`planeDetection`](arworldtrackingconfiguration/planedetection-swift.property.md)으로 활성화되는 *Plane detection*은 지속적인 과정으로, 화면에 보이는 평면의 위치와 범위를 정확히 매핑하기 위해 장면을 계속 분석합니다.",
+      "sourceHash": "d6dc7fabfd28d7fe10271a442ea6dc3fed1f332f6a1416a3e19dc0a4dd18aa57",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "Because plane detection takes time, you can fall back to *plane estimation* to get an instant, but less accurate, indication of whether a 2D point in the camera image corresponds to a real-world flat surface.",
+      "ko": "평면 감지에는 시간이 걸리므로, 카메라 이미지의 2D 점이 실세계의 평면 표면과 대응하는지에 대한 즉각적인 표시를 더 정확하지 않더라도 얻기 위해 *plane estimation*으로 폴백할 수 있습니다.",
+      "sourceHash": "d591c6a22b1b242b4b934b913f0eab7355107d614e693d656322b740faa3d806",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Because plane detection results are more accurate than plane estimation results, ARKit prefers the former when searching for both.",
+      "ko": "평면 탐지 결과는 평면 추정 결과보다 더 정확하므로, ARKit는 두 경우 모두 검색할 때 앞의 방식을 우선합니다.",
+      "sourceHash": "bf2b3760a597590099a479e8e1c123d1a06317dea0f2f325de2e1d1cbc7d2b09",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "If your hit-test search includes both [`estimatedVerticalPlane`](arhittestresult/resulttype/estimatedverticalplane.md) and one or more [`existingPlane`](arhittestresult/resulttype/existingplane.md) types, and the search finds any already detected plane anchors, the search returns only the existing plane(s) and no estimated plane.",
+      "ko": "hit-test 검색에 [`estimatedVerticalPlane`](arhittestresult/resulttype/estimatedverticalplane.md)와 하나 이상의 [`existingPlane`](arhittestresult/resulttype/existingplane.md) 유형이 모두 포함되고 검색에서 이미 탐지된 평면 앵커를 찾으면, 해당 검색은 기존 평면만 반환하고 추정 평면은 반환하지 않습니다.",
+      "sourceHash": "57506c5c04db6af1b3397933b340feb3b491b608da16264f4cd0eeacecc1c7f8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "An estimated plane search returns at most one result—the best estimate for a vertical plane intersecting the hit-test ray.",
+      "ko": "추정 평면 검색은 최대 한 개의 결과만 반환하며, 이는 hit-test 광선과 교차하는 수직 평면에 대한 최적 추정치입니다.",
+      "sourceHash": "2ce4bb75018f743622ffbab7cbfb44fc8852ddcb6893581837fa01d4149a1c13",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[static var featurePoint: ARHitTestResult.ResultType](arhittestresult/resulttype/featurepoint.md)",
+      "ko": "[static var featurePoint: ARHitTestResult.ResultType](arhittestresult/resulttype/featurepoint.md)",
+      "sourceHash": "3ee14ba9872b73aa480fb56901ec67c05a418d1a995b686e71ea9658cee325dc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "A point on a surface detected by ARKit, but not part of any detected planes.",
+      "ko": "ARKit가 감지한 표면의 점이지만, 감지된 어떤 평면에도 속하지 않는 점입니다.",
+      "sourceHash": "7d6a6854dbf507e2498f2263c0fb8627733bf3755aeb182b36fafa4b861c91ec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[static var estimatedHorizontalPlane: ARHitTestResult.ResultType](arhittestresult/resulttype/estimatedhorizontalplane.md)",
+      "ko": "[static var estimatedHorizontalPlane: ARHitTestResult.ResultType](arhittestresult/resulttype/estimatedhorizontalplane.md)",
+      "sourceHash": "52317d245ea46223a4ded5b2340895ed04b3b68eac28356fe0fa0b97c0e7843f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A point on a real-world planar surface detected during the search, whose orientation is perpendicular to gravity.",
+      "ko": "검색 중 감지된 실세계 평면 표면의 점으로, 방향이 중력과 수직인 점입니다.",
+      "sourceHash": "1a2006a8a2f68d224018b20e17f922731e9341d84cff1cd09044eeb18348abe6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[static var existingPlane: ARHitTestResult.ResultType](arhittestresult/resulttype/existingplane.md)",
+      "ko": "[static var existingPlane: ARHitTestResult.ResultType](arhittestresult/resulttype/existingplane.md)",
+      "sourceHash": "1017dfbf50f206bbb6d254ee82d8ca59b64d5479b84269213b86c464bc3ddf3e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "A point on a real-world plane (already detected with the [`planeDetection`](arworldtrackingconfiguration/planedetection-swift.property.md) option), without considering the plane’s size.",
+      "ko": "실세계의 평면(세션 구성에서 [`planeDetection`](arworldtrackingconfiguration/planedetection-swift.property.md) 옵션으로 이미 감지된) 점으로, 평면의 크기는 고려하지 않습니다.",
+      "sourceHash": "2cbd92ad5e583cbded84e1981aaab0c0c298e17aaed0bdd4707cc845493cde52",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[static var existingPlaneUsingExtent: ARHitTestResult.ResultType](arhittestresult/resulttype/existingplaneusingextent.md)",
+      "ko": "[static var existingPlaneUsingExtent: ARHitTestResult.ResultType](arhittestresult/resulttype/existingplaneusingextent.md)",
+      "sourceHash": "da3a8265e9a660fbd97bf89c2c66c8912a1e8f8551ee7536f1fd0fddb027db15",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A point on a real-world plane (already detected with the [`planeDetection`](arworldtrackingconfiguration/planedetection-swift.property.md) option), respecting the plane’s estimated size.",
+      "ko": "실세계의 평면(세션 구성에서 [`planeDetection`](arworldtrackingconfiguration/planedetection-swift.property.md) 옵션으로 이미 감지된) 점으로, 평면의 추정 크기를 반영합니다.",
+      "sourceHash": "a50b22f1acffc089051de0a8ec6cfe66b3d89aaf0ae079315e33dbe21b973a9b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[static var existingPlaneUsingGeometry: ARHitTestResult.ResultType](arhittestresult/resulttype/existingplaneusinggeometry.md)",
+      "ko": "[static var existingPlaneUsingGeometry: ARHitTestResult.ResultType](arhittestresult/resulttype/existingplaneusinggeometry.md)",
+      "sourceHash": "e95d39325e24e574f8f73d0ac6f5fb5c6056c1d95173920eb314b8a73f34f837",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "A point on a real-world plane (already detected with the [`planeDetection`](arworldtrackingconfiguration/planedetection-swift.property.md) option), respecting the plane’s estimated size and shape.",
+      "ko": "실세계의 평면(세션 구성에서 [`planeDetection`](arworldtrackingconfiguration/planedetection-swift.property.md) 옵션으로 이미 감지된) 점으로, 평면의 추정 크기와 형태를 반영합니다.",
+      "sourceHash": "58df844ed32bab9e4c1eb4f49b7dee62d3b5f14daed26dcd94b3a262ad9f3112",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0022:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arhittestresult/resulttype/estimatedverticalplane)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arhittestresult/resulttype/estimatedverticalplane)*",
+      "sourceHash": "3d44b86c5de6163ac1536097fcb708816e93e8ba0b9357b1fb8f699f3ddeb49b",
+      "status": "preserved"
+    }
+  ]
+}

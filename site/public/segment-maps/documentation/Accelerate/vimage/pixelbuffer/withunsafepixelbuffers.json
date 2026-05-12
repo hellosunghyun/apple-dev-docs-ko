@@ -1,0 +1,190 @@
+{
+  "docId": "documentation/Accelerate/vimage/pixelbuffer/withunsafepixelbuffers.md",
+  "title": "withUnsafePixelBuffers(:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/withunsafepixelbuffers",
+  "segments": [
+    {
+      "id": "seg:heading:withunsafepixelbuffers:0000:0001",
+      "source": "withUnsafePixelBuffers(_:)",
+      "ko": "withUnsafePixelBuffers(_:)",
+      "sourceHash": "ba3b71ea3143e45dc68c0704a35a8f04722e9e76e47911fc518516ce6220a1f5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:withunsafepixelbuffers:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:withunsafepixelbuffers:0002:0001",
+      "source": "Calls the given closure with the array of pixel buffers that reference the individual planes.",
+      "ko": "개별 평면을 참조하는 픽셀 버퍼 배열과 함께 지정된 클로저를 호출합니다.",
+      "sourceHash": "00edd1fdacd961b7e742284c29703ecadffd5bfb673d42fbd174e61e38aa2dbf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:withunsafepixelbuffers:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:withunsafepixelbuffers:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:withunsafepixelbuffers:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:withunsafepixelbuffers:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:withunsafepixelbuffers:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:withunsafepixelbuffers:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:withunsafepixelbuffers:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:withunsafepixelbuffers:0004:0007",
+      "source": "watchOS 9.0+",
+      "ko": "watchOS 9.0+",
+      "sourceHash": "74f54147ec06c7528917e10d68b6a402263ae2503dac544ef616ac2a86563097",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc withUnsafePixelBuffers<R>(_ body: ([vImage.PixelBuffer<Format.PlanarPixelFormat>]) throws -> R) rethrows -> R\n```",
+      "ko": "```swift\nfunc withUnsafePixelBuffers<R>(_ body: ([vImage.PixelBuffer<Format.PlanarPixelFormat>]) throws -> R) rethrows -> R\n```",
+      "sourceHash": "ac58d6b4c319dd134b5836a00ac5a9f684fa08f6e5a4546f7c142c3ba74b5a4d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "The return value, if any, of the body closure parameter.",
+      "ko": "[`kvImageNoError`](kvimagenoerror.md); otherwise, a negative value indicates one of the error codes that [`Data Types and Constants`](data-types-and-constants.md) describes, and a positive value indicates the required size for the temporary buffer.",
+      "sourceHash": "744f9800a7902bfee7ab9727166e176bb7879283eacb1a02f7781c191e05330c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Use this function to access each individual planar pixel buffer of a multiple-plane pixel buffer.",
+      "ko": "이 함수를 사용하면 다중 평면 픽셀 버퍼의 각 개별 평면 픽셀 버퍼에 접근할 수 있습니다.",
+      "sourceHash": "4336378b81ddd436b5449fe761a2d602151dfe27ba3fae51fa39dca0abe40f3b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "For example, the following code initializes a 4-channel interleaved pixel buffer from the first three pixel buffers of a 4-channel multiple-plane pixel buffer:",
+      "ko": "예를 들어, 다음 코드는 4채널 다중 평면 픽셀 버퍼의 처음 세 개 픽셀 버퍼에서 4채널 인터리브 픽셀 버퍼를 초기화합니다.",
+      "sourceHash": "a2b5aad2ff8fb671f46c7359c66ffc35428411a3c03eb64b7fc816d6a6900535",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0011:0001",
+      "source": "```swift\n let src = vImage.PixelBuffer<vImage.Planar8x4>(size: vImage.Size(width: 32,\n                                                                  height: 64))\n\n src.withUnsafePixelBuffers { overlaySource8x4PixelBuffers in\n\n     let dest = vImage.PixelBuffer<vImage.Interleaved8x3>(planarBuffers: [\n         overlaySource8x4PixelBuffers[0],\n         overlaySource8x4PixelBuffers[1],\n         overlaySource8x4PixelBuffers[2]\n     ])\n }\n```",
+      "ko": "```swift\n let src = vImage.PixelBuffer<vImage.Planar8x4>(size: vImage.Size(width: 32,\n                                                                  height: 64))\n\n src.withUnsafePixelBuffers { overlaySource8x4PixelBuffers in\n\n     let dest = vImage.PixelBuffer<vImage.Interleaved8x3>(planarBuffers: [\n         overlaySource8x4PixelBuffers[0],\n         overlaySource8x4PixelBuffers[1],\n         overlaySource8x4PixelBuffers[2]\n     ])\n }\n```",
+      "sourceHash": "af83f22301b8bda615170a0d134b7d2ac6135989a63a420334d9a7114709d849",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0012:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0013:0001",
+      "source": "`body`: A closure with an array [`vImage.PixelBuffer`](vimage/pixelbuffer.md) parameter that points to the underlying pixel buffers.",
+      "ko": "`body`: 기본 픽셀 버퍼를 가리키는 [`vImage.PixelBuffer`](vimage/pixelbuffer.md) 배열 매개변수를 갖는 클로저입니다.",
+      "sourceHash": "baa17ce9ce5410b91cfc263ebc040f4d2a80a46325b5f5100225ecacb432c4da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0014:0001",
+      "source": "See Also",
+      "ko": "참고",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func withUnsafePixelBuffer<R>(at: Int, (vImage.PixelBuffer<Format.PlanarPixelFormat>) throws -> R) rethrows -> R](vimage/pixelbuffer/withunsafepixelbuffer(at:_:).md)",
+      "ko": "[func withUnsafePixelBuffer<R>(at: Int, (vImage.PixelBuffer<Format.PlanarPixelFormat>) throws -> R) rethrows -> R](vimage/pixelbuffer/withunsafepixelbuffer(at:_:).md)",
+      "sourceHash": "c98ac9f346da3972ad0dab276958b130f1e93061b6251c4b5f85efd51a45e2cd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Calls the given closure with the pixel buffer that references the individual plane at the given index.",
+      "ko": "주어진 인덱스의 개별 평면을 참조하는 픽셀 버퍼와 함께 주어진 클로저를 호출합니다.",
+      "sourceHash": "ba72c9d8662c5fd899d0fd861391f115d6f1fd1ae80cf81c14ba48f7ed27e186",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0017:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/withunsafepixelbuffers(_:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/withunsafepixelbuffers(_:))*",
+      "sourceHash": "299f617e6fdfe43ec2f1ca49a6fcba504424e67e22baf780fc2c7df52427145d",
+      "status": "machine_translated"
+    }
+  ]
+}

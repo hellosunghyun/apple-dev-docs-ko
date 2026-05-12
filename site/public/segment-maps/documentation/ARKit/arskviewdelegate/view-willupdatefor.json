@@ -1,0 +1,197 @@
+{
+  "docId": "documentation/ARKit/arskviewdelegate/view-willupdatefor.md",
+  "title": "view(:willUpdate:for:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arskviewdelegate/view-willupdatefor",
+  "segments": [
+    {
+      "id": "seg:heading:viewwillupdatefor:0000:0001",
+      "source": "view(_:willUpdate:for:)",
+      "ko": "view(_:willUpdate:for:)",
+      "sourceHash": "bee23ddfbdb1357ab05dbc84f1047a4bd10c1c7f577149f5cd4d674ea83cf5fa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:viewwillupdatefor:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: method",
+      "ko": "**Framework**: ARKit **Kind**: method",
+      "sourceHash": "9b335dd0cadec1f426ce27810957dcda749fe1d5008130ce607d61fcd8b52bea",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:viewwillupdatefor:0002:0001",
+      "source": "Tells the delegate that a SpriteKit node’s properties will be updated to match the current state of its corresponding anchor.",
+      "ko": "이 메서드는 delegate에 대해 SpriteKit 노드의 속성이 해당 앵커의 현재 상태와 일치하도록 업데이트될 예정임을 알립니다.",
+      "sourceHash": "9eefd85ae7ee6d0f99ddd7cd006b6b578548138bd006909cc28d874f632831e5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:viewwillupdatefor:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:viewwillupdatefor:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:viewwillupdatefor:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:viewwillupdatefor:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\noptional func view(_ view: ARSKView, willUpdate node: SKNode, for anchor: ARAnchor)\n```",
+      "ko": "```swift\noptional func view(_ view: ARSKView, willUpdate node: SKNode, for anchor: ARAnchor)\n```",
+      "sourceHash": "460e07dc0e95f5c236ceb3cdfbbe6fa8f3716401bc970594b6be006fddf688f3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Depending on the session configuration, ARKit may automatically update anchors in a session.",
+      "ko": "세션 구성에 따라 ARKit는 세션의 앵커를 자동으로 업데이트할 수 있습니다.",
+      "sourceHash": "fee9cd66b374715fe0a121a438c93edd8b5257b735a0240644394edda1e27860",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The view calls this method once for each updated anchor.",
+      "ko": "뷰는 업데이트된 각 앵커에 대해 이 메서드를 한 번 호출합니다.",
+      "sourceHash": "5903314009abda2aff3d60da723c04f9ea09013527acfa06219dfe4d4f301d7c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0009:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0010:0001",
+      "source": "`view`: The [`ARSKView`](arskview.md) object rendering the scene.",
+      "ko": "`view`: 씬을 렌더링하는 [`ARSKView`](arskview.md) 객체입니다.",
+      "sourceHash": "38cdb8c13ed7b93185577eb2bb823cde14077dc8dfbdac20235bf7b6ebadef84",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0002",
+      "source": "`node`: The updated SpriteKit node.",
+      "ko": "`node`: 업데이트된 SpriteKit 노드입니다.",
+      "sourceHash": "bb553e88068e78bdbeacee5cc010860043342116f66290e84773208ab33eb75c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0003",
+      "source": "`anchor`: The AR anchor corresponding to the node.",
+      "ko": "`anchor`: 노드에 해당하는 AR 앵커입니다.",
+      "sourceHash": "33e2694d377b828ad837671cbb33b7779c1cfb78e92c3dca093cddf424e85308",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[func view(ARSKView, nodeFor: ARAnchor) -> SKNode?](arskviewdelegate/view(_:nodefor:).md)",
+      "ko": "[func view(ARSKView, nodeFor: ARAnchor) -> SKNode?](arskviewdelegate/view(_:nodefor:).md)",
+      "sourceHash": "77193a5eb56a29321776c72fe472b72c557378980114a075df34bc35b761b915",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Asks the delegate to provide a SpriteKit node corresponding to a newly added anchor.",
+      "ko": "새로 추가된 앵커에 해당하는 SpriteKit 노드를 delegate가 제공하도록 요청합니다.",
+      "sourceHash": "51589e84caf302cc233ba8df7f46a8f45cf32a74700bdc8055aff44ede37d5f4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func view(ARSKView, didAdd: SKNode, for: ARAnchor)](arskviewdelegate/view(_:didadd:for:).md)",
+      "ko": "[func view(ARSKView, didAdd: SKNode, for: ARAnchor)](arskviewdelegate/view(_:didadd:for:).md)",
+      "sourceHash": "3ef937902737ffef1bb1457b6e308e561c818d227ad6cd30151ebe9e3ef92a91",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Tells the delegate that a SpriteKit node corresponding to a new AR anchor has been added to the scene.",
+      "ko": "새로운 AR 앵커에 해당하는 SpriteKit 노드가 씬에 추가되었음을 delegate에 알립니다.",
+      "sourceHash": "a4f2414dbc89739d384001555d3a05a8a0b073c3833fd543befec6a71e06df9a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func view(ARSKView, didUpdate: SKNode, for: ARAnchor)](arskviewdelegate/view(_:didupdate:for:).md)",
+      "ko": "[func view(ARSKView, didUpdate: SKNode, for: ARAnchor)](arskviewdelegate/view(_:didupdate:for:).md)",
+      "sourceHash": "fd1cc7f033f41bfaacc7f7b43614be6a65606cf17130216857220ec4fdb809d0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Tells the delegate that a SpriteKit node’s properties have been updated to match the current state of its corresponding anchor.",
+      "ko": "SpriteKit 노드의 속성이 해당 앵커의 현재 상태와 일치하도록 업데이트되었음을 delegate에 알립니다.",
+      "sourceHash": "2a21120b15cbfbb672ab4ed8a56d1546100fd592e4fe2ecb499d46fe566bef8c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func view(ARSKView, didRemove: SKNode, for: ARAnchor)](arskviewdelegate/view(_:didremove:for:).md)",
+      "ko": "[func view(ARSKView, didRemove: SKNode, for: ARAnchor)](arskviewdelegate/view(_:didremove:for:).md)",
+      "sourceHash": "34ba2763fd73d13385a26521c41f0f76078248a0b91a937ad3032f3163c0518d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Tells the delegate that the SpriteKit node corresponding to an AR anchor has been removed from the scene.",
+      "ko": "AR 앵커에 해당하는 SpriteKit 노드가 씬에서 제거되었음을 delegate에 알립니다.",
+      "sourceHash": "21c624299c34d77e2f2b582aaff003caf50c61483c16b81e382fd5a8e432c02b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arskviewdelegate/view(_:willupdate:for:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arskviewdelegate/view(_:willupdate:for:))*",
+      "sourceHash": "48f7a8bd340ba810784860a9750239716482d48256b467582538340b5614c877",
+      "status": "machine_translated"
+    }
+  ]
+}

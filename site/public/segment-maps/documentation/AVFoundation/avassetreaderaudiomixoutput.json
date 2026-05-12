@@ -1,0 +1,414 @@
+{
+  "docId": "documentation/AVFoundation/avassetreaderaudiomixoutput.md",
+  "title": "AVAssetReaderAudioMixOutput",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetreaderaudiomixoutput",
+  "segments": [
+    {
+      "id": "seg:heading:avassetreaderaudiomixoutput:0000:0001",
+      "source": "AVAssetReaderAudioMixOutput",
+      "ko": "AVAssetReaderAudioMixOutput",
+      "sourceHash": "54914a0f2b9241b6614ca14021d214b978b3ac022189739bc7c062a2bebe25fa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avassetreaderaudiomixoutput:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avassetreaderaudiomixoutput:0002:0001",
+      "source": "An object that reads audio samples that result from mixing audio from one or more tracks.",
+      "ko": "하나 이상의 트랙에서 믹싱한 결과 오디오 샘플을 읽는 객체입니다.",
+      "sourceHash": "76d214e983e7863dc724c432cba0df1ae970d917f57064d42e1833877722f90e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avassetreaderaudiomixoutput:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetreaderaudiomixoutput:0004:0001",
+      "source": "iOS 4.1+",
+      "ko": "iOS 4.1+",
+      "sourceHash": "38f203a255362344ad62b340d6bccb0567d68d47ecc0ee0ed9dbf0ef5316f18e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetreaderaudiomixoutput:0004:0002",
+      "source": "iPadOS 4.1+",
+      "ko": "iPadOS 4.1+",
+      "sourceHash": "251e48df463f9f94669b19e298467b7228539e04f5c478b45073222f583007e1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetreaderaudiomixoutput:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetreaderaudiomixoutput:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetreaderaudiomixoutput:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetreaderaudiomixoutput:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAssetReaderAudioMixOutput\n```",
+      "ko": "```swift\nclass AVAssetReaderAudioMixOutput\n```",
+      "sourceHash": "55bc77eff71faaf3e841e9ac72075f6d7a4090b7af8fa354b94542f7fc013b71",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Read audio data that you mix from one or more asset tracks by adding an audio mix output to an asset reader.",
+      "ko": "자산 리더에 오디오 믹스 출력을 추가해 하나 이상의 자산 트랙을 믹싱한 오디오 데이터를 읽습니다.",
+      "sourceHash": "fe32be9fa9462b1298905882904e65ca63a31eb78ad5a53f943cb2ff19fc4dd2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "You can read the samples in their stored format or you can convert them to an alternative format.",
+      "ko": "샘플을 저장된 형식으로 읽거나 대체 형식으로 변환해 읽을 수 있습니다.",
+      "sourceHash": "40f1b954c72022e341b2e53ee3e3a5b40c9a9216b22ff482421de7da95473d05",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-an-audio-mix-output:0010:0001",
+      "source": "Creating an audio mix output",
+      "ko": "오디오 믹스 출력 생성",
+      "sourceHash": "08e22a4421d207a13fc7f821945769e5ad736d9d522e17cae61d9a50459a211b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-an-audio-mix-output:0011:0001",
+      "source": "[init(audioTracks: [AVAssetTrack], audioSettings: [String : Any]?)](avassetreaderaudiomixoutput/init(audiotracks:audiosettings:).md)",
+      "ko": "[init(audioTracks: [AVAssetTrack], audioSettings: [String : Any]?)](avassetreaderaudiomixoutput/init(audiotracks:audiosettings:).md)",
+      "sourceHash": "c9598a458df882f817ffa66dfe39a448560af03342d56c8b3ed4f11ac3b55a0b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-an-audio-mix-output:0012:0001",
+      "source": "Creates an object that reads mixed audio from the specified audio tracks.",
+      "ko": "지정된 오디오 트랙에서 믹싱된 오디오를 읽는 객체를 생성합니다.",
+      "sourceHash": "c9d94352d54df37ab6ec7f7add7ce645077db76f26f6811519fa317b5ab1ec5e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-audio-settings:0013:0001",
+      "source": "Configuring audio settings",
+      "ko": "오디오 설정 구성",
+      "sourceHash": "1d0b15355311f4b237caaac56b23ceb2f11b0ef5e6d27f0e615d4e95d9c43c17",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-audio-settings:0014:0001",
+      "source": "[var audioMix: AVAudioMix?](avassetreaderaudiomixoutput/audiomix.md)",
+      "ko": "[var audioMix: AVAudioMix?](avassetreaderaudiomixoutput/audiomix.md)",
+      "sourceHash": "78df4e5286a3772dd9419868e34bec29b019fcf4e45ce90ba7c896759aab0dd9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-settings:0015:0001",
+      "source": "The audio mix to use with this output.",
+      "ko": "이 출력에서 사용할 오디오 믹스입니다.",
+      "sourceHash": "be5d870bbb9606a27f3e25433cd982341068b928567b06ac0448da781de323b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-audio-settings:0016:0001",
+      "source": "[var audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm](avassetreaderaudiomixoutput/audiotimepitchalgorithm.md)",
+      "ko": "[var audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm](avassetreaderaudiomixoutput/audiotimepitchalgorithm.md)",
+      "sourceHash": "bbde6fb510a8ed810887c0df33ca4620c4c20d58b2bfb95b9daea3def535f4e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-settings:0017:0001",
+      "source": "The processing algorithm to use for scaled audio edits.",
+      "ko": "크기 조정된 오디오 편집에 사용할 처리 알고리즘입니다.",
+      "sourceHash": "b1500a39af3f6bf788dae39ffc20794cc77e852b5c0ffb3efdf6575f18aa4f4a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:inspecting-an-output:0018:0001",
+      "source": "Inspecting an output",
+      "ko": "출력 검사",
+      "sourceHash": "f9f5206bf8e4d628ad4c5b3f531c18653364abf83e9b09bac548fd83c7b89110",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-an-output:0019:0001",
+      "source": "[var audioTracks: [AVAssetTrack]](avassetreaderaudiomixoutput/audiotracks.md)",
+      "ko": "[var audioTracks: [AVAssetTrack]](avassetreaderaudiomixoutput/audiotracks.md)",
+      "sourceHash": "e0a9cae0eb36741b0c13b42ea2cb4d202df92b6a877de3f1630e013a8c5d3fe3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:inspecting-an-output:0020:0001",
+      "source": "The tracks from which the output reads audio.",
+      "ko": "출력이 오디오를 읽는 트랙입니다.",
+      "sourceHash": "1009f043ea2fa99eb2dab03d4b4cece4d0df62866e9bf27fafd9e2980c6c36b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inspecting-an-output:0021:0001",
+      "source": "[var audioSettings: [String : Any]?](avassetreaderaudiomixoutput/audiosettings.md)",
+      "ko": "[var audioSettings: [String : Any]?](avassetreaderaudiomixoutput/audiosettings.md)",
+      "sourceHash": "007507e6f962028b219343ef5419c4800e252dc33ab9d2707047ed50ae82155d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:inspecting-an-output:0022:0001",
+      "source": "The audio settings that the output uses.",
+      "ko": "출력이 사용하는 오디오 설정입니다.",
+      "sourceHash": "c6977dd15ac466ca1c5a34d23fc612573bfd5e9c8a72f056008c9211c253e719",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0023:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0024:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0025:0001",
+      "source": "[AVAssetReaderOutput](avassetreaderoutput.md)",
+      "ko": "[AVAssetReaderOutput](avassetreaderoutput.md)",
+      "sourceHash": "bd6aa0bb63bbe3180934824e6431eeef38c1a4dd04c40aa79c4d3d9aa529d57e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0026:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0027:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0027:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0027:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0027:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0027:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0027:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0027:0007",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0027:0008",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0028:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0029:0001",
+      "source": "[Reading multiview 3D video files](reading-multiview-3d-video-files.md)",
+      "ko": "[Reading multiview 3D video files](reading-multiview-3d-video-files.md)",
+      "sourceHash": "c18acac0c0d282737f6c2736d79a6c7c6f9e607738014e80121485858cd4bd06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "Render single images for the left eye and right eye from a multiview High Efficiency Video Coding format file by reading individual video frames.",
+      "ko": "멀티뷰 High Efficiency Video Coding 형식 파일에서 개별 비디오 프레임을 읽어 좌안과 우안용 단일 이미지를 렌더링합니다.",
+      "sourceHash": "413057196c68509e505c0c17447a32e23ac413d381b747dd889eeea8da737ed6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0031:0001",
+      "source": "[class AVAssetReader](avassetreader.md)",
+      "ko": "[class AVAssetReader](avassetreader.md)",
+      "sourceHash": "0572c2030bb92c98cc5d68f48dc94473ff846b4b4076319fb5180ed6e270a60e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0032:0001",
+      "source": "An object that reads media data from an asset.",
+      "ko": "에셋에서 미디어 데이터를 읽는 객체입니다.",
+      "sourceHash": "4ed5c6b4855c7e96c54073a0669ac6776c949f1a42936cac9061b0981fb5f676",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0033:0001",
+      "source": "[class AVAssetReaderOutput](avassetreaderoutput.md)",
+      "ko": "[class AVAssetReaderOutput](avassetreaderoutput.md)",
+      "sourceHash": "13042cd7333c0de98f2b408e56bc4e4cd56e96f70a93ef56da7544d403c4583b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0034:0001",
+      "source": "An abstract class that defines the interface to read media samples from an asset reader.",
+      "ko": "에셋 리더에서 미디어 샘플을 읽기 위한 인터페이스를 정의하는 추상 클래스입니다.",
+      "sourceHash": "4318315930d2ab2223e2a00f87863e80afda78bf1bda723a10b8e1df03e7040d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0035:0001",
+      "source": "[class AVAssetReaderTrackOutput](avassetreadertrackoutput.md)",
+      "ko": "[class AVAssetReaderTrackOutput](avassetreadertrackoutput.md)",
+      "sourceHash": "72d9e06eee848532f808ead58469d7468625d35e681fe59b30b314658114269f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0036:0001",
+      "source": "An object that reads media data from a single track of an asset.",
+      "ko": "에셋의 단일 트랙에서 미디어 데이터를 읽는 객체입니다.",
+      "sourceHash": "811e6642b8014c4a29d38fb24e03f894c69caf76f6f598e6fd8b041d2e463b0d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0037:0001",
+      "source": "[class AVAssetReaderVideoCompositionOutput](avassetreadervideocompositionoutput.md)",
+      "ko": "[class AVAssetReaderVideoCompositionOutput](avassetreadervideocompositionoutput.md)",
+      "sourceHash": "27254d351b8dca907276fd4b73e23101057917ef1b6bda85c07f326ae11b3407",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0038:0001",
+      "source": "An object that reads composited video frames from one or more tracks of an asset.",
+      "ko": "An object that reads composited video frames from one or more tracks of an asset.",
+      "sourceHash": "abc70b4b394512bbcd0cb7458c72d091c2501d8fa4ca1d7b7f55d2803d5baf52",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0039:0001",
+      "source": "[class AVAssetReaderSampleReferenceOutput](avassetreadersamplereferenceoutput.md)",
+      "ko": "[class AVAssetReaderSampleReferenceOutput](avassetreadersamplereferenceoutput.md)",
+      "sourceHash": "73a4cb38caa479952525126581cbb54ce828b773252ea2897df9e211660adf59",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0040:0001",
+      "source": "An object that reads sample references from an asset track.",
+      "ko": "An object that reads sample references from an asset track.",
+      "sourceHash": "591f92596dafa0cc1cff210e57f774cc96812460327d171d14f60be27d023c84",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0041:0001",
+      "source": "[class AVAssetReaderOutputMetadataAdaptor](avassetreaderoutputmetadataadaptor.md)",
+      "ko": "[class AVAssetReaderOutputMetadataAdaptor](avassetreaderoutputmetadataadaptor.md)",
+      "sourceHash": "c0cea35bc03d3e671a694964b184608ea19f506ea56ef3234f6ab30b9ee63ad3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0042:0001",
+      "source": "An object that creates timed metadata group objects for an asset track.",
+      "ko": "An object that creates timed metadata group objects for an asset track.",
+      "sourceHash": "45428582493b93d9968a2d6721873c5b75ab96009e8b466e8ffca6f8e0876c1c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0043:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0044:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetreaderaudiomixoutput)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetreaderaudiomixoutput)*",
+      "sourceHash": "fb18f4d27f0da83aa5d0b824d28642cdc4cb6a6be00256ccea88bfe98eee5f32",
+      "status": "preserved"
+    }
+  ]
+}

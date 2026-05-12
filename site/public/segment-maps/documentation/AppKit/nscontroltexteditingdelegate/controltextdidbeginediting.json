@@ -1,0 +1,134 @@
+{
+  "docId": "documentation/AppKit/nscontroltexteditingdelegate/controltextdidbeginediting.md",
+  "title": "controlTextDidBeginEditing(:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appkit/nscontroltexteditingdelegate/controltextdidbeginediting",
+  "segments": [
+    {
+      "id": "seg:heading:controltextdidbeginediting:0000:0001",
+      "source": "controlTextDidBeginEditing(_:)",
+      "ko": "controlTextDidBeginEditing(_:)",
+      "sourceHash": "e7c92eb7b983a1c69f314e2144434c5a34367984b8b23e3351acfb9f14645107",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:controltextdidbeginediting:0001:0001",
+      "source": "**Framework**: AppKit **Kind**: method",
+      "ko": "**Framework**: AppKit **Kind**: method",
+      "sourceHash": "d0bb5eba5cbec0f2e57076ce9bf28601986c84bd690d2e162e981dbbb6baff21",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:controltextdidbeginediting:0002:0001",
+      "source": "Tells the delegate that the control started editing its text content.",
+      "ko": "이 메서드는 컨트롤이 텍스트 콘텐츠 편집을 시작했음을 델리게이트에 알립니다.",
+      "sourceHash": "5b25d7f7a894c7a6d9d65781209c588018511c9663c3fdaeb022349440a13192",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:controltextdidbeginediting:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:controltextdidbeginediting:0004:0001",
+      "source": "macOS 10.10+",
+      "ko": "macOS 10.10+",
+      "sourceHash": "928cfc2e204a2d523c05071eb21f65479a96f581dc23a43fa1848eecc5216dcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\n@MainActor\noptional func controlTextDidBeginEditing(_ obj: Notification)\n```",
+      "ko": "```swift\n@MainActor\noptional func controlTextDidBeginEditing(_ obj: Notification)\n```",
+      "sourceHash": "94fcbd8aeb3b006a6481681547c8b6ea4caacbdf150a39595ef363aef1a64294",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Use the key `“NSFieldEditor”` to obtain the field editor from the notification object’s `userInfo` dictionary.",
+      "ko": "If the main thread is blocked by an invocation of [`performActivity(withSynchronousWaiting:using:)`](nsdocument/performactivity(withsynchronouswaiting:using:).md) or [`performSynchronousFileAccess(_:)`](nsdocument/performsynchronousfileaccess(_:).md), this method interrupts that blocking activity, performs the specified `block`, and then resumes the blocking activity after `block` returns.",
+      "sourceHash": "4d5a89fbf8969e73cf7284e6c4f4797cdb0599a2b8e87ab7f7cfdfe9a2173314",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0009:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0010:0001",
+      "source": "`obj`: A notification object that contains details about the editing configuration.",
+      "ko": "`obj`: 편집 구성에 대한 세부 정보를 포함하는 알림 객체입니다.",
+      "sourceHash": "dadd42fc8366c70cafb14821f8b6dbd1ca9d19eb4d94892d6f0a171cff531bda",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[func controlTextDidChange(Notification)](nscontroltexteditingdelegate/controltextdidchange(_:).md)",
+      "ko": "[func controlTextDidChange(Notification)](nscontroltexteditingdelegate/controltextdidchange(_:).md)",
+      "sourceHash": "49f239fe20116d2474e1e28878705910d8d09d859b79cd24f40fc6ae64abad0f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Tells the delegate that the control made changes to its text content.",
+      "ko": "이 메서드는 컨트롤이 텍스트 콘텐츠를 변경했음을 델리게이트에 알립니다.",
+      "sourceHash": "4c20adf03c7946eb76bfa5cda5f5b4e6e23269dd2a9354faebe5ded94a91967c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func controlTextDidEndEditing(Notification)](nscontroltexteditingdelegate/controltextdidendediting(_:).md)",
+      "ko": "[func controlTextDidEndEditing(Notification)](nscontroltexteditingdelegate/controltextdidendediting(_:).md)",
+      "sourceHash": "1a453aa847d8d09e273a21beba1a61e0b5f496c20c333e6f814d516852cb8982",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Tells the delegate that the control finished editing its text content and committed the changes.",
+      "ko": "이 메서드는 컨트롤이 텍스트 콘텐츠 편집을 마치고 변경 내용을 커밋했음을 델리게이트에 알립니다.",
+      "sourceHash": "3612d6d9a5096074c1c7ddb69115a837b59ec36ffc5832a0ce8f38dccfa552a1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0016:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nscontroltexteditingdelegate/controltextdidbeginediting(_:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nscontroltexteditingdelegate/controltextdidbeginediting(_:))*",
+      "sourceHash": "1d4ad7816bca3073724e9a10d3835dead40f0590b5ff9d6fcb6b4c18a8eb14ae",
+      "status": "machine_translated"
+    }
+  ]
+}

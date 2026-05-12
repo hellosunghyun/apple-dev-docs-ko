@@ -1,0 +1,295 @@
+{
+  "docId": "documentation/AVFoundation/avassetwriterinput/performsmultipassencodingifsupported.md",
+  "title": "performsMultiPassEncodingIfSupported",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetwriterinput/performsmultipassencodingifsupported",
+  "segments": [
+    {
+      "id": "seg:heading:performsmultipassencodingifsupported:0000:0001",
+      "source": "performsMultiPassEncodingIfSupported",
+      "ko": "performsMultiPassEncodingIfSupported",
+      "sourceHash": "1779436492bd25e4384bf1e3406872c89a0644d26ef04b7368a84065d7a56b5e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:performsmultipassencodingifsupported:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:performsmultipassencodingifsupported:0002:0001",
+      "source": "A Boolean value that indicates whether the input attempts to encode the source media data using multiple passes.",
+      "ko": "입력이 소스 미디어 데이터를 다단계로 인코딩하려고 시도하는지 나타내는 Boolean 값입니다.",
+      "sourceHash": "1acb75346f3bfc500a7f7a68604950dc4e39ed6547f5c869bfea27cf008f2a6d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:performsmultipassencodingifsupported:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:performsmultipassencodingifsupported:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:performsmultipassencodingifsupported:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:performsmultipassencodingifsupported:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:performsmultipassencodingifsupported:0004:0004",
+      "source": "macOS 10.10+",
+      "ko": "macOS 10.10+",
+      "sourceHash": "928cfc2e204a2d523c05071eb21f65479a96f581dc23a43fa1848eecc5216dcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:performsmultipassencodingifsupported:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:performsmultipassencodingifsupported:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar performsMultiPassEncodingIfSupported: Bool { get set }\n```",
+      "ko": "```swift\nvar performsMultiPassEncodingIfSupported: Bool { get set }\n```",
+      "sourceHash": "1b3edbccc073aaacff0cb2dd90e1f89c6edd7f1a789d928b665e8f938ad0588f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "An asset writer input may be able to achieve higher quality and lower data rate by performing multiple passes over the source media.",
+      "ko": "The value is [`invalid`](https://developer.apple.com/documentation/CoreMedia/CMTime/invalid) while the effect is in progress, but changes to a valid time when the reaction effect completes and the system removes it from the list of [`reactionEffectsInProgress`](avcapturedevice/reactioneffectsinprogress.md).",
+      "sourceHash": "7ffd1e3e0c2b140821c792e42e8ab252bade3422d8a8b1b594656b5c69a3304d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "It does this by analyzing the media data it appends and reencodes certain segments with different parameters.",
+      "ko": "이는 append한 미디어 데이터를 분석하고 특정 구간을 서로 다른 매개변수로 다시 인코딩함으로써 수행됩니다.",
+      "sourceHash": "90a33d18702a09df373571a432060c55b2b7b8f47a6a3dcce33faedb3cc28a46",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "To perform the reencoding, you must append the media data for the segments again.",
+      "ko": "재인코딩을 수행하려면 해당 구간의 미디어 데이터를 다시 append해야 합니다.",
+      "sourceHash": "785f2e350dc2dea6bfb0aa4c2d9f1cbf0a6d5aedc6b60a549779334408e81823",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0004",
+      "source": "See the [`currentPassDescription`](avassetwriterinput/currentpassdescription.md) property and [`markCurrentPassAsFinished()`](avassetwriterinput/markcurrentpassasfinished().md) method for the means by which the input nominates segments to reappend.",
+      "ko": "입력이 다시 append할 구간을 지정하는 방법은 [`currentPassDescription`](avassetwriterinput/currentpassdescription.md) property와 [`markCurrentPassAsFinished()`](avassetwriterinput/markcurrentpassasfinished().md) method를 참고합니다.",
+      "sourceHash": "2c5198cc4b56cedec1c735b8aad38f7f742dc71dc950cfef0ee64a59739af6a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "When the value of this property is [`true`](https://developer.apple.com/documentation/Swift/true), the value of [`isReadyForMoreMediaData`](avassetwriterinput/isreadyformoremediadata.md) for other inputs attached to the same asset writer may be [`false`](https://developer.apple.com/documentation/Swift/false) more often and for longer periods of time.",
+      "ko": "이 property의 값이 [`true`](https://developer.apple.com/documentation/Swift/true)인 경우, 동일한 asset writer에 연결된 다른 입력의 [`isReadyForMoreMediaData`](avassetwriterinput/isreadyformoremediadata.md) 값이 더 자주 그리고 더 긴 시간 동안 [`false`](https://developer.apple.com/documentation/Swift/false)일 수 있습니다.",
+      "sourceHash": "b975a504d23d82af83e9379a54d1dcb2e21c624b2bbdcdc02d88df23321297cb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "In particular, the value of [`isReadyForMoreMediaData`](avassetwriterinput/isreadyformoremediadata.md) for inputs that don’t perform multiple passes may start as [`false`](https://developer.apple.com/documentation/Swift/false) after calling the method asset writer’s [`startWriting()`](avassetwriter/startwriting().md) method, and may not change to [`true`](https://developer.apple.com/documentation/Swift/true) until after all multipass inputs complete their final pass.",
+      "ko": "특히, 다중 패스를 수행하지 않는 입력의 [`isReadyForMoreMediaData`](avassetwriterinput/isreadyformoremediadata.md) 값은 asset writer의 [`startWriting()`](avassetwriter/startwriting().md) 메서드 호출 후 [`false`](https://developer.apple.com/documentation/Swift/false)로 시작할 수 있으며, 모든 멀티패스 입력이 최종 pass를 완료한 뒤까지 [`true`](https://developer.apple.com/documentation/Swift/true)로 변경되지 않을 수 있습니다.",
+      "sourceHash": "6ce85ef92b8000aa09bc7c7fde6f789d74a7f7fd94978e42e33d426d503dfa69",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "When the value of this property is [`true`](https://developer.apple.com/documentation/Swift/true), the input may store data in one or more temporary files before writing compressed samples to the output file.",
+      "ko": "이 property의 값이 [`true`](https://developer.apple.com/documentation/Swift/true)인 경우 입력은 압축 샘플을 출력 파일에 쓰기 전에 하나 이상의 임시 파일에 데이터를 저장할 수 있습니다.",
+      "sourceHash": "6588a243680757c2f5bc9e2e4e1d31cf46520194c7e743fca3e3a21d7f106e54",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "Use the asset writer’s [`directoryForTemporaryFiles`](avassetwriter/directoryfortemporaryfiles.md) property if you need to specify the location of temporary file writing.",
+      "ko": "임시 파일 쓰기 위치를 지정해야 하는 경우 자산 작성기의 [`directoryForTemporaryFiles`](avassetwriter/directoryfortemporaryfiles.md) property를 사용합니다.",
+      "sourceHash": "20606c6b72adab8bae44c7401ab53491e68a9cf1c992e35bb19d587ef8842dd0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "The default value is [`false`](https://developer.apple.com/documentation/Swift/false), which means that no additional analysis occurs and it doesn’t reencode segments.",
+      "ko": "기본값은 [`false`](https://developer.apple.com/documentation/Swift/false)이며, 이는 추가 분석이 수행되지 않고 구간을 다시 인코딩하지 않음을 의미합니다.",
+      "sourceHash": "6735ddca7b49ab2f6c5975b2e79a9a444fea445ee81ee28bba6ae76e9419789b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "Not all asset writer input configurations benefit from performing multiple passes over the source media.",
+      "ko": "모든 자산 작성기 입력 구성에서 소스 미디어에 대해 다중 패스를 수행한다고 이점을 얻는 것은 아닙니다.",
+      "sourceHash": "143dd5e55d20b2dcd8ad747e0853fdef0ca53c53fc0220f5256aa46dc33b8bf7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0003",
+      "source": "To determine whether the selected encoder can perform multiple passes, query the value of [`canPerformMultiplePasses`](avassetwriterinput/canperformmultiplepasses.md) after calling [`startWriting()`](avassetwriter/startwriting().md).",
+      "ko": "선택한 인코더가 다중 패스를 수행할 수 있는지 확인하려면 [`startWriting()`](avassetwriter/startwriting().md) 호출 후 [`canPerformMultiplePasses`](avassetwriterinput/canperformmultiplepasses.md) 값을 조회합니다.",
+      "sourceHash": "25f12607b03c1fe6cea4aa8627fd9a5ea19c608c3d49e120c716b9c14028a0da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0001",
+      "source": "❗ **Important**: It’s an error to set this property value to [`true`](https://developer.apple.com/documentation/Swift/true) when the value for [`expectsMediaDataInRealTime`](avassetwriterinput/expectsmediadatainrealtime.md) is [`true`](https://developer.apple.com/documentation/Swift/true).",
+      "ko": "❗ **중요**: [`expectsMediaDataInRealTime`](avassetwriterinput/expectsmediadatainrealtime.md) 값이 [`true`](https://developer.apple.com/documentation/Swift/true)일 때 이 property 값을 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정하면 오류입니다.",
+      "sourceHash": "9520b9bd57d8f378d8175dce9e80ae5a7b2dcb24ca6a77031c9142264f94427d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0002",
+      "source": "It’s also an error for an asset writer to contain inputs with this property set to [`true`](https://developer.apple.com/documentation/Swift/true) when any of its other inputs have a value of [`true`](https://developer.apple.com/documentation/Swift/true) for [`expectsMediaDataInRealTime`](avassetwriterinput/expectsmediadatainrealtime.md).",
+      "ko": "또한 asset writer에 포함된 다른 입력 중 하나라도 [`expectsMediaDataInRealTime`](avassetwriterinput/expectsmediadatainrealtime.md) 값이 [`true`](https://developer.apple.com/documentation/Swift/true)일 때, 이 property가 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정된 입력이 포함되는 것도 오류입니다.",
+      "sourceHash": "cce7f0ecca0ca23ba5f910b3924770a27c69905ad1a414ea6c449911834414d6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var canPerformMultiplePasses: Bool](avassetwriterinput/canperformmultiplepasses.md)",
+      "ko": "[var canPerformMultiplePasses: Bool](avassetwriterinput/canperformmultiplepasses.md)",
+      "sourceHash": "2eb81e005cf50e4e49d9be92f5169da72b290f08a9816421615ed75b28651b76",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A Boolean value that indicates whether the input may perform multiple passes over appended media data.",
+      "ko": "append된 미디어 데이터에 대해 입력이 다중 패스를 수행할 수 있는지 나타내는 Boolean 값입니다.",
+      "sourceHash": "419b118681723034520ee01bc5fcba7e977b16c44743eb35f232c494b600bbbd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var currentPassDescription: AVAssetWriterInputPassDescription?](avassetwriterinput/currentpassdescription.md)",
+      "ko": "[var currentPassDescription: AVAssetWriterInputPassDescription?](avassetwriterinput/currentpassdescription.md)",
+      "sourceHash": "5d33b8667c15a1ea9b1e08af4ca8f420fb2389a2b9bb3ca94761eec764c2aba0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "An object that describes the requirements for the current pass.",
+      "ko": "현재 pass의 요구 사항을 설명하는 객체입니다.",
+      "sourceHash": "aaf93137d1c2177499388eb66c0ee9d7a8263fb605aed7c8986b5fe5c1f2e69d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[class AVAssetWriterInputPassDescription](avassetwriterinputpassdescription.md)",
+      "ko": "[class AVAssetWriterInputPassDescription](avassetwriterinputpassdescription.md)",
+      "sourceHash": "4f7c3644ead403b15b596eb3c02ab629107b9666ceaf5a91fd6a65e5d8f1df31",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "An object that defines the interface to query for the requirements of the current pass.",
+      "ko": "현재 pass의 요구 사항을 조회하기 위한 인터페이스를 정의하는 객체입니다.",
+      "sourceHash": "2381c5f19479362a82d3d2680499ce1b5fe65539bc7fc2209184ad8267174eaf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[func markCurrentPassAsFinished()](avassetwriterinput/markcurrentpassasfinished.md)",
+      "ko": "[func markCurrentPassAsFinished()](avassetwriterinput/markcurrentpassasfinished.md)",
+      "sourceHash": "0eaffe87dde74f495be943396ed35bbd8746c1b2869e09596037f7b5d3eecb62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Tells the input to analyze the appended media to determine whether it can improve the results by reencoding certain segments.",
+      "ko": "입력에서 append된 미디어를 분석해 특정 구간을 다시 인코딩하여 결과가 개선되는지 판단하도록 지시합니다.",
+      "sourceHash": "2f287c516f255ad0b7b249b1f3540ad357a2fde4c55dbaa49d6cdefb64f27b1c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[func respondToEachPassDescription(on: dispatch_queue_t, using: () -> Void)](avassetwriterinput/respondtoeachpassdescription(on:using:).md)",
+      "ko": "[func respondToEachPassDescription(on: dispatch_queue_t, using: () -> Void)](avassetwriterinput/respondtoeachpassdescription(on:using:).md)",
+      "sourceHash": "04b607f169014ae5c5a378e687501f4ded9a68c3a93092621898026d9afd604b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Tells the input to invoke a callback whenever it begins a new pass.",
+      "ko": "입력이 새 pass를 시작할 때마다 callback을 호출하도록 지시합니다.",
+      "sourceHash": "d9ffbd4f8c23d9cdf2463ebb0acb25b765dbd60872b58d639f285319fcba3124",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[AVAssetWriterInput.MultiPassController](avassetwriterinput/multipasscontroller.md)",
+      "ko": "[AVAssetWriterInput.MultiPassController](avassetwriterinput/multipasscontroller.md)",
+      "sourceHash": "2f594e2f8d881d491e65ea59f6ff54491c52a3130eface3a8a29cd723db951ab",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Provides an interface to receive an async sequence of pass descriptions for the writer input receiver, if multi-pass is supported.",
+      "ko": "멀티 패스가 지원되는 경우 작성기 입력 receiver에 대해 pass 설명의 async sequence를 수신할 수 있는 인터페이스를 제공합니다.",
+      "sourceHash": "bc39eb08a6074f4d8248fafd91fe3108af0e93a4fdf35428d1530eeb2b8c3616",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0026:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetwriterinput/performsmultipassencodingifsupported)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetwriterinput/performsmultipassencodingifsupported)*",
+      "sourceHash": "6a05423286137d56f89ea1013934a69e670ebaaf46ad4cfb86ff9e19629b487c",
+      "status": "preserved"
+    }
+  ]
+}

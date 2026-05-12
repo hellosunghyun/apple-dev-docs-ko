@@ -1,0 +1,260 @@
+{
+  "docId": "documentation/ARKit/arframe/displaytransform-forviewportsize.md",
+  "title": "displayTransform(for:viewportSize:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/arframe/displaytransform-forviewportsize",
+  "segments": [
+    {
+      "id": "seg:heading:displaytransformforviewportsize:0000:0001",
+      "source": "displayTransform(for:viewportSize:)",
+      "ko": "displayTransform(for:viewportSize:)",
+      "sourceHash": "3a15fd1a5992057fa615f48c6492045f3a6f48432458834c744b429e8e7911e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:displaytransformforviewportsize:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: method",
+      "ko": "**Framework**: ARKit **Kind**: method",
+      "sourceHash": "9b335dd0cadec1f426ce27810957dcda749fe1d5008130ce607d61fcd8b52bea",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:displaytransformforviewportsize:0002:0001",
+      "source": "Returns an affine transform for converting between normalized image coordinates and a coordinate space appropriate for rendering the camera image onscreen.",
+      "ko": "캡처된 이미지의 정규화된 좌표를 화면에서 카메라 이미지를 렌더링하기에 적절한 좌표 공간으로 변환하는 아핀 변환을 반환합니다.",
+      "sourceHash": "fa7abcf37671ae5d73af039041297beb576cb2707bb39db0e77c3e3dd4ed5f77",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:displaytransformforviewportsize:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:displaytransformforviewportsize:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:displaytransformforviewportsize:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:displaytransformforviewportsize:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc displayTransform(for orientation: UIInterfaceOrientation, viewportSize: CGSize) -> CGAffineTransform\n```",
+      "ko": "```swift\nfunc displayTransform(for orientation: UIInterfaceOrientation, viewportSize: CGSize) -> CGAffineTransform\n```",
+      "sourceHash": "32363be39678c3b62d0bf0ea7e530be7a20f718076734706e71310de4a189db8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Displaying an AR Experience with Metal](displaying-an-ar-experience-with-metal.md)",
+      "ko": "[Displaying an AR Experience with Metal](displaying-an-ar-experience-with-metal.md)",
+      "sourceHash": "874a876d58032b97c53753f93fcea10d07386a366bf964a31b68dc88982c2646",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:return-value:0009:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0010:0001",
+      "source": "A transform matrix that converts from normalized image coordinates in the captured image to normalized image coordinates that account for the specified parameters.",
+      "ko": "캡처된 이미지의 정규화 좌표를 지정된 매개변수를 반영한 정규화 좌표로 변환하는 변환 행렬입니다.",
+      "sourceHash": "0f4e87356e9689e622f769c0beeca117f85a7bc7c1dbe72598710550111f273f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0011:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0001",
+      "source": "Normalized image coordinates range from `(0,0)` in the upper left corner of the image to `(1,1)` in the lower right corner.",
+      "ko": "정규화된 이미지 좌표는 이미지의 왼쪽 위가 `(0,0)`이고 오른쪽 아래가 `(1,1)`입니다.",
+      "sourceHash": "8a4bdee638a0e527ca87ea78c13d8f26754cfa66f15afc0595eacae498998a3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0013:0001",
+      "source": "This method creates an affine transform representing the rotation and aspect-fit crop operations necessary to adapt the camera image to the specified orientation and to the aspect ratio of the specified viewport.",
+      "ko": "이 메서드는 지정된 방향과 지정된 뷰포트의 종횡비에 맞추기 위해 카메라 이미지를 조정하는 데 필요한 회전 및 aspect-fit crop 연산을 나타내는 아핀 변환을 생성합니다.",
+      "sourceHash": "131acb592ce317a2aac12f14a0c6a7e273fddc6d1886c2b966f5f2b0e176181e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0013:0002",
+      "source": "The affine transform does not scale to the viewport’s pixel size.",
+      "ko": "아핀 변환은 뷰포트의 픽셀 크기에 맞춰 스케일링되지 않습니다.",
+      "sourceHash": "a934d56ac59e9237e74435a7efa41f9cd3a454fee1eb49e872e60a3b7559f081",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0001",
+      "source": "The [`capturedImage`](arframe/capturedimage.md) pixel buffer is the original image captured by the device camera, and thus not adjusted for device orientation or view aspect ratio.",
+      "ko": "[`capturedImage`](arframe/capturedimage.md) 픽셀 버퍼는 장치 카메라가 캡처한 원본 이미지이므로 장치 방향이나 뷰의 종횡비에 맞게 조정되지 않습니다.",
+      "sourceHash": "323245e54e688f9b1f66c07f54379a165863ba136c294d0708c3df4f74952001",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0015:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0016:0001",
+      "source": "`orientation`: The orientation intended for presenting the view.",
+      "ko": "`orientation`: 뷰를 표시하기 위한 방향입니다.",
+      "sourceHash": "30cfa8b329f4310d422e3a7be7bd5ba26739d8b8f8f654e80bb8c1e6dab45b31",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0016:0002",
+      "source": "`viewportSize`: The size, in points, of the view intended for rendering the camera image.",
+      "ko": "`viewportSize`: 카메라 이미지를 렌더링하려는 뷰의 크기(포인트 단위)입니다.",
+      "sourceHash": "e06df5efa256a13c3d7037721399d445bbc36c89ba8a51c2b3a3ee9100d9db7a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0017:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var lightEstimate: ARLightEstimate?](arframe/lightestimate.md)",
+      "ko": "[var lightEstimate: ARLightEstimate?](arframe/lightestimate.md)",
+      "sourceHash": "f221c326a980929616e0e86bee8161a2e2429027eee6a70c2c8283f11ea9b0fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "An estimate of lighting conditions based on the camera image.",
+      "ko": "카메라 이미지를 기반으로 조명 조건을 추정한 값입니다.",
+      "sourceHash": "558ae95eee9622b13572916e5ffc1ead680b4477b9a46262d6370e049281d0e2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[var rawFeaturePoints: ARPointCloud?](arframe/rawfeaturepoints.md)",
+      "ko": "[var rawFeaturePoints: ARPointCloud?](arframe/rawfeaturepoints.md)",
+      "sourceHash": "43a16c8bd9f16d9fd0b2f015280a1e6fb4d1e42c6561ae2a21dac7e690dae887",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "The current intermediate results of the scene analysis ARKit uses to perform world tracking.",
+      "ko": "ARKit가 월드 트래킹을 수행하기 위해 사용하는 장면 분석의 현재 중간 결과입니다.",
+      "sourceHash": "ef2a71b593dea7dce70feee38429a30e3cad16f21cc0eceb0466905dc1b52098",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[var capturedDepthData: AVDepthData?](arframe/captureddepthdata.md)",
+      "ko": "[var capturedDepthData: AVDepthData?](arframe/captureddepthdata.md)",
+      "sourceHash": "b2c0bdf9f9a4352ffa2f104d95af9e1b8ee11cc722a4c4597502612a6e42fe3a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Depth data captured in front-camera experiences.",
+      "ko": "전면 카메라 경험에서 캡처된 깊이 데이터입니다.",
+      "sourceHash": "9aedb5b1eb55bd7d4c214d9ad454f5a3d6b609a7d0f44ee9e43de76dcb5c4c18",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[var capturedDepthDataTimestamp: TimeInterval](arframe/captureddepthdatatimestamp.md)",
+      "ko": "[var capturedDepthDataTimestamp: TimeInterval](arframe/captureddepthdatatimestamp.md)",
+      "sourceHash": "7754acd095044af0c0d2ef11199dcb8c17ac1c2d7cab26d4b55ca69aef703e06",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "The time at which depth data for the frame (if any) was captured.",
+      "ko": "해당 프레임의 깊이 데이터(있는 경우)가 캡처된 시점입니다.",
+      "sourceHash": "7e7efed0135247a0a7d7980c59c8a1debde7eab2cd5fb8d06b57c16caa464eb9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[var sceneDepth: ARDepthData?](arframe/scenedepth.md)",
+      "ko": "[var sceneDepth: ARDepthData?](arframe/scenedepth.md)",
+      "sourceHash": "3bb644cb3d989ca03475a3c33002ef2a85fcf4c150bade8a63ef3be3542b081d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Data on the distance between a device’s rear camera and real-world objects in an AR experience.",
+      "ko": "AR 경험에서 장치의 후면 카메라와 실제 세계 객체 사이의 거리 데이터입니다.",
+      "sourceHash": "97f64648ca9bec9141b9fd6ab10587d5eac141ceddce885f5b7a871112dda6b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[var smoothedSceneDepth: ARDepthData?](arframe/smoothedscenedepth.md)",
+      "ko": "[var smoothedSceneDepth: ARDepthData?](arframe/smoothedscenedepth.md)",
+      "sourceHash": "2efed1881543fcb46a1829553d4d99ccaafbb415f36af2fb6da6f1871f3ea2ab",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "An average of distance measurements between a device’s rear camera and real-world objects that creates smoother visuals in an AR experience.",
+      "ko": "AR 경험에서 장치의 후면 카메라와 실제 세계 객체 간 거리 측정값의 평균으로, 더 부드러운 시각 효과를 만듭니다.",
+      "sourceHash": "620b29f8461c189a2867c5566cbf2748aa9cf63747a9808097984e468cc8868e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0030:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arframe/displaytransform(for:viewportsize:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/arframe/displaytransform(for:viewportsize:))*",
+      "sourceHash": "f92b932b698bad53a19722bc84486b87872af5355628533740775041e49c2fd2",
+      "status": "machine_translated"
+    }
+  ]
+}

@@ -1,0 +1,1072 @@
+{
+  "docId": "documentation/AVFoundation/media-playback.md",
+  "title": "Media playback",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/media-playback",
+  "segments": [
+    {
+      "id": "seg:heading:media-playback:0000:0001",
+      "source": "Media playback",
+      "ko": "미디어 재생",
+      "sourceHash": "3f0b978ef660c3b82448536a4f782107d94d2ee8fe9e0456ff3fc7fa1807bb40",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:media-playback:0001:0001",
+      "source": "**Framework**: AVFoundation",
+      "ko": "**Framework**: AVFoundation",
+      "sourceHash": "d1a1a81bcb090684ac27d86fff88465af08239993e5a6442a93dc76635a7ffc2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:media-playback:0002:0001",
+      "source": "Manage the playback of media assets and interstitial content, independent of how you present that content in your interface.",
+      "ko": "미디어 자산과 인터스티셜 콘텐츠의 재생을 인터페이스에서 해당 콘텐츠를 표시하는 방식과 독립적으로 관리합니다.",
+      "sourceHash": "3b41550a67f378e82b3669ef1d7db8129a783cec6fb25391e6168d72223fad3e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "You use a player to manage the playback and timing of a media asset, for example starting and stopping playback, and seeking to a particular time.",
+      "ko": "플레이어를 사용해 미디어 자산의 재생과 타이밍(시작, 중지, 특정 시점으로의 탐색)을 관리할 수 있습니다.",
+      "sourceHash": "11f6ef584a0e65fab5963175b6de868ce7a6b0f2f609d287bb08e8b5d08aa240",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "A player manages the playback of a single media asset at a time.",
+      "ko": "플레이어는 한 번에 하나의 미디어 자산만 재생을 관리합니다.",
+      "sourceHash": "b0e79195cd46de93f4a33ec900f3edb5fc436617b238a16c4464acacc1a64e8c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0003",
+      "source": "The framework also provides a queue player that queues media assets to play sequentially.",
+      "ko": "이 framework는 미디어 자산을 차례대로 재생하도록 큐에 넣어 순차 재생하는 queue player도 제공합니다.",
+      "sourceHash": "2e871ef4bf446b9b8b10412af9c468f64d941f09d2ed1e8b4ad88474e16b78aa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0005:0001",
+      "source": "**Note**: When you use AVFoundation, Apple may collect metrics to help improve the framework.",
+      "ko": "**Note**: AVFoundation을 사용할 때 Apple은 framework 개선에 도움이 되도록 메트릭을 수집할 수 있습니다.",
+      "sourceHash": "91bde30460354a057f5d6eafad4d1bcd2d5f7e0ff2da6d7e6af1390ee9372674",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0001",
+      "source": "You create an instance of [`AVPlayerItem`](avplayeritem.md) to play a media asset.",
+      "ko": "미디어 자산을 재생하려면 [`AVPlayerItem`](avplayeritem.md) 인스턴스를 생성합니다.",
+      "sourceHash": "21cffd0ed13e3a87bea371761bf5ce3c2b6e3d33c10666c19c17acd53d40e8bc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0002",
+      "source": "A player item manages the timing and presentation state of an asset played by the player.",
+      "ko": "player item은 플레이어가 재생하는 자산의 타이밍과 표시 상태를 관리합니다.",
+      "sourceHash": "4140a80c9bccc140596eaf3d51f908418263de09eff47485ea93b983699bf0cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0003",
+      "source": "A player item also contains player item tracks that correspond to the tracks in the asset.",
+      "ko": "player item에는 자산의 트랙에 해당하는 player item track도 포함됩니다.",
+      "sourceHash": "29953c6d863418c36245a358167d503076632d6d5e0308df16b75301b8672830",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0004",
+      "source": "You direct the output of a player to a specialized Core Animation layer, a player layer, or a synchronized layer.",
+      "ko": "플레이어 출력을 특수 Core Animation layer, player layer 또는 synchronized layer로 전달합니다.",
+      "sourceHash": "8666281af2ac0f2fbbbe4337434ad67871dfb6cceb083efaa3ff2bfc850a9cc1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0007:0001",
+      "source": "❗ **Important**: You must call the [`VTRegisterProfessionalVideoWorkflowVideoDecoders()`](https://developer.apple.com/documentation/VideoToolbox/VTRegisterProfessionalVideoWorkflowVideoDecoders()) function if your app requires Afterburner accelerated playback and decoding of ProRes and ProRes RAW video files.",
+      "ko": "❗ **Important**: 앱이 ProRes 및 ProRes RAW 비디오 파일의 Afterburner 가속 재생과 디코딩이 필요할 경우 [`VTRegisterProfessionalVideoWorkflowVideoDecoders()`](https://developer.apple.com/documentation/VideoToolbox/VTRegisterProfessionalVideoWorkflowVideoDecoders()) 함수를 호출해야 합니다.",
+      "sourceHash": "2488536b37e096a628acbb9b9ac17f47b938e6770103e0cf87482aab57c07429",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0008:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:essentials:0009:0001",
+      "source": "Essentials",
+      "ko": "Essentials",
+      "sourceHash": "98d94f75c7b40b96ad04b4190653038fc4b9cd142b300892b4c7acafdf0c25fe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:essentials:0010:0001",
+      "source": "[Configuring your app for media playback](configuring-your-app-for-media-playback.md)",
+      "ko": "[Configuring your app for media playback](configuring-your-app-for-media-playback.md)",
+      "sourceHash": "3822f7cf877f2bf9ec145973c90b88d717e6ec8dfab850b252d93dfb2f994649",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:essentials:0011:0001",
+      "source": "Configure apps to enable standard media playback behavior.",
+      "ko": "표준 미디어 재생 동작을 활성화하도록 앱을 구성합니다.",
+      "sourceHash": "437dd1975e2fc817239e07dbfbd68f28eb9c39d1738995cf672502ccdbec02c4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:playback-control:0012:0001",
+      "source": "Playback control",
+      "ko": "재생 제어",
+      "sourceHash": "7d3244fe94994778f6e6a973ad4f0199bb266098068186520d8f5b370a60e008",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:playback-control:0013:0001",
+      "source": "[Observing playback state in SwiftUI](observing-playback-state-in-swiftui.md)",
+      "ko": "[Observing playback state in SwiftUI](observing-playback-state-in-swiftui.md)",
+      "sourceHash": "8d69956c6e935a22fec53350b139c35953fd2ef41ffaf68ff472221bc52a0993",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:playback-control:0014:0001",
+      "source": "Keep your user interface in sync with state changes from playback objects.",
+      "ko": "재생 객체의 상태 변경에 맞춰 사용자 인터페이스 상태를 동기화합니다.",
+      "sourceHash": "740b36ecdc314a01f0df2b400ccdf22ffe8b22a6d2bc7332760d239a1c343b59",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:playback-control:0015:0001",
+      "source": "[Controlling the transport behavior of a player](controlling-the-transport-behavior-of-a-player.md)",
+      "ko": "[Controlling the transport behavior of a player](controlling-the-transport-behavior-of-a-player.md)",
+      "sourceHash": "966055590ff41f788cf079be3ad9c171ca46ddc30067a35eb35b9f4e969294d7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:playback-control:0016:0001",
+      "source": "Play, pause, and seek through a media presentation.",
+      "ko": "미디어 프레젠테이션에서 재생, 일시 중지, 탐색을 수행합니다.",
+      "sourceHash": "1d6a5533bd223802e0da0cc368561b1593c57f23e2f1d8051757e41833b1115d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:playback-control:0017:0001",
+      "source": "[Creating a seamless multiview playback experience](creating-a-seamless-multiview-playback-experience.md)",
+      "ko": "[Creating a seamless multiview playback experience](creating-a-seamless-multiview-playback-experience.md)",
+      "sourceHash": "0f87ff3b141c171eb9828744765ea047e531c426b385950f1100a10d08327787",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:playback-control:0018:0001",
+      "source": "Build advanced multiview playback experiences with the AVFoundation and AVRouting frameworks.",
+      "ko": "AVFoundation 및 AVRouting framework로 고급 멀티뷰 재생 경험을 구축합니다.",
+      "sourceHash": "d7ef034c214553090e111b47ecd043a67f36507345fb85b99601761448a24f4f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:playback-control:0019:0001",
+      "source": "[class AVPlayer](avplayer.md)",
+      "ko": "[class AVPlayer](avplayer.md)",
+      "sourceHash": "ccbf3c9f372c3578fe92b89c68eaaa67bbc9a435b9ceb1553bc9d6182896dac5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:playback-control:0020:0001",
+      "source": "An object that provides the interface to control the player’s transport behavior.",
+      "ko": "플레이어의 전송 동작을 제어하는 인터페이스를 제공하는 객체입니다.",
+      "sourceHash": "4c5f8c17a485e1ad01146c2d972756bdb59e84ae5ceb83dce74620487c83481b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:playback-control:0021:0001",
+      "source": "[class AVPlayerItem](avplayeritem.md)",
+      "ko": "[class AVPlayerItem](avplayeritem.md)",
+      "sourceHash": "369d53ac4245d0de88835460556487f2dabf4b5a1e3c6966496295076c1904b4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:playback-control:0022:0001",
+      "source": "An object that models the timing and presentation state of an asset during playback.",
+      "ko": "재생 중 자산의 타이밍과 표시 상태를 모델링하는 객체입니다.",
+      "sourceHash": "e9c3a9da75dd0b65485f96942606ed164a533817da04165654f804289ac9c0cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:playback-control:0023:0001",
+      "source": "[class AVPlayerItemTrack](avplayeritemtrack.md)",
+      "ko": "[class AVPlayerItemTrack](avplayeritemtrack.md)",
+      "sourceHash": "e80048d8398de3eccff0c6dae951836ffaee4f4112f2f0bce7811785a5606aa5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:playback-control:0024:0001",
+      "source": "An object that represents the presentation state of an asset track during playback.",
+      "ko": "재생 중 자산 트랙의 표시 상태를 나타내는 객체입니다.",
+      "sourceHash": "e45fbbe95bb5f1db45d7735bc46bed370c0ded98d92b42ac2f7731940332fb87",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:playback-control:0025:0001",
+      "source": "[class AVQueuePlayer](avqueueplayer.md)",
+      "ko": "[class AVQueuePlayer](avqueueplayer.md)",
+      "sourceHash": "04fb0653d93df61c01883970f428554a9f8745d1b6a1a864b0f66fbfce1fe5ce",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:playback-control:0026:0001",
+      "source": "An object that plays a sequence of player items.",
+      "ko": "player item 시퀀스를 재생하는 객체입니다.",
+      "sourceHash": "15a8e5bc8c22745274900ac798676dcfff9b08bab95709f42aed0001fd5e0aa7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:playback-control:0027:0001",
+      "source": "[class AVPlayerLooper](avplayerlooper.md)",
+      "ko": "[class AVPlayerLooper](avplayerlooper.md)",
+      "sourceHash": "d7e95356c1b9f54c37d7b8dadd16b83d199a94c3525e9a45ed990dab4ea8877a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:playback-control:0028:0001",
+      "source": "An object that loops media content using a queue player.",
+      "ko": "queue player를 사용해 미디어 콘텐츠를 반복 재생하는 객체입니다.",
+      "sourceHash": "a55fc44040ffc838cb50672bf13466b7e5003b3c1578337f29732cdbcfc0c25a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:shareplay:0029:0001",
+      "source": "SharePlay",
+      "ko": "SharePlay",
+      "sourceHash": "5116d8e11df7be21e9489e5a099ef293d9be14cfd1dc1f45799d57ccc390c6df",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:shareplay:0030:0001",
+      "source": "[Destination Video](../visionOS/destination-video.md)",
+      "ko": "[Destination Video](../visionOS/destination-video.md)",
+      "sourceHash": "682a89386c9b56b7cfc67433adc16125f5d90093dc010c52d13229e92cddc332",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:shareplay:0031:0001",
+      "source": "Leverage SwiftUI to build an immersive media experience in a multiplatform app.",
+      "ko": "SwiftUI를 활용해 멀티플랫폼 앱에서 몰입형 미디어 경험을 구축합니다.",
+      "sourceHash": "3f586a3c39f69d7c3b0a874a73bee46ab4e094c10cfd3ec66a5702212a12a8b2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:shareplay:0032:0001",
+      "source": "[Supporting coordinated media playback](supporting-coordinated-media-playback.md)",
+      "ko": "[Supporting coordinated media playback](supporting-coordinated-media-playback.md)",
+      "sourceHash": "0aa215fa880abf442c4bd9f2ccfcb0d09cea32fa3e869e53f1b05d983611bca8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:shareplay:0033:0001",
+      "source": "Create synchronized media experiences that enable users to watch and listen across devices.",
+      "ko": "기기 간에 시청 및 청취를 지원하는 동기화된 미디어 경험을 만듭니다.",
+      "sourceHash": "ea6938fb4756f6a6a8ae109cd09a86f0d92f381a57e38ba926472ee76ff961d1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:shareplay:0034:0001",
+      "source": "[class AVPlaybackCoordinator](avplaybackcoordinator.md)",
+      "ko": "[class AVPlaybackCoordinator](avplaybackcoordinator.md)",
+      "sourceHash": "9ea2644981deb8f4fd83d3852786aba091ed076d4f9a9f3bc29d568bcca6ba1f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:shareplay:0035:0001",
+      "source": "An object that coordinates the playback of players in a connected group.",
+      "ko": "연결된 그룹에서 플레이어 재생을 조정하는 객체입니다.",
+      "sourceHash": "d0f68901c1a2e8c8deff5676917e7069ef89d1f599f5800f0d1ff69b8ad489c6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:shareplay:0036:0001",
+      "source": "[class AVPlayerPlaybackCoordinator](avplayerplaybackcoordinator.md)",
+      "ko": "[class AVPlayerPlaybackCoordinator](avplayerplaybackcoordinator.md)",
+      "sourceHash": "98f85638a6fd660c3d599898b585c564701b3c63381473ab9f66b59617de693b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:shareplay:0037:0001",
+      "source": "A playback coordinator subclass that coordinates the playback of player objects in a connected group.",
+      "ko": "연결된 그룹에서 player 객체의 재생을 조정하는 playback coordinator 하위 클래스입니다.",
+      "sourceHash": "5f7af4881f820ec38264dcf6f331a902a635d6de6d286d2bea188b5c801b958b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:shareplay:0038:0001",
+      "source": "[class AVDelegatingPlaybackCoordinator](avdelegatingplaybackcoordinator.md)",
+      "ko": "[class AVDelegatingPlaybackCoordinator](avdelegatingplaybackcoordinator.md)",
+      "sourceHash": "c13db180430a3bc1b94e7d23655096b0d6181db3d58f6c12734ab65e723299fc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:shareplay:0039:0001",
+      "source": "A playback coordinator subclass that coordinates the playback of custom player objects in a connected group.",
+      "ko": "연결된 그룹에서 사용자 지정 player 객체의 재생을 조정하는 playback coordinator 하위 클래스입니다.",
+      "sourceHash": "0d3388d8d553e4fb1f315af5ae110dded6be0ab4e9e2da5d994ea70a50c1bebd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:shareplay:0040:0001",
+      "source": "[class AVPlaybackCoordinationMedium](avplaybackcoordinationmedium.md)",
+      "ko": "[class AVPlaybackCoordinationMedium](avplaybackcoordinationmedium.md)",
+      "sourceHash": "e727ac943d93bf6f4b403b286dfd091255b441836e87a2d3973fb7ba328f9cb6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:presentation:0041:0001",
+      "source": "Presentation",
+      "ko": "Presentation",
+      "sourceHash": "5d5ee15775006a8125f9aebce809d67573a4bda84f05dece74ef65716bf5dcdc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:presentation:0042:0001",
+      "source": "[Monitoring playback progress in your app](monitoring-playback-progress-in-your-app.md)",
+      "ko": "[Monitoring playback progress in your app](monitoring-playback-progress-in-your-app.md)",
+      "sourceHash": "9dbd964239d02e103fab1625e6e30e3c35202388dd03daddbb5a38a16e183052",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:presentation:0043:0001",
+      "source": "Observe the playback of a media asset to update your app’s user-interface state.",
+      "ko": "미디어 자산의 재생을 관찰하여 앱의 사용자 인터페이스 상태를 업데이트합니다.",
+      "sourceHash": "31c67466247ee60f832237ea6305b6a30a909dc6c3f810e553a0f50068b0ed1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:presentation:0044:0001",
+      "source": "[Using HEVC video with alpha](using-hevc-video-with-alpha.md)",
+      "ko": "[Using HEVC video with alpha](using-hevc-video-with-alpha.md)",
+      "sourceHash": "afb8702c3e51c16d4017879bb96f681a509cd99c810ca71790fc75af1c3a0836",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:presentation:0045:0001",
+      "source": "Play, write, and export HEVC video with an alpha channel to add overlay effects to your video processing.",
+      "ko": "알파 채널이 있는 HEVC 비디오를 재생하고, 쓰고, 내보내어 비디오 처리에 오버레이 효과를 추가합니다.",
+      "sourceHash": "8af849ead502c27bd7c791e1a6979db76484ddc689ceabbe6ad7405df7e2a19a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:presentation:0046:0001",
+      "source": "[class AVPlayerLayer](avplayerlayer.md)",
+      "ko": "[class AVPlayerLayer](avplayerlayer.md)",
+      "sourceHash": "698511254ead5fbc83e6e599e35414aad229629d800e26c743550502668c706a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:presentation:0047:0001",
+      "source": "An object that presents the visual contents of a player object.",
+      "ko": "player 객체의 시각적 콘텐츠를 표시하는 객체입니다.",
+      "sourceHash": "d9782fc167e09eda704bb589749a2bb9b5f71a9cdf66ca307328aa1f6f52f91f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:presentation:0048:0001",
+      "source": "[class AVSynchronizedLayer](avsynchronizedlayer.md)",
+      "ko": "[class AVSynchronizedLayer](avsynchronizedlayer.md)",
+      "sourceHash": "07db5d7ac453fe7f20cda0f46a1d0a601e666767194d2bf7c756a6f285342dd6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:presentation:0049:0001",
+      "source": "A Core Animation layer that derives its timing from a player item so that you can synchronize layer animations with media playback.",
+      "ko": "player item에서 타이밍을 파생해 레이어 애니메이션을 미디어 재생과 동기화할 수 있는 Core Animation layer입니다.",
+      "sourceHash": "a5efeed4c4ed21d8bd4d6bee34128648414a934d07916579b1292e085056d4d6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:media-selection:0050:0001",
+      "source": "Media selection",
+      "ko": "미디어 선택",
+      "sourceHash": "86b5758e5a16d8b875a7ed5e2f087c01dc6ef262af258eeae5ce3195ec7b2c78",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:media-selection:0051:0001",
+      "source": "[Selecting subtitles and alternative audio tracks](selecting-subtitles-and-alternative-audio-tracks.md)",
+      "ko": "[Selecting subtitles and alternative audio tracks](selecting-subtitles-and-alternative-audio-tracks.md)",
+      "sourceHash": "d65dbc328b549d6d1a1ba46e8d078cfd91c8c3121c5ac93dbc1c342e329b91e2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:media-selection:0052:0001",
+      "source": "Extend your app’s appeal to users by adding subtitles and alternative audio tracks in their native language.",
+      "ko": "사용자의 기본 언어로 자막과 대체 오디오 트랙을 추가해 앱의 사용자 접근성을 높일 수 있습니다.",
+      "sourceHash": "5def49b60778f0db5b7ee12b43369e38f41441ac7fd1318c99874c17aeb44dee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:media-selection:0053:0001",
+      "source": "[class AVMediaSelection](avmediaselection.md)",
+      "ko": "[class AVMediaSelection](avmediaselection.md)",
+      "sourceHash": "7f6c94b272dcf48328ddda5b1f3d08d6ce522bc339526e5ad4cbb0ee66094bae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-selection:0054:0001",
+      "source": "An object that represents a complete rendition of media selection options on an asset.",
+      "ko": "자산의 미디어 선택 옵션 전체를 나타내는 객체입니다.",
+      "sourceHash": "3c6a925e16ef22adfbea4257c96d25720d360f16e86608c37eabf11c96bd8a87",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:media-selection:0055:0001",
+      "source": "[class AVMediaSelectionGroup](avmediaselectiongroup.md)",
+      "ko": "[class AVMediaSelectionGroup](avmediaselectiongroup.md)",
+      "sourceHash": "15e642255bc12c95d16809e298d1e7904b1c496104dff6ccca5c9a46e1497d36",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-selection:0056:0001",
+      "source": "An object that represents a collection of mutually exclusive options for the presentation of media within an asset.",
+      "ko": "자산 내 미디어 표시를 위한 상호 배타적 옵션 컬렉션을 나타내는 객체입니다.",
+      "sourceHash": "286e98077068fff753ac0c3fc81f903ad06ec7d8c0da0afa1e41754e3e2154f4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:media-selection:0057:0001",
+      "source": "[class AVMediaSelectionOption](avmediaselectionoption.md)",
+      "ko": "[class AVMediaSelectionOption](avmediaselectionoption.md)",
+      "sourceHash": "fe2117d5df6c64cab2053f9eea82f196b01e2d15dd1e39583430dbb5d858bfa7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-selection:0058:0001",
+      "source": "An object that represents a specific option for the presentation of media within a group of options.",
+      "ko": "옵션 그룹에서 미디어 표시를 위해 특정 옵션을 나타내는 객체입니다.",
+      "sourceHash": "441b4e28ae3d747ec77ae63a31122a73c6a6dca15c16dba4f48fc54662f2b893",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:media-selection:0059:0001",
+      "source": "[class AVMutableMediaSelection](avmutablemediaselection.md)",
+      "ko": "[class AVMutableMediaSelection](avmutablemediaselection.md)",
+      "sourceHash": "35fffa089d42ca56cb52b675e5da556509f528d5bdb521a3a259b692bc29ace0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-selection:0060:0001",
+      "source": "A mutable object that represents a complete rendition of media selection options on an asset.",
+      "ko": "자산의 미디어 선택 옵션 전체를 나타내는 변경 가능한 객체입니다.",
+      "sourceHash": "e98a4d339776c1ee361c367823c5acacab9f2ffd8831d8f406603be98f19e3db",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:media-selection:0061:0001",
+      "source": "[class AVPlayerMediaSelectionCriteria](avplayermediaselectioncriteria.md)",
+      "ko": "[class AVPlayerMediaSelectionCriteria](avplayermediaselectioncriteria.md)",
+      "sourceHash": "0fbc3e0a8e96fef294d04965b94c3126b2f560417d3411dbaf53b3d187f54e41",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-selection:0062:0001",
+      "source": "An object that specifies the preferred languages and media characteristics for a player.",
+      "ko": "플레이어에 대한 기본 언어와 미디어 특성을 지정하는 객체입니다.",
+      "sourceHash": "b99562667a61c04dd1a15bde09bcf50e3851f74b3a5d72ba3794dcc391727b5e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:media-selection:0063:0001",
+      "source": "[class AVCustomMediaSelectionScheme](avcustommediaselectionscheme.md)",
+      "ko": "[class AVCustomMediaSelectionScheme](avcustommediaselectionscheme.md)",
+      "sourceHash": "193ec6d4e80f9cc34f2df20e8ce63ff604ca5ea2c7e956acae922da17face1af",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-selection:0064:0001",
+      "source": "For content that has been authored with the express intent of offering an alternative selection interface for AVMediaSelectionOptions, AVCustomMediaSelectionScheme provides a collection of custom settings for controlling the presentation of the media.",
+      "ko": "AVMediaSelectionOptions에 대한 대체 선택 인터페이스 제공을 목적으로 제작된 콘텐츠의 경우, AVCustomMediaSelectionScheme은 미디어 표시를 제어하기 위한 사용자 지정 설정 컬렉션을 제공합니다.",
+      "sourceHash": "0eeedc1d85a8ea494e1352a97250787c2a77040f905ccaaf00e438d559dd9b30",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:media-selection:0065:0001",
+      "source": "[class AVMediaPresentationSelector](avmediapresentationselector.md)",
+      "ko": "[class AVMediaPresentationSelector](avmediapresentationselector.md)",
+      "sourceHash": "e29a7f8342d8b188b2ffed342bdbfa925d9f7a867f179f513d1adbb43972bef8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-selection:0066:0001",
+      "source": "For content that has been authored with the express intent of offering an alternative selection interface for AVMediaSelectionOptions, AVMediaPresentationSelector represents a collection of mutually exclusive settings.",
+      "ko": "AVMediaSelectionOptions에 대한 대체 선택 인터페이스 제공을 목적으로 제작된 콘텐츠의 경우, AVMediaPresentationSelector는 미디어 표시를 제어하는 상호 배타적 설정 컬렉션을 나타냅니다.",
+      "sourceHash": "1a13d48163027c8b4f70b8d5fdf0b83826ab078e41c4e9f89e69656abbdf607f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:media-selection:0067:0001",
+      "source": "[class AVMediaPresentationSetting](avmediapresentationsetting.md)",
+      "ko": "[class AVMediaPresentationSetting](avmediapresentationsetting.md)",
+      "sourceHash": "8250db148a1d3b5b8d591ee9fd13ec3540fd4157f18a6a318047e035d7fe970c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-selection:0068:0001",
+      "source": "For content that has been authored with the express intent of offering an alternative selection interface for AVMediaSelectionOptions, AVMediaPresentationSetting represents a selectable setting for controlling the presentation of the media.",
+      "ko": "AVMediaSelectionOptions에 대한 대체 선택 인터페이스 제공을 목적으로 제작된 콘텐츠의 경우, AVMediaPresentationSetting은 미디어 표시를 제어하는 선택 가능한 설정을 나타냅니다.",
+      "sourceHash": "1f92204a86dc5c3dd4980e32184430ca116ab7d11817494a2fc21da69c4be7d0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:interstitials:0069:0001",
+      "source": "Interstitials",
+      "ko": "Interstitials",
+      "sourceHash": "d8b346380a6328a2749b4db57c9ef4ad6e7521fda61dbc2724485f735851a317",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:interstitials:0070:0001",
+      "source": "[Providing an integrated view of your timeline when playing HLS interstitials](providing-an-integrated-view-of-your-timeline-when-playing-hls-interstitials.md)",
+      "ko": "[Providing an integrated view of your timeline when playing HLS interstitials](providing-an-integrated-view-of-your-timeline-when-playing-hls-interstitials.md)",
+      "sourceHash": "14a7d6bb5bf050c9e4f85431297d9c57fcda389ab1ab102b5ce06694639f3c48",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:interstitials:0071:0001",
+      "source": "Go beyond simple ad insertion with point and fill occupancy HLS interstitials.",
+      "ko": "point and fill occupancy HLS interstitials로 단순 광고 삽입을 넘어선 기능을 구현합니다.",
+      "sourceHash": "76acb626d73ef2a74010b9d729ae6b00abb2ed937061b7cacc305bd5a48376e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:interstitials:0072:0001",
+      "source": "[class AVPlayerInterstitialEvent](avplayerinterstitialevent.md)",
+      "ko": "[class AVPlayerInterstitialEvent](avplayerinterstitialevent.md)",
+      "sourceHash": "545011f2dcd2e510a05df456c03b379e3bc81b05a67ccef340985a1bb8af36a6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:interstitials:0073:0001",
+      "source": "An object that provides instructions for how a player presents interstitial content.",
+      "ko": "플레이어가 interstitial 콘텐츠를 표시하는 방식을 지정하는 객체입니다.",
+      "sourceHash": "b594d68ca3f8a50db38365430c1b018becb5af268b7077dc47047b1b7dc22d18",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:interstitials:0074:0001",
+      "source": "[class AVPlayerInterstitialEventController](avplayerinterstitialeventcontroller.md)",
+      "ko": "[class AVPlayerInterstitialEventController](avplayerinterstitialeventcontroller.md)",
+      "sourceHash": "ab4e9bfd54e5288611f4870fb86f3433795fafa4c75ab4f686a74752274a26f5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:interstitials:0075:0001",
+      "source": "An object that schedules interstitial events for items played by the primary player.",
+      "ko": "기본 플레이어에서 재생되는 항목의 interstitial 이벤트를 예약하는 객체입니다.",
+      "sourceHash": "13216b81cac606fe5f2e24e9c17e96576d233af2f9d2a7a9355cb9fb4ac98cbd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:interstitials:0076:0001",
+      "source": "[class AVPlayerInterstitialEventMonitor](avplayerinterstitialeventmonitor.md)",
+      "ko": "[class AVPlayerInterstitialEventMonitor](avplayerinterstitialeventmonitor.md)",
+      "sourceHash": "4cee3fc8e16fe97367b26228d3b25616aaaa5c8dfb3e62a52da844c4401d5637",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:interstitials:0077:0001",
+      "source": "An object that monitors the scheduling and progress of interstitial events.",
+      "ko": "interstitial 이벤트의 예약 및 진행 상태를 모니터링하는 객체입니다.",
+      "sourceHash": "9aebeec843ae53a1f90ac7d7b4e2dd7a368d24793b97c5b2acb2c8e750ba0287",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:interstitials:0078:0001",
+      "source": "[class AVPlayerItemIntegratedTimeline](avplayeritemintegratedtimeline.md)",
+      "ko": "[class AVPlayerItemIntegratedTimeline](avplayeritemintegratedtimeline.md)",
+      "sourceHash": "6c2f1f4727d4b95f8cdca638fc24287c80abc14c71f855fd6ddba7c0449ba414",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:interstitials:0079:0001",
+      "source": "An object that models the timeline and playback sequence of a primary player item and scheduled interstitial events.",
+      "ko": "주요 player item과 예약된 interstitial 이벤트의 타임라인 및 재생 순서를 모델링하는 객체입니다.",
+      "sourceHash": "6940461bd4d5f03b369dbcf4ce8da806cf5d8571ee5c00b810ba1fbf828d476d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:metrics:0080:0001",
+      "source": "Metrics",
+      "ko": "Metrics",
+      "sourceHash": "a58da793c7250f1b3b8f8710efd7c7ee7e1a2dac4208f355dad42458a421e4ec",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:metrics:0081:0001",
+      "source": "[struct AVMetrics](avmetrics.md)",
+      "ko": "[struct AVMetrics](avmetrics.md)",
+      "sourceHash": "553a24793b3c29242cf8643d7170d2ed3a15c83ec6d119ea04a9053070da53fa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:metrics:0082:0001",
+      "source": "An asynchronous stream of metric information.",
+      "ko": "메트릭 정보를 비동기로 스트리밍하는 정보 흐름입니다.",
+      "sourceHash": "4e425c752feb86398e28aa38f0e98f2e496fc307296e82d4afb9de78bac05cb0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:metrics:0083:0001",
+      "source": "[struct AVMergedMetrics](avmergedmetrics.md)",
+      "ko": "[struct AVMergedMetrics](avmergedmetrics.md)",
+      "sourceHash": "898284fa5c31dc398a92bda3d3dc72c9c8436e493fc0c7be750fddd7c15baf5d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:metrics:0084:0001",
+      "source": "An asynchronous stream of metric information from different publishers.",
+      "ko": "서로 다른 게시자로부터 메트릭 정보를 비동기적으로 스트리밍하는 메트릭입니다.",
+      "sourceHash": "a9f9fd7a70ea1c4ae41a379300f2679707bf5d0b8e7074f62373efddd9378090",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:metrics:0085:0001",
+      "source": "[class AVVideoPerformanceMetrics](avvideoperformancemetrics.md)",
+      "ko": "[class AVVideoPerformanceMetrics](avvideoperformancemetrics.md)",
+      "sourceHash": "8201bd7312cf88937507b2ba4346702f2c38f430f01108bdc2c88f7c96a2369b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:metrics:0086:0001",
+      "source": "An object that provides metrics related to video playback quality.",
+      "ko": "비디오 재생 품질과 관련된 메트릭을 제공하는 객체입니다.",
+      "sourceHash": "7a3aaa9a7f98bf22d2f63d712828babe3adac0e616dc3c3862f016d14ebba26c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:metrics:0087:0001",
+      "source": "[protocol AVMetricEventStreamPublisher](avmetriceventstreampublisher.md)",
+      "ko": "[protocol AVMetricEventStreamPublisher](avmetriceventstreampublisher.md)",
+      "sourceHash": "ee303fe008516ced80b2f73d95936aceaa9044537f6456f6469ebe87f156c5a1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:metrics:0088:0001",
+      "source": "A type for objects that publish metric events to the event stream.",
+      "ko": "이벤트 스트림에 metric 이벤트를 게시하는 객체를 위한 type입니다.",
+      "sourceHash": "e1121a2c86a99b8449b0bad6b3b3b7d47082ebfc79347a98ce2605590787baeb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:metrics:0089:0001",
+      "source": "[class AVMetricEvent](avmetricevent.md)",
+      "ko": "[class AVMetricEvent](avmetricevent.md)",
+      "sourceHash": "a93f3841672a66ae5937e8e168cf734ec1e2cc04b5fa78a873f766cffbbe29ed",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:metrics:0090:0001",
+      "source": "A base class that represents a metric event.",
+      "ko": "metric event를 나타내는 기본 클래스입니다.",
+      "sourceHash": "4424673320ca04fc31c5361cebad4dc594a1b2e130323b8e571cca4093b1972b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:metrics:0091:0001",
+      "source": "[class AVMetricErrorEvent](avmetricerrorevent.md)",
+      "ko": "[class AVMetricErrorEvent](avmetricerrorevent.md)",
+      "sourceHash": "211caed5c684df81cdf9176445f48f7c888d89656f4998ca3428478e16f094ec",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:metrics:0092:0001",
+      "source": "An object that represents a metric event when an error occurs.",
+      "ko": "오류가 발생할 때 metric event를 나타내는 객체입니다.",
+      "sourceHash": "c6a32cf0b579137f3459931624e6a7a3e65cf2f89b1b8acd9864e197d96b890e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:metrics:0093:0001",
+      "source": "[Metric event types](metric-event-types.md)",
+      "ko": "[Metric event types](metric-event-types.md)",
+      "sourceHash": "671a3f0cf2068fb825bf3ad04c9e56c80403c1afe064bfc7d8b63a3346fbe2b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:remote-controls:0094:0001",
+      "source": "Remote controls",
+      "ko": "원격 제어",
+      "sourceHash": "0226d803412aa1998fc9d7db17b39efd3499687e1a6c184668afdc239988a33f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:remote-controls:0095:0001",
+      "source": "[Supporting remote interactions in tvOS](supporting-remote-interactions-in-tvos.md)",
+      "ko": "[Supporting remote interactions in tvOS](supporting-remote-interactions-in-tvos.md)",
+      "sourceHash": "059f7650e483835f5257422e7b023e3808496c7ae82c50f62f51c31f403b584e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:remote-controls:0096:0001",
+      "source": "Set up your app to support remote commands and events in a variety of scenarios by using the relevant approach.",
+      "ko": "Set up your app to support remote commands and events in a variety of scenarios by using the relevant approach.",
+      "sourceHash": "408a0216bd7f8e8b3f1530023810d0eca93d5b2bd5cd9a8b3822de0221784ff9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:timed-metadata:0097:0001",
+      "source": "Timed metadata",
+      "ko": "Timed metadata",
+      "sourceHash": "31dd95025fbc5ab8a5f9cbcfcb0644c25818501ac326270820035a21ee2cab6e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:timed-metadata:0098:0001",
+      "source": "[Presenting chapter markers](presenting-chapter-markers.md)",
+      "ko": "[Presenting chapter markers](presenting-chapter-markers.md)",
+      "sourceHash": "217dbda68532d475bb53dd211fe22790daee865688cedc30d45ea0d7d3b4ddcb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:timed-metadata:0099:0001",
+      "source": "Add chapter markers to enable users to quickly navigate your content.",
+      "ko": "Add chapter markers to enable users to quickly navigate your content.",
+      "sourceHash": "c6b0615eb6d58ff132c23fca618b24a2a1a1a0fee7a3f92fd95f4ea62f5b293f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:timed-metadata:0100:0001",
+      "source": "[class AVMetadataGroup](avmetadatagroup.md)",
+      "ko": "[class AVMetadataGroup](avmetadatagroup.md)",
+      "sourceHash": "57108bd82192eed91e53c4267d6e88c6138845d4452c6287ddbd38606ed0208e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:timed-metadata:0101:0001",
+      "source": "A collection of metadata items associated with a timeline segment.",
+      "ko": "A collection of metadata items associated with a timeline segment.",
+      "sourceHash": "25099086d977442a1d0d332b95089356f26705f73a71fd7a4965f043bc2a4ffd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:timed-metadata:0102:0001",
+      "source": "[class AVTimedMetadataGroup](avtimedmetadatagroup.md)",
+      "ko": "[class AVTimedMetadataGroup](avtimedmetadatagroup.md)",
+      "sourceHash": "24a0daaf16fdc1a1051d4e04bb881ea916d591c9b8443c9f5258fcc17a716b7f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:timed-metadata:0103:0001",
+      "source": "A collection of metadata items that are valid for use during a specific time range.",
+      "ko": "A collection of metadata items that are valid for use during a specific time range.",
+      "sourceHash": "9491509f48b56deccf8925195fe28c951e60ffe34414c58f048b3cf062b72518",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:timed-metadata:0104:0001",
+      "source": "[class AVMutableTimedMetadataGroup](avmutabletimedmetadatagroup.md)",
+      "ko": "[class AVMutableTimedMetadataGroup](avmutabletimedmetadatagroup.md)",
+      "sourceHash": "5d6541446452b655f1e4d18a443bee9b3b6941c24b336ab9ce9d360098886332",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:timed-metadata:0105:0001",
+      "source": "A mutable collection of metadata items that are valid for use during a specific time range.",
+      "ko": "A mutable collection of metadata items that are valid for use during a specific time range.",
+      "sourceHash": "fa2a9e19a6a8c0e4abe1cd84099a8e3fc90c84a7d4d63138374fcaef82f1442d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:timed-metadata:0106:0001",
+      "source": "[class AVDateRangeMetadataGroup](avdaterangemetadatagroup.md)",
+      "ko": "[class AVDateRangeMetadataGroup](avdaterangemetadatagroup.md)",
+      "sourceHash": "7316449d98a9cf77bf6d448fed774a41d2b7b99e73fc873f5c9b2b7dc12cf9fc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:timed-metadata:0107:0001",
+      "source": "A collection of metadata items that are valid for use within a specific date range.",
+      "ko": "A collection of metadata items that are valid for use within a specific date range.",
+      "sourceHash": "3f2d30cd8c7988a3db20083e982f59e0c9018f610865f114c970f1ea5b15b742",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:timed-metadata:0108:0001",
+      "source": "[class AVMutableDateRangeMetadataGroup](avmutabledaterangemetadatagroup.md)",
+      "ko": "[class AVMutableDateRangeMetadataGroup](avmutabledaterangemetadatagroup.md)",
+      "sourceHash": "61d235225fef9dd06290330291d907a6b293b038377f9901a7661df490cc2471",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:timed-metadata:0109:0001",
+      "source": "A mutable collection of metadata items that are valid for use within a specific range of dates.",
+      "ko": "A mutable collection of metadata items that are valid for use within a specific range of dates.",
+      "sourceHash": "bfa5eb804f3c3f194f55f4b7661f7d1877f6f5ba39ab19b1fbcd0b32cf4c3a9f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:timed-metadata:0110:0001",
+      "source": "[class AVPlayerItemMediaDataCollector](avplayeritemmediadatacollector.md)",
+      "ko": "[class AVPlayerItemMediaDataCollector](avplayeritemmediadatacollector.md)",
+      "sourceHash": "0cd16af9c9e79356bde01ded1b0b528f1f650192754cb740a954eddbdb69f7ed",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:timed-metadata:0111:0001",
+      "source": "The abstract base for media data collectors.",
+      "ko": "The abstract base for media data collectors.",
+      "sourceHash": "d6db7507c4f39aaa5bbf81c6fd122337402889796c944e0d5d4e7de849d4b511",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:timed-metadata:0112:0001",
+      "source": "[class AVPlayerItemMetadataCollector](avplayeritemmetadatacollector.md)",
+      "ko": "[class AVPlayerItemMetadataCollector](avplayeritemmetadatacollector.md)",
+      "sourceHash": "069d20e2e1437ac94769444e6bf53ed53ec90774f89afd7d0a49979f5f86604f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:timed-metadata:0113:0001",
+      "source": "An object used to capture the date range metadata defined for an HTTP Live Streaming asset.",
+      "ko": "An object used to capture the date range metadata defined for an HTTP Live Streaming asset.",
+      "sourceHash": "3d9a33dabbfe67b0dfb00a901875e46a159f275dce210d001802025ef091bf89",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:media-output:0114:0001",
+      "source": "Media output",
+      "ko": "Media output",
+      "sourceHash": "1a3b5c6609d9e9ab2dd5cc2d548b824bbd25900017686050479e67b2e7977123",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:media-output:0115:0001",
+      "source": "[class AVPlayerVideoOutput](avplayervideooutput.md)",
+      "ko": "[class AVPlayerVideoOutput](avplayervideooutput.md)",
+      "sourceHash": "d06d02a3a60c366a6b113e3393473bab59bb59c848a6fa141b864be74813042c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-output:0116:0001",
+      "source": "An object that receives video data from a player object.",
+      "ko": "An object that receives video data from a player object.",
+      "sourceHash": "e1a94709970d1d89e995ee191c2866ebab1c4e4e6bd521a05ff81459def7b64c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:media-output:0117:0001",
+      "source": "[class AVVideoOutputSpecification](avvideooutputspecification.md)",
+      "ko": "[class AVVideoOutputSpecification](avvideooutputspecification.md)",
+      "sourceHash": "1fe75ab37b0f5ca8472dae7e7dba8562ac1bc5e50171bd73dfda2bd64bc3f8b3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-output:0118:0001",
+      "source": "An object that specifies the pixel buffer attributes and tag collections handled by a player video output.",
+      "ko": "An object that specifies the pixel buffer attributes and tag collections handled by a player video output.",
+      "sourceHash": "74270adabf83cde64e8159b3a6511e1d6abefb71efe8467337a240957fa036c5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:media-output:0119:0001",
+      "source": "[class AVPlayerItemOutput](avplayeritemoutput.md)",
+      "ko": "[class AVPlayerItemOutput](avplayeritemoutput.md)",
+      "sourceHash": "04564c6b5cba636edeac4847c49ac68c5bfc6e676683ddc2a64a70b5ce7ce7d7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-output:0120:0001",
+      "source": "An abstract class that defines the common interface to output media data from a player item.",
+      "ko": "An abstract class that defines the common interface to output media data from a player item.",
+      "sourceHash": "27c38a336531394df669cfdc4d2cbeead33ca93be6a239c97ee6993e5dafd5c3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:media-output:0121:0001",
+      "source": "[class AVPlayerItemVideoOutput](avplayeritemvideooutput.md)",
+      "ko": "[class AVPlayerItemVideoOutput](avplayeritemvideooutput.md)",
+      "sourceHash": "ab5d604bd93326618bed1d8909506b8818380cb3dba3014ed3b3b91ed6d2d563",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-output:0122:0001",
+      "source": "An object that outputs video frames from a player item.",
+      "ko": "An object that outputs video frames from a player item.",
+      "sourceHash": "c139c603a56c531d3625c4f6d0464c8a43128386186f940edab782c54df6f4e8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:media-output:0123:0001",
+      "source": "[class AVPlayerItemLegibleOutput](avplayeritemlegibleoutput.md)",
+      "ko": "[class AVPlayerItemLegibleOutput](avplayeritemlegibleoutput.md)",
+      "sourceHash": "2cc8686d2d4136315a630490bf0f7b6143148b0ccf505cfb573b38d8dc79eaab",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-output:0124:0001",
+      "source": "An object that vends attributed strings for media with a legible characteristic.",
+      "ko": "An object that vends attributed strings for media with a legible characteristic.",
+      "sourceHash": "184a684b9082d264f18e1774d3ab92ac54036e952610d5811010a7eeedf2d246",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:media-output:0125:0001",
+      "source": "[class AVPlayerItemRenderedLegibleOutput](avplayeritemrenderedlegibleoutput.md)",
+      "ko": "[class AVPlayerItemRenderedLegibleOutput](avplayeritemrenderedlegibleoutput.md)",
+      "sourceHash": "bc5c339f9e09442c813f22cc88d2ff2bf57e98843e32a3cfc7229aab64d80a72",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-output:0126:0001",
+      "source": "A player item output that vends media with a legible characteristic as rendered pixel buffers.",
+      "ko": "A player item output that vends media with a legible characteristic as rendered pixel buffers.",
+      "sourceHash": "84602eeb4c79058bcbcfdc95e14f3fb4d4f749d6bb9def9507ca5c5e5cbb0780",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:media-output:0127:0001",
+      "source": "[class AVRenderedCaptionImage](avrenderedcaptionimage.md)",
+      "ko": "[class AVRenderedCaptionImage](avrenderedcaptionimage.md)",
+      "sourceHash": "4e407f3e17909563e355294b01740a39586c1ead7a5ac61bb31b78e3dee3d4a4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-output:0128:0001",
+      "source": "An object that provides a rendered pixel buffer and its position in pixels.",
+      "ko": "An object that provides a rendered pixel buffer and its position in pixels.",
+      "sourceHash": "12df5db0bd04c987832cb8064eabb066a1ed3c5c75ed7d7b0a1a132558aaeabb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:media-output:0129:0001",
+      "source": "[class AVPlayerItemMetadataOutput](avplayeritemmetadataoutput.md)",
+      "ko": "[class AVPlayerItemMetadataOutput](avplayeritemmetadataoutput.md)",
+      "sourceHash": "df952fa13ceef1048f9b5c706456fe7576a4ac9011f56b3ae9f8fa19da0aa806",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-output:0130:0001",
+      "source": "An object that vends collections of metadata items that a player item’s tracks carry.",
+      "ko": "An object that vends collections of metadata items that a player item’s tracks carry.",
+      "sourceHash": "932ade829ce3fdee42fbd83dc6bfcfcde1ea5a6a412285a8d6ea73cc6e5f5922",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:media-output:0131:0001",
+      "source": "[protocol AVPlayerItemOutputPushDelegate](avplayeritemoutputpushdelegate.md)",
+      "ko": "[protocol AVPlayerItemOutputPushDelegate](avplayeritemoutputpushdelegate.md)",
+      "sourceHash": "5a0dafbd1055030d7d612cbb7051bb33cc376e97cce78788a027205bc0c9567b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:media-output:0132:0001",
+      "source": "A protocol that defines the methods to implement to respond to changes in the media data sequence.",
+      "ko": "A protocol that defines the methods to implement to respond to changes in the media data sequence.",
+      "sourceHash": "8d27adc6e6a890f71e7249939540e8fc30995ccebdd9c2ea9b4a6e9357d359f4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:utilities:0133:0001",
+      "source": "Utilities",
+      "ko": "Utilities",
+      "sourceHash": "0a035c2b85b8f35d7c304286acc49f8174c42bfb8d889ff71e613d6083116220",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:utilities:0134:0001",
+      "source": "[class AVAssetPlaybackAssistant](avassetplaybackassistant.md)",
+      "ko": "[class AVAssetPlaybackAssistant](avassetplaybackassistant.md)",
+      "sourceHash": "6b96c0e11fa6ce069ff034cdaf3c1740d35363d6be78f134184c89964c572f59",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:utilities:0135:0001",
+      "source": "An object that provides playback information for an asset.",
+      "ko": "An object that provides playback information for an asset.",
+      "sourceHash": "852a91c633fc21f5bbed43a33fef0065972fd708a29a9b8e7a00853b1661cbd5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:utilities:0136:0001",
+      "source": "[struct AVAssetPlaybackConfigurationOption](avassetplaybackconfigurationoption.md)",
+      "ko": "[struct AVAssetPlaybackConfigurationOption](avassetplaybackconfigurationoption.md)",
+      "sourceHash": "8581181a3919fccb2d9115a840fa23ce8884b9ee93b66baaf892c6248c048b66",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:utilities:0137:0001",
+      "source": "A structure that defines playback configuration options for an asset.",
+      "ko": "A structure that defines playback configuration options for an asset.",
+      "sourceHash": "bfcfb1f9d39bb0a18b46685fa3b255f1c2bf3251d804cab97604dd33939f6e41",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0138:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0139:0001",
+      "source": "[Offline playback and storage](offline-playback-and-storage.md)",
+      "ko": "[Offline playback and storage](offline-playback-and-storage.md)",
+      "sourceHash": "158f9cc18e23e97d28f486d594b4997ee63ef1f961a1769815f344b8a48e5875",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0140:0001",
+      "source": "Download streamed content to disk to allow offline playback, and define policies to automatically remove downloaded assets.",
+      "ko": "Download streamed content to disk to allow offline playback, and define policies to automatically remove downloaded assets.",
+      "sourceHash": "2251555d68cb0fdc6031d98698bed252bdbba741b93dbd703de965a90d444674",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0141:0001",
+      "source": "[Streaming and AirPlay](streaming-and-airplay.md)",
+      "ko": "[Streaming and AirPlay](streaming-and-airplay.md)",
+      "sourceHash": "96f8a616c7944972260047a8a5adb9cd04a1edb601dc995de6243f5b9e318103",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0142:0001",
+      "source": "Stream content wirelessly to other devices using AirPlay, and handle requests involving FairPlay-protected assets.",
+      "ko": "Stream content wirelessly to other devices using AirPlay, and handle requests involving FairPlay-protected assets.",
+      "sourceHash": "50b0db9118ce406822488795bbf77d9fb0bc8574cdce4a9f4f26bdb2ab69044f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0143:0001",
+      "source": "[Sample buffer playback](sample-buffer-playback.md)",
+      "ko": "[Sample buffer playback](sample-buffer-playback.md)",
+      "sourceHash": "fd6ae6271f7dd5ddff27eb5fc519bb244d0551a3ffb7ceb2107d961432f0dc5c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0144:0001",
+      "source": "Create custom controllers to play and synchronize the timing of sample buffer streams.",
+      "ko": "Create custom controllers to play and synchronize the timing of sample buffer streams.",
+      "sourceHash": "108c4ca379fd16360dbe28af7632b35e0978d773a3e9a0e797e2852b3d357cf3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0145:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0146:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/media-playback)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/media-playback)*",
+      "sourceHash": "fae7920c368bd1e6dcab46e17f3e7a7e82bd63cf4d320737c1574cb8507f89a6",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "docId": "documentation/AVFoundation/avassetdownloadtask.md",
+  "title": "AVAssetDownloadTask",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetdownloadtask",
+  "segments": [
+    {
+      "id": "seg:heading:avassetdownloadtask:0000:0001",
+      "source": "AVAssetDownloadTask",
+      "ko": "AVAssetDownloadTask",
+      "sourceHash": "2c6f0444359bebc10b74e6c1c5cdd9bbab0f411a4714c09baa4d21a31d92ea02",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avassetdownloadtask:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avassetdownloadtask:0002:0001",
+      "source": "A session used to download HTTP Live Streaming assets.",
+      "ko": "HTTP Live Streaming 에셋을 다운로드하는 데 사용되는 세션입니다.",
+      "sourceHash": "af01e9d9d2c62e7f3db54f583a2c09217b859de90a935b3df9147cdf2b6259f8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avassetdownloadtask:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetdownloadtask:0004:0001",
+      "source": "iOS 9.0+",
+      "ko": "iOS 9.0+",
+      "sourceHash": "5e500d43331f50d418de64f036136c59cae8019e851cea2322bbe52f3417e342",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetdownloadtask:0004:0002",
+      "source": "iPadOS 9.0+",
+      "ko": "iPadOS 9.0+",
+      "sourceHash": "76a293c18c4e8a4dc7d9f40b220cc7f9eb91580e5b0a3041a6d046bf6969a307",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetdownloadtask:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetdownloadtask:0004:0004",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetdownloadtask:0004:0005",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avassetdownloadtask:0004:0006",
+      "source": "watchOS 10.0+",
+      "ko": "watchOS 10.0+",
+      "sourceHash": "963526570e236a0646ff2bc71872cb8d0544cb77da69d6752bd48650ac650c29",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAssetDownloadTask\n```",
+      "ko": "```swift\nclass AVAssetDownloadTask\n```",
+      "sourceHash": "9ab3a64c98748efa7873eca9158bad45300cd7662fe7142b4dcf58ede8054d89",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "This class is a subclass of [`URLSessionTask`](https://developer.apple.com/documentation/Foundation/URLSessionTask) that you use to download HTTP Live Streaming assets.",
+      "ko": "이 클래스는 HTTP Live Streaming 에셋을 다운로드할 때 사용하는 [`URLSessionTask`](https://developer.apple.com/documentation/Foundation/URLSessionTask)의 하위 클래스입니다.",
+      "sourceHash": "98b98de5c8fdbd3c0f508bf4f009f75d6435146d9dc86058e86ca67b23f3c03d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "You create instances of this class by calling [`makeAssetDownloadTask(downloadConfiguration:)`](avassetdownloadurlsession/makeassetdownloadtask(downloadconfiguration:).md) on the download session.",
+      "ko": "다운로드 세션에서 [`makeAssetDownloadTask(downloadConfiguration:)`](avassetdownloadurlsession/makeassetdownloadtask(downloadconfiguration:).md)로 이 클래스의 인스턴스를 생성합니다.",
+      "sourceHash": "93021d121565a3288e1bd9286750cbb90de01026ad36d8a86eeedb54f684d977",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:accessing-task-information:0010:0001",
+      "source": "Accessing task information",
+      "ko": "작업 정보 액세스",
+      "sourceHash": "03fb204d6cc11c980de6c88f753cc05ab524492f867246779c7ccfd9199fa2da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-task-information:0011:0001",
+      "source": "[var urlAsset: AVURLAsset](avassetdownloadtask/urlasset.md)",
+      "ko": "[var urlAsset: AVURLAsset](avassetdownloadtask/urlasset.md)",
+      "sourceHash": "9547d8a4328c6ee6e4cc7bc5925ef7ba7c013d909a73ca1fbaab82ba06fdb9ec",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-task-information:0012:0001",
+      "source": "The asset that this task downloads.",
+      "ko": "이 작업이 다운로드하는 에셋입니다.",
+      "sourceHash": "69980c7a024c446f37f5e1ddca0bad1406158a1f7fb4a76b20a153b4ed8390f2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-task-information:0013:0001",
+      "source": "[var loadedTimeRanges: [NSValue]](avassetdownloadtask/loadedtimeranges.md)",
+      "ko": "[var loadedTimeRanges: [NSValue]](avassetdownloadtask/loadedtimeranges.md)",
+      "sourceHash": "7ad9d347f25e8de873f587b91d9300e5d4875d472ceab07b7b3c7222e7dbe703",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:accessing-task-information:0014:0001",
+      "source": "The time ranges of the downloaded media that are ready for playback.",
+      "ko": "재생을 위해 준비된 다운로드 미디어의 시간 범위입니다.",
+      "sourceHash": "adce4ddeead49fa57ed9259ca092848b689e2d19c2b38f22237b5cff00c4cc77",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-task-information:0015:0001",
+      "source": "[var options: [String : Any]?](avassetdownloadtask/options.md)",
+      "ko": "[var options: [String : Any]?](avassetdownloadtask/options.md)",
+      "sourceHash": "0392685dc99c9904098c1cc2ef0e41272425c7f4857d3d726f4c223a938f4b5f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:accessing-task-information:0016:0001",
+      "source": "The configuration options for the task.",
+      "ko": "작업의 구성 옵션입니다.",
+      "sourceHash": "2de799b274001753d4f864040ec51816816ced599de0ebd3c38dda3fff9038ef",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-task-information:0017:0001",
+      "source": "[var destinationURL: URL](avassetdownloadtask/destinationurl.md)",
+      "ko": "[var destinationURL: URL](avassetdownloadtask/destinationurl.md)",
+      "sourceHash": "a7f3ddabac9c290fb472b60b9e5f627cd95af82939dc1252081d247815c4310e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-task-information:0018:0001",
+      "source": "The local file URL to where the task downloads the asset.",
+      "ko": "이 작업이 에셋을 다운로드하는 로컬 파일 URL입니다.",
+      "sourceHash": "a4c34ba65ce6d6849155ca5e166db10109840dc115df89fa236cca31e15720eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0019:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0020:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0021:0001",
+      "source": "[URLSessionTask](../Foundation/URLSessionTask.md)",
+      "ko": "[URLSessionTask](../Foundation/URLSessionTask.md)",
+      "sourceHash": "db05d68e2f73a115fa2ec3a23237d6f9c7133f1d52989bd1cd4957b59b852a01",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0022:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0006",
+      "source": "[NSCopying](../Foundation/NSCopying.md)",
+      "ko": "[NSCopying](../Foundation/NSCopying.md)",
+      "sourceHash": "a3e3914d750a60e4b250a0090cdf594ea4328ed30cecb20ea43c55afb46b9005",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0007",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0008",
+      "source": "[ProgressReporting](../Foundation/ProgressReporting.md)",
+      "ko": "[ProgressReporting](../Foundation/ProgressReporting.md)",
+      "sourceHash": "63423892afb33e6e4b688696626c50adf5db75bad05afe7d945586a84514e5b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0009",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0023:0010",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0024:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[Using AVFoundation to play and persist HTTP live streams](using-avfoundation-to-play-and-persist-http-live-streams.md)",
+      "ko": "[Using AVFoundation to play and persist HTTP live streams](using-avfoundation-to-play-and-persist-http-live-streams.md)",
+      "sourceHash": "d7ec673ec54b71d742e1fe85b7f5a0e5b55045cd54f8cdec593080fd27305d65",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "Play HTTP Live Streams and persist streams on disk for offline playback using AVFoundation.",
+      "ko": "AVFoundation을 사용하여 HTTP Live Streams를 재생하고 오프라인 재생을 위해 스트림을 디스크에 저장합니다.",
+      "sourceHash": "4e30b5f2085253a5d59f863496805c1d33c26996bb7896de4fbe3c9e25f5c164",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[class AVAssetDownloadURLSession](avassetdownloadurlsession.md)",
+      "ko": "[class AVAssetDownloadURLSession](avassetdownloadurlsession.md)",
+      "sourceHash": "9b4c6539fdd3311b484f026adebc930bcf4b786c33f960aa8eec6dbfb8643b6a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "A URL session that creates and executes asset download tasks.",
+      "ko": "에셋 다운로드 작업을 생성하고 실행하는 URL session입니다.",
+      "sourceHash": "6b22ca4b084e8c3cef4c935dc787f1de64abd5d3adf649c5ed9fa2014bf39865",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0029:0001",
+      "source": "[class AVAggregateAssetDownloadTask](avaggregateassetdownloadtask.md)",
+      "ko": "[class AVAggregateAssetDownloadTask](avaggregateassetdownloadtask.md)",
+      "sourceHash": "4333ed64b0d561042eac2480ee5d5aa0c94373e2f5371e79f75cd67f53a01fc4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "A task that downloads multiple media selections for an asset.",
+      "ko": "에셋의 여러 미디어 선택 항목을 다운로드하는 작업입니다.",
+      "sourceHash": "9122948af7f82ce645b3367299b5b495fddfb1d854c0929f1fb3cbcfe7465e13",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0031:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0032:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetdownloadtask)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetdownloadtask)*",
+      "sourceHash": "e64df2ad491f22632798e8db5d1eb9bc09b6e6ac5476648ab3f64327e8c8613b",
+      "status": "preserved"
+    }
+  ]
+}

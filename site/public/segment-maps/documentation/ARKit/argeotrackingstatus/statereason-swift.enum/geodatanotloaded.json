@@ -1,0 +1,330 @@
+{
+  "docId": "documentation/ARKit/argeotrackingstatus/statereason-swift.enum/geodatanotloaded.md",
+  "title": "ARGeoTrackingStatus.StateReason.geoDataNotLoaded",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/argeotrackingstatus/statereason-swift.enum/geodatanotloaded",
+  "segments": [
+    {
+      "id": "seg:heading:argeotrackingstatusstatereasongeodatanotloaded:0000:0001",
+      "source": "ARGeoTrackingStatus.StateReason.geoDataNotLoaded",
+      "ko": "ARGeoTrackingStatus.StateReason.geoDataNotLoaded",
+      "sourceHash": "0c9c2917e04fb2263db511e0e1f6cf677d142246d9c5a95b658a7318eac0c76e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:argeotrackingstatusstatereasongeodatanotloaded:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: case",
+      "ko": "**Framework**: ARKit **Kind**: case",
+      "sourceHash": "8c58580c7eb7cd897aebe71fc18c8cf41b52eb03fb422b4519f5a6fdb03d8974",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:argeotrackingstatusstatereasongeodatanotloaded:0002:0001",
+      "source": "A state in which the framework downloads localization imagery.",
+      "ko": "프레임워크가 위치 정합 이미지를 다운로드하는 상태입니다.",
+      "sourceHash": "ee5c35ef481cddba8e495dd84a18e64d8d9da83c795ca3ab26fa03dd08ea8a6a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:argeotrackingstatusstatereasongeodatanotloaded:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:argeotrackingstatusstatereasongeodatanotloaded:0004:0001",
+      "source": "iOS 14.0+",
+      "ko": "iOS 14.0+",
+      "sourceHash": "a09fb717eefa07878cab396c9697a744dfc726f6a8a77c093ef12e8124ffd90b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:argeotrackingstatusstatereasongeodatanotloaded:0004:0002",
+      "source": "iPadOS 14.0+",
+      "ko": "iPadOS 14.0+",
+      "sourceHash": "3bd5f9207436aaf3fd80bdb95d64d5d280ff80afc32e998b4c7ef682ec2802e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:argeotrackingstatusstatereasongeodatanotloaded:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\ncase geoDataNotLoaded\n```",
+      "ko": "```swift\ncase geoDataNotLoaded\n```",
+      "sourceHash": "27d2929ec59d0e96b667103484ef63f4cccced20670d42000d4eda2f3b342dda",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "ARKit provides this reason in state [`ARGeoTrackingStatus.State.localizing`](argeotrackingstatus/state-swift.enum/localizing.md) when the session is actively attempting to download localization imagery (see [`Refine the user’s position with imagery`](argeotrackingconfiguration#Refine-the-users-position-with-imagery.md)).",
+      "ko": "ARKit는 세션이 위치 정합 이미지를 적극적으로 다운로드하려고 할 때 [`ARGeoTrackingStatus.State.localizing`](argeotrackingstatus/state-swift.enum/localizing.md) 상태에서 이 이유를 제공합니다(참조: [`Refine the user’s position with imagery`](argeotrackingconfiguration#Refine-the-users-position-with-imagery.md)).",
+      "sourceHash": "98b3eb8b9dcf3ccee15fef599abc861de474c2bb4b7a325ed5f4d657a646f79e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "If this state persists for too long, it may indicate a network issue.",
+      "ko": "이 상태가 너무 오래 지속되면 네트워크 문제가 있을 수 있습니다.",
+      "sourceHash": "c4c6acd1f70cdb3adaffa72421d501c1d0d42477c93ca42b6b897d7719efb26b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "If a reasonable amount of time elapses in this state reason, the app may consider requesting that the user check their internet connection.",
+      "ko": "이 상태 사유가 일정 시간 이상 지속되면 앱은 사용자가 인터넷 연결을 확인하도록 요청하는 것을 고려할 수 있습니다.",
+      "sourceHash": "f7f59e244f59f522b5a266a1a3d20e64eeb900fc983b9f4515d613d22c4db06d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.none](argeotrackingstatus/statereason-swift.enum/none.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.none](argeotrackingstatus/statereason-swift.enum/none.md)",
+      "sourceHash": "551804df8e95cd117cbba59d698f3942482f63f0522b6994ab8eda9f7e6d4c09",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "No issues reported.",
+      "ko": "보고된 문제가 없습니다.",
+      "sourceHash": "bad417b714ae41057af85ded42be205a3f7ff6c47d655f9cc89f4cd364873ae8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.notAvailableAtLocation](argeotrackingstatus/statereason-swift.enum/notavailableatlocation.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.notAvailableAtLocation](argeotrackingstatus/statereason-swift.enum/notavailableatlocation.md)",
+      "sourceHash": "a85177bdd69fbd731c5e5d812e4871b5774d675e0d925c07a29e768537f7f615",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "The location doesn’t provide geotracking.",
+      "ko": "이 위치는 지오트래킹을 제공하지 않습니다.",
+      "sourceHash": "0f37c2a6d8852b1f9bb506f80ad78e63a6c01d66ceb9a3967d84739cfd184b81",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.needLocationPermissions](argeotrackingstatus/statereason-swift.enum/needlocationpermissions.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.needLocationPermissions](argeotrackingstatus/statereason-swift.enum/needlocationpermissions.md)",
+      "sourceHash": "c24ac1e908005b4bd48b8e58cbeb8b47a86d248c3dc0f590bb242ccc97c9adef",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The location requires user permission for geotracking.",
+      "ko": "이 위치는 지오트래킹을 위해 사용자 권한이 필요합니다.",
+      "sourceHash": "77efcabed58bb10120a278d231a5d90ea6ff6855039824defc389886926d55a8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.devicePointedTooLow](argeotrackingstatus/statereason-swift.enum/devicepointedtoolow.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.devicePointedTooLow](argeotrackingstatus/statereason-swift.enum/devicepointedtoolow.md)",
+      "sourceHash": "418fbc84992f556528c7c995699e5ecd34446356c4d6cfecc456e9fdfb49a2fe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "The position of the device is too low for geotracking.",
+      "ko": "기기의 자세가 지오트래킹에 적합할 만큼 높지 않습니다.",
+      "sourceHash": "5b4947a135f5e00765ae2acf9fc3a4f3733e1e0932a410cfe4f110bcf08198be",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.worldTrackingUnstable](argeotrackingstatus/statereason-swift.enum/worldtrackingunstable.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.worldTrackingUnstable](argeotrackingstatus/statereason-swift.enum/worldtrackingunstable.md)",
+      "sourceHash": "593f535d407e83e336999f72ccfeeb836e327b21738184b89dd5601b9ff47caf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "The position or motion of the device makes geotracking unstable.",
+      "ko": "기기의 위치 또는 동작으로 인해 지오트래킹이 불안정합니다.",
+      "sourceHash": "8f38bfc95eb72472aacb316dbc543ccbfff53b58ee56d5381286e08556a5091a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.waitingForLocation](argeotrackingstatus/statereason-swift.enum/waitingforlocation.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.waitingForLocation](argeotrackingstatus/statereason-swift.enum/waitingforlocation.md)",
+      "sourceHash": "b20bef98f70cfca38ab2ef2eb48f01d098344741e7148292a0a8c88060c4f499",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "A state in which the framework performs a check for the user’s GPS position.",
+      "ko": "프레임워크가 사용자의 GPS 위치를 확인하는 상태입니다.",
+      "sourceHash": "07d6708d68212ff822d93a6fe21875435972230f1c8f1a55d6824ccb19c00de5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.waitingForAvailabilityCheck](argeotrackingstatus/statereason-swift.enum/waitingforavailabilitycheck.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.waitingForAvailabilityCheck](argeotrackingstatus/statereason-swift.enum/waitingforavailabilitycheck.md)",
+      "sourceHash": "89be6aa0d18a628d3356be35a726fa37845f07e575e56699d6b1285a6cccc86b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "A state in which the framework performs a check for geotracking availability at the user’s location.",
+      "ko": "프레임워크가 사용자 위치에서 지오트래킹 가용성을 확인하는 상태입니다.",
+      "sourceHash": "e5e2474cb50571c0008639a7f5a61478a5dea49464c6f1c4ce270150509a605e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.visualLocalizationFailed](argeotrackingstatus/statereason-swift.enum/visuallocalizationfailed.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.visualLocalizationFailed](argeotrackingstatus/statereason-swift.enum/visuallocalizationfailed.md)",
+      "sourceHash": "e04536bf7dae730454d9f67d988f62ff81cf226baf566c9b865d32f31f4e9e06",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "Localization imagery failed to match the view from the device’s camera.",
+      "ko": "기기 카메라의 뷰와 위치 정합 이미지가 일치하지 않습니다.",
+      "sourceHash": "05cda7c104b1a598772d9ab728e77189cb28774bb2fdebfab022469ae3e2b99e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.none](argeotrackingstatus/statereason-swift.enum/none.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.none](argeotrackingstatus/statereason-swift.enum/none.md)",
+      "sourceHash": "551804df8e95cd117cbba59d698f3942482f63f0522b6994ab8eda9f7e6d4c09",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "No issues reported.",
+      "ko": "보고된 문제가 없습니다.",
+      "sourceHash": "bad417b714ae41057af85ded42be205a3f7ff6c47d655f9cc89f4cd364873ae8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0029:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.notAvailableAtLocation](argeotrackingstatus/statereason-swift.enum/notavailableatlocation.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.notAvailableAtLocation](argeotrackingstatus/statereason-swift.enum/notavailableatlocation.md)",
+      "sourceHash": "a85177bdd69fbd731c5e5d812e4871b5774d675e0d925c07a29e768537f7f615",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "The location doesn’t provide geotracking.",
+      "ko": "이 위치는 지오트래킹을 제공하지 않습니다.",
+      "sourceHash": "0f37c2a6d8852b1f9bb506f80ad78e63a6c01d66ceb9a3967d84739cfd184b81",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0031:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.needLocationPermissions](argeotrackingstatus/statereason-swift.enum/needlocationpermissions.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.needLocationPermissions](argeotrackingstatus/statereason-swift.enum/needlocationpermissions.md)",
+      "sourceHash": "c24ac1e908005b4bd48b8e58cbeb8b47a86d248c3dc0f590bb242ccc97c9adef",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0032:0001",
+      "source": "The location requires user permission for geotracking.",
+      "ko": "이 위치는 지오트래킹을 위해 사용자 권한이 필요합니다.",
+      "sourceHash": "77efcabed58bb10120a278d231a5d90ea6ff6855039824defc389886926d55a8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0033:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.devicePointedTooLow](argeotrackingstatus/statereason-swift.enum/devicepointedtoolow.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.devicePointedTooLow](argeotrackingstatus/statereason-swift.enum/devicepointedtoolow.md)",
+      "sourceHash": "418fbc84992f556528c7c995699e5ecd34446356c4d6cfecc456e9fdfb49a2fe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0034:0001",
+      "source": "The position of the device is too low for geotracking.",
+      "ko": "기기의 자세가 지오트래킹에 적합할 만큼 높지 않습니다.",
+      "sourceHash": "5b4947a135f5e00765ae2acf9fc3a4f3733e1e0932a410cfe4f110bcf08198be",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0035:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.worldTrackingUnstable](argeotrackingstatus/statereason-swift.enum/worldtrackingunstable.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.worldTrackingUnstable](argeotrackingstatus/statereason-swift.enum/worldtrackingunstable.md)",
+      "sourceHash": "593f535d407e83e336999f72ccfeeb836e327b21738184b89dd5601b9ff47caf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0036:0001",
+      "source": "The position or motion of the device makes geotracking unstable.",
+      "ko": "기기의 위치 또는 동작으로 인해 지오트래킹이 불안정합니다.",
+      "sourceHash": "8f38bfc95eb72472aacb316dbc543ccbfff53b58ee56d5381286e08556a5091a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0037:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.waitingForLocation](argeotrackingstatus/statereason-swift.enum/waitingforlocation.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.waitingForLocation](argeotrackingstatus/statereason-swift.enum/waitingforlocation.md)",
+      "sourceHash": "b20bef98f70cfca38ab2ef2eb48f01d098344741e7148292a0a8c88060c4f499",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0038:0001",
+      "source": "A state in which the framework performs a check for the user’s GPS position.",
+      "ko": "프레임워크가 사용자의 GPS 위치를 확인하는 상태입니다.",
+      "sourceHash": "07d6708d68212ff822d93a6fe21875435972230f1c8f1a55d6824ccb19c00de5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0039:0001",
+      "source": "[ARGeoTrackingStatus.StateReason.waitingForAvailabilityCheck](argeotrackingstatus/statereason-swift.enum/waitingforavailabilitycheck.md)",
+      "ko": "[ARGeoTrackingStatus.StateReason.waitingForAvailabilityCheck](argeotrackingstatus/statereason-swift.enum/waitingforavailabilitycheck.md)",
+      "sourceHash": "89be6aa0d18a628d3356be35a726fa37845f07e575e56699d6b1285a6cccc86b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0040:0001",
+      "source": "A state in which the framework performs a check for geotracking availability at the user’s location.",
+      "ko": "프레임워크가 사용자의 위치에서 지오트래킹 가용성을 확인하는 상태입니다.",
+      "sourceHash": "e5e2474cb50571c0008639a7f5a61478a5dea49464c6f1c4ce270150509a605e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0041:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0042:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/argeotrackingstatus/statereason-swift.enum/geodatanotloaded)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/argeotrackingstatus/statereason-swift.enum/geodatanotloaded)*",
+      "sourceHash": "a3815d48713f26e705666e0dc2af0837de753a97350648c27d35dbb65899c19e",
+      "status": "preserved"
+    }
+  ]
+}

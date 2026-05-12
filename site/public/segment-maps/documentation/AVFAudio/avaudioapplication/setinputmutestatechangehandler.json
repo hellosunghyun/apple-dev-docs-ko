@@ -1,0 +1,190 @@
+{
+  "docId": "documentation/AVFAudio/avaudioapplication/setinputmutestatechangehandler.md",
+  "title": "setInputMuteStateChangeHandler(:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudioapplication/setinputmutestatechangehandler",
+  "segments": [
+    {
+      "id": "seg:heading:setinputmutestatechangehandler:0000:0001",
+      "source": "setInputMuteStateChangeHandler(_:)",
+      "ko": "setInputMuteStateChangeHandler(_:)",
+      "sourceHash": "d8d28859988dd8c5c3c817dd7e3c5ce5ca3fa3ced456984b85c381afd9e00671",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setinputmutestatechangehandler:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: method",
+      "ko": "**Framework**: AVFAudio **Kind**: method",
+      "sourceHash": "9e980d3b5301173f9b270d0909000bbb41e1c6922361d4fa1df1df34f70dafc7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setinputmutestatechangehandler:0002:0001",
+      "source": "Sets a callback to handle changes to application-level audio muting states.",
+      "ko": "애플리케이션 수준 오디오 음소거 상태 변경을 처리할 콜백을 설정합니다.",
+      "sourceHash": "ae77f47326069afbfb064a93f397f255b846c32f66ff76e93a714696006da9a2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:setinputmutestatechangehandler:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setinputmutestatechangehandler:0004:0001",
+      "source": "macOS 14.0+",
+      "ko": "macOS 14.0+",
+      "sourceHash": "c037401748a572da79aedb55d7cb53c26eaac4007d481a2f3f8a76b42f357acb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc setInputMuteStateChangeHandler(_ inputMuteHandler: ((Bool) -> Bool)?) throws\n```",
+      "ko": "```swift\nfunc setInputMuteStateChangeHandler(_ inputMuteHandler: ((Bool) -> Bool)?) throws\n```",
+      "sourceHash": "57a9053e162ab81c87c4daa659a309b1bfc1aac3b565d709da47301c56d2d167",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Use this method to set a closure to handle your macOS app’s input muting logic.",
+      "ko": "이 메서드를 사용하면 macOS 앱의 입력 음소거 로직을 처리할 클로저를 설정할 수 있습니다.",
+      "sourceHash": "d7e222f29d4f077242c73432a43588fea87f0a2644d6dc8299b16903ca97f211",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The system calls thie closure when the input mute state changes, either due to setting the [`isInputMuted`](avaudioapplication/isinputmuted.md) state, or due to a Bluetooth audio accessory gesture (certain AirPods / Beats headphones) changing the mute state.",
+      "ko": "시스템은 입력 음소거 상태가 변경될 때 [`isInputMuted`](avaudioapplication/isinputmuted.md) 상태가 설정되거나 특정 AirPods / Beats 헤드폰의 Bluetooth 오디오 액세서리 제스처로 음소거 상태가 변경될 경우 이 클로저를 호출합니다.",
+      "sourceHash": "6a9197cfef742d35c80bedd16c25bc9f8e8c72bdc43aff62d39a617005cc7aad",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Since the input mute handling logic should happen a single place, subsequent calls to this method overwrite any previously registered block with the one you provide.",
+      "ko": "입력 음소거 처리 로직은 한 곳에서만 수행되어야 하므로, 이 메서드를 뒤이어 호출하면 이전에 등록된 블록이 제공한 블록으로 덮어쓰기됩니다.",
+      "sourceHash": "5c4b4b076241f2c246edadaca6c0fdb9f6b9ff8a0828191db4c3c2361d73cf74",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "You can specify a `nil` to cancel the callback.",
+      "ko": "콜백을 취소하려면 `nil`을 지정할 수 있습니다.",
+      "sourceHash": "bc320f90d794ea2884980fee636b06a5e57e191b6f12149d339393b918085efb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0010:0001",
+      "source": "**Note**: This method is available in macOS only.",
+      "ko": "**참고**: 이 메서드는 macOS에서만 사용할 수 있습니다.",
+      "sourceHash": "ac808be43da93cb15d923061297f6c6561b4215c7ac0312c1a910da50249f95e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0010:0002",
+      "source": "On other platforms, the system handles muting logic internally.",
+      "ko": "다른 플랫폼에서는 시스템이 음소거 로직을 내부적으로 처리합니다.",
+      "sourceHash": "ef3ac9bdf411a9ad14e75aa06ed0bdaeec64d78ddca019efac9a89bfb287c678",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0010:0003",
+      "source": "Perform your input muting logic within this closure, and perform your user interface updates within the handler for [`inputMuteStateChangeNotification`](avaudioapplication/inputmutestatechangenotification.md).",
+      "ko": "이 클로저 내에서 입력 음소거 로직을 수행하고, 사용자 인터페이스 업데이트는 [`inputMuteStateChangeNotification`](avaudioapplication/inputmutestatechangenotification.md) 핸들러에서 수행합니다.",
+      "sourceHash": "e4b3775f76b0736e2b34ab728f2a521ccac53da228a488b77845d5a8733ffc01",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0011:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0012:0001",
+      "source": "`inputMuteHandler`: A callback that the system invokes when the input mute state changes. If the callback receives a [`true`](https://developer.apple.com/documentation/Swift/true) value, mute all input audio samples until the next time the system calls the handler. Return a value of [`true`](https://developer.apple.com/documentation/Swift/true) if you muted input successfully, or in exceptional cases, return [`false`](https://developer.apple.com/documentation/Swift/false) to indicate the mute action fails.",
+      "ko": "`inputMuteHandler`: 입력 음소거 상태 변경 시 시스템이 호출하는 콜백입니다. 콜백이 [`true`](https://developer.apple.com/documentation/Swift/true) 값을 받으면 시스템이 핸들러를 다음에 호출할 때까지 모든 입력 오디오 샘플을 음소거합니다. 입력 음소거를 성공적으로 처리하면 [`true`](https://developer.apple.com/documentation/Swift/true)를 반환하고, 예외적인 경우에는 음소거 동작이 실패했음을 나타내기 위해 [`false`](https://developer.apple.com/documentation/Swift/false)를 반환합니다.",
+      "sourceHash": "dba0a929694e6db228e5d4a2e3ceef1cf9653fa5b6a7e2b9a2f43e77ea72b17a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var isInputMuted: Bool](avaudioapplication/isinputmuted.md)",
+      "ko": "[var isInputMuted: Bool](avaudioapplication/isinputmuted.md)",
+      "sourceHash": "9b56a4a2fa018005c804c41fb3f0f216271d4d5789052aa2c0f1c136f27a8735",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A Boolean value that indicates whether the app’s audio input is in a muted state.",
+      "ko": "앱의 오디오 입력이 음소거 상태인지 나타내는 불리언 값입니다.",
+      "sourceHash": "be4f3f9d5b2101c798f8b9bdec08e7a02aff976232de5453e04c9df014045b6a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func setInputMuted(Bool) throws](avaudioapplication/setinputmuted(_:).md)",
+      "ko": "[func setInputMuted(Bool) throws](avaudioapplication/setinputmuted(_:).md)",
+      "sourceHash": "1f24ff860dc48f160bd2c3e537ef4949b42f7490dd734ad2b3d51528cd623d4d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Sets a Boolean value that indicates whether the app’s audio input is in a muted state.",
+      "ko": "앱의 오디오 입력이 음소거 상태인지 나타내는 불리언 값을 설정합니다.",
+      "sourceHash": "338f406948c263e14abc23bc55ae36d1000110c2bc0622d4ada537e448a1abe4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[class let inputMuteStateChangeNotification: NSNotification.Name](avaudioapplication/inputmutestatechangenotification.md)",
+      "ko": "[class let inputMuteStateChangeNotification: NSNotification.Name](avaudioapplication/inputmutestatechangenotification.md)",
+      "sourceHash": "995a3785c05749381be57e841f27b879154a7f4d0c62b0e04ddc935f4d35f711",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A notification the system posts when the app’s audio input mute state changes.",
+      "ko": "시스템이 앱의 오디오 입력 음소거 상태 변경 시 게시하는 알림입니다.",
+      "sourceHash": "ba67268690aa9a90aa55c5af70cd27bde58b59c961cd652c3dfa3342971254af",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudioapplication/setinputmutestatechangehandler(_:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfaudio/avaudioapplication/setinputmutestatechangehandler(_:))*",
+      "sourceHash": "d1135ace17a92e8db28ca0e62558dddb174fe73ba14a86953d2d16bdd343e5fa",
+      "status": "machine_translated"
+    }
+  ]
+}

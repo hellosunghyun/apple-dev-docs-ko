@@ -1,0 +1,323 @@
+{
+  "docId": "documentation/AVFAudio/avaudiounitreverb.md",
+  "title": "AVAudioUnitReverb",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiounitreverb",
+  "segments": [
+    {
+      "id": "seg:heading:avaudiounitreverb:0000:0001",
+      "source": "AVAudioUnitReverb",
+      "ko": "AVAudioUnitReverb",
+      "sourceHash": "2b51ea617fd0191c61984ae216fe3a04b6c5108f531f54c0cd7da4b53e65e3cb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitreverb:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitreverb:0002:0001",
+      "source": "An object that implements a reverb effect.",
+      "ko": "리버브 효과를 구현하는 객체입니다.",
+      "sourceHash": "6ceba5717453bf2174f0a505c2a47ac3720ef57e940870c6a6889749ead398d7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitreverb:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitreverb:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitreverb:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitreverb:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitreverb:0004:0004",
+      "source": "macOS 10.10+",
+      "ko": "macOS 10.10+",
+      "sourceHash": "928cfc2e204a2d523c05071eb21f65479a96f581dc23a43fa1848eecc5216dcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitreverb:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitreverb:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAudioUnitReverb\n```",
+      "ko": "```swift\nclass AVAudioUnitReverb\n```",
+      "sourceHash": "8a51f5c8d87876ff3b0113436c38944da127db6bd1573a0017f70341a97a8b26",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "A reverb simulates the acoustic characteristics of a particular environment.",
+      "ko": "리버브는 특정 환경의 음향 특성을 시뮬레이션합니다.",
+      "sourceHash": "7052879516aea6268792214409913be38bd7b86f45680d235daed40add4b6ed4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "Use the different presets to simulate a particular space and blend it in with the original signal using the [`wetDryMix`](avaudiounitreverb/wetdrymix.md) property.",
+      "ko": "여러 프리셋을 사용하여 특정 공간을 시뮬레이션하고 [`wetDryMix`](avaudiounitreverb/wetdrymix.md) 속성으로 원본 신호와 혼합합니다.",
+      "sourceHash": "e369549b1dfb4ecb85e67980258ac778b2b8654735e3ff7e255984e6a6161ebf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:configure-the-reverb:0010:0001",
+      "source": "Configure the reverb",
+      "ko": "리버브 구성",
+      "sourceHash": "a8a19dd1574124610d910fae15cc0aba45fa3ed4b8262dcefa789c2aaf20852b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configure-the-reverb:0011:0001",
+      "source": "[func loadFactoryPreset(AVAudioUnitReverbPreset)](avaudiounitreverb/loadfactorypreset(_:).md)",
+      "ko": "[func loadFactoryPreset(AVAudioUnitReverbPreset)](avaudiounitreverb/loadfactorypreset(_:).md)",
+      "sourceHash": "8d73b733fbcfc28ad3b890483abf025ea8e31fb1a9e6b943b0f0d43e8d7db15b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:configure-the-reverb:0012:0001",
+      "source": "Configures the audio unit as a reverb preset.",
+      "ko": "오디오 유닛을 리버브 프리셋으로 구성합니다.",
+      "sourceHash": "b44e2cd24808b14a4b360c46e677af5cb5b4e706050a8cd875a36f523046799e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configure-the-reverb:0013:0001",
+      "source": "[enum AVAudioUnitReverbPreset](avaudiounitreverbpreset.md)",
+      "ko": "[enum AVAudioUnitReverbPreset](avaudiounitreverbpreset.md)",
+      "sourceHash": "846858e63b1e00a12e6c635df1f92399afd67e6a51b0023babf43f93a0a7f4af",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configure-the-reverb:0014:0001",
+      "source": "Constants that represent preset reverbs.",
+      "ko": "프리셋 리버브를 나타내는 상수입니다.",
+      "sourceHash": "a53732ad629c529c5a7e1c651bf7b7f3ff8107a78ba77cac828ce7d4f70cda07",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-and-setting-the-reverb-values:0015:0001",
+      "source": "Getting and setting the reverb values",
+      "ko": "리버브 값 가져오기 및 설정",
+      "sourceHash": "9326cb5de8ed6c1f0329c9d8b3c53e11ffbb57537eb900804c37c4333d788314",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-and-setting-the-reverb-values:0016:0001",
+      "source": "[var wetDryMix: Float](avaudiounitreverb/wetdrymix.md)",
+      "ko": "[var wetDryMix: Float](avaudiounitreverb/wetdrymix.md)",
+      "sourceHash": "c520e2efbb7e8b240c217c191489d44bb750c6002392a9093814b509b9380332",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-and-setting-the-reverb-values:0017:0001",
+      "source": "The blend of the wet and dry signals.",
+      "ko": "wet 신호와 dry 신호의 혼합입니다.",
+      "sourceHash": "21b54236dfc154499223a12d9a4063a35cc2e88d2704ed0511e74a82fbc0011d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0018:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0019:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0020:0001",
+      "source": "[AVAudioUnitEffect](avaudiouniteffect.md)",
+      "ko": "[AVAudioUnitEffect](avaudiouniteffect.md)",
+      "sourceHash": "7c3bdc9ba4dec78ccb595ae753926bbb36482b45e1922d0f613e50b93b43c6d3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0021:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0022:0006",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0023:0001",
+      "source": "See Also",
+      "ko": "관련 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[class AVAudioUnitEffect](avaudiouniteffect.md)",
+      "ko": "[class AVAudioUnitEffect](avaudiouniteffect.md)",
+      "sourceHash": "5f2ba1d1002bd08671d63383c641ba69cde170111c2d2940ad688f667e8aec44",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "An object that processes audio in real time.",
+      "ko": "실시간으로 오디오를 처리하는 객체입니다.",
+      "sourceHash": "674284b1d45543ed5e178e83095b0290f129b8d7f8588d742260a918aeb9965f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[class AVAudioUnitEQ](avaudiouniteq.md)",
+      "ko": "[class AVAudioUnitEQ](avaudiouniteq.md)",
+      "sourceHash": "6c44eeeed76d881b384e5753c172a1f5c06188723e3d604c06bebc88d2efb7c4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "An object that implements a multiband equalizer.",
+      "ko": "다중 밴드 이퀄라이저를 구현하는 객체입니다.",
+      "sourceHash": "2ec631b1d73959ca04a52122279e72e86b6eded43fa4ffc6580b5df8c45c5b23",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[class AVAudioUnitDistortion](avaudiounitdistortion.md)",
+      "ko": "[class AVAudioUnitDistortion](avaudiounitdistortion.md)",
+      "sourceHash": "1568040c2aace00aebd450aa9aea9b41ef92a1960e9d087e11cf29a50b66932e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "An object that implements a multistage distortion effect.",
+      "ko": "다단계 디스토션 효과를 구현하는 객체입니다.",
+      "sourceHash": "5f50530cbf9a31551df2bd366c80e85d7b0a626aa6d61906de8a75a784a1f58d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[class AVAudioUnitDelay](avaudiounitdelay.md)",
+      "ko": "[class AVAudioUnitDelay](avaudiounitdelay.md)",
+      "sourceHash": "ac60387882857e44778943eb9d94fce1cd035358470c5948f167fcb512f56ba2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "An object that implements a delay effect.",
+      "ko": "딜레이 효과를 구현하는 객체입니다.",
+      "sourceHash": "ca3bb5005f78de0ae352350868c1f2037901039399c2690330628c755fa8f6f4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0032:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiounitreverb)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiounitreverb)*",
+      "sourceHash": "dfca3a00a092c308665f9c434183014cbb90745afdfa64a787e0534ae24e558b",
+      "status": "preserved"
+    }
+  ]
+}
