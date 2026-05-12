@@ -1,0 +1,202 @@
+{
+  "batchIndex": 0,
+  "status": "success",
+  "completedAt": "2026-05-12T14:02:25.818Z",
+  "durationMs": 12479,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:geometry:0002:0001",
+        "ko": "감지된 얼굴의 위상 구조를 나타내는 거친 삼각형 메시입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "이 메시는 감지된 얼굴의 3D 형태를 설명하는 버텍스, 인덱스, 텍스처 좌표 버퍼를 제공하여 범용 얼굴 모델을 조정해 감지된 얼굴의 크기, 모양, 현재 표정에 맞춥니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "이러한 버퍼를 선호하는 렌더링 엔진에 전달하여 얼굴 지오메트리를 시각화할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "SceneKit을 사용해 얼굴 지오메트리를 시각화하려면 [`ARSCNFaceGeometry`](arscnfacegeometry.md) 인스턴스를 생성하고 [`update(from:)`](arscnfacegeometry/update(from:).md) 메서드를 사용해 얼굴 지오메트리에 맞게 업데이트합니다."
+      },
+      {
+        "id": "seg:paragraph:vertices:0002:0001",
+        "ko": "메시의 정점입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "[`count`](argeometrysource/count.md)는 정점의 총 수와 같습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "각 정점이 `SIMD3<Float>` 타입이므로 [`componentsPerVector`](argeometrysource/componentspervector.md)는 3입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "다음 코드는 특정 인덱스의 정점을 검색하는 예입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0011:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "버퍼 기반 배열의 메시 데이터입니다."
+      },
+      {
+        "id": "seg:paragraph:anchor:0002:0001",
+        "ko": "광선이 교차한 평면의 앵커입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "기존 평면 대상을 선택한 경우 ARKit는 해당 앵커를 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "예상 평면 대상을 선택한 경우에는 광선이 기존 평면과 교차할 때만 ARKit가 앵커를 제공합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "대상과 광선 교차점의 위치, 회전 및 스케일입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "광선이 교차하는 표면의 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "Raycast에서 교차를 허용하는 표면의 유형입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "광선이 교차한 평면의 정렬입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "중력에 대한 대상의 정렬을 나타내는 사양입니다."
+      },
+      {
+        "id": "seg:heading:configuration-objects:0000:0001",
+        "ko": "구성 객체"
+      },
+      {
+        "id": "seg:paragraph:configuration-objects:0001:0001",
+        "ko": "**Framework**: ARKit"
+      },
+      {
+        "id": "seg:paragraph:configuration-objects:0002:0001",
+        "ko": "증강 현실 세션을 구성해 특정 유형의 콘텐츠를 감지하고 추적합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0004:0001",
+        "ko": "구성 객체는 ARKit가 증강 현실 세션을 설정하고 실행하는 방식을 정의합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0004:0002",
+        "ko": "`[`ARWorldTrackingConfiguration`](arworldtrackingconfiguration.md)`는 후면 카메라 환경에서 가장 폭넓은 기능을 제공하지만, 각 기능은 디바이스 에너지와 연산 주기를 사용합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0004:0003",
+        "ko": "따라서 디바이스 사용 시간을 최대화하고 성능을 유지하려면 추가 옵션은 신중하게 활성화해야 합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0005:0001",
+        "ko": "요구 사항을 더 간결한 기능 집합으로 충족하는 다른 AR 구성이 있다면 그 구성을 사용합니다."
+      },
+      {
+        "id": "seg:paragraph:overview:0005:0002",
+        "ko": "예를 들어 사용자 얼굴 추적, 협업, 또는 장면 재구성이 필요하지 않은 경우 3D 모션 캡처에서는 world-tracking 구성 대신 [`ARBodyTrackingConfiguration`](arbodytrackingconfiguration.md)을 사용합니다."
+      },
+      {
+        "id": "seg:heading:select-frame-features:0006:0001",
+        "ko": "프레임 기능 선택"
+      },
+      {
+        "id": "seg:paragraph:select-frame-features:0007:0001",
+        "ko": "일부 구성은 세션의 프레임과 관련된 하위 기능을 지원합니다."
+      },
+      {
+        "id": "seg:paragraph:select-frame-features:0007:0002",
+        "ko": "구성의 [`frameSemantics`](arconfiguration/framesemantics-swift.property.md)에서 다음 플래그를 설정해 이러한 기능을 활성화합니다."
+      },
+      {
+        "id": "seg:list:select-frame-features:0008:0001",
+        "ko": "**[`bodyDetection`](arconfiguration/framesemantics-swift.struct/bodydetection.md)**: 2D 인간 신체 추적을 활성화합니다."
+      },
+      {
+        "id": "seg:list:select-frame-features:0008:0002",
+        "ko": "**[`personSegmentation`](arconfiguration/framesemantics-swift.struct/personsegmentation.md)**: 사람 오클루전을 활성화합니다."
+      },
+      {
+        "id": "seg:list:select-frame-features:0008:0003",
+        "ko": "**[`personSegmentationWithDepth`](arconfiguration/framesemantics-swift.struct/personsegmentationwithdepth.md)**: 카메라 피드의 사람이 가상 콘텐츠보다 카메라에 더 가까운지 여부를 기준으로 사람 오클루전을 활성화합니다."
+      },
+      {
+        "id": "seg:paragraph:select-frame-features:0009:0001",
+        "ko": "[`frameSemantics`](arconfiguration/framesemantics-swift.property.md)를 설정하기 전에 [`ARConfiguration.FrameSemantics`](arconfiguration/framesemantics-swift.struct.md) 지원 여부를 확인하려면 [`supportsFrameSemantics(_:)`](arconfiguration/supportsframesemantics(_:).md) 를 사용합니다."
+      },
+      {
+        "id": "seg:blockquote:select-frame-features:0010:0001",
+        "ko": "❗ **중요**: 장면에 사람이 없을 것으로 예상되는 단일 사용자 경험에서는 디바이스 반응 속도를 높이기 위해 사람 오클루전을 활성화하지 않아야 합니다."
+      },
+      {
+        "id": "seg:heading:switch-configurations-at-runtime:0011:0001",
+        "ko": "런타임에 구성 전환"
+      },
+      {
+        "id": "seg:paragraph:switch-configurations-at-runtime:0012:0001",
+        "ko": "평면 감지, 프레임 시맨틱, 환경 텍스처링과 같은 기능을 전환하려면 기존 세션에서 [`runWithConfiguration:`](arsession/runwithconfiguration:.md) 를 호출해 런타임에 구성을 전환합니다."
+      },
+      {
+        "id": "seg:paragraph:switch-configurations-at-runtime:0012:0002",
+        "ko": "가능한 경우 ARKit는 물리적 환경과 앵커에 대한 정보처럼 이전 구성에서 세션 중 수집된 모든 정보를 유지합니다."
+      },
+      {
+        "id": "seg:blockquote:switch-configurations-at-runtime:0013:0001",
+        "ko": "💡 **팁**: 저전력 또는 과열 이벤트가 발생하면 AR 경험을 점진적으로 낮은 수준으로 전환할 수 있습니다."
+      },
+      {
+        "id": "seg:blockquote:switch-configurations-at-runtime:0013:0002",
+        "ko": "예를 들어 앱이 제한된 기능에서도 기본 수준으로 동작할 수 있다면, 기기가 냉각될 때까지 잠시 world-tracking 구성을 position-tracking 구성([`ARPositionalTrackingConfiguration`](arpositionaltrackingconfiguration.md))으로 전환할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:switch-configurations-at-runtime:0014:0001",
+        "ko": "세션이 face-tracking 구성과 world-tracking 구성 사이를 전환하면 세션은 상태를 유지하지 않습니다."
+      },
+      {
+        "id": "seg:heading:enable-high-quality-video-and-custom-capture-settings:0015:0001",
+        "ko": "고품질 비디오 및 사용자 지정 캡처 설정 사용"
+      },
+      {
+        "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0016:0001",
+        "ko": "iOS 16에서는 4K 및 고동적 범위(HDR) 비디오 형식을 사용할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0016:0002",
+        "ko": "또한 기본 AV 캡처 장치를 통해 세션의 비디오 설정을 사용자 지정할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0017:0001",
+        "ko": "세션이 4K를 지원하는지 확인하려면 [`recommendedVideoFormatFor4KResolution`](arconfiguration/recommendedvideoformatfor4kresolution.md)를 호출합니다."
+      },
+      {
+        "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0019:0001",
+        "ko": "그런 다음 해당 형식으로 구성을 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0019:0002",
+        "ko": "또한 [`videoHDRAllowed`](arconfiguration/videohdrallowed.md)를 `true`로 설정해 HDR 사용 의도를 지정할 수도 있습니다."
+      },
+      {
+        "id": "seg:paragraph:enable-high-quality-video-and-custom-capture-settings:0021:0001",
+        "ko": "기기가 구성 가능한 캡처 세션을 지원하면 [`configurableCaptureDeviceForPrimaryCamera`](arconfiguration/configurablecapturedeviceforprimarycamera.md)가 필요에 따라 조정할 수 있는 기본 캡처 장치를 제공합니다."
+      }
+    ]
+  }
+}

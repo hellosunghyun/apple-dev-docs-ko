@@ -1,0 +1,1369 @@
+{
+  "generatedAt": "2026-05-12T14:02:13.335Z",
+  "updatedAt": "2026-05-12T14:03:30.609Z",
+  "reason": "paused",
+  "queue": "state/queue/shard-0024.json",
+  "shard": {
+    "index": 24,
+    "total": 256
+  },
+  "abortReason": "Paused after Codex usage limit; retry after 7:02 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM.",
+    "retryAfterText": "7:02 PM",
+    "retryAt": "2026-05-12T19:02:00.000Z"
+  },
+  "totals": {
+    "batches": 261,
+    "segments": 13950,
+    "completed": 8,
+    "failed": 1,
+    "processed": 9,
+    "active": 0,
+    "queued": 252,
+    "percent": 3.45
+  },
+  "batches": [
+    {
+      "index": 0,
+      "status": "success",
+      "segments": 48,
+      "startedAt": "2026-05-12T14:02:13.339Z",
+      "completedAt": "2026-05-12T14:02:25.818Z",
+      "durationMs": 12479
+    },
+    {
+      "index": 1,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:13.339Z",
+      "completedAt": "2026-05-12T14:02:29.337Z",
+      "durationMs": 15998
+    },
+    {
+      "index": 2,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:13.339Z",
+      "completedAt": "2026-05-12T14:02:26.087Z",
+      "durationMs": 12748
+    },
+    {
+      "index": 3,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:25.820Z",
+      "completedAt": "2026-05-12T14:02:46.793Z",
+      "durationMs": 20973
+    },
+    {
+      "index": 4,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:26.094Z",
+      "completedAt": "2026-05-12T14:02:47.766Z",
+      "durationMs": 21672
+    },
+    {
+      "index": 5,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:29.341Z",
+      "completedAt": "2026-05-12T14:02:50.532Z",
+      "durationMs": 21191
+    },
+    {
+      "index": 6,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:46.796Z",
+      "completedAt": "2026-05-12T14:03:06.610Z",
+      "durationMs": 19814
+    },
+    {
+      "index": 7,
+      "status": "queued",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:47.769Z",
+      "completedAt": "2026-05-12T14:03:11.539Z",
+      "durationMs": 23770,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+    },
+    {
+      "index": 8,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T14:02:50.536Z",
+      "completedAt": "2026-05-12T14:03:09.242Z",
+      "durationMs": 18706
+    },
+    {
+      "index": 9,
+      "status": "failed",
+      "segments": 48,
+      "startedAt": "2026-05-12T14:03:06.613Z",
+      "completedAt": "2026-05-12T14:03:30.604Z",
+      "durationMs": 23991,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1c7f-d460-7e91-ab68-9f31f18fddef\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"id\": \"seg:paragraph:discussion:0016:0001\",\n      \"source\": \"``\",\n      \"contextBefore\": \"For Swift projects, specify `ACCELERATE_NEW_LAPACK=1` and `ACCELERATE_LAPACK_ILP64=1` as preprocessor macros in Xcode build settings.\",\n      \"contextAfter\": \"Parameters\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0001\",\n      \"source\": \"`ORDER`: Specifies row-major (C) or column-major (Fortran) data ordering.\",\n      \"contextBefore\": \"Parameters\",\n      \"contextAfter\": \"`SIDE`: Determines the order in which the matrices should be multiplied.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0002\",\n      \"source\": \"`SIDE`: Determines the order in which the matrices should be multiplied.\",\n      \"contextBefore\": \"`ORDER`: Specifies row-major (C) or column-major (Fortran) data ordering.\",\n      \"contextAfter\": \"`UPLO`: Specifies whether to use the upper or lower triangle from the matrix. Valid values are `'U'` or `'L'`.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0003\",\n      \"source\": \"`UPLO`: Specifies whether to use the upper or lower triangle from the matrix. Valid values are `'U'` or `'L'`.\",\n      \"contextBefore\": \"`SIDE`: Determines the order in which the matrices should be multiplied.\",\n      \"contextAfter\": \"`M`: The number of rows in matrices `A` and `C`.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0004\",\n      \"source\": \"`M`: The number of rows in matrices `A` and `C`.\",\n      \"contextBefore\": \"`UPLO`: Specifies whether to use the upper or lower triangle from the matrix. Valid values are `'U'` or `'L'`.\",\n      \"contextAfter\": \"`N`: The number of columns in matrices `B` and `C`.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0005\",\n      \"source\": \"`N`: The number of columns in matrices `B` and `C`.\",\n      \"contextBefore\": \"`M`: The number of rows in matrices `A` and `C`.\",\n      \"contextAfter\": \"`ALPHA`: Scaling factor for the product of matrices A and B.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0006\",\n      \"source\": \"`ALPHA`: Scaling factor for the product of matrices A and B.\",\n      \"contextBefore\": \"`N`: The number of columns in matrices `B` and `C`.\",\n      \"contextAfter\": \"`A`: Matrix A.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0007\",\n      \"source\": \"`A`: Matrix A.\",\n      \"contextBefore\": \"`ALPHA`: Scaling factor for the product of matrices A and B.\",\n      \"contextAfter\": \"`LDA`: The size of the first dimension of matrix `A`; if you are passing a matrix `A[m][n]`, the value should be `m`.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0008\",\n      \"source\": \"`LDA`: The size of the first dimension of matrix `A`; if you are passing a matrix `A[m][n]`, the value should be `m`.\",\n      \"contextBefore\": \"`A`: Matrix A.\",\n      \"contextAfter\": \"`B`: Matrix B.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0009\",\n      \"source\": \"`B`: Matrix B.\",\n      \"contextBefore\": \"`LDA`: The size of the first dimension of matrix `A`; if you are passing a matrix `A[m][n]`, the value should be `m`.\",\n      \"contextAfter\": \"`LDB`: The size of the first dimension of matrix `B`; if you are passing a matrix `B[m][n]`, the value should be `m`.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0010\",\n      \"source\": \"`LDB`: The size of the first dimension of matrix `B`; if you are passing a matrix `B[m][n]`, the value should be `m`.\",\n      \"contextBefore\": \"`B`: Matrix B.\",\n      \"contextAfter\": \"`BETA`: Scaling factor for matrix C.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0011\",\n      \"source\": \"`BETA`: Scaling factor for matrix C.\",\n      \"contextBefore\": \"`LDB`: The size of the first dimension of matrix `B`; if you are passing a matrix `B[m][n]`, the value should be `m`.\",\n      \"contextAfter\": \"`C`: Matrix C.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0012\",\n      \"source\": \"`C`: Matrix C.\",\n      \"contextBefore\": \"`BETA`: Scaling factor for matrix C.\",\n      \"contextAfter\": \"`LDC`: The size of the first dimension of matrix `C`; if you are passing a matrix `C[m][n]`, the value should be `m`.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:parameters:0018:0013\",\n      \"source\": \"`LDC`: The size of the first dimension of matrix `C`; if you are passing a matrix `C[m][n]`, the value should be `m`.\",\n      \"contextBefore\": \"`C`: Matrix C.\",\n      \"contextAfter\": \"See Also\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0019:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"`LDC`: The size of the first dimension of matrix `C`; if you are passing a matrix `C[m][n]`, the value should be `m`.\",\n      \"contextAfter\": \"[func cblas_dzasum(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> Double](cblas_dzasum(_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0020:0001\",\n      \"source\": \"[func cblas_dzasum(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> Double](cblas_dzasum(_:_:_:).md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"Computes the sum of the absolute values of real and imaginary parts of elements in a vector (single-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"Computes the sum of the absolute values of real and imaginary parts of elements in a vector (single-precision complex).\",\n      \"contextBefore\": \"[func cblas_dzasum(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> Double](cblas_dzasum(_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_dznrm2(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> Double](cblas_dznrm2(_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0022:0001\",\n      \"source\": \"[func cblas_dznrm2(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> Double](cblas_dznrm2(_:_:_:).md)\",\n      \"contextBefore\": \"Computes the sum of the absolute values of real and imaginary parts of elements in a vector (single-precision complex).\",\n      \"contextAfter\": \"Computes the unitary norm of a vector (double-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"Computes the unitary norm of a vector (double-precision complex).\",\n      \"contextBefore\": \"[func cblas_dznrm2(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> Double](cblas_dznrm2(_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zaxpy(__LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zaxpy(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0024:0001\",\n      \"source\": \"[func cblas_zaxpy(__LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zaxpy(_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Computes the unitary norm of a vector (double-precision complex).\",\n      \"contextAfter\": \"Computes a constant times a vector plus a vector (double-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"Computes a constant times a vector plus a vector (double-precision complex).\",\n      \"contextBefore\": \"[func cblas_zaxpy(__LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zaxpy(_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zcopy(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zcopy(_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0026:0001\",\n      \"source\": \"[func cblas_zcopy(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zcopy(_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Computes a constant times a vector plus a vector (double-precision complex).\",\n      \"contextAfter\": \"Copies a vector to another vector (double-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0027:0001\",\n      \"source\": \"Copies a vector to another vector (double-precision complex).\",\n      \"contextBefore\": \"[func cblas_zcopy(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zcopy(_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zdrot(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Double, Double)](cblas_zdrot(_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0028:0001\",\n      \"source\": \"[func cblas_zdrot(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Double, Double)](cblas_zdrot(_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Copies a vector to another vector (double-precision complex).\",\n      \"contextAfter\": \"Applies a Givens rotation matrix to a pair of complex vectors.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"Applies a Givens rotation matrix to a pair of complex vectors.\",\n      \"contextBefore\": \"[func cblas_zdrot(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Double, Double)](cblas_zdrot(_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zdscal(__LAPACK_int, Double, OpaquePointer?, __LAPACK_int)](cblas_zdscal(_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0030:0001\",\n      \"source\": \"[func cblas_zdscal(__LAPACK_int, Double, OpaquePointer?, __LAPACK_int)](cblas_zdscal(_:_:_:_:).md)\",\n      \"contextBefore\": \"Applies a Givens rotation matrix to a pair of complex vectors.\",\n      \"contextAfter\": \"Multiplies each element of a vector by a constant (double-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"Multiplies each element of a vector by a constant (double-precision complex).\",\n      \"contextBefore\": \"[func cblas_zdscal(__LAPACK_int, Double, OpaquePointer?, __LAPACK_int)](cblas_zdscal(_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zgbmv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgbmv(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0032:0001\",\n      \"source\": \"[func cblas_zgbmv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgbmv(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies each element of a vector by a constant (double-precision complex).\",\n      \"contextAfter\": \"Scales a general band matrix, then multiplies by a vector, then adds a vector (double-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"Scales a general band matrix, then multiplies by a vector, then adds a vector (double-precision complex).\",\n      \"contextBefore\": \"[func cblas_zgbmv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgbmv(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zgemm(CBLAS_ORDER, CBLAS_TRANSPOSE, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgemm(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0034:0001\",\n      \"source\": \"[func cblas_zgemm(CBLAS_ORDER, CBLAS_TRANSPOSE, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgemm(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Scales a general band matrix, then multiplies by a vector, then adds a vector (double-precision complex).\",\n      \"contextAfter\": \"Multiplies two matrices (double-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0035:0001\",\n      \"source\": \"Multiplies two matrices (double-precision complex).\",\n      \"contextBefore\": \"[func cblas_zgemm(CBLAS_ORDER, CBLAS_TRANSPOSE, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgemm(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zgemv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgemv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0036:0001\",\n      \"source\": \"[func cblas_zgemv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgemv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies two matrices (double-precision complex).\",\n      \"contextAfter\": \"Multiplies a matrix by a vector (double-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0037:0001\",\n      \"source\": \"Multiplies a matrix by a vector (double-precision complex).\",\n      \"contextBefore\": \"[func cblas_zgemv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgemv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zgerc(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0038:0001\",\n      \"source\": \"[func cblas_zgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zgerc(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies a matrix by a vector (double-precision complex).\",\n      \"contextAfter\": \"Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (double-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0039:0001\",\n      \"source\": \"Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (double-precision complex).\",\n      \"contextBefore\": \"[func cblas_zgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zgerc(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zgeru(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0040:0001\",\n      \"source\": \"[func cblas_zgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zgeru(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (double-precision complex).\",\n      \"contextAfter\": \"Multiplies vector X by the transpose of vector Y, then adds matrix A (double-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0041:0001\",\n      \"source\": \"Multiplies vector X by the transpose of vector Y, then adds matrix A (double-precision complex).\",\n      \"contextBefore\": \"[func cblas_zgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zgeru(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zhbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0042:0001\",\n      \"source\": \"[func cblas_zhbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Multiplies vector X by the transpose of vector Y, then adds matrix A (double-precision complex).\",\n      \"contextAfter\": \"Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (double-precision complex).\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0043:0001\",\n      \"source\": \"Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (double-precision complex).\",\n      \"contextBefore\": \"[func cblas_zhbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zhemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhemv(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0044:0001\",\n      \"source\": \"[func cblas_zhemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhemv(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (double-precision complex).\",\n      \"contextAfter\": \"Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0045:0001\",\n      \"source\": \"Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.\",\n      \"contextBefore\": \"[func cblas_zhemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhemv(_:_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Double, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zher(_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0046:0001\",\n      \"source\": \"[func cblas_zher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Double, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zher(_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.\",\n      \"contextAfter\": \"Adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0047:0001\",\n      \"source\": \"Adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.\",\n      \"contextBefore\": \"[func cblas_zher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Double, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zher(_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"[func cblas_zher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zher2(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:list:see-also:0048:0001\",\n      \"source\": \"[func cblas_zher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zher2(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextBefore\": \"Adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.\",\n      \"contextAfter\": \"Hermitian rank 2 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of vector `Y` to the product of the conjugate of the scaling factor, vector `Y`, and the conjugate transpose of vector `X`, and adds the result to matrix `A`.\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0049:0001\",\n      \"source\": \"Hermitian rank 2 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of vector `Y` to the product of the conjugate of the scaling factor, vector `Y`, and the conjugate transpose of vector `X`, and adds the result to matrix `A`.\",\n      \"contextBefore\": \"[func cblas_zher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zher2(_:_:_:_:_:_:_:_:_:_:).md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:paragraph:see-also:0051:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/cblas_zhemm(_:_:_:_:_:_:_:_:_:_:_:_:_:))*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"cblaszhemm(:::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:cggsvp:0000:0001\",\n      \"source\": \"cggsvp_(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: Accelerate **Kind**: func\",\n      \"documentTitle\": \"cggsvp(:::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"id\": \"seg:heading:see-also:0006:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nfunc cggsvp_(_ jobu: UnsafePointer<CChar>, _ jobv: UnsafePointer<CChar>, _ jobq: UnsafePointer<CChar>, _ m: UnsafePointer<__LAPACK_int>, _ p: UnsafePointer<__LAPACK_int>, _ n: UnsafePointer<__LAPACK_int>, _ a: OpaquePointer?, _ lda: UnsafePointer<__LAPACK_int>, _ b: OpaquePointer?, _ ldb: UnsafePointer<__LAPACK_int>, _ tola: UnsafePointer<Float>, _ tolb: UnsafePointer<Float>, _ k: UnsafeMutablePointer<__LAPACK_int>, _ l: UnsafeMutablePointer<__LAPACK_int>, _ u: OpaquePointer?, _ ldu: UnsafePointer<__LAPACK_int>, _ v: OpaquePointer?, _ ldv: UnsafePointer<__LAPACK_int>, _ q: OpaquePointer?, _ ldq: UnsafePointer<__LAPACK_int>, _ iwork: UnsafeMutablePointer<__LAPACK_int>?, _ rwork: UnsafeMutablePointer<Float>?, _ tau: OpaquePointer?, _ work: OpaquePointer, _ info: UnsafeMutablePointer<__LAPACK_int>)\\n```\",\n      \"contextAfter\": \"[func caxpy_(UnsafePointer<__LAPACK_int>, OpaquePointer, OpaquePointer?, UnsafePointer<__LAPACK_int>, OpaquePointer?, UnsafePointer<__LAPACK_int>)](caxpy_(_:_:_:_:_:_:).md)\",\n      \"documentTitle\": \"cggsvp(:::::::::::::::::::::::::)\",\n      \"framework\": \"Accelerate\"\n    }\n  ]\n}\n\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T14:03:20.969389Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:21.566106Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T14:03:22.275720Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T14:03:23.212550Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T14:03:24.489109Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T14:03:26.646829Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T14:03:30.376007Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 841a0e98-eb63-4d89-9853-4991cf266b1b\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 841a0e98-eb63-4d89-9853-4991cf266b1b"
+    },
+    {
+      "index": 10,
+      "status": "queued",
+      "segments": 24,
+      "startedAt": "2026-05-12T14:03:09.245Z",
+      "completedAt": "2026-05-12T14:03:13.191Z",
+      "durationMs": 3946,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 7:02 PM."
+    },
+    {
+      "index": 11,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 12,
+      "status": "queued",
+      "segments": 25
+    },
+    {
+      "index": 13,
+      "status": "queued",
+      "segments": 24
+    },
+    {
+      "index": 14,
+      "status": "queued",
+      "segments": 36
+    },
+    {
+      "index": 15,
+      "status": "queued",
+      "segments": 33
+    },
+    {
+      "index": 16,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 17,
+      "status": "queued",
+      "segments": 34
+    },
+    {
+      "index": 18,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 19,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 20,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 21,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 22,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 23,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 24,
+      "status": "queued",
+      "segments": 22
+    },
+    {
+      "index": 25,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 26,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 27,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 28,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 29,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 30,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 31,
+      "status": "queued",
+      "segments": 37
+    },
+    {
+      "index": 32,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 33,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 34,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 35,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 36,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 37,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 38,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 39,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 40,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 41,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 42,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 43,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 44,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 45,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 46,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 47,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 48,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 49,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 50,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 51,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 52,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 53,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 54,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 55,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 56,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 57,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 58,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 59,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 60,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 61,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 62,
+      "status": "queued",
+      "segments": 49
+    },
+    {
+      "index": 63,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 64,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 65,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 66,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 67,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 68,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 69,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 70,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 71,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 72,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 73,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 74,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 75,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 76,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 77,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 78,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 79,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 80,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 81,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 82,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 83,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 84,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 85,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 86,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 87,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 88,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 89,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 90,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 91,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 92,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 93,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 94,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 95,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 96,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 97,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 98,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 99,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 100,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 101,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 102,
+      "status": "queued",
+      "segments": 33
+    },
+    {
+      "index": 103,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 104,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 105,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 106,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 107,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 108,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 109,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 110,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 111,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 112,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 113,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 114,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 115,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 116,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 117,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 118,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 119,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 120,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 121,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 122,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 123,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 124,
+      "status": "queued",
+      "segments": 31
+    },
+    {
+      "index": 125,
+      "status": "queued",
+      "segments": 31
+    },
+    {
+      "index": 126,
+      "status": "queued",
+      "segments": 30
+    },
+    {
+      "index": 127,
+      "status": "queued",
+      "segments": 16
+    },
+    {
+      "index": 128,
+      "status": "queued",
+      "segments": 15
+    },
+    {
+      "index": 129,
+      "status": "queued",
+      "segments": 15
+    },
+    {
+      "index": 130,
+      "status": "queued",
+      "segments": 15
+    },
+    {
+      "index": 131,
+      "status": "queued",
+      "segments": 16
+    },
+    {
+      "index": 132,
+      "status": "queued",
+      "segments": 15
+    },
+    {
+      "index": 133,
+      "status": "queued",
+      "segments": 15
+    },
+    {
+      "index": 134,
+      "status": "queued",
+      "segments": 25
+    },
+    {
+      "index": 135,
+      "status": "queued",
+      "segments": 25
+    },
+    {
+      "index": 136,
+      "status": "queued",
+      "segments": 25
+    },
+    {
+      "index": 137,
+      "status": "queued",
+      "segments": 25
+    },
+    {
+      "index": 138,
+      "status": "queued",
+      "segments": 29
+    },
+    {
+      "index": 139,
+      "status": "queued",
+      "segments": 20
+    },
+    {
+      "index": 140,
+      "status": "queued",
+      "segments": 17
+    },
+    {
+      "index": 141,
+      "status": "queued",
+      "segments": 17
+    },
+    {
+      "index": 142,
+      "status": "queued",
+      "segments": 17
+    },
+    {
+      "index": 143,
+      "status": "queued",
+      "segments": 17
+    },
+    {
+      "index": 144,
+      "status": "queued",
+      "segments": 17
+    },
+    {
+      "index": 145,
+      "status": "queued",
+      "segments": 16
+    },
+    {
+      "index": 146,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 147,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 148,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 149,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 150,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 151,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 152,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 153,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 154,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 155,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 156,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 157,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 158,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 159,
+      "status": "queued",
+      "segments": 27
+    },
+    {
+      "index": 160,
+      "status": "queued",
+      "segments": 25
+    },
+    {
+      "index": 161,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 162,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 163,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 164,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 165,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 166,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 167,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 168,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 169,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 170,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 171,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 172,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 173,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 174,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 175,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 176,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 177,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 178,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 179,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 180,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 181,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 182,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 183,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 184,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 185,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 186,
+      "status": "queued",
+      "segments": 40
+    },
+    {
+      "index": 187,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 188,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 189,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 190,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 191,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 192,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 193,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 194,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 195,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 196,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 197,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 198,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 199,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 200,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 201,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 202,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 203,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 204,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 205,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 206,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 207,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 208,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 209,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 210,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 211,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 212,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 213,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 214,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 215,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 216,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 217,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 218,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 219,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 220,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 221,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 222,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 223,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 224,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 225,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 226,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 227,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 228,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 229,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 230,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 231,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 232,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 233,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 234,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 235,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 236,
+      "status": "queued",
+      "segments": 41
+    },
+    {
+      "index": 237,
+      "status": "queued",
+      "segments": 32
+    },
+    {
+      "index": 238,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 239,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 240,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 241,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 242,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 243,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 244,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 245,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 246,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 247,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 248,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 249,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 250,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 251,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 252,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 253,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 254,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 255,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 256,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 257,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 258,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 259,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 260,
+      "status": "queued",
+      "segments": 34
+    }
+  ]
+}
