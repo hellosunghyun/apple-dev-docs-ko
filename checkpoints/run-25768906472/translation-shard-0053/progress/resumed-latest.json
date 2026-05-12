@@ -1,0 +1,1262 @@
+{
+  "generatedAt": "2026-05-12T16:04:27.773Z",
+  "updatedAt": "2026-05-12T16:05:19.572Z",
+  "reason": "paused",
+  "queue": "state/queue/shard-0053.json",
+  "shard": {
+    "index": 53,
+    "total": 256
+  },
+  "abortReason": "Paused after Codex usage limit; retry after 9:04 PM",
+  "pause": {
+    "message": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM.",
+    "retryAfterText": "9:04 PM",
+    "retryAt": "2026-05-12T21:04:00.000Z"
+  },
+  "totals": {
+    "batches": 240,
+    "segments": 13395,
+    "completed": 10,
+    "failed": 1,
+    "processed": 11,
+    "active": 0,
+    "queued": 229,
+    "percent": 4.58
+  },
+  "batches": [
+    {
+      "index": 0,
+      "status": "success",
+      "segments": 54,
+      "completedAt": "2026-05-12T14:02:32.148Z",
+      "durationMs": 10433
+    },
+    {
+      "index": 1,
+      "status": "success",
+      "segments": 60,
+      "completedAt": "2026-05-12T14:02:34.888Z",
+      "durationMs": 13173
+    },
+    {
+      "index": 2,
+      "status": "success",
+      "segments": 31,
+      "completedAt": "2026-05-12T14:02:31.057Z",
+      "durationMs": 9342
+    },
+    {
+      "index": 3,
+      "status": "success",
+      "segments": 22,
+      "completedAt": "2026-05-12T14:02:42.005Z",
+      "durationMs": 10945
+    },
+    {
+      "index": 4,
+      "status": "success",
+      "segments": 25,
+      "completedAt": "2026-05-12T14:03:13.638Z",
+      "durationMs": 41487
+    },
+    {
+      "index": 5,
+      "status": "success",
+      "segments": 24,
+      "completedAt": "2026-05-12T14:02:52.567Z",
+      "durationMs": 17675
+    },
+    {
+      "index": 6,
+      "status": "success",
+      "segments": 22,
+      "completedAt": "2026-05-12T14:03:01.466Z",
+      "durationMs": 19458
+    },
+    {
+      "index": 7,
+      "status": "success",
+      "segments": 23,
+      "completedAt": "2026-05-12T14:03:10.065Z",
+      "durationMs": 17494
+    },
+    {
+      "index": 8,
+      "status": "queued",
+      "segments": 48,
+      "startedAt": "2026-05-12T16:04:27.779Z",
+      "completedAt": "2026-05-12T16:05:04.262Z",
+      "durationMs": 36483,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM."
+    },
+    {
+      "index": 9,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:27.779Z",
+      "completedAt": "2026-05-12T16:04:51.248Z",
+      "durationMs": 23469
+    },
+    {
+      "index": 10,
+      "status": "success",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:27.779Z",
+      "completedAt": "2026-05-12T16:05:02.841Z",
+      "durationMs": 35062
+    },
+    {
+      "index": 11,
+      "status": "failed",
+      "segments": 60,
+      "startedAt": "2026-05-12T16:04:51.251Z",
+      "completedAt": "2026-05-12T16:05:11.673Z",
+      "durationMs": 20422,
+      "error": "Command failed with exit code 1: codex exec --ephemeral --output-schema /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko/schemas/translation-output.schema.json --model gpt-5.3-codex-spark -\n\nOpenAI Codex v0.130.0\n--------\nworkdir: /home/runner/work/apple-dev-docs-ko/apple-dev-docs-ko\nmodel: gpt-5.3-codex-spark\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsession id: 019e1cef-3e79-77a0-989e-697e8dca6c80\n--------\nuser\nYou are translating Apple Developer Documentation segments into Korean.\n\nReturn JSON only.\n\nRules:\n- Preserve each segment sourcePath and id exactly.\n- Translate only natural language.\n- Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.\n- Use concise Korean technical documentation style.\n- Do not add explanations that are not present in the source.\n- Keep inline code unchanged.\n- Keep Markdown links unchanged except surrounding Korean grammar.\n- Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.\n- Output must match this schema:\n  {\"segments\":[{\"sourcePath\":\"...\",\"id\":\"...\",\"ko\":\"...\"}]}\n\nInput JSON:\n{\n  \"task\": \"translate_apple_developer_docs_segments_to_korean\",\n  \"projectContext\": {\n    \"purpose\": \"learning project within Apple Developer Academy @ POSTECH\",\n    \"audience\": \"Korean learners and developers\",\n    \"style\": \"concise Korean technical documentation style\"\n  },\n  \"rules\": {\n    \"output\": \"json_only\",\n    \"preserveSegmentIds\": true,\n    \"preserveMarkdown\": true,\n    \"preserveCode\": true,\n    \"preserveApiSymbols\": true,\n    \"doNotAddExplanations\": true,\n    \"doNotTranslateFrameworkNames\": true\n  },\n  \"glossary\": {\n    \"preserve\": [\n      \"SwiftUI\",\n      \"UIKit\",\n      \"AppKit\",\n      \"Core Motion\",\n      \"SensorKit\",\n      \"Create ML\",\n      \"RealityKit\",\n      \"AVFoundation\",\n      \"App Store\",\n      \"WidgetKit\",\n      \"Live Activities\",\n      \"API\",\n      \"SDK\",\n      \"framework\",\n      \"protocol\",\n      \"struct\",\n      \"class\",\n      \"enum\",\n      \"property\",\n      \"method\",\n      \"initializer\",\n      \"modifier\"\n    ],\n    \"translations\": {\n      \"authorization\": \"권한 부여\",\n      \"privacy\": \"개인정보 보호\",\n      \"capability\": \"기능\",\n      \"entitlement\": \"엔타이틀먼트\",\n      \"sample code\": \"샘플 코드\"\n    },\n    \"style\": {\n      \"tone\": \"간결한 한국어 기술 문서체\",\n      \"sentenceEnding\": \"합니다\",\n      \"avoid\": [\n        \"당신\",\n        \"하십시오\",\n        \"합니다만\"\n      ]\n    }\n  },\n  \"segments\": [\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:affine-transform-matrix-elements:0025:0001\",\n      \"source\": \"The entry at position `[2,2]` in the matrix.\",\n      \"contextBefore\": \"[var d: Double](vimage_affinetransform_double/d.md)\",\n      \"contextAfter\": \"[var tx: Double](vimage_affinetransform_double/tx.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:affine-transform-matrix-elements:0027:0001\",\n      \"source\": \"The entry at position `[3,1]` in the matrix.\",\n      \"contextBefore\": \"[var tx: Double](vimage_affinetransform_double/tx.md)\",\n      \"contextAfter\": \"[var ty: Double](vimage_affinetransform_double/ty.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:affine-transform-matrix-elements:0029:0001\",\n      \"source\": \"The entry at position `[3,2]` in the matrix.\",\n      \"contextBefore\": \"[var ty: Double](vimage_affinetransform_double/ty.md)\",\n      \"contextAfter\": \"Relationships\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:heading:conforms-to:0031:0001\",\n      \"source\": \"Conforms To\",\n      \"contextBefore\": \"Relationships\",\n      \"contextAfter\": \"[BitwiseCopyable](../Swift/BitwiseCopyable.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:heading:see-also:0033:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"[Sendable](../Swift/Sendable.md)\",\n      \"contextAfter\": \"[struct vImage_Buffer](vimage_buffer.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:see-also:0035:0001\",\n      \"source\": \"An image buffer that stores an image’s pixel data, dimensions, and row stride.\",\n      \"contextBefore\": \"[struct vImage_Buffer](vimage_buffer.md)\",\n      \"contextAfter\": \"[typealias vImagePixelCount](vimagepixelcount.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:see-also:0037:0001\",\n      \"source\": \"A type for the number of pixels.\",\n      \"contextBefore\": \"[typealias vImagePixelCount](vimagepixelcount.md)\",\n      \"contextAfter\": \"[struct vImage_AffineTransform](vimage_affinetransform.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:see-also:0039:0001\",\n      \"source\": \"A structure for values that represent an affine transformation.\",\n      \"contextBefore\": \"[struct vImage_AffineTransform](vimage_affinetransform.md)\",\n      \"contextAfter\": \"[typealias vImage_CGAffineTransform](vimage_cgaffinetransform.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:see-also:0041:0001\",\n      \"source\": \"A structure for values that represent a Core Graphics–compatible affine transformation.\",\n      \"contextBefore\": \"[typealias vImage_CGAffineTransform](vimage_cgaffinetransform.md)\",\n      \"contextAfter\": \"[typealias vImage_Error](vimage_error.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:see-also:0043:0001\",\n      \"source\": \"A type for image errors.\",\n      \"contextBefore\": \"[typealias vImage_Error](vimage_error.md)\",\n      \"contextAfter\": \"[typealias vImage_Flags](vimage_flags.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:see-also:0045:0001\",\n      \"source\": \"A type for processing options.\",\n      \"contextBefore\": \"[typealias vImage_Flags](vimage_flags.md)\",\n      \"contextAfter\": \"[typealias GammaFunction](gammafunction.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:see-also:0047:0001\",\n      \"source\": \"A type for a gamma function.\",\n      \"contextBefore\": \"[typealias GammaFunction](gammafunction.md)\",\n      \"contextAfter\": \"[typealias ResamplingFilter](resamplingfilter.md)\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage-affinetransform-double.md\",\n      \"id\": \"seg:paragraph:see-also:0049:0001\",\n      \"source\": \"A pointer to a resampling filter callback function.\",\n      \"contextBefore\": \"[typealias ResamplingFilter](resamplingfilter.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"vImageAffineTransformDouble\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:vimagebuffertypeycbcr:0002:0001\",\n      \"source\": \"The buffer contains interleaved luminance and both chroma channels.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: case\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:list:vimagebuffertypeycbcr:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 13.0+\",\n      \"contextAfter\": \"macOS 10.15+\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:list:vimagebuffertypeycbcr:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS 13.0+\",\n      \"contextAfter\": \"watchOS 6.0+\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:heading:see-also:0007:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\ncase YCbCr\\n```\",\n      \"contextAfter\": \"[vImage.BufferType.Cb](vimage/buffertype/cb.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0009:0001\",\n      \"source\": \"The buffer contains the blue chrominance channel.\",\n      \"contextBefore\": \"[vImage.BufferType.Cb](vimage/buffertype/cb.md)\",\n      \"contextAfter\": \"[vImage.BufferType.Cr](vimage/buffertype/cr.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0011:0001\",\n      \"source\": \"The buffer contains the red chrominance channel.\",\n      \"contextBefore\": \"[vImage.BufferType.Cr](vimage/buffertype/cr.md)\",\n      \"contextAfter\": \"[vImage.BufferType.alpha](vimage/buffertype/alpha.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0013:0001\",\n      \"source\": \"The buffer contains the alpha channel or coverage component.\",\n      \"contextBefore\": \"[vImage.BufferType.alpha](vimage/buffertype/alpha.md)\",\n      \"contextAfter\": \"[vImage.BufferType.chroma](vimage/buffertype/chroma.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0015:0001\",\n      \"source\": \"The buffer contains the interleaved chrominance channels.\",\n      \"contextBefore\": \"[vImage.BufferType.chroma](vimage/buffertype/chroma.md)\",\n      \"contextAfter\": \"[vImage.BufferType.chunky](vimage/buffertype/chunky.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0017:0001\",\n      \"source\": \"The buffer contains chunky data.\",\n      \"contextBefore\": \"[vImage.BufferType.chunky](vimage/buffertype/chunky.md)\",\n      \"contextAfter\": \"[vImage.BufferType.cmykBlack](vimage/buffertype/cmykblack.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0019:0001\",\n      \"source\": \"The buffer contains the black channel.\",\n      \"contextBefore\": \"[vImage.BufferType.cmykBlack](vimage/buffertype/cmykblack.md)\",\n      \"contextAfter\": \"[vImage.BufferType.cmykCyan](vimage/buffertype/cmykcyan.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0021:0001\",\n      \"source\": \"The buffer contains the cyan channel.\",\n      \"contextBefore\": \"[vImage.BufferType.cmykCyan](vimage/buffertype/cmykcyan.md)\",\n      \"contextAfter\": \"[vImage.BufferType.cmykMagenta](vimage/buffertype/cmykmagenta.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0023:0001\",\n      \"source\": \"The buffer contains the magenta channel.\",\n      \"contextBefore\": \"[vImage.BufferType.cmykMagenta](vimage/buffertype/cmykmagenta.md)\",\n      \"contextAfter\": \"[vImage.BufferType.cmykYellow](vimage/buffertype/cmykyellow.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0025:0001\",\n      \"source\": \"The buffer contains the yellow channel.\",\n      \"contextBefore\": \"[vImage.BufferType.cmykYellow](vimage/buffertype/cmykyellow.md)\",\n      \"contextAfter\": \"[vImage.BufferType.coreGraphics](vimage/buffertype/coregraphics.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0027:0001\",\n      \"source\": \"The buffer contains a Core Graphics image.\",\n      \"contextBefore\": \"[vImage.BufferType.coreGraphics](vimage/buffertype/coregraphics.md)\",\n      \"contextAfter\": \"[vImage.BufferType.indexed](vimage/buffertype/indexed.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0029:0001\",\n      \"source\": \"The buffer contains data in an indexed colorspace.\",\n      \"contextBefore\": \"[vImage.BufferType.indexed](vimage/buffertype/indexed.md)\",\n      \"contextAfter\": \"[vImage.BufferType.labA](vimage/buffertype/laba.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0031:0001\",\n      \"source\": \"The buffer contains the `a*` channel.\",\n      \"contextBefore\": \"[vImage.BufferType.labA](vimage/buffertype/laba.md)\",\n      \"contextAfter\": \"[vImage.BufferType.labB](vimage/buffertype/labb.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0033:0001\",\n      \"source\": \"The buffer contains the `b*` channel.\",\n      \"contextBefore\": \"[vImage.BufferType.labB](vimage/buffertype/labb.md)\",\n      \"contextAfter\": \"[vImage.BufferType.labL](vimage/buffertype/labl.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0035:0001\",\n      \"source\": \"The buffer contains the `L*` channel.\",\n      \"contextBefore\": \"[vImage.BufferType.labL](vimage/buffertype/labl.md)\",\n      \"contextAfter\": \"[vImage.BufferType.luminance](vimage/buffertype/luminance.md)\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/buffertype/ycbcr.md\",\n      \"id\": \"seg:paragraph:see-also:0037:0001\",\n      \"source\": \"The buffer contains only luminance data.\",\n      \"contextBefore\": \"[vImage.BufferType.luminance](vimage/buffertype/luminance.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"vImage.BufferType.YCbCr\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:planarbuffers:0002:0001\",\n      \"source\": \"Returns four 8-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: method\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:list:planarbuffers:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 16.0+\",\n      \"contextAfter\": \"macOS 13.0+\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:list:planarbuffers:0004:0006\",\n      \"source\": \"visionOS ?+\",\n      \"contextBefore\": \"tvOS 16.0+\",\n      \"contextAfter\": \"watchOS 9.0+\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:heading:return-value:0007:0001\",\n      \"source\": \"Return Value\",\n      \"contextBefore\": \"```swift\\nfunc planarBuffers() -> [vImage.PixelBuffer<vImage.Planar8>]\\n```\",\n      \"contextAfter\": \"An array of planar pixel buffers.\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:return-value:0008:0001\",\n      \"source\": \"An array of planar pixel buffers.\",\n      \"contextBefore\": \"Return Value\",\n      \"contextAfter\": \"Discussion\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:discussion:0010:0001\",\n      \"source\": \"Use this function to deinterleave a buffer and create four new planar buffers that contain copies of each source channel.\",\n      \"contextBefore\": \"Discussion\",\n      \"contextAfter\": \"For example, the following code generates four 1 x 1 planar buffers from an [`vImage.Interleaved8x4`](vimage/interleaved8x4.md) pixel buffer:\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:discussion:0010:0002\",\n      \"source\": \"For example, the following code generates four 1 x 1 planar buffers from an [`vImage.Interleaved8x4`](vimage/interleaved8x4.md) pixel buffer:\",\n      \"contextBefore\": \"Use this function to deinterleave a buffer and create four new planar buffers that contain copies of each source channel.\",\n      \"contextAfter\": \"```swift\\nlet src = vImage.PixelBuffer<vImage.Interleaved8x4>(\\n    pixelValues: [50, 100, 150, 200] as [UInt8],\\n    size: vImage.Size(width: 1, height: 1))\\n\\nlet planarBuffers: [vImage.PixelBuffer<vImage.Planar8>] = src.planarBuffers()\\n\\n// Prints \\\"[50] [100] [150] [200]\\\"\\nfor planarBuffer in planarBuffers {\\n    print(planarBuffer.array)\\n}\\n```\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:heading:see-also:0012:0001\",\n      \"source\": \"See Also\",\n      \"contextBefore\": \"```swift\\nlet src = vImage.PixelBuffer<vImage.Interleaved8x4>(\\n    pixelValues: [50, 100, 150, 200] as [UInt8],\\n    size: vImage.Size(width: 1, height: 1))\\n\\nlet planarBuffers: [vImage.PixelBuffer<vImage.Planar8>] = src.planarBuffers()\\n\\n// Prints \\\"[50] [100] [150] [200]\\\"\\nfor planarBuffer in planarBuffers {\\n    print(planarBuffer.array)\\n}\\n```\",\n      \"contextAfter\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar8>]](vimage/pixelbuffer/planarbuffers-462ja.md)\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:list:see-also:0013:0001\",\n      \"source\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar8>]](vimage/pixelbuffer/planarbuffers-462ja.md)\",\n      \"contextBefore\": \"See Also\",\n      \"contextAfter\": \"Returns two 8-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:see-also:0014:0001\",\n      \"source\": \"Returns two 8-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextBefore\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar8>]](vimage/pixelbuffer/planarbuffers-462ja.md)\",\n      \"contextAfter\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar8>]](vimage/pixelbuffer/planarbuffers-5r3ds.md)\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:list:see-also:0015:0001\",\n      \"source\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar8>]](vimage/pixelbuffer/planarbuffers-5r3ds.md)\",\n      \"contextBefore\": \"Returns two 8-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextAfter\": \"Returns three 8-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:see-also:0016:0001\",\n      \"source\": \"Returns three 8-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextBefore\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar8>]](vimage/pixelbuffer/planarbuffers-5r3ds.md)\",\n      \"contextAfter\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-4qws5.md)\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:list:see-also:0017:0001\",\n      \"source\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-4qws5.md)\",\n      \"contextBefore\": \"Returns three 8-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextAfter\": \"Returns four 32-bit planar pixel buffers that contain the deinterleaved channels of the 8-bit buffer.\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:see-also:0018:0001\",\n      \"source\": \"Returns four 32-bit planar pixel buffers that contain the deinterleaved channels of the 8-bit buffer.\",\n      \"contextBefore\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-4qws5.md)\",\n      \"contextAfter\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar16U>]](vimage/pixelbuffer/planarbuffers-49gf9.md)\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:list:see-also:0019:0001\",\n      \"source\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar16U>]](vimage/pixelbuffer/planarbuffers-49gf9.md)\",\n      \"contextBefore\": \"Returns four 32-bit planar pixel buffers that contain the deinterleaved channels of the 8-bit buffer.\",\n      \"contextAfter\": \"Returns four unsigned 16-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:see-also:0020:0001\",\n      \"source\": \"Returns four unsigned 16-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextBefore\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar16U>]](vimage/pixelbuffer/planarbuffers-49gf9.md)\",\n      \"contextAfter\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-1rj01.md)\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:list:see-also:0021:0001\",\n      \"source\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-1rj01.md)\",\n      \"contextBefore\": \"Returns four unsigned 16-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextAfter\": \"Returns two 32-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:see-also:0022:0001\",\n      \"source\": \"Returns two 32-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextBefore\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-1rj01.md)\",\n      \"contextAfter\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-82ook.md)\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:list:see-also:0023:0001\",\n      \"source\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-82ook.md)\",\n      \"contextBefore\": \"Returns two 32-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextAfter\": \"Returns three 32-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:see-also:0024:0001\",\n      \"source\": \"Returns three 32-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextBefore\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-82ook.md)\",\n      \"contextAfter\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar8>]](vimage/pixelbuffer/planarbuffers-l33r.md)\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:list:see-also:0025:0001\",\n      \"source\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar8>]](vimage/pixelbuffer/planarbuffers-l33r.md)\",\n      \"contextBefore\": \"Returns three 32-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextAfter\": \"Returns four 8-bit planar pixel buffers that contain the deinterleaved channels of the 32-bit buffer.\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:see-also:0026:0001\",\n      \"source\": \"Returns four 8-bit planar pixel buffers that contain the deinterleaved channels of the 32-bit buffer.\",\n      \"contextBefore\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.Planar8>]](vimage/pixelbuffer/planarbuffers-l33r.md)\",\n      \"contextAfter\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-35dnv.md)\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:list:see-also:0027:0001\",\n      \"source\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-35dnv.md)\",\n      \"contextBefore\": \"Returns four 8-bit planar pixel buffers that contain the deinterleaved channels of the 32-bit buffer.\",\n      \"contextAfter\": \"Returns four 32-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:see-also:0028:0001\",\n      \"source\": \"Returns four 32-bit planar pixel buffers that contain the deinterleaved channels of the buffer.\",\n      \"contextBefore\": \"[func planarBuffers() -> [vImage.PixelBuffer<vImage.PlanarF>]](vimage/pixelbuffer/planarbuffers-35dnv.md)\",\n      \"contextAfter\": \"---\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/planarbuffers-5rx2w.md\",\n      \"id\": \"seg:paragraph:see-also:0030:0001\",\n      \"source\": \"*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/planarbuffers()-5rx2w)*\",\n      \"contextBefore\": \"---\",\n      \"contextAfter\": \"\",\n      \"documentTitle\": \"planarBuffers()\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/transform-interpolationbackgroundcolordestination-7qnl8.md\",\n      \"id\": \"seg:heading:transforminterpolationbackgroundcolordestination:0000:0001\",\n      \"source\": \"transform(_:interpolation:backgroundColor:destination:)\",\n      \"contextBefore\": \"\",\n      \"contextAfter\": \"**Framework**: Accelerate **Kind**: method\",\n      \"documentTitle\": \"transform(:interpolation:backgroundColor:destination:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/transform-interpolationbackgroundcolordestination-7qnl8.md\",\n      \"id\": \"seg:paragraph:transforminterpolationbackgroundcolordestination:0002:0001\",\n      \"source\": \"Applies a perspective warp to an interleaved 4-channel, floating-point 16-bit planar image.\",\n      \"contextBefore\": \"**Framework**: Accelerate **Kind**: method\",\n      \"contextAfter\": \"**Availability**:\",\n      \"documentTitle\": \"transform(:interpolation:backgroundColor:destination:)\",\n      \"framework\": \"Accelerate\"\n    },\n    {\n      \"sourcePath\": \"documentation/Accelerate/vimage/pixelbuffer/transform-interpolationbackgroundcolordestination-7qnl8.md\",\n      \"id\": \"seg:list:transforminterpolationbackgroundcolordestination:0004:0003\",\n      \"source\": \"Mac Catalyst ?+\",\n      \"contextBefore\": \"iPadOS 17.0+\",\n      \"contextAfter\": \"macOS 14.0+\",\n      \"documentTitle\": \"transform(:interpolation:backgroundColor:destination:)\",\n      \"framework\": \"Accelerate\"\n    }\n  ]\n}\n\nwarning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.\n2026-05-12T16:05:02.169458Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:03.719139Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\n2026-05-12T16:05:04.181982Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 2/5\n2026-05-12T16:05:04.826085Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 3/5\n2026-05-12T16:05:05.818558Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 4/5\n2026-05-12T16:05:07.782217Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: Reconnecting... 5/5\n2026-05-12T16:05:11.500887Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: HTTP error: 403 Forbidden, url: wss://chatgpt.com/backend-api/codex/responses\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 00ebc2e1-9919-4f2a-bd1e-0e5727887240\nERROR: exceeded retry limit, last status: 429 Too Many Requests, request id: 00ebc2e1-9919-4f2a-bd1e-0e5727887240"
+    },
+    {
+      "index": 12,
+      "status": "queued",
+      "segments": 40,
+      "startedAt": "2026-05-12T16:05:02.844Z",
+      "completedAt": "2026-05-12T16:05:19.568Z",
+      "durationMs": 16724,
+      "error": "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at 9:04 PM."
+    },
+    {
+      "index": 13,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 14,
+      "status": "queued",
+      "segments": 31
+    },
+    {
+      "index": 15,
+      "status": "queued",
+      "segments": 23
+    },
+    {
+      "index": 16,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 17,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 18,
+      "status": "queued",
+      "segments": 28
+    },
+    {
+      "index": 19,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 20,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 21,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 22,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 23,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 24,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 25,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 26,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 27,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 28,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 29,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 30,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 31,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 32,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 33,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 34,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 35,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 36,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 37,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 38,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 39,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 40,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 41,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 42,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 43,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 44,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 45,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 46,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 47,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 48,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 49,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 50,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 51,
+      "status": "queued",
+      "segments": 31
+    },
+    {
+      "index": 52,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 53,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 54,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 55,
+      "status": "queued",
+      "segments": 43
+    },
+    {
+      "index": 56,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 57,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 58,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 59,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 60,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 61,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 62,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 63,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 64,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 65,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 66,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 67,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 68,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 69,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 70,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 71,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 72,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 73,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 74,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 75,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 76,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 77,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 78,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 79,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 80,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 81,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 82,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 83,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 84,
+      "status": "queued",
+      "segments": 51
+    },
+    {
+      "index": 85,
+      "status": "queued",
+      "segments": 39
+    },
+    {
+      "index": 86,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 87,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 88,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 89,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 90,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 91,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 92,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 93,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 94,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 95,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 96,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 97,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 98,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 99,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 100,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 101,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 102,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 103,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 104,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 105,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 106,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 107,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 108,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 109,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 110,
+      "status": "queued",
+      "segments": 50
+    },
+    {
+      "index": 111,
+      "status": "queued",
+      "segments": 57
+    },
+    {
+      "index": 112,
+      "status": "queued",
+      "segments": 56
+    },
+    {
+      "index": 113,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 114,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 115,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 116,
+      "status": "queued",
+      "segments": 33
+    },
+    {
+      "index": 117,
+      "status": "queued",
+      "segments": 25
+    },
+    {
+      "index": 118,
+      "status": "queued",
+      "segments": 35
+    },
+    {
+      "index": 119,
+      "status": "queued",
+      "segments": 46
+    },
+    {
+      "index": 120,
+      "status": "queued",
+      "segments": 33
+    },
+    {
+      "index": 121,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 122,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 123,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 124,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 125,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 126,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 127,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 128,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 129,
+      "status": "queued",
+      "segments": 42
+    },
+    {
+      "index": 130,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 131,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 132,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 133,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 134,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 135,
+      "status": "queued",
+      "segments": 36
+    },
+    {
+      "index": 136,
+      "status": "queued",
+      "segments": 16
+    },
+    {
+      "index": 137,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 138,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 139,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 140,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 141,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 142,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 143,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 144,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 145,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 146,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 147,
+      "status": "queued",
+      "segments": 48
+    },
+    {
+      "index": 148,
+      "status": "queued",
+      "segments": 47
+    },
+    {
+      "index": 149,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 150,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 151,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 152,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 153,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 154,
+      "status": "queued",
+      "segments": 54
+    },
+    {
+      "index": 155,
+      "status": "queued",
+      "segments": 52
+    },
+    {
+      "index": 156,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 157,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 158,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 159,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 160,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 161,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 162,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 163,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 164,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 165,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 166,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 167,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 168,
+      "status": "queued",
+      "segments": 58
+    },
+    {
+      "index": 169,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 170,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 171,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 172,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 173,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 174,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 175,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 176,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 177,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 178,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 179,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 180,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 181,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 182,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 183,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 184,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 185,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 186,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 187,
+      "status": "queued",
+      "segments": 53
+    },
+    {
+      "index": 188,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 189,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 190,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 191,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 192,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 193,
+      "status": "queued",
+      "segments": 59
+    },
+    {
+      "index": 194,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 195,
+      "status": "queued",
+      "segments": 55
+    },
+    {
+      "index": 196,
+      "status": "queued",
+      "segments": 45
+    },
+    {
+      "index": 197,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 198,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 199,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 200,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 201,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 202,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 203,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 204,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 205,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 206,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 207,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 208,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 209,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 210,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 211,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 212,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 213,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 214,
+      "status": "queued",
+      "segments": 41
+    },
+    {
+      "index": 215,
+      "status": "queued",
+      "segments": 38
+    },
+    {
+      "index": 216,
+      "status": "queued",
+      "segments": 44
+    },
+    {
+      "index": 217,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 218,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 219,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 220,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 221,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 222,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 223,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 224,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 225,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 226,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 227,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 228,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 229,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 230,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 231,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 232,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 233,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 234,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 235,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 236,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 237,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 238,
+      "status": "queued",
+      "segments": 60
+    },
+    {
+      "index": 239,
+      "status": "queued",
+      "segments": 36
+    }
+  ]
+}
