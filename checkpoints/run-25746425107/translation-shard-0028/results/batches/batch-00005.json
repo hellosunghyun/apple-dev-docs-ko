@@ -1,0 +1,225 @@
+{
+  "batchIndex": 5,
+  "status": "success",
+  "completedAt": "2026-05-12T16:05:06.332Z",
+  "durationMs": 27980,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "텐서 축약은 두 텐서의 원소를 하나 이상의 인덱스에 대해 합산한 값입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "BNNS represents this in the `operation` parameter of a [`BNNSLayerParametersTensorContraction`](bnnslayerparameterstensorcontraction.md) structure as a string using Einstein’s summation convention."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "예를 들어 문자열은 다음과 같습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "연산을 나타냅니다:"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0012:0001",
+        "ko": "![문자열 a_ijp, b_ijq -> o_pq가 나타내는 방정식의 일반식을 수학적으로 설명합니다. o sub p q = alpha times i, j에 대한 합산 times a sub i sub j sub p times b sub i sub j sub q](https://docs-assets.developer.apple.com/published/c0c5777fa3a46aa2aa5826c438c5a9d5/media-3581536%402x.png)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0013:0001",
+        "ko": "입력은 학습된 매개변수이거나 입력일 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0014:0001",
+        "ko": "밑줄 앞의 이름이 `“w”`이면 연산에서 해당 텐서를 학습된 매개변수(가중치)로 간주합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0014:0002",
+        "ko": "그렇지 않으면 연산은 텐서를 입력으로 간주합니다. 이 문자는 다른 영향을 주지 않으며 원하는 값을 임의로 사용할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0014:0003",
+        "ko": "최대 하나의 입력만 학습된 매개변수일 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0015:0001",
+        "ko": "좌측 입력의 이름이 일치하면 연산에서 텐서를 자기 자신과 축약한 것으로 간주합니다. 예를 들어 Gram 행렬 또는 내적을 계산할 때입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0016:0001",
+        "ko": "입력 중 하나가 weight이거나 연산이 텐서 자기 자신과의 축약인 경우에는 [`BNNSFilterApply(_:_:_:)`](bnnsfilterapply(_:_:_:).md) 또는 [`BNNSFilterApplyBatch(_:_:_:_:_:_:)`](bnnsfilterapplybatch(_:_:_:_:_:_:).md)를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0016:0002",
+        "ko": "연산에 입력이 두 개 있는 경우에는 [`BNNSFilterApplyTwoInput(_:_:_:_:)`](bnnsfilterapplytwoinput(_:_:_:_:).md) 또는 [`BNNSFilterApplyTwoInputBatch(_:_:_:_:_:_:_:_:)`](bnnsfilterapplytwoinputbatch(_:_:_:_:_:_:_:_:).md)를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0017:0001",
+        "ko": "텐서 축약 계층을 사용하면 인덱스 순열로 한 계층에서 다른 계층으로 복사할 수도 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0017:0002",
+        "ko": "예를 들어 문자열은 다음과 같습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0019:0001",
+        "ko": "연산을 나타냅니다:"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0020:0001",
+        "ko": "![문자열 a_ij -> c_ji가 나타내는 방정식의 일반식을 수학적으로 설명합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0020:0002",
+        "ko": "Cap C는 alpha times Cap A sup cap T입니다.](https://docs-assets.developer.apple.com/published/4f0e29c8ceb0e4cfc574293be1d66b53/media-3581537%402x.png)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0021:0001",
+        "ko": "BNNS 텐서 축약은 최종 인덱스로 `“*”`를 사용해 브로드캐스팅을 지원합니다. 예를 들어 다음 문자열은 `a`와 `c`의 추가 인덱스에 일치합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0023:0001",
+        "ko": "`“*”`는 항상 연산 양쪽 모두에 나타나는 인덱스를 나타내며, 축약에서 합산 대상이 되는 인덱스를 나타내지 않습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0024:0001",
+        "ko": "한쪽에 있는 `“*”`는 다른 쪽의 `“*”`로 표시된 인덱스와만 일치하며, 문자가 표시한 인덱스와는 일치하지 않습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0025:0001",
+        "ko": "축약에서 인덱스 문자가 일치할 때는 두 텐서의 해당 차원 크기가 동일해야 하며, 단 하나의 텐서 크기가 1인 경우는 예외입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:discussion:0025:0002",
+        "ko": "이 경우 연산은 해당 차원에 맞도록 반복(브로드캐스트)됩니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:heading:perform-a-tensor-contraction:0026:0001",
+        "ko": "텐서 축약 수행"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:perform-a-tensor-contraction:0027:0001",
+        "ko": "다음 코드는 2×1 행 우선(row-major) 행렬 두 개에 대한 텐서 축약을 수행하고 결과를 2×2 행 우선(row-major) 행렬에 기록합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:perform-a-tensor-contraction:0028:0001",
+        "ko": "먼저 입력 및 출력 행렬과 해당 디스크립터를 정의합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:perform-a-tensor-contraction:0030:0001",
+        "ko": "축약을 수행하려면 다음 코드를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:perform-a-tensor-contraction:0032:0001",
+        "ko": "반환 시 `outputValues`에는 다음 값이 포함됩니다:"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:list:parameters:0035:0001",
+        "ko": "`layer_params`: 계층 매개변수입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:list:parameters:0035:0002",
+        "ko": "`filter_params`: 필터 런타임 매개변수입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:heading:see-also:0036:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:see-also:0038:0001",
+        "ko": "텐서 축약 계층의 매개변수를 포함하는 구조체입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsfiltercreatelayertensorcontraction.md",
+        "id": "seg:paragraph:see-also:0040:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/bnnsfiltercreatelayertensorcontraction(_:_:))*"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraph/builder/convolutionpadding/lower.md",
+        "id": "seg:paragraph:bnnsgraphbuilderconvolutionpaddinglower:0002:0001",
+        "ko": "출력을 입력처럼 보이도록 패딩하되, 상단과 좌측에 우선 패딩합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraph/builder/convolutionpadding/lower.md",
+        "id": "seg:list:bnnsgraphbuilderconvolutionpaddinglower:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraphgetinputcount.md",
+        "id": "seg:heading:bnnsgraphgetinputcount:0000:0001",
+        "ko": "BNNSGraphGetInputCount(_:_:)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraphgetinputcount.md",
+        "id": "seg:paragraph:bnnsgraphgetinputcount:0002:0001",
+        "ko": "주어진 함수 인수의 입력 인수 개수를 반환합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraphgetinputcount.md",
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraphgetinputcount.md",
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "입력 인수의 개수이며, 쿼리가 실패하면 `SIZE_T_MAX`가 반환됩니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraphgetinputcount.md",
+        "id": "seg:list:parameters:0010:0001",
+        "ko": "`graph`: 컴파일된 그래프 객체입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraphgetinputcount.md",
+        "id": "seg:list:parameters:0010:0002",
+        "ko": "`function`: 함수입니다. 그래프에 함수가 하나만 포함된 경우 `nil`로 지정합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraphgetinputcount.md",
+        "id": "seg:heading:see-also:0011:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraphgetinputcount.md",
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[func BNNSGraphGetArgumentIntents(bnns_graph_t, UnsafePointer<CChar>?, Int, UnsafeMutablePointer<BNNSGraphArgumentIntent>) -> Int32](bnnsgraphgetargumentintents(_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/bnnsgraphgetinputcount.md",
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "주어진 함수 인수의 인수 의도를 추출합니다."
+      }
+    ]
+  }
+}
