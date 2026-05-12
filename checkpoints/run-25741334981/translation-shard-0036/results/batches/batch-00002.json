@@ -1,0 +1,134 @@
+{
+  "batchIndex": 2,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:32.890Z",
+  "durationMs": 15974,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:blockquote:set-up-a-display-mask-rectangle-metadata-track:0020:0001",
+        "ko": "**참고**: `metadataSpecifications` 배열에는 이 타임드 메타데이터 트랙 내에 다른 메타데이터를 저장해야 하는 경우 추가 식별자와 데이터 형식 쌍을 포함할 수 있습니다."
+      },
+      {
+        "id": "seg:blockquote:set-up-a-display-mask-rectangle-metadata-track:0020:0002",
+        "ko": "추가 메타데이터 식별자 및 데이터 형식 목록은 [`CMMetadata`](https://developer.apple.com/documentation/CoreMedia/cmmetadata)에서 확인할 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-display-mask-rectangle-metadata-track:0021:0001",
+        "ko": "형식 설명이 준비되면, 메서드는 메타데이터 트랙에 대한 [`AVAssetWriterInput`](avassetwriterinput.md)를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-display-mask-rectangle-metadata-track:0021:0002",
+        "ko": "이 메서드는 라이브 캡처 소스에서 받는 대신, 앱이 처리할 수 있는 속도로 메타데이터 샘플을 작성하므로 [`expectsMediaDataInRealTime`](avassetwriterinput/expectsmediadatainrealtime.md)를 `false`로 설정합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-display-mask-rectangle-metadata-track:0021:0003",
+        "ko": "또한 메타데이터 샘플 타임스탬프를 비디오 프레임과 정확히 정렬하기 위해 [`mediaTimeScale`](avassetwriterinput/mediatimescale.md)도 비디오 트랙과 일치하도록 설정합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-display-mask-rectangle-metadata-track:0023:0001",
+        "ko": "그런 다음 메서드는 작성기 입력에 타임드 메타데이터 그룹을 추가하기 위해 [`AVAssetWriterInputMetadataAdaptor`](avassetwriterinputmetadataadaptor.md)를 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-display-mask-rectangle-metadata-track:0023:0002",
+        "ko": "이 어댑터는 샘플 버퍼를 직접 다루는 대신 시간 범위와 함께 메타데이터 항목을 패키지로 묶는 [`AVTimedMetadataGroup`](avtimedmetadatagroup.md) 객체를 작성할 때 편리한 방법을 제공합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-display-mask-rectangle-metadata-track:0025:0001",
+        "ko": "마지막으로 메서드는 메타데이터 입력을 에셋 라이터에 추가하고 메타데이터 트랙과 비디오 트랙 간의 트랙 연결을 설정합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-display-mask-rectangle-metadata-track:0025:0002",
+        "ko": "재생 시스템이 디스플레이 마스크 메타데이터가 적용되는 비디오 트랙을 인식하려면 렌더 메타데이터 소스 연결(`rndr`)이 필요합니다."
+      },
+      {
+        "id": "seg:paragraph:set-up-a-display-mask-rectangle-metadata-track:0025:0003",
+        "ko": "이 연결이 없으면 재생 시스템은 해당 메타데이터를 무시합니다."
+      },
+      {
+        "id": "seg:heading:write-display-mask-rectangle-metadata:0027:0001",
+        "ko": "디스플레이 마스크 직사각형 메타데이터 쓰기"
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0028:0001",
+        "ko": "`setupDisplayMaskMetadataTransfer(videoInfo:maskType:)` 메서드는 디스플레이 마스크 메타데이터 샘플을 타임드 메타데이터 트랙에 쓰는 작업을 처리합니다."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0028:0002",
+        "ko": "이 메서드는 비디오 트랙 크기를 사용해 래스터 사각형 매개변수를 계산하고 이전에 생성한 어댑터로 메타데이터 샘플을 작성합니다."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0029:0001",
+        "ko": "명령줄에서 지정한 디스플레이 마스크 유형에 따라 이 메서드는 두 경로 중 하나를 사용합니다."
+      },
+      {
+        "id": "seg:list:write-display-mask-rectangle-metadata:0030:0001",
+        "ko": "유형 1은 정적 디스플레이 마스크를 생성합니다 — 비디오의 전체 재생 동안 고정되는 단일 중앙 정사각형입니다."
+      },
+      {
+        "id": "seg:list:write-display-mask-rectangle-metadata:0030:0002",
+        "ko": "유형 2는 동적 디스플레이 마스크를 생성합니다 — 프레임 전체를 가로지르는 더 작은 정사각형으로, 각 비디오 프레임마다 새 메타데이터 샘플이 작성됩니다."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0031:0001",
+        "ko": "각 경로에서 사용하는 구체적인 계산은 샘플 프로젝트의 `MovieProcessor.swift` 파일을 참조하고 `Type 1 static display mask calculation.` 및 `Type 2 dynamic display mask initialization/update calculation.` 마커를 확인하세요."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0032:0001",
+        "ko": "서로 다른 메타데이터를 작성하더라도 두 경로는 유사한 패턴을 따릅니다."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0032:0002",
+        "ko": "메타데이터 입력이 준비되면 데이터를 요청하고, 디스플레이 마스크 직사각형의 타임드 메타데이터 그룹을 생성한 뒤 이를 메타데이터 어댑터에 추가합니다."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0034:0001",
+        "ko": "`createMetadataGroupForDisplayMask(rasterRectangle:sampleTime:sampleDuration:)` 메서드는 타임드 메타데이터 그룹을 생성합니다."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0036:0001",
+        "ko": "이 메서드는 디스플레이 마스크 식별자와 데이터 형식으로 [`AVMutableMetadataItem`](avmutablemetadataitem.md)를 생성하고, 값을 래스터 사각형 배열로 설정한 후 지정한 시간 범위를 가진 [`AVTimedMetadataGroup`](avtimedmetadatagroup.md)으로 래핑합니다."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0036:0002",
+        "ko": "`rasterRectangle` 매개변수는 여섯 개 정수 배열로, `[rasterWidth, rasterHeight, left, width, top, height]`입니다."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0036:0003",
+        "ko": "`timeRange`는 재생 중 이 메타데이터가 적용되는 시점을 결정합니다."
+      },
+      {
+        "id": "seg:list:write-display-mask-rectangle-metadata:0037:0001",
+        "ko": "정적 마스크의 경우 시간 범위는 전체 비디오 지속 시간을 포괄합니다."
+      },
+      {
+        "id": "seg:list:write-display-mask-rectangle-metadata:0037:0002",
+        "ko": "동적 마스크의 경우 시간 범위는 단일 비디오 프레임의 지속 시간과 일치합니다."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0038:0001",
+        "ko": "에셋 라이터가 완료되면 출력 파일에는 디스플레이 마스크 직사각형 메타데이터 트랙이 포함된 원본 비디오가 들어갑니다."
+      },
+      {
+        "id": "seg:paragraph:write-display-mask-rectangle-metadata:0038:0002",
+        "ko": "visionOS 26 이상에서는 Files와 같은 앱에서 파일을 재생해 디스플레이 마스크 효과를 확인할 수 있습니다."
+      },
+      {
+        "id": "seg:heading:see-also:0039:0001",
+        "ko": "참고"
+      },
+      {
+        "id": "seg:list:see-also:0040:0001",
+        "ko": "[Converting projected video to Apple Projected Media Profile](converting-projected-video-to-apple-projected-media-profile.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0041:0001",
+        "ko": "이퀄리어큘러 또는 반 이퀄리어큘러 투영 콘텐츠를 APMP로 변환합니다."
+      },
+      {
+        "id": "seg:list:see-also:0042:0001",
+        "ko": "[Converting side-by-side 3D video to multiview HEVC and spatial video](converting-side-by-side-3d-video-to-multiview-hevc-and-spatial-video.md)"
+      }
+    ]
+  }
+}
