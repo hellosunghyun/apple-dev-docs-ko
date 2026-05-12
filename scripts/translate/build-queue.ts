@@ -1,4 +1,4 @@
-import { rm } from "node:fs/promises";
+import { appendFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { Command } from "commander";
 import { loadGlossary, loadTranslationConfig } from "../lib/config.js";
@@ -64,8 +64,14 @@ async function main(): Promise<void> {
     }
   }
 
-  const batchSegments = Number(options.batchSegments ?? process.env.BATCH_SEGMENTS ?? translationConfig.translation.batchSegments);
-  const batchChars = Number(options.batchChars ?? process.env.BATCH_CHARS ?? translationConfig.translation.batchChars);
+  const batchSegments = normalizePositiveInt(
+    Number(options.batchSegments ?? process.env.BATCH_SEGMENTS ?? translationConfig.translation.batchSegments),
+    60
+  );
+  const batchChars = normalizePositiveInt(
+    Number(options.batchChars ?? process.env.BATCH_CHARS ?? translationConfig.translation.batchChars),
+    16_000
+  );
   const batches = buildBatches(candidates, batchSegments, batchChars, await loadGlossary());
 
   const queuePath = options.shard ? `state/queue/shard-${String(options.shard).padStart(4, "0")}.json` : "state/queue/latest.json";
@@ -76,18 +82,17 @@ async function main(): Promise<void> {
 
   await rm(batchDir, { recursive: true, force: true });
   await ensureDir(batchDir);
-  const batchRefs = await Promise.all(
-    batches.map(async (batch, index): Promise<QueueBatchFileRef> => {
-      const fileName = `batch-${String(index).padStart(5, "0")}.json`;
-      const batchPath = path.join(batchDir, fileName);
-      await writeJson(batchPath, batch);
-      return {
-        path: path.relative(queueDir, batchPath),
-        index,
-        segments: batch.segments.length
-      };
-    })
-  );
+  const batchRefs: QueueBatchFileRef[] = [];
+  for (const [index, batch] of batches.entries()) {
+    const fileName = `batch-${String(index).padStart(5, "0")}.json`;
+    const batchPath = path.join(batchDir, fileName);
+    await writeJson(batchPath, batch);
+    batchRefs.push({
+      path: path.relative(queueDir, batchPath),
+      index,
+      segments: batch.segments.length
+    });
+  }
 
   const queue: QueueFile = {
     generatedAt: new Date().toISOString(),
@@ -102,8 +107,41 @@ async function main(): Promise<void> {
       locked
     }
   };
-  await writeJson(resolvedQueuePath, queue);
+  await writeQueueFileStreaming(resolvedQueuePath, queue);
   console.log(`Queue batches: ${batches.length}; segments: ${candidates.length}`);
+}
+
+function normalizePositiveInt(value: number, fallback: number): number {
+  return Number.isFinite(value) && value > 0 ? Math.floor(value) : fallback;
+}
+
+async function writeQueueFileStreaming(filePath: string, queue: QueueFile): Promise<void> {
+  await writeFile(filePath, "{\n", "utf8");
+
+  await appendText(filePath, `  \"generatedAt\": ${JSON.stringify(queue.generatedAt)},\n`);
+  if (queue.shard) {
+    await appendText(filePath, `  \"shard\": ${JSON.stringify(queue.shard)},\n`);
+  }
+
+  await appendText(filePath, "  \"sourcePaths\": [\n");
+  for (const [index, sourcePath] of queue.sourcePaths.entries()) {
+    const line = `    ${JSON.stringify(sourcePath)}${index === queue.sourcePaths.length - 1 ? "" : ","}\n`;
+    await appendText(filePath, line);
+  }
+  await appendText(filePath, "  ],\n");
+
+  await appendText(filePath, "  \"batches\": [\n");
+  for (const [index, batch] of queue.batches.entries()) {
+    const serializedBatch = JSON.stringify(batch, null, 2).split("\n").join("\n    ");
+    const line = `    ${serializedBatch}${index === queue.batches.length - 1 ? "" : ","}\n`;
+    await appendText(filePath, line);
+  }
+
+  await appendText(filePath, `  ],\n  \"summary\": ${JSON.stringify(queue.summary)}\n}`);
+}
+
+async function appendText(filePath: string, value: string): Promise<void> {
+  await appendFile(filePath, value, "utf8");
 }
 
 function buildBatches(
