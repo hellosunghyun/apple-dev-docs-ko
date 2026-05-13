@@ -47,10 +47,33 @@ const officialDisplayNames: Record<string, string> = {
 };
 const displayName = (value: string) => officialDisplayNames[value] ?? value;
 const frameworkName = currentFramework || items.find((item) => item.slug === current)?.framework || "Documentation";
-const frameworkDocs = items.filter((item) => item.framework === frameworkName);
-const technologyRows = frameworks.length
-  ? frameworks.map((framework) => ({ title: framework.name, count: framework.count }))
-  : Array.from(new Set(items.map((item) => item.framework))).sort().map((title) => ({ title }));
+const frameworkDocs = items
+  .filter((item) => item.framework === frameworkName)
+  .sort((a, b) => a.title.localeCompare(b.title));
+const currentDoc = items.find((item) => item.slug === current);
+const currentDocRows = currentDoc ? [currentDoc, ...frameworkDocs.filter((item) => item.slug !== currentDoc.slug)] : frameworkDocs;
+const localFrameworkCounts = new Map<string, number>();
+const firstDocByFramework = new Map<string, NavItem>();
+for (const item of items) {
+  localFrameworkCounts.set(item.framework, (localFrameworkCounts.get(item.framework) ?? 0) + 1);
+  if (!firstDocByFramework.has(item.framework)) firstDocByFramework.set(item.framework, item);
+}
+const technologyNames = frameworks.length
+  ? frameworks.map((framework) => framework.name)
+  : Array.from(localFrameworkCounts.keys());
+const technologyRows = Array.from(new Set(technologyNames))
+  .map((name) => ({
+    title: name,
+    count: localFrameworkCounts.get(name) ?? 0,
+    totalCount: frameworks.find((framework) => framework.name === name)?.count,
+    firstDoc: firstDocByFramework.get(name)
+  }))
+  .filter((row) => row.firstDoc)
+  .sort((a, b) => displayName(a.title).localeCompare(displayName(b.title)));
+const hiddenHeadingText = new Set(["Declaration", "Topics", "Relationships", "Conforms To"]);
+const visibleHeadings = headings
+  .filter((heading) => heading.slug && heading.text && heading.text !== currentDoc?.title && !hiddenHeadingText.has(heading.text))
+  .slice(0, 16);
 ---
 
 <aside class="documentation-navigator" data-navigator data-mode={mode}>
@@ -69,17 +92,17 @@ const technologyRows = frameworks.length
           <a class="navigator-back" href={href("docs/")}>All Technologies</a>
           <h3 class="navigator-framework-title">{frameworkName}</h3>
           <section class="navigator-group">
-            <h4 class="navigator-group-title">Essentials</h4>
+            <h4 class="navigator-group-title">Topics</h4>
             <ul class="navigator-list">
-              {frameworkDocs.map((doc) => (
+              {currentDocRows.slice(0, 120).map((doc) => (
                 <li data-filter-value={`${frameworkName} ${doc.title} ${doc.sourcePath}`.toLowerCase()}>
                   <a class="navigator-link" href={href(`docs/${doc.slug}/`)} aria-current={current === doc.slug ? "page" : undefined}>
                     <span class="navigator-doc-icon" aria-hidden="true">C</span>
                   <span>{doc.title}</span>
                   </a>
-                  {current === doc.slug && headings.length ? (
+                  {current === doc.slug && visibleHeadings.length ? (
                     <ul class="navigator-sublist">
-                      {headings.slice(0, 8).map((heading) => (
+                      {visibleHeadings.map((heading) => (
                         <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
                       ))}
                     </ul>
@@ -91,11 +114,14 @@ const technologyRows = frameworks.length
         </>
       ) : (
         <ul class="navigator-list navigator-list-flat">
-          {technologyRows.slice(0, 220).map((row) => (
+          {technologyRows.slice(0, 260).map((row) => (
             <li data-filter-value={`${row.title} ${displayName(row.title)}`.toLowerCase()}>
-              <a class="navigator-link" href={href("docs/")}>
+              <a class="navigator-link" href={href(`docs/${row.firstDoc!.slug}/`)}>
                 <span class="navigator-stack" aria-hidden="true"><span></span></span>
-                <span>{displayName(row.title)}</span>
+                <span class="navigator-link-label">
+                  <span>{displayName(row.title)}</span>
+                  <small>{row.count}개 번역</small>
+                </span>
               </a>
             </li>
           ))}

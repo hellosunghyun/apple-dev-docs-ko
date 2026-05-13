@@ -15,6 +15,13 @@ async function main(): Promise<void> {
   const manifestSummary = await readOptionalJson<{
     frameworks?: Array<{ name: string; count: number }>;
   }>(resolveRoot("state/manifest-summary.json"), {});
+  const existingNav = await readOptionalJson<Array<{
+    sourcePath: string;
+    slug: string;
+    title: string;
+    framework: string;
+    officialUrl?: string;
+  }>>(resolveRoot("site/src/data/navigation.json"), []);
   const nextNav = manifest.files.map((file) => ({
     sourcePath: file.sourcePath,
     slug: slugFromSourcePath(file.sourcePath),
@@ -22,7 +29,10 @@ async function main(): Promise<void> {
     framework: file.framework,
     officialUrl: file.officialUrl
   }));
-  const nav = selected ? mergeBySlug(await readOptionalJson<typeof nextNav>(resolveRoot("site/src/data/navigation.json"), []), nextNav.filter((item) => selected.has(item.sourcePath))) : nextNav;
+  const shouldReplaceNav = process.env.REPLACE_SITE_NAV === "1" && !selected;
+  const nav = shouldReplaceNav
+    ? nextNav
+    : mergeBySlug(existingNav, selected ? nextNav.filter((item) => selected.has(item.sourcePath)) : nextNav);
   const frameworkCounts = new Map<string, number>();
   for (const item of manifestSummary.frameworks ?? []) {
     frameworkCounts.set(item.name, item.count);

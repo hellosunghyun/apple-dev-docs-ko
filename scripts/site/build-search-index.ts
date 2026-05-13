@@ -7,16 +7,32 @@ program.option("--file-list <file>").parse();
 const options = program.opts<{ fileList?: string }>();
 
 const manifest = await readJson<Manifest>(resolveRoot("state/manifest.json"));
+const navigation = await readOptionalJson<Array<{
+  title: string;
+  framework: string;
+  sourcePath: string;
+  slug: string;
+  officialUrl?: string;
+}>>(resolveRoot("site/src/data/navigation.json"), []);
 const selected = options.fileList
   ? new Set((await readText(resolveRoot(options.fileList))).split(/\r?\n/).map((line) => line.trim()).filter(Boolean))
   : undefined;
-const nextIndex = manifest.files
+const sourceItems = navigation.length
+  ? navigation
+  : manifest.files.map((file) => ({
+    title: file.title,
+    framework: file.framework,
+    sourcePath: file.sourcePath,
+    slug: file.sourcePath.replace(/\.md$/i, ""),
+    officialUrl: file.officialUrl
+  }));
+const nextIndex = sourceItems
   .filter((file) => !selected || selected.has(file.sourcePath))
   .map((file) => ({
   title: file.title,
   framework: file.framework,
   sourcePath: file.sourcePath,
-  slug: file.sourcePath.replace(/\.md$/i, ""),
+  slug: file.slug,
   officialUrl: file.officialUrl,
   haystack: `${file.title} ${file.framework} ${file.sourcePath}`.toLowerCase()
 }));

@@ -20,6 +20,7 @@ const href = (path = "") => `${base}${path.replace(/^\//, "")}`;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={href("favicon.svg")} />
     <title>{title}</title>
   </head>
   <body data-source-mode="ko_only">
@@ -30,13 +31,10 @@ const href = (path = "") => `${base}${path.replace(/^\//, "")}`;
           <span>Developer</span>
         </a>
         <nav class="site-nav" aria-label="주요 탐색">
-          <a href={href("about/")}>Get Started</a>
-          <a href={href("docs/")}>Platforms</a>
-          <a href={href("docs/")}>Technologies</a>
-          <a href={href("contribute/")}>Community</a>
-          <a href={href("docs/")}>Documentation</a>
-          <a href={href("status/")}>Downloads</a>
-          <a href={href("contribute/")}>Support</a>
+          <a href={href("docs/")}>문서</a>
+          <a href={href("search/")}>검색</a>
+          <a href={href("status/")}>상태</a>
+          <a href={href("disclaimer/")}>고지</a>
         </nav>
         <div class="nav-utilities">
           <a class="utility-link" href={href("search/")} aria-label="검색">

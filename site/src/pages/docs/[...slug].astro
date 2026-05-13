@@ -18,6 +18,97 @@ const base = import.meta.env.BASE_URL;
 const href = (path = "") => `${base}${path.replace(/^\//, "")}`;
 const sourceMapUrl = href(`segment-maps/${sourcePath.replace(/\.md$/i, ".json")}`);
 const editBase = `https://github.com/OWNER/apple-dev-docs-ko-automation/edit/main/overrides/ko/${sourcePath.replace(/\.md$/i, ".yaml")}`;
+const body = entry.body ?? "";
+const docKind = kindLabel(extractKind(body));
+const docAbstract = extractAbstract(body);
+const availability = extractAvailability(body);
+const declaration = extractDeclaration(body, currentNav?.title ?? entry.slug, extractKind(body));
+
+function stripInline(value: string): string {
+  return value
+    .replace(/<span[^>]*>/g, "")
+    .replace(/<\/span>/g, "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/\*([^*]+)\*/g, "$1")
+    .replace(/&gt;/g, ">")
+    .replace(/&lt;/g, "<")
+    .replace(/&amp;/g, "&")
+    .trim();
+}
+
+function extractKind(value: string): string {
+  const match = value.match(/\*\*Kind\*\*:\s*([^<\n]+)/i);
+  return stripInline(match?.[1] ?? "reference").toLowerCase();
+}
+
+function kindLabel(value: string): string {
+  const labels: Record<string, string> = {
+    article: "문서",
+    class: "클래스",
+    enum: "열거형",
+    function: "함수",
+    method: "메서드",
+    property: "프로퍼티",
+    protocol: "프로토콜",
+    reference: "참조",
+    struct: "구조체",
+    typealias: "타입 별칭"
+  };
+  return labels[value] ?? value;
+}
+
+function extractAbstract(value: string): string {
+  const lines = value.split(/\r?\n/).map((line) => line.trim());
+  let passedTitle = false;
+  for (const line of lines) {
+    if (!line || line === "---") continue;
+    if (line.startsWith(">")) continue;
+    if (line.startsWith("# ")) {
+      passedTitle = true;
+      continue;
+    }
+    if (!passedTitle) continue;
+    if (line.startsWith("#") || line.startsWith("```") || line.startsWith("- ")) continue;
+    if (line.includes("**Framework**") || line.includes("**Kind**") || line.includes("**Availability**")) continue;
+    if (line.includes("View on Apple Developer")) continue;
+    const cleaned = stripInline(line);
+    if (cleaned) return cleaned;
+  }
+  return "Apple Developer Documentation 참조 문서의 비공식 한국어 번역입니다.";
+}
+
+function extractAvailability(value: string): string[] {
+  const lines = value.split(/\r?\n/);
+  const found: string[] = [];
+  let inAvailability = false;
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (line.includes("**Availability**")) {
+      inAvailability = true;
+      continue;
+    }
+    if (!inAvailability) continue;
+    if (line.startsWith("#") || line.startsWith("```")) break;
+    if (!line) {
+      if (found.length) break;
+      continue;
+    }
+    if (line.startsWith("- ")) found.push(stripInline(line.replace(/^- /, "")));
+    if (found.length >= 8) break;
+  }
+  return found;
+}
+
+function extractDeclaration(value: string, title: string, kind: string): string {
+  const match = value.match(/##\s*(?:<span[^>]*>)?Declaration(?:<\/span>)?\s*[\s\S]*?```(?:swift)?\s*([\s\S]*?)```/i);
+  const declaration = stripInline(match?.[1] ?? "").replace(/\n+/g, "\n").trim();
+  if (declaration) return declaration;
+  const swiftKind = kind === "class" || kind === "struct" || kind === "enum" || kind === "protocol" ? kind : "symbol";
+  return `${swiftKind} ${title}`;
+}
 ---
 
 <BaseLayout title={`${entry.data.source_path ?? entry.slug} - Apple Dev Docs KO`}>
@@ -27,7 +118,7 @@ const editBase = `https://github.com/OWNER/apple-dev-docs-ko-automation/edit/mai
       <article class="doc-main">
         <div class="doc-topbar">
           <details class="doc-options">
-            <summary>Language: Swift</summary>
+            <summary>번역 옵션</summary>
             <SourceViewControls sourceMapUrl={sourceMapUrl} editBase={editBase} />
           </details>
         </div>
@@ -37,15 +128,17 @@ const editBase = `https://github.com/OWNER/apple-dev-docs-ko-automation/edit/mai
             <span>/</span>
             <span>{currentNav?.title ?? entry.slug}</span>
           </nav>
-          <p class="doc-kind">Class</p>
+          <p class="doc-kind">{docKind}</p>
           <h1 class="doc-title">{currentNav?.title ?? entry.slug}</h1>
-          <p class="doc-abstract">Korean translation of the Apple Developer Documentation reference. Use the translation menu when you need source text or edit controls.</p>
-          <p class="doc-availability">Translated Reference <span>|</span> Official Source <span>|</span> Human Override Ready</p>
-          <pre class="declaration-pill"><code>class {currentNav?.title ?? entry.slug}</code></pre>
+          <p class="doc-abstract">{docAbstract}</p>
+          {availability.length ? (
+            <p class="doc-availability">{availability.map((item, index) => <><span>{item}</span>{index < availability.length - 1 ? <i>|</i> : null}</>)}</p>
+          ) : null}
+          <pre class="declaration-pill"><code>{declaration}</code></pre>
           <div class="doc-content">
             <Content />
           </div>
-          <p class="doc-official-link"><a href={entry.data.official_url ?? "#"}>View official documentation</a></p>
+          <p class="doc-official-link"><a href={entry.data.official_url ?? "#"}>공식 문서에서 보기</a></p>
         </div>
       </article>
     </div>

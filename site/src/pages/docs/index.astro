@@ -4,7 +4,9 @@ import DocsSidebar from "../../components/DocsSidebar.astro";
 import frameworksData from "../../data/frameworks.json";
 import nav from "../../data/navigation.json";
 
-const grouped = new Map();
+type NavEntry = (typeof nav)[number];
+
+const grouped = new Map<string, NavEntry[]>();
 const base = import.meta.env.BASE_URL;
 const href = (path = "") => `${base}${path.replace(/^\//, "")}`;
 for (const item of nav) {
@@ -12,21 +14,30 @@ for (const item of nav) {
   list.push(item);
   grouped.set(item.framework, list);
 }
+const frameworkRows = Array.from(grouped.entries())
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([framework, docs]) => {
+    docs.sort((a: NavEntry, b: NavEntry) => a.title.localeCompare(b.title));
+    const summary = frameworksData.find((item) => item.name === framework);
+    return { framework, docs, totalCount: summary?.count };
+  });
 ---
 
 <BaseLayout title="문서 - Apple Dev Docs KO">
   <main class="documentation-frame">
     <DocsSidebar items={nav} frameworks={frameworksData} />
-    <section class="list-layout">
-      <h1>Documentation</h1>
-      <p>비공식 한국어 번역 문서 인덱스입니다. 왼쪽 navigator 또는 framework 카드를 통해 문서를 열 수 있습니다.</p>
-      <ul class="framework-list">
+    <section class="list-layout documentation-directory">
+      <p class="directory-eyebrow">Documentation</p>
+      <h1>기술 문서</h1>
+      <p>왼쪽 navigator에서 기술을 선택하거나 아래 목록에서 번역된 문서를 바로 엽니다.</p>
+      <ul class="technology-directory" aria-label="번역된 기술 문서">
         {
-          Array.from(grouped.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([framework, docs]) => (
-            <li class="framework-item">
-              <strong>{framework}</strong>
-              <p>{docs.length}개 문서</p>
-              <a class="button compact" href={href(`docs/${docs[0]?.slug ?? ""}/`)}>Open</a>
+          frameworkRows.map(({ framework, docs, totalCount }) => (
+            <li>
+              <a href={href(`docs/${docs[0]?.slug ?? ""}/`)}>
+                <span>{framework}</span>
+                <small>{docs.length}개 번역{totalCount && totalCount !== docs.length ? ` / 원문 ${totalCount}개` : ""}</small>
+              </a>
             </li>
           ))
         }

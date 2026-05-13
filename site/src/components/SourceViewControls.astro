@@ -9,11 +9,11 @@ const { sourceMapUrl, editBase } = Astro.props;
 <div class="doc-tools" data-source-map-url={sourceMapUrl} data-edit-base={editBase}>
   <div class="segmented-control" aria-label="원문 보기 모드">
     <button type="button" data-source-mode-button="ko_only" aria-pressed="true">한국어만</button>
-    <button type="button" data-source-mode-button="sentence_popover" aria-pressed="false">문장 원문</button>
-    <button type="button" data-source-mode-button="inline_original" aria-pressed="false">아래 원문</button>
+    <button type="button" data-source-mode-button="sentence_popover" aria-pressed="false">문장별 원문</button>
+    <button type="button" data-source-mode-button="inline_original" aria-pressed="false">원문 함께 보기</button>
     <button type="button" data-source-mode-button="side_by_side" aria-pressed="false">좌우 병렬</button>
   </div>
-  <a class="button" data-edit-link href={editBase}>이 번역 수정하기</a>
+  <a class="button" data-edit-link href={editBase}>번역 제안</a>
 </div>
 
 <script>
@@ -21,25 +21,34 @@ const { sourceMapUrl, editBase } = Astro.props;
   const tool = document.querySelector("[data-source-map-url]");
   const buttons = Array.from(document.querySelectorAll("[data-source-mode-button]"));
   const segmentSource = new Map();
+  let sourceMapLoaded = false;
+  let sourceMapLoading;
   let popover;
 
   async function loadSourceMap() {
+    if (sourceMapLoaded) return;
+    if (sourceMapLoading) return sourceMapLoading;
     if (!tool) return;
     const url = tool.getAttribute("data-source-map-url");
     if (!url) return;
-    try {
+    sourceMapLoading = (async () => {
+      try {
       const response = await fetch(url);
       if (!response.ok) return;
       const data = await response.json();
       for (const segment of data.segments ?? []) {
         segmentSource.set(segment.id, segment.source ?? "");
       }
+      sourceMapLoaded = true;
     } catch {
       // Source view gracefully stays Korean-only when the source map is missing.
     }
+    })();
+    return sourceMapLoading;
   }
 
-  function setMode(mode) {
+  async function setMode(mode) {
+    await loadSourceMap();
     document.body.dataset.sourceMode = mode;
     for (const button of buttons) {
       button.setAttribute("aria-pressed", String(button.getAttribute("data-source-mode-button") === mode));
@@ -73,6 +82,9 @@ const { sourceMapUrl, editBase } = Astro.props;
   }
 
   buttons.forEach((button) => button.addEventListener("click", () => setMode(button.getAttribute("data-source-mode-button"))));
+  tool?.closest("details")?.addEventListener("toggle", (event) => {
+    if (event.currentTarget.open) loadSourceMap();
+  });
   document.addEventListener("mouseover", (event) => {
     const target = event.target.closest?.(".ko-segment");
     if (target) showPopover(target);
@@ -84,5 +96,4 @@ const { sourceMapUrl, editBase } = Astro.props;
   document.addEventListener("mouseout", (event) => {
     if (event.target.closest?.(".ko-segment") && popover) popover.remove();
   });
-  loadSourceMap();
 </script>
