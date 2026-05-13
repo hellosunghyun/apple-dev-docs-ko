@@ -9,6 +9,8 @@ export type UsageLimitInfo = {
   retryAt?: string;
 };
 
+const limitedCodexModels = new Set<string>();
+
 export async function translateBatch(input: TranslationBatchInput): Promise<TranslationBatchOutput> {
   if (process.env.MOCK_TRANSLATION === "1") {
     return mockTranslate(input);
@@ -17,7 +19,7 @@ export async function translateBatch(input: TranslationBatchInput): Promise<Tran
   const prompt = promptTemplate.replace("<INPUT_JSON>", JSON.stringify(input, null, 2));
   const attempts = Math.max(1, Number(process.env.CODEX_RETRIES ?? 2) + 1);
   const timeout = Number(process.env.CODEX_TIMEOUT_MS ?? 600_000);
-  const models = configuredModels();
+  const models = activeModels();
   let lastError: unknown;
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
@@ -35,6 +37,7 @@ export async function translateBatch(input: TranslationBatchInput): Promise<Tran
         const usageLimit = getUsageLimitInfo(message);
         const hasFallbackModel = modelIndex + 1 < models.length;
         if (hasFallbackModel && usageLimit) {
+          if (model) limitedCodexModels.add(model);
           console.warn(
             `Codex model ${modelLabel(model)} hit usage limits; trying fallback model ${modelLabel(models[modelIndex + 1])}.`
           );
@@ -76,6 +79,12 @@ function configuredModels(): Array<string | undefined> {
     models.push(model);
   }
   return models.length ? models : [undefined];
+}
+
+function activeModels(): Array<string | undefined> {
+  const models = configuredModels();
+  const active = models.filter((model) => !model || !limitedCodexModels.has(model));
+  return active.length ? active : models;
 }
 
 function splitConfiguredModels(value: string | undefined): string[] {
