@@ -22,7 +22,7 @@ on:
         description: Codex CLI model used for translation batches.
       codex_fallback_models:
         required: false
-        default: "gpt-5.3-codex"
+        default: "gpt-5.5"
         description: Comma-separated fallback Codex models used when the primary model hits usage limits.
       batch_segments:
         required: false
@@ -203,6 +203,16 @@ jobs:
       - uses: ./.github/actions/setup-codex-auth
         with:
           codex-auth-json: ${{ secrets.CODEX_AUTH_JSON }}
+      - name: Show Codex model fallback order
+        env:
+          CODEX_MODEL: ${{ inputs.codex_model || 'gpt-5.3-codex-spark' }}
+          CODEX_FALLBACK_MODELS: ${{ inputs.codex_fallback_models || 'gpt-5.5' }}
+        run: |
+          if [ -n "$CODEX_FALLBACK_MODELS" ]; then
+            echo "Codex model order: ${CODEX_MODEL} -> ${CODEX_FALLBACK_MODELS}"
+          else
+            echo "Codex model order: ${CODEX_MODEL}"
+          fi
       - id: shard
         run: |
           printf 'id=%04d\n' '${{ matrix.shard_index }}' >> "$GITHUB_OUTPUT"
@@ -262,7 +272,7 @@ jobs:
           CHECKPOINT_RESULTS: ${{ inputs.checkpoint_results || 'true' }}
           CHECKPOINT_INTERVAL_SECONDS: ${{ inputs.checkpoint_interval_seconds || '300' }}
           CODEX_MODEL: ${{ inputs.codex_model || 'gpt-5.3-codex-spark' }}
-          CODEX_FALLBACK_MODELS: ${{ inputs.codex_fallback_models || 'gpt-5.3-codex' }}
+          CODEX_FALLBACK_MODELS: ${{ inputs.codex_fallback_models || 'gpt-5.5' }}
           CODEX_TIMEOUT_SECONDS: ${{ inputs.codex_timeout_seconds || '900' }}
           CODEX_RETRIES: ${{ inputs.codex_retries || '1' }}
           MAX_TRANSLATION_FAILURES: ${{ inputs.max_translation_failures || '8' }}
