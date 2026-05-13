@@ -1,0 +1,250 @@
+{
+  "batchIndex": 1,
+  "status": "success",
+  "completedAt": "2026-05-12T14:36:49.908Z",
+  "durationMs": 33562,
+  "output": {
+    "segments": [
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "You may set the value of a capture device’s [`activeFormat`](avcapturedevice/activeformat.md) in two ways:"
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[static let builtInMic: AVAudioSession.Port](avcaptureaudiofileoutput/metadata.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "기기의 내장 마이크 입력입니다."
+      },
+      {
+        "id": "seg:list:see-also:0012:0001",
+        "ko": "[static let headsetMic: AVAudioSession.Port](avaudiosession/port/headsetmic.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "유선 헤드셋의 내장 마이크에서의 입력입니다."
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[static let lineIn: AVAudioSession.Port](avaudiounitcomponentmanager/components(matching:)-9qt94.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "도크 커넥터의 라인 레벨 입력입니다."
+      },
+      {
+        "id": "seg:heading:componentsmatching:0000:0001",
+        "ko": "components(matching:)"
+      },
+      {
+        "id": "seg:paragraph:componentsmatching:0002:0001",
+        "ko": "검색 predicate와 일치하는 오디오 구성요소 객체 배열을 가져옵니다."
+      },
+      {
+        "id": "seg:heading:return-value:0007:0001",
+        "ko": "반환 값"
+      },
+      {
+        "id": "seg:paragraph:return-value:0008:0001",
+        "ko": "predicate와 일치하는 `AVAudioComponent` 객체의 배열입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "오디오 구성요소의 정보 또는 태그를 사용해 검색 조건을 구성할 수 있습니다. 예를 들어 `typeName CONTAINS 'Effect'` 또는 `tags IN {'Sampler', 'MIDI'}`와 같습니다."
+      },
+      {
+        "id": "seg:list:parameters:0012:0001",
+        "ko": "`predicate`: 검색 predicate입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0013:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0014:0001",
+        "ko": "[func components(matching: AudioComponentDescription) -> [AVAudioUnitComponent]](avaudiounitcomponentmanager/components(matching:)-9qt94.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "설명과 일치하는 오디오 구성요소 객체 배열을 가져옵니다."
+      },
+      {
+        "id": "seg:list:see-also:0016:0001",
+        "ko": "[func components(passingTest: (AVAudioUnitComponent, UnsafeMutablePointer<ObjCBool>) -> Bool) -> [AVAudioUnitComponent]](avaudiounitcomponentmanager/components(passingtest:).md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "블록 메서드를 통과한 오디오 구성요소의 배열을 가져옵니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0019:0001",
+        "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfaudio/avaudiounitcomponentmanager/components(matching:)-96l2c)*"
+      },
+      {
+        "id": "seg:paragraph:rate:0002:0001",
+        "ko": "오디오 재생률입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "You may set the value of a capture device’s [`activeFormat`](avcapturedevice/activeformat.md) in two ways:"
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "If you set the value of this property to `nil`, the output vends samples in their device native format."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0003",
+        "ko": "마찬가지로 `0.5`로 변경하면 출력 오디오가 한 옥타브 낮게 재생됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0001",
+        "ko": "이 오디오 유닛은 음악적 간격을 측정할 때 사용하는 로그 값인 *cents* 단위로 피치를 측정합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0002",
+        "ko": "한 옥타브는 1200 cents와 같습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0009:0003",
+        "ko": "한 음악적 반음은 100 cents와 같습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "`rate` 값을 사용하면 다음 수식으로 피치(cent)를 계산합니다. `pitch = 1200.0 * log2(rate)`."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "Auto exposure defaults include [`minFrameRate`](avframeraterange/minframerate.md), [`maxFrameRate`](avframeraterange/maxframerate.md), and [`maxExposureDuration`](avcapturedevice/format/maxexposureduration.md)."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "기본값은 `1.0`입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0011:0002",
+        "ko": "값의 범위는 `0.25`에서 `4.0`입니다."
+      },
+      {
+        "id": "seg:paragraph:bytesampleoffset:0002:0001",
+        "ko": "오디오 버퍼의 바이트 오프셋입니다."
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "텍스트를 설명하는 타입입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "북마크 이름을 나타내는 문자열입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0013:0001",
+        "ko": "고유한 소리를 나타내는 문자열입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0015:0001",
+        "ko": "요청 텍스트의 위치와 길이입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0017:0001",
+        "ko": "텍스트 유형을 설명하는 상수입니다."
+      },
+      {
+        "id": "seg:paragraph:urlasset:0002:0001",
+        "ko": "상위 작업에서 다운로드하는 자산입니다."
+      },
+      {
+        "id": "seg:paragraph:overalldurationhint:0002:0001",
+        "ko": "현재 존재하거나 향후 존재할 수 있는 조각의 총 지속 시간입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "You may set the value of a capture device’s [`activeFormat`](avcapturedevice/activeformat.md) in two ways:"
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "If you set the value of this property to `nil`, the output vends samples in their device native format."
+      },
+      {
+        "id": "seg:paragraph:image:0002:0001",
+        "ko": "요청된 시간의 이미지입니다."
+      },
+      {
+        "id": "seg:list:image:0004:0003",
+        "ko": "Mac Catalyst ?+"
+      },
+      {
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:paragraph:see-also:0009:0001",
+        "ko": "비디오 타임라인에서 이미지를 요청하는 시간입니다."
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "이미지 생성기가 이미지를 생성하는 비디오 타임라인의 실제 시간입니다."
+      },
+      {
+        "id": "seg:paragraph:audiosettings:0002:0001",
+        "ko": "수신기에서 출력하기 전에 오디오를 디코드하거나 재인코드할 때 사용하는 설정입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "You may set the value of a capture device’s [`activeFormat`](avcapturedevice/activeformat.md) in two ways:"
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0002",
+        "ko": "이 속성의 값을 `nil`로 설정하면 출력은 장치의 기본 형식으로 샘플을 제공합니다."
+      },
+      {
+        "id": "seg:heading:see-also:0009:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "id": "seg:list:see-also:0010:0001",
+        "ko": "[var metadata: [AVMetadataItem]](avcaptureaudiofileoutput/metadata.md)"
+      },
+      {
+        "id": "seg:paragraph:see-also:0011:0001",
+        "ko": "수신기의 출력 파일에 작성할 메타데이터의 컬렉션입니다."
+      },
+      {
+        "id": "seg:paragraph:unifiedautoexposuredefaultsenabled:0002:0001",
+        "ko": "입력에서 통합 자동 노출 기본 설정을 활성화하는지 나타내는 부울 값입니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0008:0001",
+        "ko": "캡처 장치의 [`activeFormat`](avcapturedevice/activeformat.md) 값은 두 가지 방식으로 설정할 수 있습니다."
+      },
+      {
+        "id": "seg:list:discussion:0009:0001",
+        "ko": "장치의 [`formats`](avcapturedevice/formats.md) 속성에 있는 형식 중 하나를 직접 사용해 직접 설정합니다."
+      },
+      {
+        "id": "seg:list:discussion:0009:0002",
+        "ko": "캡처 세션은 [`sessionPreset`](avcapturesession/sessionpreset.md) 속성을 설정할 때 이를 대신 설정합니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0001",
+        "ko": "기기 및 형식에 따라 한 방법을 사용하거나 다른 방법을 사용할 때 기본 자동 노출 동작이 다르게 구성되어 자동 노출 동작이 일관되지 않을 수 있습니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0002",
+        "ko": "자동 노출 기본 설정에는 [`minFrameRate`](avframeraterange/minframerate.md), [`maxFrameRate`](avframeraterange/maxframerate.md), [`maxExposureDuration`](avcapturedevice/format/maxexposureduration.md)가 포함됩니다."
+      },
+      {
+        "id": "seg:paragraph:discussion:0010:0003",
+        "ko": "이 속성을 [`true`](https://developer.apple.com/documentation/Swift/true)로 설정하면 활성 형식을 설정하는 방식과 상관없이 시스템이 장치에 일관된 기본 동작을 적용합니다."
+      }
+    ]
+  }
+}
