@@ -1,4 +1,5 @@
 import { Command } from "commander";
+import path from "node:path";
 import { readJson, readOptionalJson, readText, resolveRoot, writeJson } from "../lib/fs.js";
 import type { Manifest } from "../lib/types.js";
 
@@ -23,7 +24,7 @@ const sourceItems = navigation.length
     title: file.title,
     framework: file.framework,
     sourcePath: file.sourcePath,
-    slug: file.sourcePath.replace(/\.md$/i, ""),
+    slug: slugFromSourcePath(file.sourcePath),
     officialUrl: file.officialUrl
   }));
 const nextIndex = sourceItems
@@ -50,3 +51,11 @@ await writeJson(resolveRoot("site/public/search/index.json"), {
   items: index
 });
 console.log(`Search index entries: ${index.length}`);
+
+function slugFromSourcePath(sourcePath: string): string {
+  return sourcePath
+    .replace(/\.md$/i, "")
+    .split(path.posix.sep)
+    .map((segment) => encodeURIComponent(segment.toLowerCase()))
+    .join("/");
+}

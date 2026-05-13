@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const base = import.meta.env.BASE_URL;
 const href = (path = "") => `${base}${path.replace(/^\//, "")}`;
+const basePath = base.endsWith("/") ? base : `${base}/`;
 ---
 
 <BaseLayout title="페이지 없음 - Apple Dev Docs KO">
@@ -13,4 +14,29 @@ const href = (path = "") => `${base}${path.replace(/^\//, "")}`;
       <a class="button" href={href("search/")}>검색하기</a>
     </div>
   </main>
+  <script is:inline define:vars={{ basePath }}>
+    (() => {
+      const docsPrefix = `${basePath}docs/`;
+      const currentPath = window.location.pathname;
+      if (!currentPath.startsWith(docsPrefix)) return;
+
+      const requestedSlug = currentPath.slice(docsPrefix.length).replace(/\/$/, "");
+      const normalizedSlug = requestedSlug.toLowerCase();
+      const loadNavigation = async () => {
+        for (const url of [`${basePath}navigation.json`, "/navigation.json"]) {
+          const response = await fetch(url);
+          if (response.ok) return response.json();
+        }
+        return [];
+      };
+
+      loadNavigation()
+        .then((items) => {
+          const match = items.find((item) => item.slug.toLowerCase() === normalizedSlug);
+          if (!match || match.slug === requestedSlug) return;
+          window.location.replace(`${basePath}docs/${match.slug}/${window.location.search}${window.location.hash}`);
+        })
+        .catch(() => {});
+    })();
+  </script>
 </BaseLayout>

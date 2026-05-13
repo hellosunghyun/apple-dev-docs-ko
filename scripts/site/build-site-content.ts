@@ -15,13 +15,14 @@ async function main(): Promise<void> {
   const manifestSummary = await readOptionalJson<{
     frameworks?: Array<{ name: string; count: number }>;
   }>(resolveRoot("state/manifest-summary.json"), {});
-  const existingNav = await readOptionalJson<Array<{
+  type NavItem = {
     sourcePath: string;
     slug: string;
     title: string;
     framework: string;
     officialUrl?: string;
-  }>>(resolveRoot("site/src/data/navigation.json"), []);
+  };
+  const existingNav = (await readOptionalJson<NavItem[]>(resolveRoot("site/src/data/navigation.json"), [])).map(normalizeNavItem);
   const nextNav = manifest.files.map((file) => ({
     sourcePath: file.sourcePath,
     slug: slugFromSourcePath(file.sourcePath),
@@ -66,7 +67,11 @@ async function main(): Promise<void> {
 }
 
 export function slugFromSourcePath(sourcePath: string): string {
-  return sourcePath.replace(/\.md$/i, "").split(path.posix.sep).map(encodeURIComponent).join("/");
+  return sourcePath
+    .replace(/\.md$/i, "")
+    .split(path.posix.sep)
+    .map((segment) => encodeURIComponent(segment.toLowerCase()))
+    .join("/");
 }
 
 function mergeBySlug<T extends { slug: string }>(existing: T[], incoming: T[]): T[] {
@@ -75,6 +80,25 @@ function mergeBySlug<T extends { slug: string }>(existing: T[], incoming: T[]): 
     bySlug.set(item.slug, item);
   }
   return Array.from(bySlug.values()).sort((a, b) => a.slug.localeCompare(b.slug));
+}
+
+function normalizeNavItem<T extends { sourcePath?: string; slug: string }>(item: T): T {
+  return {
+    ...item,
+    slug: item.sourcePath ? slugFromSourcePath(item.sourcePath) : normalizeSlug(item.slug)
+  };
+}
+
+function normalizeSlug(slug: string): string {
+  return slug.split("/").map((segment) => encodeURIComponent(safeDecode(segment).toLowerCase())).join("/");
+}
+
+function safeDecode(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
 }
 
 await main();
