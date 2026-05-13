@@ -104,4 +104,16 @@ describe("translation output validation", () => {
       retryAt: "2026-05-12T04:00:00.000Z"
     });
   });
+
+  it("detects absolute Codex usage limit reset hints", () => {
+    const info = getUsageLimitInfo(
+      "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM.",
+      new Date("2026-05-12T23:48:03Z")
+    );
+
+    expect(info).toMatchObject({
+      retryAfterText: "May 19th, 2026 5:27 AM",
+      retryAt: "2026-05-19T05:27:00.000Z"
+    });
+  });
 });

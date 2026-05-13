@@ -20,6 +20,10 @@ on:
         required: true
         default: "gpt-5.3-codex-spark"
         description: Codex CLI model used for translation batches.
+      codex_fallback_models:
+        required: false
+        default: "gpt-5.3-codex"
+        description: Comma-separated fallback Codex models used when the primary model hits usage limits.
       batch_segments:
         required: false
         default: "60"
@@ -234,6 +238,7 @@ jobs:
           CHECKPOINT_RESULTS: ${{ inputs.checkpoint_results }}
           CHECKPOINT_INTERVAL_SECONDS: ${{ inputs.checkpoint_interval_seconds }}
           CODEX_MODEL: ${{ inputs.codex_model }}
+          CODEX_FALLBACK_MODELS: ${{ inputs.codex_fallback_models }}
           CODEX_TIMEOUT_SECONDS: ${{ inputs.codex_timeout_seconds }}
           CODEX_RETRIES: ${{ inputs.codex_retries }}
           MAX_TRANSLATION_FAILURES: ${{ inputs.max_translation_failures }}
