@@ -58,6 +58,13 @@ export interface TranslationConfig {
     preserveHumanOverrides: boolean;
     renderSourceSentenceMap: boolean;
     allowMockTranslator: boolean;
+    gemini?: {
+      model: string;
+      reviewerModel: string;
+      reviewEnabled: boolean;
+      inputPricePerMillionTokens: number;
+      outputPricePerMillionTokens: number;
+    };
   };
 }
 

@@ -3,10 +3,9 @@ hardStop:
   changedSegments: 50000
   deletedFiles: 500
   validationFailRate: 0.05
-  codexFailureRate: 0.10
+  translationProviderFailureRate: 0.10
 
 actions:
   onMassChange: "pause_and_report"
   onDeletedFiles: "report_only"
   onValidationSpike: "reduce_concurrency"
-

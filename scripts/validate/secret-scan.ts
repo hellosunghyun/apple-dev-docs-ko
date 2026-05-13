@@ -4,6 +4,7 @@ import { readText, resolveRoot } from "../lib/fs.js";
 const patterns = [
   /"refresh_token"\s*:/i,
   /CODEX_AUTH_JSON\s*=\s*['"{]/,
+  /GEMINI_API_KEY\s*=\s*['"{]/,
   /x-access-token:[A-Za-z0-9_]+/,
   /sk-[A-Za-z0-9]{20,}/
 ];

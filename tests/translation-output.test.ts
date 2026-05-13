@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { collectMarkdownLinks } from "../scripts/lib/segment.js";
 import { repairTranslationOutput, repairTranslatedSegment, validateTranslationOutput } from "../scripts/lib/validate.js";
-import { getUsageLimitInfo } from "../scripts/translate/codex-worker.js";
+import { getUsageLimitInfo } from "../scripts/translate/llm-worker.js";
 import type { TranslationBatchInput } from "../scripts/lib/types.js";
 
 const input: TranslationBatchInput = {
@@ -93,9 +93,9 @@ describe("translation output validation", () => {
     expect(repairTranslatedSegment("Call `trackID`.", "trackID를 호출합니다.")).toContain("`trackID`");
   });
 
-  it("detects Codex usage limit reset hints", () => {
+  it("detects translation provider usage limit reset hints", () => {
     const info = getUsageLimitInfo(
-      "ERROR: You've hit your usage limit. Visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 4:00 AM.",
+      "ERROR: You've hit your usage limit. Upgrade the plan or try again at 4:00 AM.",
       new Date("2026-05-12T03:30:00Z")
     );
 
@@ -105,15 +105,23 @@ describe("translation output validation", () => {
     });
   });
 
-  it("detects absolute Codex usage limit reset hints", () => {
+  it("detects absolute translation provider usage limit reset hints", () => {
     const info = getUsageLimitInfo(
-      "ERROR: You've hit your usage limit for GPT-5.3-Codex-Spark. Switch to another model now, or try again at May 19th, 2026 5:27 AM.",
+      "ERROR: You've hit your usage limit for the translation provider. Switch to another model now, or try again at May 19th, 2026 5:27 AM.",
       new Date("2026-05-12T23:48:03Z")
     );
 
     expect(info).toMatchObject({
       retryAfterText: "May 19th, 2026 5:27 AM",
       retryAt: "2026-05-19T05:27:00.000Z"
+    });
+  });
+
+  it("detects Gemini quota reset failures", () => {
+    const info = getUsageLimitInfo("Gemini API HTTP 429: RESOURCE_EXHAUSTED: Quota exceeded.");
+
+    expect(info).toMatchObject({
+      message: "Gemini API HTTP 429: RESOURCE_EXHAUSTED: Quota exceeded."
     });
   });
 });

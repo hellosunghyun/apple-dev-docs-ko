@@ -4,7 +4,7 @@
 
 Build the full Apple Dev Docs KO project described in `.docs/apple-dev-docs-ko-project-plan.md` and tracked in `.docs/apple-dev-docs-ko-production-checklist.md`.
 
-This is not an MVP task. Agents must implement the complete automation and site surface: upstream sync, manifesting, Markdown parsing, sentence segmentation, translation queueing, Codex translation execution, validation, human override preservation, rendering, source maps, search, status pages, GitHub Actions, Pages deployment, and browser-tested documentation UI.
+This is not an MVP task. Agents must implement the complete automation and site surface: upstream sync, manifesting, Markdown parsing, sentence segmentation, translation queueing, Gemini translation execution, second-pass translation review, validation, human override preservation, rendering, source maps, search, status pages, GitHub Actions, Pages deployment, and browser-tested documentation UI.
 
 ## Hard Product Decisions
 
@@ -61,7 +61,7 @@ Rules:
 - Use `chore:` for repository maintenance that does not change product behavior.
 - The summary after the type must be Korean.
 - Stage only intended files.
-- Never stage `.DS_Store`, secrets, runner tokens, `auth.json`, temporary logs, browser screenshots, local build output, or dependency folders.
+- Never stage `.DS_Store`, secrets, runner tokens, `auth.json`, Gemini keys, temporary logs, browser screenshots, local build output, or dependency folders.
 - Do not rewrite or revert user changes unless the user explicitly asks.
 
 ## Browser Testing Rule
@@ -84,9 +84,9 @@ Prefer the Codex Browser plugin when available. If it is unavailable or blocked,
 
 ## Security Rules
 
-- `CODEX_AUTH_JSON` is private automation only.
-- `auth.json` must never be committed, printed, uploaded as an artifact, or cached.
-- Codex OAuth jobs must use GitHub-hosted runners with `CODEX_AUTH_JSON`; pull request validation must not receive secrets.
+- `GEMINI_API_KEY` is private automation only.
+- `GEMINI_API_KEY` must never be committed, printed, uploaded as an artifact, or cached.
+- Gemini API jobs must use GitHub-hosted runners with `GEMINI_API_KEY`; pull request validation must not receive secrets.
 - Pull request validation must run without secrets.
 - Public Pages output must not contain secrets or source cache internals.
 
@@ -95,7 +95,7 @@ Prefer the Codex Browser plugin when available. If it is unavailable or blocked,
 1. Repository rules and file-backed architecture.
 2. Deterministic config, schemas, and scripts.
 3. Parser, segmenter, hashing, and queue correctness.
-4. Translation validation and human override preservation.
+4. Gemini translation execution, second-pass review, validation, and human override preservation.
 5. Rendered Korean Markdown, source maps, search, and status data.
 6. Complete Astro documentation UI.
 7. GitHub Actions automation and deployment.

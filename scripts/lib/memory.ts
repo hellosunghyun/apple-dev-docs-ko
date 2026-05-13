@@ -72,7 +72,7 @@ export function mergeMemory(existing: TranslationMemoryFile | undefined, fresh: 
 export function applyTranslationOutput(
   memory: TranslationMemoryFile,
   output: Array<{ id: string; ko: string }>,
-  translator = "codex-cli-oauth"
+  translator = "gemini-api"
 ): TranslationMemoryFile {
   const byId = new Map(output.map((segment) => [segment.id, segment.ko]));
   const translatedAt = new Date().toISOString();

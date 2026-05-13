@@ -3,7 +3,7 @@ import path from "node:path";
 import PQueue from "p-queue";
 import { Command } from "commander";
 import { ensureDir, fileExists, readJson, resolveRoot } from "../lib/fs.js";
-import { getUsageLimitInfo, translateBatch, type UsageLimitInfo } from "./codex-worker.js";
+import { getUsageLimitInfo, translateBatch, type UsageLimitInfo } from "./llm-worker.js";
 import type {
   QueueBatch,
   QueueBatchFileRef,
@@ -153,7 +153,7 @@ async function main(): Promise<void> {
   await flushState(pauseInfo ? "paused" : "finished");
   await appendSummaryRow(queueFile, totalBatches, completed, failed, activeCount(batchStates), true);
   if (pauseInfo) {
-    console.log(`${shardLabel(queueFile)} paused after Codex usage limit; completed batches are saved for resume.`);
+    console.log(`${shardLabel(queueFile)} paused after translation provider rate limit; completed batches are saved for resume.`);
     return;
   }
   if (failures.length) {
@@ -292,7 +292,7 @@ async function loadCompletedBatchOutputs(
 async function writePauseInfo(progressPath: string, usageLimitInfo: UsageLimitInfo, queueFile: QueueFile): Promise<void> {
   await writeJsonAtomic(path.join(path.dirname(progressPath), "pause.json"), {
     pausedAt: new Date().toISOString(),
-    reason: "codex_usage_limit",
+    reason: "translation_provider_rate_limit",
     shard: queueFile.shard,
     ...usageLimitInfo
   });
@@ -300,7 +300,7 @@ async function writePauseInfo(progressPath: string, usageLimitInfo: UsageLimitIn
 
 function pauseMessage(usageLimitInfo: UsageLimitInfo): string {
   const retry = usageLimitInfo.retryAfterText ? `; retry after ${usageLimitInfo.retryAfterText}` : "";
-  return `Paused after Codex usage limit${retry}`;
+  return `Paused after translation provider rate limit${retry}`;
 }
 
 function activeCount(batchStates: BatchState[]): number {

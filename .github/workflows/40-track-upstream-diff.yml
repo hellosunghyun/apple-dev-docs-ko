@@ -15,31 +15,35 @@ on:
         default: "32"
       llm_concurrency:
         required: true
-        default: "3"
-      codex_model:
+        default: "1"
+      gemini_model:
         required: true
-        default: "gpt-5.3-codex-spark"
-        description: Codex CLI model used for translation batches.
-      codex_fallback_models:
+        default: "gemini-3.1-flash-lite"
+        description: Gemini model used for translation batches.
+      gemini_reviewer_model:
         required: false
-        default: "gpt-5.5"
-        description: Comma-separated fallback Codex models used when the primary model hits usage limits.
+        default: "gemini-3.1-flash-lite"
+        description: Gemini model used for second-pass translation review.
+      gemini_review_enabled:
+        required: true
+        default: "true"
+        description: Run a second Gemini pass to review and correct each translated batch.
       batch_segments:
         required: false
-        default: "60"
+        default: "180"
         description: Sentence segments per LLM batch. Segments are never split.
       batch_chars:
         required: false
-        default: "16000"
+        default: "60000"
         description: Character budget per LLM batch. Segments are never split.
-      codex_timeout_seconds:
+      gemini_timeout_seconds:
         required: true
         default: "900"
-        description: Timeout for each Codex translation attempt.
-      codex_retries:
+        description: Timeout for each Gemini translation attempt.
+      gemini_retries:
         required: true
         default: "1"
-        description: Retry count after a failed Codex translation attempt.
+        description: Retry count after a failed Gemini translation attempt.
       max_translation_failures:
         required: true
         default: "8"
@@ -200,19 +204,23 @@ jobs:
         with:
           name: diff-manifest-state
           path: .
-      - uses: ./.github/actions/setup-codex-auth
-        with:
-          codex-auth-json: ${{ secrets.CODEX_AUTH_JSON }}
-      - name: Show Codex model fallback order
+      - name: Require Gemini API key
         env:
-          CODEX_MODEL: ${{ inputs.codex_model || 'gpt-5.3-codex-spark' }}
-          CODEX_FALLBACK_MODELS: ${{ inputs.codex_fallback_models || 'gpt-5.5' }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          if [ -n "$CODEX_FALLBACK_MODELS" ]; then
-            echo "Codex model order: ${CODEX_MODEL} -> ${CODEX_FALLBACK_MODELS}"
-          else
-            echo "Codex model order: ${CODEX_MODEL}"
-          fi
+          test -n "$GEMINI_API_KEY" || {
+            echo "::error::GEMINI_API_KEY secret is empty or unavailable";
+            exit 1;
+          }
+      - name: Show Gemini model configuration
+        env:
+          GEMINI_MODEL: ${{ inputs.gemini_model || 'gemini-3.1-flash-lite' }}
+          GEMINI_REVIEWER_MODEL: ${{ inputs.gemini_reviewer_model || 'gemini-3.1-flash-lite' }}
+          GEMINI_REVIEW_ENABLED: ${{ inputs.gemini_review_enabled || 'true' }}
+        run: |
+          echo "Gemini translation model: ${GEMINI_MODEL}"
+          echo "Gemini reviewer model: ${GEMINI_REVIEWER_MODEL}"
+          echo "Gemini review enabled: ${GEMINI_REVIEW_ENABLED}"
       - id: shard
         run: |
           printf 'id=%04d\n' '${{ matrix.shard_index }}' >> "$GITHUB_OUTPUT"
@@ -224,8 +232,8 @@ jobs:
             --shard-total "${{ inputs.shard_total || '256' }}"
       - name: Build changed shard queue
         env:
-          BATCH_SEGMENTS: ${{ inputs.batch_segments || '60' }}
-          BATCH_CHARS: ${{ inputs.batch_chars || '16000' }}
+          BATCH_SEGMENTS: ${{ inputs.batch_segments || '180' }}
+          BATCH_CHARS: ${{ inputs.batch_chars || '60000' }}
         run: |
           pnpm tsx scripts/translate/build-queue.ts \
             --changed-only \
@@ -268,19 +276,24 @@ jobs:
       - name: Translate changed shard with incremental progress
         env:
           SHARD_ID: ${{ steps.shard.outputs.id }}
-          LLM_CONCURRENCY: ${{ inputs.llm_concurrency || '3' }}
+          LLM_CONCURRENCY: ${{ inputs.llm_concurrency || '1' }}
           CHECKPOINT_RESULTS: ${{ inputs.checkpoint_results || 'true' }}
           CHECKPOINT_INTERVAL_SECONDS: ${{ inputs.checkpoint_interval_seconds || '300' }}
-          CODEX_MODEL: ${{ inputs.codex_model || 'gpt-5.3-codex-spark' }}
-          CODEX_FALLBACK_MODELS: ${{ inputs.codex_fallback_models || 'gpt-5.5' }}
-          CODEX_TIMEOUT_SECONDS: ${{ inputs.codex_timeout_seconds || '900' }}
-          CODEX_RETRIES: ${{ inputs.codex_retries || '1' }}
+          TRANSLATION_PROVIDER: gemini-api
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ inputs.gemini_model || 'gemini-3.1-flash-lite' }}
+          GEMINI_REVIEWER_MODEL: ${{ inputs.gemini_reviewer_model || 'gemini-3.1-flash-lite' }}
+          GEMINI_REVIEW_ENABLED: ${{ inputs.gemini_review_enabled || 'true' }}
+          GEMINI_TIMEOUT_SECONDS: ${{ inputs.gemini_timeout_seconds || '900' }}
+          GEMINI_RETRIES: ${{ inputs.gemini_retries || '1' }}
           MAX_TRANSLATION_FAILURES: ${{ inputs.max_translation_failures || '8' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PROGRESS_SUMMARY_INTERVAL_BATCHES: "5"
         run: |
           set -euo pipefail
-          export CODEX_TIMEOUT_MS="$((CODEX_TIMEOUT_SECONDS * 1000))"
+          export GEMINI_TIMEOUT_MS="$((GEMINI_TIMEOUT_SECONDS * 1000))"
+          export LLM_TIMEOUT_MS="$GEMINI_TIMEOUT_MS"
+          export LLM_RETRIES="$GEMINI_RETRIES"
 
           queue_path="state/queue/shard-${SHARD_ID}.json"
           checkpoint_branch="checkpoint/${GITHUB_RUN_ID}/shard-${SHARD_ID}"
@@ -486,7 +499,7 @@ jobs:
           echo "count=${paused_count}" >> "$GITHUB_OUTPUT"
           if [ "$paused_count" != "0" ]; then
             echo "paused=true" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Translation paused::${paused_count} shard(s) paused after Codex usage limits. Completed AI outputs will still be applied and committed."
+            echo "::notice title=Translation paused::${paused_count} shard(s) paused after provider rate limits. Completed AI outputs will still be applied and committed."
             find tmp/translation-shards -path '*/progress/pause.json' -type f -print | sort | head -n 20
           else
             echo "paused=false" >> "$GITHUB_OUTPUT"

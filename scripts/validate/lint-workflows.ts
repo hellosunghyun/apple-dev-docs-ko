@@ -9,7 +9,7 @@ for (const file of workflowFiles) {
     errors.push(`${file}: pull_request workflow must not use codex-oauth runner`);
   }
   if (/runs-on:\s*(?:\[[^\]]*(self-hosted|codex-oauth)[^\]]*\]|(?:self-hosted|codex-oauth)\b)/.test(text)) {
-    errors.push(`${file}: Codex workflows must use GitHub-hosted runners plus CODEX_AUTH_JSON setup`);
+    errors.push(`${file}: secret-backed workflows must use GitHub-hosted runners`);
   }
   if (/set -x/.test(text)) errors.push(`${file}: set -x is forbidden around secrets`);
 }

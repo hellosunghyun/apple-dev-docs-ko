@@ -24,7 +24,9 @@
     "site:build": "pnpm run site:content && pnpm --dir site run build",
     "site:dev": "pnpm run site:content && pnpm --dir site run dev --host 127.0.0.1",
     "progress": "tsx scripts/ops/check-progress.ts",
-    "report": "tsx scripts/ops/report-run.ts"
+    "report": "tsx scripts/ops/report-run.ts",
+    "gemini:healthcheck": "tsx scripts/ops/gemini-healthcheck.ts",
+    "cost:gemini": "tsx scripts/ops/estimate-gemini-cost.ts"
   },
   "dependencies": {
     "ajv": "^8.17.1",

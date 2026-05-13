@@ -6,6 +6,15 @@ on:
       limit_files:
         default: "100"
         required: true
+      gemini_model:
+        default: "gemini-3.1-flash-lite"
+        required: true
+      gemini_reviewer_model:
+        default: "gemini-3.1-flash-lite"
+        required: true
+      gemini_review_enabled:
+        default: "true"
+        required: true
 
 permissions:
   contents: write
@@ -21,14 +30,38 @@ jobs:
           node-version: 22
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
-      - uses: ./.github/actions/setup-codex-auth
-        with:
-          codex-auth-json: ${{ secrets.CODEX_AUTH_JSON }}
+      - name: Require Gemini API key
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          test -n "$GEMINI_API_KEY" || {
+            echo "::error::GEMINI_API_KEY secret is empty or unavailable";
+            exit 1;
+          }
+      - name: Show Gemini model configuration
+        env:
+          GEMINI_MODEL: ${{ inputs.gemini_model }}
+          GEMINI_REVIEWER_MODEL: ${{ inputs.gemini_reviewer_model }}
+          GEMINI_REVIEW_ENABLED: ${{ inputs.gemini_review_enabled }}
+        run: |
+          echo "Gemini translation model: ${GEMINI_MODEL}"
+          echo "Gemini reviewer model: ${GEMINI_REVIEWER_MODEL}"
+          echo "Gemini review enabled: ${GEMINI_REVIEW_ENABLED}"
       - run: pnpm run upstream:sync
       - run: pnpm run manifest
       - run: pnpm tsx scripts/segmenter/split-segments.ts --limit-files "${{ inputs.limit_files }}"
-      - run: pnpm tsx scripts/translate/build-queue.ts --limit-files "${{ inputs.limit_files }}"
-      - run: LLM_CONCURRENCY=3 pnpm run translate
+      - run: pnpm tsx scripts/translate/build-queue.ts --limit-files "${{ inputs.limit_files }}" --batch-segments 180 --batch-chars 60000
+      - name: Translate with Gemini
+        env:
+          TRANSLATION_PROVIDER: gemini-api
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ inputs.gemini_model }}
+          GEMINI_REVIEWER_MODEL: ${{ inputs.gemini_reviewer_model }}
+          GEMINI_REVIEW_ENABLED: ${{ inputs.gemini_review_enabled }}
+          GEMINI_TIMEOUT_MS: "900000"
+          GEMINI_RETRIES: "1"
+          LLM_CONCURRENCY: "1"
+        run: pnpm run translate
       - run: pnpm tsx scripts/translate/apply-results.ts
       - run: pnpm run render
       - run: pnpm run site:build
