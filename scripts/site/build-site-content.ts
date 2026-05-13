@@ -1,14 +1,16 @@
 import path from "node:path";
+import { rm } from "node:fs/promises";
 import { Command } from "commander";
-import { readJson, readOptionalJson, readText, resolveRoot, writeJson, writeText } from "../lib/fs.js";
-import type { Manifest } from "../lib/types.js";
+import fg from "fast-glob";
+import matter from "gray-matter";
+import { readOptionalJson, readText, resolveRoot, writeJson, writeText } from "../lib/fs.js";
+import { frameworkFromSourcePath, officialUrlFromSourcePath, titleFromMarkdown } from "../lib/source.js";
 
 const program = new Command();
 program.option("--file-list <file>").parse();
 const options = program.opts<{ fileList?: string }>();
 
 async function main(): Promise<void> {
-  const manifest = await readJson<Manifest>(resolveRoot("state/manifest.json"));
   const selected = options.fileList
     ? new Set((await readText(resolveRoot(options.fileList))).split(/\r?\n/).map((line) => line.trim()).filter(Boolean))
     : undefined;
@@ -23,7 +25,8 @@ async function main(): Promise<void> {
     officialUrl?: string;
   };
   const existingNav = (await readOptionalJson<NavItem[]>(resolveRoot("site/src/data/navigation.json"), [])).map(normalizeNavItem);
-  const nextNav = manifest.files.map((file) => ({
+  const translatedDocs = await discoverTranslatedDocs();
+  const nextNav = translatedDocs.map((file) => ({
     sourcePath: file.sourcePath,
     slug: slugFromSourcePath(file.sourcePath),
     title: file.title,
@@ -38,23 +41,21 @@ async function main(): Promise<void> {
   for (const item of manifestSummary.frameworks ?? []) {
     frameworkCounts.set(item.name, item.count);
   }
-  for (const file of manifest.files) {
+  for (const file of translatedDocs) {
     frameworkCounts.set(file.framework, frameworkCounts.get(file.framework) ?? 0);
   }
   const frameworks = Array.from(frameworkCounts.entries())
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([name, count]) => ({ name, count }));
 
-  const filesToCopy = selected ? manifest.files.filter((file) => selected.has(file.sourcePath)) : manifest.files;
+  const filesToCopy = selected ? translatedDocs.filter((file) => selected.has(file.sourcePath)) : translatedDocs;
+  if (!selected) {
+    await rm(resolveRoot("site/src/content/docs"), { recursive: true, force: true });
+  }
   for (const file of filesToCopy) {
-    const renderedPath = resolveRoot("translations/ko", file.sourcePath);
-    try {
-      const content = await readText(renderedPath);
-      const target = resolveRoot("site/src/content/docs", file.sourcePath);
-      await writeText(target, content);
-    } catch {
-      // Site can still build while translation bootstrap is in progress.
-    }
+    const content = await readText(file.absolutePath);
+    const target = resolveRoot("site/src/content/docs", file.sourcePath);
+    await writeText(target, content);
   }
 
   await writeJson(resolveRoot("site/src/data/navigation.json"), nav);
@@ -64,6 +65,40 @@ async function main(): Promise<void> {
   console.log(`Site navigation entries: ${nav.length}`);
   console.log(`Site copied docs: ${filesToCopy.length}`);
   console.log(`Site framework entries: ${frameworks.length}`);
+}
+
+async function discoverTranslatedDocs(): Promise<Array<{
+  absolutePath: string;
+  sourcePath: string;
+  title: string;
+  framework: string;
+  officialUrl: string;
+}>> {
+  const translationRoot = resolveRoot("translations/ko");
+  const files = await fg("**/*.md", {
+    cwd: translationRoot,
+    absolute: true,
+    onlyFiles: true
+  });
+  const docs = [];
+  for (const absolutePath of files.sort()) {
+    const markdown = await readText(absolutePath);
+    const parsed = matter(markdown);
+    const relativeSourcePath = path.relative(translationRoot, absolutePath).split(path.sep).join("/");
+    const sourcePath = typeof parsed.data.source_path === "string" && parsed.data.source_path.trim()
+      ? parsed.data.source_path.trim()
+      : relativeSourcePath;
+    docs.push({
+      absolutePath,
+      sourcePath,
+      title: titleFromMarkdown(sourcePath, parsed.content),
+      framework: frameworkFromSourcePath(sourcePath),
+      officialUrl: typeof parsed.data.official_url === "string" && parsed.data.official_url.trim()
+        ? parsed.data.official_url.trim()
+        : officialUrlFromSourcePath(sourcePath)
+    });
+  }
+  return docs;
 }
 
 export function slugFromSourcePath(sourcePath: string): string {

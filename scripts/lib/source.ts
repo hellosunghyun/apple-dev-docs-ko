@@ -55,6 +55,12 @@ export function stripMarkdownInline(value: string): string {
   return value
     .replace(/`([^`]+)`/g, "$1")
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/<\/?(?:a|b|code|em|i|span|strong)\b[^>]*>/gi, "")
     .replace(/[*_~]/g, "")
+    .replace(/&quot;/g, "\"")
+    .replace(/&#39;/g, "'")
+    .replace(/&gt;/g, ">")
+    .replace(/&lt;/g, "<")
+    .replace(/&amp;/g, "&")
     .trim();
 }

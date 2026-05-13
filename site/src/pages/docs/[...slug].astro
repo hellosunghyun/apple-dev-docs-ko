@@ -130,11 +130,16 @@ function extractDeclaration(value: string, title: string, kind: string): string 
   const swiftKind = kind === "class" || kind === "struct" || kind === "enum" || kind === "protocol" ? kind : "symbol";
   return `${swiftKind} ${title}`;
 }
+
+const sidebarHeadings = headings.map((heading) => ({
+  ...heading,
+  text: stripInline(heading.text)
+}));
 ---
 
 <BaseLayout title={`${entry.data.source_path ?? entry.slug} - Apple Dev Docs KO`}>
   <main class="docs-grid">
-    <DocsSidebar items={nav} current={currentSlug} mode="framework" currentFramework={currentNav?.framework} headings={headings} />
+    <DocsSidebar items={nav} current={currentSlug} mode="framework" currentFramework={currentNav?.framework} headings={sidebarHeadings} />
     <div class="docs-content-frame">
       <article class="doc-main">
         <div class="doc-topbar">

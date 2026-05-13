@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { pathKey } from "../scripts/lib/fs.js";
 import { parseMarkdownDocument } from "../scripts/lib/markdown.js";
+import { titleFromMarkdown } from "../scripts/lib/source.js";
 
 describe("segmenter", () => {
   it("keeps code blocks preserved and splits paragraph sentences", () => {
@@ -57,5 +58,13 @@ describe("segmenter", () => {
     expect(key).toMatch(/_[a-f0-9]{16}$/);
     expect(key).not.toContain("/");
     expect(pathKey(sourcePath)).toBe(key);
+  });
+
+  it("uses visible text for translated HTML-wrapped headings", () => {
+    const markdown = '# <span class="ko-segment" data-segment-id="seg:title">AccessoryError.internalInconsistency</span>';
+
+    expect(titleFromMarkdown("documentation/AccessoryNotifications/accessoryerror/internalinconsistency.md", markdown)).toBe(
+      "AccessoryError.internalInconsistency"
+    );
   });
 });
