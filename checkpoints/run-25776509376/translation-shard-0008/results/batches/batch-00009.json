@@ -1,0 +1,175 @@
+{
+  "batchIndex": 9,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:29.754Z",
+  "durationMs": 14160,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:discussion:0010:0003",
+        "ko": "이 함수는 대상 버퍼를 채우는 데 필요한 만큼 소스 이미지를 변환합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:discussion:0010:0004",
+        "ko": "따라서 관심 영역 외부의 픽셀도 변환할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:discussion:0011:0001",
+        "ko": "이 함수는 in-place로 동작하지 않습니다. 즉, 소스와 대상 버퍼가 서로 다른 메모리를 가리켜야 합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:parameters:0013:0001",
+        "ko": "`src`: 소스 이미지를 포함하는 vImage 버퍼 구조체에 대한 포인터입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:parameters:0013:0002",
+        "ko": "`dest`: 대상 vImage 버퍼 구조체에 대한 포인터입니다. 이 구조체의 `height`, `width`, `rowBytes` 필드를 채우고, 적절한 크기의 데이터 버퍼를 할당할 책임이 있습니다. 반환 시, 이 구조체가 가리키는 데이터 버퍼에 대상 이미지 데이터가 포함됩니다. 더 이상 데이터 버퍼가 필요 없을 때는 메모리 누수를 방지하기 위해 메모리를 해제합니다. 이 매개변수는 소스 이미지 내에서 관심 영역의 크기도 지정합니다. 관심 영역의 높이와 너비는 대상 이미지 버퍼와 같습니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:parameters:0013:0003",
+        "ko": "`srcOffsetToROI_X`: 소스 이미지 내 관심 영역의 좌상단 픽셀 기준 가로 픽셀 오프셋입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:parameters:0013:0004",
+        "ko": "`srcOffsetToROI_Y`: 소스 이미지 내 관심 영역의 좌상단 픽셀 기준 세로 픽셀 오프셋입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:parameters:0013:0005",
+        "ko": "`yTranslate`: 수직 방향 변위 값입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:parameters:0013:0006",
+        "ko": "`shearSlope`: 시계 방향으로 측정한 전단된 이미지의 앞쪽 변 기울기입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:parameters:0013:0007",
+        "ko": "`filter`: 함수에서 사용하는 재샘플링 필터입니다. 자세한 내용은 [`Reducing artifacts with custom resampling filters`](reducing-artifacts-with-custom-resampling-filters.md)를 참조합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:parameters:0013:0008",
+        "ko": "`backColor`: 배경 색입니다. `kvImageBackgroundColorFill` 플래그를 설정한 경우 픽셀 값을 전달합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:parameters:0013:0009",
+        "ko": "`flags`: 변환 적용 시 사용할 옵션입니다. 소스 이미지의 경계를 벗어나는 픽셀 위치를 vImage가 처리하는 방식을 지정하려면 [`kvImageBackgroundColorFill`](kvimagebackgroundcolorfill.md) 또는 [`kvImageEdgeExtend`](kvimageedgeextend.md) 플래그 중 하나를 설정합니다. vImage가 더 높은 품질이지만 느린 재샘플링 필터를 사용하도록 하려면 [`kvImageHighQualityResampling`](kvimagehighqualityresampling.md) 플래그를 설정합니다. 코드에서 자체 타일링이나 멀티스레딩을 구현한 경우에는 [`kvImageDoNotTile`](kvimagedonottile.md)를 전달합니다. 이 함수는 [`kvImageLeaveAlphaUnchanged`](kvimageleavealphaunchanged.md) 플래그를 무시합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:heading:see-also:0014:0001",
+        "ko": "참고 항목"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:see-also:0015:0001",
+        "ko": "[Applying geometric transforms to images](applying-geometric-transforms-to-images.md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:see-also:0016:0001",
+        "ko": "vImage를 사용해 이미지 버퍼를 반사, 전단, 회전 및 스케일링합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:see-also:0017:0001",
+        "ko": "[func vImageVerticalShear_Planar16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, Pixel_16U, vImage_Flags) -> vImage_Error](vimageverticalshear_planar16u(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:see-also:0018:0001",
+        "ko": "부호 없는 16비트 플래너 이미지의 관심 영역에서 단정밀도 수직 전단을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:see-also:0019:0001",
+        "ko": "[func vImageVerticalShear_Planar16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, Pixel_16F, vImage_Flags) -> vImage_Error](vimageverticalshear_planar16f(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:see-also:0020:0001",
+        "ko": "부동소수점 16비트 플래너 이미지의 관심 영역에서 단정밀도 수직 전단을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:see-also:0021:0001",
+        "ko": "[func vImageVerticalShear_CbCr16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageverticalshear_cbcr16u(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:see-also:0022:0001",
+        "ko": "부호 없는 16비트 채널당 2채널 인터리브 이미지의 관심 영역에서 단정밀도 수직 전단을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:see-also:0023:0001",
+        "ko": "[func vImageVerticalShear_CbCr16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageverticalshear_cbcr16f(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:see-also:0024:0001",
+        "ko": "부동소수점 16비트 채널당 2채널 인터리브 이미지의 관심 영역에서 단정밀도 수직 전단을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:see-also:0025:0001",
+        "ko": "[func vImageVerticalShear_ARGB16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageverticalshear_argb16u(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:see-also:0026:0001",
+        "ko": "부호 없는 16비트 채널당 4채널 인터리브 이미지의 관심 영역에서 단정밀도 수직 전단을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:see-also:0027:0001",
+        "ko": "[func vImageVerticalShear_ARGB16S(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, UnsafePointer<Int16>!, vImage_Flags) -> vImage_Error](vimageverticalshear_argb16s(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:see-also:0028:0001",
+        "ko": "부호 있는 16비트 채널당 4채널 인터리브 이미지의 관심 영역에서 단정밀도 수직 전단을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:list:see-also:0029:0001",
+        "ko": "[func vImageVerticalShear_ARGB16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, vImagePixelCount, vImagePixelCount, Float, Float, ResamplingFilter!, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageverticalshear_argb16f(_:_:_:_:_:_:_:_:_:).md)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:see-also:0030:0001",
+        "ko": "부동소수점 16비트 채널당 4채널 인터리브 이미지의 관심 영역에서 단정밀도 수직 전단을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vimageverticalshear-planar16s.md",
+        "id": "seg:paragraph:see-also:0032:0001",
+        "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimageverticalshear_planar16s(_:_:_:_:_:_:_:_:_:))*"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vu256subs.md",
+        "id": "seg:heading:vu256subs:0000:0001",
+        "ko": "vU256SubS(_:_:_:)"
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vu256subs.md",
+        "id": "seg:paragraph:vu256subs:0002:0001",
+        "ko": "포화(클리핑)로 처리되는 부호 없는 256비트 뺄셈입니다."
+      },
+      {
+        "sourcePath": "documentation/Accelerate/vu256subs.md",
+        "id": "seg:heading:see-also:0007:0001",
+        "ko": "참고 항목"
+      }
+    ]
+  }
+}
