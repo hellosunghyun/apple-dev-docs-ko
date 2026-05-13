@@ -1,0 +1,379 @@
+{
+  "docId": "documentation/ARKit/armeshclassification.md",
+  "title": "ARMeshClassification",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/arkit/armeshclassification",
+  "segments": [
+    {
+      "id": "seg:heading:armeshclassification:0000:0001",
+      "source": "ARMeshClassification",
+      "ko": "ARMeshClassification",
+      "sourceHash": "4be1a9b7605ca610dc7a3722a80d271475db9afabbc3462d3212c3bcb89839c3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:armeshclassification:0001:0001",
+      "source": "**Framework**: ARKit **Kind**: enum",
+      "ko": "**Framework**: ARKit **Kind**: enum",
+      "sourceHash": "18d10b003c177e8b1d88679849fd0aa0554d7e13ea6cbccfa3e5df8ee655e8ce",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:armeshclassification:0002:0001",
+      "source": "Enumeration of different classes of real-world objects that ARKit can identify.",
+      "ko": "ARKit가 식별할 수 있는 실제 세계 객체의 다양한 클래스를 나타내는 열거형입니다.",
+      "sourceHash": "ce3d0dc5167da890e68c6ba734576449d0621683c7c099fc9223bdd20a178984",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:armeshclassification:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:armeshclassification:0004:0001",
+      "source": "iOS 13.4+",
+      "ko": "iOS 13.4+",
+      "sourceHash": "3db505a5e51210afad0df89ce64634ab84c15dffd32f283bad36fe8504d00622",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:armeshclassification:0004:0002",
+      "source": "iPadOS 13.4+",
+      "ko": "iPadOS 13.4+",
+      "sourceHash": "c454b0839c045c80fa850158dba69def792a99ab0102660c624e86c74dffcd31",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:armeshclassification:0004:0003",
+      "source": "Mac Catalyst 13.4+",
+      "ko": "Mac Catalyst 13.4+",
+      "sourceHash": "245b3d1541f53ffd87acd718826f391c16f4de1b87de8edebe0c199dcf81ddd9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nenum ARMeshClassification\n```",
+      "ko": "```swift\nenum ARMeshClassification\n```",
+      "sourceHash": "03678681e19fe9c7f583c17e90b1fe2666f9a91a790bec2aa70feabddd28756a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "When you enable [`sceneReconstruction`](arworldtrackingconfiguration/scenereconstruction.md) on a world-tracking configuration, ARKit provides several mesh anchors ([`ARMeshAnchor`](armeshanchor.md)) that collectively estimate the shape of the physical environment.",
+      "ko": "`world-tracking` 구성에서 [`sceneReconstruction`](arworldtrackingconfiguration/scenereconstruction.md)를 활성화하면 ARKit은 물리적 환경의 형상을 함께 추정하는 여러 개의 메쉬 앵커([`ARMeshAnchor`](armeshanchor.md))를 제공합니다.",
+      "sourceHash": "ff514a7cdc2acd4f5b6e3f85b3e58bb7e0e0345628f8970e27ba2c12bafd4213",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "Within that model of the real world, ARKit may identify specific objects, like seats, windows, tables, or walls.",
+      "ko": "ARKit은 해당 실제 세계 모델에서 좌석, 창문, 탁자, 벽과 같은 특정 객체를 식별할 수 있습니다.",
+      "sourceHash": "962a199c6205ef471990075a5f18a6deadd373bcbbab81c39ba9e2a5bd18c706",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0003",
+      "source": "ARKit shares that information by exposing one or more [`ARMeshClassification`](armeshclassification.md) instances in a mesh’s [`geometry`](armeshanchor/geometry.md) property.",
+      "ko": "ARKit은 메쉬의 [`geometry`](armeshanchor/geometry.md) 속성에서 하나 이상의 [`ARMeshClassification`](armeshclassification.md) 인스턴스를 노출하여 해당 정보를 공유합니다.",
+      "sourceHash": "abceb446a53ac7d34f97f5e9627b5ada9ab7778d90da353b7f84259dc6db145f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "For a sample app that demonstrates mesh classification, see [`Visualizing and interacting with a reconstructed scene`](visualizing-and-interacting-with-a-reconstructed-scene.md).",
+      "ko": "메시 분류를 시연하는 샘플 앱은 [`Visualizing and interacting with a reconstructed scene`](visualizing-and-interacting-with-a-reconstructed-scene.md)에서 확인할 수 있습니다.",
+      "sourceHash": "acf2f475af3c0595e954dd8f883c38a6b064fc57af081388aaece263587f7cca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:options:0011:0001",
+      "source": "Options",
+      "ko": "Options",
+      "sourceHash": "d0db8b5e364b6989e4b8f38a2b3846b87d99a51c1592ebf35d21cc66405a8e39",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:options:0012:0001",
+      "source": "[ARMeshClassification.ceiling](armeshclassification/ceiling.md)",
+      "ko": "[ARMeshClassification.ceiling](armeshclassification/ceiling.md)",
+      "sourceHash": "97b3a826020b6f5110b98d6b321f6bea8d39fc2f8835fbbf94448939a17432f7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:options:0013:0001",
+      "source": "The face is a part of a real-world ceiling.",
+      "ko": "이 면은 실제 세계의 천장의 일부입니다.",
+      "sourceHash": "de8335b458c9d150279015eaa35a2cf483cc51c56c47b4ec3137b3804c7767ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:options:0014:0001",
+      "source": "[ARMeshClassification.door](armeshclassification/door.md)",
+      "ko": "[ARMeshClassification.door](armeshclassification/door.md)",
+      "sourceHash": "2b27528131d654c14663ef24d678f93f688c336e9187800be898dc712a2be21c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:options:0015:0001",
+      "source": "The face is a part of a real-world door.",
+      "ko": "이 면은 실제 세계의 문 일부입니다.",
+      "sourceHash": "767984a009144b3c8a58df913c93ed2b600ed5cb807de756321f4700df535d28",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:options:0016:0001",
+      "source": "[ARMeshClassification.floor](armeshclassification/floor.md)",
+      "ko": "[ARMeshClassification.floor](armeshclassification/floor.md)",
+      "sourceHash": "7dd1853f93ea88036657e9d137f340a0bce5d96e2bee994b69bd27d2cfe39c17",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:options:0017:0001",
+      "source": "The face is a part of a real-world floor.",
+      "ko": "이 면은 실제 세계의 바닥의 일부입니다.",
+      "sourceHash": "b704c038d3eb2daad9e16bd089e0fb1afedd839665cb2dd9d861e62cb709be3e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:options:0018:0001",
+      "source": "[ARMeshClassification.none](armeshclassification/none.md)",
+      "ko": "[ARMeshClassification.none](armeshclassification/none.md)",
+      "sourceHash": "7315b15b966b697f76393e56b47a3b2bc436a22a3ed9915a91f9cd984b3dc222",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:options:0019:0001",
+      "source": "A face ARKit can’t classify.",
+      "ko": "ARKit이 분류할 수 없는 면입니다.",
+      "sourceHash": "24a4a39947ae22f1b89ae956d22acf8e105583f0085506311228ac7a07f96772",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:options:0020:0001",
+      "source": "[ARMeshClassification.seat](armeshclassification/seat.md)",
+      "ko": "[ARMeshClassification.seat](armeshclassification/seat.md)",
+      "sourceHash": "09a63b81666ab1bd5afe90749ee79a9f39490f2a03ffbe233d6707a3e9a73106",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:options:0021:0001",
+      "source": "The face is a part of a real-world seat.",
+      "ko": "이 면은 실제 세계의 좌석 일부입니다.",
+      "sourceHash": "e4ea6c95543075924df16df3f02370c5f0efa928fb61f098fa5f77660c90fad4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:options:0022:0001",
+      "source": "[ARMeshClassification.table](armeshclassification/table.md)",
+      "ko": "[ARMeshClassification.table](armeshclassification/table.md)",
+      "sourceHash": "e5555794abd74b1aba540d9f4fa3c1443ad98e804d65320985ba8075a2fcd4dd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:options:0023:0001",
+      "source": "The face is a part of a real-world table.",
+      "ko": "이 면은 실제 세계의 탁자 일부입니다.",
+      "sourceHash": "c74c4185967bf76a9326cfcb3059a232a1d459bf352f501d696a5b1416b8aafc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:options:0024:0001",
+      "source": "[ARMeshClassification.wall](armeshclassification/wall.md)",
+      "ko": "[ARMeshClassification.wall](armeshclassification/wall.md)",
+      "sourceHash": "df6bca37ac9077c94140842ba80c31da09427fea677530e333f40b5ea59c1115",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:options:0025:0001",
+      "source": "The face is a part of a real-world wall.",
+      "ko": "이 면은 실제 세계의 벽의 일부입니다.",
+      "sourceHash": "30b09817f04cb6d237d58f5a706ec7677e0baeb45a5721c142f4a95533db49ca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:options:0026:0001",
+      "source": "[ARMeshClassification.window](armeshclassification/window.md)",
+      "ko": "[ARMeshClassification.window](armeshclassification/window.md)",
+      "sourceHash": "553c0ed285e65fc5b2179856e82b148d449e2aaaf573cbe100284becc7e0856f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:options:0027:0001",
+      "source": "The face is a part of a real-world window.",
+      "ko": "이 면은 실제 세계의 창문 일부입니다.",
+      "sourceHash": "eead6bda1865eebcdbb42895ae6928a9a1e544bbada9e8436e65d08bfc46d6c5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:initializers:0028:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0029:0001",
+      "source": "[init?(rawValue: Int)](armeshclassification/init(rawvalue:).md)",
+      "ko": "[init?(rawValue: Int)](armeshclassification/init(rawvalue:).md)",
+      "sourceHash": "29f6e22aab1f4309ba7c27b32f7ca18585626d3d972dcbc8db544106c6ac476c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0030:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0031:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0001",
+      "source": "[BitwiseCopyable](../Swift/BitwiseCopyable.md)",
+      "ko": "[BitwiseCopyable](../Swift/BitwiseCopyable.md)",
+      "sourceHash": "d9b7e5b67f3eac8ea3e97e986bfddf0caad0dc17c0fe8215d67737774d123fa2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0002",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0003",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0004",
+      "source": "[RawRepresentable](../Swift/RawRepresentable.md)",
+      "ko": "[RawRepresentable](../Swift/RawRepresentable.md)",
+      "sourceHash": "2efbecf64dd0eb3d11b01bb6240e6ba86ad9aec560e5474e4cc5434b032779aa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0005",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0006",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0033:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[var classification: ARGeometrySource?](armeshgeometry/classification.md)",
+      "ko": "[var classification: ARGeometrySource?](armeshgeometry/classification.md)",
+      "sourceHash": "dbb1dedc3ae87c5d6e0399255a1eff43f103d966196f90a0495c6080a2e00ed4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Classification for each face in the mesh.",
+      "ko": "메시의 각 면에 대한 분류입니다.",
+      "sourceHash": "bb870698cd2b0f15cfb39c569e65dbec291595ca4fe38bb0e5bf3ab25583487c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[var faces: ARGeometryElement](armeshgeometry/faces.md)",
+      "ko": "[var faces: ARGeometryElement](armeshgeometry/faces.md)",
+      "sourceHash": "0f5a00645c389541a934e7acdfbe0a88363cc9f0e94278cfe8de5efe1200da64",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "An object that contains a buffer of vertex indices of the geometry’s faces.",
+      "ko": "지오메트리 면의 정점 인덱스 버퍼를 포함하는 객체입니다.",
+      "sourceHash": "2d0827d58e48c0c1988fbaa7943614d8ca0e8f3d7d543389a589d82a1f0824ae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[class ARGeometryElement](argeometryelement.md)",
+      "ko": "[class ARGeometryElement](argeometryelement.md)",
+      "sourceHash": "0b90eea4a84fa1cafe934e2a00c1653ab66b266bc05a6def53be37291c4ec1fe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "A container for index data, such as vertex indices of a face.",
+      "ko": "예를 들어 면의 정점 인덱스와 같은 인덱스 데이터를 보관하는 컨테이너입니다.",
+      "sourceHash": "22c1bb965a1af00db927cb6881ef53b0f2813b28fd3b633327ef0c1a69ab8c19",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[var normals: ARGeometrySource](armeshgeometry/normals.md)",
+      "ko": "[var normals: ARGeometrySource](armeshgeometry/normals.md)",
+      "sourceHash": "8ed499d42b7150371f631619e1bdd730d66811cfecf15ef21ea4b3424e0e9dbe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "Rays that define which direction is outside for each face.",
+      "ko": "각 면의 바깥 방향을 정의하는 광선입니다.",
+      "sourceHash": "c76c519d2882e23d8fff777724083f8f6be922b126ffaa3240e102249ce8cf69",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0042:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/armeshclassification)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/arkit/armeshclassification)*",
+      "sourceHash": "17b8f5d3a308d9fa6065eaa30bf8de3aa792fff6bb145f43978b489ebacfc184",
+      "status": "preserved"
+    }
+  ]
+}

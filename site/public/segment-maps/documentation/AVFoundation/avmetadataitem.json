@@ -1,0 +1,988 @@
+{
+  "docId": "documentation/AVFoundation/avmetadataitem.md",
+  "title": "AVMetadataItem",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avmetadataitem",
+  "segments": [
+    {
+      "id": "seg:heading:avmetadataitem:0000:0001",
+      "source": "AVMetadataItem",
+      "ko": "AVMetadataItem",
+      "sourceHash": "8367d652a094ba69c7a63c93d812af467ad4e3ac795a032a32a7256c2a7336d5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmetadataitem:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmetadataitem:0002:0001",
+      "source": "A metadata item for an audiovisual asset or one of its tracks.",
+      "ko": "A metadata item for an audiovisual asset or one of its tracks.",
+      "sourceHash": "66a0bb474518924b1257975c023843d5fc86e30eb6e4b06654202260b58bda87",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:avmetadataitem:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmetadataitem:0004:0001",
+      "source": "iOS 4.0+",
+      "ko": "iOS 4.0+",
+      "sourceHash": "0c0ed66d9f4133c5a709449f69be4759ac3625b24734b8390d2f7e23b33c3545",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmetadataitem:0004:0002",
+      "source": "iPadOS 4.0+",
+      "ko": "iPadOS 4.0+",
+      "sourceHash": "dfe042d2e3f40a7e917ced53f052a0d5f5ba8d69dfa62a3b59fb59de8ef49851",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmetadataitem:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmetadataitem:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmetadataitem:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmetadataitem:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmetadataitem:0004:0007",
+      "source": "watchOS 1.0+",
+      "ko": "watchOS 1.0+",
+      "sourceHash": "2dbee682371896bee6965d157efc729a43696cec8b6451157482f77264ffbb65",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVMetadataItem\n```",
+      "ko": "```swift\nclass AVMetadataItem\n```",
+      "sourceHash": "ae3ebd4623a5a44aeeda500538daaddab425f52afdf32a49174992bee71b91d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Loading media data asynchronously](loading-media-data-asynchronously.md)",
+      "ko": "[Loading media data asynchronously](loading-media-data-asynchronously.md)",
+      "sourceHash": "fb3c847d08d5ebdcd11880801379af7add9e2c4b1899ac5d988946bbdc90c426",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:mentions:0008:0002",
+      "source": "[Retrieving media metadata](retrieving-media-metadata.md)",
+      "ko": "[Retrieving media metadata](retrieving-media-metadata.md)",
+      "sourceHash": "8b45a7a3b3434118d748de855052a6f3b50770b05a2136bd5b83dbd6fbde1aa9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:mentions:0008:0003",
+      "source": "[Presenting chapter markers](presenting-chapter-markers.md)",
+      "ko": "[Presenting chapter markers](presenting-chapter-markers.md)",
+      "sourceHash": "217dbda68532d475bb53dd211fe22790daee865688cedc30d45ea0d7d3b4ddcb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:overview:0009:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "To effectively use `AVMetadataItem`, you need to understand how [`AVFoundation`](AVFoundation.md) organizes metadata.",
+      "ko": "`AVAudioUnitSampler`의 출력은 단일 스테레오 버스입니다.",
+      "sourceHash": "2b60528804827cb2e370b88810c40fbea81470d7bddb4c3e7e562acfb0909672",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0002",
+      "source": "To simplify finding and filtering metadata items, the framework groups related metadata into key spaces:",
+      "ko": "To simplify finding and filtering metadata items, the framework groups related metadata into key spaces:",
+      "sourceHash": "02909558293d37571fe897384e125daee82470030da74011c22ffcf48cc28e37",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:overview:0011:0001",
+      "source": "**Format-specific key spaces.** The framework defines several format-specific key spaces. They roughly correlate to a particular container or file format, such as QuickTime (QuickTime metadata and user data) or MP3 (ID3). However, a single asset may contain metadata values across multiple key spaces. To retrieve an asset’s complete collection of format-specific metadata, you use its [`metadata`](avasset/metadata.md) property.",
+      "ko": "**Format-specific key spaces.** The framework defines several format-specific key spaces. They roughly correlate to a particular container or file format, such as QuickTime (QuickTime metadata and user data) or MP3 (ID3). However, a single asset may contain metadata values across multiple key spaces. To retrieve an asset’s complete collection of format-specific metadata, you use its [`metadata`](avasset/metadata.md) property.",
+      "sourceHash": "b3b5b49576e37fbbf6891bd3e9203ce4e5cdfc2cac03d4d8599b8f64bc23f2b0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:overview:0011:0002",
+      "source": "**Common key space.** There are several common metadata values, such as a movie’s creation date or description, that can exist across multiple key spaces. To help normalize access to this common metadata, the framework provides a common key space that gives access to a limited set of metadata values common to several key spaces. This makes it easy to retrieve commonly used metadata without concern for the specific format. To retrieve an asset’s collection of common metadata, you use its [`commonMetadata`](avasset/commonmetadata.md) property.",
+      "ko": "**Common key space.** There are several common metadata values, such as a movie’s creation date or description, that can exist across multiple key spaces. To help normalize access to this common metadata, the framework provides a common key space that gives access to a limited set of metadata values common to several key spaces. This makes it easy to retrieve commonly used metadata without concern for the specific format. To retrieve an asset’s collection of common metadata, you use its [`commonMetadata`](avasset/commonmetadata.md) property.",
+      "sourceHash": "1a776759ad5bb00c75358f9a73dd354a799eb163030bcc8535d5022099c3abdf",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0012:0001",
+      "source": "Metadata items have keys that accord with the specification of the container format from which they’re drawn.",
+      "ko": "Metadata items have keys that accord with the specification of the container format from which they’re drawn.",
+      "sourceHash": "b27fc3a646de235686a63b46dcb7e0c87789e130be079f3ec7cc7f6ea9634628",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0012:0002",
+      "source": "Full details of the metadata formats, metadata keys, and metadata key spaces supported by AVFoundation are available in [`AVMetadataKeySpace`](avmetadatakeyspace.md) and [`AVMetadataKey`](avmetadatakey.md).",
+      "ko": "Full details of the metadata formats, metadata keys, and metadata key spaces supported by AVFoundation are available in [`AVMetadataKeySpace`](avmetadatakeyspace.md) and [`AVMetadataKey`](avmetadatakey.md).",
+      "sourceHash": "fda1afd6fe0eba5a214486fd5be51b422ad86361ccb1320df008c7815d213d03",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0013:0001",
+      "source": "To load values of a metadata item when you access them for the first time, use the methods from the [`AVAsynchronousKeyValueLoading`](avasynchronouskeyvalueloading.md) protocol.",
+      "ko": "To load values of a metadata item when you access them for the first time, use the methods from the [`AVAsynchronousKeyValueLoading`](avasynchronouskeyvalueloading.md) protocol.",
+      "sourceHash": "a36d1b4a964ecc521c420b42f73d5742718b66e4798c4ca305bf2243b0eecf54",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0013:0002",
+      "source": "The [`AVAsset`](avasset.md) class and other classes in turn provide their metadata as needed so that you can obtain objects from those arrays without incurring overhead for items you don’t inspect.",
+      "ko": "The [`AVAsset`](avasset.md) class and other classes in turn provide their metadata as needed so that you can obtain objects from those arrays without incurring overhead for items you don’t inspect.",
+      "sourceHash": "586c1876777b44453b85bad909ed3bc99f503427a4b3a6a40e165d25690203e5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0014:0001",
+      "source": "To filter arrays of metadata items, you use the methods of this class.",
+      "ko": "To filter arrays of metadata items, you use the methods of this class.",
+      "sourceHash": "313c506a0613e51099b66eeee9d4189c4a4e8c0c9f0bac3ebcc71843017b0d83",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0014:0002",
+      "source": "For example, you can filter by key and key space, by locale, and by preferred language.",
+      "ko": "For example, you can filter by key and key space, by locale, and by preferred language.",
+      "sourceHash": "595b3bb0555840347cef5d51bca3c28ce4769b2dbc9f676afb40eba54df0c4a8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:topics:0015:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-metadata-item:0016:0001",
+      "source": "Creating a metadata item",
+      "ko": "Creating a metadata item",
+      "sourceHash": "f573196907ecbb461155db0f0581c301739be3bb58765fa41d7d8619260d9204",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-metadata-item:0017:0001",
+      "source": "[init(propertiesOfMetadataItem: AVMetadataItem, valueLoadingHandler: (AVMetadataItemValueRequest) -> Void)](avmetadataitem/init(propertiesofmetadataitem:valueloadinghandler:).md)",
+      "ko": "[init(propertiesOfMetadataItem: AVMetadataItem, valueLoadingHandler: (AVMetadataItemValueRequest) -> Void)](avmetadataitem/init(propertiesofmetadataitem:valueloadinghandler:).md)",
+      "sourceHash": "f889389e9b6482026694dff1f0a9ec2cba8be4e6fdaf5b10a161d75ceb86420a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-a-metadata-item:0018:0001",
+      "source": "Creates a metadata item whose value loads on an on-demand basis only.",
+      "ko": "Creates a metadata item whose value loads on an on-demand basis only.",
+      "sourceHash": "7ba88d0dadfaebd5c923dab024a069601ed0cb5c61ae42e63b1230769fe37464",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-metadata-item:0019:0001",
+      "source": "[class AVMetadataItemValueRequest](avmetadataitemvaluerequest.md)",
+      "ko": "[class AVMetadataItemValueRequest](avmetadataitemvaluerequest.md)",
+      "sourceHash": "fc79b6f54517fb9119f39c0a82fbe0c9d139087a7753d84f9db8641a03c482a4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:creating-a-metadata-item:0020:0001",
+      "source": "An object that responds to a request to load the value of a metadata item.",
+      "ko": "An object that responds to a request to load the value of a metadata item.",
+      "sourceHash": "61ff6ba9c42ee6844de5bb7128758bba2c139637cb7d669095ef8be9a8ac3d07",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:identifying-metadata-items:0021:0001",
+      "source": "Identifying metadata items",
+      "ko": "Identifying metadata items",
+      "sourceHash": "2869d8b34ce6e5161754aa2701712741b81ce4decb64d5ec4bc872b9f83577a5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:identifying-metadata-items:0022:0001",
+      "source": "[var identifier: AVMetadataIdentifier?](avmetadataitem/identifier.md)",
+      "ko": "[var identifier: AVMetadataIdentifier?](avmetadataitem/identifier.md)",
+      "sourceHash": "36ffad0344961c6207d9c491d1d57bcfa5db66b0ae68dfd36506dc1f6285a5f5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:identifying-metadata-items:0023:0001",
+      "source": "An identifier for a metadata item.",
+      "ko": "An identifier for a metadata item.",
+      "sourceHash": "7321cf07fd0fe91db442f83a2e93d83b7e819cafd40906747d7f64826ef1a763",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:loading-values:0024:0001",
+      "source": "Loading values",
+      "ko": "Loading values",
+      "sourceHash": "a9424c4a447e587e15738cceca95e11168bdcf2691924c4898262bbb38e0ad6e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:loading-values:0025:0001",
+      "source": "[var dataType: String?](avmetadataitem/datatype.md)",
+      "ko": "[var dataType: String?](avmetadataitem/datatype.md)",
+      "sourceHash": "fef094c28486d11eca683fb5f8da24f4ebc588df512de84ab39a2b2d1691aeb3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:loading-values:0026:0001",
+      "source": "The data type of the metadata item’s value.",
+      "ko": "The data type of the metadata item’s value.",
+      "sourceHash": "fe285867eb8aebdebeacebfbcd70781ff8c5bc3c53fc6d5d65121b3261c7b745",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:loading-values:0027:0001",
+      "source": "[static var value: AVAsyncProperty<Root, (any NSCopying & NSObjectProtocol)?>](avpartialasyncproperty/value.md)",
+      "ko": "[static var value: AVAsyncProperty<Root, (any NSCopying & NSObjectProtocol)?>](avpartialasyncproperty/value.md)",
+      "sourceHash": "f0468c3ce5444393e33d9ebf5853f1c6fe9357b248c04ceb6f9bb0075974cb63",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:loading-values:0028:0001",
+      "source": "The value of the metadata item.",
+      "ko": "The value of the metadata item.",
+      "sourceHash": "40d4a5b5245120896be04f663db87b8dce60db644937e6bc93f2eae68979804c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:loading-values:0029:0001",
+      "source": "[static var stringValue: AVAsyncProperty<Root, String?>](avpartialasyncproperty/stringvalue.md)",
+      "ko": "[static var stringValue: AVAsyncProperty<Root, String?>](avpartialasyncproperty/stringvalue.md)",
+      "sourceHash": "e90929f43ed6e5012ab1902347fe731d8beb8c3990ae799b84afa47623ea5de5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:loading-values:0030:0001",
+      "source": "The value of the metadata item as a string.",
+      "ko": "The value of the metadata item as a string.",
+      "sourceHash": "285077bc61fd519053bd8a4a82c0f1c8b8662ddab879996ab1104e713164fe36",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:loading-values:0031:0001",
+      "source": "[static var numberValue: AVAsyncProperty<Root, NSNumber?>](avpartialasyncproperty/numbervalue.md)",
+      "ko": "[static var numberValue: AVAsyncProperty<Root, NSNumber?>](avpartialasyncproperty/numbervalue.md)",
+      "sourceHash": "cc93636b8d0b4dcbe4e5599fe6aaf45a16b5bfea5d4c6f84395fb3e82cb977e5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:loading-values:0032:0001",
+      "source": "The value of the metadata item as a number.",
+      "ko": "The value of the metadata item as a number.",
+      "sourceHash": "ebdb7fb9340f9b1f718de7e70006480fa871dab2aa7f7a16b153742d5ef9eb59",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:loading-values:0033:0001",
+      "source": "[static var dateValue: AVAsyncProperty<Root, Date?>](avpartialasyncproperty/datevalue.md)",
+      "ko": "[static var dateValue: AVAsyncProperty<Root, Date?>](avpartialasyncproperty/datevalue.md)",
+      "sourceHash": "0466a3ee4669b65e5939eaf2b45f298065adebf3d1dd2d4d8c30c33100c9234a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:loading-values:0034:0001",
+      "source": "The value of the metadata item as a date.",
+      "ko": "The value of the metadata item as a date.",
+      "sourceHash": "6e99f68365c692d5cef93b41634538b6558d628110cb0c37266d6fbce3ae7ec3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:loading-values:0035:0001",
+      "source": "[static var dataValue: AVAsyncProperty<Root, Data?>](avpartialasyncproperty/datavalue.md)",
+      "ko": "[static var dataValue: AVAsyncProperty<Root, Data?>](avpartialasyncproperty/datavalue.md)",
+      "sourceHash": "c5a3c88eed942c3a087a47ae5ab97641ccfa601d9fb7c0ea4ab15dc468e1f338",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:loading-values:0036:0001",
+      "source": "The value of the metadata item as a data value.",
+      "ko": "The value of the metadata item as a data value.",
+      "sourceHash": "bbe3803c7999efb9e8d5a45e0fa69ff26c91a27b13396f853a04688592f9c785",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:loading-values:0037:0001",
+      "source": "[static var extraAttributes: AVAsyncProperty<Root, [AVMetadataExtraAttributeKey : Any]?>](avpartialasyncproperty/extraattributes.md)",
+      "ko": "[static var extraAttributes: AVAsyncProperty<Root, [AVMetadataExtraAttributeKey : Any]?>](avpartialasyncproperty/extraattributes.md)",
+      "sourceHash": "49e57bc2ecdc3855be6e92d2e943f10af51b65ad775569ceae639a1a78e7fb18",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:loading-values:0038:0001",
+      "source": "A dictionary of additional attributes for the item.",
+      "ko": "A dictionary of additional attributes for the item.",
+      "sourceHash": "124b7c79ac383abf0773a351cd280c497bb34d5eeefdf8149e0e94703f6d8e51",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:accessing-keys-and-key-spaces:0039:0001",
+      "source": "Accessing keys and key spaces",
+      "ko": "Accessing keys and key spaces",
+      "sourceHash": "8afba8fc5a14c09e5f6ec3bebf4554ed18a96519f48e278eb7bedf96041ef1db",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-keys-and-key-spaces:0040:0001",
+      "source": "[var key: (any NSCopying & NSObjectProtocol)?](avmetadataitem/key.md)",
+      "ko": "[var key: (any NSCopying & NSObjectProtocol)?](avmetadataitem/key.md)",
+      "sourceHash": "f9019a9b922681bfd4c499c1ff2824c64e8d25f7eed3d3a49450bd051cc30842",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-keys-and-key-spaces:0041:0001",
+      "source": "The key of the metadata item.",
+      "ko": "The key of the metadata item.",
+      "sourceHash": "2658ed24bd88e929b88d8020902fc9c40f7506bbd7247abc5c60c5801f0907e4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-keys-and-key-spaces:0042:0001",
+      "source": "[var commonKey: AVMetadataKey?](avmetadataitem/commonkey.md)",
+      "ko": "[var commonKey: AVMetadataKey?](avmetadataitem/commonkey.md)",
+      "sourceHash": "af17373f16ac6649c143bf50c5507d43f192bd0e91f52ac6a7804737d74361bd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-keys-and-key-spaces:0043:0001",
+      "source": "The common key of the metadata item.",
+      "ko": "The common key of the metadata item.",
+      "sourceHash": "77a0e1943b38f92dd76ae647b56577e001dbfeff4465065f16467ee005ac0bb4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-keys-and-key-spaces:0044:0001",
+      "source": "[var keySpace: AVMetadataKeySpace?](avmetadataitem/keyspace.md)",
+      "ko": "[var keySpace: AVMetadataKeySpace?](avmetadataitem/keyspace.md)",
+      "sourceHash": "7c170afbd5d7f83c8e2ef467146e512cf626555b576b52e107f6ab92a5dfb09b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-keys-and-key-spaces:0045:0001",
+      "source": "The key space for the metadata item’s key.",
+      "ko": "The key space for the metadata item’s key.",
+      "sourceHash": "64cba7e2be1d1a0b778184485dd6a7e13481416d73d41a4ff067c21cc94badfa",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:accessing-timing:0046:0001",
+      "source": "Accessing timing",
+      "ko": "Accessing timing",
+      "sourceHash": "0ce485618bfe205c2f1532a8561d5d2c6a4a01854a0befd255f0bb637babc45c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-timing:0047:0001",
+      "source": "[var time: CMTime](avmetadataitem/time.md)",
+      "ko": "[var time: CMTime](avmetadataitem/time.md)",
+      "sourceHash": "7122edb564aee3e06e80470fbfa7281d69fbf44ce5b1d1d790f9779d769c4a18",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-timing:0048:0001",
+      "source": "The timestamp of the metadata item.",
+      "ko": "The timestamp of the metadata item.",
+      "sourceHash": "b4d0056b08b5e7b20103163f07ca762ea45db7ad21f986ffe06efdd7fc6e52d5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-timing:0049:0001",
+      "source": "[var startDate: Date?](avmetadataitem/startdate.md)",
+      "ko": "[var startDate: Date?](avmetadataitem/startdate.md)",
+      "sourceHash": "167c8e0f18a3d4298949dd35c0d6e98b16b4a39cbf0c9fd337b1102c9ad6f48a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-timing:0050:0001",
+      "source": "The start date of the timed metadata.",
+      "ko": "The start date of the timed metadata.",
+      "sourceHash": "2d4ee41d4531a9ae40b2dee7509089f760878e8bd3324d07a0e883f81f066d4c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-timing:0051:0001",
+      "source": "[var duration: CMTime](avmetadataitem/duration.md)",
+      "ko": "[var duration: CMTime](avmetadataitem/duration.md)",
+      "sourceHash": "fd99c9bfd89f5c98ef9f92abe8d46f2c991d58260904eaac2c39d3a62d7b55b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-timing:0052:0001",
+      "source": "The duration of the metadata item.",
+      "ko": "The duration of the metadata item.",
+      "sourceHash": "c48831c1c1528b53446530ba692b7a4c26f5d4543fd54849c1eaa67709b1c471",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:accessing-language-support:0053:0001",
+      "source": "Accessing language support",
+      "ko": "Accessing language support",
+      "sourceHash": "43336b2e0c312cc404d002965bea4ac0268fedc8cda3ea489c0169ce7ad55141",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-language-support:0054:0001",
+      "source": "[var locale: Locale?](avmetadataitem/locale.md)",
+      "ko": "[var locale: Locale?](avmetadataitem/locale.md)",
+      "sourceHash": "7526100119add152e53207fff8cc19dae005b0e22de502f7f5dd994767589b38",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-language-support:0055:0001",
+      "source": "The locale of the metadata item.",
+      "ko": "The locale of the metadata item.",
+      "sourceHash": "dd1f08ab855c14244056818df8c8992baa4ed68d1b6973c2c5eb868ab630e610",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-language-support:0056:0001",
+      "source": "[var extendedLanguageTag: String?](avmetadataitem/extendedlanguagetag.md)",
+      "ko": "[var extendedLanguageTag: String?](avmetadataitem/extendedlanguagetag.md)",
+      "sourceHash": "69c8901753c071011d366d0e1171def1eaa35fd767de8cfd5d070d7f141ee5a0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-language-support:0057:0001",
+      "source": "The IETF BCP 47 (RFC 4646) language identifier of the metadata item.",
+      "ko": "The IETF BCP 47 (RFC 4646) language identifier of the metadata item.",
+      "sourceHash": "e55334b0cfcaeeee224fd8d85746d33f317bcd545512104c9ab141ba666c3b99",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:filtering-arrays-of-metadata-items:0058:0001",
+      "source": "Filtering arrays of metadata items",
+      "ko": "Filtering arrays of metadata items",
+      "sourceHash": "b52b36e421ad4893092145b65a88745389896f54f108cbfb5b7dc0db8e99cd54",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:filtering-arrays-of-metadata-items:0059:0001",
+      "source": "[class func metadataItems(from: [AVMetadataItem], filteredByIdentifier: AVMetadataIdentifier) -> [AVMetadataItem]](avmetadataitem/metadataitems(from:filteredbyidentifier:).md)",
+      "ko": "[class func metadataItems(from: [AVMetadataItem], filteredByIdentifier: AVMetadataIdentifier) -> [AVMetadataItem]](avmetadataitem/metadataitems(from:filteredbyidentifier:).md)",
+      "sourceHash": "25d4746092315d6412ea9509d3ec26fca51810b09ca536036d6f436745611f58",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:filtering-arrays-of-metadata-items:0060:0001",
+      "source": "Returns metadata items for the specified identifier.",
+      "ko": "Returns metadata items for the specified identifier.",
+      "sourceHash": "c40b1746299a077d3a6292142f2bf7b41dc4cab129d0421d40acf0fefd8a453d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:filtering-arrays-of-metadata-items:0061:0001",
+      "source": "[class func metadataItems(from: [AVMetadataItem], withKey: Any?, keySpace: AVMetadataKeySpace?) -> [AVMetadataItem]](avmetadataitem/metadataitems(from:withkey:keyspace:).md)",
+      "ko": "[class func metadataItems(from: [AVMetadataItem], withKey: Any?, keySpace: AVMetadataKeySpace?) -> [AVMetadataItem]](avmetadataitem/metadataitems(from:withkey:keyspace:).md)",
+      "sourceHash": "3e2384a04caece4628d7fd5df1fac7b6c3420ec5497ccc19e4db75b422e11abb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:filtering-arrays-of-metadata-items:0062:0001",
+      "source": "Returns metadata items that match a specified key or key space.",
+      "ko": "Returns metadata items that match a specified key or key space.",
+      "sourceHash": "c0e55ea0a577dcc1864e30b416d2fa7f31b229a61880096e5ca723ac6f63e0b1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:filtering-arrays-of-metadata-items:0063:0001",
+      "source": "[class func metadataItems(from: [AVMetadataItem], with: Locale) -> [AVMetadataItem]](avmetadataitem/metadataitems(from:with:).md)",
+      "ko": "[class func metadataItems(from: [AVMetadataItem], with: Locale) -> [AVMetadataItem]](avmetadataitem/metadataitems(from:with:).md)",
+      "sourceHash": "96448578af161ddec430eddc97fdbfe786550772acc1e9ce7407b91a55840de5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:filtering-arrays-of-metadata-items:0064:0001",
+      "source": "Returns metadata items that match a specified locale.",
+      "ko": "Returns metadata items that match a specified locale.",
+      "sourceHash": "35586d9dc0dc99ed3d3584d3db5a54638d573dfe0b6fdb6be3f6793d76fd666e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:filtering-arrays-of-metadata-items:0065:0001",
+      "source": "[class func metadataItems(from: [AVMetadataItem], filteredAndSortedAccordingToPreferredLanguages: [String]) -> [AVMetadataItem]](avmetadataitem/metadataitems(from:filteredandsortedaccordingtopreferredlanguages:).md)",
+      "ko": "[class func metadataItems(from: [AVMetadataItem], filteredAndSortedAccordingToPreferredLanguages: [String]) -> [AVMetadataItem]](avmetadataitem/metadataitems(from:filteredandsortedaccordingtopreferredlanguages:).md)",
+      "sourceHash": "56d2bc4fe6da531509c70dff9c7e267cc3fcb8761aafc097dca4514157d31ed6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:filtering-arrays-of-metadata-items:0066:0001",
+      "source": "Returns metadata items whose locales match one of the specified language identifiers.",
+      "ko": "Returns metadata items whose locales match one of the specified language identifiers.",
+      "sourceHash": "e479fe68c070a42247c86cd9d4e34261ad48080f89c0739d533f532f89d5ff98",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:filtering-arrays-of-metadata-items:0067:0001",
+      "source": "[class func metadataItems(from: [AVMetadataItem], filteredBy: AVMetadataItemFilter) -> [AVMetadataItem]](avmetadataitem/metadataitems(from:filteredby:).md)",
+      "ko": "[class func metadataItems(from: [AVMetadataItem], filteredBy: AVMetadataItemFilter) -> [AVMetadataItem]](avmetadataitem/metadataitems(from:filteredby:).md)",
+      "sourceHash": "c446126f70f21c41a0e330f36e06a38d838fcf9198fcf0df6e8dae522b491f0e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:filtering-arrays-of-metadata-items:0068:0001",
+      "source": "Returns filtered metadata items.",
+      "ko": "Returns filtered metadata items.",
+      "sourceHash": "6285471ed1d09c989f8dc528ba54dca72613898f6083458e53b5dcb90b688c5f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:translating-metadata-items:0069:0001",
+      "source": "Translating metadata items",
+      "ko": "Translating metadata items",
+      "sourceHash": "d37be07efaf793587c9559bbef628338808cba2ce4311bc90782faa1c6f6aede",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:translating-metadata-items:0070:0001",
+      "source": "[class func identifier(forKey: Any, keySpace: AVMetadataKeySpace) -> AVMetadataIdentifier?](avmetadataitem/identifier(forkey:keyspace:).md)",
+      "ko": "[class func identifier(forKey: Any, keySpace: AVMetadataKeySpace) -> AVMetadataIdentifier?](avmetadataitem/identifier(forkey:keyspace:).md)",
+      "sourceHash": "c16290f39d30612dab5da99a3cd1599c0f3d1f38b2913b0c6ccaa15eb19ca5ee",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:translating-metadata-items:0071:0001",
+      "source": "Returns a metadata identifier for the specified key and key space.",
+      "ko": "Returns a metadata identifier for the specified key and key space.",
+      "sourceHash": "5a2eb962dffb4789e6218d9241a4c6c996b0c7a7f7221e54f38551f049fcdd5a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:translating-metadata-items:0072:0001",
+      "source": "[class func key(forIdentifier: AVMetadataIdentifier) -> Any?](avmetadataitem/key(foridentifier:).md)",
+      "ko": "[class func key(forIdentifier: AVMetadataIdentifier) -> Any?](avmetadataitem/key(foridentifier:).md)",
+      "sourceHash": "8d81b52b769f3b3fa2c135c9bd2473de82434446f3a80916c3269ac342057efe",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:translating-metadata-items:0073:0001",
+      "source": "Returns a metadata key for the specified identifier.",
+      "ko": "Returns a metadata key for the specified identifier.",
+      "sourceHash": "5c57c50b0afefb818095e232ad3194ee5d124d48faa221940ae7ad7d8df44100",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:translating-metadata-items:0074:0001",
+      "source": "[class func keySpace(forIdentifier: AVMetadataIdentifier) -> AVMetadataKeySpace?](avmetadataitem/keyspace(foridentifier:).md)",
+      "ko": "[class func keySpace(forIdentifier: AVMetadataIdentifier) -> AVMetadataKeySpace?](avmetadataitem/keyspace(foridentifier:).md)",
+      "sourceHash": "b4077e5e164bd52cdb69c373a788e30a8fbb3cf05317b866156388b22f57ecc0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:translating-metadata-items:0075:0001",
+      "source": "Returns a metadata key space for the specified identifier.",
+      "ko": "Returns a metadata key space for the specified identifier.",
+      "sourceHash": "9deac8557360a008a1f9c25dfbb9400dba1a775c0d218f155aec74940cbfcdca",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:accessing-values:0076:0001",
+      "source": "Accessing values",
+      "ko": "Accessing values",
+      "sourceHash": "5d986cf2e2b0fa2ad725a1c78b223e06f3f235d324d67d607cf5adbbe4a37a83",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-values:0077:0001",
+      "source": "[var value: (any NSCopying & NSObjectProtocol)?](avmetadataitem/value.md)",
+      "ko": "[var value: (any NSCopying & NSObjectProtocol)?](avmetadataitem/value.md)",
+      "sourceHash": "9646d160e73cd47140cb6c3db9604453edf7f2ec2b51ef15634d7a49d93fb3f8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0078:0001",
+      "source": "The value of the metadata item.",
+      "ko": "The value of the metadata item.",
+      "sourceHash": "40d4a5b5245120896be04f663db87b8dce60db644937e6bc93f2eae68979804c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-values:0079:0001",
+      "source": "[var extraAttributes: [AVMetadataExtraAttributeKey : Any]?](avmetadataitem/extraattributes.md)",
+      "ko": "[var extraAttributes: [AVMetadataExtraAttributeKey : Any]?](avmetadataitem/extraattributes.md)",
+      "sourceHash": "41629d09c017ef76a9f9fa44e0fc1a27d73c1fd03068647f2480775174fa651f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0080:0001",
+      "source": "A dictionary of additional attributes for a metadata item.",
+      "ko": "A dictionary of additional attributes for a metadata item.",
+      "sourceHash": "a392def5b62f5c305efddf6ab89b68ceffd0223f0a1103eb34161e349aa48571",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-values:0081:0001",
+      "source": "[var stringValue: String?](avmetadataitem/stringvalue.md)",
+      "ko": "[var stringValue: String?](avmetadataitem/stringvalue.md)",
+      "sourceHash": "6b8bed768d18057e9297691a1c07ddf0d5cf0d3223837227a25d4c66923ba0af",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0082:0001",
+      "source": "The value of the metadata item as a string.",
+      "ko": "The value of the metadata item as a string.",
+      "sourceHash": "285077bc61fd519053bd8a4a82c0f1c8b8662ddab879996ab1104e713164fe36",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-values:0083:0001",
+      "source": "[var numberValue: NSNumber?](avmetadataitem/numbervalue.md)",
+      "ko": "[var numberValue: NSNumber?](avmetadataitem/numbervalue.md)",
+      "sourceHash": "c22fe20f0a971b48aba7fb47ee4b0c968f7ec590c40978d3e3ed7829f5ada56a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0084:0001",
+      "source": "The value of the metadata item as a number.",
+      "ko": "The value of the metadata item as a number.",
+      "sourceHash": "ebdb7fb9340f9b1f718de7e70006480fa871dab2aa7f7a16b153742d5ef9eb59",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-values:0085:0001",
+      "source": "[var dateValue: Date?](avmetadataitem/datevalue.md)",
+      "ko": "[var dateValue: Date?](avmetadataitem/datevalue.md)",
+      "sourceHash": "0bb9bf2dd2dcb31891de5e5ea50a163cf664fb038c4099a693a4272b9da65016",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0086:0001",
+      "source": "The value of the metadata item as a date.",
+      "ko": "The value of the metadata item as a date.",
+      "sourceHash": "6e99f68365c692d5cef93b41634538b6558d628110cb0c37266d6fbce3ae7ec3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-values:0087:0001",
+      "source": "[var dataValue: Data?](avmetadataitem/datavalue.md)",
+      "ko": "[var dataValue: Data?](avmetadataitem/datavalue.md)",
+      "sourceHash": "14d8506f641cc6eb531f912e5a4e57fd39b46e160c3698e2e5bee79723b379ab",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0088:0001",
+      "source": "The value of the metadata item as a data value.",
+      "ko": "The value of the metadata item as a data value.",
+      "sourceHash": "bbe3803c7999efb9e8d5a45e0fa69ff26c91a27b13396f853a04688592f9c785",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:initializers:0089:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0090:0001",
+      "source": "[init(propertiesOf: AVMetadataItem, valueLoadingHandler: (AVMetadataItemValueRequest) -> Void)](avmetadataitem/init(propertiesof:valueloadinghandler:).md)",
+      "ko": "[init(propertiesOf: AVMetadataItem, valueLoadingHandler: (AVMetadataItemValueRequest) -> Void)](avmetadataitem/init(propertiesof:valueloadinghandler:).md)",
+      "sourceHash": "1cc0680128ec8e25344215a2afb7089198e02544a0bac30cdd32ef6660e3e010",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:default-implementations:0091:0001",
+      "source": "Default Implementations",
+      "ko": "Default Implementations",
+      "sourceHash": "b52bbd74a875706c29456d6a9db6d82e45bbfb6ac3e0ae810a106b57b09b5fd0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:default-implementations:0092:0001",
+      "source": "[AVMetadataItem Implementations](avmetadataitem/avmetadataitem-implementations.md)",
+      "ko": "[AVMetadataItem Implementations](avmetadataitem/avmetadataitem-implementations.md)",
+      "sourceHash": "4023f99f9fb1880da2f68de5d5731befcfeb30311508e50d561bfe6af61e865c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:relationships:0093:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0094:0001",
+      "source": "Inherits From",
+      "ko": "Inherits From",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:inherits-from:0095:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherited-by:0096:0001",
+      "source": "Inherited By",
+      "ko": "Inherited By",
+      "sourceHash": "42035a6fba4e21843f669d8b7e1e57fb192087a3ae79a1ddf62cfa85090744bb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:inherited-by:0097:0001",
+      "source": "[AVMutableMetadataItem](avmutablemetadataitem.md)",
+      "ko": "[AVMutableMetadataItem](avmutablemetadataitem.md)",
+      "sourceHash": "a8548f3b0529cfc1ecb80942da1072228779019b144d473d37e3240d599d6135",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0098:0001",
+      "source": "Conforms To",
+      "ko": "Conforms To",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:conforms-to:0099:0001",
+      "source": "[AVAsynchronousKeyValueLoading](avasynchronouskeyvalueloading.md)",
+      "ko": "[AVAsynchronousKeyValueLoading](avasynchronouskeyvalueloading.md)",
+      "sourceHash": "5c4909448479b1cc08624af0e080cb182bc6d716778ffe644a834aee2c38ec9f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0099:0002",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0099:0003",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0099:0004",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0099:0005",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0099:0006",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0099:0007",
+      "source": "[NSCopying](../Foundation/NSCopying.md)",
+      "ko": "[NSCopying](../Foundation/NSCopying.md)",
+      "sourceHash": "a3e3914d750a60e4b250a0090cdf594ea4328ed30cecb20ea43c55afb46b9005",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0099:0008",
+      "source": "[NSMutableCopying](../Foundation/NSMutableCopying.md)",
+      "ko": "[NSMutableCopying](../Foundation/NSMutableCopying.md)",
+      "sourceHash": "5c4674cdc6153938efa09fc1e7068ef3205a681ad3a8ef20068e1460aa0d5b8c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0099:0009",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0100:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0101:0001",
+      "source": "[Retrieving media metadata](retrieving-media-metadata.md)",
+      "ko": "[Retrieving media metadata](retrieving-media-metadata.md)",
+      "sourceHash": "8b45a7a3b3434118d748de855052a6f3b50770b05a2136bd5b83dbd6fbde1aa9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0102:0001",
+      "source": "Load descriptive metadata for media assets and their tracks.",
+      "ko": "Load descriptive metadata for media assets and their tracks.",
+      "sourceHash": "c405d7edd605bdab7667590ea76994bda9b3a06842835918c7755fbdd3b77bd6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0103:0001",
+      "source": "[class AVMutableMetadataItem](avmutablemetadataitem.md)",
+      "ko": "[class AVMutableMetadataItem](avmutablemetadataitem.md)",
+      "sourceHash": "387a6b8c4899f0ceeb4cc5a4ed572b99170b9dc6bec85023e1a8e36de32152d0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0104:0001",
+      "source": "A mutable metadata item for an audiovisual asset or for one of its tracks.",
+      "ko": "A mutable metadata item for an audiovisual asset or for one of its tracks.",
+      "sourceHash": "3456bd485e6410186527d3a631c210bcc6ad6368ca1a4747678777fdac145674",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0105:0001",
+      "source": "[struct AVMetadataIdentifier](avmetadataidentifier.md)",
+      "ko": "[struct AVMetadataIdentifier](avmetadataidentifier.md)",
+      "sourceHash": "e8ed1ac7e6425e9af72db71ab83e495f87eb23a8afea59c9ca9bea3e83177740",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0106:0001",
+      "source": "A structure that defines identifiers for metadata formats.",
+      "ko": "A structure that defines identifiers for metadata formats.",
+      "sourceHash": "caa547bde6c49535b5b0fb5c03648429a0ef5f4e633a6341add9cda5422bda6c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0107:0001",
+      "source": "[struct AVMetadataKey](avmetadatakey.md)",
+      "ko": "[struct AVMetadataKey](avmetadatakey.md)",
+      "sourceHash": "212868f5c8d431b1e9ef3b321508ef7f5367b1bb8c901b22cac8f8ac49110c89",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0108:0001",
+      "source": "A structure that defines a metadata key.",
+      "ko": "A structure that defines a metadata key.",
+      "sourceHash": "27e73dedb1462f153790d8d332e3232f5869c0afb7e8b36d6873c939e15fb4e7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0109:0001",
+      "source": "[struct AVMetadataKeySpace](avmetadatakeyspace.md)",
+      "ko": "[struct AVMetadataKeySpace](avmetadatakeyspace.md)",
+      "sourceHash": "534d84fbe819e6a7a0416834e9198c82364dd2215aef67010a4746b3da55285d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0110:0001",
+      "source": "A structure that defines a metadata key space.",
+      "ko": "A structure that defines a metadata key space.",
+      "sourceHash": "8e9b4bc4905f9cd8364ef7c74da4c61ed97e68f4e300d2843e7528517b987dde",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0111:0001",
+      "source": "[struct AVMetadataExtraAttributeKey](avmetadataextraattributekey.md)",
+      "ko": "[struct AVMetadataExtraAttributeKey](avmetadataextraattributekey.md)",
+      "sourceHash": "b4cb9ba646aa0cfccf3b1aed5685ffa502cd877a1cda9baf4bc1c28ad18a45e9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0112:0001",
+      "source": "A structure that defines keys for extra metadata attributes.",
+      "ko": "A structure that defines keys for extra metadata attributes.",
+      "sourceHash": "c6e7f461381bde9e9fc342cb1d3c6d5d9fa86645ff1c4ebebd5585d86d957338",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0113:0001",
+      "source": "[struct AVMetadataFormat](avmetadataformat.md)",
+      "ko": "[struct AVMetadataFormat](avmetadataformat.md)",
+      "sourceHash": "a7eaeb396dce0db9b31c13b640475717056ad63e8b4c4a8d6651726ae5f8bd7a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0114:0001",
+      "source": "A structure that defines metadata formats.",
+      "ko": "A structure that defines metadata formats.",
+      "sourceHash": "901cfcbb23e030116954072fdf657c1fa7363ebab7429634acf36e58a7d2eb8d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0115:0001",
+      "source": "[class AVMetadataItemFilter](avmetadataitemfilter.md)",
+      "ko": "[class AVMetadataItemFilter](avmetadataitemfilter.md)",
+      "sourceHash": "3eb5b97e777be3416679e9c50ab8dd2034a8065324864547a52a5823bc4aaef4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0116:0001",
+      "source": "An object that filters selected information from a metadata item.",
+      "ko": "An object that filters selected information from a metadata item.",
+      "sourceHash": "b9ea010b089461e47a7255e314f0ef60a39c09bfd04bfa5393ddcb8125504a34",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0117:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0118:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmetadataitem)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmetadataitem)*",
+      "sourceHash": "46d81fd67274442790aea7981d6113c52fd55e19760bcc21a5be5aea8f419e0e",
+      "status": "preserved"
+    }
+  ]
+}

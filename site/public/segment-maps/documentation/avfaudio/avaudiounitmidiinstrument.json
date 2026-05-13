@@ -1,0 +1,435 @@
+{
+  "docId": "documentation/AVFAudio/avaudiounitmidiinstrument.md",
+  "title": "AVAudioUnitMIDIInstrument",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiounitmidiinstrument",
+  "segments": [
+    {
+      "id": "seg:heading:avaudiounitmidiinstrument:0000:0001",
+      "source": "AVAudioUnitMIDIInstrument",
+      "ko": "AVAudioUnitMIDIInstrument",
+      "sourceHash": "51266635227c127abb7516b1c5e6433b17bb4c39bc75b8d03a1e043db621ad2e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitmidiinstrument:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: class",
+      "ko": "**Framework**: AVFAudio **Kind**: class",
+      "sourceHash": "511ec02fc39200a2e1238370124162a42b847c0f19d4a613b75cfae1062187b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitmidiinstrument:0002:0001",
+      "source": "An object that represents music devices or remote instruments.",
+      "ko": "음악 장치 또는 원격 악기를 나타내는 객체입니다.",
+      "sourceHash": "2f73b93cb429d600ba9f2b0918ab6a7dea194642b7a16d299160f3b83982012d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudiounitmidiinstrument:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitmidiinstrument:0004:0001",
+      "source": "iOS 8.0+",
+      "ko": "iOS 8.0+",
+      "sourceHash": "ff6a4b1dd8f88f3011fd557250b635d0cf643e6c6bce747cf782d03383031b15",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitmidiinstrument:0004:0002",
+      "source": "iPadOS 8.0+",
+      "ko": "iPadOS 8.0+",
+      "sourceHash": "741f7e3e3dceab173f71ebd49b9e9d25b98dda0e2ca90957f8da4c68bc355685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitmidiinstrument:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitmidiinstrument:0004:0004",
+      "source": "macOS 10.10+",
+      "ko": "macOS 10.10+",
+      "sourceHash": "928cfc2e204a2d523c05071eb21f65479a96f581dc23a43fa1848eecc5216dcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitmidiinstrument:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiounitmidiinstrument:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVAudioUnitMIDIInstrument\n```",
+      "ko": "```swift\nclass AVAudioUnitMIDIInstrument\n```",
+      "sourceHash": "f711ff6791c55d136ed560e2ea56612f933893c660bd00bd10ace381036e5e7e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Use an [`AVAudioUnitMIDIInstrument`](avaudiounitmidiinstrument.md) in a chain that processes real-time (live) input and has the general concept of music events; for example, notes.",
+      "ko": "실시간(`live`) 입력을 처리하고 노트와 같은 음악 이벤트의 일반적 개념을 가진 체인에서 [`AVAudioUnitMIDIInstrument`](avaudiounitmidiinstrument.md)를 사용합니다.",
+      "sourceHash": "4cf1ef1982271160fb4594f941554307be640e4681f886e2777cda09504f9028",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-midi-instrument:0010:0001",
+      "source": "Creating a MIDI instrument",
+      "ko": "MIDI 악기 생성",
+      "sourceHash": "2a92ec02543d6004ea36278a0f271eabcc420e501292a315be47aaed401c7d55",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-midi-instrument:0011:0001",
+      "source": "[init(audioComponentDescription: AudioComponentDescription)](avaudiounitmidiinstrument/init(audiocomponentdescription:).md)",
+      "ko": "[init(audioComponentDescription: AudioComponentDescription)](avaudiounitmidiinstrument/init(audiocomponentdescription:).md)",
+      "sourceHash": "4ea29ffd2a3edee67f4247666f16e1b7675b525a15f237e80334524b9e6e8370",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:creating-a-midi-instrument:0012:0001",
+      "source": "Creates a MIDI instrument audio unit with the component description you specify.",
+      "ko": "지정한 구성 요소 설명으로 MIDI 악기 오디오 유닛을 생성합니다.",
+      "sourceHash": "7ab845bcd5dd49e8b3a23f167ab407ff5338e681caa7fb7d2adadf5a5c69137d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:sending-information-to-the-midi-instrument:0013:0001",
+      "source": "Sending information to the MIDI instrument",
+      "ko": "MIDI 악기로 정보 전송",
+      "sourceHash": "b537a624d5ffaa3dfa3d11750f7a1069e102e28b0b398ff19fe19936f57c2dcf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:sending-information-to-the-midi-instrument:0014:0001",
+      "source": "[func sendController(UInt8, withValue: UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/sendcontroller(_:withvalue:onchannel:).md)",
+      "ko": "[func sendController(UInt8, withValue: UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/sendcontroller(_:withvalue:onchannel:).md)",
+      "sourceHash": "8384c8e20cd0ebd17a0871fb5d584fecdf031cbe1e1f249fe74e36cbc4eafd47",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sending-information-to-the-midi-instrument:0015:0001",
+      "source": "Sends a MIDI controller event to the instrument.",
+      "ko": "악기로 MIDI 컨트롤러 이벤트를 전송합니다.",
+      "sourceHash": "bf427ff50d2dac0ecc0e0227255d81cf5fe083b2a82ed4f6e39c00d70c99e8fb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:sending-information-to-the-midi-instrument:0016:0001",
+      "source": "[func sendMIDIEvent(UInt8, data1: UInt8)](avaudiounitmidiinstrument/sendmidievent(_:data1:).md)",
+      "ko": "[func sendMIDIEvent(UInt8, data1: UInt8)](avaudiounitmidiinstrument/sendmidievent(_:data1:).md)",
+      "sourceHash": "6e6a24e9884cbd7b0d1db27af956dfea077e0b6b27fad59e8b17cdd4c22e472b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sending-information-to-the-midi-instrument:0017:0001",
+      "source": "Sends a MIDI event which contains one data byte to the instrument.",
+      "ko": "악기로 데이터 바이트 하나를 포함하는 MIDI 이벤트를 전송합니다.",
+      "sourceHash": "c58e953de67b791600a9f915757582696821f68065adc889f7d6a77c1eb1a68f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:sending-information-to-the-midi-instrument:0018:0001",
+      "source": "[func sendMIDIEvent(UInt8, data1: UInt8, data2: UInt8)](avaudiounitmidiinstrument/sendmidievent(_:data1:data2:).md)",
+      "ko": "[func sendMIDIEvent(UInt8, data1: UInt8, data2: UInt8)](avaudiounitmidiinstrument/sendmidievent(_:data1:data2:).md)",
+      "sourceHash": "ce6275c8b0f3a7c12f54407e6f22f73f909925dfa3918a3485e8c25630d8a900",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sending-information-to-the-midi-instrument:0019:0001",
+      "source": "Sends a MIDI event which contains two data bytes to the instrument.",
+      "ko": "악기로 데이터 바이트 두 개를 포함하는 MIDI 이벤트를 전송합니다.",
+      "sourceHash": "eb4ace4929163af071a60e579464f7b7230a701ee38cd1c649052908a5752b4d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:sending-information-to-the-midi-instrument:0020:0001",
+      "source": "[func sendMIDISysExEvent(Data)](avaudiounitmidiinstrument/sendmidisysexevent(_:).md)",
+      "ko": "[func sendMIDISysExEvent(Data)](avaudiounitmidiinstrument/sendmidisysexevent(_:).md)",
+      "sourceHash": "71bd71b9f3e5040e171e6b7c1b4d7025068ad580bfe427cd5e19a8fcbdb55b2f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sending-information-to-the-midi-instrument:0021:0001",
+      "source": "Sends a MIDI System Exclusive event to the instrument.",
+      "ko": "악기로 MIDI System Exclusive 이벤트를 전송합니다.",
+      "sourceHash": "6f2ad6fd981f9a73e51b58f4df4dc11d9ee56a2c7b627a67b29a51fcd6e7f201",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:sending-information-to-the-midi-instrument:0022:0001",
+      "source": "[func sendPitchBend(UInt16, onChannel: UInt8)](avaudiounitmidiinstrument/sendpitchbend(_:onchannel:).md)",
+      "ko": "[func sendPitchBend(UInt16, onChannel: UInt8)](avaudiounitmidiinstrument/sendpitchbend(_:onchannel:).md)",
+      "sourceHash": "56eccd3c97da1f822627ced27e169a026ab51d7d5f435f5d18717e0b0adc9644",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sending-information-to-the-midi-instrument:0023:0001",
+      "source": "Sends a MIDI Pitch Bend event to the instrument.",
+      "ko": "악기로 MIDI Pitch Bend 이벤트를 전송합니다.",
+      "sourceHash": "80540054304780783a5737deed86d1633fda09ff46f5f7ae18fc84f41c96f715",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:sending-information-to-the-midi-instrument:0024:0001",
+      "source": "[func sendPressure(UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/sendpressure(_:onchannel:).md)",
+      "ko": "[func sendPressure(UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/sendpressure(_:onchannel:).md)",
+      "sourceHash": "b168a20f05605af3268032f48b70636d308abd7b02db29827ca2ff62bc53f21a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sending-information-to-the-midi-instrument:0025:0001",
+      "source": "Sends a MIDI channel pressure event to the instrument.",
+      "ko": "악기로 MIDI 채널 압력 이벤트를 전송합니다.",
+      "sourceHash": "d80281de31b9463945b37542a6d4ed2f2443da2281b49e253c682a09e1821d53",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:sending-information-to-the-midi-instrument:0026:0001",
+      "source": "[func sendPressure(forKey: UInt8, withValue: UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/sendpressure(forkey:withvalue:onchannel:).md)",
+      "ko": "[func sendPressure(forKey: UInt8, withValue: UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/sendpressure(forkey:withvalue:onchannel:).md)",
+      "sourceHash": "fd502d4cfb7891883ef1003449ca4ce46f4502f50748d80b473173d47bdf2930",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sending-information-to-the-midi-instrument:0027:0001",
+      "source": "Sends a MIDI Polyphonic key pressure event to the instrument.",
+      "ko": "악기로 MIDI 폴리포닉 키 압력 이벤트를 전송합니다.",
+      "sourceHash": "749465f2e44b91663473eed6ac7a4212ec5c68915b114308933f7a67f62344a6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:sending-information-to-the-midi-instrument:0028:0001",
+      "source": "[func sendProgramChange(UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/sendprogramchange(_:onchannel:).md)",
+      "ko": "[func sendProgramChange(UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/sendprogramchange(_:onchannel:).md)",
+      "sourceHash": "1e27ac36acdd81e62509ba080c4659b296ba2eb029e5f994919b3a8a9936bf0c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sending-information-to-the-midi-instrument:0029:0001",
+      "source": "Sends MIDI Program Change and Bank Select events to the instrument.",
+      "ko": "악기로 MIDI Program Change 및 Bank Select 이벤트를 전송합니다.",
+      "sourceHash": "f24863c8cca782cda77fdaf0de75bc4030e27b0968a6a95139f40ca56fbbd500",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:sending-information-to-the-midi-instrument:0030:0001",
+      "source": "[func sendProgramChange(UInt8, bankMSB: UInt8, bankLSB: UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/sendprogramchange(_:bankmsb:banklsb:onchannel:).md)",
+      "ko": "[func sendProgramChange(UInt8, bankMSB: UInt8, bankLSB: UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/sendprogramchange(_:bankmsb:banklsb:onchannel:).md)",
+      "sourceHash": "9bfa175e8581db45e64559e817fdb9d5430dde9d4b1202070241a5f9130eb349",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sending-information-to-the-midi-instrument:0031:0001",
+      "source": "Sends MIDI Program Change and Bank Select events to the instrument.",
+      "ko": "악기로 MIDI Program Change 및 Bank Select 이벤트를 전송합니다.",
+      "sourceHash": "f24863c8cca782cda77fdaf0de75bc4030e27b0968a6a95139f40ca56fbbd500",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:sending-information-to-the-midi-instrument:0032:0001",
+      "source": "[func send(UnsafePointer<MIDIEventList>)](avaudiounitmidiinstrument/send(_:).md)",
+      "ko": "[func send(UnsafePointer<MIDIEventList>)](avaudiounitmidiinstrument/send(_:).md)",
+      "sourceHash": "8fca046bb6638a4ef8cfa886fbcc9c7c0befc3408da6cb2918757ad5f504acf3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sending-information-to-the-midi-instrument:0033:0001",
+      "source": "Sends a MIDI event list to the instrument.",
+      "ko": "악기로 MIDI 이벤트 목록을 전송합니다.",
+      "sourceHash": "7b1f956ab0b6aa9e3dac2fda6687044dc40ccdb1ee681247312a3d3aff96b517",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:starting-and-stopping-play:0034:0001",
+      "source": "Starting and stopping play",
+      "ko": "재생 시작 및 중지",
+      "sourceHash": "9b31855e1e8c38543dce1e17bc2ebda01b414895bebae04bba4aca49cfcb6f81",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:starting-and-stopping-play:0035:0001",
+      "source": "[func startNote(UInt8, withVelocity: UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/startnote(_:withvelocity:onchannel:).md)",
+      "ko": "[func startNote(UInt8, withVelocity: UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/startnote(_:withvelocity:onchannel:).md)",
+      "sourceHash": "dec00faf564c28ead3570f89ebfff5b515367c6caece8776788420835906efe9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:starting-and-stopping-play:0036:0001",
+      "source": "Sends a MIDI Note On event to the instrument.",
+      "ko": "악기로 MIDI Note On 이벤트를 전송합니다.",
+      "sourceHash": "37187838b1adb6173810374a7442c511b73b5e11e10e1d8809e3d3feffc1c16a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:starting-and-stopping-play:0037:0001",
+      "source": "[func stopNote(UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/stopnote(_:onchannel:).md)",
+      "ko": "[func stopNote(UInt8, onChannel: UInt8)](avaudiounitmidiinstrument/stopnote(_:onchannel:).md)",
+      "sourceHash": "4283825fcc08004e4c6446ed87bad3f8e5138952358feaf3f2fd2a9fdca1e0e4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:starting-and-stopping-play:0038:0001",
+      "source": "Sends a MIDI Note Off event to the instrument.",
+      "ko": "악기로 MIDI Note Off 이벤트를 전송합니다.",
+      "sourceHash": "61b0650fcdf271eb907ddbaa7fc0d1821bf3505e397036110ebaba2ced8d0b02",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0039:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0040:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0041:0001",
+      "source": "[AVAudioUnit](avaudiounit.md)",
+      "ko": "[AVAudioUnit](avaudiounit.md)",
+      "sourceHash": "36574dc49ccbafe3c2a04d50589c6848c8f20b7480774eff8cdd2b9dbae0742d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherited-by:0042:0001",
+      "source": "Inherited By",
+      "ko": "상속 받는 대상",
+      "sourceHash": "42035a6fba4e21843f669d8b7e1e57fb192087a3ae79a1ddf62cfa85090744bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherited-by:0043:0001",
+      "source": "[AVAudioUnitSampler](avaudiounitsampler.md)",
+      "ko": "[AVAudioUnitSampler](avaudiounitsampler.md)",
+      "sourceHash": "9270712dc6c68ed6cde3320243f2957fa51a82bad7fb543dcf4513e009d41f2e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0044:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0045:0001",
+      "source": "[AVAudio3DMixing](avaudio3dmixing.md)",
+      "ko": "[AVAudio3DMixing](avaudio3dmixing.md)",
+      "sourceHash": "b2a090303b7721191d3127fa2f68e80dcc487eb87498df2256b43d6db66ebbe3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0045:0002",
+      "source": "[AVAudioMixing](avaudiomixing.md)",
+      "ko": "[AVAudioMixing](avaudiomixing.md)",
+      "sourceHash": "37ac4642d2317d12b78bd1ecdee4b9f970dbb6ba2779c9331a8a35af916beeb5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0045:0003",
+      "source": "[AVAudioStereoMixing](avaudiostereomixing.md)",
+      "ko": "[AVAudioStereoMixing](avaudiostereomixing.md)",
+      "sourceHash": "81a03a19acb930569fa76b4e0a73c71549cef94e1672c4468a1be876a00dc57a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0045:0004",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0045:0005",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0045:0006",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0045:0007",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0045:0008",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0045:0009",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:horizontal_rule:conforms-to:0046:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:conforms-to:0047:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiounitmidiinstrument)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiounitmidiinstrument)*",
+      "sourceHash": "68fc4b0963fb9e39af6055d13f47a2e2add55c94eebf3e1129c185997bd6f955",
+      "status": "preserved"
+    }
+  ]
+}

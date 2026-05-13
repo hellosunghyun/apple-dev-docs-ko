@@ -8,8 +8,8 @@
 ## Summary
 
 - Files: 339016
-- Translated files: 1567
-- Failed segments: 3295
+- Translated files: 1987
+- Failed segments: 11090
 - Review needed: 0
 
 ## Site

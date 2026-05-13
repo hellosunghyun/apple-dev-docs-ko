@@ -51,19 +51,19 @@ optional func contentKeySessionContentProtectionSessionIdentifierDidChange(_ ses
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0016:0001"><a href="avcontentkeyrequest/retryreason.md">AVContentKeyRequest.RetryReason</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0017:0001">The reason for asking the client to retry a content key request.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0017:0001">디바이스별 화이트 밸런스 RGB 게인 값을 디바이스 독립적인 크로마틱성 값으로 변환합니다.</span>
 
-- <span class="ko-segment" data-segment-id="seg:list:see-also:0018:0001"><a href="avcontentkeysessiondelegate/contentkeysession(_:contentkeyrequest:didfailwitherror:">func contentKeySession(AVContentKeySession, contentKeyRequest: AVContentKeyRequest, didFailWithError: any Error)</a>.md)</span>
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0018:0001"><a href="avcapturedevice/temperatureandtintvalues(for:">func temperatureAndTintValues(for: AVCaptureDevice.WhiteBalanceGains) -&gt; AVCaptureDevice.WhiteBalanceTemperatureAndTintValues</a>.md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0019:0001">Tells the receiver that the content key request failed.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0019:0001">디바이스별 화이트 밸런스 RGB 게인 값을 디바이스 독립적인 온도 및 틴트 값으로 변환합니다.</span>
 
-- <span class="ko-segment" data-segment-id="seg:list:see-also:0020:0001"><a href="avcontentkeysessiondelegate/contentkeysession(_:contentkeyrequestdidsucceed:">func contentKeySession(AVContentKeySession, contentKeyRequestDidSucceed: AVContentKeyRequest)</a>.md)</span>
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0020:0001"><a href="avcapturedevice/devicewhitebalancegains(for:">func deviceWhiteBalanceGains(for: AVCaptureDevice.WhiteBalanceTemperatureAndTintValues) -&gt; AVCaptureDevice.WhiteBalanceGains</a>-3wtsa.md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0021:0001">Tells the content key session that the response to a content key requeset was successfully processed.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0021:0001">디바이스 독립적인 온도 및 틴트 값을 디바이스별 화이트 밸런스 RGB 게인 값으로 변환합니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0022:0001"><a href="avcontentkeysessiondelegate/contentkeysessiondidgenerateexpiredsessionreport(_:">func contentKeySessionDidGenerateExpiredSessionReport(AVContentKeySession)</a>.md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0023:0001">Notifies the sender that an expired session report has been generated.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0023:0001">RGB 화이트 밸런스 게인 값들을 정의하는 구조체입니다.</span>
 
 ---
 

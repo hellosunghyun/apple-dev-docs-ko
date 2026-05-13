@@ -44,7 +44,7 @@ static let iTunesMetadataKeyUserComment: AVMetadataKey
 
 <span class="ko-segment" data-segment-id="seg:paragraph:see-also:0013:0001">A key that represents the name of the album in iTunes.</span>
 
-- <span class="ko-segment" data-segment-id="seg:list:see-also:0014:0001"><a href="avmetadatakey/itunesmetadatakeyalbumartist.md">static let iTunesMetadataKeyAlbumArtist: AVMetadataKey</a></span>
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0014:0001"><a href="arskeletondefinition/index(for:">func index(for: ARSkeleton.JointName) -&gt; Int</a>.md)</span>
 
 <span class="ko-segment" data-segment-id="seg:paragraph:see-also:0015:0001">앨범의 아티스트를 나타내는 키입니다.</span>
 

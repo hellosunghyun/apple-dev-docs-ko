@@ -29,19 +29,19 @@ official: false
 static let stallRecovery: AVCoordinatedPlaybackSuspension.Reason
 ```
 
-## <span class="ko-segment" data-segment-id="seg:heading:see-also:0007:0001">See Also</span>
+## <span class="ko-segment" data-segment-id="seg:heading:see-also:0007:0001">참고 항목</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0008:0001"><a href="avcoordinatedplaybacksuspension/reason-swift.struct/audiosessioninterrupted.md">static let audioSessionInterrupted: AVCoordinatedPlaybackSuspension.Reason</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">The system interrupts a participant’s audio session.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">사용자가 아직 권한을 승인하거나 거부하지 않았습니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0010:0001"><a href="avcoordinatedplaybacksuspension/reason-swift.struct/coordinatedplaybacknotpossible.md">static let coordinatedPlaybackNotPossible: AVCoordinatedPlaybackSuspension.Reason</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0011:0001">It’s not possible for a participant to start or resume coordinated playback.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0011:0001">앵커의 고유 식별자입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0012:0001"><a href="avcoordinatedplaybacksuspension/reason-swift.struct/playinginterstitial.md">static let playingInterstitial: AVCoordinatedPlaybackSuspension.Reason</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0013:0001">A participant is playing content other than the primary content.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0013:0001">앵커가 배치된 AR 세션의 world coordinate space에 대해 상대적인 앵커의 위치, 방향, 스케일을 인코딩하는 행렬입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0014:0001"><a href="avcoordinatedplaybacksuspension/reason-swift.struct/useractionrequired.md">static let userActionRequired: AVCoordinatedPlaybackSuspension.Reason</a></span>
 

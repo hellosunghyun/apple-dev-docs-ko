@@ -1,0 +1,260 @@
+{
+  "docId": "documentation/AVFoundation/capturing-a-bracketed-photo-sequence.md",
+  "title": "Capturing a bracketed photo sequence",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/capturing-a-bracketed-photo-sequence",
+  "segments": [
+    {
+      "id": "seg:heading:capturing-a-bracketed-photo-sequence:0000:0001",
+      "source": "Capturing a bracketed photo sequence",
+      "ko": "Capturing a bracketed photo sequence",
+      "sourceHash": "3a42edec497f215351c73910bb036ad40d51fc56f78c4f930b869d520ab6439b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:capturing-a-bracketed-photo-sequence:0001:0001",
+      "source": "**Framework**: AVFoundation",
+      "ko": "**Framework**: AVFoundation",
+      "sourceHash": "d1a1a81bcb090684ac27d86fff88465af08239993e5a6442a93dc76635a7ffc2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:capturing-a-bracketed-photo-sequence:0002:0001",
+      "source": "Capture several photos at once, varying parameters like exposure duration or light sensitivity.",
+      "ko": "Capture several photos at once, varying parameters like exposure duration or light sensitivity.",
+      "sourceHash": "8fa1d8a4a4a8cf34cc5d4fd2692d58f5710602519d62ae2da1c03242642a60ed",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "Bracketing is a well-known photographic technique in which a sequence of shots is rapidly taken of the same scene, usually varying only in a single parameter such as aperture or shutter speed (exposure length).",
+      "ko": "Bracketing is a well-known photographic technique in which a sequence of shots is rapidly taken of the same scene, usually varying only in a single parameter such as aperture or shutter speed (exposure length).",
+      "sourceHash": "0d2fa0c8dc8f63c00d9d1759894cb418050b81cb66379dc0989f9c0dcda64170",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "Experienced photographers use this technique to help them choose the best photos after shooting, or to apply offline post-processing that fuses multiple images together to create extended dynamic range or other special effects.",
+      "ko": "Experienced photographers use this technique to help them choose the best photos after shooting, or to apply offline post-processing that fuses multiple images together to create extended dynamic range or other special effects.",
+      "sourceHash": "16cf62abb87da028bd6b669900b88d6d0c116a85c40044e3230e1c990fa1c36f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0001",
+      "source": "In iOS, you can use [`AVCapturePhotoOutput`](avcapturephotooutput.md) and [`AVCapturePhotoBracketSettings`](avcapturephotobracketsettings.md) to automatically capture a bracket of photos for each [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) call.",
+      "ko": "In iOS, you can use [`AVCapturePhotoOutput`](avcapturephotooutput.md) and [`AVCapturePhotoBracketSettings`](avcapturephotobracketsettings.md) to automatically capture a bracket of photos for each [`capturePhoto(with:delegate:)`](avcapturephotooutput/capturephoto(with:delegate:).md) call.",
+      "sourceHash": "eedf1f506897c28dfc2e627d8cae617b7355035f91145c6b73a3b44688feb4d0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0002",
+      "source": "Once you’ve built a single-exposure camera in your app (see [`Capturing still and Live Photos`](capturing-still-and-live-photos.md)), follow these steps to add multi-image bracket support.",
+      "ko": "Once you’ve built a single-exposure camera in your app (see [`Capturing still and Live Photos`](capturing-still-and-live-photos.md)), follow these steps to add multi-image bracket support.",
+      "sourceHash": "26da6110496fbe506e4d897252c895bcbfb86f7984ca62beb76672a0c931e40c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:choose-bracket-settings:0006:0001",
+      "source": "Choose Bracket Settings",
+      "ko": "Choose Bracket Settings",
+      "sourceHash": "937ab46b7a969f35107a4a03ba324443ce474edab0ab1999e7e228d0c08a5ac9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:choose-bracket-settings:0007:0001",
+      "source": "You specify a multi-exposure bracket by providing an array of bracket settings obejcts. iOS offers two types of automatic bracketing:",
+      "ko": "You specify a multi-exposure bracket by providing an array of bracket settings obejcts. iOS offers two types of automatic bracketing:",
+      "sourceHash": "977d6eac198a5702201e7c8501ff6f27bc6276242d8500a60efbcb5fbd308b7a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:choose-bracket-settings:0008:0001",
+      "source": "Use [`AVCaptureAutoExposureBracketedStillImageSettings`](avcaptureautoexposurebracketedstillimagesettings.md) to create a bracket that varies exposure-compensation values relative to automatic exposure.",
+      "ko": "Use [`AVCaptureAutoExposureBracketedStillImageSettings`](avcaptureautoexposurebracketedstillimagesettings.md) to create a bracket that varies exposure-compensation values relative to automatic exposure.",
+      "sourceHash": "1828f74bd002dc6d0ba0f84181acbf5e66ae5cfc8d54c6951d00f51f564276c8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:choose-bracket-settings:0008:0002",
+      "source": "Use [`AVCaptureManualExposureBracketedStillImageSettings`](avcapturemanualexposurebracketedstillimagesettings.md) to create a bracket with custom exposure durations and ISO sensitivity values for each photo in the bracket.",
+      "ko": "Use [`AVCaptureManualExposureBracketedStillImageSettings`](avcapturemanualexposurebracketedstillimagesettings.md) to create a bracket with custom exposure durations and ISO sensitivity values for each photo in the bracket.",
+      "sourceHash": "047862fceebc6d6fcfb7d2a54974eb5b77117cef5a6d95a26743417736fb7384",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:choose-bracket-settings:0009:0001",
+      "source": "To define a bracket, create an array of one of these types, with values that describe the settings variations you want to capture.",
+      "ko": "To define a bracket, create an array of one of these types, with values that describe the settings variations you want to capture.",
+      "sourceHash": "9bcb0ef63eb744eb4e74049cd378c4008d0c874a98b8d9a17b6a20460e91f309",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:choose-bracket-settings:0009:0002",
+      "source": "For example, the code below defines a bracket that captures three images at three different exposure values.",
+      "ko": "For example, the code below defines a bracket that captures three images at three different exposure values.",
+      "sourceHash": "666bbca1f1b6068c726dc11474038815a782c9273251990ae334b923b26fe6df",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:choose-bracket-settings:0010:0001",
+      "source": "```swift\n// Get AVCaptureBracketedStillImageSettings for a set of exposure values.\nlet exposureValues: [Float] = [-2, 0, +2]\nlet makeAutoExposureSettings = AVCaptureAutoExposureBracketedStillImageSettings.autoExposureSettings(exposureTargetBias:)\nlet exposureSettings = exposureValues.map(makeAutoExposureSettings)\n\n```",
+      "ko": "```swift\n// Get AVCaptureBracketedStillImageSettings for a set of exposure values.\nlet exposureValues: [Float] = [-2, 0, +2]\nlet makeAutoExposureSettings = AVCaptureAutoExposureBracketedStillImageSettings.autoExposureSettings(exposureTargetBias:)\nlet exposureSettings = exposureValues.map(makeAutoExposureSettings)\n\n```",
+      "sourceHash": "e0fdffc9396d9854b82fdf886a97dd30ad98f00d40fa064cfe03464ec19ea546",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:blockquote:choose-bracket-settings:0011:0001",
+      "source": "💡 **Tip**: In Swift, you can easily convert an array of exposure values to an array of bracket settings by passing the appropriate initializer to the `map(_:)` function, as shown above.",
+      "ko": "💡 **Tip**: In Swift, you can easily convert an array of exposure values to an array of bracket settings by passing the appropriate initializer to the `map(_:)` function, as shown above.",
+      "sourceHash": "f15715b58fcbc6c9992273d0d25d9c22d0394fd95d60e5577b2daa401bd27d45",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:create-photo-settings-and-shoot:0012:0001",
+      "source": "Create Photo Settings and Shoot",
+      "ko": "Create Photo Settings and Shoot",
+      "sourceHash": "3015c8427748eba742ec296167ef78ed42a5809c231c1ad61aa94ac77bf5b0a3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-photo-settings-and-shoot:0013:0001",
+      "source": "Instead of the [`AVCapturePhotoSettings`](avcapturephotosettings.md) object you create when shooting a single photo, to shoot a bracketed capture you’ll need an [`AVCapturePhotoBracketSettings`](avcapturephotobracketsettings.md) object.",
+      "ko": "Instead of the [`AVCapturePhotoSettings`](avcapturephotosettings.md) object you create when shooting a single photo, to shoot a bracketed capture you’ll need an [`AVCapturePhotoBracketSettings`](avcapturephotobracketsettings.md) object.",
+      "sourceHash": "8d1cb827015973095fc552b167767d70e23f1d8791188fd915b05161266fb0a1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-photo-settings-and-shoot:0013:0002",
+      "source": "This object combines the general settings that apply to all photos in the bracket with your bracket settings that specify how each photo differs from the rest of the bracket.",
+      "ko": "This object combines the general settings that apply to all photos in the bracket with your bracket settings that specify how each photo differs from the rest of the bracket.",
+      "sourceHash": "615aea7e7b076416d662fab1dff58da4bb4363c5a433bc268e6b899452358076",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:create-photo-settings-and-shoot:0014:0001",
+      "source": "As with single-image capture, you create a photo settings object by choosing the image codec and file format for the resulting photos, but you also provide the bracket settings you’ve chosen.",
+      "ko": "As with single-image capture, you create a photo settings object by choosing the image codec and file format for the resulting photos, but you also provide the bracket settings you’ve chosen.",
+      "sourceHash": "600a281c485eb78e1719120a91d01bc0817e5c684c36307526f39947316606a8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:create-photo-settings-and-shoot:0015:0001",
+      "source": "```swift\n// Create photo settings for HEIF/HEVC capture and no RAW output\n// and enable cross-bracket image stabilization.\nlet photoSettings = AVCapturePhotoBracketSettings(rawPixelFormatType: 0,\n    processedFormat: [AVVideoCodecKey : AVVideoCodecType.hevc],\n    bracketedSettings: exposureSettings)\nphotoSettings.isLensStabilizationEnabled =\n    self.photoOutput.isLensStabilizationDuringBracketedCaptureSupported\n\n// Shoot the bracket, using a custom class to handle capture delegate callbacks.\nlet captureProcessor = PhotoCaptureProcessor()\nself.photoOutput.capturePhoto(with: photoSettings, delegate: captureProcessor)\n\n```",
+      "ko": "```swift\n// Create photo settings for HEIF/HEVC capture and no RAW output\n// and enable cross-bracket image stabilization.\nlet photoSettings = AVCapturePhotoBracketSettings(rawPixelFormatType: 0,\n    processedFormat: [AVVideoCodecKey : AVVideoCodecType.hevc],\n    bracketedSettings: exposureSettings)\nphotoSettings.isLensStabilizationEnabled =\n    self.photoOutput.isLensStabilizationDuringBracketedCaptureSupported\n\n// Shoot the bracket, using a custom class to handle capture delegate callbacks.\nlet captureProcessor = PhotoCaptureProcessor()\nself.photoOutput.capturePhoto(with: photoSettings, delegate: captureProcessor)\n\n```",
+      "sourceHash": "c6902890fbade763e0eb025506f636034dadb9062ea4cb2e62efc1e6cbc61754",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:blockquote:create-photo-settings-and-shoot:0016:0001",
+      "source": "💡 **Tip**: Turning on [`isLensStabilizationEnabled`](avcapturephotobracketsettings/islensstabilizationenabled.md) (if supported) causes the camera to apply optical image stabilization (OIS) across the entire bracket, so that photos resulting from the bracket still line up with each other even if the device moves during capture.",
+      "ko": "💡 **Tip**: Turning on [`isLensStabilizationEnabled`](avcapturephotobracketsettings/islensstabilizationenabled.md) (if supported) causes the camera to apply optical image stabilization (OIS) across the entire bracket, so that photos resulting from the bracket still line up with each other even if the device moves during capture.",
+      "sourceHash": "a627458a34ed967eafbde1e6e7b089edebb6d798c031e563d020814e8c2c524e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:handle-bracketed-capture-results:0017:0001",
+      "source": "Handle Bracketed Capture Results",
+      "ko": "Handle Bracketed Capture Results",
+      "sourceHash": "228b66b5e5c376ba35117cffc782c08cc841391df27a12b01662bf80621422ed",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:handle-bracketed-capture-results:0018:0001",
+      "source": "The photo output calls your delegate’s [`photoOutput(_:didFinishProcessingPhoto:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishprocessingphoto:error:).md) method at least once for each exposure in the bracket, and possibly additional times depending on your capture settings.",
+      "ko": "The photo output calls your delegate’s [`photoOutput(_:didFinishProcessingPhoto:error:)`](avcapturephotocapturedelegate/photooutput(_:didfinishprocessingphoto:error:).md) method at least once for each exposure in the bracket, and possibly additional times depending on your capture settings.",
+      "sourceHash": "b1b9540ac49d40471d0e0452db6a6600155965979d3239b7c8c25264f2cb7593",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:handle-bracketed-capture-results:0018:0002",
+      "source": "For example, if you request RAW+HEIF capture in a three-exposure bracket, the photo output calls your delegate’s `didFinishProcessingPhoto` method six times (2 formats × 3 exposures), providing six [`AVCapturePhoto`](avcapturephoto.md) objects.",
+      "ko": "For example, if you request RAW+HEIF capture in a three-exposure bracket, the photo output calls your delegate’s `didFinishProcessingPhoto` method six times (2 formats × 3 exposures), providing six [`AVCapturePhoto`](avcapturephoto.md) objects.",
+      "sourceHash": "62163b840b7eb4fc4f64429844e35ec3451cb579f527e66242b85d875c0673ba",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:handle-bracketed-capture-results:0019:0001",
+      "source": "To keep track of multiple results, compare the [`photoCount`](avcapturephoto/photocount.md) from each photo to the [`expectedPhotoCount`](avcaptureresolvedphotosettings/expectedphotocount.md) of your resolved settings.",
+      "ko": "To keep track of multiple results, compare the [`photoCount`](avcapturephoto/photocount.md) from each photo to the [`expectedPhotoCount`](avcaptureresolvedphotosettings/expectedphotocount.md) of your resolved settings.",
+      "sourceHash": "910f05e8b72c4c43c77ee50d9067d1b72d887fb356ea19a3f664f84b6ffbe2a4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:handle-bracketed-capture-results:0019:0002",
+      "source": "When those numbers are equal, you’ve received all results from the capture.",
+      "ko": "When those numbers are equal, you’ve received all results from the capture.",
+      "sourceHash": "b62ab98771b9f39859ae1cc0a89f7487ec6d9df1b527d1164b0f656ab4a44af3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0020:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[Capturing photos with depth](capturing-photos-with-depth.md)",
+      "ko": "[Capturing photos with depth](capturing-photos-with-depth.md)",
+      "sourceHash": "61d7881a7562d96ae2025dfbb523450b463096ed0e6f33f743c4a7f2d0199e3a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "Get a depth map with a photo to create effects like the system camera’s Portrait mode (on compatible devices).",
+      "ko": "동기화된 캡처로 수집한 비디오 또는 오디오 샘플을 위한 컨테이너입니다.",
+      "sourceHash": "7c09137a045923f320b6716763c5e5dbe3d8bed881d963abf9b4fa1f9b13a813",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[Capturing uncompressed image data](capturing-uncompressed-image-data.md)",
+      "ko": "[Capturing uncompressed image data](capturing-uncompressed-image-data.md)",
+      "sourceHash": "654590cdf241e321444e86beb8e582bd2d27c857a8fe80bad75ac3f2645b8b43",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "Get processed image data without compression to use for filtering or lossless output.",
+      "ko": "동기화된 캡처로 수집한 장면 깊이 정보용 컨테이너입니다.",
+      "sourceHash": "339cf8f37640ae2a3fbafe03828632bdaaead2ecc058feaa43c4f46c2465d224",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[Capturing thumbnail and preview images](capturing-thumbnail-and-preview-images.md)",
+      "ko": "[Capturing thumbnail and preview images](capturing-thumbnail-and-preview-images.md)",
+      "sourceHash": "61da73035c18de9927323424c5bf8a4a6522ef392d56a0972a816cb09dfdaa19",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "Enable delivery of reduced-size images with the main image in a photo capture.",
+      "ko": "동기화된 캡처로 수집한 미디어 샘플의 추상 슈퍼클래스입니다.",
+      "sourceHash": "16fc12fb5cf285128fa548c9f68becfdbc3c98c551f785103d3f91ed6d6d1c2a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0027:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/capturing-a-bracketed-photo-sequence)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/capturing-a-bracketed-photo-sequence)*",
+      "sourceHash": "e684e3cc3d111a75fe273f7dda00d84966c183985be71fbd9cf9e2c413cde3d5",
+      "status": "preserved"
+    }
+  ]
+}

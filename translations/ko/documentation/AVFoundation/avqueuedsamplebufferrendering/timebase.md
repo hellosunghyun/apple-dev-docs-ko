@@ -32,7 +32,7 @@ var timebase: CMTimebase { get }
 
 #### <span class="ko-segment" data-segment-id="seg:heading:discussion:0007:0001">Discussion</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0008:0001">The timebase governs how time stamps are interpreted by the renderer.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0008:0001">The default value of this property is <a href="https://developer.apple.com/documentation/Swift/false">@@TOKEN_0@@</a>.</span>
 
 ---
 

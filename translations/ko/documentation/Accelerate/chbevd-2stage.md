@@ -48,4 +48,4 @@ func chbevd_2stage_(_ jobz: UnsafePointer<CChar>, _ uplo: UnsafePointer<CChar>, 
 
 ---
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">*<a href="https://developer.apple.com/documentation/accelerate/chbevd_2stage_(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:">View on Apple Developer</a>)*</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">저작권을 나타내는 이벤트 유형입니다.</span>

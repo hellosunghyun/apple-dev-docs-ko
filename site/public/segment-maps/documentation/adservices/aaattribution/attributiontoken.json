@@ -1,0 +1,953 @@
+{
+  "docId": "documentation/AdServices/aaattribution/attributiontoken.md",
+  "title": "attributionToken()",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/adservices/aaattribution/attributiontoken",
+  "segments": [
+    {
+      "id": "seg:heading:attributiontoken:0000:0001",
+      "source": "attributionToken()",
+      "ko": "attributionToken()",
+      "sourceHash": "bdbc7c64599b97ebf9fc0103e4bdd3166f0f474f094bd5ee34ac76bf5d74fc8e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:attributiontoken:0001:0001",
+      "source": "**Framework**: AdServices **Kind**: method",
+      "ko": "**Framework**: AdServices **Kind**: method",
+      "sourceHash": "1ac47bd9d9d394a7d8b8d683e16ae2632d4566785339d12642d3b868839485b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:attributiontoken:0002:0001",
+      "source": "Generates a token.",
+      "ko": "토큰을 생성합니다.",
+      "sourceHash": "ac64fa85d27056927f29c15a4f1a302b1c7c1a46c203476af8d28597d2ab1d88",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:attributiontoken:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:attributiontoken:0004:0001",
+      "source": "iOS 14.3+",
+      "ko": "iOS 14.3+",
+      "sourceHash": "5213ec95dbe125629ad74dc2f4f86c9f82df4c4885fec5b3533fb47575842fe5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:attributiontoken:0004:0002",
+      "source": "iPadOS 14.3+",
+      "ko": "iPadOS 14.3+",
+      "sourceHash": "797c0869ee368239cc369ce4739df4f2be50205b5ba9d7369dda7d1c03ec8ced",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:attributiontoken:0004:0003",
+      "source": "Mac Catalyst 14.3+",
+      "ko": "Mac Catalyst 14.3+",
+      "sourceHash": "3648c8b1103d56e5c167c88e5a627c766dab03e2451a46dee0dc38f35e8a782a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:attributiontoken:0004:0004",
+      "source": "macOS 11.1+",
+      "ko": "macOS 11.1+",
+      "sourceHash": "6f9a44a8eb9a5bf76fca860404974a0b96ea9d3cb725b0d6b53f4adb03d3d81f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:attributiontoken:0004:0005",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass func attributionToken() throws -> String\n```",
+      "ko": "```swift\nclass func attributionToken() throws -> String\n```",
+      "sourceHash": "998da6d82cc7e754171990780bc1ea4e2ccdc860445c08b6f576c6ec45daa398",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Changelog](changelog.md)",
+      "ko": "[Changelog](changelog.md)",
+      "sourceHash": "5229ba1c39898f20db04602bfd5b70c274c3ba9d89b064901ad5c595c400ca3c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "The token that the framework returns is a Base64 encoded string and has a 24-hour TTL.",
+      "ko": "프레임워크가 반환하는 토큰은 Base64로 인코딩된 문자열이며 TTL이 24시간입니다.",
+      "sourceHash": "245187a9ef559553817600934a4433d7ffeff6bcfc67e484deb10cb9ba68d209",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "You can provide the token to a Mobile Measurement Provider ( MMP), or app developers can use it to make a `POST` API call to fetch attribution records within the 24-hour TTL window.",
+      "ko": "이 토큰은 모바일 측정 공급자(MMP)에 제공할 수 있으며, 앱 개발자는 이 토큰을 사용해 `POST` API 호출로 24시간 TTL 창 내에서 어트리뷰션 레코드를 가져올 수 있습니다.",
+      "sourceHash": "214bcbffd3e7d7e4591e756116316b6171180be069d4daceb0310584dc108e50",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0003",
+      "source": "Use a single token in the request body and use a content-type of `text/plain` in the header, as the following example shows:",
+      "ko": "요청 본문에는 토큰을 하나만 사용하고, 헤더에는 `text/plain` content-type을 사용합니다. 다음 예시와 같습니다:\\n```other\\nPOST https://api-adservices.apple.com/api/v1/\\n--header 'Content-Type: text/plain' \\\\n--data-raw\\n\\nG9i5hC8lQJeGOfmS+MFycll/025oJEjtpZ+rs4AUkDEJh52fT8RrjwIR/ h+2JOpXz4MRdmtcemL8WTTHfNN52tjqjbWupke40AAAAVADAAAAvQAAAIAg QF1+XF4Tl2IZ7Bw/M6ufUHt+UcIhuBeJT8YenB2v36bnZKEjvq/ IH8rqXkRELTHdyiqOYtpy837+UjF/NjE6t1/ l7sIn71b0t3FEXJd8QOtl3Bi6iQyJgGeN8w8X0MK1PDqz9nLJtRD/ wl+p112qR2YrMDyyKnwNrbfRhnGB9AAAAB7wAXlwNHelWf5RT2bzSJcGflq ELMCGoDEHIl7jF6kAAACfAb9ylY8ffdbTlyJODQYQ/ 6V9qbaBAAAAhgUBW39MQI1A0SZgNmZFz4KPaF94BxBzd4rDkjr/ eSeuaXWCmEW3ZhBzE/MOM17hAPBVlDhTPcZ/2ybr3WYIkfb+AAg/ 7jxGpDXgTtco3fzTytnZpEaI5SenXHALIexQAUTBsfBW2HCMQuTRo+7anoW kf69656ZAWcSc3DEQ1CAkUSKO9X7iAAABBEQQBQA=\\n```",
+      "sourceHash": "e6c961244cabc82d307d6b98774e8747e07d6eb28dd9cd803f891b99e115b7d2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0011:0001",
+      "source": "```other\nPOST https://api-adservices.apple.com/api/v1/\n--header 'Content-Type: text/plain' \\\n--data-raw\n\nG9i5hC8lQJeGOfmS+MFycll/025oJEjtpZ+rs4AUkDEJh52fT8RrjwIR/ h+2JOpXz4MRdmtcemL8WTTHfNN52tjqjbWupke40AAAAVADAAAAvQAAAIAg QF1+XF4Tl2IZ7Bw/M6ufUHt+UcIhuBeJT8YenB2v36bnZKEjvq/ IH8rqXkRELTHdyiqOYtpy837+UjF/NjE6t1/ l7sIn71b0t3FEXJd8QOtl3Bi6iQyJgGeN8w8X0MK1PDqz9nLJtRD/ wl+p112qR2YrMDyyKnwNrbfRhnGB9AAAAB7wAXlwNHelWf5RT2bzSJcGflq ELMCGoDEHIl7jF6kAAACfAb9ylY8ffdbTlyJODQYQ/ 6V9qbaBAAAAhgUBW39MQI1A0SZgNmZFz4KPaF94BxBzd4rDkjr/ eSeuaXWCmEW3ZhBzE/MOM17hAPBVlDhTPcZ/2ybr3WYIkfb+AAg/ 7jxGpDXgTtco3fzTytnZpEaI5SenXHALIexQAUTBsfBW2HCMQuTRo+7anoW kf69656ZAWcSc3DEQ1CAkUSKO9X7iAAABBEQQBQA=\n```",
+      "ko": "```other\nPOST https://api-adservices.apple.com/api/v1/\n--header 'Content-Type: text/plain' \\\n--data-raw\n\nG9i5hC8lQJeGOfmS+MFycll/025oJEjtpZ+rs4AUkDEJh52fT8RrjwIR/ h+2JOpXz4MRdmtcemL8WTTHfNN52tjqjbWupke40AAAAVADAAAAvQAAAIAg QF1+XF4Tl2IZ7Bw/M6ufUHt+UcIhuBeJT8YenB2v36bnZKEjvq/ IH8rqXkRELTHdyiqOYtpy837+UjF/NjE6t1/ l7sIn71b0t3FEXJd8QOtl3Bi6iQyJgGeN8w8X0MK1PDqz9nLJtRD/ wl+p112qR2YrMDyyKnwNrbfRhnGB9AAAAB7wAXlwNHelWf5RT2bzSJcGflq ELMCGoDEHIl7jF6kAAACfAb9ylY8ffdbTlyJODQYQ/ 6V9qbaBAAAAhgUBW39MQI1A0SZgNmZFz4KPaF94BxBzd4rDkjr/ eSeuaXWCmEW3ZhBzE/MOM17hAPBVlDhTPcZ/2ybr3WYIkfb+AAg/ 7jxGpDXgTtco3fzTytnZpEaI5SenXHALIexQAUTBsfBW2HCMQuTRo+7anoW kf69656ZAWcSc3DEQ1CAkUSKO9X7iAAABBEQQBQA=\n```",
+      "sourceHash": "948dc7bb77bed339840f124327c6e6c63d56abad44ab8707cd945130aa270520",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0001",
+      "source": "❗ **Important**: A 404 response can occur if you make an API call too quickly after receiving a valid token.",
+      "ko": "❗ **중요**: 유효한 토큰을 받은 직후 API 호출을 너무 빨리 수행하면 `404` 응답이 발생할 수 있습니다.",
+      "sourceHash": "cc70792328bb4c884ab2c9a092025ca380e596f628a0f41df5e755cda6683e75",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0002",
+      "source": "A best practice is to initiate retries at intervals of 5 seconds, with a maximum of three attempts.",
+      "ko": "재시도는 5초 간격으로 최대 3회까지 수행하는 것이 모범 사례입니다.",
+      "sourceHash": "0626dd700cce81838cbc8b619e68e01686e7aeef676ef5bed3b986a20233af72",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0013:0001",
+      "source": "For details about error codes, see [`AAAttributionError`](aaattributionerror.md).",
+      "ko": "오류 코드에 대한 자세한 내용은 [`AAAttributionError`](aaattributionerror.md)에 설명되어 있습니다.",
+      "sourceHash": "4241851d7dcc3030af245d7a9666ebe89d21d27a60116e9c08acc4d6423670db",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:response-codes:0014:0001",
+      "source": "Response Codes",
+      "ko": "응답 코드",
+      "sourceHash": "e3678a82c67298b49126b9bbe8f00dabd3ce738c7859fe15cc7db1112493c4ae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:response-codes:0015:0001",
+      "source": "**Response**",
+      "ko": "**Response**",
+      "sourceHash": "e8cc993cec6ef4179f953fd4d24f8041d0f83dce9536a6ba2885dc00510444ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:response-codes:0015:0002",
+      "source": "**Description**",
+      "ko": "**Description**",
+      "sourceHash": "6bca8cc230c9c688f4aebb4e8f745e4b781b11584a6e2d4e45e41c4bb0be1ef3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:response-codes:0015:0003",
+      "source": "200",
+      "ko": "200",
+      "sourceHash": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:response-codes:0015:0004",
+      "source": "Success. If the API finds a matching attribution record, the payload returns `attribution=true`. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)If the API doesn’t find a matching attribution record, the payload returns `attribution=false`. In this case, the `200` `OK` response is acknowledgment of the receipt of the data request.",
+      "ko": "성공입니다. API가 일치하는 attribution 레코드를 찾으면 페이로드가 `attribution=true`를 반환합니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)API가 일치하는 attribution 레코드를 찾지 못하면 페이로드가 `attribution=false`를 반환합니다. 이 경우 `200` `OK` 응답은 데이터 요청 수신 확인입니다.",
+      "sourceHash": "a7b91d38b2448cab1ab427632998ee48887920bb79996015dc873babfeeb0e78",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:response-codes:0015:0005",
+      "source": "400",
+      "ko": "400",
+      "sourceHash": "26d228663f13a88592a12d16cf9587caab0388b262d6d9f126ed62f9333aca94",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:response-codes:0015:0006",
+      "source": "The token is invalid.",
+      "ko": "토큰이 유효하지 않습니다.",
+      "sourceHash": "4567fa147e33842d1c524326b7a0f33d838288590680d1dac8fd846408ebd74a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:response-codes:0015:0007",
+      "source": "404",
+      "ko": "404",
+      "sourceHash": "6b3c238ebcf1f3c07cf0e556faa82c6b8fe96840ff4b6b7e9962a2d855843a0b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:response-codes:0015:0008",
+      "source": "Not found. The API is unable to retrieve the requested attribution record.  ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Tokens have a TTL of 24 hours. If the `POST` API call exceeds 24 hours, a `404` response returns. If your token is valid, a best practice is to initiate retries at intervals of 5 seconds with a maximum of three attempts.",
+      "ko": "찾을 수 없습니다. API가 요청한 attribution 레코드를 검색할 수 없습니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)토큰의 TTL은 24시간입니다. `POST` API 호출이 24시간을 초과하면 `404` 응답이 반환됩니다. 토큰이 유효한 경우, 재시도는 5초 간격으로 최대 3회 수행하는 것이 모범 사례입니다.",
+      "sourceHash": "65f6ff8056ec278b4ad0590f031a03168f8cde34da05aeade96692f0578a3dc4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:response-codes:0015:0009",
+      "source": "500",
+      "ko": "500",
+      "sourceHash": "0604cd3138feed202ef293e062da2f4720f77a05d25ee036a7a01c9cfcdd1f0a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:response-codes:0015:0010",
+      "source": "The Apple Ads server is temporarily down or unreachable. The request may be valid, but you need to retry it later.",
+      "ko": "Apple Ads 서버가 일시적으로 중단되었거나 접근할 수 없습니다. 요청이 유효할 수 있지만 나중에 다시 시도해야 합니다.",
+      "sourceHash": "69977d38b3dc3a2d341df649e2fe9bcad1fe683fd01eb302fbb8b5a19814a9ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:attribution-payloads:0016:0001",
+      "source": "Attribution Payloads",
+      "ko": "어트리뷰션 페이로드",
+      "sourceHash": "c16aa3c27008a66ce22de57e7520fabcc91658ca97afa5e9cb7d36a5aeaa39f8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:attribution-payloads:0017:0001",
+      "source": "The API returns two types of attribution records: a standard response and a detailed response.",
+      "ko": "API는 두 가지 유형의 attribution 레코드를 반환합니다. 하나는 표준 응답, 다른 하나는 상세 응답입니다.",
+      "sourceHash": "4ba7a62791189d52e45a58b9b9a40586bdc09639fb6803a6658036ecd5ada9a3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:attribution-payloads:0018:0001",
+      "source": "In iOS 14 and later, the Allow Apps to Request to Track (AAtRtT) device-level setting determines the response that the attribution server returns, as well as the details that are available from the attribution payload.",
+      "ko": "iOS 14 이상에서는 기기 수준 설정인 Allow Apps to Request to Track (AAtRtT)가 attribution 서버가 반환하는 응답과 attribution 페이로드에서 사용할 수 있는 세부 정보를 모두 결정합니다.",
+      "sourceHash": "6b7b03bc2a93237c68787c76fc7fc8badba4cfb6557fee570b99da0766a071eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:attribution-payloads:0018:0002",
+      "source": "The AAtRtT setting allows users to opt in or out of allowing apps to request user consent to access app-related data for both attribution and tracking the user or the device.",
+      "ko": "AAtRtT 설정을 통해 사용자는 앱이 사용자 동의 요청을 통해 어트리뷰션 및 사용자 또는 기기 추적을 위해 앱 관련 데이터에 접근하도록 허용할지 여부를 선택합니다.",
+      "sourceHash": "235726072723129178a4a9d0d90a866a596607a844d997dd1038eade0a400aa2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:attribution-payloads:0018:0003",
+      "source": "The following table shows the combination of tracking interactions and expected attribution payload response:",
+      "ko": "다음 표는 추적 상호작용의 조합과 예상되는 attribution 페이로드 응답을 보여줍니다.",
+      "sourceHash": "0dfd48245080dd5cef276e6d94d5c49dd5a76b80dc8a01d340ebc16d0c959298",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0001",
+      "source": "**Allow Apps to Request to Track setting (iOS 14 and later)**",
+      "ko": "**iOS 14 이상에서 앱 추적 요청 허용 설정 (Allow Apps to Request to Track)**",
+      "sourceHash": "0904a27c07084f3fd3907a60d8a0a0647ec4369bb88fb2cd98a8fc57165ab7ac",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0002",
+      "source": "**Per-app tracking consent status**",
+      "ko": "**앱별 추적 동의 상태**",
+      "sourceHash": "84031f3794a40f6ecf0f1b43afdbe95984887b045dd61acefa9e582560723120",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0003",
+      "source": "**Attribution payload response**",
+      "ko": "**어트리뷰션 페이로드 응답**",
+      "sourceHash": "5b5fac7a5d1dd9a233b72fd6ba37263a7557eff464833bf9a7d11c03f246ae14",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0004",
+      "source": "On",
+      "ko": "On",
+      "sourceHash": "130011756125313c72f2cab730db4347e2841526d236a89cb25f38789fa49229",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0005",
+      "source": "Unknown ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.notDetermined`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/notDetermined)",
+      "ko": "알 수 없음 ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.notDetermined`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/notDetermined)",
+      "sourceHash": "f5bab9bdb604d9f9080f02c992bff4d7730b3bc34155750d1a13599b12631aa9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0006",
+      "source": "Standard",
+      "ko": "Standard",
+      "sourceHash": "ef6691545d2c5523efed00424407cb261aeb0037d165ca5792f7f8bac3381362",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0007",
+      "source": "On",
+      "ko": "On",
+      "sourceHash": "130011756125313c72f2cab730db4347e2841526d236a89cb25f38789fa49229",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0008",
+      "source": "Denied or restricted ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.denied`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/denied) / ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.restricted`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/restricted)",
+      "ko": "거부 또는 제한됨 ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.denied`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/denied) / ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.restricted`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/restricted)",
+      "sourceHash": "3b2107fa44195eacf543f380cdd76277eac17b7789c2d388bb01bd6af1fbb480",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0009",
+      "source": "Standard",
+      "ko": "Standard",
+      "sourceHash": "ef6691545d2c5523efed00424407cb261aeb0037d165ca5792f7f8bac3381362",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0010",
+      "source": "On",
+      "ko": "On",
+      "sourceHash": "130011756125313c72f2cab730db4347e2841526d236a89cb25f38789fa49229",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0011",
+      "source": "Authorized ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.authorized`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/authorized)",
+      "ko": "승인됨 ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.authorized`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/authorized)",
+      "sourceHash": "2daefcafb648acf9eea834dd0f2dfda6ce338cd4f5a0a7012f23d8891271c77c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0012",
+      "source": "Detailed",
+      "ko": "Detailed",
+      "sourceHash": "6d46fcd50a63e430bb6f0b42f8e94e975a37c412b105ee235d465660d7f5e3a5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0013",
+      "source": "Off",
+      "ko": "Off",
+      "sourceHash": "ca7981b46ecf2c1787b6d76d81d9fd7fa0ca95842e2fcc2a452869891a9334d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0014",
+      "source": "Unknown ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.notDetermined`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/notDetermined)",
+      "ko": "알 수 없음 ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.notDetermined`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/notDetermined)",
+      "sourceHash": "f5bab9bdb604d9f9080f02c992bff4d7730b3bc34155750d1a13599b12631aa9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0015",
+      "source": "Standard",
+      "ko": "Standard",
+      "sourceHash": "ef6691545d2c5523efed00424407cb261aeb0037d165ca5792f7f8bac3381362",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0016",
+      "source": "Off",
+      "ko": "Off",
+      "sourceHash": "ca7981b46ecf2c1787b6d76d81d9fd7fa0ca95842e2fcc2a452869891a9334d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0017",
+      "source": "Denied or restricted ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.denied`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/denied) / ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.restricted`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/restricted)",
+      "ko": "거부 또는 제한됨 ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.denied`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/denied) / ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.restricted`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/restricted)",
+      "sourceHash": "3b2107fa44195eacf543f380cdd76277eac17b7789c2d388bb01bd6af1fbb480",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0018",
+      "source": "Standard",
+      "ko": "Standard",
+      "sourceHash": "ef6691545d2c5523efed00424407cb261aeb0037d165ca5792f7f8bac3381362",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0019",
+      "source": "Off",
+      "ko": "Off",
+      "sourceHash": "ca7981b46ecf2c1787b6d76d81d9fd7fa0ca95842e2fcc2a452869891a9334d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0020",
+      "source": "Authorized ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.authorized`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/authorized)",
+      "ko": "승인됨 ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)[`ATTrackingManager.AuthorizationStatus.authorized`](https://developer.apple.com/documentation/AppTrackingTransparency/ATTrackingManager/AuthorizationStatus/authorized)",
+      "sourceHash": "2daefcafb648acf9eea834dd0f2dfda6ce338cd4f5a0a7012f23d8891271c77c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payloads:0019:0021",
+      "source": "Detailed",
+      "ko": "Detailed",
+      "sourceHash": "6d46fcd50a63e430bb6f0b42f8e94e975a37c412b105ee235d465660d7f5e3a5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:attribution-payloads:0020:0001",
+      "source": "The attribution record is a data dictionary with key-value pairs that correspond to your Apple Ads campaigns and app downloads from devices running iOS 14 and later.",
+      "ko": "attribution 레코드는 iOS 14 이상이 실행되는 기기의 Apple Ads 캠페인 및 앱 다운로드에 해당하는 키-값 쌍으로 구성된 데이터 딕셔너리입니다.",
+      "sourceHash": "a52f93ef2d3f5d9cafa48568d61d6499ca5eebe05338c1423c638ddb580b5f56",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:attribution-payloads:0020:0002",
+      "source": "Run reports to review detailed campaign metadata in [`Apple Ads`](https://developer.apple.com/documentation/apple_ads) or [`Apple Ads Advanced`](https://developer.apple.comhttps://ads.apple.com/advanced/).",
+      "ko": "자세한 캠페인 메타데이터를 검토하려면 [`Apple Ads`](https://developer.apple.com/documentation/apple_ads) 또는 [`Apple Ads Advanced`](https://developer.apple.comhttps://ads.apple.com/advanced/)에서 보고서를 실행합니다.",
+      "sourceHash": "606dead24e20e36cba6b4e73551a8be97c9b944b6e87b4301c5406020d165846",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:attribution-payloads:0021:0001",
+      "source": "**Note**: If you receive test data in your payload responses, check to make sure your app isn’t in developer mode.",
+      "ko": "**참고**: 페이로드 응답에서 테스트 데이터가 수신되면 앱이 개발자 모드가 아닌지 확인합니다.",
+      "sourceHash": "e7f0891e6d8bd4094e7559a6ddfae4ebf4ba7c4c141683fced0e8400d586e07b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:attribution-payloads:0021:0002",
+      "source": "AdServices will return a test payload when developer mode is on:",
+      "ko": "개발자 모드가 켜져 있으면 AdServices가 테스트 페이로드를 반환합니다:",
+      "sourceHash": "8b3c2b4be7ef03277da3beebf15bfd5f21b18c62bcda02e4403bb92095f39ae9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:attribution-payloads:0022:0001",
+      "source": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 1234567890,\n  \"campaignId\": 1234567890,\n  \"conversionType\": \"Download\",\n  \"clickDate\": \"2020-04-08T17:17Z\",\n  \"claimType\": \"Click\",\n  \"adGroupId\": 1234567890,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 123222,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "ko": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 1234567890,\n  \"campaignId\": 1234567890,\n  \"conversionType\": \"Download\",\n  \"clickDate\": \"2020-04-08T17:17Z\",\n  \"claimType\": \"Click\",\n  \"adGroupId\": 1234567890,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 123222,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "sourceHash": "84250a6ddbe0891256e92f0ef3403901229e5cc4b0df64cd9947513b7d8be667",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:tap-through-payload-examples:0023:0001",
+      "source": "Tap Through Payload Examples",
+      "ko": "탭 스루 페이로드 예시",
+      "sourceHash": "bd358b7e9e7f986246ea0c509cf23b408182c448b57c324241a7a96509016e6d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:tap-through-payload-examples:0024:0001",
+      "source": "A detailed payload for tap-through attribution resembles the following:",
+      "ko": "탭 스루 어트리뷰션에 대한 상세 페이로드는 다음과 같습니다:",
+      "sourceHash": "e0a95ea0bfc178b6a2c1136a3cc5aef76d06dae0c53ad5d501f94dd2b1bc422b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:tap-through-payload-examples:0025:0001",
+      "source": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"Download\",\n  \"clickDate\": \"2024-10-08T17:17Z\",\n  \"claimType\": \"Click\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "ko": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"Download\",\n  \"clickDate\": \"2024-10-08T17:17Z\",\n  \"claimType\": \"Click\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "sourceHash": "7ec85ab6f231bbca59c8ab38f5500375368fa4b8d928dd2c20a3ed091fe95112",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:tap-through-payload-examples:0026:0001",
+      "source": "A standard payload for tap-through attribution resembles the following:",
+      "ko": "탭 스루 어트리뷰션에 대한 표준 페이로드는 다음과 같습니다:",
+      "sourceHash": "87cab02b646acfc7b264f115704af8407c75bf1827232f96f170bfbf246437a0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:tap-through-payload-examples:0027:0001",
+      "source": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"Download\",\n  \"claimType\": \"Click\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "ko": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"Download\",\n  \"claimType\": \"Click\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "sourceHash": "9dac07e9353f8b2840fb73c0c79fb7476affd1bb48a1d36b59f046d311fb6f38",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:view-through-payload-examples:0028:0001",
+      "source": "View Through Payload Examples",
+      "ko": "뷰 스루 페이로드 예시",
+      "sourceHash": "8229146bf83d19dc84e5dacfc2e80b07c7880053aad0b40885784381053aab99",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:view-through-payload-examples:0029:0001",
+      "source": "A detailed payload for view-through attribution resembles the following:",
+      "ko": "뷰 스루 어트리뷰션에 대한 상세 페이로드는 다음과 같습니다:",
+      "sourceHash": "542033081f93c65caa0b3bc046ab0bae1bf43351e8094d116b5048ab5d3ad1e2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:view-through-payload-examples:0030:0001",
+      "source": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"Download\",\n  \"impressionDate\": \"2024-10-08T17:17Z\",\n  \"claimType\": \"Impression\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "ko": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"Download\",\n  \"impressionDate\": \"2024-10-08T17:17Z\",\n  \"claimType\": \"Impression\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "sourceHash": "7dd5c48b7301fe19d94d544c823b5d314ea08fb3b2397c7a45cf87b173603c3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:view-through-payload-examples:0031:0001",
+      "source": "A standard payload for view-through attribution resembles the following:",
+      "ko": "뷰 스루 어트리뷰션에 대한 표준 페이로드는 다음과 같습니다:",
+      "sourceHash": "7974f978370fec646b0fbf1445f958e6c9da36c1cd370c47f9b7a54151cb1f68",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:view-through-payload-examples:0032:0001",
+      "source": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"Download\",\n  \"claimType\": \"Impression\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "ko": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"Download\",\n  \"claimType\": \"Impression\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "sourceHash": "f6775125a4590e74688175b66eb58d93354124a8d6163f3252e51ba79602584b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:pre-order-payload-examples:0033:0001",
+      "source": "Pre Order Payload Examples",
+      "ko": "사전 주문 페이로드 예시",
+      "sourceHash": "81ebd5bbb0e8af3b92d83ff4cf2f313de7a0525ad9e693193df864cf26439b2a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:pre-order-payload-examples:0034:0001",
+      "source": "A detailed payload for pre-order attribution on tap-throughs resembles the following:",
+      "ko": "탭 스루 사전 주문 어트리뷰션에 대한 상세 페이로드는 다음과 같습니다:",
+      "sourceHash": "c410abd0afdaf5215e54dd0ab12dd858df2829e72b3ad2731e6854ffbed4e4da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:pre-order-payload-examples:0035:0001",
+      "source": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"PreOrder\",\n  \"clickDate\": \"2020-04-08T17:17Z\",\n  \"claimType\": \"Click\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "ko": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"PreOrder\",\n  \"clickDate\": \"2020-04-08T17:17Z\",\n  \"claimType\": \"Click\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "sourceHash": "0ece09ce42ab5f4df53e9c558f49845e6b03578f360ecec3615aa12aafdd2e55",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:pre-order-payload-examples:0036:0001",
+      "source": "A standard payload for pre-order attribution on tap-throughs resembles the following:",
+      "ko": "탭 스루 사전 주문 어트리뷰션에 대한 표준 페이로드는 다음과 같습니다:",
+      "sourceHash": "46934023e134124343f1556c93735da5a4515e1b29d7d34b43a42086e537dd3c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:pre-order-payload-examples:0037:0001",
+      "source": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"PreOrder\",\n  \"claimType\": \"Click\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "ko": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"PreOrder\",\n  \"claimType\": \"Click\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "sourceHash": "227b0171d104907c134509b237e8ef8a191fd8ebc96487ea9de6a9f0fed7b258",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:pre-order-payload-examples:0038:0001",
+      "source": "A detailed payload for pre-order attribution on view-throughs resembles the following:",
+      "ko": "뷰 스루 사전 주문 어트리뷰션에 대한 상세 페이로드는 다음과 같습니다:",
+      "sourceHash": "8f63c44312ed6615be693112ef0c3151d4dbf527940338cd8b35d9c69ec63ac8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:pre-order-payload-examples:0039:0001",
+      "source": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"PreOrder\",\n  \"impressionDate\": \"2020-04-08T17:17Z\",\n  \"claimType\": \"Impression\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "ko": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"PreOrder\",\n  \"impressionDate\": \"2020-04-08T17:17Z\",\n  \"claimType\": \"Impression\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "sourceHash": "2d7675462b7bdb2598a0e21289d381b611d48fd13bc1dc374ef91cd4d7cd90d3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:pre-order-payload-examples:0040:0001",
+      "source": "A standard payload for pre-order attribution on view-throughs resembles the following:",
+      "ko": "뷰 스루 사전 주문 어트리뷰션에 대한 표준 페이로드는 다음과 같습니다:",
+      "sourceHash": "858bb86d4efd3f4eb4838a6c242a6c21e097d9c09cc3d39ce4d10f333230d149",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:pre-order-payload-examples:0041:0001",
+      "source": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"PreOrder\",\n  \"claimType\": \"Impression\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "ko": "```json\n{\n  \"attribution\": true,\n  \"orgId\": 40669820,\n  \"campaignId\": 542370539,\n  \"conversionType\": \"PreOrder\",\n  \"claimType\": \"Impression\",\n  \"adGroupId\": 542317095,\n  \"countryOrRegion\": \"US\",\n  \"keywordId\": 87675432,\n  \"adId\": 542317136,\n  \"supplyPlacement\": \"APPSTORE_SEARCH_RESULTS\"\n}\n```",
+      "sourceHash": "6cf6cc7280549ef3c8fa7fa4d8e931c7d7cef4ac9177283968f86ffd4a451a59",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:attribution-payload-descriptions:0042:0001",
+      "source": "Attribution Payload Descriptions",
+      "ko": "어트리뷰션 페이로드 설명",
+      "sourceHash": "3e4b5f039d600d1e5489ae5d508c894207c91cdb0cdd8df6551c0e23fc28ca01",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0001",
+      "source": "**Field**",
+      "ko": "**Field**",
+      "sourceHash": "e1651bd8ccdab9b7d6487a865c64fb420096b8b58db9249542c91634c363daff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0002",
+      "source": "**Data type**",
+      "ko": "**데이터 타입**",
+      "sourceHash": "1fc19ae438f8bea93e7073f1b27e624f20e4324bb13ee1aff51cb159d6c8dc28",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0003",
+      "source": "**Description**",
+      "ko": "**Description**",
+      "sourceHash": "6bca8cc230c9c688f4aebb4e8f745e4b781b11584a6e2d4e45e41c4bb0be1ef3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0004",
+      "source": "`adGroupId`",
+      "ko": "`adGroupId`",
+      "sourceHash": "07efa5bc973df7720a6d788b19a7fd7522e33a56a6d184d0bce7526b89ce97b9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0005",
+      "source": "long",
+      "ko": "long",
+      "sourceHash": "fc66f021c67d064c1490a12b5a4d4d2f5167ca692a16ca12f1f3a4cda29a6fa9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0006",
+      "source": "The identifier for the ad group. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Use [`Get Ad Group-Level Reports`](https://developer.apple.com/documentation/apple_ads/Get-Ad-Group-Level-Reports) to correlate your attribution response by `adGroupId` and its corresponding campaign in the Apple Ads Campaign Management API.",
+      "ko": "광고 그룹의 식별자입니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)attribution 응답을 `adGroupId` 및 해당 캠페인으로 Apple Ads Campaign Management API에서 상호 연관시키려면 [`Get Ad Group-Level Reports`](https://developer.apple.com/documentation/apple_ads/Get-Ad-Group-Level-Reports)를 사용합니다.",
+      "sourceHash": "6a575486be4e5660ab807b6c036925b30187193a84f139d073e4242e0c92a9e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0007",
+      "source": "`adId`",
+      "ko": "`adId`",
+      "sourceHash": "e83a21b92ec283e77c8eabb77197b151edf88959eceee14a62cf492c684eb368",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0008",
+      "source": "long",
+      "ko": "long",
+      "sourceHash": "fc66f021c67d064c1490a12b5a4d4d2f5167ca692a16ca12f1f3a4cda29a6fa9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0009",
+      "source": "The identifier representing the assignment relationship between an `ad` object and an ad group. This ID applies to devices running iOS 15.2 and later. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Use [`Get Ad-Level Reports`](https://developer.apple.com/documentation/apple_ads/Get-Ad-Level-Reports) to correlate your attribution response by `adId` in the Apple Ads Campaign Management API.",
+      "ko": "`ad` 객체와 광고 그룹 간의 할당 관계를 나타내는 식별자입니다. 이 ID는 iOS 15.2 이상에서 실행되는 기기에 적용됩니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Apple Ads Campaign Management API에서 `adId`를 기준으로 어트리뷰션 응답을 연계하려면 [`Get Ad-Level Reports`](https://developer.apple.com/documentation/apple_ads/Get-Ad-Level-Reports) 를 사용합니다.",
+      "sourceHash": "dd7a20b216eb845c846b81dfbde6018908bdd6024baddb7ecaff51517925ea78",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0010",
+      "source": "`attribution`",
+      "ko": "`attribution`",
+      "sourceHash": "b39ab56d5e003b8d61df9f8edd46c79d645255b2dd931caf13d8fdbe2b3811a4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0011",
+      "source": "boolean",
+      "ko": "boolean",
+      "sourceHash": "bf84d3d60e93cc959793d5c9d8308fbcf868f673cb032f461c9676f0480cc29e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0012",
+      "source": "The attribution value. A value of `true` returns if a user clicks an Apple Ads impression up to 30 days before your app download or views it within 24 hours. If the API can’t find a matching attribution record, the attribution value is `false`. See `claimType` for more details.",
+      "ko": "어트리뷰션 값입니다. 사용자가 앱 다운로드 전 최대 30일 전까지 Apple Ads 광고를 클릭했거나 광고 조회 후 24시간 이내에 조회한 경우 `true`가 반환됩니다. API에서 일치하는 어트리뷰션 레코드를 찾지 못하면 어트리뷰션 값은 `false`입니다. 자세한 내용은 `claimType`을 참조합니다.",
+      "sourceHash": "28f990d83ef364c2aaa638a763f1e962fab024dffcd0b7d7643ea41d7396a0f6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0013",
+      "source": "`campaignId`",
+      "ko": "`campaignId`",
+      "sourceHash": "c844c10ab49f65e0e708db7cf6c89ca225d8ad0b6c3de757907e0418d319e0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0014",
+      "source": "long",
+      "ko": "long",
+      "sourceHash": "fc66f021c67d064c1490a12b5a4d4d2f5167ca692a16ca12f1f3a4cda29a6fa9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0015",
+      "source": "The unique identifier for the campaign. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Use [`Get Campaign-Level Reports`](https://developer.apple.com/documentation/apple_ads/Get-Campaign-Level-Reports) in the Apple Ads Campaign Management API to correlate your attribution response by `campaignId`.",
+      "ko": "캠페인의 고유 식별자입니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)`campaignId`로 Apple Ads Campaign Management API에서 어트리뷰션 응답을 연계하려면 [`Get Campaign-Level Reports`](https://developer.apple.com/documentation/apple_ads/Get-Campaign-Level-Reports) 를 사용합니다.",
+      "sourceHash": "e089c00aba3876d62ba229b0c6773d7305e18c6dd8d7dfe90495bc20afe404ae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0016",
+      "source": "`claimType`",
+      "ko": "`claimType`",
+      "sourceHash": "c8d5796ebf53ea89160bd560976ecd33b339be2b0b063d622e167a63e2276c7b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0017",
+      "source": "string",
+      "ko": "string",
+      "sourceHash": "473287f8298dba7163a897908958f7c0eae733e25d2e027992ea2edc9bed2fa8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0018",
+      "source": "Returned in both standard and detailed payloads: ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)For view-through attribution, `claimType` will have a value of `Impression` to indicate users who viewed an ad in a corresponding Apple Ads campaign but didn’t tap on it, within 24 hours of an ad view. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png) Note: for view-through attribution, campaigns with age and gender targeting criteria return a value of `false`. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)For tap-through attribution, `claimType` will have a value of `Click`, specifying that the user tapped on an ad. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Note: the tap-through attribution window is 30 days and tap-through attribution is prioritized over view-through attribution.",
+      "ko": "표준 및 상세 페이로드 모두에 반환됩니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)뷰스루 어트리뷰션의 경우 `claimType`은 Apple Ads 캠페인에서 광고를 본 사용자 중 광고를 탭하지 않은 사용자를 24시간 이내로 표시하며 값이 `Impression`입니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)참고: 뷰스루 어트리뷰션에서는 연령 및 성별 타겟팅 조건이 있는 캠페인의 값이 `false`입니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)탭스루 어트리뷰션의 경우 `claimType`은 사용자가 광고를 탭했음을 나타내는 `Click` 값이 됩니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)참고: 탭스루 어트리뷰션 창은 30일이며, 탭스루가 뷰스루보다 우선 적용됩니다.",
+      "sourceHash": "3c2259caa1ee75a8315838237644faa0dac3c4687c0b7596aa37acbf37ffb56d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0019",
+      "source": "`clickDate`",
+      "ko": "`clickDate`",
+      "sourceHash": "c2c55f89b21a014eb6b164f7ae9e4a47a9f3717bda1b6166be80b9da0b733c9c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0020",
+      "source": "date/time string",
+      "ko": "date/time 문자열",
+      "sourceHash": "554cb61e2c7ffdeced8d1252ccfd41c5ae91b9c2e54ee028eca7b80e38c485d2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0021",
+      "source": "The date and time when the user clicks an ad in a corresponding campaign. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)This field only appears in the detailed attribution response payload.",
+      "ko": "해당 캠페인에서 사용자가 광고를 탭한 날짜와 시간입니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)이 필드는 상세 어트리뷰션 응답 페이로드에만 표시됩니다.",
+      "sourceHash": "3955f6596f6bfa0ae2d30c145a37bb546afa54a7e4dc421b375f59d2e364a5ca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0022",
+      "source": "`conversionType`",
+      "ko": "`conversionType`",
+      "sourceHash": "bf93046a2c34ddd6f1ba20ed1307f616eeecf9d83b1fde7d9bbb13e67782032a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0023",
+      "source": "string",
+      "ko": "string",
+      "sourceHash": "473287f8298dba7163a897908958f7c0eae733e25d2e027992ea2edc9bed2fa8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0024",
+      "source": "The type of conversion. Values are `Download`, `Redownload` or `PreOrder`. The `PreOrder` value attributes both clicks and views. If a pre-order was placed within 30 days from the click or 1 day from the view, the lookback window for click-throughs is 90 days. The lookback window for view-throughs is 61 days. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Conversion types appear in your campaign reports in the Apple Ads Campaign Management API. See the [`ExtendedSpendRow`](https://developer.apple.com/documentation/apple_ads/ExtendedSpendRow) object for more information.",
+      "ko": "전환 유형입니다. 값은 `Download`, `Redownload`, `PreOrder`입니다. `PreOrder` 값은 클릭과 조회 모두를 어트리뷰션합니다. 클릭으로부터 30일 이내 또는 조회로부터 1일 이내에 선주문이 이루어진 경우, 클릭스루의 조회 기간은 90일입니다. 뷰스루의 조회 기간은 61일입니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)전환 유형은 Apple Ads Campaign Management API의 캠페인 보고서에 표시됩니다. 자세한 내용은 [`ExtendedSpendRow`](https://developer.apple.com/documentation/apple_ads/ExtendedSpendRow) 객체를 참조합니다.",
+      "sourceHash": "6a60342385a49a01d117d9ba7d7452a4586d516cf1e41d649ef257d8ea292ed5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0025",
+      "source": "`countryOrRegion`",
+      "ko": "`countryOrRegion`",
+      "sourceHash": "d1be76b7e8b54af7c654a52be182f3c21ba4d6631ddc1f8903e08f189ed12dc1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0026",
+      "source": "string",
+      "ko": "string",
+      "sourceHash": "473287f8298dba7163a897908958f7c0eae733e25d2e027992ea2edc9bed2fa8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0027",
+      "source": "The country or region for the campaign. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Refer to the `groupBy` section of the [`ReportingRequest`](https://developer.apple.com/documentation/apple_ads/ReportingRequest) in the Apple Ads Campaign Management API for more details.",
+      "ko": "캠페인의 국가 또는 지역입니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png>자세한 내용은 Apple Ads Campaign Management API의 [`ReportingRequest`](https://developer.apple.com/documentation/apple_ads/ReportingRequest) `groupBy` 섹션을 참조합니다.",
+      "sourceHash": "6b419c8063cd73184e4c6dc0e4e10d85bc14b2ab1273f3f3af4aab1175db57e8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0028",
+      "source": "`impressionDate`",
+      "ko": "`impressionDate`",
+      "sourceHash": "422f0733c1f8227efc473dd8401b18efdf8d2c9868ca8df3dc7fd1b4f2e7dca2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0029",
+      "source": "UTC string",
+      "ko": "UTC 문자열",
+      "sourceHash": "3bb9a53ffbfe6133f22e5a6a0fb43649c22cc487b98f58e7354b3eb98da6b9cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0030",
+      "source": "Represents the date and time when an ad view occurs in a corresponding Apple Ads campaign. The `impressionDate` attribute only appears in the detailed ad view-through attribution response payload.",
+      "ko": "해당 Apple Ads 캠페인에서 광고 조회가 발생한 날짜와 시간입니다. `impressionDate` 속성은 상세 광고 뷰스루 어트리뷰션 응답 페이로드에만 나타납니다.",
+      "sourceHash": "54f1403cb479a7ee24db6709e8a95d22fa0a3d256c66885a0f44679f6e8f0889",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0031",
+      "source": "`keywordId`",
+      "ko": "`keywordId`",
+      "sourceHash": "3d29ccee1c0cdd8c12270dc8da0faf8d8771bc5a0c299888c3729c33a952d1ea",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0032",
+      "source": "long",
+      "ko": "long",
+      "sourceHash": "fc66f021c67d064c1490a12b5a4d4d2f5167ca692a16ca12f1f3a4cda29a6fa9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0033",
+      "source": "The identifier for the keyword. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Use [`Get Keyword-Level Reports`](https://developer.apple.com/documentation/apple_ads/Get-Keyword-Level-Reports) in the Apple Ads Campaign Management API to correlate your attribution response by `keywordId`. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Note, when you enable search match, the API doesn’t return `keywordId` in the attribution response. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)See [`Ad Groups`](https://developer.apple.com/documentation/Apple_Ads/ad-groups) for more information.",
+      "ko": "키워드의 식별자입니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Apple Ads Campaign Management API에서 `keywordId`로 어트리뷰션 응답을 연계하려면 [`Get Keyword-Level Reports`](https://developer.apple.com/documentation/apple_ads/Get-Keyword-Level-Reports)를 사용합니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)참고: 검색 일치(search match)를 사용하면 API가 어트리뷰션 응답에 `keywordId`를 반환하지 않습니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)자세한 내용은 [`Ad Groups`](https://developer.apple.com/documentation/Apple_Ads/ad-groups) 를 참조합니다.",
+      "sourceHash": "ac3bd9f7b1b53f4128ecbe2b4804d9a053eedad85e50fed9fcae7b18a49a870a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0034",
+      "source": "`orgId`",
+      "ko": "`orgId`",
+      "sourceHash": "2107ec49b233c71e7024cd205f435e5a1c90237546c4a37072cff7ea36cd2ede",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0035",
+      "source": "long",
+      "ko": "long",
+      "sourceHash": "fc66f021c67d064c1490a12b5a4d4d2f5167ca692a16ca12f1f3a4cda29a6fa9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0036",
+      "source": "The identifier of the organization that owns the campaign. Your `orgId` is the same as your account in Apple Ads Advanced. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Obtain your `orgId` by calling [`Get User ACL`](https://developer.apple.com/documentation/apple_ads/Get-User-ACL) in the Apple Ads Campaign Management API.",
+      "ko": "캠페인을 소유한 조직의 식별자입니다. `orgId`는 Apple Ads Advanced의 계정과 동일합니다. ![None](https://docs-assets.developer.apple.com/published/e5f51b2395970bdf7acf42b6603b53c9/spacer.png)Apple Ads Campaign Management API에서 [`Get User ACL`](https://developer.apple.com/documentation/apple_ads/Get-User-ACL) 을 호출해 `orgId`를 가져옵니다.",
+      "sourceHash": "e80881b85000d1892b8d8ff7204d576c13e9bc55ab6d0e56b450fd0daeae7b16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0037",
+      "source": "`supplyPlacement`",
+      "ko": "`supplyPlacement`",
+      "sourceHash": "b5d265a7eee9c03b7cf9691473f5201b9dc51c50f91970fe16df43a97fc7a1d5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0038",
+      "source": "string",
+      "ko": "string",
+      "sourceHash": "473287f8298dba7163a897908958f7c0eae733e25d2e027992ea2edc9bed2fa8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:attribution-payload-descriptions:0043:0039",
+      "source": "The ad placements for a campaign.",
+      "ko": "캠페인의 광고 배치입니다.",
+      "sourceHash": "0065bbb172dc2bd5266c3a848cc2c4f2ae5f1d17ec5f301c9f91cf4780c4b0da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:supplyplacement-descriptions:0044:0001",
+      "source": "Supplyplacement Descriptions",
+      "ko": "공급 위치 설명",
+      "sourceHash": "42d98f032c7d39505f210a395478cc7d11ea465528e933b582df5bb5dd9b3839",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:supplyplacement-descriptions:0045:0001",
+      "source": "**Value**",
+      "ko": "**Value**",
+      "sourceHash": "e78c987022f8c897a52a8edc1562f200735e10ef01e94667f7aeaeb2f177ea8a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:supplyplacement-descriptions:0045:0002",
+      "source": "**Description**",
+      "ko": "**Description**",
+      "sourceHash": "6bca8cc230c9c688f4aebb4e8f745e4b781b11584a6e2d4e45e41c4bb0be1ef3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:supplyplacement-descriptions:0045:0003",
+      "source": "`APPSTORE_PRODUCT_PAGES`",
+      "ko": "`APPSTORE_PRODUCT_PAGES`",
+      "sourceHash": "6a462e7f598cb5cffa5581faedbe2c37df6db8f7b8dc01a0c22dcd8244194e0f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:supplyplacement-descriptions:0045:0004",
+      "source": "Product page ads on the App Store allow you to reach users browsing app pages, appearing at the top of the “You Might Also Like” list when users scroll to the bottom.",
+      "ko": "App Store의 제품 페이지 광고는 앱 페이지를 탐색하는 사용자를 대상으로 하며, 사용자가 아래로 스크롤할 때 “You Might Also Like” 목록 상단에 표시됩니다.",
+      "sourceHash": "c0ce3c636c945b74083607712f815300497a354dc91116486c1f6ec24847cab5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:supplyplacement-descriptions:0045:0005",
+      "source": "`APPSTORE_SEARCH_RESULTS`",
+      "ko": "`APPSTORE_SEARCH_RESULTS`",
+      "sourceHash": "11520d27ef92efc507ba8c265ef30ea3abaad3ede597226fcc5f4258ba4c0243",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:supplyplacement-descriptions:0045:0006",
+      "source": "Search results ads let you reach users when they search for something specific, with an ad in relevant search results.",
+      "ko": "검색 결과 광고는 사용자가 특정 항목을 검색할 때 관련 검색 결과 내에 광고를 노출해 도달할 수 있게 합니다.",
+      "sourceHash": "e4a9009fc6d22cc62e88c73baed91dbe1f9966f2c1538ddb1cba9ed697ca2d98",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:supplyplacement-descriptions:0045:0007",
+      "source": "`APPSTORE_SEARCH_TAB`",
+      "ko": "`APPSTORE_SEARCH_TAB`",
+      "sourceHash": "139f8e223b57e88ecf38414b55ba01f33e0df2f3c72f54ad94ad53540593c402",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:supplyplacement-descriptions:0045:0008",
+      "source": "Search tab ads let you reach users before they search for something specific, with an ad that appears prominently at the top of the suggested apps list on the Search tab.",
+      "ko": "검색 탭 광고는 사용자가 특정 항목을 검색하기 전, 검색 탭의 추천 앱 목록 맨 위에 눈에 잘 보이는 위치로 광고를 표시해 도달할 수 있게 합니다.",
+      "sourceHash": "0edc60a2bd6e63ce45d787a845e6d84889dcf5b5fffa6690d772ddda496c1f68",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:table:supplyplacement-descriptions:0045:0009",
+      "source": "`APPSTORE_TODAY_TAB`",
+      "ko": "`APPSTORE_TODAY_TAB`",
+      "sourceHash": "47e33bf24e78262ba656e7555ab30f938b4a40695cb84e49074285f53c6dffb2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:table:supplyplacement-descriptions:0045:0010",
+      "source": "Today tab ads let you reach people on the front page of the App Store, where users start their visit.",
+      "ko": "Today 탭 광고는 사용자가 방문을 시작할 때 App Store의 첫 화면에서 사용자에게 도달할 수 있게 합니다.",
+      "sourceHash": "506fe1e125c8acff12b5104a6a59efca5517765a02cbe4e773c739f2f63845b1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:supplyplacement-descriptions:0046:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:supplyplacement-descriptions:0047:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/adservices/aaattribution/attributiontoken())*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/adservices/aaattribution/attributiontoken())*",
+      "sourceHash": "7cdb2c7685e043c4b29bfbc2af903baec05c188fc243bd85b84c1a16e8ac28ef",
+      "status": "machine_translated"
+    }
+  ]
+}

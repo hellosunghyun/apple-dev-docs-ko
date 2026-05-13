@@ -1,0 +1,442 @@
+{
+  "docId": "documentation/Accelerate/vimage-affinetransform-double.md",
+  "title": "vImageAffineTransformDouble",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vimage-affinetransform-double",
+  "segments": [
+    {
+      "id": "seg:heading:vimageaffinetransformdouble:0000:0001",
+      "source": "vImage_AffineTransform_Double",
+      "ko": "vImage_AffineTransform_Double",
+      "sourceHash": "4e311c64438605a3095d94aa016bed3ae05e3c334467dafa638d2dca415c5b30",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:vimageaffinetransformdouble:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: struct",
+      "ko": "**Framework**: Accelerate **Kind**: struct",
+      "sourceHash": "552e77ceae39944166096a32a2a95b04a8afea8b9af39ee8057b5d5d688445fe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:vimageaffinetransformdouble:0002:0001",
+      "source": "A structure for values that represent a double-precision affine transformation.",
+      "ko": "배정밀도 어파인 변환을 나타내는 구조체입니다.",
+      "sourceHash": "1825676bf6c852c3d6f2758705695a6391554b99e571646f351ef20671377a5c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:vimageaffinetransformdouble:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:vimageaffinetransformdouble:0004:0001",
+      "source": "iOS ?+",
+      "ko": "iOS ?+",
+      "sourceHash": "5ab9a52f3ed195087b787f7fc91e6c6787e10947ba89804fc30b0826935fe735",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:vimageaffinetransformdouble:0004:0002",
+      "source": "iPadOS ?+",
+      "ko": "iPadOS ?+",
+      "sourceHash": "c073a012e8f78fb65510b62ab5dd5f951cd38fb0306215643d562259e96744f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:vimageaffinetransformdouble:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:vimageaffinetransformdouble:0004:0004",
+      "source": "macOS ?+",
+      "ko": "macOS ?+",
+      "sourceHash": "7565f9a2fe151983964ce7f1a1fff21dbf4130de4d3457f25bd88800eafbe279",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:vimageaffinetransformdouble:0004:0005",
+      "source": "tvOS ?+",
+      "ko": "tvOS ?+",
+      "sourceHash": "e197a5f363006a02e522e5f07b216c8e4a4e9a6a147fcb43f9877e395882682a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:vimageaffinetransformdouble:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:vimageaffinetransformdouble:0004:0007",
+      "source": "watchOS ?+",
+      "ko": "watchOS ?+",
+      "sourceHash": "a3eeb3d8ec97b0e69f7f72fecf404f7497525e6d0b54f1854aa63b483933227a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstruct vImage_AffineTransform_Double\n```",
+      "ko": "```swift\nstruct vImage_AffineTransform_Double\n```",
+      "sourceHash": "6b2681a9f4bee45137649fee5cb9e82e00a3816c17942278713ab4588eef2433",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "This structure represents the 3x2 matrix :",
+      "ko": "이 구조체는 3x2 행렬을 나타냅니다:",
+      "sourceHash": "96f02d9cdd33281c73a3f1dbd1655a881acc50ae8a1010656c20d9f6bccd39ea",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "![3 by 2 matrix](https://docs-assets.developer.apple.com/published/15175700351555931d77e36e3b8efd15/media-2557524.gif)",
+      "ko": "![3 by 2 matrix](https://docs-assets.developer.apple.com/published/15175700351555931d77e36e3b8efd15/media-2557524.gif)",
+      "sourceHash": "6974c4c507bd4173a74125d907f7aa6044fa2953fad9002abeddc5afd13dfcee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "In 64-bit applications, this structure is just like the Core Graphics [`CGAffineTransform`](https://developer.apple.com/documentation/CoreFoundation/CGAffineTransform) data structure.",
+      "ko": "64비트 애플리케이션에서 이 구조체는 Core Graphics [`CGAffineTransform`](https://developer.apple.com/documentation/CoreFoundation/CGAffineTransform) 데이터 구조체와 동일합니다.",
+      "sourceHash": "fa1699b961d59fc2cdee4de5d7efda530d143ffa3974bc7aeef3068674d0b95b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0002",
+      "source": "In 32-bit applications, the Core Graphics data structure is equivalent to [`vImage_AffineTransform`](vimage_affinetransform.md).",
+      "ko": "32비트 애플리케이션에서 Core Graphics 데이터 구조는 [`vImage_AffineTransform`](vimage_affinetransform.md)와 같습니다.",
+      "sourceHash": "d463d2c42533019109568049b2b29a94db2ba9817dd86e1beefd1c032eec6061",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0003",
+      "source": "Most of the time, you should use the [`vImage_CGAffineTransform`](vimage_cgaffinetransform.md) data structure, which changes size depending on architecture.",
+      "ko": "대부분의 경우 아키텍처에 따라 크기가 달라지는 [`vImage_CGAffineTransform`](vimage_cgaffinetransform.md) 데이터 구조를 사용해야 합니다.",
+      "sourceHash": "348131bf23d9e88a0d57fea442323d0a3560515234ee8552c02c5bc92ed953c9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0001",
+      "source": "The [`CGAffineTransform`](https://developer.apple.com/documentation/CoreGraphics/cgaffinetransform) describes functions for creating and manipulating matrixes of this form.",
+      "ko": "[`CGAffineTransform`](https://developer.apple.com/documentation/CoreGraphics/cgaffinetransform)은 이 형식의 행렬을 생성하고 조작하는 함수를 설명합니다.",
+      "sourceHash": "9ab793f2f92139b24d823e74bf9e9dac8f555722cafa9fe1b362417c088a0e4f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0012:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:initializers:0013:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0014:0001",
+      "source": "[init(a: Double, b: Double, c: Double, d: Double, tx: Double, ty: Double)](vimage_affinetransform_double/init(a:b:c:d:tx:ty:)-9nehj.md)",
+      "ko": "[init(a: Double, b: Double, c: Double, d: Double, tx: Double, ty: Double)](vimage_affinetransform_double/init(a:b:c:d:tx:ty:)-9nehj.md)",
+      "sourceHash": "6d8159706d793e5a529f6823f7deda443731601ae5f66fc4a4c47949d483f34a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:initializers:0015:0001",
+      "source": "Returns a new affine transform.",
+      "ko": "새로운 어파인 변환을 반환합니다.",
+      "sourceHash": "05c77f02ec2a6fc7870279c2901ab01805c2e1233bff93cf374f91d91fbbae3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:initializers:0016:0001",
+      "source": "[init()](vimage_affinetransform_double/init.md)",
+      "ko": "[init()](vimage_affinetransform_double/init.md)",
+      "sourceHash": "8b4e885d24d787ffb354e061982849dd44b4710cee9f0c2e9608fa7e5dd80f37",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0016:0002",
+      "source": "[init(a: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat, tx: CGFloat, ty: CGFloat)](vimage_affinetransform_double/init(a:b:c:d:tx:ty:)-4gqxp.md)",
+      "ko": "[init(a: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat, tx: CGFloat, ty: CGFloat)](vimage_affinetransform_double/init(a:b:c:d:tx:ty:)-4gqxp.md)",
+      "sourceHash": "5597079b49025bb039a71691a634f442036914e311c6438ef814ed147b15d94b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:affine-transform-matrix-elements:0017:0001",
+      "source": "Affine Transform Matrix Elements",
+      "ko": "어파인 변환 행렬 요소",
+      "sourceHash": "9e168c6254698be0376ba3500476532956c39c64164c19ded3c4f78ea8dae0da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:affine-transform-matrix-elements:0018:0001",
+      "source": "[var a: Double](vimage_affinetransform_double/a.md)",
+      "ko": "[var a: Double](vimage_affinetransform_double/a.md)",
+      "sourceHash": "e629bd572eef6232c275da9f68568ddc3cf104a19d6cc048c35b128496727838",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:affine-transform-matrix-elements:0019:0001",
+      "source": "The entry at position `[1,1]` in the matrix.",
+      "ko": "행렬에서 `[1,1]` 위치에 있는 항목입니다.",
+      "sourceHash": "e35d8d5d542bb4b0261078e39c184e64d4eba11c93ea5011e49baa4ad405cba4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:affine-transform-matrix-elements:0020:0001",
+      "source": "[var b: Double](vimage_affinetransform_double/b.md)",
+      "ko": "[var b: Double](vimage_affinetransform_double/b.md)",
+      "sourceHash": "ff0f292faaef38cd359aa0914fc0fd87ee06f9a56a2e7f7dc928315365f52b4e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:affine-transform-matrix-elements:0021:0001",
+      "source": "The entry at position `[1,2]` in the matrix.",
+      "ko": "행렬에서 `[1,2]` 위치에 있는 항목입니다.",
+      "sourceHash": "5ad7564d3c6b19cd93ac4b14ec8a7055bb9b1edfa0d6123214889d20059c64a0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:affine-transform-matrix-elements:0022:0001",
+      "source": "[var c: Double](vimage_affinetransform_double/c.md)",
+      "ko": "[var c: Double](vimage_affinetransform_double/c.md)",
+      "sourceHash": "0f3547709b7935910a2d2448f9f359a874fa232689178ee729614ab703e56c1f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:affine-transform-matrix-elements:0023:0001",
+      "source": "The entry at position `[2,1]` in the matrix.",
+      "ko": "행렬에서 `[2,1]` 위치에 있는 항목입니다.",
+      "sourceHash": "3dd3a513304135c7a9c213160f2c495ccd24e822d41703b3be5ba9d97daddc33",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:affine-transform-matrix-elements:0024:0001",
+      "source": "[var d: Double](vimage_affinetransform_double/d.md)",
+      "ko": "[var d: Double](vimage_affinetransform_double/d.md)",
+      "sourceHash": "70df4a3bf5cf9f356bda48776d0621cbfabd6b841c806497edb73f341d4eb90d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:affine-transform-matrix-elements:0025:0001",
+      "source": "The entry at position `[2,2]` in the matrix.",
+      "ko": "The entry at position `[2,2]` in the matrix.",
+      "sourceHash": "2720c8d5fd0be94ec8032d70e6f09a9be693a8c0f16c26dbb26835646846f297",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:affine-transform-matrix-elements:0026:0001",
+      "source": "[var tx: Double](vimage_affinetransform_double/tx.md)",
+      "ko": "[var tx: Double](vimage_affinetransform_double/tx.md)",
+      "sourceHash": "e08a60aa1af000dcbbbe2fa1eb81a85ff4dcb0667af35a5524443f3c282eff63",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:affine-transform-matrix-elements:0027:0001",
+      "source": "The entry at position `[3,1]` in the matrix.",
+      "ko": "The entry at position `[3,1]` in the matrix.",
+      "sourceHash": "1d9c59688d692d2d2a01755140c820d21d80a07b123f2b381f87046c06a90757",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:affine-transform-matrix-elements:0028:0001",
+      "source": "[var ty: Double](vimage_affinetransform_double/ty.md)",
+      "ko": "[var ty: Double](vimage_affinetransform_double/ty.md)",
+      "sourceHash": "41b063d30b23f512cf9d3604c84e85e4847b67b779db2b581b065fa3de204196",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:affine-transform-matrix-elements:0029:0001",
+      "source": "The entry at position `[3,2]` in the matrix.",
+      "ko": "The entry at position `[3,2]` in the matrix.",
+      "sourceHash": "12414d1d1efed2a9587a113d834e5e29b8d9f10438adadc65756baf5b7bf8b31",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:relationships:0030:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0031:0001",
+      "source": "Conforms To",
+      "ko": "Conforms To",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0001",
+      "source": "[BitwiseCopyable](../Swift/BitwiseCopyable.md)",
+      "ko": "[BitwiseCopyable](../Swift/BitwiseCopyable.md)",
+      "sourceHash": "d9b7e5b67f3eac8ea3e97e986bfddf0caad0dc17c0fe8215d67737774d123fa2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0032:0002",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0033:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[struct vImage_Buffer](vimage_buffer.md)",
+      "ko": "[struct vImage_Buffer](vimage_buffer.md)",
+      "sourceHash": "22cc0d74fbbfdd4730e39fc55196db7be0bc9cfeae9ab130f01bc92bb77055af",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "An image buffer that stores an image’s pixel data, dimensions, and row stride.",
+      "ko": "An image buffer that stores an image’s pixel data, dimensions, and row stride.",
+      "sourceHash": "6fbf836c86219212a651a96c2e177d043e6145635a7c4b12514b54e97a8ed28c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[typealias vImagePixelCount](vimagepixelcount.md)",
+      "ko": "[typealias vImagePixelCount](vimagepixelcount.md)",
+      "sourceHash": "6e4d422700728584a77530ab44fbefecbde8a6dff3e45b88eaa1522114280905",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "A type for the number of pixels.",
+      "ko": "A type for the number of pixels.",
+      "sourceHash": "77baf211fca3008d3757e2c6d7a1949dafb3e7a2cfecf01e91eb8b9b9145db89",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[struct vImage_AffineTransform](vimage_affinetransform.md)",
+      "ko": "[struct vImage_AffineTransform](vimage_affinetransform.md)",
+      "sourceHash": "301c6c50f4c26ce12b94d1eb15ca3818a325a50980babf7240cec265c51c6d52",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "A structure for values that represent an affine transformation.",
+      "ko": "A structure for values that represent an affine transformation.",
+      "sourceHash": "0fc9b8e2eb5855c1ef815d24bb9e69370347c1dfc360096afd8d2355c65ea7c0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[typealias vImage_CGAffineTransform](vimage_cgaffinetransform.md)",
+      "ko": "[typealias vImage_CGAffineTransform](vimage_cgaffinetransform.md)",
+      "sourceHash": "cbe69dfaf7dcfb914d70088a8ea1224305bbce3a95ee4d948106026ac8e4fb9b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "A structure for values that represent a Core Graphics–compatible affine transformation.",
+      "ko": "A structure for values that represent a Core Graphics–compatible affine transformation.",
+      "sourceHash": "f7427b629a50e3445e919d9fb88d4dc8436a1c280312347c4d6e3b7dace8ba46",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[typealias vImage_Error](vimage_error.md)",
+      "ko": "[typealias vImage_Error](vimage_error.md)",
+      "sourceHash": "8ce6d1d2aa11ea319a7ac0325f0656508b2e617dec6fbdf469d0c5f21c3aa4a3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "A type for image errors.",
+      "ko": "A type for image errors.",
+      "sourceHash": "067bc55596b6a2733711050381bb6d096036f561a34c5bbc378adbad62a6424d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[typealias vImage_Flags](vimage_flags.md)",
+      "ko": "[typealias vImage_Flags](vimage_flags.md)",
+      "sourceHash": "f6bb5b03b7e009cae97d0be211f565cfd772f2c3c18a1a58642d574a23b7aa88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "A type for processing options.",
+      "ko": "A type for processing options.",
+      "sourceHash": "2f0d332997ab35350affdcd3c5c975ee6e40bbec7968bb015c6b6a5c45f00f59",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0046:0001",
+      "source": "[typealias GammaFunction](gammafunction.md)",
+      "ko": "[typealias GammaFunction](gammafunction.md)",
+      "sourceHash": "3fcd45f9485c8bfb29b744faa30d0b5b65324cbe26025989fc91ce7e49ff3afa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "A type for a gamma function.",
+      "ko": "A type for a gamma function.",
+      "sourceHash": "19adc84c6cca4ca509e3cc768983f4e0ede1d511fa49da18a0ad243fd0741123",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0048:0001",
+      "source": "[typealias ResamplingFilter](resamplingfilter.md)",
+      "ko": "[typealias ResamplingFilter](resamplingfilter.md)",
+      "sourceHash": "5b5fa3181655cf5233536dd78e14acf34f0e5aba156944985d767502fa02e950",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0049:0001",
+      "source": "A pointer to a resampling filter callback function.",
+      "ko": "A pointer to a resampling filter callback function.",
+      "sourceHash": "918c45a89ba8d3dbd40b22a222274309e725b2914f58d6559efe0936cd75e9b1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0050:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0051:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimage_affinetransform_double)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimage_affinetransform_double)*",
+      "sourceHash": "1606ae33eed535d0624291a1cae5afa5e39c14c819d78e34d8f02c30260d27db",
+      "status": "preserved"
+    }
+  ]
+}

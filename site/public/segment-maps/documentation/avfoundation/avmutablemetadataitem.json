@@ -1,0 +1,589 @@
+{
+  "docId": "documentation/AVFoundation/avmutablemetadataitem.md",
+  "title": "AVMutableMetadataItem",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avmutablemetadataitem",
+  "segments": [
+    {
+      "id": "seg:heading:avmutablemetadataitem:0000:0001",
+      "source": "AVMutableMetadataItem",
+      "ko": "AVMutableMetadataItem",
+      "sourceHash": "40d0ed82a84571a25d20e3165c443be8a504b346d944d9496ad7f5b91ed1a497",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmutablemetadataitem:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avmutablemetadataitem:0002:0001",
+      "source": "A mutable metadata item for an audiovisual asset or for one of its tracks.",
+      "ko": "오디오-비디오 자산 또는 해당 트랙 중 하나에 대한 가변 메타데이터 항목입니다.",
+      "sourceHash": "3456bd485e6410186527d3a631c210bcc6ad6368ca1a4747678777fdac145674",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avmutablemetadataitem:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablemetadataitem:0004:0001",
+      "source": "iOS 4.0+",
+      "ko": "iOS 4.0+",
+      "sourceHash": "0c0ed66d9f4133c5a709449f69be4759ac3625b24734b8390d2f7e23b33c3545",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablemetadataitem:0004:0002",
+      "source": "iPadOS 4.0+",
+      "ko": "iPadOS 4.0+",
+      "sourceHash": "dfe042d2e3f40a7e917ced53f052a0d5f5ba8d69dfa62a3b59fb59de8ef49851",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablemetadataitem:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablemetadataitem:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablemetadataitem:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablemetadataitem:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avmutablemetadataitem:0004:0007",
+      "source": "watchOS 1.0+",
+      "ko": "watchOS 1.0+",
+      "sourceHash": "2dbee682371896bee6965d157efc729a43696cec8b6451157482f77264ffbb65",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass AVMutableMetadataItem\n```",
+      "ko": "```swift\nclass AVMutableMetadataItem\n```",
+      "sourceHash": "c6ebb513d45088fe8865baf13697ea6126e19e44f8e511639937803664f9cf9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "You can initialize a mutable metadata item from an existing [`AVMetadataItem`](avmetadataitem.md) object or with a one or more of the basic properties of a metadata item: a key, a key space, a locale, and a value.",
+      "ko": "기존 [`AVMetadataItem`](avmetadataitem.md) 객체를 사용하거나, 키, 키 스페이스, 로케일, 값과 같은 메타데이터 항목의 기본 속성 하나 이상으로 가변 메타데이터 항목을 초기화할 수 있습니다.",
+      "sourceHash": "05d358f9b892b66667c4cbfe68c5a11e458e667f0c63ba7ca8b5155b83417e0e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0009:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:identifying-metadata-items:0010:0001",
+      "source": "Identifying metadata items",
+      "ko": "메타데이터 항목 식별",
+      "sourceHash": "2869d8b34ce6e5161754aa2701712741b81ce4decb64d5ec4bc872b9f83577a5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:identifying-metadata-items:0011:0001",
+      "source": "[var identifier: AVMetadataIdentifier?](avmutablemetadataitem/identifier.md)",
+      "ko": "[var identifier: AVMetadataIdentifier?](avmutablemetadataitem/identifier.md)",
+      "sourceHash": "a5e0d1d222f9bc221b10d83024a91e4767b52e1cc10092eb0bd5abe335c509f9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:identifying-metadata-items:0012:0001",
+      "source": "Indicates the identifier of the metadata item.",
+      "ko": "메타데이터 항목의 식별자를 나타냅니다.",
+      "sourceHash": "6d19bda85424fc44646eedacd0bed54a6cd89f9d6ca878dbb7160846b56ccdc3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:accessing-keys-and-key-spaces:0013:0001",
+      "source": "Accessing keys and key spaces",
+      "ko": "키 및 키 스페이스 접근",
+      "sourceHash": "8afba8fc5a14c09e5f6ec3bebf4554ed18a96519f48e278eb7bedf96041ef1db",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-keys-and-key-spaces:0014:0001",
+      "source": "[var key: (any NSCopying & NSObjectProtocol)?](avmutablemetadataitem/key.md)",
+      "ko": "[var key: (any NSCopying & NSObjectProtocol)?](avmutablemetadataitem/key.md)",
+      "sourceHash": "f76ff5848af4c549dc26612e44c9c745542b33b5d3a598d278225b0ad28a3913",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-keys-and-key-spaces:0015:0001",
+      "source": "The key for a mutable metadata item.",
+      "ko": "가변 메타데이터 항목의 키입니다.",
+      "sourceHash": "87758ae0c17c516ba967f0172bc0860edc76dae0cb35a039c6227815bcef3b77",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-keys-and-key-spaces:0016:0001",
+      "source": "[var keySpace: AVMetadataKeySpace?](avmutablemetadataitem/keyspace.md)",
+      "ko": "[var keySpace: AVMetadataKeySpace?](avmutablemetadataitem/keyspace.md)",
+      "sourceHash": "6832be5a441d11ae0b9fbd37c4a0990c4dc2beb0d490564486f4fd70f16e2dd5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-keys-and-key-spaces:0017:0001",
+      "source": "The key space of the metadata item’s key.",
+      "ko": "메타데이터 항목 키의 키 스페이스입니다.",
+      "sourceHash": "39c8c79bd1f6c1e0938ab5d3934271cde6dcd422e91e869f387942963eb6fc82",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:accessing-values:0018:0001",
+      "source": "Accessing values",
+      "ko": "값 접근",
+      "sourceHash": "5d986cf2e2b0fa2ad725a1c78b223e06f3f235d324d67d607cf5adbbe4a37a83",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-values:0019:0001",
+      "source": "[var value: (any NSCopying & NSObjectProtocol)?](avmutablemetadataitem/value.md)",
+      "ko": "[var value: (any NSCopying & NSObjectProtocol)?](avmutablemetadataitem/value.md)",
+      "sourceHash": "98ce1a23b68bf9b2a8d463a15c056b33d80b88983efadc307d4c9adb3531e80c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0020:0001",
+      "source": "The value for the mutable metadata item.",
+      "ko": "가변 메타데이터 항목의 값입니다.",
+      "sourceHash": "93b0f2e43abd84b5e2a5899e3614fd4b0b68ffb5443af797e9ea672f65f62cde",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-values:0021:0001",
+      "source": "[var extraAttributes: [AVMetadataExtraAttributeKey : Any]?](avmutablemetadataitem/extraattributes.md)",
+      "ko": "[var extraAttributes: [AVMetadataExtraAttributeKey : Any]?](avmutablemetadataitem/extraattributes.md)",
+      "sourceHash": "1bb477a89f9581f018772766eb02cbe023939dda1ec014333893ae96fb2f9d07",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0022:0001",
+      "source": "A dictionary of additional attributes for a metadata item.",
+      "ko": "메타데이터 항목의 추가 특성 딕셔너리입니다.",
+      "sourceHash": "a392def5b62f5c305efddf6ab89b68ceffd0223f0a1103eb34161e349aa48571",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-values:0023:0001",
+      "source": "[var dataType: String?](avmutablemetadataitem/datatype.md)",
+      "ko": "[var dataType: String?](avmutablemetadataitem/datatype.md)",
+      "sourceHash": "01420c6fe09f2b06357610125f38f3f8bcf573f76cd19d6d0b2c6681ef862055",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0024:0001",
+      "source": "The data type of the metadata item’s value.",
+      "ko": "메타데이터 항목 값의 데이터 유형입니다.",
+      "sourceHash": "fe285867eb8aebdebeacebfbcd70781ff8c5bc3c53fc6d5d65121b3261c7b745",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-values:0025:0001",
+      "source": "[var stringValue: String?](avmutablemetadataitem/stringvalue.md)",
+      "ko": "[var stringValue: String?](avmutablemetadataitem/stringvalue.md)",
+      "sourceHash": "2bba93e5dab43c6cfe0d35f7bdb7e4f275bb2e1873417bafef5e6483aabe064e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0026:0001",
+      "source": "The value of the metadata item as a string.",
+      "ko": "메타데이터 항목의 문자열 값입니다.",
+      "sourceHash": "285077bc61fd519053bd8a4a82c0f1c8b8662ddab879996ab1104e713164fe36",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-values:0027:0001",
+      "source": "[var numberValue: NSNumber?](avmutablemetadataitem/numbervalue.md)",
+      "ko": "[var numberValue: NSNumber?](avmutablemetadataitem/numbervalue.md)",
+      "sourceHash": "85f97da72b06d4cde0b6196ed7c538c5c0c9295e4a673e06f4d190b978cd5255",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0028:0001",
+      "source": "The value of the metadata item as a number.",
+      "ko": "메타데이터 항목의 숫자 값입니다.",
+      "sourceHash": "ebdb7fb9340f9b1f718de7e70006480fa871dab2aa7f7a16b153742d5ef9eb59",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-values:0029:0001",
+      "source": "[var dateValue: Date?](avmutablemetadataitem/datevalue.md)",
+      "ko": "[var dateValue: Date?](avmutablemetadataitem/datevalue.md)",
+      "sourceHash": "75861ea44cb11fc532ec24bace90ecce929ea1d1c37632d7f9497e301a956a7d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0030:0001",
+      "source": "The value of the metadata item as a date.",
+      "ko": "메타데이터 항목의 날짜 값입니다.",
+      "sourceHash": "6e99f68365c692d5cef93b41634538b6558d628110cb0c37266d6fbce3ae7ec3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-values:0031:0001",
+      "source": "[var dataValue: Data?](avmutablemetadataitem/datavalue.md)",
+      "ko": "[var dataValue: Data?](avmutablemetadataitem/datavalue.md)",
+      "sourceHash": "3ebb437ba635dfb2d1081cf52ad3e6a88076701e32e86b09a75849eaf2c1c74f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-values:0032:0001",
+      "source": "The value of the metadata item as a data value.",
+      "ko": "메타데이터 항목의 데이터 값입니다.",
+      "sourceHash": "bbe3803c7999efb9e8d5a45e0fa69ff26c91a27b13396f853a04688592f9c785",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:accessing-timing:0033:0001",
+      "source": "Accessing timing",
+      "ko": "타이밍 접근",
+      "sourceHash": "0ce485618bfe205c2f1532a8561d5d2c6a4a01854a0befd255f0bb637babc45c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-timing:0034:0001",
+      "source": "[var time: CMTime](avmutablemetadataitem/time.md)",
+      "ko": "[var time: CMTime](avmutablemetadataitem/time.md)",
+      "sourceHash": "3856661e6bac23ceefb0bae7d03e64f31b74ca100a454c5a68cb8261084ae3f3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-timing:0035:0001",
+      "source": "The timestamp for a mutable metadata item.",
+      "ko": "가변 메타데이터 항목의 타임스탬프입니다.",
+      "sourceHash": "1395046018d4a92425f55fa7fc3f17acfe9a683168db46e0c20f0150a7247425",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-timing:0036:0001",
+      "source": "[var startDate: Date?](avmutablemetadataitem/startdate.md)",
+      "ko": "[var startDate: Date?](avmutablemetadataitem/startdate.md)",
+      "sourceHash": "71a6998e557a9f65d68a721c0193fd949a480c242a8ed47fe70622fcfca5859d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-timing:0037:0001",
+      "source": "The start date of the timed metadata.",
+      "ko": "시간 지정 메타데이터의 시작 날짜입니다.",
+      "sourceHash": "2d4ee41d4531a9ae40b2dee7509089f760878e8bd3324d07a0e883f81f066d4c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-timing:0038:0001",
+      "source": "[var duration: CMTime](avmutablemetadataitem/duration.md)",
+      "ko": "[var duration: CMTime](avmutablemetadataitem/duration.md)",
+      "sourceHash": "784bf4c607272d6169e106f7e42edfc7bb587309116b9d1165269efe0c7d283b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-timing:0039:0001",
+      "source": "The duration of a mutable metadata item.",
+      "ko": "가변 메타데이터 항목의 지속 시간입니다.",
+      "sourceHash": "01905035f61f3430ec4a100a115ddf096751e190af8a4460037c113260fec727",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:accessing-language-support:0040:0001",
+      "source": "Accessing language support",
+      "ko": "언어 지원 접근",
+      "sourceHash": "43336b2e0c312cc404d002965bea4ac0268fedc8cda3ea489c0169ce7ad55141",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-language-support:0041:0001",
+      "source": "[var locale: Locale?](avmutablemetadataitem/locale.md)",
+      "ko": "[var locale: Locale?](avmutablemetadataitem/locale.md)",
+      "sourceHash": "3e00babf1378fd2634ef8ca02ae5074291762739eafa89c93aa8c5296895ed50",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-language-support:0042:0001",
+      "source": "The locale for a mutable metadata item.",
+      "ko": "가변 메타데이터 항목의 로케일입니다.",
+      "sourceHash": "ba9ace2ba244b7faea2fe64a11cd874805b4827f595bc90cb0a2048bf0c99c7f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-language-support:0043:0001",
+      "source": "[var extendedLanguageTag: String?](avmutablemetadataitem/extendedlanguagetag.md)",
+      "ko": "[var extendedLanguageTag: String?](avmutablemetadataitem/extendedlanguagetag.md)",
+      "sourceHash": "58c22c7d60dfaac83e14eeb3e0a427ecb289a1d839c771a8b5581ff43c18724f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-language-support:0044:0001",
+      "source": "The IETF BCP 47 (RFC 4646) language identifier of the metadata item.",
+      "ko": "메타데이터 항목의 IETF BCP 47(RFC 4646) 언어 식별자입니다.",
+      "sourceHash": "e55334b0cfcaeeee224fd8d85746d33f317bcd545512104c9ab141ba666c3b99",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0045:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0046:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0047:0001",
+      "source": "[AVMetadataItem](avmetadataitem.md)",
+      "ko": "[AVMetadataItem](avmetadataitem.md)",
+      "sourceHash": "a124e8618b9233a61b447abbc5e262cc26b3459d8f8dcfb3a51dbda4c55c1b6c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0048:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0001",
+      "source": "[AVAsynchronousKeyValueLoading](avasynchronouskeyvalueloading.md)",
+      "ko": "[AVAsynchronousKeyValueLoading](avasynchronouskeyvalueloading.md)",
+      "sourceHash": "5c4909448479b1cc08624af0e080cb182bc6d716778ffe644a834aee2c38ec9f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0002",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0003",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0004",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0005",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0006",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0007",
+      "source": "[NSCopying](../Foundation/NSCopying.md)",
+      "ko": "[NSCopying](../Foundation/NSCopying.md)",
+      "sourceHash": "a3e3914d750a60e4b250a0090cdf594ea4328ed30cecb20ea43c55afb46b9005",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0008",
+      "source": "[NSMutableCopying](../Foundation/NSMutableCopying.md)",
+      "ko": "[NSMutableCopying](../Foundation/NSMutableCopying.md)",
+      "sourceHash": "5c4674cdc6153938efa09fc1e7068ef3205a681ad3a8ef20068e1460aa0d5b8c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0049:0009",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0050:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0051:0001",
+      "source": "[Retrieving media metadata](retrieving-media-metadata.md)",
+      "ko": "[Retrieving media metadata](retrieving-media-metadata.md)",
+      "sourceHash": "8b45a7a3b3434118d748de855052a6f3b50770b05a2136bd5b83dbd6fbde1aa9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0052:0001",
+      "source": "Load descriptive metadata for media assets and their tracks.",
+      "ko": "미디어 자산과 해당 트랙의 설명 메타데이터를 로드합니다.",
+      "sourceHash": "c405d7edd605bdab7667590ea76994bda9b3a06842835918c7755fbdd3b77bd6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0053:0001",
+      "source": "[class AVMetadataItem](avmetadataitem.md)",
+      "ko": "[class AVMetadataItem](avmetadataitem.md)",
+      "sourceHash": "91d50c596e9f1e23beb0a49352b39d437883d3d0b798753e7724a67f265dcfc5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0054:0001",
+      "source": "A metadata item for an audiovisual asset or one of its tracks.",
+      "ko": "오디오-비디오 자산 또는 해당 트랙 중 하나에 대한 메타데이터 항목입니다.",
+      "sourceHash": "66a0bb474518924b1257975c023843d5fc86e30eb6e4b06654202260b58bda87",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0055:0001",
+      "source": "[struct AVMetadataIdentifier](avmetadataidentifier.md)",
+      "ko": "[struct AVMetadataIdentifier](avmetadataidentifier.md)",
+      "sourceHash": "e8ed1ac7e6425e9af72db71ab83e495f87eb23a8afea59c9ca9bea3e83177740",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0056:0001",
+      "source": "A structure that defines identifiers for metadata formats.",
+      "ko": "메타데이터 형식을 정의하는 구조체입니다.",
+      "sourceHash": "caa547bde6c49535b5b0fb5c03648429a0ef5f4e633a6341add9cda5422bda6c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0057:0001",
+      "source": "[struct AVMetadataKey](avmetadatakey.md)",
+      "ko": "[struct AVMetadataKey](avmetadatakey.md)",
+      "sourceHash": "212868f5c8d431b1e9ef3b321508ef7f5367b1bb8c901b22cac8f8ac49110c89",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0058:0001",
+      "source": "A structure that defines a metadata key.",
+      "ko": "메타데이터 키를 정의하는 구조체입니다.",
+      "sourceHash": "27e73dedb1462f153790d8d332e3232f5869c0afb7e8b36d6873c939e15fb4e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0059:0001",
+      "source": "[struct AVMetadataKeySpace](avmetadatakeyspace.md)",
+      "ko": "[struct AVMetadataKeySpace](avmetadatakeyspace.md)",
+      "sourceHash": "534d84fbe819e6a7a0416834e9198c82364dd2215aef67010a4746b3da55285d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0060:0001",
+      "source": "A structure that defines a metadata key space.",
+      "ko": "A structure that defines a metadata key space.",
+      "sourceHash": "8e9b4bc4905f9cd8364ef7c74da4c61ed97e68f4e300d2843e7528517b987dde",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0061:0001",
+      "source": "[struct AVMetadataExtraAttributeKey](avmetadataextraattributekey.md)",
+      "ko": "[struct AVMetadataExtraAttributeKey](avmetadataextraattributekey.md)",
+      "sourceHash": "b4cb9ba646aa0cfccf3b1aed5685ffa502cd877a1cda9baf4bc1c28ad18a45e9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0062:0001",
+      "source": "A structure that defines keys for extra metadata attributes.",
+      "ko": "A structure that defines keys for extra metadata attributes.",
+      "sourceHash": "c6e7f461381bde9e9fc342cb1d3c6d5d9fa86645ff1c4ebebd5585d86d957338",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0063:0001",
+      "source": "[struct AVMetadataFormat](avmetadataformat.md)",
+      "ko": "[struct AVMetadataFormat](avmetadataformat.md)",
+      "sourceHash": "a7eaeb396dce0db9b31c13b640475717056ad63e8b4c4a8d6651726ae5f8bd7a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0064:0001",
+      "source": "A structure that defines metadata formats.",
+      "ko": "A structure that defines metadata formats.",
+      "sourceHash": "901cfcbb23e030116954072fdf657c1fa7363ebab7429634acf36e58a7d2eb8d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0065:0001",
+      "source": "[class AVMetadataItemFilter](avmetadataitemfilter.md)",
+      "ko": "[class AVMetadataItemFilter](avmetadataitemfilter.md)",
+      "sourceHash": "3eb5b97e777be3416679e9c50ab8dd2034a8065324864547a52a5823bc4aaef4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0066:0001",
+      "source": "An object that filters selected information from a metadata item.",
+      "ko": "An object that filters selected information from a metadata item.",
+      "sourceHash": "b9ea010b089461e47a7255e314f0ef60a39c09bfd04bfa5393ddcb8125504a34",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0067:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0068:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutablemetadataitem)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avmutablemetadataitem)*",
+      "sourceHash": "f204accc9946409798b004ab3f0a6c53ae3d8daf49efc4cf1e168baec069f4cf",
+      "status": "preserved"
+    }
+  ]
+}

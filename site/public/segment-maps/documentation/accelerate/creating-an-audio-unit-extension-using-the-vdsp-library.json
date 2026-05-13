@@ -1,0 +1,295 @@
+{
+  "docId": "documentation/Accelerate/creating-an-audio-unit-extension-using-the-vdsp-library.md",
+  "title": "Creating an audio unit extension using the vDSP library",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/creating-an-audio-unit-extension-using-the-vdsp-library",
+  "segments": [
+    {
+      "id": "seg:heading:creating-an-audio-unit-extension-using-the-vdsp-library:0000:0001",
+      "source": "Creating an audio unit extension using the vDSP library",
+      "ko": "Creating an audio unit extension using the vDSP library",
+      "sourceHash": "bbbae2c169f03eec678a1ec3b3f1ffd1ecdf44ffdbb21dac08ba92f28eebed48",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-an-audio-unit-extension-using-the-vdsp-library:0001:0001",
+      "source": "**Framework**: Accelerate",
+      "ko": "**Framework**: Accelerate",
+      "sourceHash": "29a5b8860afd67d96c79fe2585ca71addeb9f39a3fe9698cbaba2a7451def11b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-an-audio-unit-extension-using-the-vdsp-library:0002:0001",
+      "source": "Add biquadratic filter audio-effect processing to apps like Logic Pro X and GarageBand with the Accelerate framework.",
+      "ko": "Add biquadratic filter audio-effect processing to apps like Logic Pro X and GarageBand with the Accelerate framework.",
+      "sourceHash": "0135e5ed0896735fcc6649ce5b3964a054c89209ccec1a21185fee05550aa481",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-an-audio-unit-extension-using-the-vdsp-library:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:creating-an-audio-unit-extension-using-the-vdsp-library:0004:0001",
+      "source": "macOS 14.0+",
+      "ko": "macOS 14.0+",
+      "sourceHash": "c037401748a572da79aedb55d7cb53c26eaac4007d481a2f3f8a76b42f357acb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:creating-an-audio-unit-extension-using-the-vdsp-library:0004:0002",
+      "source": "Xcode 15.1+",
+      "ko": "Xcode 15.1+",
+      "sourceHash": "5ea1cfabb54c21051aca1847d2cd873c99a74c985b4647d1e388f90797858731",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0005:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0001",
+      "source": "An audio unit extension provides a way to create or modify audio and MIDI data in an iOS or macOS app that uses sound — including music-production apps.",
+      "ko": "An audio unit extension provides a way to create or modify audio and MIDI data in an iOS or macOS app that uses sound — including music-production apps.",
+      "sourceHash": "58dc5e01a5e8901b0d580e4ac3873c96a4d9da042a6bc72a09e78bafe21e63ca",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0002",
+      "source": "It contains the audio unit and, optionally, a user interface to control the audio unit.",
+      "ko": "It contains the audio unit and, optionally, a user interface to control the audio unit.",
+      "sourceHash": "fe1401472fc9d41630e5efb841d906e68f9aa3e656ad02cafe3d26b294eb00b1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0003",
+      "source": "The audio unit is a custom plug-in where you generate audio or implement an audio-processing algorithm.",
+      "ko": "The audio unit is a custom plug-in where you generate audio or implement an audio-processing algorithm.",
+      "sourceHash": "0a3d938a0a549dc8065edd1a8b729a7d155c0d1fa4fcc0cf6e2eb711744cbcc1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0001",
+      "source": "You can shape the output of an audio signal, such as by boosting or cutting the bass or treble of a music track, with the single-channel and multichannel biquadratic filters that the vDSP library provides.",
+      "ko": "You can shape the output of an audio signal, such as by boosting or cutting the bass or treble of a music track, with the single-channel and multichannel biquadratic filters that the vDSP library provides.",
+      "sourceHash": "552e8bea5a277ed3af0a9719cf249452f3f9e7a23ed98f964d85594fcc2feaa8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "The image below shows an example of a magnitude response curve that boosts low frequencies:",
+      "ko": "[`primaryConstituentDeviceSwitchingBehavior`](avcapturedevice/primaryconstituentdeviceswitchingbehavior-swift.property.md) 속성 값을 [`AVCaptureDevice.PrimaryConstituentDeviceSwitchingBehavior.restricted`](avcapturedevice/primaryconstituentdeviceswitchingbehavior-swift.enum/restricted.md)로 설정할 때, fallback 카메라 선택을 허용하는 조건을 제어하려면 이 상수를 사용합니다.",
+      "sourceHash": "b638acd4ee463e556de5b88c2376ee43ad6cf8f68777b09f597fd44678955ce9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "![A screenshot of a line chart that represents the magnitude response curve of a peaking EQ filter.](https://docs-assets.developer.apple.com/published/665237f208ae924997047d07fb1ae875/vDSP_Audio_Unit.png)",
+      "ko": "하나 이상의 조건이 활성화되어 트리거되면 대체 카메라 전환은 노출과 초점이 안정화될 때까지 대기한 뒤 primary constituent device로 어떤 카메라를 사용할지 결정합니다.",
+      "sourceHash": "d41a15a7160b30519ff34f706314abe596fadfe7e5a6afc924d401a92b4edd1a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "This sample code project is a peaking EQ filter implemented with a vDSP biquadratic filter that’s delivered as an audio unit extension.",
+      "ko": "[`videoZoomChanged`](avcapturedevice/primaryconstituentdevicerestrictedswitchingbehaviorconditions-swift.struct/videozoomchanged.md)가 제한된 전환 동작 조건에 포함되지 않은 경우에도 [`AVCaptureDevice.PrimaryConstituentDeviceSwitchingBehavior.restricted`](avcapturedevice/primaryconstituentdeviceswitchingbehavior-swift.enum/restricted.md)는 비디오 줌 팩터 변경으로 카메라가 [`activePrimaryConstituent`](avcapturedevice/activeprimaryconstituent.md)로 선택되거나 선택 대상에서 제외되는 경우 카메라 선택을 허용합니다.",
+      "sourceHash": "e2a88c7f58556ba72cf3a6ee9f2d2e64eae01a7a5ccc963477be596b3023b10e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0002",
+      "source": "You can use the code in this project as the basis for writing audio units that use the [`vDSP`](vdsp.md) library.",
+      "ko": "You can use the code in this project as the basis for writing audio units that use the [`vDSP`](vdsp.md) library.",
+      "sourceHash": "891cfe5ffd0d4e401f94d131204a17d0e5be4808c0ba1b52f9f95c65d829858a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0001",
+      "source": "This project is based on the Audio Unit Extension App Xcode template and uses the *Effect* audio unit type.",
+      "ko": "비디오 줌 팩터가 활성 primary constituent device의 전환 임계 줌 팩터보다 낮아지면 시스템은 요청된 줌 팩터를 충족하기 위해 다른 카메라를 선택합니다.",
+      "sourceHash": "37deba63e66166ee1b7eeb7e16cfed08c0b889dd8076a014f2a4be88f3dc5da2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0002",
+      "source": "This type of audio unit accepts an audio input and produces an audio output.",
+      "ko": "This type of audio unit accepts an audio input and produces an audio output.",
+      "sourceHash": "55d1c0f073bf9a330742eee3957d8aaed6aa6512e015f030d19859968119c3a5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0003",
+      "source": "The template provides an audio pass-through effect with a signal parameter to adjust the gain of the audio that passes through the audio unit.",
+      "ko": "The template provides an audio pass-through effect with a signal parameter to adjust the gain of the audio that passes through the audio unit.",
+      "sourceHash": "2fa09504a324b3517d1879c8de9b49def357f6a30305114554a135fa401aed23",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0012:0001",
+      "source": "For more information about creating audio unit extensions, see [`Creating an audio unit extension`](https://developer.apple.com/documentation/AVFAudio/creating-an-audio-unit-extension).",
+      "ko": "비디오 줌 팩터가 증가해 카메라의 전환 임계 줌 팩터를 넘으면 이 카메라는 [`activePrimaryConstituent`](avcapturedevice/activeprimaryconstituent.md)로 설정할 수 있는 자격을 갖습니다.",
+      "sourceHash": "e7f16ceaaa977c76953f679e545c70b0b4a670c312e2470f882b57d6452aa75a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:add-a-new-parameter-address:0013:0001",
+      "source": "Add a New Parameter Address",
+      "ko": "Add a New Parameter Address",
+      "sourceHash": "32ffd729272c84c24889a6ad903146a791e0f6689e5bc96941cc34bc287c7d04",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:add-a-new-parameter-address:0014:0001",
+      "source": "The peaking EQ filter requires three parameters: the center frequency, the Q value (which controls the shape of the response curve), and the decibel gain.",
+      "ko": "The peaking EQ filter requires three parameters: the center frequency, the Q value (which controls the shape of the response curve), and the decibel gain.",
+      "sourceHash": "d6c166d23964e33e33554b13ee8cec5dc13211a2fbd26c41fe38df3bd4c32d12",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:add-a-new-parameter-address:0015:0001",
+      "source": "The code below adds enumeration cases for the parameters to the `vDSP_audio_unitExtensionParameterAddresses.h` header:",
+      "ko": "The code below adds enumeration cases for the parameters to the `vDSP_audio_unitExtensionParameterAddresses.h` header:",
+      "sourceHash": "2a79325f65e9160f9317047282df301a11f68af55d785f2099582c885aa8ddd0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:add-a-new-parameter-address:0016:0001",
+      "source": "```objective-c\ntypedef NS_ENUM(AUParameterAddress, vDSP_audio_unitExtensionParameterAddress) {\n    frequency = 0,\n    Q = 1,\n    dbGain = 2\n};\n```",
+      "ko": "```objective-c\ntypedef NS_ENUM(AUParameterAddress, vDSP_audio_unitExtensionParameterAddress) {\n    frequency = 0,\n    Q = 1,\n    dbGain = 2\n};\n```",
+      "sourceHash": "3f35f4fe030d0de8506ec6ff263e6b53b02ff09e9058749908fb182968b96fdb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:add-a-new-parameter-address:0017:0001",
+      "source": "To allow the host app to interact with the parameters, the sample code project describes their default value, value range, name, and identifier in `Parameters.swift`.",
+      "ko": "To allow the host app to interact with the parameters, the sample code project describes their default value, value range, name, and identifier in `Parameters.swift`.",
+      "sourceHash": "b8416bf76c2c48f62db6a258505eda5d98f450e89463b9084cf39e4a2e559d0f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:add-a-new-parameter-address:0017:0002",
+      "source": "The identifier value you specify is what the audio unit uses to reference the parameter from the host app.",
+      "ko": "The identifier value you specify is what the audio unit uses to reference the parameter from the host app.",
+      "sourceHash": "a4c681e0a89613b6c855bf3395ff8ad62d54f9bf16a8663a6c69aa5794e1e483",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:add-a-new-parameter-address:0018:0001",
+      "source": "```swift\nParameterSpec(\n    address: .frequency,\n    identifier: \"frequency\",\n    name: \"Frequency\",\n    units: .hertz,\n    valueRange: 20 ... 20_000,\n    defaultValue: 100.0\n)\n\nParameterSpec(\n    address: .Q,\n    identifier: \"Q\",\n    name: \"Q\",\n    units: .generic,\n    valueRange: 0.1 ... 25,\n    defaultValue: 1\n)\n\nParameterSpec(\n    address: .dbGain,\n    identifier: \"dbGain\",\n    name: \"Decibel Gain\",\n    units: .linearGain,\n    valueRange: -50 ... 50,\n    defaultValue: 15\n)\n```",
+      "ko": "```swift\nParameterSpec(\n    address: .frequency,\n    identifier: \"frequency\",\n    name: \"Frequency\",\n    units: .hertz,\n    valueRange: 20 ... 20_000,\n    defaultValue: 100.0\n)\n\nParameterSpec(\n    address: .Q,\n    identifier: \"Q\",\n    name: \"Q\",\n    units: .generic,\n    valueRange: 0.1 ... 25,\n    defaultValue: 1\n)\n\nParameterSpec(\n    address: .dbGain,\n    identifier: \"dbGain\",\n    name: \"Decibel Gain\",\n    units: .linearGain,\n    valueRange: -50 ... 50,\n    defaultValue: 15\n)\n```",
+      "sourceHash": "7ea79aa2db1ddca16f02d5fabecb0c1398c8f59dea313154f77df0853450a6f0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:add-a-new-parameter-address:0019:0001",
+      "source": "To expose each parameter for digital signal processing (DSP), the code below adds each custom member variable to the `setParameter` and `getParameter` functions:",
+      "ko": "To expose each parameter for digital signal processing (DSP), the code below adds each custom member variable to the `setParameter` and `getParameter` functions:",
+      "sourceHash": "072d084c230e33a9f8d55077ea08d88954292a41c1f3a161b42023eda8f63ea7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:add-a-new-parameter-address:0020:0001",
+      "source": "```objective-c\nvoid setParameter(AUParameterAddress address, AUValue value) {\n    switch (address) {\n        case vDSP_audio_unitExtensionParameterAddress::frequency:\n            frequency = value;\n            break;\n        case vDSP_audio_unitExtensionParameterAddress::Q:\n            Q = value;\n            break;\n        case vDSP_audio_unitExtensionParameterAddress::dbGain:\n            dbGain = value;\n            break;\n    }\n}\n\nAUValue getParameter(AUParameterAddress address) {\n    // Return the goal. It's not thread safe to return the ramping value.\n    \n    switch (address) {\n        case vDSP_audio_unitExtensionParameterAddress::frequency:\n            return (AUValue)frequency;\n        case vDSP_audio_unitExtensionParameterAddress::Q:\n            return (AUValue)Q;\n        case vDSP_audio_unitExtensionParameterAddress::dbGain:\n            return (AUValue)dbGain;\n        default: return 0.f;\n    }\n}\n```",
+      "ko": "```objective-c\nvoid setParameter(AUParameterAddress address, AUValue value) {\n    switch (address) {\n        case vDSP_audio_unitExtensionParameterAddress::frequency:\n            frequency = value;\n            break;\n        case vDSP_audio_unitExtensionParameterAddress::Q:\n            Q = value;\n            break;\n        case vDSP_audio_unitExtensionParameterAddress::dbGain:\n            dbGain = value;\n            break;\n    }\n}\n\nAUValue getParameter(AUParameterAddress address) {\n    // Return the goal. It's not thread safe to return the ramping value.\n    \n    switch (address) {\n        case vDSP_audio_unitExtensionParameterAddress::frequency:\n            return (AUValue)frequency;\n        case vDSP_audio_unitExtensionParameterAddress::Q:\n            return (AUValue)Q;\n        case vDSP_audio_unitExtensionParameterAddress::dbGain:\n            return (AUValue)dbGain;\n        default: return 0.f;\n    }\n}\n```",
+      "sourceHash": "368c9fbbc060ac35ddfa8069d5046ecccb12703f7c6364e6e2a789f12fb9b44d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:implement-the-biquadratic-filter:0021:0001",
+      "source": "Implement the Biquadratic Filter",
+      "ko": "Implement the Biquadratic Filter",
+      "sourceHash": "5ef0da1d5d137e49564921db9ca7300de0a50c1f204953e6cf86ef13cacb3a8b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:implement-the-biquadratic-filter:0022:0001",
+      "source": "The audio unit extension applies a peaking EQ filter with the [`vDSP_biquad_Setup`](vdsp_biquad_setup.md) filter.",
+      "ko": "The audio unit extension applies a peaking EQ filter with the [`vDSP_biquad_Setup`](vdsp_biquad_setup.md) filter.",
+      "sourceHash": "458a2c753c79a7fbb36a49d7dd754b977062ffe7987e884053e6e315fdaa9a08",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:implement-the-biquadratic-filter:0022:0002",
+      "source": "For more information about using biquadratic filters, see [`Applying biquadratic filters to a music loop`](applying-biquadratic-filters-to-a-music-loop.md).",
+      "ko": "For more information about using biquadratic filters, see [`Applying biquadratic filters to a music loop`](applying-biquadratic-filters-to-a-music-loop.md).",
+      "sourceHash": "03439ec0ccf55960b3953f885002229934c8e77f9556299bd4ee7c22f77a5ddc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:implement-the-biquadratic-filter:0023:0001",
+      "source": "The `vDSP_audio_unitExtensionDSPKernel` class provides the plug-in’s DSP logic, and is written in C++ to ensure real-time safety.",
+      "ko": "The `vDSP_audio_unitExtensionDSPKernel` class provides the plug-in’s DSP logic, and is written in C++ to ensure real-time safety.",
+      "sourceHash": "7395357ff128f5128420e987d962c4ef489c7cd7a39ecbf8163d5d508a7c7f95",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:implement-the-biquadratic-filter:0023:0002",
+      "source": "The code below initializes the DSP kernel by creating a vector of biquadratic filters with default, pass-though coefficients:",
+      "ko": "The code below initializes the DSP kernel by creating a vector of biquadratic filters with default, pass-though coefficients:",
+      "sourceHash": "f8830ad3c1fae616ce9c42ce40a0d6abdd6959da7717cf6bbbf5553bd4420485",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:implement-the-biquadratic-filter:0024:0001",
+      "source": "```objective-c\nvoid initialize(int inputChannelCount, int outputChannelCount, double inSampleRate) {\n    mSampleRate = inSampleRate;\n\n    // Default coefficients.\n    double coefficients[5] = {1.0, 0.0, 0.0, 1.0, 0.0};\n    \n    for (int i = 0; i < inputChannelCount; i++) {\n        \n        biquads.push_back((Biquad){\n            .setup = vDSP_biquad_CreateSetup(coefficients, 1)\n        });\n        \n        for (int j = 0; j < 4; j++) {\n            biquads[i].delay[j] = 0.0;\n        }\n    }\n}\n```",
+      "ko": "```objective-c\nvoid initialize(int inputChannelCount, int outputChannelCount, double inSampleRate) {\n    mSampleRate = inSampleRate;\n\n    // Default coefficients.\n    double coefficients[5] = {1.0, 0.0, 0.0, 1.0, 0.0};\n    \n    for (int i = 0; i < inputChannelCount; i++) {\n        \n        biquads.push_back((Biquad){\n            .setup = vDSP_biquad_CreateSetup(coefficients, 1)\n        });\n        \n        for (int j = 0; j < 4; j++) {\n            biquads[i].delay[j] = 0.0;\n        }\n    }\n}\n```",
+      "sourceHash": "f8c0b97e0876e3eb32726711e590c2a6e34bcb5dea033ceead60745018abb10f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:implement-the-biquadratic-filter:0025:0001",
+      "source": "The `vDSP_audio_unitExtensionDSPKernel::process()` function applies the biquadratic filters to the input channels and writes the result to the output channels:",
+      "ko": "The `vDSP_audio_unitExtensionDSPKernel::process()` function applies the biquadratic filters to the input channels and writes the result to the output channels:",
+      "sourceHash": "6766ee4b27d0371707b0b03bf937ea1f44c1d118e5ec3f238ce5eeae3c786daf",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:implement-the-biquadratic-filter:0026:0001",
+      "source": "```objective-c\nvoid process(std::span<float const*> inputBuffers,\n             std::span<float *> outputBuffers,\n             AUEventSampleTime bufferStartTime,\n             AUAudioFrameCount frameCount) {\n    \n    if (mBypassed) {\n        // Pass the samples through.\n        for (UInt32 channel = 0; channel < inputBuffers.size(); ++channel) {\n            std::copy_n(inputBuffers[channel], frameCount, outputBuffers[channel]);\n        }\n        return;\n    }\n    \n    double coeffs[5];\n    // Populate `coeffs` from the parameters.\n    biquadCoefficientsFor(mSampleRate,\n                          frequency,\n                          Q,\n                          dbGain,\n                          coeffs);\n    \n    // For each channel, calculate and set the coefficients, and apply the\n    // biquadratic filter.\n    for (UInt32 channel = 0; channel < inputBuffers.size(); ++channel) {\n                    \n        // Set the coefficients on the biquadratic object.\n        vDSP_biquad_SetCoefficientsDouble(biquads[channel].setup,\n                                          coeffs,\n                                          0, 1);\n        \n        // Apply the biquadratic filter.\n        vDSP_biquad(biquads[channel].setup,\n                    biquads[channel].delay,\n                    inputBuffers[channel], 1,\n                    outputBuffers[channel], 1,\n                    frameCount);\n    }\n}\n```",
+      "ko": "```objective-c\nvoid process(std::span<float const*> inputBuffers,\n             std::span<float *> outputBuffers,\n             AUEventSampleTime bufferStartTime,\n             AUAudioFrameCount frameCount) {\n    \n    if (mBypassed) {\n        // Pass the samples through.\n        for (UInt32 channel = 0; channel < inputBuffers.size(); ++channel) {\n            std::copy_n(inputBuffers[channel], frameCount, outputBuffers[channel]);\n        }\n        return;\n    }\n    \n    double coeffs[5];\n    // Populate `coeffs` from the parameters.\n    biquadCoefficientsFor(mSampleRate,\n                          frequency,\n                          Q,\n                          dbGain,\n                          coeffs);\n    \n    // For each channel, calculate and set the coefficients, and apply the\n    // biquadratic filter.\n    for (UInt32 channel = 0; channel < inputBuffers.size(); ++channel) {\n                    \n        // Set the coefficients on the biquadratic object.\n        vDSP_biquad_SetCoefficientsDouble(biquads[channel].setup,\n                                          coeffs,\n                                          0, 1);\n        \n        // Apply the biquadratic filter.\n        vDSP_biquad(biquads[channel].setup,\n                    biquads[channel].delay,\n                    inputBuffers[channel], 1,\n                    outputBuffers[channel], 1,\n                    frameCount);\n    }\n}\n```",
+      "sourceHash": "7c8b8c70aca140c714147ce5110b5729b23e39b84322ea78097c1d04f48a5d25",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0027:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[Applying biquadratic filters to a music loop](applying-biquadratic-filters-to-a-music-loop.md)",
+      "ko": "[Applying biquadratic filters to a music loop](applying-biquadratic-filters-to-a-music-loop.md)",
+      "sourceHash": "16b98310e6da0322efd30af9828828699e582ce5d6785f1275a562ef8e43d762",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Change the frequency response of an audio signal using a cascaded biquadratic filter.",
+      "ko": "Change the frequency response of an audio signal using a cascaded biquadratic filter.",
+      "sourceHash": "337766a415989c5ae48bd3b9e6b129fb09096226f7b497116de0ec7819b76041",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0030:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/creating-an-audio-unit-extension-using-the-vdsp-library)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/creating-an-audio-unit-extension-using-the-vdsp-library)*",
+      "sourceHash": "61863926664883b79dfcd3409866e96b109d2ee6eda6c38534382a319039a7f5",
+      "status": "preserved"
+    }
+  ]
+}

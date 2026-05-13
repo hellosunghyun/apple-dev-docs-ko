@@ -1,0 +1,386 @@
+{
+  "docId": "documentation/Accelerate/bnns/losslayer.md",
+  "title": "BNNS.LossLayer",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnns/losslayer",
+  "segments": [
+    {
+      "id": "seg:heading:bnnslosslayer:0000:0001",
+      "source": "BNNS.LossLayer",
+      "ko": "BNNS.LossLayer",
+      "sourceHash": "b459c87a8c02446027b37bfee3619f04b5b4c0f6bd12a50f41bdb9f6e573cdb9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnslosslayer:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: class",
+      "ko": "**Framework**: Accelerate **Kind**: class",
+      "sourceHash": "2d4c9fdad2aa718dfc2ca4ba7e8b154102f9aaa8e0c99762f893a3514639fd5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnslosslayer:0002:0001",
+      "source": "A layer object that wraps a loss filter and manages its deinitialization.",
+      "ko": "A layer object that wraps a loss filter and manages its deinitialization.",
+      "sourceHash": "c8c306d06c6ded43393bce17144b7d5cd72bb274ff9276f568e973c7017dd4fd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:bnnslosslayer:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnslosslayer:0004:0001",
+      "source": "iOS 14.0+",
+      "ko": "iOS 14.0+",
+      "sourceHash": "a09fb717eefa07878cab396c9697a744dfc726f6a8a77c093ef12e8124ffd90b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnslosslayer:0004:0002",
+      "source": "iPadOS 14.0+",
+      "ko": "iPadOS 14.0+",
+      "sourceHash": "3bd5f9207436aaf3fd80bdb95d64d5d280ff80afc32e998b4c7ef682ec2802e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnslosslayer:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:bnnslosslayer:0004:0004",
+      "source": "macOS 11.0+",
+      "ko": "macOS 11.0+",
+      "sourceHash": "b9d0915cd0d28054ced64852a8b4eb668d9bff9c754aec6f95028c5b01456c88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnslosslayer:0004:0005",
+      "source": "tvOS 14.0+",
+      "ko": "tvOS 14.0+",
+      "sourceHash": "c82f0586cea06e7e3b23ac73e15255e7ccbb56eadf9421eeb43c4793905535a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnslosslayer:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:bnnslosslayer:0004:0007",
+      "source": "watchOS 7.0+",
+      "ko": "watchOS 7.0+",
+      "sourceHash": "c062c9b3a973acc1ffdf60071a0ce7943a5b195f1b0ce07f283267c446e33961",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass LossLayer\n```",
+      "ko": "```swift\nclass LossLayer\n```",
+      "sourceHash": "f481187acfe005f899ab738e3b22bee9e98263135f0583e8c3a0869d06c69f1b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:topics:0007:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-loss-layer:0008:0001",
+      "source": "Creating a Loss Layer",
+      "ko": "Creating a Loss Layer",
+      "sourceHash": "3d38035c6069f3b370b7b9db5c0c1500e35e0645c6ea7d991f9994e745d4bed9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-loss-layer:0009:0001",
+      "source": "[convenience init?(input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, lossFunction: BNNS.LossFunction, lossReduction: BNNS.LossReduction, filterParameters: BNNSFilterParameters?)](bnns/losslayer/init(input:output:lossfunction:lossreduction:filterparameters:).md)",
+      "ko": "[convenience init?(input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, lossFunction: BNNS.LossFunction, lossReduction: BNNS.LossReduction, filterParameters: BNNSFilterParameters?)](bnns/losslayer/init(input:output:lossfunction:lossreduction:filterparameters:).md)",
+      "sourceHash": "89f2e61097cf22221f520c6b075295656f84a436b0c6b396ad42a509c5ca7919",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-a-loss-layer:0010:0001",
+      "source": "Returns a new loss layer.",
+      "ko": "Returns a new loss layer.",
+      "sourceHash": "46c710d40d96927d37faead2216f3ae6ac80ba85a19d0a3221cba57d6ca0d3c5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:specifying-a-loss-function:0011:0001",
+      "source": "Specifying a Loss Function",
+      "ko": "Specifying a Loss Function",
+      "sourceHash": "f8f30347265713ece632e4363f68095d216688f04dec5b884cdf40320ee8ad94",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:specifying-a-loss-function:0012:0001",
+      "source": "[BNNS.LossFunction](bnns/lossfunction.md)",
+      "ko": "[BNNS.LossFunction](bnns/lossfunction.md)",
+      "sourceHash": "27848b8cba814e1ed1b992b3f482debe2db19b9f0d5b6a8b4adabd9a56869471",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:specifying-a-loss-function:0013:0001",
+      "source": "Constants that describe loss functions.",
+      "ko": "Constants that describe loss functions.",
+      "sourceHash": "6acba4910f377224ac079099c56d21d7b3548ea81bba628560d9d1d8ad33fc89",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:specifying-a-loss-reduction-function:0014:0001",
+      "source": "Specifying a Loss Reduction Function",
+      "ko": "Specifying a Loss Reduction Function",
+      "sourceHash": "572336df4d40b1f1ec7170ec3c3f844565e888eb5da0193df4d46461cdbd81dc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:specifying-a-loss-reduction-function:0015:0001",
+      "source": "[BNNS.LossReduction](bnns/lossreduction.md)",
+      "ko": "[BNNS.LossReduction](bnns/lossreduction.md)",
+      "sourceHash": "c3887bf6de3eefac1a008c7a02debff8c31a3ce6c4603eb374c7dd745003676a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:specifying-a-loss-reduction-function:0016:0001",
+      "source": "An enumeration that describes loss reduction functions.",
+      "ko": "An enumeration that describes loss reduction functions.",
+      "sourceHash": "60b17401be6147c18978da7b8b4defdef7d7c3a6a25240a29099c276d38fc6fc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:applying-a-loss-layer:0017:0001",
+      "source": "Applying a Loss Layer",
+      "ko": "Applying a Loss Layer",
+      "sourceHash": "9fe16e3e5ae30e702b82764d75514082d132e80f31cc2bd78708d0fd99009744",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:applying-a-loss-layer:0018:0001",
+      "source": "[func apply(batchSize: Int, input: BNNSNDArrayDescriptor, labels: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, generatingInputGradient: BNNSNDArrayDescriptor) throws](bnns/losslayer/apply(batchsize:input:labels:output:generatinginputgradient:).md)",
+      "ko": "[func apply(batchSize: Int, input: BNNSNDArrayDescriptor, labels: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, generatingInputGradient: BNNSNDArrayDescriptor) throws](bnns/losslayer/apply(batchsize:input:labels:output:generatinginputgradient:).md)",
+      "sourceHash": "f6a9a06d9a6027e619200b5b1e15a217f04447bd4605065c9221f9ca01edab3e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:applying-a-loss-layer:0019:0001",
+      "source": "Applies the layer to a set of input objects, writing the result to a set of output objects.",
+      "ko": "Applies the layer to a set of input objects, writing the result to a set of output objects.",
+      "sourceHash": "c808e39a4f25f35e8544083bc9b7601e6dba1fd258c5732d467403b619905718",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:instance-methods:0020:0001",
+      "source": "Instance Methods",
+      "ko": "Instance Methods",
+      "sourceHash": "f1988000cfee29b008d7dc845fcd9e488495cc65224661bea48d22f0ca52647c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:instance-methods:0021:0001",
+      "source": "[func apply(batchSize: Int, input: BNNSNDArrayDescriptor, labels: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, weights: BNNSNDArrayDescriptor?, broadcastsWeights: Bool, generatingInputGradient: BNNSNDArrayDescriptor) throws](bnns/losslayer/apply(batchsize:input:labels:output:weights:broadcastsweights:generatinginputgradient:).md)",
+      "ko": "[func apply(batchSize: Int, input: BNNSNDArrayDescriptor, labels: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, weights: BNNSNDArrayDescriptor?, broadcastsWeights: Bool, generatingInputGradient: BNNSNDArrayDescriptor) throws](bnns/losslayer/apply(batchsize:input:labels:output:weights:broadcastsweights:generatinginputgradient:).md)",
+      "sourceHash": "12d3230907e9af15cf3bb7ca53dd4c135b2b1669f993b3dde967fd80f378fb31",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:relationships:0022:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0023:0001",
+      "source": "Inherits From",
+      "ko": "Inherits From",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:inherits-from:0024:0001",
+      "source": "[BNNS.Layer](bnns/layer.md)",
+      "ko": "[BNNS.Layer](bnns/layer.md)",
+      "sourceHash": "aff81601b813d6f18ae9717916a53fb8da920b9335f298c35549534174deb38a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0025:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[struct BNNSLossFunction](bnnslossfunction.md)",
+      "ko": "[struct BNNSLossFunction](bnnslossfunction.md)",
+      "sourceHash": "b4a51f680a61620db0ac037f3a8dda6a0811b5db9ce6746ac604ead55f5ce961",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Constants that describe loss functions.",
+      "ko": "Constants that describe loss functions.",
+      "sourceHash": "6acba4910f377224ac079099c56d21d7b3548ea81bba628560d9d1d8ad33fc89",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[struct BNNSLossReductionFunction](bnnslossreductionfunction.md)",
+      "ko": "[struct BNNSLossReductionFunction](bnnslossreductionfunction.md)",
+      "sourceHash": "c6a02f312f95dd5528bb7836b7954daaa3a817345465e31b06fa1727ef3a005e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Constants that describe reduction functions used by a loss layer.",
+      "ko": "프레임워크가 월드 맵을 처리하지 못했음을 나타내는 오류입니다.",
+      "sourceHash": "698718810bbc67dd82c886241eebea3d27ddc7c564e0d513dcef24c3150b5f6b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[struct BNNSLayerParametersLossBase](bnnslayerparameterslossbase.md)",
+      "ko": "[struct BNNSLayerParametersLossBase](bnnslayerparameterslossbase.md)",
+      "sourceHash": "c2e22361f07c1de085f8299b5e63c663f2f394b0b702d7801a8cdfefe9c89672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "A structure that contains the parameters of a loss layer.",
+      "ko": "앱이 마이크 사용자 권한이 없는 경우를 나타내는 오류입니다.",
+      "sourceHash": "6613181e5bed65077462881724ee6df2931a7345924065cfd8bd3a05390edbfe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[struct BNNSLayerParametersLossHuber](bnnslayerparameterslosshuber.md)",
+      "ko": "[struct BNNSLayerParametersLossHuber](bnnslayerparameterslosshuber.md)",
+      "sourceHash": "8923401d8e477bef41b07284df95fb0d25c6c3925463a09f64d4c15e0ec9e64e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "A structure that contains the parameters of a Huber loss layer.",
+      "ko": "프레임워크가 감지된 객체를 병합하지 못했음을 나타내는 오류입니다.",
+      "sourceHash": "770cded838f9109dca2e60f05fc7d1f778fc249c5be8db153111c78545ab386f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[struct BNNSLayerParametersLossSigmoidCrossEntropy](bnnslayerparameterslosssigmoidcrossentropy.md)",
+      "ko": "[struct BNNSLayerParametersLossSigmoidCrossEntropy](bnnslayerparameterslosssigmoidcrossentropy.md)",
+      "sourceHash": "7a713cdd77b7ae0f70a3549ca6e8c657cfc8bf37148700533a5517c7b891b594",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "A structure that contains the parameters of a sigmoid cross entropy loss layer.",
+      "ko": "필수 입력을 제공하지 못한 센서 오류를 나타내는 오류입니다.",
+      "sourceHash": "23471fe82d92fa4aaa901b12c0289a5e6a9e3f9d0b9bfbc755c2bda752933faf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[struct BNNSLayerParametersLossSoftmaxCrossEntropy](bnnslayerparameterslosssoftmaxcrossentropy.md)",
+      "ko": "[struct BNNSLayerParametersLossSoftmaxCrossEntropy](bnnslayerparameterslosssoftmaxcrossentropy.md)",
+      "sourceHash": "116425dc8e66c114c6edd243c0d52d28ae1a89a4c7858506324494786115a2fb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "A structure that contains the parameters of a softmax cross entropy loss layer.",
+      "ko": "프레임워크가 필요한 센서에 액세스하지 못했음을 나타내는 오류입니다.",
+      "sourceHash": "d4f98059d632272df9c72f706d790703aa13d7ba02c34977558aa884b60c5215",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[struct BNNSLayerParametersLossYolo](bnnslayerparameterslossyolo.md)",
+      "ko": "[struct BNNSLayerParametersLossYolo](bnnslayerparameterslossyolo.md)",
+      "sourceHash": "f8a930e0954a81bf6938f2ea2e942f0ed1dbce64ad72cda59f9922e0a1185983",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "A structure that contains the parameters of a You Only Look Once (YOLO) loss layer.",
+      "ko": "기기가 세션 구성에 대한 지원이 부족함을 나타내는 오류입니다.",
+      "sourceHash": "c4b149e11a32cd3ee092d7a7797e6f28522074e99e1e1cdc38087737194d49be",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[func BNNSFilterCreateLayerLoss(UnsafeRawPointer, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayerloss(_:_:).md)",
+      "ko": "[func BNNSFilterCreateLayerLoss(UnsafeRawPointer, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayerloss(_:_:).md)",
+      "sourceHash": "ad4c5d9e567a5dff4a906919e9d8f92f250f12f67a98581ac5f4b1639f206865",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "Returns a new loss layer.",
+      "ko": "Returns a new loss layer.",
+      "sourceHash": "46c710d40d96927d37faead2216f3ae6ac80ba85a19d0a3221cba57d6ca0d3c5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[func BNNSLossFilterApplyBatch(BNNSFilter?, Int, UnsafeRawPointer, Int, UnsafeRawPointer, Int, UnsafeRawPointer?, Int, UnsafeMutableRawPointer, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, Int) -> Int32](bnnslossfilterapplybatch(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSLossFilterApplyBatch(BNNSFilter?, Int, UnsafeRawPointer, Int, UnsafeRawPointer, Int, UnsafeRawPointer?, Int, UnsafeMutableRawPointer, UnsafeMutablePointer<BNNSNDArrayDescriptor>?, Int) -> Int32](bnnslossfilterapplybatch(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "a23d447b76f6a95826db11eef5a17e536dba9ded077aea766d36c05a5c4b5de6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "Applies a loss filter to a set of input objects, writing the result to a set of output objects.",
+      "ko": "Applies a loss filter to a set of input objects, writing the result to a set of output objects.",
+      "sourceHash": "a65022a68177c48206b21c96f6a767e08d18f30494272d6f92348df69b83f575",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[func BNNSLossFilterApplyBackwardBatch(BNNSFilter?, Int, UnsafeRawPointer, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>, Int, UnsafeRawPointer, Int, UnsafeRawPointer?, Int, UnsafePointer<BNNSNDArrayDescriptor>, Int) -> Int32](bnnslossfilterapplybackwardbatch(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSLossFilterApplyBackwardBatch(BNNSFilter?, Int, UnsafeRawPointer, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>, Int, UnsafeRawPointer, Int, UnsafeRawPointer?, Int, UnsafePointer<BNNSNDArrayDescriptor>, Int) -> Int32](bnnslossfilterapplybackwardbatch(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "0ed87a7afb15d147e9beb8d340e418f4b6972fb7a1fc856ef8385dc4267caec0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "Applies a loss filter backward to generate gradients.",
+      "ko": "Applies a loss filter backward to generate gradients.",
+      "sourceHash": "356bcb34d8dacf868a8a9163ff5deec82393e908e2d18dce3cd0cc7eb49c2585",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0046:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnns/losslayer)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnns/losslayer)*",
+      "sourceHash": "22a31fbad8fca54d84e36c98aa48fae9782cd61dbd45fd03bf2d31a00da60e17",
+      "status": "preserved"
+    }
+  ]
+}

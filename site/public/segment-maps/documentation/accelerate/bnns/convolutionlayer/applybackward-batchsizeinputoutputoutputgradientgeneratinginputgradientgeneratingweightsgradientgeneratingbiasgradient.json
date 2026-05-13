@@ -1,0 +1,169 @@
+{
+  "docId": "documentation/Accelerate/bnns/convolutionlayer/applybackward-batchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient.md",
+  "title": "applyBackward(batchSize:input:output:outputGradient:generatingInputGradient:generatingWeightsGradient:generatingBiasGradient:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnns/convolutionlayer/applybackward-batchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient",
+  "segments": [
+    {
+      "id": "seg:heading:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0000:0001",
+      "source": "applyBackward(batchSize:input:output:outputGradient:generatingInputGradient:generatingWeightsGradient:generatingBiasGradient:)",
+      "ko": "applyBackward(batchSize:input:output:outputGradient:generatingInputGradient:generatingWeightsGradient:generatingBiasGradient:)",
+      "sourceHash": "24a06297fa610373e74eede534e4f697797f75bdc52a4061d84993a82401072d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0002:0001",
+      "source": "Applies the layer backward to generate input gradients.",
+      "ko": "계층의 역전파를 적용하여 입력 그래디언트를 생성합니다.",
+      "sourceHash": "d075a9b6402d229a8872aca9e1b4f12e2f4a025b4c1de725746b7745989221af",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0004:0001",
+      "source": "iOS 14.0+",
+      "ko": "iOS 14.0+",
+      "sourceHash": "a09fb717eefa07878cab396c9697a744dfc726f6a8a77c093ef12e8124ffd90b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0004:0002",
+      "source": "iPadOS 14.0+",
+      "ko": "iPadOS 14.0+",
+      "sourceHash": "3bd5f9207436aaf3fd80bdb95d64d5d280ff80afc32e998b4c7ef682ec2802e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0004:0004",
+      "source": "macOS 11.0+",
+      "ko": "macOS 11.0+",
+      "sourceHash": "b9d0915cd0d28054ced64852a8b4eb668d9bff9c754aec6f95028c5b01456c88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0004:0005",
+      "source": "tvOS 14.0+",
+      "ko": "tvOS 14.0+",
+      "sourceHash": "c82f0586cea06e7e3b23ac73e15255e7ccbb56eadf9421eeb43c4793905535a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:applybackwardbatchsizeinputoutputoutputgradientgeneratinginputgradientgeneratingweightsgradientgeneratingbiasgradient:0004:0007",
+      "source": "watchOS 7.0+",
+      "ko": "watchOS 7.0+",
+      "sourceHash": "c062c9b3a973acc1ffdf60071a0ce7943a5b195f1b0ce07f283267c446e33961",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc applyBackward(batchSize: Int, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, outputGradient: BNNSNDArrayDescriptor, generatingInputGradient inputGradient: BNNSNDArrayDescriptor, generatingWeightsGradient weightsGradient: BNNSNDArrayDescriptor? = nil, generatingBiasGradient biasGradient: BNNSNDArrayDescriptor? = nil) throws\n```",
+      "ko": "```swift\nfunc applyBackward(batchSize: Int, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, outputGradient: BNNSNDArrayDescriptor, generatingInputGradient inputGradient: BNNSNDArrayDescriptor, generatingWeightsGradient weightsGradient: BNNSNDArrayDescriptor? = nil, generatingBiasGradient biasGradient: BNNSNDArrayDescriptor? = nil) throws\n```",
+      "sourceHash": "764448336246a43fcf633bf3faa4dd34104ea18ceb155632ba974daaedc3561d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0007:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0008:0001",
+      "source": "`batchSize`: The number of input-output pairs.",
+      "ko": "`batchSize`: 입력-출력 쌍의 수입니다.",
+      "sourceHash": "2c4c714ab3596140062126727685348960b82b5c9ea0371a3d85e9400f02d29c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0002",
+      "source": "`input`: The descriptor of the input.",
+      "ko": "`input`: 입력의 디스크립터입니다.",
+      "sourceHash": "07bdd2e1527c705e45d940e223740461c1baa7db82da7e177a0e51b1052f124c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0003",
+      "source": "`output`: The descriptor of the output.",
+      "ko": "`output`: 출력의 디스크립터입니다.",
+      "sourceHash": "376cb67af18387ab2a717ad3d06cf7d9f521396cae6a6091cafc72e979d61319",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0004",
+      "source": "`outputGradient`: The descriptor of the output gradient.",
+      "ko": "`outputGradient`: 출력 그래디언트의 디스크립터입니다.",
+      "sourceHash": "2bd7d99ce57d5d2b41d0fa33dbb132a007405cd58eb2edd0d17ef000ce86e226",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0005",
+      "source": "`inputGradient`: The descriptor of the input gradient.",
+      "ko": "`inputGradient`: 입력 그래디언트의 디스크립터입니다.",
+      "sourceHash": "4c75a838e92bc5958439401a06d049d1c1bd77ee0696ca0e61e4de0c82ff665d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0006",
+      "source": "`weightsGradient`: The descriptor of the weights gradient.",
+      "ko": "`weightsGradient`: 가중치 그래디언트의 디스크립터입니다.",
+      "sourceHash": "0c861a5cd540d4419a888af2d1e4c8f5bf7f85c365c5db0e61cbb85d525c1a1e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0007",
+      "source": "`biasGradient`: The descriptor of the bias gradient.",
+      "ko": "`biasGradient`: 바이어스 그래디언트의 디스크립터입니다.",
+      "sourceHash": "b83ef3c5201429e2501af81a6a70b6430865d0b3979ead2f85961437205428ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:parameters:0009:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:parameters:0010:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnns/convolutionlayer/applybackward(batchsize:input:output:outputgradient:generatinginputgradient:generatingweightsgradient:generatingbiasgradient:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/bnns/convolutionlayer/applybackward(batchsize:input:output:outputgradient:generatinginputgradient:generatingweightsgradient:generatingbiasgradient:))*",
+      "sourceHash": "ad9e9bb75e050c8b6452c71ab9e0eeebed7e7f886284a5a0b7b9ee0e7a51257f",
+      "status": "machine_translated"
+    }
+  ]
+}

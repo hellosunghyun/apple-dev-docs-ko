@@ -1,0 +1,407 @@
+{
+  "docId": "documentation/Accelerate/optimizing-image-processing-performance.md",
+  "title": "Optimizing image-processing performance",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/optimizing-image-processing-performance",
+  "segments": [
+    {
+      "id": "seg:heading:optimizing-image-processing-performance:0000:0001",
+      "source": "Optimizing image-processing performance",
+      "ko": "Optimizing image-processing performance",
+      "sourceHash": "30c0dbba5a06268306676cf7304330cb30530adbca493f6aef9ad6ca8aaca699",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:optimizing-image-processing-performance:0001:0001",
+      "source": "**Framework**: Accelerate",
+      "ko": "**Framework**: Accelerate",
+      "sourceHash": "29a5b8860afd67d96c79fe2585ca71addeb9f39a3fe9698cbaba2a7451def11b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:optimizing-image-processing-performance:0002:0001",
+      "source": "Improve your app’s performance by converting image buffer formats from interleaved to planar.",
+      "ko": "Improve your app’s performance by converting image buffer formats from interleaved to planar.",
+      "sourceHash": "bbb5ea89060b6902c9a8c82258513b1177f74f5334496c7c8d44695b57a46bec",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "The vImage library operates on image data with two memory layouts:",
+      "ko": "The vImage library operates on image data with two memory layouts:",
+      "sourceHash": "4a8dff641f0b68e3ab3f1f5c4fb3a9b7ccf6e37235bf957679a349ac1d3ef9ba",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0001",
+      "source": "**Interleaved** stores each pixel’s color data consecutively in a single buffer.",
+      "ko": "**Interleaved** stores each pixel’s color data consecutively in a single buffer.",
+      "sourceHash": "ce06254dbd6965106ccc982ab0f64b59e4f7c0def07c4d2dc5da842772926ce1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0002",
+      "source": "For example, the data that describes a 4-channel image (red, green, blue, and alpha) would be stored as RGBARGBARGBA…",
+      "ko": "For example, the data that describes a 4-channel image (red, green, blue, and alpha) would be stored as RGBARGBARGBA…",
+      "sourceHash": "e36e09f64f5c66773e27159c5026e0e85e9abfcfeec14d29440c4b9626959b27",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0001",
+      "source": "**Planar** stores each color channel in separate buffers.",
+      "ko": "**Planar** stores each color channel in separate buffers.",
+      "sourceHash": "751f5741c9c1fef5174d25000cdab006c2862bae65c4ff49ecfb89b6708f8b08",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0002",
+      "source": "For example, a 4-channel image would be stored as four individual buffers containing red, green, blue, and alpha data.",
+      "ko": "For example, a 4-channel image would be stored as four individual buffers containing red, green, blue, and alpha data.",
+      "sourceHash": "da408c846377ebbc8230deeddb78ec8511db1df02410dc99034006f419c83ac6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0001",
+      "source": "![A diagram showing how the color information for each pixel in an image is stored in interleaved and planar buffers.](https://docs-assets.developer.apple.com/published/9ca5720cecfccf9a40e29dcb8dfb8134/media-3023512%402x.png)",
+      "ko": "![A diagram showing how the color information for each pixel in an image is stored in interleaved and planar buffers.](https://docs-assets.developer.apple.com/published/9ca5720cecfccf9a40e29dcb8dfb8134/media-3023512%402x.png)",
+      "sourceHash": "ebf42a1076fdd2101f896d2c375190daf401a042950051af648044740fc1e108",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Because many vImage functions operate on a single color channel at a time — by converting an interleaved buffer to planar buffers — you can often improve your app’s performance by doing this conversion manually.",
+      "ko": "Because many vImage functions operate on a single color channel at a time — by converting an interleaved buffer to planar buffers — you can often improve your app’s performance by doing this conversion manually.",
+      "sourceHash": "5dc4cebe25f1c9893f3054d546599230ef21adab3267a36c5cae78195787b9b1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "However, most vImage functions are available in both the interleaved and planar variants, so before you do the conversion, try both to see which works better in your context.",
+      "ko": "However, most vImage functions are available in both the interleaved and planar variants, so before you do the conversion, try both to see which works better in your context.",
+      "sourceHash": "1390c40b8239372196db1fc9238f3b474cdd905fa8333b76a08e33481c58ea70",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "In some cases, you may not want to apply a vImage operation to all four channels of an image.",
+      "ko": "In some cases, you may not want to apply a vImage operation to all four channels of an image.",
+      "sourceHash": "ff8673f5268fb00883eb1b853001873262e9c163ec5d76373525381129f5f4ca",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "For example, you may know beforehand that the alpha channel is irrelevant in the images that you’re dealing with, or perhaps all of your images are grayscale and you need to operate on only one channel.",
+      "ko": "For example, you may know beforehand that the alpha channel is irrelevant in the images that you’re dealing with, or perhaps all of your images are grayscale and you need to operate on only one channel.",
+      "sourceHash": "7993f4a2ca9767057eb0c74f9591f713319bd4678f7dc1fd2eaaf3f318aea9d9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0003",
+      "source": "Using planar formats makes it possible to isolate and work with only the channels you need.",
+      "ko": "Using planar formats makes it possible to isolate and work with only the channels you need.",
+      "sourceHash": "911609557867d42d6b58a3ae094e5be2840bbc001f7c8d2c8233b62668761f11",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:review-interleaved-performance:0010:0001",
+      "source": "Review Interleaved Performance",
+      "ko": "Review Interleaved Performance",
+      "sourceHash": "e82d20696e05f70fdb607453b63ff58f1fcbbe5d9f196bb51d8daf09fa7f7bf3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:review-interleaved-performance:0011:0001",
+      "source": "Typically, your source imagery is in interleaved format, and your default option will be to use the interleaved variant of a vImage function.",
+      "ko": "Typically, your source imagery is in interleaved format, and your default option will be to use the interleaved variant of a vImage function.",
+      "sourceHash": "0487193e365455cca347880b6b09704342d97e902cbd7697badcbed3488e499f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:review-interleaved-performance:0011:0002",
+      "source": "For example, the following code scales a Core Graphics image to one tenth of its original size.",
+      "ko": "For example, the following code scales a Core Graphics image to one tenth of its original size.",
+      "sourceHash": "df5245d14d696545a2bd61aa74d334943db491255092296682b0313337c6ed0f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:review-interleaved-performance:0011:0003",
+      "source": "Note that the 4-channel, 8-bit-per-channel interleaved pixel buffer [`scale(destination:)`](vimage/pixelbuffer/scale(destination:)-5euvc.md) function calls [`vImageScale_ARGB8888(_:_:_:_:)`](vimagescale_argb8888(_:_:_:_:).md).",
+      "ko": "Note that the 4-channel, 8-bit-per-channel interleaved pixel buffer [`scale(destination:)`](vimage/pixelbuffer/scale(destination:)-5euvc.md) function calls [`vImageScale_ARGB8888(_:_:_:_:)`](vimagescale_argb8888(_:_:_:_:).md).",
+      "sourceHash": "8166f96f14a698c333044f0862e2357cac534512c88c823a49cbf71f3878ab7e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:review-interleaved-performance:0012:0001",
+      "source": "```swift\nvar cgImageFormat = vImage_CGImageFormat(\n    bitsPerComponent: 8,\n    bitsPerPixel: 8 * 4,\n    colorSpace: CGColorSpaceCreateDeviceRGB(),\n    bitmapInfo: CGBitmapInfo(rawValue:\n                                CGImageAlphaInfo.noneSkipLast.rawValue))!\n\nlet sourceBuffer = try vImage.PixelBuffer(cgImage: sourceImage,\n                                          cgImageFormat: &cgImageFormat,\n                                          pixelFormat: vImage.Interleaved8x4.self)\n\nlet destinationBuffer = vImage.PixelBuffer(size: .init(width: sourceBuffer.width / 10,\n                                                       height: sourceBuffer.height / 10),\n                                           pixelFormat: vImage.Interleaved8x4.self)\n\nlet time = ContinuousClock().measure {\n    sourceBuffer.scale(destination: destinationBuffer)\n}\n```",
+      "ko": "```swift\nvar cgImageFormat = vImage_CGImageFormat(\n    bitsPerComponent: 8,\n    bitsPerPixel: 8 * 4,\n    colorSpace: CGColorSpaceCreateDeviceRGB(),\n    bitmapInfo: CGBitmapInfo(rawValue:\n                                CGImageAlphaInfo.noneSkipLast.rawValue))!\n\nlet sourceBuffer = try vImage.PixelBuffer(cgImage: sourceImage,\n                                          cgImageFormat: &cgImageFormat,\n                                          pixelFormat: vImage.Interleaved8x4.self)\n\nlet destinationBuffer = vImage.PixelBuffer(size: .init(width: sourceBuffer.width / 10,\n                                                       height: sourceBuffer.height / 10),\n                                           pixelFormat: vImage.Interleaved8x4.self)\n\nlet time = ContinuousClock().measure {\n    sourceBuffer.scale(destination: destinationBuffer)\n}\n```",
+      "sourceHash": "65e1d390dc216f5c3933d320777830da32b6794f6788a1ecdd0ea8d1efa9935a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:review-interleaved-performance:0013:0001",
+      "source": "You can use [`ContinuousClock`](https://developer.apple.com/documentation/Swift/ContinuousClock) to measure the execution time.",
+      "ko": "You can use [`ContinuousClock`](https://developer.apple.com/documentation/Swift/ContinuousClock) to measure the execution time.",
+      "sourceHash": "b720c49ef792f515758dcbf749162f622e37dfd8b8435d60290da5f8a4768444",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:convert-an-interleaved-source-buffer-to-planar-buffers:0014:0001",
+      "source": "Convert an Interleaved Source Buffer to Planar Buffers",
+      "ko": "Convert an Interleaved Source Buffer to Planar Buffers",
+      "sourceHash": "bef55d615631d4032e69d5c185bec1af533e2827c90457479636a77cca39e7d3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:convert-an-interleaved-source-buffer-to-planar-buffers:0015:0001",
+      "source": "The pixel buffer [`init(cgImage:cgImageFormat:pixelFormat:)`](vimage/pixelbuffer/init(cgimage:cgimageformat:pixelformat:).md) initializer and the vImage buffer [`vImageBuffer_InitWithCGImage(_:_:_:_:_:)`](vimagebuffer_initwithcgimage(_:_:_:_:_:).md) function both populate a buffer based on the properties of a [`vImage_CGImageFormat`](vimage_cgimageformat.md) structure.",
+      "ko": "The pixel buffer [`init(cgImage:cgImageFormat:pixelFormat:)`](vimage/pixelbuffer/init(cgimage:cgimageformat:pixelformat:).md) initializer and the vImage buffer [`vImageBuffer_InitWithCGImage(_:_:_:_:_:)`](vimagebuffer_initwithcgimage(_:_:_:_:_:).md) function both populate a buffer based on the properties of a [`vImage_CGImageFormat`](vimage_cgimageformat.md) structure.",
+      "sourceHash": "e0dd2397a269c199bd9c0d1ad09487326312f491fbda0c9e4baa5912f9173709",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:convert-an-interleaved-source-buffer-to-planar-buffers:0016:0001",
+      "source": "For example, the following code creates an interleaved 3-channel, 8-bit-per-channel [`vImage.PixelBuffer`](vimage/pixelbuffer.md) structure from the source Core Graphics image.",
+      "ko": "For example, the following code creates an interleaved 3-channel, 8-bit-per-channel [`vImage.PixelBuffer`](vimage/pixelbuffer.md) structure from the source Core Graphics image.",
+      "sourceHash": "d7653aacc4b1f613338b5710eeba225adfc6e219bf9670c63e330cbaa2733d5c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:convert-an-interleaved-source-buffer-to-planar-buffers:0016:0002",
+      "source": "The code calls [`deinterleave(destination:)`](vimage/pixelbuffer/deinterleave(destination:)-hrhz.md) to deinterleave the image data and populate the individual red, green, and blue planar pixel buffers.",
+      "ko": "The code calls [`deinterleave(destination:)`](vimage/pixelbuffer/deinterleave(destination:)-hrhz.md) to deinterleave the image data and populate the individual red, green, and blue planar pixel buffers.",
+      "sourceHash": "08026414111324140b458753007d50d3325b919a651dfa7a889152d5e3d2bddd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:convert-an-interleaved-source-buffer-to-planar-buffers:0017:0001",
+      "source": "```swift\nvar cgImageFormat = vImage_CGImageFormat(\n    bitsPerComponent: 8,\n    bitsPerPixel: 8 * 3,\n    colorSpace: CGColorSpaceCreateDeviceRGB(),\n    bitmapInfo: CGBitmapInfo(rawValue:\n                                CGImageAlphaInfo.none.rawValue))!\n\nlet sourceBuffer = try vImage.PixelBuffer(cgImage: sourceImage,\n                                          cgImageFormat: &cgImageFormat,\n                                          pixelFormat: vImage.Interleaved8x3.self)\nlet sourceRedBuffer = vImage.PixelBuffer(size: sourceBuffer.size,\n                                         pixelFormat: vImage.Planar8.self)\nlet sourceGreenBuffer = vImage.PixelBuffer(size: sourceBuffer.size,\n                                           pixelFormat: vImage.Planar8.self)\nlet sourceBlueBuffer = vImage.PixelBuffer(size: sourceBuffer.size,\n                                          pixelFormat: vImage.Planar8.self)\n\nsourceBuffer.deinterleave(planarDestinationBuffers: [sourceRedBuffer,\n                                                     sourceGreenBuffer,\n                                                     sourceBlueBuffer])\n```",
+      "ko": "```swift\nvar cgImageFormat = vImage_CGImageFormat(\n    bitsPerComponent: 8,\n    bitsPerPixel: 8 * 3,\n    colorSpace: CGColorSpaceCreateDeviceRGB(),\n    bitmapInfo: CGBitmapInfo(rawValue:\n                                CGImageAlphaInfo.none.rawValue))!\n\nlet sourceBuffer = try vImage.PixelBuffer(cgImage: sourceImage,\n                                          cgImageFormat: &cgImageFormat,\n                                          pixelFormat: vImage.Interleaved8x3.self)\nlet sourceRedBuffer = vImage.PixelBuffer(size: sourceBuffer.size,\n                                         pixelFormat: vImage.Planar8.self)\nlet sourceGreenBuffer = vImage.PixelBuffer(size: sourceBuffer.size,\n                                           pixelFormat: vImage.Planar8.self)\nlet sourceBlueBuffer = vImage.PixelBuffer(size: sourceBuffer.size,\n                                          pixelFormat: vImage.Planar8.self)\n\nsourceBuffer.deinterleave(planarDestinationBuffers: [sourceRedBuffer,\n                                                     sourceGreenBuffer,\n                                                     sourceBlueBuffer])\n```",
+      "sourceHash": "c5ced32ebd9696112519f30a1a5df44c98439d6df2bcf711e7aa38a00f405454",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:initialize-the-destination-buffers:0018:0001",
+      "source": "Initialize the Destination Buffers",
+      "ko": "Initialize the Destination Buffers",
+      "sourceHash": "ebe1ae4c909b6f7a2cca8389a99764b904b477d33192a3af5c54322e2077d72f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:initialize-the-destination-buffers:0019:0001",
+      "source": "Create an interleaved 3-channel, 8-bit-per-channel destination buffer and three planar destination buffers:",
+      "ko": "Create an interleaved 3-channel, 8-bit-per-channel destination buffer and three planar destination buffers:",
+      "sourceHash": "fa5f9f015a855a3b44b1c0a699b8b86ca4305098c1701cc85f830be75243c8ad",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:initialize-the-destination-buffers:0020:0001",
+      "source": "```swift\nlet destinationBuffer = vImage.PixelBuffer(size: .init(width: sourceBuffer.width / 10,\n                                                       height: sourceBuffer.height / 10),\n                                           pixelFormat: vImage.Interleaved8x3.self)\n\nlet destinationRedBuffer = vImage.PixelBuffer(size: destinationBuffer.size,\n                                              pixelFormat: vImage.Planar8.self)\nlet destinationGreenBuffer = vImage.PixelBuffer(size: destinationBuffer.size,\n                                                pixelFormat: vImage.Planar8.self)\nlet destinationBlueBuffer = vImage.PixelBuffer(size: destinationBuffer.size,\n                                               pixelFormat: vImage.Planar8.self)\n```",
+      "ko": "```swift\nlet destinationBuffer = vImage.PixelBuffer(size: .init(width: sourceBuffer.width / 10,\n                                                       height: sourceBuffer.height / 10),\n                                           pixelFormat: vImage.Interleaved8x3.self)\n\nlet destinationRedBuffer = vImage.PixelBuffer(size: destinationBuffer.size,\n                                              pixelFormat: vImage.Planar8.self)\nlet destinationGreenBuffer = vImage.PixelBuffer(size: destinationBuffer.size,\n                                                pixelFormat: vImage.Planar8.self)\nlet destinationBlueBuffer = vImage.PixelBuffer(size: destinationBuffer.size,\n                                               pixelFormat: vImage.Planar8.self)\n```",
+      "sourceHash": "594129f5496b2c13c4c29a701b0bc685866b2b40bfc8bfd193a4f15922a12add",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:apply-the-scale-operation-to-the-planar-buffers:0021:0001",
+      "source": "Apply the Scale Operation to the Planar Buffers",
+      "ko": "Apply the Scale Operation to the Planar Buffers",
+      "sourceHash": "3bb4b5f57af79733b94a681d2498ecb5368695e02fe1c56696fa6d59d65c9f86",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:apply-the-scale-operation-to-the-planar-buffers:0022:0001",
+      "source": "Use the `withTaskGroup(of:returning:body:)` function to start a new scope that contains the three planar scale operations.",
+      "ko": "Use the `withTaskGroup(of:returning:body:)` function to start a new scope that contains the three planar scale operations.",
+      "sourceHash": "682ac52bc3a75fa28be31c0c3501f9026d9c932b365ab6254c49a932b6422c40",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:apply-the-scale-operation-to-the-planar-buffers:0022:0002",
+      "source": "Note that the 8-bit planar [`scale(destination:)`](vimage/pixelbuffer/scale(destination:)-5euvc.md) function calls [`vImageScale_Planar8(_:_:_:_:)`](vimagescale_planar8(_:_:_:_:).md).",
+      "ko": "Note that the 8-bit planar [`scale(destination:)`](vimage/pixelbuffer/scale(destination:)-5euvc.md) function calls [`vImageScale_Planar8(_:_:_:_:)`](vimagescale_planar8(_:_:_:_:).md).",
+      "sourceHash": "648a4ee62a76bf51b2113c789cfeb01c6dc2b8ae39d007676def8d332ffba2f8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:apply-the-scale-operation-to-the-planar-buffers:0023:0001",
+      "source": "In the code below, the [`interleave(destination:)`](vimage/pixelbuffer/interleave(destination:)-46cgi.md) function interleaves the three planar buffers and populates the interleaved destination buffer with the scaled image:",
+      "ko": "In the code below, the [`interleave(destination:)`](vimage/pixelbuffer/interleave(destination:)-46cgi.md) function interleaves the three planar buffers and populates the interleaved destination buffer with the scaled image:",
+      "sourceHash": "4adb74ffd87ed3200555a889b33f918e15bbe262b6749af49bbdfc8f5f84809f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:apply-the-scale-operation-to-the-planar-buffers:0024:0001",
+      "source": "```swift\nlet time = await ContinuousClock().measure {\n    \n    await withTaskGroup(of: Void.self) { group in\n        \n        group.addTask(priority: .userInitiated) {\n            sourceRedBuffer.scale(destination: destinationRedBuffer)\n        }\n        \n        group.addTask(priority: .userInitiated) {\n            sourceGreenBuffer.scale(destination: destinationGreenBuffer)\n        }\n        \n        group.addTask(priority: .userInitiated) {\n            sourceBlueBuffer.scale(destination: destinationBlueBuffer)\n        }\n    }\n    \n    destinationBuffer.interleave(planarSourceBuffers: [destinationRedBuffer,\n                                                       destinationGreenBuffer,\n                                                       destinationBlueBuffer])\n}\n```",
+      "ko": "```swift\nlet time = await ContinuousClock().measure {\n    \n    await withTaskGroup(of: Void.self) { group in\n        \n        group.addTask(priority: .userInitiated) {\n            sourceRedBuffer.scale(destination: destinationRedBuffer)\n        }\n        \n        group.addTask(priority: .userInitiated) {\n            sourceGreenBuffer.scale(destination: destinationGreenBuffer)\n        }\n        \n        group.addTask(priority: .userInitiated) {\n            sourceBlueBuffer.scale(destination: destinationBlueBuffer)\n        }\n    }\n    \n    destinationBuffer.interleave(planarSourceBuffers: [destinationRedBuffer,\n                                                       destinationGreenBuffer,\n                                                       destinationBlueBuffer])\n}\n```",
+      "sourceHash": "c3be0bd7bb14802a1d1f1f44c735157003ae280c23744b02d8d5e9e0c4c6f4b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:apply-the-scale-operation-to-the-planar-buffers:0025:0001",
+      "source": "The following code calls [`makeCGImage(cgImageFormat:)`](vimage/pixelbuffer/makecgimage(cgimageformat:).md) to create a Core Graphics image from the result of the scale operation:",
+      "ko": "The following code calls [`makeCGImage(cgImageFormat:)`](vimage/pixelbuffer/makecgimage(cgimageformat:).md) to create a Core Graphics image from the result of the scale operation:",
+      "sourceHash": "de80e7df2568ad4aa87766fc2430ea475a82360914a6a6b5381db81407b8d8c8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:apply-the-scale-operation-to-the-planar-buffers:0026:0001",
+      "source": "```swift\nlet scaledImage = destinationBuffer.makeCGImage(cgImageFormat: cgImageFormat)\n```",
+      "ko": "```swift\nlet scaledImage = destinationBuffer.makeCGImage(cgImageFormat: cgImageFormat)\n```",
+      "sourceHash": "2740f9f683a3b4bd079df2b24ffba5a43dee4d7533dee684e85dd53c4bea1325",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0027:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[Converting bitmap data between Core Graphics images and vImage buffers](converting-bitmap-data-between-core-graphics-images-and-vimage-buffers.md)",
+      "ko": "[static let quickTimeUserDataDescription: AVMetadataIdentifier](avmetadatakey/id3metadatakeycomposer.md)",
+      "sourceHash": "0450e3ea4de6109f9e5f0c8343b652273ae27e48dba0167e99474573a2c18a65",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Pass image data between Core Graphics and vImage to create and manipulate images.",
+      "ko": "영화 파일 콘텐츠의 설명을 나타내는 식별자입니다.",
+      "sourceHash": "b1c87a4de9ebfa7ffe6f416eb47733611873a46c6ce40507b5611d5a8382ac7a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[Creating and Populating Buffers from Core Graphics Images](creating-and-populating-buffers-from-core-graphics-images.md)",
+      "ko": "[static let quickTimeUserDataDirector: AVMetadataIdentifier](avmetadatakey/id3metadatakeyconductor.md)",
+      "sourceHash": "87df911c279291a895c39d4fe5b9b360ae3238e1ec12a3ddf391e83c7ff2c3f8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Initialize vImage buffers from Core Graphics images.",
+      "ko": "영화 파일 콘텐츠의 감독 이름을 나타내는 식별자입니다.",
+      "sourceHash": "596e9c68192468fd0eaa2425979a805e7732eac971baddb95d2fd667ccd817dd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[Creating a Core Graphics Image from a vImage Buffer](creating-a-core-graphics-image-from-a-vimage-buffer.md)",
+      "ko": "[static let quickTimeUserDataDisclaimer: AVMetadataIdentifier](avmetadatakey/id3metadatakeycontentgroupdescription.md)",
+      "sourceHash": "ea669d407628136e87dc686e5be9b6832bd1568641e2a467c3a2d24582ed9af8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Create displayable representations of vImage buffers.",
+      "ko": "영화 파일 콘텐츠와 관련된 면책 조항을 나타내는 식별자입니다.",
+      "sourceHash": "1823c63efaa2335a7b83c0d90a3a5ac6ec066fc622a9a444814d9ea018d62854",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[Building a Basic Image-Processing Workflow](building-a-basic-image-processing-workflow.md)",
+      "ko": "[static let quickTimeUserDataEncodedBy: AVMetadataIdentifier](avmetadatakey/id3metadatakeycontenttype.md)",
+      "sourceHash": "f8255ca50534ae2571f45fcd706c0e1525c6b9f4683ee27e496ef0a0106b50c0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Resize an image with vImage.",
+      "ko": "영화 파일 콘텐츠의 인코딩을 담당한 사람 또는 조직의 이름을 나타내는 식별자입니다.",
+      "sourceHash": "297a8507dc026f5c3b84fb22cc3d0a5145107b6a17c801bd8766b00087b9385e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[Applying geometric transforms to images](applying-geometric-transforms-to-images.md)",
+      "ko": "[static let quickTimeUserDataFullName: AVMetadataIdentifier](avmetadatakey/id3metadatakeycopyright.md)",
+      "sourceHash": "e86419d39925ce7501df19b24f6e941792349af83a7854a472fe740329522910",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Reflect, shear, rotate, and scale image buffers using vImage.",
+      "ko": "영화 파일 콘텐츠의 전체 이름을 나타내는 식별자입니다.",
+      "sourceHash": "4379afa5755b4202f049c3b0b6a061616e70d56a8f923fca61015457aa19fc59",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[Compositing images with alpha blending](compositing-images-with-alpha-blending.md)",
+      "ko": "[Compositing images with alpha blending](compositing-images-with-alpha-blending.md)",
+      "sourceHash": "b165dd75761e99cf56b24504c7f4bbce27db5a993eec9843d14763f142677817",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Combine two images by using alpha blending to create a single output.",
+      "ko": "Combine two images by using alpha blending to create a single output.",
+      "sourceHash": "20362d5c98edfab9b6ce94375ca054b33afc74caa9e3785d149cee4520e9e16c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[Compositing images with vImage blend modes](compositing-images-with-vimage-blend-modes.md)",
+      "ko": "[Compositing images with vImage blend modes](compositing-images-with-vimage-blend-modes.md)",
+      "sourceHash": "2963d3a244b3b8bc1fd2397b977322a2ffe93dfa6ec37469866a72ba810a660f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "Combine two images by using blend modes to create a single output.",
+      "ko": "Combine two images by using blend modes to create a single output.",
+      "sourceHash": "8fa11fe112144382427f6fc7d226b344a045393f8f21a5d6130ea93952c5ccfb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[Applying vImage operations to regions of interest](applying-vimage-operations-to-regions-of-interest.md)",
+      "ko": "[Applying vImage operations to regions of interest](applying-vimage-operations-to-regions-of-interest.md)",
+      "sourceHash": "91bb3bba556b9f814af7329de3f6c2c650145934daa7e61b569756484c2f1502",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "Limit the effect of vImage operations to rectangular regions of interest.",
+      "ko": "Limit the effect of vImage operations to rectangular regions of interest.",
+      "sourceHash": "13a873ae8df7d595407981237f36adbd07999a9db9e02ddda66a890089532e32",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[vImage](vimage-library.md)",
+      "ko": "[vImage](vimage-library.md)",
+      "sourceHash": "82755fce9673879548ba8bba4416b66542fd7220157094efdbeb9f41d143cc3d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "Manipulate large images using the CPU’s vector processor.",
+      "ko": "Manipulate large images using the CPU’s vector processor.",
+      "sourceHash": "859ababb9c160d80395e723ef70958daa975d12c6f0b33fdca59d095c9815046",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0046:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/optimizing-image-processing-performance)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/optimizing-image-processing-performance)*",
+      "sourceHash": "665b3d6874c664b48a7c99f922b04a425646f96ee20bbb17313235d2a22bd5b7",
+      "status": "preserved"
+    }
+  ]
+}

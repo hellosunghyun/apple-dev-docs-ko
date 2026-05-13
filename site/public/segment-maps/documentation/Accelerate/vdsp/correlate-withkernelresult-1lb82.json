@@ -1,0 +1,246 @@
+{
+  "docId": "documentation/Accelerate/vdsp/correlate-withkernelresult-1lb82.md",
+  "title": "correlate(:withKernel:result:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vdsp/correlate-withkernelresult-1lb82",
+  "segments": [
+    {
+      "id": "seg:heading:correlatewithkernelresult:0000:0001",
+      "source": "correlate(_:withKernel:result:)",
+      "ko": "correlate(_:withKernel:result:)",
+      "sourceHash": "2aeffaace14cf11075cc930db69c804f3c4b61e4db5d116a0370b1784bd41920",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:correlatewithkernelresult:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:correlatewithkernelresult:0002:0001",
+      "source": "Calculates the correlation of a double-precision signal vector and a filter vector.",
+      "ko": "Calculates the correlation of a double-precision signal vector and a filter vector.",
+      "sourceHash": "c00349c40a9851cd1e5307a3956cfe935a6f5fc37049e962b6eaee83d243824f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:correlatewithkernelresult:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:correlatewithkernelresult:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:correlatewithkernelresult:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:correlatewithkernelresult:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:correlatewithkernelresult:0004:0004",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:correlatewithkernelresult:0004:0005",
+      "source": "tvOS 13.0+",
+      "ko": "tvOS 13.0+",
+      "sourceHash": "030e6b7e51c85f674522c209ef14fc0e355ebd196e0259389daeaae4f69ad826",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:correlatewithkernelresult:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:correlatewithkernelresult:0004:0007",
+      "source": "watchOS 6.0+",
+      "ko": "watchOS 6.0+",
+      "sourceHash": "b51a82766977554dbe76aec20d5bc0ad6fe4984dddfcf6db82130e544b0631e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstatic func correlate<T, U, V>(_ vector: T, withKernel kernel: U, result: inout V) where T : AccelerateBuffer, U : AccelerateBuffer, V : AccelerateMutableBuffer, T.Element == Double, U.Element == Double, V.Element == Double\n```",
+      "ko": "```swift\nstatic func correlate<T, U, V>(_ vector: T, withKernel kernel: U, result: inout V) where T : AccelerateBuffer, U : AccelerateBuffer, V : AccelerateMutableBuffer, T.Element == Double, U.Element == Double, V.Element == Double\n```",
+      "sourceHash": "4b5e6d165c3fa53c7e2221a27f2697d3281918fe8b9a2ba5dddaa420fd555749",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0007:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0008:0001",
+      "source": "`vector`: The input signal vector.",
+      "ko": "`vector`: The input signal vector.",
+      "sourceHash": "112f75fb8fdbd34411fd398c5c2ab7453b9f8ac9f8eb043ed45cb20fa35b75f6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0008:0002",
+      "source": "`kernel`: The filter vector.",
+      "ko": "`kernel`: The filter vector.",
+      "sourceHash": "d37c0477a9da7a17e0acf8df383f4e9fda4f9e26a35d6446d387df0a249a79fc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0008:0003",
+      "source": "`result`: On output, the correlation result.",
+      "ko": "`result`: On output, the correlation result.",
+      "sourceHash": "9145c706a65ddd5ed3bf759770c31d46799d2e7270b3de8244bb0646e612d913",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[static func convolve<T, U>(T, withKernel: U) -> [Double]](vdsp/convolve(_:withkernel:)-1nv65.md)",
+      "ko": "[static func convolve<T, U>(T, withKernel: U) -> [Double]](vdsp/convolve(_:withkernel:)-1nv65.md)",
+      "sourceHash": "b56b61fa6e04be2a97fed9d629727554229d8edefec9bc13520dd24b0f7c63b9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "Returns the 1D convolution of a double-precision vector.",
+      "ko": "Returns the 1D convolution of a double-precision vector.",
+      "sourceHash": "5d1a822e4d42ebec084d71fea0094bcb24606f7069a45d61c640c3312fd3bcf1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[static func convolve<T, U>(T, withKernel: U) -> [Float]](vdsp/convolve(_:withkernel:)-4p0rt.md)",
+      "ko": "[static func convolve<T, U>(T, withKernel: U) -> [Float]](vdsp/convolve(_:withkernel:)-4p0rt.md)",
+      "sourceHash": "058e20f2aff6b1b2b629443f146f1ea8c3c4c3efbbb2e423fdacd08e67e0513e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Returns the 1D convolution of a single-precision vector.",
+      "ko": "단정밀도 벡터의 1D 컨볼루션을 반환합니다.",
+      "sourceHash": "ba8187f7f0ef5290e639ab01153c300bc7a0f5dd4d1696fe8bd927c5dce6ba9e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[static func convolve<T, U, V>(T, withKernel: U, result: inout V)](vdsp/convolve(_:withkernel:result:)-8j76l.md)",
+      "ko": "[static func convolve<T, U, V>(T, withKernel: U, result: inout V)](vdsp/convolve(_:withkernel:result:)-8j76l.md)",
+      "sourceHash": "dd8a6e6e0a4ae0403c67cb80dae5412db05f8d147725226972ec976da2d7a187",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Calculates the 1D convolution of a double-precision vector.",
+      "ko": "배정밀도 벡터의 1D 컨볼루션을 계산합니다.",
+      "sourceHash": "60e5c4c4022a61b17663b44c4e3e1d1ee7a12163a505fc5867acf731e149e267",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[static func convolve<T, U, V>(T, withKernel: U, result: inout V)](vdsp/convolve(_:withkernel:result:)-2z66w.md)",
+      "ko": "[static func convolve<T, U, V>(T, withKernel: U, result: inout V)](vdsp/convolve(_:withkernel:result:)-2z66w.md)",
+      "sourceHash": "e5c36881259f749e020aa058eb637f15921fc698742882ed93bf5d5073c0bba0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Calculates the 1D convolution of a single-precision vector.",
+      "ko": "단정밀도 벡터의 1D 컨볼루션을 계산합니다.",
+      "sourceHash": "1a9072711b8027d9accf0a50df956d19de96bd225d9f726fb98df612934dbbca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[static func correlate<T, U>(T, withKernel: U) -> [Double]](vdsp/correlate(_:withkernel:)-7f6o0.md)",
+      "ko": "[static func correlate<T, U>(T, withKernel: U) -> [Double]](vdsp/correlate(_:withkernel:)-7f6o0.md)",
+      "sourceHash": "fc97706beef884d3a737ab20ded6442dced7f0e0d0e215e29ce37127664501fa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Returns the correlation of a double-precision signal vector and a filter vector.",
+      "ko": "배정밀도 신호 벡터와 필터 벡터의 상관관계를 반환합니다.",
+      "sourceHash": "57e36c2bd1116f2bf726479d14cacf8cc7fa13335fbe4ccb312c90cd310c7666",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[static func correlate<T, U>(T, withKernel: U) -> [Float]](vdsp/correlate(_:withkernel:)-9sol8.md)",
+      "ko": "[static func correlate<T, U>(T, withKernel: U) -> [Float]](vdsp/correlate(_:withkernel:)-9sol8.md)",
+      "sourceHash": "f533bd256ab8ff2e0342625ba88c96b775631ea9f482eb88949d106694746960",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Returns the correlation of a single-precision signal vector and a filter vector.",
+      "ko": "단정밀도 신호 벡터와 필터 벡터의 상관관계를 반환합니다.",
+      "sourceHash": "f440a167d31d2a055144b7bca1ac597a983b9c730f3fe4198b52c6066d647f89",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[static func correlate<T, U, V>(T, withKernel: U, result: inout V)](vdsp/correlate(_:withkernel:result:)-377zj.md)",
+      "ko": "[static func correlate<T, U, V>(T, withKernel: U, result: inout V)](vdsp/correlate(_:withkernel:result:)-377zj.md)",
+      "sourceHash": "58a6799976e8f1d5f2726ff75ce13fb65db52dc32e57be6e0ba4e0a7f8f85d94",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Calculates the correlation of a single-precision signal vector and a filter vector.",
+      "ko": "단정밀도 신호 벡터와 필터 벡터의 상관관계를 계산합니다.",
+      "sourceHash": "cf39b435726132da7d10217558adaa9958212deba3e699a2ca17f57e44582009",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0024:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/correlate(_:withkernel:result:)-1lb82)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/correlate(_:withkernel:result:)-1lb82)*",
+      "sourceHash": "9a7819c00ec14eb48faab9cf99416184360fbbd921ebdb18b961e5e836239b56",
+      "status": "machine_translated"
+    }
+  ]
+}

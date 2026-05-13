@@ -37,7 +37,7 @@ var isCameraIntrinsicMatrixDeliveryEnabled: Bool { get set }
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0011:0001"><a href="avcaptureconnection/iscameraintrinsicmatrixdeliverysupported.md">var isCameraIntrinsicMatrixDeliverySupported: Bool</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0012:0001">A Boolean value that indicates whether the capture connection currently supports delivering camera intrinsics information.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0012:0001">*<a href="https://developer.apple.com/documentation/avfaudio/avaudiosessionspatialexperience-swift.protocol/headtracked(soundstagesize:anchoringstrategy:">Apple Developer에서 보기</a>)*</span>
 
 ---
 

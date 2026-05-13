@@ -36,11 +36,11 @@ static let eac3: AVFileType
 
 ## <span class="ko-segment" data-segment-id="seg:heading:see-also:0009:0001">See Also</span>
 
-- <span class="ko-segment" data-segment-id="seg:list:see-also:0010:0001"><a href="avfiletype/ahap.md">static let AHAP: AVFileType</a></span>
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0010:0001"><a href="avaudiosession/port/continuitymicrophone.md">static let continuityMicrophone: AVAudioSession.Port</a></span>
 
 <span class="ko-segment" data-segment-id="seg:paragraph:see-also:0011:0001">The UTI for the Apple Haptics Audio Pattern file format.</span>
 
-- <span class="ko-segment" data-segment-id="seg:list:see-also:0012:0001"><a href="avfiletype/scc.md">static let SCC: AVFileType</a></span>
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0012:0001"><a href="avaudiosession/port/linein.md">static let lineIn: AVAudioSession.Port</a></span>
 
 <span class="ko-segment" data-segment-id="seg:paragraph:see-also:0013:0001">The UTI for the Scenarist closed-caption file format.</span>
 

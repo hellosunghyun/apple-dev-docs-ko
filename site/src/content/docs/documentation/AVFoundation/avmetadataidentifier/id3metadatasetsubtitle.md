@@ -32,7 +32,7 @@ static let id3MetadataSetSubtitle: AVMetadataIdentifier
 
 ## <span class="ko-segment" data-segment-id="seg:heading:see-also:0007:0001">See Also</span>
 
-- <span class="ko-segment" data-segment-id="seg:list:see-also:0008:0001"><a href="avmetadataidentifier/id3metadataalbumsortorder.md">static let id3MetadataAlbumSortOrder: AVMetadataIdentifier</a></span>
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0008:0001"><a href="avaudiochannellayout/init(layout:">init(layout: UnsafePointer&lt;AudioChannelLayout&gt;)</a>.md)</span>
 
 <span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">An identifier that represents how to sort the album.</span>
 
@@ -48,7 +48,7 @@ static let id3MetadataSetSubtitle: AVMetadataIdentifier
 
 <span class="ko-segment" data-segment-id="seg:paragraph:see-also:0015:0001">An identifier that represents the encryption details of the audio stream.</span>
 
-- <span class="ko-segment" data-segment-id="seg:list:see-also:0016:0001"><a href="avmetadataidentifier/id3metadataaudioseekpointindex.md">static let id3MetadataAudioSeekPointIndex: AVMetadataIdentifier</a></span>
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0016:0001"><a href="avaudiochannellayout/isequal(_:">func isEqual(Any) -&gt; Bool</a>.md)</span>
 
 <span class="ko-segment" data-segment-id="seg:paragraph:see-also:0017:0001">An identifier that represents the list of seek points within the audio file.</span>
 

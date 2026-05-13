@@ -1,0 +1,281 @@
+{
+  "docId": "documentation/AVFoundation/avplayerinterstitialeventmonitor/events.md",
+  "title": "events",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avplayerinterstitialeventmonitor/events",
+  "segments": [
+    {
+      "id": "seg:heading:events:0000:0001",
+      "source": "events",
+      "ko": "events",
+      "sourceHash": "862417b9e7c3720bcb3263cd873b09892d787823b6f9a0f453e42824c5a4d4b6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:events:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:events:0002:0001",
+      "source": "The schedule of interstitial events.",
+      "ko": "The schedule of interstitial events.",
+      "sourceHash": "9f2321833bbf7e606e2139b72db284b5b004218d1f5cf7a11aac10f668897dcf",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:events:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:events:0004:0001",
+      "source": "iOS 15.0+",
+      "ko": "iOS 15.0+",
+      "sourceHash": "86b54448da2eb8626f00177bd04f05a8e48cee585c11805cf3f3e0d890c4e777",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:events:0004:0002",
+      "source": "iPadOS 15.0+",
+      "ko": "iPadOS 15.0+",
+      "sourceHash": "c7cbc9927b4ccc77db75d1ebf30fcc53090d5edd108c73c553dc668c46926af8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:events:0004:0003",
+      "source": "Mac Catalyst 15.0+",
+      "ko": "Mac Catalyst 15.0+",
+      "sourceHash": "9d0a6a3a1920dff6b27072e4fe1bcdd8a15ec1e6a32ea0e948a78c43ac895f9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:events:0004:0004",
+      "source": "macOS 12.0+",
+      "ko": "macOS 12.0+",
+      "sourceHash": "adffa1c4f69a9ee1f27b5e361c29af9b83d00fb7441c2e24713b7acb91ac5100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:events:0004:0005",
+      "source": "tvOS 15.0+",
+      "ko": "tvOS 15.0+",
+      "sourceHash": "129e8b0216e52c06ca36ea909fe3bc08430cea5008b00272663c5ef8fc40009b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:events:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:events:0004:0007",
+      "source": "watchOS 8.0+",
+      "ko": "watchOS 8.0+",
+      "sourceHash": "90537ceec9eedfc2f68972834c96c077f6da97806ac16905f54ad96fe4a01381",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar events: [AVPlayerInterstitialEvent] { get }\n```",
+      "ko": "```swift\nvar events: [AVPlayerInterstitialEvent] { get }\n```",
+      "sourceHash": "44080e8176a48d860ba6e00fee8c97256e94a7da4a1748dc3d64ac795b60d4e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "When the primary player’s content specifies the schedule of interstitial events intrinsically, this property value typically changes whenever primary player’s [`currentItem`](avplayer/currentitem.md) changes.",
+      "ko": "해당 값은 장치에 Desk View 카메라가 존재하는 경우 이를 제공하며, 이 카메라는 장치의 울트라 와이드 카메라에서 프레이밍을 파생합니다.",
+      "sourceHash": "2e6ee8f708fecc7bbd77a15c24312c76b4ec837b564fe7b46f57e9e8dd8d021f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "For HLS content that specifies interstitials using of `DATERANGE` tags, the value of this property may also change whenever the set of `DATERANGE` tags in the current item’s media playlist changes.",
+      "ko": "시스템에 여러 개의 Continuity Camera 디바이스가 있는 경우, 이 속성을 사용해 특정 인스턴스를 해당 Desk View 디바이스와 연결해야 합니다.",
+      "sourceHash": "493eb11964aecbc44351bb4c320bafd98e4f943e4a57ab904df3c69e0cf07719",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "When you specify the schedule of interstitial events using an [`AVPlayerInterstitialEventController`](avplayerinterstitialeventcontroller.md), this property value changes only when you update the interstitial event controller’s schedule.",
+      "ko": "이 속성의 값을 변경하기 전에 [`lockForConfiguration()`](avcapturedevice/lockforconfiguration().md) 을 호출해 장치 구성 속성에 대한 배타적 접근 권한을 먼저 획득해야 합니다.",
+      "sourceHash": "1388bcfced5275979214cfcf45dbb7ad97d1999db855297185e76443b8b79acd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0010:0001",
+      "source": "**Note**: The elements in the [`events`](avplayerinterstitialeventmonitor/events.md) array are immutable.",
+      "ko": "**Note**: The elements in the [`events`](avplayerinterstitialeventmonitor/events.md) array are immutable.",
+      "sourceHash": "24e2f53e087868563e3b1fdd94633a42fa66104db95ed8d1f6392747ee0e9e52",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:discussion:0010:0002",
+      "source": "Attempting to modify them generates an exception.",
+      "ko": "Attempting to modify them generates an exception.",
+      "sourceHash": "b097ab492b29cc93656efcb1e28eacf852139be2dbdbdfae7539321220bccaf8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:discussion:0010:0003",
+      "source": "To alter an event, make a copy and modify the new instance.",
+      "ko": "To alter an event, make a copy and modify the new instance.",
+      "sourceHash": "596e9e9172c0c64595b684f0bdf2ab69f2f9ce24372447f4c9169943e37ca618",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[class let eventsDidChangeNotification: NSNotification.Name](avplayerinterstitialeventmonitor/eventsdidchangenotification.md)",
+      "ko": "[class let eventsDidChangeNotification: NSNotification.Name](avplayerinterstitialeventmonitor/eventsdidchangenotification.md)",
+      "sourceHash": "c1b7f9d79d4e0ab9d68c26edfcc6bb9ce2266395c4c585aa7060e0c404c54387",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "A notification the system posts when the monitor’s schedule of interstitial events changes.",
+      "ko": "A notification the system posts when the monitor’s schedule of interstitial events changes.",
+      "sourceHash": "cdff8b45b95b12dca1857bf25a3d340b2b84f06c38d536e66d05f0079b1d1e61",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[class let interstitialEventWasUnscheduledNotification: NSNotification.Name](avplayerinterstitialeventmonitor/interstitialeventwasunschedulednotification.md)",
+      "ko": "[class let interstitialEventWasUnscheduledNotification: NSNotification.Name](avplayerinterstitialeventmonitor/interstitialeventwasunschedulednotification.md)",
+      "sourceHash": "0c92df6da329fe3c03406840fa29a7112430ce7a9cfbe17aa3c0a77bd7a3d3d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A notification that is posted whenever an AVPlayerInterstitialEvent with loaded assets was unscheduled prior to playing.",
+      "ko": "A notification that is posted whenever an AVPlayerInterstitialEvent with loaded assets was unscheduled prior to playing.",
+      "sourceHash": "e47d1fd193f92913dd4a862ffa4c005097f102b5f6d8721bcfc5b5ac019c404b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[class let interstitialEventWasUnscheduledEventKey: String](avplayerinterstitialeventmonitor/interstitialeventwasunscheduledeventkey.md)",
+      "ko": "[class let interstitialEventWasUnscheduledEventKey: String](avplayerinterstitialeventmonitor/interstitialeventwasunscheduledeventkey.md)",
+      "sourceHash": "655f096943d710068fa8812158fae17c854846eb4716ca31a55a614609370769",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "The dictionary key for the AVPlayerInterstitialEvent that was unscheduled in the payload of the AVPlayerInterstitialEventMonitorInterstitialEventWasUnscheduledNotification.",
+      "ko": "The dictionary key for the AVPlayerInterstitialEvent that was unscheduled in the payload of the AVPlayerInterstitialEventMonitorInterstitialEventWasUnscheduledNotification.",
+      "sourceHash": "cca4f0a3cec8a0f19d40b690247db46f43e8f6575d4fdf68160416250243a6c4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[class let interstitialEventWasUnscheduledErrorKey: String](avplayerinterstitialeventmonitor/interstitialeventwasunschedulederrorkey.md)",
+      "ko": "[class let interstitialEventWasUnscheduledErrorKey: String](avplayerinterstitialeventmonitor/interstitialeventwasunschedulederrorkey.md)",
+      "sourceHash": "90817d1cc67048b37923807f84534de2fcf9b71685dad6d50f4705c9dee84e24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "The dictionary key to indicate whether the event that was unscheduled was due to an error.",
+      "ko": "The dictionary key to indicate whether the event that was unscheduled was due to an error.",
+      "sourceHash": "b382718e65eada9c069448875f77756f989eb88fe545692bc7268fa46b38e1d4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[class let interstitialEventDidFinishNotification: NSNotification.Name](avplayerinterstitialeventmonitor/interstitialeventdidfinishnotification.md)",
+      "ko": "[class let interstitialEventDidFinishNotification: NSNotification.Name](avplayerinterstitialeventmonitor/interstitialeventdidfinishnotification.md)",
+      "sourceHash": "ab5488ee22b21dc87629d510fc928faef994bc07d0b43eaf48a8c212742634f7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "A notification that is posted whenever an AVPlayerInterstitialEvent finished playing.",
+      "ko": "A notification that is posted whenever an AVPlayerInterstitialEvent finished playing.",
+      "sourceHash": "67e5a794ec7881386025bf1d3f20953fc7eb0f74f23caa8131f1671766373620",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[class let interstitialEventDidFinishEventKey: String](avplayerinterstitialeventmonitor/interstitialeventdidfinisheventkey.md)",
+      "ko": "[class let interstitialEventDidFinishEventKey: String](avplayerinterstitialeventmonitor/interstitialeventdidfinisheventkey.md)",
+      "sourceHash": "b89022cca0ba06b836f1f07ae839ec2d4d36ca1a6b4e83c537fa9bcabb938de0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "The dictionary key for the AVPlayerInterstitialEvent that finished playing in the payload of the AVPlayerInterstitialEventMonitorInterstitialEventDidFinishNotification.",
+      "ko": "The dictionary key for the AVPlayerInterstitialEvent that finished playing in the payload of the AVPlayerInterstitialEventMonitorInterstitialEventDidFinishNotification.",
+      "sourceHash": "814afeb964384e6560afaf840055546a7e0845c708ff338628c2e8b17ada4d77",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[class let interstitialEventDidFinishPlayoutTimeKey: String](avplayerinterstitialeventmonitor/interstitialeventdidfinishplayouttimekey.md)",
+      "ko": "[class let interstitialEventDidFinishPlayoutTimeKey: String](avplayerinterstitialeventmonitor/interstitialeventdidfinishplayouttimekey.md)",
+      "sourceHash": "16fa14cacb2d46a09e795b1759c70dc98cf5d56197daaba19291483469249cfa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "The dictionary key for the playout time of the event that finished playing in the payload of the AVPlayerInterstitialEventMonitorInterstitialEventDidFinishNotification.",
+      "ko": "The dictionary key for the playout time of the event that finished playing in the payload of the AVPlayerInterstitialEventMonitorInterstitialEventDidFinishNotification.",
+      "sourceHash": "cf206d47d02a175d824d72b78990620a938382d2fcc9aa55c4c83acf8c871b9e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[class let interstitialEventDidFinishDidPlayEntireEventKey: String](avplayerinterstitialeventmonitor/interstitialeventdidfinishdidplayentireeventkey.md)",
+      "ko": "[class let interstitialEventDidFinishDidPlayEntireEventKey: String](avplayerinterstitialeventmonitor/interstitialeventdidfinishdidplayentireeventkey.md)",
+      "sourceHash": "f6048c49de35fa0da0c6f7c6c98879c05a5fb337fd27583f8f55761dbc879695",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "The dictionary key to indicate whether the event that finished playing was fully played out in the payload of the AVPlayerInterstitialEventMonitorInterstitialEventDidFinishNotification.",
+      "ko": "기본 구성 장치의 전환 동작을 설정합니다.",
+      "sourceHash": "15d59fb15a6c63cb3c02f8dca8db10ffa769778c1f4d7a1ca7d6f0ecff3663db",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0028:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayerinterstitialeventmonitor/events)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayerinterstitialeventmonitor/events)*",
+      "sourceHash": "b6dd8f720d23e5d7b8a385f0902e5ac2965fb07d72e11a660ad08aa4bfabf1b8",
+      "status": "preserved"
+    }
+  ]
+}

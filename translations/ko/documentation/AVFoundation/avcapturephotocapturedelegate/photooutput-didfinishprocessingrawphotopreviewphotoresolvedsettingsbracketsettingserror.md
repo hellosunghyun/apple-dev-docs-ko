@@ -47,11 +47,11 @@ optional func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingRaw
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0014:0001"><a href="avcapturephotocapturedelegate/photooutput(_:didfinishprocessingphoto:error:">func photoOutput(AVCapturePhotoOutput, didFinishProcessingPhoto: AVCapturePhoto, error: (any Error)?)</a>.md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0015:0001">Provides the delegate with the captured image and associated metadata resulting from a photo capture.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0015:0001">다른 앱의 주요 오디오가 시작 및 중단될 때 시스템이 게시하는 알림입니다.</span>
 
-- <span class="ko-segment" data-segment-id="seg:list:see-also:0016:0001"><a href="avcapturephotocapturedelegate/photooutput(_:didfinishrecordinglivephotomovieforeventualfileat:resolvedsettings:">func photoOutput(AVCapturePhotoOutput, didFinishRecordingLivePhotoMovieForEventualFileAt: URL, resolvedSettings: AVCaptureResolvedPhotoSettings)</a>.md)</span>
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0016:0001"><a href="avaudiosession/setallowhapticsandsystemsoundsduringrecording(_:">func setAllowHapticsAndSystemSoundsDuringRecording(Bool) throws</a>.md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0017:0001">Notifies the delegate that the movie content of a Live Photo has finished recording.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0017:0001">오디오 입력으로 녹음할 때 시스템 사운드와 햅틱이 재생되는지 여부를 나타내는 Boolean 값을 설정합니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0018:0001"><a href="avcapturephotocapturedelegate/photooutput(_:didfinishprocessinglivephototomoviefileat:duration:photodisplaytime:resolvedsettings:error:">func photoOutput(AVCapturePhotoOutput, didFinishProcessingLivePhotoToMovieFileAt: URL, duration: CMTime, photoDisplayTime: CMTime, resolvedSettings: AVCaptureResolvedPhotoSettings, error: (any Error)?)</a>.md)</span>
 

@@ -27,11 +27,11 @@ official: false
 static var deviceIsNotAvailableInBackground: AVError.Code { get }
 ```
 
-## <span class="ko-segment" data-segment-id="seg:heading:see-also:0007:0001">See Also</span>
+## <span class="ko-segment" data-segment-id="seg:heading:see-also:0007:0001">참고 항목</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0008:0001"><a href="averror-swift.struct/code.md">AVError.Code</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">An enumeration that defines the errors that framework operations can generate.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">ARKit가 특정 인덱스에서 관절을 추적하는지 여부를 알려줍니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0010:0001"><a href="averror-swift.struct/airplaycontrollerrequiresinternet.md">static var airPlayControllerRequiresInternet: AVError.Code</a></span>
 

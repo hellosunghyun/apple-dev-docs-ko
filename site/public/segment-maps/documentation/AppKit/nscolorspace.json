@@ -1,0 +1,624 @@
+{
+  "docId": "documentation/AppKit/nscolorspace.md",
+  "title": "NSColorSpace",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appkit/nscolorspace",
+  "segments": [
+    {
+      "id": "seg:heading:nscolorspace:0000:0001",
+      "source": "NSColorSpace",
+      "ko": "NSColorSpace",
+      "sourceHash": "751517fa6540e099704f1471666ab268160f8eda4959f27761239d33244fe1a8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:nscolorspace:0001:0001",
+      "source": "**Framework**: AppKit **Kind**: class",
+      "ko": "**Framework**: AppKit **Kind**: class",
+      "sourceHash": "62e3328cefea10ca1ce6cf0cc46c401f24af8d93ad6724316003cf14d75926bf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:nscolorspace:0002:0001",
+      "source": "An object that represents a custom color space.",
+      "ko": "사용자 지정 색상 공간을 나타내는 객체입니다.",
+      "sourceHash": "5cec5cec1a4ff6613e5e090cbd1a3898b8fa29339d182c7c0418db4c676aadf3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:nscolorspace:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:nscolorspace:0004:0001",
+      "source": "macOS ?+",
+      "ko": "macOS ?+",
+      "sourceHash": "7565f9a2fe151983964ce7f1a1fff21dbf4130de4d3457f25bd88800eafbe279",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass NSColorSpace\n```",
+      "ko": "```swift\nclass NSColorSpace\n```",
+      "sourceHash": "a4f14845f5e0c0661b78e1c34744080f90127390837c04b955a0ab7cf7aa8294",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "You can make custom color spaces from ColorSync profiles or from ICC profiles.",
+      "ko": "ColorSync 프로필이나 ICC 프로필을 사용해 사용자 지정 색상 공간을 만들 수 있습니다.",
+      "sourceHash": "bca42588069ac0f5c1729d76c146a343ce9e88e2e10942cd39c87fc35ff414b0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "[`NSColorSpace`](nscolorspace.md) also has factory methods that return objects representing the system color spaces.",
+      "ko": "[`NSColorSpace`](nscolorspace.md)에는 시스템 색상 공간을 나타내는 객체를 반환하는 팩토리 메서드도 있습니다.",
+      "sourceHash": "0541850b530c1fc3838dea8a0f1d8195bea2fc287bb1fac661ed8b3b6083bbc4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "You can use the [`init(colorSpace:components:count:)`](nscolor/init(colorspace:components:count:).md) method of the [`NSColor`](nscolor.md) class to create color objects using custom [`NSColorSpace`](nscolorspace.md) objects.",
+      "ko": "[`NSColor`](nscolor.md) 클래스의 [`init(colorSpace:components:count:)`](nscolor/init(colorspace:components:count:).md) 메서드를 사용하면 사용자 지정 [`NSColorSpace`](nscolorspace.md) 객체를 기반으로 색상 객체를 생성할 수 있습니다.",
+      "sourceHash": "406f707aa00295af27b55781bc8fbd45a45dd265fb414e0ac5392f137e0f1aec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "You can also send the [`usingColorSpace(_:)`](nscolor/usingcolorspace(_:).md) message to an [`NSColor`](nscolor.md) object to convert it between two color spaces, either of which may be a custom color space.",
+      "ko": "[`NSColor`](nscolor.md) 객체에 [`usingColorSpace(_:)`](nscolor/usingcolorspace(_:).md) 메시지를 보내면 두 개의 색상 공간(둘 다 사용자 지정 색상 공간일 수 있음) 사이를 변환할 수 있습니다.",
+      "sourceHash": "3b70b6fe982127eefef56ab921c05d9d2d6f3d67e8dd54612f37d41e1e2d1af8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0010:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:getting-a-named-color-space:0011:0001",
+      "source": "Getting a Named Color Space",
+      "ko": "이름으로 지정된 색상 공간 가져오기",
+      "sourceHash": "68eb3fa5bcd3d03c8f244f8bbb9b3f35f64f1d855a14269bd13a1a6144ea9861",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0012:0001",
+      "source": "[class var deviceRGB: NSColorSpace](nscolorspace/devicergb.md)",
+      "ko": "[class var deviceRGB: NSColorSpace](nscolorspace/devicergb.md)",
+      "sourceHash": "c819021161136b14485a1eb17de42cb4610f94dcc42cbe9ef834612ebc0e2371",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0013:0001",
+      "source": "A color space object that represents a calibrated or device-dependent RGB color space.",
+      "ko": "보정되었거나 장치 종속 RGB 색상 공간을 나타내는 색상 공간 객체입니다.",
+      "sourceHash": "f3844a69220a07c712bc2f3c930c021613815f410249277d66079644ace47eb3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0014:0001",
+      "source": "[class var genericRGB: NSColorSpace](nscolorspace/genericrgb.md)",
+      "ko": "[class var genericRGB: NSColorSpace](nscolorspace/genericrgb.md)",
+      "sourceHash": "46789f8224c7ecdfbae881b45ebe8fa39a998122d6040aace4318aaec26c1d77",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0015:0001",
+      "source": "A color space object that represents a device-independent RGB color space.",
+      "ko": "장치 독립적인 RGB 색상 공간을 나타내는 색상 공간 객체입니다.",
+      "sourceHash": "d8e9e87cb552f97949298613556b495db72b143638db5758ffac8bdb2811c618",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0016:0001",
+      "source": "[class var deviceCMYK: NSColorSpace](nscolorspace/devicecmyk.md)",
+      "ko": "[class var deviceCMYK: NSColorSpace](nscolorspace/devicecmyk.md)",
+      "sourceHash": "f6d5709eaab17b98deb41f99bacd1c85bd89cbc6b22ce9013209f048a9f5fb5a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0017:0001",
+      "source": "A color space object that represents a calibrated or device-dependent CMYK color space.",
+      "ko": "보정된 또는 장치 종속 CMYK 색 공간을 나타내는 색 공간 객체입니다.",
+      "sourceHash": "302e0e680559aaa630c59aa9e60c133c02c7b6a2d2313558fdb6b2759b464605",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0018:0001",
+      "source": "[class var genericCMYK: NSColorSpace](nscolorspace/genericcmyk.md)",
+      "ko": "[class var genericCMYK: NSColorSpace](nscolorspace/genericcmyk.md)",
+      "sourceHash": "b90c985ce66aae5ee1d772f885e254989dbbc123610c1a58499e3b14a7e79a27",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0019:0001",
+      "source": "A color space object that represents a device-independent CMYK color space.",
+      "ko": "기기 독립 CMYK 색 공간을 나타내는 색 공간 객체입니다.",
+      "sourceHash": "dd83005deb9ac3692203972c0606ed05860a0d500eb228c7a2c660b90aba2c94",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0020:0001",
+      "source": "[class var deviceGray: NSColorSpace](nscolorspace/devicegray.md)",
+      "ko": "[class var deviceGray: NSColorSpace](nscolorspace/devicegray.md)",
+      "sourceHash": "2af870491cc3a06e69327643358aff037228ba7699d63f07a097491e0ae06b20",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0021:0001",
+      "source": "A color space object that represents a calibrated or device-dependent gray color space.",
+      "ko": "보정된 또는 장치 종속 회색 색 공간을 나타내는 색 공간 객체입니다.",
+      "sourceHash": "b8d9a0572b63ccac7e781bcd3b7dc602875516a43dfbe8484e3ef4afa12026f6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0022:0001",
+      "source": "[class var genericGray: NSColorSpace](nscolorspace/genericgray.md)",
+      "ko": "[class var genericGray: NSColorSpace](nscolorspace/genericgray.md)",
+      "sourceHash": "5a803f00b998cfea8a4c31f19fa815aacdb447e9ef749c74d520b1818b53c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0023:0001",
+      "source": "A color space object that represents a device-independent gray color space.",
+      "ko": "기기 독립 회색 색 공간을 나타내는 색 공간 객체입니다.",
+      "sourceHash": "9465f598bee60e91a7897865fea3548ad6fa62656b4a604b9daa7a2f8e62cf55",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0024:0001",
+      "source": "[class var sRGB: NSColorSpace](nscolorspace/srgb.md)",
+      "ko": "[class var sRGB: NSColorSpace](nscolorspace/srgb.md)",
+      "sourceHash": "426fc187e01874d8a7dd9198c7521748c19ee6b6eda4db40163ef440ba3672d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0025:0001",
+      "source": "A color space object that represents an sRGB color space.",
+      "ko": "sRGB 색 공간을 나타내는 색 공간 객체입니다.",
+      "sourceHash": "7760abe0bf8aea2a80a576999a4e65f12afa3c4878a936d8a5f7d496c9a0633c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0026:0001",
+      "source": "[class var extendedSRGB: NSColorSpace](nscolorspace/extendedsrgb.md)",
+      "ko": "[class var extendedSRGB: NSColorSpace](nscolorspace/extendedsrgb.md)",
+      "sourceHash": "c89c743815d0579402ef775ff7b17729d157b6c6d17f60b6da1dbae17c19eca0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0027:0001",
+      "source": "A color space object that represents an extended sRGB color space.",
+      "ko": "확장 sRGB 색 공간을 나타내는 색 공간 객체입니다.",
+      "sourceHash": "b470820c03585c5ead5ec419353216eed5efb20030971afb15acb7a8a3772389",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0028:0001",
+      "source": "[class var displayP3: NSColorSpace](nscolorspace/displayp3.md)",
+      "ko": "[class var displayP3: NSColorSpace](nscolorspace/displayp3.md)",
+      "sourceHash": "fd9d8f11d88332a8d7ea937833b0d85151f3a6f778d66a63a49300016a99ea6e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0029:0001",
+      "source": "A color space object that represents a P3 Display color space.",
+      "ko": "P3 Display 색 공간을 나타내는 색 공간 객체입니다.",
+      "sourceHash": "8b24f6111b976a3c18a905bcb12ae2ef70793e1422f52ba1f339e40e9b321677",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0030:0001",
+      "source": "[class var genericGamma22Gray: NSColorSpace](nscolorspace/genericgamma22gray.md)",
+      "ko": "[class var genericGamma22Gray: NSColorSpace](nscolorspace/genericgamma22gray.md)",
+      "sourceHash": "08fd0f704683829030234cd0b24bc4cddb18b04cd6c646b4f7ab851bbff5a7d7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0031:0001",
+      "source": "A color space object that represents a gray color space with a gamma value of 2.2.",
+      "ko": "감마 값이 2.2인 회색 색 공간을 나타내는 색 공간 객체입니다.",
+      "sourceHash": "360014ed47865cc01a180f72b365fa9edcfe1bb921ea9b99a7ae7b99a8bd6d3e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0032:0001",
+      "source": "[class var extendedGenericGamma22Gray: NSColorSpace](nscolorspace/extendedgenericgamma22gray.md)",
+      "ko": "[class var extendedGenericGamma22Gray: NSColorSpace](nscolorspace/extendedgenericgamma22gray.md)",
+      "sourceHash": "71fd27ba9d9935b966a99b92e33af7c483a8c8399a2e72db317fdb37eebd1ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0033:0001",
+      "source": "A color space object that represents an extended gray color space with a gamma value of 2.2.",
+      "ko": "감마 값이 2.2인 확장 회색 색 공간을 나타내는 색 공간 객체입니다.",
+      "sourceHash": "88e8a8039d6d5a719700448a920421569f64d6f4a5395c30ec2280396b60bb74",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-a-named-color-space:0034:0001",
+      "source": "[class var adobeRGB1998: NSColorSpace](nscolorspace/adobergb1998.md)",
+      "ko": "[class var adobeRGB1998: NSColorSpace](nscolorspace/adobergb1998.md)",
+      "sourceHash": "851b5aeae2b769aff9588232dc000f5a76f228caae5c32a00e001258523f4c3c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:getting-a-named-color-space:0035:0001",
+      "source": "A color space object that represents an Adobe RGB (1998) color space.",
+      "ko": "Adobe RGB (1998) 색 공간을 나타내는 색 공간 객체입니다.",
+      "sourceHash": "b01c76c4dc0c496d5d8fe7305b4008dceba1cb6c8fad301bdcc3028f3bc2615b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:getting-the-color-spaces-available-on-the-system:0036:0001",
+      "source": "Getting the Color Spaces Available On the System",
+      "ko": "시스템에서 사용 가능한 색 공간 가져오기",
+      "sourceHash": "05384f4d07bda32bbf88754030b583fee5eac22983ea4c04acad269a99a108ef",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:getting-the-color-spaces-available-on-the-system:0037:0001",
+      "source": "[class func availableColorSpaces(with: NSColorSpace.Model) -> [NSColorSpace]](nscolorspace/availablecolorspaces(with:).md)",
+      "ko": "[class func availableColorSpaces(with: NSColorSpace.Model) -> [NSColorSpace]](nscolorspace/availablecolorspaces(with:).md)",
+      "sourceHash": "859c9e8b741efbcaf7304bdf020c5cb8f9f44dbc860bbd32dc0044e5cf998d03",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:getting-the-color-spaces-available-on-the-system:0038:0001",
+      "source": "Returns the list of color spaces available on the system that are displayed in the color panel, in the order they are displayed in the color panel.",
+      "ko": "색상 패널에 표시되는 시스템의 사용 가능한 색 공간 목록을 색상 패널 표시 순서대로 반환합니다.",
+      "sourceHash": "c6511a9d462292c938701f72c76afc1f657b5909645fa11ac9351059624f7d0a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:initializing-a-custom-color-space-object:0039:0001",
+      "source": "Initializing a Custom Color Space Object",
+      "ko": "사용자 지정 색 공간 객체 초기화",
+      "sourceHash": "a20161eb6a000c486ccb77f945d8fd3909eb91044589f3d68a621e2368c993be",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:initializing-a-custom-color-space-object:0040:0001",
+      "source": "[init?(cgColorSpace: CGColorSpace)](nscolorspace/init(cgcolorspace:)-889nv.md)",
+      "ko": "[init?(cgColorSpace: CGColorSpace)](nscolorspace/init(cgcolorspace:)-889nv.md)",
+      "sourceHash": "97dde2ffd53acf93c88111e0755836a2338f0ab461b47d2db228904187e4e183",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:initializing-a-custom-color-space-object:0041:0001",
+      "source": "Initializes and returns a color space object initialized from a Core Graphics color-space object.",
+      "ko": "Core Graphics 색 공간 객체에서 초기화된 색 공간 객체를 생성하고 반환합니다.",
+      "sourceHash": "3e94a66316068ac9d55c656a1a75716cf1bcfad8a4b458719e82d16f40ba7a2b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:initializing-a-custom-color-space-object:0042:0001",
+      "source": "[init?(colorSyncProfile: UnsafeMutableRawPointer)](nscolorspace/init(colorsyncprofile:).md)",
+      "ko": "[init?(colorSyncProfile: UnsafeMutableRawPointer)](nscolorspace/init(colorsyncprofile:).md)",
+      "sourceHash": "5194c2f76196d6f4aa975b9f416cfe43caaeff8d7b94645aaa128c7ff7003d10",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:initializing-a-custom-color-space-object:0043:0001",
+      "source": "Initializes and returns a color space object from the specified ColorSync profile.",
+      "ko": "지정된 ColorSync 프로필에서 색 공간 객체를 초기화하고 반환합니다.",
+      "sourceHash": "1696b18a53c9a56c191a2290c6da39e0f478ba6688dec63ebdcf70c57948d01c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:initializing-a-custom-color-space-object:0044:0001",
+      "source": "[init?(iccProfileData: Data)](nscolorspace/init(iccprofiledata:)-8rl9d.md)",
+      "ko": "[init?(iccProfileData: Data)](nscolorspace/init(iccprofiledata:)-8rl9d.md)",
+      "sourceHash": "9e3681993bacfe5017515840f11805fd8e6eaa343738c96b1651f26fc905ff61",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:initializing-a-custom-color-space-object:0045:0001",
+      "source": "Initializes and returns a color space object from the specified ICC profile.",
+      "ko": "지정된 ICC 프로필에서 색 공간 객체를 초기화하고 반환합니다.",
+      "sourceHash": "1b7d0b991c487e22a0718e4c2c4fdb916192ec315e70bd191d8339ee915096e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:accessing-color-space-data-and-attributes:0046:0001",
+      "source": "Accessing Color Space Data and Attributes",
+      "ko": "색 공간 데이터 및 속성에 접근하기",
+      "sourceHash": "16090c9cc904294429edff12647fd277c640fc39bbfd4c0617ff5924aae31b08",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-color-space-data-and-attributes:0047:0001",
+      "source": "[var cgColorSpace: CGColorSpace?](nscolorspace/cgcolorspace.md)",
+      "ko": "[var cgColorSpace: CGColorSpace?](nscolorspace/cgcolorspace.md)",
+      "sourceHash": "b919f490fd730be95dabd0a06a3f1f2fadbbff5ae3dae99aafbacd1192b0a16b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-color-space-data-and-attributes:0048:0001",
+      "source": "The Core Graphics color-space object that represents a color space equivalent to the color space’s.",
+      "ko": "색 공간과 동등한 Core Graphics 색 공간 객체입니다.",
+      "sourceHash": "87e4f4a97e6b285f28b03f129fb9d80b3ad891bd80a6c3b373a2db7bf9eeb25a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-color-space-data-and-attributes:0049:0001",
+      "source": "[var colorSpaceModel: NSColorSpace.Model](nscolorspace/colorspacemodel.md)",
+      "ko": "[var colorSpaceModel: NSColorSpace.Model](nscolorspace/colorspacemodel.md)",
+      "sourceHash": "4f3b6d0ee5f103952d8b3bb2fbae6cb2b686d0f8ff2d22648d70b1b418c31e67",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-color-space-data-and-attributes:0050:0001",
+      "source": "The model on which the color space is based.",
+      "ko": "색 공간이 기반으로 하는 모델입니다.",
+      "sourceHash": "5238a7b829a11f93f72d43c56e5c0e2304b71b4709090e9a3bca02f670e9e8e8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-color-space-data-and-attributes:0051:0001",
+      "source": "[NSColorSpace.Model](nscolorspace/model.md)",
+      "ko": "[NSColorSpace.Model](nscolorspace/model.md)",
+      "sourceHash": "745975dd8b6a9b748746f4685fcad5fc9cae3d70a0b6104e5bdc9394f8984821",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-color-space-data-and-attributes:0052:0001",
+      "source": "Constants that describe the abstract model on which color space objects are based.",
+      "ko": "색 공간 객체가 기반으로 하는 추상 모델을 설명하는 상수입니다.",
+      "sourceHash": "a49529e613ffef3d5a7ca315af539aa39e2ac357126db28d59727da7c15f452b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-color-space-data-and-attributes:0053:0001",
+      "source": "[var colorSyncProfile: UnsafeMutableRawPointer?](nscolorspace/colorsyncprofile.md)",
+      "ko": "[var colorSyncProfile: UnsafeMutableRawPointer?](nscolorspace/colorsyncprofile.md)",
+      "sourceHash": "f7cb5503e862a362ddcf04073a0801897e1dde4915f07af3eec4fb3c8cd7fc2e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-color-space-data-and-attributes:0054:0001",
+      "source": "The ColorSync profile from which the color space was created.",
+      "ko": "색 공간이 생성된 ColorSync 프로필입니다.",
+      "sourceHash": "3c79949742ce4664217ce5334481d9a8ff693f2d2ef28e38375aba3b34c61ad6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-color-space-data-and-attributes:0055:0001",
+      "source": "[var iccProfileData: Data?](nscolorspace/iccprofiledata.md)",
+      "ko": "[var iccProfileData: Data?](nscolorspace/iccprofiledata.md)",
+      "sourceHash": "fdd0ef31549d1100f94963ba5666838979f8eda5bb8ef839b3953049f3d8e510",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-color-space-data-and-attributes:0056:0001",
+      "source": "The ICC profile data from which the color space was created.",
+      "ko": "색 공간이 생성된 ICC 프로필 데이터입니다.",
+      "sourceHash": "c8ef543c97d292b0e195cfb40570eabd70cf64649689a356f82f51550425442b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-color-space-data-and-attributes:0057:0001",
+      "source": "[var localizedName: String?](nscolorspace/localizedname.md)",
+      "ko": "[var localizedName: String?](nscolorspace/localizedname.md)",
+      "sourceHash": "2e420e3735f736a48b5e917154ea4c9b36e9078985042ca82e9d37d2fedb1784",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-color-space-data-and-attributes:0058:0001",
+      "source": "The localized name of the color space.",
+      "ko": "색 공간의 로컬라이즈된 이름입니다.",
+      "sourceHash": "f4e064eebd52351388d109d57dd0d65ee075751bdd641f119696a86f148197e5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:accessing-color-space-data-and-attributes:0059:0001",
+      "source": "[var numberOfColorComponents: Int](nscolorspace/numberofcolorcomponents.md)",
+      "ko": "[var numberOfColorComponents: Int](nscolorspace/numberofcolorcomponents.md)",
+      "sourceHash": "40c3922f91ad67f4bfa3414898b91dfdada4f397584afd6f376feef385053577",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-color-space-data-and-attributes:0060:0001",
+      "source": "The number of components, excluding alpha, the color space supports.",
+      "ko": "색 공간이 알파를 제외하고 지원하는 구성요소 수입니다.",
+      "sourceHash": "1ca182882491b3cfc7a1a7b61c324d5940895ec4a4ab11cbd8143997ac7181e9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:initializers:0061:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0062:0001",
+      "source": "[init?(CGColorSpace: CGColorSpace)](nscolorspace/init(cgcolorspace:)-90qpy.md)",
+      "ko": "[init?(CGColorSpace: CGColorSpace)](nscolorspace/init(cgcolorspace:)-90qpy.md)",
+      "sourceHash": "e65a5d0b4ade9c8920d0ff4b27c653a81ef59eac43105fcd4d7c98f2f6d949b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:initializers:0062:0002",
+      "source": "[init?(ICCProfileData: Data)](nscolorspace/init(iccprofiledata:)-jhas.md)",
+      "ko": "[init?(ICCProfileData: Data)](nscolorspace/init(iccprofiledata:)-jhas.md)",
+      "sourceHash": "99ec8bb59a6c6d55500076a7dc37f91550e849b91e47b8df8f7d39d3c930cf11",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:initializers:0062:0003",
+      "source": "[init?(coder: NSCoder)](nscolorspace/init(coder:).md)",
+      "ko": "[init?(coder: NSCoder)](nscolorspace/init(coder:).md)",
+      "sourceHash": "e7d06e53f111f04ff6af318778d08b27ec41d954c5526a2dee4f9c0da4a5e274",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0063:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0064:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0065:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0066:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0067:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0067:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0067:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0067:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0067:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0067:0006",
+      "source": "[NSCoding](../Foundation/NSCoding.md)",
+      "ko": "[NSCoding](../Foundation/NSCoding.md)",
+      "sourceHash": "af607052cedc51e60ff863609cb573f7fdea5ddf489103c8b59416e9aa32e36a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0067:0007",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0067:0008",
+      "source": "[NSSecureCoding](../Foundation/NSSecureCoding.md)",
+      "ko": "[NSSecureCoding](../Foundation/NSSecureCoding.md)",
+      "sourceHash": "e80dfbc2e883ff92db27afe0edc4d86a1a41b3b289cd23f70bb52edcc387180a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0067:0009",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0067:0010",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0068:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0069:0001",
+      "source": "[class NSColor](nscolor.md)",
+      "ko": "[class NSColor](nscolor.md)",
+      "sourceHash": "9dbf5c6a00f6a22c31c1290f8bdef248ac912f9497eb2828dc954b6129367d67",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0070:0001",
+      "source": "An object that stores color data and sometimes opacity (alpha value).",
+      "ko": "색상 데이터와 경우에 따라 불투명도(알파 값)를 저장하는 객체입니다.",
+      "sourceHash": "c31aa2c8865041a8ebde2864f1e8c635a9636d9cd0ad73eadef3016394273782",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0071:0001",
+      "source": "[class NSColorList](nscolorlist.md)",
+      "ko": "[class NSColorList](nscolorlist.md)",
+      "sourceHash": "5c64dc2cc4952f69535116be49038fd20343235c0ad0051c1696f8736be8371f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0072:0001",
+      "source": "An ordered list of color objects, identified by keys.",
+      "ko": "키로 식별되는 색상 객체의 순서가 지정된 목록입니다.",
+      "sourceHash": "fd8a0abc435e8e181e2abcc44ce1614971bb4609ccfd2d34e8e13fd79fe88aa6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0073:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0074:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nscolorspace)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nscolorspace)*",
+      "sourceHash": "6f41e9a2845aba69268f27a24d1447bb465975547b10ef9502b0443fd35b8c23",
+      "status": "preserved"
+    }
+  ]
+}

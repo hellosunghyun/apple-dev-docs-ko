@@ -38,7 +38,7 @@ static let quickTimeMetadataVideoOrientation: AVMetadataIdentifier
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0010:0001"><a href="avmetadataidentifier/quicktimemetadataaccessibilitydescription.md">static let quickTimeMetadataAccessibilityDescription: AVMetadataIdentifier</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0011:0001">An identifier that represents the accessibility description for the movie file content.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0011:0001">object-tracking provider의 오류 코드 열거형입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0012:0001"><a href="avmetadataidentifier/quicktimemetadataalbum.md">static let quickTimeMetadataAlbum: AVMetadataIdentifier</a></span>
 

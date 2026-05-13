@@ -1,0 +1,197 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedataoutputsynchronizer/setdelegate-queue.md",
+  "title": "setDelegate(:queue:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedataoutputsynchronizer/setdelegate-queue",
+  "segments": [
+    {
+      "id": "seg:heading:setdelegatequeue:0000:0001",
+      "source": "setDelegate(_:queue:)",
+      "ko": "setDelegate(_:queue:)",
+      "sourceHash": "25c26966c142c7b63ae089b5776e696699389eb84a9ca4f0a3e818aa16f4fe92",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:setdelegatequeue:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:setdelegatequeue:0002:0001",
+      "source": "Designates a delegate object to receive synchronized data and a dispatch queue for delivering that data.",
+      "ko": "Designates a delegate object to receive synchronized data and a dispatch queue for delivering that data.",
+      "sourceHash": "e6bad8bddade0031397fddf4c278b8477cfe16892c56d300f0c52f75b9824a25",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:setdelegatequeue:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setdelegatequeue:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setdelegatequeue:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setdelegatequeue:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:setdelegatequeue:0004:0004",
+      "source": "tvOS 17.0+",
+      "ko": "tvOS 17.0+",
+      "sourceHash": "29c47f80a793cfe0414102e94838f220ea4e2c0d5a98155fb8b0c8a6394ee930",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc setDelegate(_ delegate: (any AVCaptureDataOutputSynchronizerDelegate)?, queue delegateCallbackQueue: dispatch_queue_t?)\n```",
+      "ko": "```swift\nfunc setDelegate(_ delegate: (any AVCaptureDataOutputSynchronizerDelegate)?, queue delegateCallbackQueue: dispatch_queue_t?)\n```",
+      "sourceHash": "bcc8888c01c15baf507a89fa49d690ed10d27281f24584c2fb1543f730a29c37",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "The data output synchronizer gathers data from its data outputs, and when it determines that all data has been received for a given timestamp, it vends collections of synchronized data by calling delegate methods on the specified dispatch queue.",
+      "ko": "The data output synchronizer gathers data from its data outputs, and when it determines that all data has been received for a given timestamp, it vends collections of synchronized data by calling delegate methods on the specified dispatch queue.",
+      "sourceHash": "ee3b39299995b7248e1e80f1740c8d1fac632c5accd6d71b792e2f8fbb5217c4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "The [`AVCaptureDataOutputSynchronizer`](avcapturedataoutputsynchronizer.md) class overrides all the data outputs’ own delegates and callbacks.",
+      "ko": "The [`AVCaptureDataOutputSynchronizer`](avcapturedataoutputsynchronizer.md) class overrides all the data outputs’ own delegates and callbacks.",
+      "sourceHash": "2a8d260be5b4ed7d57e7661c11c9e065b94ecc31e008b4510f7ba7a34b45ab11",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0002",
+      "source": "Data outputs under the control of a data output synchronizer do not fire delegate callbacks.",
+      "ko": "Data outputs under the control of a data output synchronizer do not fire delegate callbacks.",
+      "sourceHash": "baaf4b006e364c8c41e37518af0d9a67009f7532a9f39f013ac05d6af0072c7a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0003",
+      "source": "Delegate callbacks are restored to individual data outputs only if you clear the synchronizer’s delegate and callback queue by calling this method and passing `nil` for both parameters.",
+      "ko": "Delegate callbacks are restored to individual data outputs only if you clear the synchronizer’s delegate and callback queue by calling this method and passing `nil` for both parameters.",
+      "sourceHash": "566bfc48c647e0ee46462df875ba32d7e0dc5b4dc821a3efa623ad976203109e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`delegate`: A delegate object to receive synchronized data.",
+      "ko": "`session`: 정보를 제공하는 세션입니다.",
+      "sourceHash": "5cbbb8bbefbe5ce83e50d03c5fd66a285adf05a7a841a0bfd9117d6459521598",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0002",
+      "source": "`delegateCallbackQueue`: The dispatch queue on which to call delegate methods. This parameter must be a serial dispatch queue to guarantee that captured data is delivered in order.",
+      "ko": "`delegateCallbackQueue`: The dispatch queue on which to call delegate methods. This parameter must be a serial dispatch queue to guarantee that captured data is delivered in order.",
+      "sourceHash": "b96cfd9cf3d61cc89b46f922f896eae8c99a257d672513424c970ebe6a7c5e22",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var delegate: (any AVCaptureDataOutputSynchronizerDelegate)?](avcapturedataoutputsynchronizer/delegate.md)",
+      "ko": "[var delegate: (any AVCaptureDataOutputSynchronizerDelegate)?](avcapturedataoutputsynchronizer/delegate.md)",
+      "sourceHash": "ef9c48564dd0963ed25e2a59ffda1e3c84567306c4f5573bbaef3310e7fd9c6c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "A delegate object that receives synchronized capture data.",
+      "ko": "A delegate object that receives synchronized capture data.",
+      "sourceHash": "721af00949bcb53969d015f57746c503a823c127d1d3e6edcb8987e8c84adf85",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var delegateCallbackQueue: dispatch_queue_t?](avcapturedataoutputsynchronizer/delegatecallbackqueue.md)",
+      "ko": "[var delegateCallbackQueue: dispatch_queue_t?](avcapturedataoutputsynchronizer/delegatecallbackqueue.md)",
+      "sourceHash": "b415e2b47f8405aec9afc1f8bff14825ef3ad89d709ce972c7f27457ccb7bc0a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "A dispatch queue for delivering synchronized capture data.",
+      "ko": "A dispatch queue for delivering synchronized capture data.",
+      "sourceHash": "ab10dd86c20e05276f92cc4444e29f4dc9baf158617406a21af2d9cf1ed06467",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[protocol AVCaptureDataOutputSynchronizerDelegate](avcapturedataoutputsynchronizerdelegate.md)",
+      "ko": "[protocol AVCaptureDataOutputSynchronizerDelegate](avcapturedataoutputsynchronizerdelegate.md)",
+      "sourceHash": "92664f869ce06e4d1f42d091b0a9e79185e850ec6351a7f0b8616a5d8de07d44",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Methods for receiving captured data from multiple capture outputs synchronized to the same timestamp.",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/arkit/arsessionobserver/sessionwasinterrupted(_:))*",
+      "sourceHash": "cc5d3bc2a0e50f8dc7cf43c58d78f8680f4bde20d0af55db2e1e8dba41ea19e4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedataoutputsynchronizer/setdelegate(_:queue:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedataoutputsynchronizer/setdelegate(_:queue:))*",
+      "sourceHash": "d25adf21ecb17e8a8f72155bf1b34d3e86d054c45ae852792ba20b50c785778b",
+      "status": "failed"
+    }
+  ]
+}

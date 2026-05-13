@@ -1,0 +1,449 @@
+{
+  "docId": "documentation/Accelerate/vdsp/add-multiplication-4e3tj.md",
+  "title": "add(multiplication::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vdsp/add-multiplication-4e3tj",
+  "segments": [
+    {
+      "id": "seg:heading:addmultiplication:0000:0001",
+      "source": "add(multiplication:_:)",
+      "ko": "add(multiplication:_:)",
+      "sourceHash": "83d0ca39d7c37be9c50d11ecf419013e314455dca6220621753e5b06992dd9a5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:addmultiplication:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:addmultiplication:0002:0001",
+      "source": "Returns the double-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "ko": "Returns the double-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "sourceHash": "a0b6f7af096e665f231d28a531e4f62679deaa0a4a60e3d2212cc9845c70aab7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:addmultiplication:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:addmultiplication:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:addmultiplication:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:addmultiplication:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:addmultiplication:0004:0004",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:addmultiplication:0004:0005",
+      "source": "tvOS 13.0+",
+      "ko": "tvOS 13.0+",
+      "sourceHash": "030e6b7e51c85f674522c209ef14fc0e355ebd196e0259389daeaae4f69ad826",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:addmultiplication:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:addmultiplication:0004:0007",
+      "source": "watchOS 6.0+",
+      "ko": "watchOS 6.0+",
+      "sourceHash": "b51a82766977554dbe76aec20d5bc0ad6fe4984dddfcf6db82130e544b0631e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstatic func add<U>(multiplication: (a: U, b: Double), _ scalar: Double) -> [Double] where U : AccelerateBuffer, U.Element == Double\n```",
+      "ko": "```swift\nstatic func add<U>(multiplication: (a: U, b: Double), _ scalar: Double) -> [Double] where U : AccelerateBuffer, U.Element == Double\n```",
+      "sourceHash": "4d67b39edd425622ae8a5fbd01de8255c38377c1124c23beabc488b15c287f78",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "Return Value",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "The output vector `D` in `D = (A * B) + C`.",
+      "ko": "The output vector `D` in `D = (A * B) + C`.",
+      "sourceHash": "70f245961dcb36f321697965a9d754506368f3321eb6365621d054932d1a0d30",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "This function calculates the element-wise product of vector `A` and scalar value `B`, adds scalar value `C` to the product, and writes the result to vector `D`.",
+      "ko": "This function calculates the element-wise product of vector `A` and scalar value `B`, adds scalar value `C` to the product, and writes the result to vector `D`.",
+      "sourceHash": "b46d93c5d97673377fda0e593f56d3ccd2668585a2a9d0beae160b675336bb2f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:discussion:0011:0001",
+      "source": "```swift\n for (n = 0; n < N; ++n)\n    D[n] = A[n] * B + C[n];\n```",
+      "ko": "```swift\n for (n = 0; n < N; ++n)\n    D[n] = A[n] * B + C[n];\n```",
+      "sourceHash": "84eba7a0fd2f6928ca84c8060bf59f22f5f45b5ce65e6f782b6fd2ae3cef568b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0001",
+      "source": "![A diagram showing the operation of this function.",
+      "ko": "![A diagram showing the operation of this function.",
+      "sourceHash": "4383a37a5bdb4c14507e3e2f5e569f875a88eb2c5e5803a98e18010e1f5ae9f2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0002",
+      "source": "There are four rows.",
+      "ko": "There are four rows.",
+      "sourceHash": "9e0f9736804d6f84727760f803f00fae350cb55cd2c4e02aba71d9cf26c86ef0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0003",
+      "source": "The top row represents the input vector A with three boxes, and the scalar value B with one box.",
+      "ko": "The top row represents the input vector A with three boxes, and the scalar value B with one box.",
+      "sourceHash": "7f99a91e3adc9dd4cc75a200b48941c48675479015b658f7392e645aab7d8ef4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0004",
+      "source": "The second row represents the operation that multiplies A and B, with three boxes, as well as the input vector C with three boxes.",
+      "ko": "The second row represents the operation that multiplies A and B, with three boxes, as well as the input vector C with three boxes.",
+      "sourceHash": "56f87b154769da501de0599f14f6ef8eab2c17b1bf464bd7d9cded1ecf47df2f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0005",
+      "source": "The third row represents the addition operation as three boxes.",
+      "ko": "The third row represents the addition operation as three boxes.",
+      "sourceHash": "caf6b2cf9cb12d1c29433d3cf24b02df06106f012dde5204cc90cefa1a2d0f7b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0006",
+      "source": "The bottom row represents the output vector D as three boxes.",
+      "ko": "The bottom row represents the output vector D as three boxes.",
+      "sourceHash": "48be2b9f82ef28b314c58e392ed86031203e3e6ab329105ec051caa45d56252c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0007",
+      "source": "The diagram has connecting lines from the input vectors to the operations, and from the operations to the output vector. ](https://docs-assets.developer.apple.com/published/8acd6489f7a40f9981697d673e124e2d/media-4387652%402x.png)",
+      "ko": "The diagram has connecting lines from the input vectors to the operations, and from the operations to the output vector. ](https://docs-assets.developer.apple.com/published/8acd6489f7a40f9981697d673e124e2d/media-4387652%402x.png)",
+      "sourceHash": "83d492301ae76a8be6e9e04ed0f097e4919d912159f3a5202d29782bf67ffe8a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0013:0001",
+      "source": "The following code shows an example of using this function:",
+      "ko": "The following code shows an example of using this function:",
+      "sourceHash": "6a6645d7323dbaedfa632f913e9d50a0fccbb63d6d54e3c2e4adcf1d87ef8ec5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:discussion:0014:0001",
+      "source": "```swift\n    let a: [Double] = [ 1,  2,  3,  4,  5]\n    let b: Double = 10\n    let c: Double = 5\n    \n    let d = vDSP.add(multiplication: (a, b),\n                     c)\n    \n    // Prints \"[15.0, 25.0, 35.0, 45.0, 55.0]\".\n    print(d)\n```",
+      "ko": "```swift\n    let a: [Double] = [ 1,  2,  3,  4,  5]\n    let b: Double = 10\n    let c: Double = 5\n    \n    let d = vDSP.add(multiplication: (a, b),\n                     c)\n    \n    // Prints \"[15.0, 25.0, 35.0, 45.0, 55.0]\".\n    print(d)\n```",
+      "sourceHash": "f856597e62fe5bd7d4895cde51b40cbc2e36e2d8f45906ce603658f283b7a32d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0015:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0016:0001",
+      "source": "`multiplication`: A tuple that contains the vector `A` and the scalar value `B` in `D = (A * B) + C`.",
+      "ko": "`multiplication`: A tuple that contains the vector `A` and the scalar value `B` in `D = (A * B) + C`.",
+      "sourceHash": "67734dad8a037ca911c247093f0059c2ac4612bbc0534f93b3c06dbda01952a0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0016:0002",
+      "source": "`scalar`: The input scalar value `C` in `D = (A * B) + C`.",
+      "ko": "`scalar`: The input scalar value `C` in `D = (A * B) + C`.",
+      "sourceHash": "5dae78134126d31f62876e58be3fc477a4e4d4b083c5c57bbe4a4d0e83c993bf",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0017:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[static func add<U>(Double, U) -> [Double]](vdsp/add(_:_:)-9mv1a.md)",
+      "ko": "[static func allocate<Scalar, Generator>(randomIn: ClosedRange<Scalar>, using: inout Generator, shape: BNNS.Shape, batchSize: Int) -> BNNSNDArrayDescriptor](bnnsndarraydescriptor/allocate(randomin:using:shape:batchsize:)-5kbi8.md)",
+      "sourceHash": "d18c902478114693e8d2877733c321f9358e3a4e1cddc5aab9acbe5640ac44f2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Returns the double-precision element-wise sum of a vector and a scalar value.",
+      "ko": "주어진 generator를 난수 소스로 사용해 지정된 범위 내에서 임의 값을 갖는 새 배열 디스크립터를 반환합니다.",
+      "sourceHash": "249a0cec5220b070e351900c666327515bb0227716e50bb34ef70f9d2ec9f49a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[static func add<T, U>(T, U) -> [Double]](vdsp/add(_:_:)-2ftxc.md)",
+      "ko": "[static func add<T, U>(T, U) -> [Double]](vdsp/add(_:_:)-2ftxc.md)",
+      "sourceHash": "c5f849c6cfc6033478dd79e49b638415a77a7e1df24d3cfc1671e9e29904df23",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Returns the double-precision element-wise sum of two vectors.",
+      "ko": "Returns the double-precision element-wise sum of two vectors.",
+      "sourceHash": "69ca4551d90744860ab1ad790a0d617746a53578a2455be7af21cc1ed7410ed3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[static func add<U>(Float, U) -> [Float]](vdsp/add(_:_:)-53nh9.md)",
+      "ko": "[static func add<U>(Float, U) -> [Float]](vdsp/add(_:_:)-53nh9.md)",
+      "sourceHash": "03a04a6c9bab4434e48efaf05572b8986a02f00b308d2a0e07d63e847a7b0bec",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Returns the single-precision element-wise sum of a vector and a scalar value.",
+      "ko": "Returns the single-precision element-wise sum of a vector and a scalar value.",
+      "sourceHash": "a03fc53a4058d3ffe77ef252751cc63682bbf9faf60c21f1b69c0ff1a2abc1d5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[static func add<T, U>(T, U) -> [Float]](vdsp/add(_:_:)-7swvf.md)",
+      "ko": "[static func add<T, U>(T, U) -> [Float]](vdsp/add(_:_:)-7swvf.md)",
+      "sourceHash": "82f35379c3f8f15c55cc7631813c1724060be2f0b6134967b02a1dd80f82e836",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Returns the single-precision element-wise sum of two vectors.",
+      "ko": "Returns the single-precision element-wise sum of two vectors.",
+      "sourceHash": "898e86f35c8eade5e1de169efa8144f2849600a779378009588d8c03aa33c088",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[static func add<U, V>(Double, U, result: inout V)](vdsp/add(_:_:result:)-2531u.md)",
+      "ko": "[static func add<U, V>(Double, U, result: inout V)](vdsp/add(_:_:result:)-2531u.md)",
+      "sourceHash": "ac007ff89b9f905b1455688f835c639127e0549512ef72f1d9ee1f8d73ecff73",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Calculates the single-precision element-wise sum of a vector and a scalar value.",
+      "ko": "이 n차원 배열 디스크립터에 이전에 할당된 메모리 블록을 해제합니다.",
+      "sourceHash": "ab0b3fdb3ce4257e6fb9624ef0692f0f6f1230824d0104a8e42b32b1739ca8cb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[static func add<U, V>(Float, U, result: inout V)](vdsp/add(_:_:result:)-2w0o9.md)",
+      "ko": "[static func add<U, V>(Float, U, result: inout V)](vdsp/add(_:_:result:)-2w0o9.md)",
+      "sourceHash": "d4104970ffae0df917eab8bfed44f5ba4b4b7b636853ce63f30808ddc2ea3f68",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Calculates the single-precision element-wise sum of a vector and a scalar value.",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsndarraydescriptor/allocate(randomin:shape:batchsize:)-5a2p2)*",
+      "sourceHash": "ab0b3fdb3ce4257e6fb9624ef0692f0f6f1230824d0104a8e42b32b1739ca8cb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[static func add<T, U, V>(T, U, result: inout V)](vdsp/add(_:_:result:)-338hl.md)",
+      "ko": "[static func add<T, U, V>(T, U, result: inout V)](vdsp/add(_:_:result:)-338hl.md)",
+      "sourceHash": "fb555c7e2e2479efe3dfa6cace3573f299a9a2e2f83ee634bba20db8ef761d98",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Calculates the double-precision element-wise sum of two vectors.",
+      "ko": "Calculates the double-precision element-wise sum of two vectors.",
+      "sourceHash": "41593d0986ea33a8974c149a6265621f47227fa0573488847800d78713f65640",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[static func add<T, U, V>(T, U, result: inout V)](vdsp/add(_:_:result:)-3vzwi.md)",
+      "ko": "[static func add<T, U, V>(T, U, result: inout V)](vdsp/add(_:_:result:)-3vzwi.md)",
+      "sourceHash": "0fb2df3a06cddf6d8d7f1e35568cf95765f6c87622ff22524b2ba85bb97ce840",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Calculates the single-precision element-wise sum of two vectors.",
+      "ko": "Calculates the single-precision element-wise sum of two vectors.",
+      "sourceHash": "875a3b71f859681b18e9a79b575cf96591dde63ee477076eacfa176c5708cae6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[static func add(DSPSplitComplex, to: DSPSplitComplex, count: Int, result: inout DSPSplitComplex)](vdsp/add(_:to:count:result:)-g1dk.md)",
+      "ko": "[static func add(DSPSplitComplex, to: DSPSplitComplex, count: Int, result: inout DSPSplitComplex)](vdsp/add(_:to:count:result:)-g1dk.md)",
+      "sourceHash": "00f7b5c9f17d7c9c74ed561ed2977b2e7b39f263cafec337349814fd2286495a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Calculates the single-precision element-wise sum of the supplied complex vectors.",
+      "ko": "Calculates the single-precision element-wise sum of the supplied complex vectors.",
+      "sourceHash": "5e4a0ddb2a8d7e433e5a7d4cf4c27a8531e20b3956896505aebdc2b1d1005e39",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[static func add(DSPDoubleSplitComplex, to: DSPDoubleSplitComplex, count: Int, result: inout DSPDoubleSplitComplex)](vdsp/add(_:to:count:result:)-75np9.md)",
+      "ko": "[static func add(DSPDoubleSplitComplex, to: DSPDoubleSplitComplex, count: Int, result: inout DSPDoubleSplitComplex)](vdsp/add(_:to:count:result:)-75np9.md)",
+      "sourceHash": "2dbc6481170e6186ebeff994b932d1446576fd9a96e542053bae37c344a816ed",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Calculates the double-precision element-wise sum of the supplied complex vectors.",
+      "ko": "Calculates the double-precision element-wise sum of the supplied complex vectors.",
+      "sourceHash": "146e59a372561a88990800929877162ed03b0ac2c6d5158a34b49c6921b66c20",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[static func add<T, U>(multiplication: (a: T, b: Double), U) -> [Double]](vdsp/add(multiplication:_:)-1bsuq.md)",
+      "ko": "[static func add<T, U>(multiplication: (a: T, b: Double), U) -> [Double]](vdsp/add(multiplication:_:)-1bsuq.md)",
+      "sourceHash": "eabe6ffd79940bf9e9a87a25874d87651adba4006493048e5a5ba7db7a838c21",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Returns the double-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "ko": "Returns the double-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "sourceHash": "a0b6f7af096e665f231d28a531e4f62679deaa0a4a60e3d2212cc9845c70aab7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[static func add<T, U>(multiplication: (a: T, b: U), Double) -> [Double]](vdsp/add(multiplication:_:)-9dxlr.md)",
+      "ko": "[static func add<T, U>(multiplication: (a: T, b: U), Double) -> [Double]](vdsp/add(multiplication:_:)-9dxlr.md)",
+      "sourceHash": "23df05481a5d5bf2853ab427f9c120fd89592c5c5645665d23c3468c3fd26960",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "Returns the double-precision element-wise sum of the product of two vectors, and a scalar value.",
+      "ko": "Returns the double-precision element-wise sum of the product of two vectors, and a scalar value.",
+      "sourceHash": "8839251a6e958ed24974259d3b0de9e1efeeb2532b1e4b491900add57dd9a7f6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[static func add<S, T, U>(multiplication: (a: S, b: T), U) -> [Double]](vdsp/add(multiplication:_:)-4667v.md)",
+      "ko": "[static func add<S, T, U>(multiplication: (a: S, b: T), U) -> [Double]](vdsp/add(multiplication:_:)-4667v.md)",
+      "sourceHash": "d25432c2bcf955d4ac2283e9934f42a950e11236f9e7fb64c47370efdc731e16",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "Returns the double-precision element-wise sum of a vector and the product of two vectors.",
+      "ko": "Returns the double-precision element-wise sum of a vector and the product of two vectors.",
+      "sourceHash": "b360aea6d232c3c6e032dca6cf776f680a357a98bf1a46e880d64dbdbf5e22cd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[static func add<U>(multiplication: (a: U, b: Float), Float) -> [Float]](vdsp/add(multiplication:_:)-3tw93.md)",
+      "ko": "[static func add<U>(multiplication: (a: U, b: Float), Float) -> [Float]](vdsp/add(multiplication:_:)-3tw93.md)",
+      "sourceHash": "c084defc7909422f16bb63bcd9127a942660e689e002be6dd513551fae659b83",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "Returns the single-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "ko": "Returns the single-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "sourceHash": "41e5ac7f8ff81439425e8ed25496f2fd6248f27ebcf16da6468d9db99852958f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0046:0001",
+      "source": "[static func add<T, U>(multiplication: (a: T, b: Float), U) -> [Float]](vdsp/add(multiplication:_:)-7aut1.md)",
+      "ko": "[static func add<T, U>(multiplication: (a: T, b: Float), U) -> [Float]](vdsp/add(multiplication:_:)-7aut1.md)",
+      "sourceHash": "2c3d92fda8d212ae3ffe9b083871ec86c2e458e1101d76ed37b2632cf119fbd0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "Returns the single-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "ko": "Returns the single-precision element-wise addition of the product of a vector and a scalar value, and a vector.",
+      "sourceHash": "41e5ac7f8ff81439425e8ed25496f2fd6248f27ebcf16da6468d9db99852958f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0048:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0049:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/add(multiplication:_:)-4e3tj)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/add(multiplication:_:)-4e3tj)*",
+      "sourceHash": "b5d2242757bf5e5711a4b38adc9d6b9695e36ae65eab88cd74aa239951de01ec",
+      "status": "failed"
+    }
+  ]
+}

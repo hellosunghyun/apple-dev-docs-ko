@@ -1,0 +1,365 @@
+{
+  "docId": "documentation/Accelerate/sparsesolve-8yld7.md",
+  "title": "SparseSolve(::::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/sparsesolve-8yld7",
+  "segments": [
+    {
+      "id": "seg:heading:sparsesolve:0000:0001",
+      "source": "SparseSolve(_:_:_:_:)",
+      "ko": "SparseSolve(_:_:_:_:)",
+      "sourceHash": "ceb4ae3dd23f47efb6c790f8f8ac4e7cdd3d5970103956e73d0c0a6e282325e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sparsesolve:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: func",
+      "ko": "**Framework**: Accelerate **Kind**: func",
+      "sourceHash": "92505afed2b9832f88ee8e8741948f4ea109b670dc30717430f0006e8f343391",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:sparsesolve:0002:0001",
+      "source": "Solve `Ax=b` using the specified iterative method for complex float values.",
+      "ko": "지정된 반복 방법을 사용해 복소수 단정도 값의 `Ax=b`를 풉니다.",
+      "sourceHash": "bb9d3677c5062f3eabac96f960e81b8d0bfa8c6f093c48f1b2deb25e3027060b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:sparsesolve:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0001",
+      "source": "iOS 18.5+",
+      "ko": "iOS 18.5+",
+      "sourceHash": "535dce1c807f4d247e539f44dba4abc87f7d1ce3d05ffa3da780b7f5fc170087",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0002",
+      "source": "iPadOS 18.5+",
+      "ko": "iPadOS 18.5+",
+      "sourceHash": "b7bcf63a22c0551a7936f216e23df1e1bda1578bd1501c546103fc6a4e67ece9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0003",
+      "source": "Mac Catalyst 18.5+",
+      "ko": "Mac Catalyst 18.5+",
+      "sourceHash": "6db14126164f0d96e5ac6c73a253936cc7a926ae85fc88d350295f27c4824da3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0004",
+      "source": "macOS 15.5+",
+      "ko": "macOS 15.5+",
+      "sourceHash": "ed96aa40871ba9d8b4ef2ee3b7830ae113122f4a1861a9b6d90207f46616597e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0005",
+      "source": "tvOS 18.5+",
+      "ko": "tvOS 18.5+",
+      "sourceHash": "61877e2c264079fb4d263ff028670cd6edb2b1a37a459cf178fa69fdc87f1261",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0006",
+      "source": "visionOS 2.5+",
+      "ko": "visionOS 2.5+",
+      "sourceHash": "84999d3b41a760adad365cdab72f833c7437d0e2626b0620f9daa9e45cca4685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0007",
+      "source": "watchOS 11.5+",
+      "ko": "watchOS 11.5+",
+      "sourceHash": "ceb97f988ba5fece7f97c33bc723086f413049faa7949f278472f131c471250c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc SparseSolve(_ method: SparseIterativeMethod, _ A: SparseMatrix_Complex_Float, _ b: DenseVector_Complex_Float, _ x: DenseVector_Complex_Float) -> SparseIterativeStatus_t\n```",
+      "ko": "```swift\nfunc SparseSolve(_ method: SparseIterativeMethod, _ A: SparseMatrix_Complex_Float, _ b: DenseVector_Complex_Float, _ x: DenseVector_Complex_Float) -> SparseIterativeStatus_t\n```",
+      "sourceHash": "075c6269ff16c30c0b586f2a426ced069b87dfe6877ba347df0dfa8b9568cf47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0007:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0008:0001",
+      "source": "`method`: (Input) Iterative method specification, eg return value of `SparseConjugateGradient()`.",
+      "ko": "`method`: (입력) 반복 메서드의 사양입니다. 예를 들어 `SparseConjugateGradient()`의 반환 값입니다.",
+      "sourceHash": "a0d20595aaa35a9ce817411cd353e62195056d92d37324a09e6e37e0b6a4c53c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0002",
+      "source": "`A`: (Input) The matrix `A` to solve the system for. Only used for multiplication by `A` or `A^T`.",
+      "ko": "`A`: (입력) 시스템을 푸는 데 사용하는 행렬 `A`입니다. `A` 또는 `A^T` 곱셈에만 사용됩니다.",
+      "sourceHash": "00cc06423f87fbbfe4d643fe1b478535d62c9cd0449bba31879546812bb72bf9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0003",
+      "source": "`b`: The right-hand side `b` to solve for. If `A` has dimension `m x n`, then `b` must have length `m`.",
+      "ko": "`b`: 풀이하려는 우변 `b`입니다. `A`의 크기가 `m x n`이면 `b`의 길이는 `m`이어야 합니다.",
+      "sourceHash": "01a5538627ec156ef37ea8791870208804feae853d578f31bbdcb0c74aee11db",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0008:0004",
+      "source": "`x`: On entry, initial guess for solution, on return the solution. If `A` has dimension `m x n`, then `x` must have length `n`. If no good initial estimate is available, user should set the initial guess to be the zero vector.",
+      "ko": "`x`: 입력 시에는 해의 초기 추정값이며, 반환 시에는 해입니다. `A`의 크기가 `m x n`이면 `x`의 길이는 `n`이어야 합니다. 적절한 초기 추정값이 없으면 초기 추정값을 영 벡터로 설정해야 합니다.",
+      "sourceHash": "0ef7d1b4dec4c5f72534ec6fb1af3068a35bb328613f308cfea753aacae8b301",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseVector_Complex_Double, DenseVector_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:)-41c6p.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseVector_Complex_Double, DenseVector_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:)-41c6p.md)",
+      "sourceHash": "b96938685d222e077572f0c8c0635a70f23e5a39974ce85d68ff2ed25884d74b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "Solve `Ax=b` using the specified iterative method for complex double values.",
+      "ko": "복소수 이중 정밀도 값에 대해 지정된 반복 방법으로 `Ax=b`를 풉니다.",
+      "sourceHash": "d27aa6ef378b94a88535d8352968b0b1bf21d018e0efa94b548ba51151db0919",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Float, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:)-4xwsw.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Float, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:)-4xwsw.md)",
+      "sourceHash": "8d1d211c539fa34cfe7d9b9427f03804993dedf90d298915792746c88c4844be",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex float values.",
+      "ko": "복소수 단정도 값에 대해 지정된 반복 방법으로 `AX=B`를 풉니다.",
+      "sourceHash": "94f68912201516b7de5bb7cc9dab345d00bd0e6f800303024feefc53c06ecda0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Float, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float, SparseOpaquePreconditioner_Complex_Float) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-155od.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Float, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float, SparseOpaquePreconditioner_Complex_Float) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-155od.md)",
+      "sourceHash": "d171d69ff918a57057364670a19f5f37de75abea5a749667316f1ace94f4e077",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex float values.",
+      "ko": "복소수 단정도 값에 대해 지정된 반복 방법으로 `AX=B`를 풉니다.",
+      "sourceHash": "94f68912201516b7de5bb7cc9dab345d00bd0e6f800303024feefc53c06ecda0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Float, DenseVector_Complex_Float, DenseVector_Complex_Float, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-1fw3p.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Float, DenseVector_Complex_Float, DenseVector_Complex_Float, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-1fw3p.md)",
+      "sourceHash": "55bc6633414ddfb88f4ea3712d4bdad233f3830bc692eca7880b7f3f9d7b42da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Solve `Ax=b` using the specified iterative method for complex float values.",
+      "ko": "복소수 단정도 값에 대해 지정된 반복 방법으로 `Ax=b`를 풉니다.",
+      "sourceHash": "bb9d3677c5062f3eabac96f960e81b8d0bfa8c6f093c48f1b2deb25e3027060b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float) -> Void, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float, SparseOpaquePreconditioner_Complex_Float) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-1i6u8.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float) -> Void, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float, SparseOpaquePreconditioner_Complex_Float) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-1i6u8.md)",
+      "sourceHash": "6eec7dd8af3360966a165ea259b9df3a7b5524dae101af7e773fae4acfc9bb58",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex float values.",
+      "ko": "복소수 단정도 값에 대해 지정된 반복 방법으로 `AX=B`를 풉니다.",
+      "sourceHash": "94f68912201516b7de5bb7cc9dab345d00bd0e6f800303024feefc53c06ecda0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double, SparseOpaquePreconditioner_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-4fvqm.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double, SparseOpaquePreconditioner_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-4fvqm.md)",
+      "sourceHash": "30d598e1ffc252905f7c85d87296fa7a63b131e22a3bbc91da3acf3f064d3085",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex double values.",
+      "ko": "지정된 반복 방법을 사용하여 복소수 배정밀도 값의 `AX=B`를 풉니다.",
+      "sourceHash": "c8205b7aa7da9cca4768f55d4811322bf64c38baa80ca99801e1343e7f82db89",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double, SparseOpaquePreconditioner_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-4fvqm.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double, SparseOpaquePreconditioner_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-4fvqm.md)",
+      "sourceHash": "30d598e1ffc252905f7c85d87296fa7a63b131e22a3bbc91da3acf3f064d3085",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex double values.",
+      "ko": "지정된 반복 방법을 사용하여 복소수 배정밀도 값의 `AX=B`를 풉니다.",
+      "sourceHash": "c8205b7aa7da9cca4768f55d4811322bf64c38baa80ca99801e1343e7f82db89",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double, SparseOpaquePreconditioner_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-4fvqm.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double, SparseOpaquePreconditioner_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-4fvqm.md)",
+      "sourceHash": "30d598e1ffc252905f7c85d87296fa7a63b131e22a3bbc91da3acf3f064d3085",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex double values.",
+      "ko": "지정된 반복 방법을 사용하여 복소수 배정밀도 값의 `AX=B`를 풉니다.",
+      "sourceHash": "c8205b7aa7da9cca4768f55d4811322bf64c38baa80ca99801e1343e7f82db89",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Float, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-655i9.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Float, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-655i9.md)",
+      "sourceHash": "038e8bb4e4774ee127e6f2011200c21a1cc970be77d126888d902429a0626a95",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex float values.",
+      "ko": "지정된 반복 방법을 사용하여 복소수 단일 정밀도 값의 `AX=B`를 풉니다.",
+      "sourceHash": "94f68912201516b7de5bb7cc9dab345d00bd0e6f800303024feefc53c06ecda0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseVector_Complex_Double, DenseVector_Complex_Double, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-7hdp4.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseVector_Complex_Double, DenseVector_Complex_Double, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-7hdp4.md)",
+      "sourceHash": "3f701892b95b37a77a8e0178947b850346bd685b5109306e099df7280e6ad191",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Solve `Ax=b` using the specified iterative method for complex double values.",
+      "ko": "지정된 반복 방법을 사용하여 복소수 배정밀도 값의 `Ax=b`를 풉니다.",
+      "sourceHash": "d27aa6ef378b94a88535d8352968b0b1bf21d018e0efa94b548ba51151db0919",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double) -> Void, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double, SparseOpaquePreconditioner_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-7m9vp.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double) -> Void, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double, SparseOpaquePreconditioner_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-7m9vp.md)",
+      "sourceHash": "346ccdc2a91055e5095350d0001951f07e356dbc4f50f559ddbc6faa06940146",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex double values.",
+      "ko": "지정된 반복 방법을 사용하여 복소수 배정밀도 값의 `AX=B`를 풉니다.",
+      "sourceHash": "c8205b7aa7da9cca4768f55d4811322bf64c38baa80ca99801e1343e7f82db89",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float) -> Void, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:)-6wjj9.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float) -> Void, DenseMatrix_Complex_Float, DenseMatrix_Complex_Float) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:)-6wjj9.md)",
+      "sourceHash": "51e69600216453ad6a4350b2b441874bd69f088414341636814bf398e79af30f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex float values.",
+      "ko": "지정된 반복 방법을 사용하여 복소수 단일 정밀도 값의 `AX=B`를 풉니다.",
+      "sourceHash": "94f68912201516b7de5bb7cc9dab345d00bd0e6f800303024feefc53c06ecda0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:)-7zp1d.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:)-7zp1d.md)",
+      "sourceHash": "91712b9f9a4d3ba60b55713cdbae56bbc7e6d590c886fadd957fe47d410cea83",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex double values.",
+      "ko": "지정된 반복 방법을 사용하여 복소수 배정밀도 값의 `AX=B`를 풉니다.",
+      "sourceHash": "c8205b7aa7da9cca4768f55d4811322bf64c38baa80ca99801e1343e7f82db89",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double) -> Void, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:)-8bndu.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double) -> Void, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:)-8bndu.md)",
+      "sourceHash": "8f21b1a3a32a32e461558d94294bd4b174e39fbcf30545571ae36058d81a65ee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex double values.",
+      "ko": "지정된 반복 방법을 사용하여 복소수 배정밀도 값의 `AX=B`를 풉니다.",
+      "sourceHash": "c8205b7aa7da9cca4768f55d4811322bf64c38baa80ca99801e1343e7f82db89",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-4xd4z.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Complex_Double, DenseMatrix_Complex_Double, DenseMatrix_Complex_Double, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-4xd4z.md)",
+      "sourceHash": "6cbeffc48ad614f103e8939dda584731b8a760d5929cae13b70c1a62691e7bd3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Solve `AX=B` using the specified iterative method for complex double values.",
+      "ko": "지정된 반복 방법을 사용하여 복소수 배정밀도 값의 `AX=B`를 풉니다.",
+      "sourceHash": "c8205b7aa7da9cca4768f55d4811322bf64c38baa80ca99801e1343e7f82db89",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0040:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/sparsesolve(_:_:_:_:)-8yld7)*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/sparsesolve(_:_:_:_:)-8yld7)*",
+      "sourceHash": "78c73d4515c187c9cd2a86c9f124f1fa4c74ba21c97151672cba6bebe7fc9930",
+      "status": "machine_translated"
+    }
+  ]
+}

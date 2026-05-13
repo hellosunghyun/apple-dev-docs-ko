@@ -36,7 +36,7 @@ init(contentsOf url: URL) throws
 
 #### <span class="ko-segment" data-segment-id="seg:heading:discussion:0009:0001">Discussion</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0010:0001">The audio data must be in a format that Core Audio supports.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0010:0001">ARKit은 자세 정보, 앵커, frame semantics를 포함하여 픽셀 데이터 이외의 frame 속성을 채웁니다.</span>
 
 ## <span class="ko-segment" data-segment-id="seg:heading:parameters:0011:0001">Parameters</span>
 

@@ -1,0 +1,225 @@
+{
+  "docId": "documentation/Accelerate/sparseopaquesubfactor_complex_float/factor.md",
+  "title": "factor",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/sparseopaquesubfactor_complex_float/factor",
+  "segments": [
+    {
+      "id": "seg:heading:factor:0000:0001",
+      "source": "factor",
+      "ko": "factor",
+      "sourceHash": "41a093100bbbb59e31dcc91a581495871ac485e07deda57bf878353cc5aae6db",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:factor:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: property",
+      "ko": "**Framework**: Accelerate **Kind**: property",
+      "sourceHash": "212bd4766b05f535b78c985192a09764b9923e72d858ffc2b7fc8016b93be0af",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:factor:0002:0001",
+      "source": "A semi-opaque type representing a matrix factorization in complex float.",
+      "ko": "복소 float의 행렬 인수분해를 나타내는 반투명 타입입니다.",
+      "sourceHash": "9bc734e5a320d5fa6fcd49667e32a84e3cfb21bd20b230b91949f6ec06b6374b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:factor:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:factor:0004:0001",
+      "source": "iOS ?+",
+      "ko": "iOS ?+",
+      "sourceHash": "5ab9a52f3ed195087b787f7fc91e6c6787e10947ba89804fc30b0826935fe735",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:factor:0004:0002",
+      "source": "iPadOS ?+",
+      "ko": "iPadOS ?+",
+      "sourceHash": "c073a012e8f78fb65510b62ab5dd5f951cd38fb0306215643d562259e96744f0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:factor:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:factor:0004:0004",
+      "source": "macOS ?+",
+      "ko": "macOS ?+",
+      "sourceHash": "7565f9a2fe151983964ce7f1a1fff21dbf4130de4d3457f25bd88800eafbe279",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:factor:0004:0005",
+      "source": "tvOS ?+",
+      "ko": "tvOS ?+",
+      "sourceHash": "e197a5f363006a02e522e5f07b216c8e4a4e9a6a147fcb43f9877e395882682a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:factor:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:factor:0004:0007",
+      "source": "watchOS ?+",
+      "ko": "watchOS ?+",
+      "sourceHash": "a3eeb3d8ec97b0e69f7f72fecf404f7497525e6d0b54f1854aa63b483933227a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar factor: SparseOpaqueFactorization_Complex_Float\n```",
+      "ko": "```swift\nvar factor: SparseOpaqueFactorization_Complex_Float\n```",
+      "sourceHash": "e47e544ee3b017486b56e38523d4a968b313e03e591d1547163031bc4e116361",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Use the `SparseCleanup` function to free resources held by these objects.",
+      "ko": "`SparseCleanup` 함수를 사용해 이러한 개체가 보유한 리소스를 해제합니다.",
+      "sourceHash": "0974e622d94f54cb794ae5ac866876daa66871d8162ecedc67f7281ae84bc96b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "The object can be in one of the following states:",
+      "ko": "개체는 다음과 같은 상태 중 하나일 수 있습니다.",
+      "sourceHash": "fb9842e6e81f81f6816d08784b0ab11a3ed1349439e103b37d4d44f69266ed8e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0010:0001",
+      "source": "Something went wrong with symbolic factorization, nothing is valid. - indicated by `.symbolicFactorization.status < 0`",
+      "ko": "기호 인수분해에서 문제가 발생해 유효하지 않습니다. - `.symbolicFactorization.status < 0`로 표시됩니다.",
+      "sourceHash": "973c582d6214902641e4dbc12d72c07482d2645575ab6c42fee7a1e636b1bb1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0010:0002",
+      "source": "Symbolic factorization was good, but failed in numeric factorization initialization. - indicated by `.symbolicFactorization.status >= 0 && .status < 0 && .numericFactorization == NULL`",
+      "ko": "기호 인수분해는 유효했지만 수치 인수분해 초기화에서 실패했습니다. - `.symbolicFactorization.status >= 0 && .status < 0 && .numericFactorization == NULL`로 표시됩니다.",
+      "sourceHash": "2a9858240128f7a543ad608504fd1350aedfadbc1c58becf94e52dfa4f33cdcc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0010:0003",
+      "source": "symbolic factorization may be used for future calls.",
+      "ko": "기호 인수분해는 앞으로의 호출에서 재사용될 수 있습니다.",
+      "sourceHash": "1d3fecc4fb4457a5ce1c2ec5dc98ee27dbf757fe44b08a17c7a2ca6f06023dec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0010:0004",
+      "source": "Symbolic factorization was good, factor allocated/initialized correctly, but numeric factorization failed e.g. a Cholesky factorization of an indefinite matrix was attempted. - indicated by `.symbolicFactorization.status >= 0 && .status < 0 && .numericFactorization not NULL`",
+      "ko": "기호 인수분해는 유효했고 인수분해가 할당/초기화되었지만 수치 인수분해가 실패했습니다. 예를 들어 부정형 행렬에 대해 Cholesky 인수분해가 시도된 경우입니다. - `.symbolicFactorization.status >= 0 && .status < 0 && .numericFactorization not NULL`로 표시됩니다.",
+      "sourceHash": "8963dd3a1a9ce062a83a1e8c209b0c7679bcda69173736c5e3426d3a04027e3d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0010:0005",
+      "source": "user may pass this object to `SparseRefactor_Double` with a modified matrix",
+      "ko": "사용자는 수정된 행렬로 이 개체를 `SparseRefactor_Double`에 전달할 수 있습니다.",
+      "sourceHash": "6e169763a727d38241fed5298982bbc491750f0e61461e560f05972a1def3ade",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0010:0006",
+      "source": "Symbolic and numeric factorizations are both good - indicated by `.status >= 0`",
+      "ko": "기호 인수분해와 수치 인수분해가 모두 유효합니다. - `.status >= 0`로 표시됩니다.",
+      "sourceHash": "034d963ae9de2170cea6f3614aaca9b7fe334e2f2ac0fc4d6281c902ec99170c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0011:0001",
+      "source": "**`status`**: Indicates status of factorization object.",
+      "ko": "**`status`**: 인수분해 객체의 상태를 나타냅니다.",
+      "sourceHash": "f58c24bee1aba4045f8f5433ea6c9bd45dae11b11271311edd4c71c61169cb21",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0011:0002",
+      "source": "**`attributes`**: Flags associated with this factorization object. In particular, transpose field indicates whether object is considered to be factorization of A or A^T.",
+      "ko": "**`attributes`**: 이 인수분해 객체와 관련된 플래그입니다. 특히 transpose 필드는 개체가 A 또는 A^T의 인수분해인지 여부를 나타냅니다.",
+      "sourceHash": "09c0ce3db9da6b4955a613029614753392355c3b67fa5cd946b4b6659a7fd23b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0011:0003",
+      "source": "**`symbolicFactorization`**: Symbolic Factorization upon which this Numeric Factorization depends.",
+      "ko": "**`symbolicFactorization`**: 이 Numeric Factorization이 의존하는 Symbolic Factorization입니다.",
+      "sourceHash": "7c83e795dbd47de179cf9d31bb9c6c676ad66d2259f56e6b95647893f7298ca6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0011:0004",
+      "source": "**`userFactorStorage`**: Flag that indicates if user provided storage backing this object. If true, then factor storage must be freed by the user once all references are finished with (though any additional storage allocated due to pivoting will still be freed by `SparseCleanup`).",
+      "ko": "**`userFactorStorage`**: 사용자가 이 개체에 대한 저장소를 제공했는지 표시하는 플래그입니다. true인 경우, 사용자가 모든 참조가 끝난 뒤 factor storage를 해제해야 합니다(피벗으로 인해 추가로 할당된 저장소는 `SparseCleanup`에서 계속 해제됩니다).",
+      "sourceHash": "370a0578778aada7701af45e167a464a759a4cc370ef7f66335bb3dc2053d919",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0011:0005",
+      "source": "**`numericFactorization`**: Pointer to private internal representation of numeric factor.",
+      "ko": "**`numericFactorization`**: 수치 인수분해의 비공개 내부 표현에 대한 포인터입니다.",
+      "sourceHash": "af8c36f50033ecfd1ba80e48abd4c9247760e0a354bd85087e56d790c532bc37",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0011:0006",
+      "source": "**`solveWorkspaceRequiredStatic`**: The required size of workspace, in bytes, for a call to `SparseSolve` is `solveWorkspaceRequiredStatic + nrhs * solveWorkspaceRequiredPerRHS` where `nrhs` is the number of right-hand side vectors.",
+      "ko": "**`solveWorkspaceRequiredStatic`**: `SparseSolve` 호출에 필요한 작업 공간의 크기는 바이트 단위로 `solveWorkspaceRequiredStatic + nrhs * solveWorkspaceRequiredPerRHS`입니다. 여기서 `nrhs`는 우변 벡터의 개수입니다.",
+      "sourceHash": "65cdc5b50208c48a8862293ecfd2a0d3bd7baf1eee59410c4755992f648e526b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:discussion:0011:0007",
+      "source": "**`solveWorkspaceRequiredPerRHS`**: The required size of workspace, in bytes, for a call to `SparseSolve` is `solveWorkspaceRequiredStatic + nrhs * solveWorkspaceRequiredPerRHS` where `nrhs` is the number of right-hand side vectors.",
+      "ko": "**`solveWorkspaceRequiredPerRHS`**: `SparseSolve` 호출에 필요한 작업 공간의 크기는 바이트 단위로 `solveWorkspaceRequiredStatic + nrhs * solveWorkspaceRequiredPerRHS`입니다. 여기서 `nrhs`는 우변 벡터의 개수입니다.",
+      "sourceHash": "81652aec7bfa0ecab1c3971aa1cc6663789df96660c0057215642999c564964f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:discussion:0012:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0013:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/sparseopaquesubfactor_complex_float/factor)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/sparseopaquesubfactor_complex_float/factor)*",
+      "sourceHash": "4011a38af9a6de39ef6b47057396710ae030aa7766c244a530bf0334121423df",
+      "status": "preserved"
+    }
+  ]
+}

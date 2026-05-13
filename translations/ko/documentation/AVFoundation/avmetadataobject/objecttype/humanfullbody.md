@@ -40,7 +40,7 @@ static let humanFullBody: AVMetadataObject.ObjectType
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0012:0001"><a href="avmetadataobject/objecttype/dogbody.md">static let dogBody: AVMetadataObject.ObjectType</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0013:0001">A constant that identifies dog body metadata.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0013:0001">요청 텍스트의 위치와 길이입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0014:0001"><a href="avmetadataobject/objecttype/cathead.md">static let catHead: AVMetadataObject.ObjectType</a></span>
 

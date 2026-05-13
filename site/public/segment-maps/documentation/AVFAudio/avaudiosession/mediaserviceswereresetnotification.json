@@ -1,0 +1,190 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosession/mediaserviceswereresetnotification.md",
+  "title": "mediaServicesWereResetNotification",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosession/mediaserviceswereresetnotification",
+  "segments": [
+    {
+      "id": "seg:heading:mediaserviceswereresetnotification:0000:0001",
+      "source": "mediaServicesWereResetNotification",
+      "ko": "mediaServicesWereResetNotification",
+      "sourceHash": "18f068ddd810633cd6ff0aa3c7ff30474c47eeb4b5a2f4154c2ba5ac2670c4fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:mediaserviceswereresetnotification:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: property",
+      "ko": "**Framework**: AVFAudio **Kind**: property",
+      "sourceHash": "dbcab8cee850c10188239b4c73df47a01c6d8b4597a46786c5db98ee29c5588e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:mediaserviceswereresetnotification:0002:0001",
+      "source": "A notification the system posts when the media server restarts.",
+      "ko": "A notification the system posts when the media server restarts.",
+      "sourceHash": "4da598a44f0023cec4919366982d904070b7c8fc1393d77bf9c61acd911eff3e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:mediaserviceswereresetnotification:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediaserviceswereresetnotification:0004:0001",
+      "source": "iOS 6.0+",
+      "ko": "iOS 6.0+",
+      "sourceHash": "3d4dd430bbebf24548d6073001d3b7ca25d38a35fb48c99fbca116f560f382fc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediaserviceswereresetnotification:0004:0002",
+      "source": "iPadOS 6.0+",
+      "ko": "iPadOS 6.0+",
+      "sourceHash": "92f0fefc8cc53859b925f1f60e72b8af1e1ccc88febb363e541aab64498551ae",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediaserviceswereresetnotification:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediaserviceswereresetnotification:0004:0004",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediaserviceswereresetnotification:0004:0005",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediaserviceswereresetnotification:0004:0006",
+      "source": "watchOS 2.0+",
+      "ko": "watchOS 2.0+",
+      "sourceHash": "a49bb70bf7782611f961a4818e50c4837138698fa27c5b72e18002d928b72be7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass let mediaServicesWereResetNotification: NSNotification.Name\n```",
+      "ko": "```swift\nclass let mediaServicesWereResetNotification: NSNotification.Name\n```",
+      "sourceHash": "ba9f2203d43f60ce7054dd0bc0fe42daf85b756d1ad3fa7438605ad491ee8b9a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Under rare circumstances, the system terminates and restarts its media services daemon.",
+      "ko": "세션에서 생성하고 실행하기 전에 [`ARConfiguration`](arconfiguration.md)에서 [`isSupported`](arconfiguration/issupported.md)를 호출하여 지원되는지 확인한 다음 [`runWithConfiguration:`](arsession/runwithconfiguration:.md)로 실행합니다.",
+      "sourceHash": "2d951f9a548c0b659b4311986f99933935364e1660db41d7f9679e498df31fcc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Respond to these events by reinitializing your app’s audio objects (such as players, recorders, converters, or audio queues) and resetting your audio session’s category, options, and mode configuration.",
+      "ko": "For more information on ARKit’s coordinate space, see [`setWorldOrigin(relativeTransform:)`](arsession/setworldorigin(relativetransform:).md).",
+      "sourceHash": "6728be39614bcdca587f732810afe6e62052b1e47376da93a7f39dda3b6e9ed8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "Your app shouldn’t restart its media playback, recording, or processing until initiated by user action.",
+      "ko": "Your app shouldn’t restart its media playback, recording, or processing until initiated by user action.",
+      "sourceHash": "b97b10b4a588799650c24b92977c845e77e75d96f0d33878c8ea9cd5e0a8f9d0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0001",
+      "source": "**Note**: You can trigger a media server reset by choosing the “Reset Media Services” selection under the Developer menu in the iOS Settings app.",
+      "ko": "**Note**: You can trigger a media server reset by choosing the “Reset Media Services” selection under the Developer menu in the iOS Settings app.",
+      "sourceHash": "112b0aec6117c51b295fb9bdbd8f67dd86e8965cf24752a2ef9b7146186e75e7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0002",
+      "source": "Using this utility helps to ensure that your app responds appropriately if media services were reset.",
+      "ko": "Using this utility helps to ensure that your app responds appropriately if media services were reset.",
+      "sourceHash": "0e02f95b37c4a85f92a5ccc6110bb257bad8675a99ff0e10e9281f6194637bca",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "This notification has no [`userInfo`](https://developer.apple.com/documentation/Foundation/NSNotification/userInfo) dictionary.",
+      "ko": "This notification has no [`userInfo`](https://developer.apple.com/documentation/Foundation/NSNotification/userInfo) dictionary.",
+      "sourceHash": "21f9d6f4aedcf703ff1455efb6220118483ca5963239233f5ddff4a4c0575102",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "The system posts this notification on the main thread.",
+      "ko": "The system posts this notification on the main thread.",
+      "sourceHash": "d0ceb162936c3668e67927d82fb1621ce878c86713bde28d484832cd0f87bfa7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:discussion:0012:0001",
+      "source": "❗ **Important**: Apps don’t need to reregister for any audio session notifications and don’t need to reset key-value observers on audio session properties after a media services reset.",
+      "ko": "❗ **Important**: Apps don’t need to reregister for any audio session notifications and don’t need to reset key-value observers on audio session properties after a media services reset.",
+      "sourceHash": "2b51af0be55659d65b13dd16b1a9e339286959399b1f4ea562abf8f44b9005ab",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[class let mediaServicesWereLostNotification: NSNotification.Name](avaudiosession/mediaserviceswerelostnotification.md)",
+      "ko": "[class let mediaServicesWereLostNotification: NSNotification.Name](avaudiosession/mediaserviceswerelostnotification.md)",
+      "sourceHash": "076c194e04d63b83a01191e469c4c4f2ab4637b50737c3d1a285a11983f41168",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A notification the system posts when it terminates the media server.",
+      "ko": "A notification the system posts when it terminates the media server.",
+      "sourceHash": "28c8586939927e861d8f53d0f1f376de290d919f8495bd5b64f69978a463b213",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0016:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/mediaserviceswereresetnotification)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosession/mediaserviceswereresetnotification)*",
+      "sourceHash": "9d506057af7eba738c89fcbac3fd321fe53067e1c53cf8536538a2f46307c901",
+      "status": "preserved"
+    }
+  ]
+}

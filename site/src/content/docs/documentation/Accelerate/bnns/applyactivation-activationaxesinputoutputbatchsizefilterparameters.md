@@ -60,7 +60,7 @@ static func applyActivation(activation: BNNS.ActivationFunction, axes: [Int], in
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0018:0001"><a href="bnnsfiltercreatelayeractivation(_:_:">func BNNSFilterCreateLayerActivation(UnsafePointer&lt;BNNSLayerParametersActivation&gt;, UnsafePointer&lt;BNNSFilterParameters&gt;?) -&gt; BNNSFilter?</a>.md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0019:0001">Returns a new activation layer.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0019:0001">프레임워크가 참조 객체를 로드할 때 사용하는 입력 파일입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0020:0001"><a href="bnnsdirectapplyactivationbatch(_:_:_:_:_:">func BNNSDirectApplyActivationBatch(UnsafePointer&lt;BNNSLayerParametersActivation&gt;, UnsafePointer&lt;BNNSFilterParameters&gt;?, Int, Int, Int) -&gt; Int32</a>.md)</span>
 

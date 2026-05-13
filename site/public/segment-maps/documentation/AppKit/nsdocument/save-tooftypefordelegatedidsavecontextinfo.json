@@ -1,0 +1,302 @@
+{
+  "docId": "documentation/AppKit/nsdocument/save-tooftypefordelegatedidsavecontextinfo.md",
+  "title": "save(to:ofType:for:delegate:didSave:contextInfo:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appkit/nsdocument/save-tooftypefordelegatedidsavecontextinfo",
+  "segments": [
+    {
+      "id": "seg:heading:savetooftypefordelegatedidsavecontextinfo:0000:0001",
+      "source": "save(to:ofType:for:delegate:didSave:contextInfo:)",
+      "ko": "save(to:ofType:for:delegate:didSave:contextInfo:)",
+      "sourceHash": "66d79cec88ec12a39dc09b960f61d95043b2979c17ced27c37d85b6f7add8e45",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:savetooftypefordelegatedidsavecontextinfo:0001:0001",
+      "source": "**Framework**: AppKit **Kind**: method",
+      "ko": "**Framework**: AppKit **Kind**: method",
+      "sourceHash": "d0bb5eba5cbec0f2e57076ce9bf28601986c84bd690d2e162e981dbbb6baff21",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:savetooftypefordelegatedidsavecontextinfo:0002:0001",
+      "source": "Saves the contents of the document to a file or file package located by a URL, that is formatted to a specified type, for a particular kind of save operation.",
+      "ko": "Saves the contents of the document to a file or file package located by a URL, that is formatted to a specified type, for a particular kind of save operation.",
+      "sourceHash": "09101af7d414618b6d8923873c6a8a8eba5736d3a4a9f43796e2db2114c8d365",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:savetooftypefordelegatedidsavecontextinfo:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:savetooftypefordelegatedidsavecontextinfo:0004:0001",
+      "source": "macOS ?+",
+      "ko": "macOS ?+",
+      "sourceHash": "7565f9a2fe151983964ce7f1a1fff21dbf4130de4d3457f25bd88800eafbe279",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc save(to url: URL, ofType typeName: String, for saveOperation: NSDocument.SaveOperationType, delegate: Any?, didSave didSaveSelector: Selector?, contextInfo: UnsafeMutableRawPointer?)\n```",
+      "ko": "```swift\nfunc save(to url: URL, ofType typeName: String, for saveOperation: NSDocument.SaveOperationType, delegate: Any?, didSave didSaveSelector: Selector?, contextInfo: UnsafeMutableRawPointer?)\n```",
+      "sourceHash": "e654bc612b264190720750a84d308b49a2ea461fb5567cc69268ff502e03473d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "When saving is completed, regardless of success or failure, the method sends the message selected by `didSaveSelector` to the `delegate`, with the `contextInfo` as the last argument.",
+      "ko": "When saving is completed, regardless of success or failure, the method sends the message selected by `didSaveSelector` to the `delegate`, with the `contextInfo` as the last argument.",
+      "sourceHash": "ce62e3caee401ad08a96c9538be444a9b0c8ae0d88ebdbc659bbe1f435fe2e1c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The method selected by `didSaveSelector` must have the same signature as:",
+      "ko": "The method selected by `didSaveSelector` must have the same signature as:",
+      "sourceHash": "2e66a6bf74019377ba030e5952617dbedc36172d726ad0165159333a8e032e70",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:discussion:0009:0001",
+      "source": "```objc\n- (void)document:(NSDocument *)document didSave:(BOOL)didSaveSuccessfully  contextInfo:(void  *)contextInfo;\n```",
+      "ko": "```objc\n- (void)document:(NSDocument *)document didSave:(BOOL)didSaveSuccessfully  contextInfo:(void  *)contextInfo;\n```",
+      "sourceHash": "738b03ad022682a888aaffb1ec412c0104d4caa14fd8cced98824da241254b4d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "The default implementation of this method invokes `[self saveToURL:absoluteURL ofType:typeName forSaveOperation:saveOperation error:&anError]` and, if [`false`](https://developer.apple.com/documentation/Swift/false) is returned, presents the error to the user in a document-modal panel before messaging the delegate.",
+      "ko": "The default implementation of this method invokes `[self saveToURL:absoluteURL ofType:typeName forSaveOperation:saveOperation error:&anError]` and, if [`false`](https://developer.apple.com/documentation/Swift/false) is returned, presents the error to the user in a document-modal panel before messaging the delegate.",
+      "sourceHash": "5150993c9b010e96dbf29c69d6011e59641934e4ff8e86a261dbb3a97c246e37",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:parameters:0011:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0012:0001",
+      "source": "`url`: The location of the file or file package to which the document contents are saved.",
+      "ko": "`url`: The location of the file or file package to which the document contents are saved.",
+      "sourceHash": "20b2bb5ac81b83814462e111c24ef05fccc1262417f840e6c1bffb1ff4de63fe",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0012:0002",
+      "source": "`typeName`: The string that identifies the document type.",
+      "ko": "`typeName`: The string that identifies the document type.",
+      "sourceHash": "dfe2c86415dcccb9bc4c712993a07a2576d398c8b8be21c3ed699aba3c2c5096",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0012:0003",
+      "source": "`saveOperation`: The type of save operation.",
+      "ko": "`saveOperation`: The type of save operation.",
+      "sourceHash": "81862d0b15fafb85fd57deba83c33120d665bf045512bb9bea72ed861f9df812",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0012:0004",
+      "source": "`delegate`: The delegate to which the selector message is sent.",
+      "ko": "`delegate`: The delegate to which the selector message is sent.",
+      "sourceHash": "89582a31745011332dd35e517ed38a88aae4d66f33abb83872e478e535618707",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0012:0005",
+      "source": "`didSaveSelector`: The selector of the message sent to the delegate.",
+      "ko": "`didSaveSelector`: The selector of the message sent to the delegate.",
+      "sourceHash": "c0456290de81051dbd5da8e6b101d9217db6eb6908e6e9afb364baf5be10a4a3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0012:0006",
+      "source": "`contextInfo`: Object passed with the callback to provide any additional context information.",
+      "ko": "`contextInfo`: Object passed with the callback to provide any additional context information.",
+      "sourceHash": "62a0551fe9fc1273f37331051fba16bcc96a539cf94045330cce3ba5a8dc79ac",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func canAsynchronouslyWrite(to: URL, ofType: String, for: NSDocument.SaveOperationType) -> Bool](nsdocument/canasynchronouslywrite(to:oftype:for:).md)",
+      "ko": "[func canAsynchronouslyWrite(to: URL, ofType: String, for: NSDocument.SaveOperationType) -> Bool](nsdocument/canasynchronouslywrite(to:oftype:for:).md)",
+      "sourceHash": "725734fb9bc7ee9d816c7a4ef6fff31fcf2c828d764607650ebf805b07d8bf78",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Returns whether the receiver can concurrently write to a file or file package located by a URL, that is formatted for a specific type, for a specific kind of save operation.",
+      "ko": "Returns whether the receiver can concurrently write to a file or file package located by a URL, that is formatted for a specific type, for a specific kind of save operation.",
+      "sourceHash": "f78aea7a40e7755792674f48a4df63a068fdd2a55421891737436ac7e156ce31",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func unblockUserInteraction()](nsdocument/unblockuserinteraction.md)",
+      "ko": "[func unblockUserInteraction()](nsdocument/unblockuserinteraction.md)",
+      "sourceHash": "896f050ca8367896150f88bb6880b3ff34d37ed3d0dd9706810af566e9a7a57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Unblocks the main thread during asynchronous saving.",
+      "ko": "Unblocks the main thread during asynchronous saving.",
+      "sourceHash": "f25709e4db621218e7b19f75c6170ab37c69e6a9c95519e41040a5fd81d38035",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func write(to: URL, ofType: String) throws](nsdocument/write(to:oftype:).md)",
+      "ko": "[func write(to: URL, ofType: String) throws](nsdocument/write(to:oftype:).md)",
+      "sourceHash": "fab78ade0ef14611cc718acaaf9b4b473ced30779d179e819696d80fc20d8abd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Writes the contents of the document to a file or file package located by a URL, that is formatted to a specified type.",
+      "ko": "Writes the contents of the document to a file or file package located by a URL, that is formatted to a specified type.",
+      "sourceHash": "27e3f4478ab43034cb61ddc11d4dfdaf889bb0d51edf28ba4e58e41b029649c3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[func writeSafely(to: URL, ofType: String, for: NSDocument.SaveOperationType) throws](nsdocument/writesafely(to:oftype:for:).md)",
+      "ko": "[func writeSafely(to: URL, ofType: String, for: NSDocument.SaveOperationType) throws](nsdocument/writesafely(to:oftype:for:).md)",
+      "sourceHash": "3c9720846c2ff2c59a0761a789d2ba97cb4aace9a1d0d2267f1aaea390217a6d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Writes the contents of the document to a file or file package located by a URL.",
+      "ko": "Writes the contents of the document to a file or file package located by a URL.",
+      "sourceHash": "f5bc8f2bcb7b59eb24190d010e025ba5de6f68e971f234eb920dcd9ce7616beb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[func fileWrapper(ofType: String) throws -> FileWrapper](nsdocument/filewrapper(oftype:).md)",
+      "ko": "[func fileWrapper(ofType: String) throws -> FileWrapper](nsdocument/filewrapper(oftype:).md)",
+      "sourceHash": "5c28fd746b5918ba541fa8b08195769050cf7515551b9a10b0b4462770e37d43",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Creates and returns a file wrapper that contains the contents of the document, formatted to the specified type.",
+      "ko": "Creates and returns a file wrapper that contains the contents of the document, formatted to the specified type.",
+      "sourceHash": "9464cb8247b7bcb9cdda2cd6467f997b3e991dfdc6bac0b13c72f7dd00e21b7c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[func data(ofType: String) throws -> Data](nsdocument/data(oftype:).md)",
+      "ko": "[func data(ofType: String) throws -> Data](nsdocument/data(oftype:).md)",
+      "sourceHash": "799c56a19b01dbe27fa2d40bebaad6981f04c3227e29e7bf700b318acf843fc9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Creates and returns a data object that contains the contents of the document, formatted to a specified type.",
+      "ko": "Creates and returns a data object that contains the contents of the document, formatted to a specified type.",
+      "sourceHash": "5fcc074fab16705f89d1458d1bb028e024105d560745ccdcf3aeeedb6307b3d0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[func write(to: URL, ofType: String, for: NSDocument.SaveOperationType, originalContentsURL: URL?) throws](nsdocument/write(to:oftype:for:originalcontentsurl:).md)",
+      "ko": "[func write(to: URL, ofType: String, for: NSDocument.SaveOperationType, originalContentsURL: URL?) throws](nsdocument/write(to:oftype:for:originalcontentsurl:).md)",
+      "sourceHash": "062b8319087e63fa209d9af2bf65e12da8a5a8e7a9b8fbfb4f867cc77043fcca",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Writes the contents of the document to a file or file package located by a URL.",
+      "ko": "Writes the contents of the document to a file or file package located by a URL.",
+      "sourceHash": "f5bc8f2bcb7b59eb24190d010e025ba5de6f68e971f234eb920dcd9ce7616beb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[func save(to: URL, ofType: String, for: NSDocument.SaveOperationType, completionHandler: ((any Error)?) -> Void)](nsdocument/save(to:oftype:for:completionhandler:).md)",
+      "ko": "[func save(to: URL, ofType: String, for: NSDocument.SaveOperationType, completionHandler: ((any Error)?) -> Void)](nsdocument/save(to:oftype:for:completionhandler:).md)",
+      "sourceHash": "47af14f74552b1a7321d0c19bbb6d23c492be4aa0b06f66f0423def33cd91a83",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Saves the contents of the document to a file or file package located by a URL, that is formatted to a specified type, for a particular kind of save operation, and invokes the passed-in completion handler.",
+      "ko": "문서의 내용을 URL로 식별된 파일 또는 파일 패키지에 저장합니다. 지정한 유형으로 포맷되고, 지정된 저장 작업 종류에 따라 전달된 completionHandler가 호출됩니다.",
+      "sourceHash": "2358ecaafd3a5a84bb95781fc9c1f2568421634e7fc7de829a316ce38057c555",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[func fileAttributesToWrite(to: URL, ofType: String, for: NSDocument.SaveOperationType, originalContentsURL: URL?) throws -> [String : Any]](nsdocument/fileattributestowrite(to:oftype:for:originalcontentsurl:).md)",
+      "ko": "[func fileAttributesToWrite(to: URL, ofType: String, for: NSDocument.SaveOperationType, originalContentsURL: URL?) throws -> [String : Any]](nsdocument/fileattributestowrite(to:oftype:for:originalcontentsurl:).md)",
+      "sourceHash": "e59c119b40456ac3ca6cefde2aac7720f3569a9219c1238e55aa4450dfb684fc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Returns the attributes to write to the file or file package at the specified URL, and targeting the specified type of save operation.",
+      "ko": "지정된 URL의 파일이나 파일 패키지에 쓰기 위한 속성을 반환하며, 지정된 저장 작업 종류를 대상으로 합니다.",
+      "sourceHash": "02532ba8ba80dff75ff852035117b754bb21fc0dd6b5290eca8bdd02b1944ecb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[NSDocument.SaveOperationType](nsdocument/saveoperationtype.md)",
+      "ko": "[NSDocument.SaveOperationType](nsdocument/saveoperationtype.md)",
+      "sourceHash": "f97895417190ced510e43db4feb1d73c160bce6b343a3359066f5511c5f196ab",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Constants for specifying the type of document-save operation to perform.",
+      "ko": "수행할 문서 저장 작업 유형을 지정하기 위한 상수입니다.",
+      "sourceHash": "b60983497acdde80867bb3aa195ee0ffa686969b3e26f0553c6e210808fba62a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0034:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nsdocument/save(to:oftype:for:delegate:didsave:contextinfo:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nsdocument/save(to:oftype:for:delegate:didsave:contextinfo:))*",
+      "sourceHash": "9857e6ea371039f6902bb63d552ccdc250af0036de0f53a5e564896570384955",
+      "status": "machine_translated"
+    }
+  ]
+}

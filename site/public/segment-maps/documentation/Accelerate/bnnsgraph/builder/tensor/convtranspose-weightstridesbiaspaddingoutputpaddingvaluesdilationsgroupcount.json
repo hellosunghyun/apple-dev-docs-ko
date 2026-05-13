@@ -1,0 +1,176 @@
+{
+  "docId": "documentation/Accelerate/bnnsgraph/builder/tensor/convtranspose-weightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount.md",
+  "title": "convTranspose(weight:strides:bias:padding:outputPaddingValues:dilations:groupCount:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/convtranspose-weightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount",
+  "segments": [
+    {
+      "id": "seg:heading:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0000:0001",
+      "source": "convTranspose(weight:strides:bias:padding:outputPaddingValues:dilations:groupCount:)",
+      "ko": "convTranspose(weight:strides:bias:padding:outputPaddingValues:dilations:groupCount:)",
+      "sourceHash": "3be9ba6d1a20d9184806879bd3f65f9722e80b583214bf1301c1630d31b0b47c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0002:0001",
+      "source": "Adds a transposed convolution operation to the current graph.",
+      "ko": "현재 그래프에 전치 합성곱 연산을 추가합니다.",
+      "sourceHash": "f63fbcbbb5fc44befdcc8a9eecc1332631e48101fd3e593eac31c707ff9db17a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0004:0004",
+      "source": "macOS 26.0+",
+      "ko": "macOS 26.0+",
+      "sourceHash": "6fcc4a770cbd02feaac4df78b954d37ef26fc9755008ee17612223162fd4ed2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0004:0005",
+      "source": "tvOS 26.0+",
+      "ko": "tvOS 26.0+",
+      "sourceHash": "28934d9284c51fe0aa7b9363ccc49ea3cd840259287dd4f466466d4888ef2bf8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0004:0006",
+      "source": "visionOS 26.0+",
+      "ko": "visionOS 26.0+",
+      "sourceHash": "b9425c9f5e1a021651fa0b46b55a241daf40672c905286290476062aa2732081",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convtransposeweightstridesbiaspaddingoutputpaddingvaluesdilationsgroupcount:0004:0007",
+      "source": "watchOS 26.0+",
+      "ko": "watchOS 26.0+",
+      "sourceHash": "11b0182884b71f1fe3bdb589248a553abbab8668b5f83d492ba169654b9790a3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc convTranspose(weight: some BNNSGraph.Builder.OperationParameter<T>, strides: [Int], bias: some BNNSGraph.Builder.OperationParameter<T>, padding: BNNSGraph.Builder.ConvolutionPadding, outputPaddingValues: [Int]? = nil, dilations: [Int]? = nil, groupCount: Int = 1) -> BNNSGraph.Builder.Tensor<T>\n```",
+      "ko": "```swift\nfunc convTranspose(weight: some BNNSGraph.Builder.OperationParameter<T>, strides: [Int], bias: some BNNSGraph.Builder.OperationParameter<T>, padding: BNNSGraph.Builder.ConvolutionPadding, outputPaddingValues: [Int]? = nil, dilations: [Int]? = nil, groupCount: Int = 1) -> BNNSGraph.Builder.Tensor<T>\n```",
+      "sourceHash": "2bdfc18658ee9fd6060650035427bb22f7eec9c5e571a8afc370af08fa0768c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This operation assumes the source tensor is in `(N, C, spatial dimensions...)` format, where the number of spatial dimensions is either `1` or `2`.",
+      "ko": "이 연산은 소스 텐서가 `(N, C, spatial dimensions...)` 형식이며, 공간 차원 수는 `1` 또는 `2`입니다.",
+      "sourceHash": "1f52b300ec47a680c7a732a64ffbc0fdf75c52a7bb28d26fd079e8aa0b54a94f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0009:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0010:0001",
+      "source": "`weight`: The convolution weights.",
+      "ko": "`weight`: 컨볼루션 가중치입니다.",
+      "sourceHash": "d234102f058d15cee3eb21eb489056a50a072b2c25c7219b1a023f7799123051",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0002",
+      "source": "`strides`: An array that contains the kernel stride for each spatial dimension.",
+      "ko": "`strides`: 각 공간 차원의 커널 스트라이드를 포함하는 배열입니다.",
+      "sourceHash": "99753fe9915bb361e76728cea80d907fd0237bee0930897b26e431d73a9b1d50",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0003",
+      "source": "`bias`: The bias.",
+      "ko": "`bias`: 편향입니다.",
+      "sourceHash": "f93400413b87f1006b7da86577f92ab6f1c8394a4d93ca2fd4d3c6538b98a712",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0004",
+      "source": "`padding`: An enumeration that specifies that the operation computes the padding from the input and output shapes. If you specify `custom`, pass twice the number of spatial dimensions.",
+      "ko": "`padding`: 연산이 입력 및 출력 크기로부터 패딩을 계산함을 지정하는 열거형입니다. `custom`을 지정하면 공간 차원 수의 두 배를 전달합니다.",
+      "sourceHash": "fcfa6b50ab9b00b88263619a5af8ba485dc3bfadce3ceee9d3daf21586c84f32",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0005",
+      "source": "`dilations`: An array that contains the kernel dilation for each spatial dimension.",
+      "ko": "`dilations`: 각 공간 차원에 대한 커널 dilation을 포함하는 배열입니다.",
+      "sourceHash": "fe0a4cdecbc9323a6533ec0efd35391d3a7f3e4a1c27bb8f478381700ecb7872",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0010:0006",
+      "source": "`groupCount`: The number of convolution groups. Pass `1` to specify non-grouped convolution.",
+      "ko": "`groupCount`: 컨볼루션 그룹 수입니다. `1`을 전달하면 비그룹 컨볼루션을 지정합니다.",
+      "sourceHash": "0ccdb91910a733b67b802977a8da49e7dfeafc64449582aa629219d37e2da967",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:parameters:0011:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:parameters:0012:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/convtranspose(weight:strides:bias:padding:outputpaddingvalues:dilations:groupcount:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/convtranspose(weight:strides:bias:padding:outputpaddingvalues:dilations:groupcount:))*",
+      "sourceHash": "6c18d0fe840540c9987f93cd05da42d092bbd8102266f5effc4f8583246c33ce",
+      "status": "machine_translated"
+    }
+  ]
+}

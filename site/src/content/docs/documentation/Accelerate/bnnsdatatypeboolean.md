@@ -32,9 +32,9 @@ var BNNSDataTypeBoolean: BNNSDataType { get }
 
 <span class="ko-segment" data-segment-id="seg:paragraph:discussion:0007:0001">Storage data type</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0008:0001">Common bit to floating point types, this constant is not a valid type</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0008:0001">이 메시는 감지된 얼굴의 3D 형태를 설명하는 버텍스, 인덱스, 텍스처 좌표 버퍼를 제공하여 범용 얼굴 모델을 조정해 감지된 얼굴의 크기, 모양, 현재 표정에 맞춥니다.</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0009:0001">16-bit half precision floating point</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0009:0001">이러한 버퍼를 선호하는 렌더링 엔진에 전달하여 얼굴 지오메트리를 시각화할 수 있습니다.</span>
 
 <span class="ko-segment" data-segment-id="seg:paragraph:discussion:0010:0001">32-bit single precision floating point</span>
 

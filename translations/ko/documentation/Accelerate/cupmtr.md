@@ -48,4 +48,4 @@ func cupmtr_(_ side: UnsafePointer<CChar>, _ uplo: UnsafePointer<CChar>, _ trans
 
 ---
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">*<a href="https://developer.apple.com/documentation/accelerate/cupmtr_(_:_:_:_:_:_:_:_:_:_:_:">View on Apple Developer</a>)*</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">객체 추적 공급자가 추적 중인 모든 객체 앵커의 배열입니다.</span>

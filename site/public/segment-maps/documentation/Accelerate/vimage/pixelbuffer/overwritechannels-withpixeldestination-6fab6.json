@@ -1,0 +1,344 @@
+{
+  "docId": "documentation/Accelerate/vimage/pixelbuffer/overwritechannels-withpixeldestination-6fab6.md",
+  "title": "overwriteChannels(:withPixel:destination:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/overwritechannels-withpixeldestination-6fab6",
+  "segments": [
+    {
+      "id": "seg:heading:overwritechannelswithpixeldestination:0000:0001",
+      "source": "overwriteChannels(_:withPixel:destination:)",
+      "ko": "overwriteChannels(_:withPixel:destination:)",
+      "sourceHash": "5b4e35babda99cb8b71533b2016f6d83add331bc5889b4d8dc9111057c978edd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overwritechannelswithpixeldestination:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overwritechannelswithpixeldestination:0002:0001",
+      "source": "Overwrites the pixels of one or more channels of the pixel buffer with the provided 8-bit, 4-channel pixel value.",
+      "ko": "하나 이상의 채널의 픽셀을 제공된 8비트 4채널 픽셀 값으로 픽셀 버퍼에 덮어씁니다.",
+      "sourceHash": "ae68019010a432248c2849407506296fcdfe2317a813f11efaabf06a1bbbb408",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overwritechannelswithpixeldestination:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overwritechannelswithpixeldestination:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overwritechannelswithpixeldestination:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overwritechannelswithpixeldestination:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overwritechannelswithpixeldestination:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overwritechannelswithpixeldestination:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overwritechannelswithpixeldestination:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overwritechannelswithpixeldestination:0004:0007",
+      "source": "watchOS 9.0+",
+      "ko": "watchOS 9.0+",
+      "sourceHash": "74f54147ec06c7528917e10d68b6a402263ae2503dac544ef616ac2a86563097",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc overwriteChannels(_ channels: [UInt8], withPixel pixel: Pixel_8888, destination: vImage.PixelBuffer<Format>)\n```",
+      "ko": "```swift\nfunc overwriteChannels(_ channels: [UInt8], withPixel pixel: Pixel_8888, destination: vImage.PixelBuffer<Format>)\n```",
+      "sourceHash": "07ef3719251e9e2b0fef0f8ec83d513fa4429e659eed3131f6b885515cf43d27",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Use this function to overwrite one or more channels of an interleaved buffer with a pixel value.",
+      "ko": "이 함수는 인터리브 버퍼의 하나 이상의 채널을 픽셀 값으로 덮어쓸 때 사용합니다.",
+      "sourceHash": "28c59dcf81d20c49eeac9df57e239d05875d92dad3aabcbde56caa69a067d0f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The following code overwrites channels `1` and `3` with the corresponding channels in `pixel` :",
+      "ko": "다음 코드는 `pixel`의 해당 채널을 사용하여 `1` 및 `3` 채널을 덮어씁니다:",
+      "sourceHash": "732d35d2bd62d893f6f4b774a6e8426fab348f614729e261e5ca8e37702aca31",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0009:0001",
+      "source": "```swift\nlet pixelValues: [Pixel_8] = [ 1, 2, 3, 4,\n                               5, 6, 7, 8 ]\nlet buffer = vImage.PixelBuffer(pixelValues: pixelValues,\n                                size: vImage.Size(width: 1,\n                                                  height: 2),\n                                pixelFormat: vImage.Interleaved8x4.self)\n\nlet destination = vImage.PixelBuffer(size: vImage.Size(width: 1,\n                                                       height: 2),\n                                     pixelFormat: vImage.Interleaved8x4.self)\n\nlet pixel = Pixel_8888(101, 102, 103, 104)\n\nbuffer.overwriteChannels([3, 1],\n                         withPixel: pixel,\n                         destination: destination)\n```",
+      "ko": "```swift\nlet pixelValues: [Pixel_8] = [ 1, 2, 3, 4,\n                               5, 6, 7, 8 ]\nlet buffer = vImage.PixelBuffer(pixelValues: pixelValues,\n                                size: vImage.Size(width: 1,\n                                                  height: 2),\n                                pixelFormat: vImage.Interleaved8x4.self)\n\nlet destination = vImage.PixelBuffer(size: vImage.Size(width: 1,\n                                                       height: 2),\n                                     pixelFormat: vImage.Interleaved8x4.self)\n\nlet pixel = Pixel_8888(101, 102, 103, 104)\n\nbuffer.overwriteChannels([3, 1],\n                         withPixel: pixel,\n                         destination: destination)\n```",
+      "sourceHash": "608434d9ad46975702123ef28dc82c3f3c76aeff6ecfb293a4e66b7a20e7dd4c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "On return, `destination.array` contains the following values:",
+      "ko": "반환되면 `destination.array`에는 다음 값이 포함됩니다.",
+      "sourceHash": "50f4493d12eecd40b573c326905b4d87028facaabe123df3aa445f3de74cbad5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0011:0001",
+      "source": "```swift\n[ 1, 102, 3, 104,\n  5, 102, 7, 104 ]\n```",
+      "ko": "```swift\n[ 1, 102, 3, 104,\n  5, 102, 7, 104 ]\n```",
+      "sourceHash": "73c7e811fe37e2b796501b333f9ec873714018ea8cc6142a8770ab88855171ef",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0012:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0013:0001",
+      "source": "`channels`: An array that contains the indices of the channels that the function overwrites.",
+      "ko": "`channels`: 함수를 통해 덮어써질 채널의 인덱스를 포함하는 배열입니다.",
+      "sourceHash": "cf5b22ec389050875f82c4e2ea14b326d4024779adbfbf90b1eb6ff1b41c9adc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0002",
+      "source": "`pixel`: The value that the function writes the channels.",
+      "ko": "`pixel`: 함수가 채널에 쓸 값입니다.",
+      "sourceHash": "47d73fa0b426a20672675edb7295553d0c393e99e6c708f44042857ebd43e515",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0003",
+      "source": "`destination`: The destination pixel buffer.",
+      "ko": "`destination`: 대상 픽셀 버퍼입니다.",
+      "sourceHash": "e7ca0222b1e00858d290d86733488794c710af100a73892c243002bc8e32eb47",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0014:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func overwriteChannels(withScalar: Pixel_8)](vimage/pixelbuffer/overwritechannels(withscalar:)-3zb93.md)",
+      "ko": "[func overwriteChannels(withScalar: Pixel_8)](vimage/pixelbuffer/overwritechannels(withscalar:)-3zb93.md)",
+      "sourceHash": "74ab347e1d90ef21e0d1bb4bd23e57e4d1bc4292381a51bf0f98c69f33069c2b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Overwrites the pixels of the pixel buffer with the provided 8-bit scalar value.",
+      "ko": "픽셀 버퍼의 픽셀을 제공된 8비트 스칼라 값으로 덮어씁니다.",
+      "sourceHash": "54b641b84555a382426ff994e806a871d004b76bdf5c62b0c51effb2605ee6f8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func overwriteChannels(withScalar: Pixel_16F)](vimage/pixelbuffer/overwritechannels(withscalar:)-1hrrg.md)",
+      "ko": "[func overwriteChannels(withScalar: Pixel_16F)](vimage/pixelbuffer/overwritechannels(withscalar:)-1hrrg.md)",
+      "sourceHash": "2909f95151181ee825c4a89a738ae3f5e1e9a3e0a656e2819fdfb4097885b396",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Overwrites the pixels of the pixel buffer with the provided floating-point 16-bit scalar value.",
+      "ko": "픽셀 버퍼의 픽셀을 제공된 부동소수점 16비트 스칼라 값으로 덮어씁니다.",
+      "sourceHash": "f542f83cf60b2a2cce27e57ec30f678c33db0ff97a38cbaf89867281f9abde2f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[func overwriteChannels(withScalar: Pixel_F)](vimage/pixelbuffer/overwritechannels(withscalar:)-1wm1o.md)",
+      "ko": "[func overwriteChannels(withScalar: Pixel_F)](vimage/pixelbuffer/overwritechannels(withscalar:)-1wm1o.md)",
+      "sourceHash": "58f802839116b598e41cd112bca012496990b123b7111edc4b85a3f5199c12d6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "Overwrites the pixels of the pixel buffer with the provided 32-bit scalar value.",
+      "ko": "픽셀 버퍼의 픽셀을 제공된 32비트 스칼라 값으로 덮어씁니다.",
+      "sourceHash": "f23b4f2650ccaf4bd25770b8902ee6f0525df37e4c51282d2b3be2121baf1941",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[func overwriteChannels([UInt8], withScalar: Pixel_8, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withscalar:destination:)-57ov2.md)",
+      "ko": "[func overwriteChannels([UInt8], withScalar: Pixel_8, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withscalar:destination:)-57ov2.md)",
+      "sourceHash": "0dac81c3461c56044e9ff7e412ef0bcdf9512f36cb55e568a5dc6fcc7a2eebf7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "Overwrites the pixels of one or more channels of the pixel buffer with the provided 8-bit scalar value.",
+      "ko": "픽셀 버퍼의 하나 이상의 채널의 픽셀을 제공된 8비트 스칼라 값으로 덮어씁니다.",
+      "sourceHash": "6dbc028a047e9bd0fdcd7c83a0ea05b4efd2f2ee75c633f81785d77de6732055",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[func overwriteChannels([UInt8], withScalar: Pixel_F, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withscalar:destination:)-ev8q.md)",
+      "ko": "[func overwriteChannels([UInt8], withScalar: Pixel_F, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withscalar:destination:)-ev8q.md)",
+      "sourceHash": "a69c94dda77f775644ae6b91678a639beebc3f1a29b3fc63e27cbafb48adfff4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "Overwrites the pixels of one or more channels of the pixel buffer with the provided 32-bit scalar value.",
+      "ko": "픽셀 버퍼의 하나 이상의 채널의 픽셀을 제공된 32비트 스칼라 값으로 덮어씁니다.",
+      "sourceHash": "b80305adea65545d22876b01c9ed8eb61a0480dd03152ed3db136381666ed962",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[func overwriteChannels([UInt8], withPixel: Pixel_ARGB_16U, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withpixel:destination:)-6zw3o.md)",
+      "ko": "[func overwriteChannels([UInt8], withPixel: Pixel_ARGB_16U, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withpixel:destination:)-6zw3o.md)",
+      "sourceHash": "6373991070a1c783f195ea7ab6a73c8106520b0432f1549fa9e254ab18e2eaa4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "Overwrites the pixels of one or more channels of the pixel buffer with the provided unsigned 16-bit, 4-channel pixel value.",
+      "ko": "픽셀 버퍼의 하나 이상의 채널의 픽셀을 제공된 부호 없는 16비트 4채널 픽셀 값으로 덮어씁니다.",
+      "sourceHash": "fa7b554ef776b976e326ce7ebb2512e53c4ccc1b54a15204e4aa00252b08ecef",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[func overwriteChannels([UInt8], withPixel: Pixel_FFFF, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withpixel:destination:)-6pbz8.md)",
+      "ko": "[func overwriteChannels([UInt8], withPixel: Pixel_FFFF, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withpixel:destination:)-6pbz8.md)",
+      "sourceHash": "e780f794081e5ab1bf4328519e7294b92aa1856cb50f21325a1bff2c246a1fbd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "Overwrites the pixels of one or more channels of the pixel buffer with the provided 32-bit, 4-channel pixel value.",
+      "ko": "픽셀 버퍼의 하나 이상의 채널의 픽셀을 제공된 32비트, 4채널 픽셀 값으로 덮어씁니다.",
+      "sourceHash": "e40df85170fef2de488790536ca456fc1356630d4bd5894eedf7ebda2d312537",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0029:0001",
+      "source": "[func overwriteChannels([UInt8], withPlanarBuffer: vImage.PixelBuffer<vImage.Planar8>, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withplanarbuffer:destination:)-9jbky.md)",
+      "ko": "[func overwriteChannels([UInt8], withPlanarBuffer: vImage.PixelBuffer<vImage.Planar8>, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withplanarbuffer:destination:)-9jbky.md)",
+      "sourceHash": "8e96979f610ee35d412cc17acf996d80768a2bcd54d81cfc59cf07cc083300fe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "Overwrites the pixels of one or more channels of the pixel buffer with the provided 8-bit planar pixel buffer.",
+      "ko": "픽셀 버퍼의 하나 이상의 채널의 픽셀을 제공된 8비트 평면 픽셀 버퍼로 덮어씁니다.",
+      "sourceHash": "5f23a03a664f33a6f9e2f1aa083489a2e0d87dc3cfc9dce7a08ef4a3168f31d5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0031:0001",
+      "source": "[func overwriteChannels([UInt8], withPlanarBuffer: vImage.PixelBuffer<vImage.PlanarF>, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withplanarbuffer:destination:)-hiw0.md)",
+      "ko": "[func overwriteChannels([UInt8], withPlanarBuffer: vImage.PixelBuffer<vImage.PlanarF>, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withplanarbuffer:destination:)-hiw0.md)",
+      "sourceHash": "8e194529f8252b7e58b304deb14a9cd86145445c9a07b6569e10a1954e0836d3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0032:0001",
+      "source": "Overwrites the pixels of one or more channels of the pixel buffer with the provided 32-bit planar pixel buffer.",
+      "ko": "픽셀 버퍼의 하나 이상의 채널의 픽셀을 제공된 32비트 평면 픽셀 버퍼로 덮어씁니다.",
+      "sourceHash": "0adb855f1227b717b764e96dbe4ee4f8766e2d0653e2c61f8b0cf1865e0b73e9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0033:0001",
+      "source": "[func overwriteChannels([UInt8], withInterleavedBuffer: vImage.PixelBuffer<Format>, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withinterleavedbuffer:destination:)-74hah.md)",
+      "ko": "[func overwriteChannels([UInt8], withInterleavedBuffer: vImage.PixelBuffer<Format>, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withinterleavedbuffer:destination:)-74hah.md)",
+      "sourceHash": "895a1aab96dd4a01b505585aaa8012e1fd2fd4df0945c2e8f1e48982783e37dd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0034:0001",
+      "source": "Overwrites the pixels of one or more channels of the pixel buffer with the provided 8-bit interleaved pixel buffer.",
+      "ko": "픽셀 버퍼의 하나 이상의 채널의 픽셀을 제공된 8비트 인터리브드 픽셀 버퍼로 덮어씁니다.",
+      "sourceHash": "90062e1c4ea63dd80475df9c9adff8208c5477494db76d7459868f9dc498c75e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0035:0001",
+      "source": "[func overwriteChannels([UInt8], withInterleavedBuffer: vImage.PixelBuffer<Format>, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withinterleavedbuffer:destination:)-8xkd1.md)",
+      "ko": "[func overwriteChannels([UInt8], withInterleavedBuffer: vImage.PixelBuffer<Format>, destination: vImage.PixelBuffer<Format>)](vimage/pixelbuffer/overwritechannels(_:withinterleavedbuffer:destination:)-8xkd1.md)",
+      "sourceHash": "94f1bc4b3d3d22ea7d44a601fb646cf8f229f3920485ccf3d6f29033df7ef046",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0036:0001",
+      "source": "Overwrites the pixels of one or more channels of the pixel buffer with the provided 32-bit interleaved pixel buffer.",
+      "ko": "픽셀 버퍼의 하나 이상의 채널의 픽셀을 제공된 32비트 인터리브드 픽셀 버퍼로 덮어씁니다.",
+      "sourceHash": "d9f8d70b73eb29a0efa8bb74e24b99697c6958c87fdac23943b112495219c7ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0037:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0038:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/overwritechannels(_:withpixel:destination:)-6fab6)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/overwritechannels(_:withpixel:destination:)-6fab6)*",
+      "sourceHash": "b349dcb3fc8df0e55801b6a0b8367a8f8e61c7a56dab9d769f005efa12485981",
+      "status": "machine_translated"
+    }
+  ]
+}

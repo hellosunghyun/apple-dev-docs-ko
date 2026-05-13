@@ -1,0 +1,141 @@
+{
+  "docId": "documentation/AVKit/avdisplaymanager/isdisplaymodeswitchinprogress.md",
+  "title": "isDisplayModeSwitchInProgress",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avkit/avdisplaymanager/isdisplaymodeswitchinprogress",
+  "segments": [
+    {
+      "id": "seg:heading:isdisplaymodeswitchinprogress:0000:0001",
+      "source": "isDisplayModeSwitchInProgress",
+      "ko": "isDisplayModeSwitchInProgress",
+      "sourceHash": "5b8b076a95ad32f9b1a3f19f602b29510f28f8e85a35a83c5942454bf8f73669",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:isdisplaymodeswitchinprogress:0001:0001",
+      "source": "**Framework**: AVKit **Kind**: property",
+      "ko": "**Framework**: AVKit **Kind**: property",
+      "sourceHash": "83a3186396f39e44fbb37509eb46c2da43361a841acd9dd1def3e7bfe61fd8e4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:isdisplaymodeswitchinprogress:0002:0001",
+      "source": "A Boolean value that indicates whether a display mode switch is in progress.",
+      "ko": "A Boolean value that indicates whether a display mode switch is in progress.",
+      "sourceHash": "42be125dcbe5c679afb18d767ffa4bad40856ed47513384bd9c2e4a682b55e3e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:isdisplaymodeswitchinprogress:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:isdisplaymodeswitchinprogress:0004:0001",
+      "source": "tvOS 11.2+",
+      "ko": "tvOS 11.2+",
+      "sourceHash": "b233b8f03bad99523eb10f26f0cb302f3310012311dc26d347283eaea2f37439",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar isDisplayModeSwitchInProgress: Bool { get }\n```",
+      "ko": "```swift\nvar isDisplayModeSwitchInProgress: Bool { get }\n```",
+      "sourceHash": "4fe75d9f88dfef972f1f71b16bfb73c6a75232c07b2883c94304220c73ac829f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "While this property value is `true`, your app should behave as if the display is currently changing modes, and may be temporarily blank.",
+      "ko": "While this property value is `true`, your app should behave as if the display is currently changing modes, and may be temporarily blank.",
+      "sourceHash": "09609e40f86b9ac25862e26ace380860d828cf352c9a490e1a010c50e9db1cb6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The accuracy of this property value depends on the TV hardware and the nature of the mode switch.",
+      "ko": "이때 검증기의 [`status`](avcaptionconversionvalidator/status-swift.property.md) 값은 [`AVCaptionConversionValidator.Status.completed`](avcaptionconversionvalidator/status-swift.enum/completed.md)로 변경됩니다.",
+      "sourceHash": "24fce7930a4d8ade5f4ace3205ab9f3c9ac2405ab59ffed3de1e705c92e22540",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "When displaying temporary content or user interface elements, such as hints or tips, leave them visible for longer than the mode switch takes, to ensure the user sees them.",
+      "ko": "When displaying temporary content or user interface elements, such as hints or tips, leave them visible for longer than the mode switch takes, to ensure the user sees them.",
+      "sourceHash": "ff3d9094d19891a33dd4a1a1c2d48e916d861664e9a16a3ab98cb17678e97d27",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "This property is key-value observable.",
+      "ko": "진행 중인 유효성 검사 작업을 중지하려면 [`stopValidating()`](avcaptionconversionvalidator/stopvalidating().md)을 호출합니다.",
+      "sourceHash": "da10f6fb15a1291aedea3de21f0a99a0321c2e86790d0f3fd44477cca7d3c9a7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0010:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0011:0001",
+      "source": "[var preferredDisplayCriteria: AVDisplayCriteria?](avdisplaymanager/preferreddisplaycriteria.md)",
+      "ko": "[var preferredDisplayCriteria: AVDisplayCriteria?](avdisplaymanager/preferreddisplaycriteria.md)",
+      "sourceHash": "b6cc9a917fbdbfff933a0d307274df40e68aaf35782efb99ce5d64ef58371d2d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0012:0001",
+      "source": "A hint for the TV to set the display mode to best match the currently playing content’s display criteria.",
+      "ko": "A hint for the TV to set the display mode to best match the currently playing content’s display criteria.",
+      "sourceHash": "eaa8a7e70bfd4c500dd9a1fbad1773efa1965777cb89951c89905eee5edadc25",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var isDisplayCriteriaMatchingEnabled: Bool](avdisplaymanager/isdisplaycriteriamatchingenabled.md)",
+      "ko": "[var isDisplayCriteriaMatchingEnabled: Bool](avdisplaymanager/isdisplaycriteriamatchingenabled.md)",
+      "sourceHash": "514a5c9deff0aecce9744064f051c2d0f1d8f0deffaf2711ffdb259af1f9725d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "A Boolean value that indicates whether the user has enabled display critera matching.",
+      "ko": "A Boolean value that indicates whether the user has enabled display critera matching.",
+      "sourceHash": "3712904134bd8daeef17ee5d0f0c4f7820ae9007165a0d634a23d953f416bae1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0015:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avdisplaymanager/isdisplaymodeswitchinprogress)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avdisplaymanager/isdisplaymodeswitchinprogress)*",
+      "sourceHash": "421514db2ab897c344831b50f89931f05dfac75964c9dd985c82d3daa82cb1b0",
+      "status": "preserved"
+    }
+  ]
+}

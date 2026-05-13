@@ -1,0 +1,344 @@
+{
+  "docId": "documentation/Accelerate/sparsesubfactorsr.md",
+  "title": "SparseSubfactorSr",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/sparsesubfactorsr",
+  "segments": [
+    {
+      "id": "seg:heading:sparsesubfactorsr:0000:0001",
+      "source": "SparseSubfactorSr",
+      "ko": "SparseSubfactorSr",
+      "sourceHash": "e38d807c2a28683119988927a15fce8874bfd18e7e9d0c82c4fa7ee7543e4038",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:sparsesubfactorsr:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: var",
+      "ko": "**Framework**: Accelerate **Kind**: var",
+      "sourceHash": "647af8913cf17e438f040e1758581c5f448a7a3a958ebc717625094d7c7e1442",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:sparsesubfactorsr:0002:0001",
+      "source": "Types of sub-factor object.",
+      "ko": "Types of sub-factor object.",
+      "sourceHash": "4b1150e4d9c40314a8eedf093c1795ea7b8ba7378ccb59f04c5411bb17f27194",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:sparsesubfactorsr:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesubfactorsr:0004:0001",
+      "source": "iOS 18.5+",
+      "ko": "iOS 18.5+",
+      "sourceHash": "535dce1c807f4d247e539f44dba4abc87f7d1ce3d05ffa3da780b7f5fc170087",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesubfactorsr:0004:0002",
+      "source": "iPadOS 18.5+",
+      "ko": "iPadOS 18.5+",
+      "sourceHash": "b7bcf63a22c0551a7936f216e23df1e1bda1578bd1501c546103fc6a4e67ece9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesubfactorsr:0004:0003",
+      "source": "Mac Catalyst 18.5+",
+      "ko": "Mac Catalyst 18.5+",
+      "sourceHash": "6db14126164f0d96e5ac6c73a253936cc7a926ae85fc88d350295f27c4824da3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesubfactorsr:0004:0004",
+      "source": "macOS 15.5+",
+      "ko": "macOS 15.5+",
+      "sourceHash": "ed96aa40871ba9d8b4ef2ee3b7830ae113122f4a1861a9b6d90207f46616597e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesubfactorsr:0004:0005",
+      "source": "tvOS 18.5+",
+      "ko": "tvOS 18.5+",
+      "sourceHash": "61877e2c264079fb4d263ff028670cd6edb2b1a37a459cf178fa69fdc87f1261",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesubfactorsr:0004:0006",
+      "source": "visionOS 2.5+",
+      "ko": "visionOS 2.5+",
+      "sourceHash": "84999d3b41a760adad365cdab72f833c7437d0e2626b0620f9daa9e45cca4685",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesubfactorsr:0004:0007",
+      "source": "watchOS 11.5+",
+      "ko": "watchOS 11.5+",
+      "sourceHash": "ceb97f988ba5fece7f97c33bc723086f413049faa7949f278472f131c471250c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar SparseSubfactorSr: SparseSubfactor_t { get }\n```",
+      "ko": "```swift\nvar SparseSubfactorSr: SparseSubfactor_t { get }\n```",
+      "sourceHash": "d47ff57d393780bc4d8d9c813f947f4a743cd20c00d40b4b66302f2f902ac235",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:discussion:0008:0001",
+      "source": "**`SparseSubfactorInvalid`**: Invalid subfactor (requested type not compatible with supplied factorization or already destroyed).",
+      "ko": "**`SparseSubfactorInvalid`**: Invalid subfactor (requested type not compatible with supplied factorization or already destroyed).",
+      "sourceHash": "926f3a96e01af92b7afd38f0f5ea0f780d29e08c6b076dc6c782344d7e867495",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:discussion:0008:0002",
+      "source": "**`SparseSubfactorP`**: Permutation subfactor, valid for all factorization types. (this is the row permutation for LU factorization)",
+      "ko": "**`SparseSubfactorP`**: Permutation subfactor, valid for all factorization types. (this is the row permutation for LU factorization)",
+      "sourceHash": "2499355dc88fc313db3bbaab966ac8cacda72612e7b8909991a2bdf445d8f00c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:discussion:0008:0003",
+      "source": "**`SparseSubfactorS`**: Diagonal scaling subfactor, valid for Cholesky and LDL^T only.",
+      "ko": "**`SparseSubfactorS`**: Diagonal scaling subfactor, valid for Cholesky and LDL^T only.",
+      "sourceHash": "ec4a5962753e502a09a47a78fda7a46e08783141e637fab2f1a279906b3fbe4d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:discussion:0008:0004",
+      "source": "**`SparseSubfactorL`**: L factor subfactor, valid for Cholesky and LDL^T only.",
+      "ko": "**`SparseSubfactorL`**: L factor subfactor, valid for Cholesky and LDL^T only.",
+      "sourceHash": "397cd8a31c0664c30a8b6d9762f5df452e15054da086225fbc473bcc040f8851",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:discussion:0008:0005",
+      "source": "**`SparseSubfactorD`**: D factor subfactor, valid for LDL^T only.",
+      "ko": "**`SparseSubfactorD`**: D factor subfactor, valid for LDL^T only.",
+      "sourceHash": "d4dbb0191ffe9a31e165ffcb760506d03189afc678068054cfb28e465f9b2209",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:discussion:0008:0006",
+      "source": "**`SparseSubfactorPLPS`**: Half-solve subfactor, valid for Cholesky and LDL^T only. Corresponds to PLP’ on forward (non-transpose) solve, and corresponds to PLDP’ on backward (transpose) solve (D=I for Chokesky).",
+      "ko": "**`SparseSubfactorPLPS`**: Half-solve subfactor, valid for Cholesky and LDL^T only. Corresponds to PLP’ on forward (non-transpose) solve, and corresponds to PLDP’ on backward (transpose) solve (D=I for Chokesky).",
+      "sourceHash": "cc9a0b0122bae6eca6c20662141d2206dd19be6449e0aac37b3f1213761ac9fc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:discussion:0008:0007",
+      "source": "**`SparseSubfactorQ`**: Q factor subfactor, valid for QR only. Column permutation, valid for LU only.",
+      "ko": "**`SparseSubfactorQ`**: Q factor subfactor, valid for QR only. Column permutation, valid for LU only.",
+      "sourceHash": "f850576ea473532649f26363731364b5315ba3b8775d3163e743ddb974c07155",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:discussion:0008:0008",
+      "source": "**`SparseSubfactorR`**: R factor subfactor, valid for QR and CholeskyAtA only.",
+      "ko": "**`SparseSubfactorR`**: R factor subfactor, valid for QR and CholeskyAtA only.",
+      "sourceHash": "7a9e68932549ab3b11774fdffc7f7de116a8223e967ff5b913a0715b19a18c5e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:discussion:0008:0009",
+      "source": "**`SparseSubfactorRP`**: Half-solve subfactor, valid for QR and CholeskyAtA only.",
+      "ko": "**`SparseSubfactorRP`**: Half-solve subfactor, valid for QR and CholeskyAtA only.",
+      "sourceHash": "7d3095178cb38705bee0af20dda3b571c14a220fa055871b3e8b90b0bef4915a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:discussion:0008:0010",
+      "source": "**`SparseSubfactorSr`**: Diagonal row scaling subfactor, valid for LU only.",
+      "ko": "**`SparseSubfactorSr`**: Diagonal row scaling subfactor, valid for LU only.",
+      "sourceHash": "e799a524d4b5e10ee3e7c6f3d9ea76ce95e8e2bec480fc135ac4c697f6074dc4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:discussion:0008:0011",
+      "source": "**`SparseSubfactorSc`**: Diagonal column scaling subfactor, valid for LU only.",
+      "ko": "**`SparseSubfactorSc`**: Diagonal column scaling subfactor, valid for LU only.",
+      "sourceHash": "bc25076953d52b08459f09e69c9fa1b2c4bb66c96937a51dc4769503e886d949",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[var SparseSubfactorInvalid: SparseSubfactor_t](sparsesubfactorinvalid.md)",
+      "ko": "[var SparseSubfactorInvalid: SparseSubfactor_t](sparsesubfactorinvalid.md)",
+      "sourceHash": "9cbfae8bbbf77ef24e2d117195b86184f08aa1963c73e7dc9d3c5eb4aedf2f21",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "An invalid subfactor that indicates the requested type is incompatible with the supplied factorization or the system has destroyed it.",
+      "ko": "플레이어 뷰 컨트롤러가 곧 전체 화면 표시를 시작할 때 delegate에 알립니다.",
+      "sourceHash": "655e6e97bb4166734891a96ad83c99a6613ec6549defa6dc730a9b7c02662724",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var SparseSubfactorP: SparseSubfactor_t](sparsesubfactorp.md)",
+      "ko": "[var SparseSubfactorP: SparseSubfactor_t](sparsesubfactorp.md)",
+      "sourceHash": "194ab6198fea09382c112c8b125780b449d68f79c9f934ef21b7ea50208736c2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "A permutation subfactor that’s valid for all factorization types.",
+      "ko": "A permutation subfactor that’s valid for all factorization types.",
+      "sourceHash": "d733c45229259e309d4ae719bccd28372b16a7ab3588016f3bb57ba785415eb6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var SparseSubfactorS: SparseSubfactor_t](sparsesubfactors.md)",
+      "ko": "[var SparseSubfactorS: SparseSubfactor_t](sparsesubfactors.md)",
+      "sourceHash": "57b99124d6ef1e67e15cbdb1d7940e2090fc31e928f2fe851374e1debc911931",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "A diagonal scaling subfactor that’s valid for Cholesky and *LDLᵀ* only.",
+      "ko": "A diagonal scaling subfactor that’s valid for Cholesky and *LDLᵀ* only.",
+      "sourceHash": "4c70a852d4b362099cddfdc03cb2b9cd0bd8940e6c2739b514f9d47206755d51",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var SparseSubfactorL: SparseSubfactor_t](sparsesubfactorl.md)",
+      "ko": "[var SparseSubfactorL: SparseSubfactor_t](sparsesubfactorl.md)",
+      "sourceHash": "f81d332d90b441cfb6cd0c92bc057dfc30f70c808939f6f47d43232c45b7f68e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "An *L* factor subfactor that’s valid for Cholesky and *LDLᵀ* only.",
+      "ko": "An *L* factor subfactor that’s valid for Cholesky and *LDLᵀ* only.",
+      "sourceHash": "46ac42d3eda98e95771c217a350247489d7f15353b4577e623950b02cf78d680",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var SparseSubfactorD: SparseSubfactor_t](sparsesubfactord.md)",
+      "ko": "[var SparseSubfactorD: SparseSubfactor_t](sparsesubfactord.md)",
+      "sourceHash": "8735615a2e36f1e3e1854da67fc70da769a2b92985e190e16283c05589d10493",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A *D* factor subfactor that’s valid for *LDLᵀ*` `only.",
+      "ko": "A *D* factor subfactor that’s valid for *LDLᵀ*` `only.",
+      "sourceHash": "d1ebab4c5cd55426c373e74e2a0799abc74319c44d39551e6110e776d29441c0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[var SparseSubfactorPLPS: SparseSubfactor_t](sparsesubfactorplps.md)",
+      "ko": "[var SparseSubfactorPLPS: SparseSubfactor_t](sparsesubfactorplps.md)",
+      "sourceHash": "688d192c76cdab25dd854b9027c33fee2584d2ade4045045ee9714de9d4e1820",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "A half-solve subfactor that’s valid for Cholesky and *LDLᵀ* only.",
+      "ko": "A half-solve subfactor that’s valid for Cholesky and *LDLᵀ* only.",
+      "sourceHash": "000ec9348e03cd1b9291345b96ad354bbdf4c187a6c94d1b25a6167e2395e7c8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[var SparseSubfactorQ: SparseSubfactor_t](sparsesubfactorq.md)",
+      "ko": "[var SparseSubfactorQ: SparseSubfactor_t](sparsesubfactorq.md)",
+      "sourceHash": "f98265d5a34437da44b825cc5e86bb9385e5fcd68681fe06e0529621f6b3602f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "A *Q* factor subfactor that’s valid for QR only.",
+      "ko": "A *Q* factor subfactor that’s valid for QR only.",
+      "sourceHash": "7f7c6470762fbd0c8db5f0386254c79397fef55f4ec3b29f9f9ad08f47cac9e5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[var SparseSubfactorR: SparseSubfactor_t](sparsesubfactorr.md)",
+      "ko": "[var SparseSubfactorR: SparseSubfactor_t](sparsesubfactorr.md)",
+      "sourceHash": "1cc5459efe9e4788963f073b65333766ae14aa49be619b73e1c77c310b895ba1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "An *R* factor subfactor that’s valid for QR and Cholesky *AᵀA* only.",
+      "ko": "An *R* factor subfactor that’s valid for QR and Cholesky *AᵀA* only.",
+      "sourceHash": "f72a77092ea396401576ffe2ce1ab54c726bdda588312c893cb539a685fd1e25",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[var SparseSubfactorRP: SparseSubfactor_t](sparsesubfactorrp.md)",
+      "ko": "[var SparseSubfactorRP: SparseSubfactor_t](sparsesubfactorrp.md)",
+      "sourceHash": "dc55454cd8bf6153b25d879559b0f712026b959de0f33bebaa25222cc3cea511",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "A half-solve subfactor that’s valid for QR and Cholesky *AᵀA* only.",
+      "ko": "고정 위치 재생 컨트롤이 표시될 때 가려지지 않는 영역을 나타내는 레이아웃 가이드입니다.",
+      "sourceHash": "f39f5493689b6deed73b5eb25605812cccf894b4729aaf6f2433eed7191d26e0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[var SparseSubfactorSc: SparseSubfactor_t](sparsesubfactorsc.md)",
+      "ko": "[var SparseSubfactorSc: SparseSubfactor_t](sparsesubfactorsc.md)",
+      "sourceHash": "fd5428d5dc1242a9613a14c150fc4e3cbd061301796c6bb7ff9e30846d07e3ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Types of sub-factor object.",
+      "ko": "시스템 제공 정보 및 설정 패널과 함께 클라이언트별 콘텐츠와 컨트롤을 제공하는 뷰 컨트롤러입니다.",
+      "sourceHash": "4b1150e4d9c40314a8eedf093c1795ea7b8ba7378ccb59f04c5411bb17f27194",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0030:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/sparsesubfactorsr)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/sparsesubfactorsr)*",
+      "sourceHash": "63c2746a53e00fc3bfa1c0d13e418cc66383d5f42dfc48139cf34ddf7d1de187",
+      "status": "preserved"
+    }
+  ]
+}

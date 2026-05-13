@@ -70,27 +70,27 @@ static let iTunesMetadataKeyRecordCompany: AVMetadataKey
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0026:0001"><a href="avmetadatakey/itunesmetadatakeyauthor.md">static let iTunesMetadataKeyAuthor: AVMetadataKey</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0027:0001">A key that represents the name of the author.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0027:0001">아티스트의 ID를 나타내는 키입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0028:0001"><a href="avmetadatakey/itunesmetadatakeybeatspermin.md">static let iTunesMetadataKeyBeatsPerMin: AVMetadataKey</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0029:0001">A key that represents the beats per minute of a track in iTunes.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0029:0001">iTunes에서 트랙의 분당 박자(BPM)를 나타내는 키입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0030:0001"><a href="avmetadatakey/itunesmetadatakeycomposer.md">static let iTunesMetadataKeyComposer: AVMetadataKey</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0031:0001">A key that represents the name of the composer.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0031:0001">작곡가의 이름을 나타내는 키입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0032:0001"><a href="avmetadatakey/itunesmetadatakeyconductor.md">static let iTunesMetadataKeyConductor: AVMetadataKey</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0033:0001">A key that represents the name of the conductor.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0033:0001">지휘자의 이름을 나타내는 키입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0034:0001"><a href="avmetadatakey/itunesmetadatakeycontentrating.md">static let iTunesMetadataKeyContentRating: AVMetadataKey</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0035:0001">A key that represents the content rating in iTunes.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0035:0001">iTunes에서 콘텐츠 등급을 나타내는 키입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0036:0001"><a href="avmetadatakey/itunesmetadatakeycopyright.md">static let iTunesMetadataKeyCopyright: AVMetadataKey</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0037:0001">A key that represents the copyright statement in iTunes.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0037:0001">iTunes의 저작권 진술문을 나타내는 키입니다.</span>
 
 ---
 

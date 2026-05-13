@@ -1,0 +1,183 @@
+{
+  "docId": "documentation/AVFoundation/avcapturedevice/defaultrectforexposurepoint-ofinterest.md",
+  "title": "defaultRectForExposurePoint(ofInterest:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avcapturedevice/defaultrectforexposurepoint-ofinterest",
+  "segments": [
+    {
+      "id": "seg:heading:defaultrectforexposurepointofinterest:0000:0001",
+      "source": "defaultRectForExposurePoint(ofInterest:)",
+      "ko": "defaultRectForExposurePoint(ofInterest:)",
+      "sourceHash": "3b19a1ac22dffa347ff4f5de83e544d6c095820defb66b79d9ff4a18f2c5484f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:defaultrectforexposurepointofinterest:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: method",
+      "ko": "**Framework**: AVFoundation **Kind**: method",
+      "sourceHash": "d133cd3675feb588bbd9825bcd9c9dd1c213a1a5863c61becb77cf4b2a3b97ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:defaultrectforexposurepointofinterest:0002:0001",
+      "source": "The default rectangle of interest used for a given exposure point of interest.",
+      "ko": "주어진 노출 관심점에 사용되는 기본 관심 사각형입니다.",
+      "sourceHash": "b1f681f29a3bd7acd5168628a942fc564a5bcf32cce67e66cc0611797f273d34",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:defaultrectforexposurepointofinterest:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:defaultrectforexposurepointofinterest:0004:0001",
+      "source": "iOS 26.0+",
+      "ko": "iOS 26.0+",
+      "sourceHash": "c83c90543d9c2a46244a2eaf78236d739942eb3296aadc8003348416db73edfc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:defaultrectforexposurepointofinterest:0004:0002",
+      "source": "iPadOS 26.0+",
+      "ko": "iPadOS 26.0+",
+      "sourceHash": "da65d3c5ea1dddb8a2f14bb2bff258f52a754f1d96f608f75044b98a613f1672",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:defaultrectforexposurepointofinterest:0004:0003",
+      "source": "Mac Catalyst 26.0+",
+      "ko": "Mac Catalyst 26.0+",
+      "sourceHash": "41da0bcbe19513a5638f4ac052319884e486b3cc05252ef6209b23e7b2b1d8e7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:defaultrectforexposurepointofinterest:0004:0004",
+      "source": "macOS 26.0+",
+      "ko": "macOS 26.0+",
+      "sourceHash": "6fcc4a770cbd02feaac4df78b954d37ef26fc9755008ee17612223162fd4ed2c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:defaultrectforexposurepointofinterest:0004:0005",
+      "source": "tvOS 26.0+",
+      "ko": "tvOS 26.0+",
+      "sourceHash": "28934d9284c51fe0aa7b9363ccc49ea3cd840259287dd4f466466d4888ef2bf8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc defaultRectForExposurePoint(ofInterest pointOfInterest: CGPoint) -> CGRect\n```",
+      "ko": "```swift\nfunc defaultRectForExposurePoint(ofInterest pointOfInterest: CGPoint) -> CGRect\n```",
+      "sourceHash": "d3ff4eca2b57fa5c547d66a2669850e4dc5ccd559663098f2b8e0fdaba884570",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "For example, pass `(0.5, 0.5)` to get the exposure rectangle of interest used for the default exposure point of interest at `(0.5, 0.5)`.",
+      "ko": "예를 들어 `(0.5, 0.5)`를 전달하면 기본 노출 관심점이 `(0.5, 0.5)`일 때 사용되는 노출 관심 사각형을 얻을 수 있습니다.",
+      "sourceHash": "87cdf81c22a587118599d85b7c79e2cdfd8581435b8072805fa31472adf403b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "This method returns `CGRectNull` if [`isExposureRectOfInterestSupported`](avcapturedevice/isexposurerectofinterestsupported.md) returns `false`.",
+      "ko": "이 메서드는 [`isExposureRectOfInterestSupported`](avcapturedevice/isexposurerectofinterestsupported.md)가 `false`를 반환하면 `CGRectNull`을 반환합니다.",
+      "sourceHash": "60c8bae979818a4f2da6162a434695b389fbaff8b288663f79593778d6b90484",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`pointOfInterest`: The point of interest for which you want the default rectangle of interest.",
+      "ko": "`pointOfInterest`: 기본 관심 사각형을 얻고자 하는 관심점입니다.",
+      "sourceHash": "c7b61408609877dd7f2d5a2b07a024a1e92d89e27bf99d77e477e27481add688",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[var isExposureRectOfInterestSupported: Bool](avcapturedevice/isexposurerectofinterestsupported.md)",
+      "ko": "[var isExposureRectOfInterestSupported: Bool](avcapturedevice/isexposurerectofinterestsupported.md)",
+      "sourceHash": "9cebb3c662c17c3fc15fe286338e040c1b4d31ee9b6da35b704d840264e1da4b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Whether the device supports exposure rectangles of interest.",
+      "ko": "기기가 노출 관심 사각형을 지원하는지 여부입니다.",
+      "sourceHash": "55739beae92aa71279925ac9cd642eb6285ba7afdee62f2d9e4649f8c7196395",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var exposureRectOfInterest: CGRect](avcapturedevice/exposurerectofinterest.md)",
+      "ko": "[var exposureRectOfInterest: CGRect](avcapturedevice/exposurerectofinterest.md)",
+      "sourceHash": "9e5fe15134ce67c8505c546ea7e8c89d1bc8eb7f6e0170fc8d17f907650fa265",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "The device’s current exposure rectangle of interest, if it has one.",
+      "ko": "기기가 가진 경우 현재의 노출 관심 사각형입니다.",
+      "sourceHash": "d1def47c8c98b687ae65823db4c73634b011da94d3ed12ff7dcf80425ed03a1f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[var minExposureRectOfInterestSize: CGSize](avcapturedevice/minexposurerectofinterestsize.md)",
+      "ko": "[var minExposureRectOfInterestSize: CGSize](avcapturedevice/minexposurerectofinterestsize.md)",
+      "sourceHash": "7ab6ba71d56d7c06c9e1f33d3644dd797b4e3a61ba21d92e79eada3d73d61aeb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "The minimum size you may use when specifying a rectangle of interest.",
+      "ko": "관심 사각형을 지정할 때 사용할 수 있는 최소 크기입니다.",
+      "sourceHash": "3b0126dad7d873a724ef8fe074ee34843ac75349ad372673bb4d4120868b4a2d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/defaultrectforexposurepoint(ofinterest:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avcapturedevice/defaultrectforexposurepoint(ofinterest:))*",
+      "sourceHash": "313a2889da2c7838c8888ec1a8962aec9c8fa2bc1371b085b3804b07ac573f75",
+      "status": "machine_translated"
+    }
+  ]
+}

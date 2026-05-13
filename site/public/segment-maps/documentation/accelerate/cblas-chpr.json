@@ -1,0 +1,442 @@
+{
+  "docId": "documentation/Accelerate/cblas-chpr.md",
+  "title": "cblaschpr(:::::::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/cblas-chpr",
+  "segments": [
+    {
+      "id": "seg:heading:cblaschpr:0000:0001",
+      "source": "cblas_chpr(_:_:_:_:_:_:_:)",
+      "ko": "cblas_chpr(_:_:_:_:_:_:_:)",
+      "sourceHash": "2963b0383968ade6f99995c87610ecee9f96da851159878f914e0693c8faf49a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:cblaschpr:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: func",
+      "ko": "**Framework**: Accelerate **Kind**: func",
+      "sourceHash": "92505afed2b9832f88ee8e8741948f4ea109b670dc30717430f0006e8f343391",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:cblaschpr:0002:0001",
+      "source": "Scales and multiplies a vector times its conjugate transpose, then adds a matrix.",
+      "ko": "Scales and multiplies a vector times its conjugate transpose, then adds a matrix.",
+      "sourceHash": "86281551ff24468570432d0b0d202485472d4f67abdebc41a60d21a399ca6a36",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:cblaschpr:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaschpr:0004:0001",
+      "source": "iOS 16.4+",
+      "ko": "iOS 16.4+",
+      "sourceHash": "2f68d20fc18159db64bf35c81494c88612de33963ee37a9b2b0ae327304225fe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaschpr:0004:0002",
+      "source": "iPadOS 16.4+",
+      "ko": "iPadOS 16.4+",
+      "sourceHash": "44d5fef65c585b192b2d7e9505b21e7f7a5a8c04d7eec7ff6ec5c89da15748ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaschpr:0004:0003",
+      "source": "Mac Catalyst 16.4+",
+      "ko": "Mac Catalyst 16.4+",
+      "sourceHash": "4d3e7fe8d2f04fd3b4daaad2937b9724109c9aa9fe338cb29e4443172229405b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaschpr:0004:0004",
+      "source": "macOS 13.3+",
+      "ko": "macOS 13.3+",
+      "sourceHash": "632a0c66cf34b4b7e3333d25bfccb75863bfe662ab20dc27e2329dbcd5800eb1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaschpr:0004:0005",
+      "source": "tvOS 16.4+",
+      "ko": "tvOS 16.4+",
+      "sourceHash": "109f0319c5e7b371065fefe055e28c6b6ca7a81fea1475b53f7bce71c25b4d9b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaschpr:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaschpr:0004:0007",
+      "source": "watchOS 9.4+",
+      "ko": "watchOS 9.4+",
+      "sourceHash": "67ee43dad6c91bed40ae9594100c469efd957d68cd852a3321f06f344700c6f2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc cblas_chpr(_ ORDER: CBLAS_ORDER, _ UPLO: CBLAS_UPLO, _ N: __LAPACK_int, _ ALPHA: Float, _ X: OpaquePointer?, _ INCX: __LAPACK_int, _ A: OpaquePointer?)\n```",
+      "ko": "```swift\nfunc cblas_chpr(_ ORDER: CBLAS_ORDER, _ UPLO: CBLAS_UPLO, _ N: __LAPACK_int, _ ALPHA: Float, _ X: OpaquePointer?, _ INCX: __LAPACK_int, _ A: OpaquePointer?)\n```",
+      "sourceHash": "c85c2d079d0f8738e5c6c1ccc100f108fe7229ade97d6154d22cffe7d74f8905",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Calculates `alpha*x*conjg(x') + A` and stores the result in `A`.",
+      "ko": "The property returns [`true`](https://developer.apple.com/documentation/Swift/true) if video stabilization is currently in use; otherwise [`false`](https://developer.apple.com/documentation/Swift/false).",
+      "sourceHash": "e8b512e780b300b4faf59e9e946a48fb0fa734d308e84cc5552d4f4d25f80575",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0001",
+      "source": "❗ **Important**: Apple provides the BLAS and LAPACK libraries under the Accelerate framework to be in line with LAPACK 3.9.1.",
+      "ko": "**Note**: 현재 캡처 세션의 [`sessionPreset`](avcapturesession/sessionpreset.md) 속성이나 기본 캡처 장치의 [`activeFormat`](avcapturedevice/activeformat.md) 속성이 변경되면 이 속성의 값이 변경될 수 있습니다.",
+      "sourceHash": "a77369ab1a513f75d549e2a2b5f235354e7fe9eb179d30112cb5b875a0da3ca1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0002",
+      "source": "Starting with iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26, and watchOS 26, the libraries are in line with LAPACK 3.12.0.",
+      "ko": "모든 기기와 캡처 형식이 브래킷 캡처를 지원하지는 않습니다.",
+      "sourceHash": "e97eae73b60b46857199b3a97c28a7fe190ea650310acb446b972c4028f031ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0003",
+      "source": "These new interfaces provide additional functionality, as well as a new ILP64 interface.",
+      "ko": "현재 장치 또는 활성 형식이 브래킷 캡처를 지원하지 않으면 이 속성의 값은 0입니다.",
+      "sourceHash": "0dc3eddf285da2e9fa8eeff1e0a16a3aa28c6605b012d1a7576852840eec7412",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0004",
+      "source": "To use the new interfaces, define `ACCELERATE_NEW_LAPACK` before including the Accelerate or vecLib headers.",
+      "ko": "To use the new interfaces, define `ACCELERATE_NEW_LAPACK` before including the Accelerate or vecLib headers.",
+      "sourceHash": "d4c90cb9ef138f9dba90b86be8520319ce986b8a1da37bf533614d2f6465326b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0005",
+      "source": "For ILP64 interfaces, also define `ACCELERATE_LAPACK_ILP64`.",
+      "ko": "For ILP64 interfaces, also define `ACCELERATE_LAPACK_ILP64`.",
+      "sourceHash": "7649752f08ef6fac723ac25bcf97bdb73433ac54a80c54458d0c86dce09414b3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0006",
+      "source": "For Swift projects, specify `ACCELERATE_NEW_LAPACK=1` and `ACCELERATE_LAPACK_ILP64=1` as preprocessor macros in Xcode build settings.",
+      "ko": "For Swift projects, specify `ACCELERATE_NEW_LAPACK=1` and `ACCELERATE_LAPACK_ILP64=1` as preprocessor macros in Xcode build settings.",
+      "sourceHash": "91cb6773e72581ad6c7100f2f5abd4987cf89797f2a3c344059d4b6c9a66ba0b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`ORDER`: Specifies row-major (C) or column-major (Fortran) data ordering.",
+      "ko": "`ORDER`: Specifies row-major (C) or column-major (Fortran) data ordering.",
+      "sourceHash": "08877a937216d6e558921021db2163ce169607ef66721ae82d475c2729b85de2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0011:0002",
+      "source": "`UPLO`: Specifies whether to use the upper or lower triangle from the matrix. Valid values are `'U'` or `'L'`.",
+      "ko": "`UPLO`: Specifies whether to use the upper or lower triangle from the matrix. Valid values are `'U'` or `'L'`.",
+      "sourceHash": "ff06845512ee773e2faaf72d8602b6a5bc56161809115cd3dc73477375dc8c12",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0011:0003",
+      "source": "`N`: Order of matrix `A` and the number of elements in vector `x`.",
+      "ko": "`N`: Order of matrix `A` and the number of elements in vector `x`.",
+      "sourceHash": "99b1da1dc5b9872db17c56385312c6db90b1249c29a472ee592c68aae1d846a6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0011:0004",
+      "source": "`ALPHA`: Scaling factor that vector `x` is multiplied by.",
+      "ko": "`ALPHA`: Scaling factor that vector `x` is multiplied by.",
+      "sourceHash": "cfa5d202108127c51bcc2a98c8a97df55c6ae1208180d0d33410d2fb2e89ce83",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0011:0005",
+      "source": "`X`: Vector `x`.",
+      "ko": "`X`: Vector `x`.",
+      "sourceHash": "4f4230147b407c1d272b93b4ffe8646f52cf5109133884c8fd70a5b23b8f6540",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0011:0006",
+      "source": "`INCX`: Stride within `X`. For example, if `incX` is 7, every 7th element is used.",
+      "ko": "`INCX`: Stride within `X`. For example, if `incX` is 7, every 7th element is used.",
+      "sourceHash": "fa5b1657eb5b25c78a68a9739b5b374544dd7fcf7456243707c889e0a530b42e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0011:0007",
+      "source": "`A`: Matrix `A`. Overwritten by results on return.",
+      "ko": "`A`: Matrix `A`. Overwritten by results on return.",
+      "sourceHash": "6dae01f3be63df967317181e289c130deb1fa81d2fedbaf13abc3d98e9a0089a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func cblas_caxpy(__LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_caxpy(_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_caxpy(__LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_caxpy(_:_:_:_:_:_:).md)",
+      "sourceHash": "3915498788b67dddfa974b60cb450fb8185a37b00b0e4035a97fc80e55f51b8b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Computes a constant times a vector plus a vector (single-precision complex).",
+      "ko": "현재 캡처 중인 정지 이미지가 정지 이미지 안정화를 지원하는지 나타내는 불리언 값입니다.",
+      "sourceHash": "5d192f6d2154a85c4c91bda104b4a42e4b0a36f5c41303accd30172c56d25673",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func cblas_ccopy(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_ccopy(_:_:_:_:_:).md)",
+      "ko": "[func cblas_ccopy(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_ccopy(_:_:_:_:_:).md)",
+      "sourceHash": "0b6658349fbcc629b281f1fb86fb9cd4aac55f5cc76946011fedf544d3ddab46",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Copies a vector to another vector (single-precision complex).",
+      "ko": "Copies a vector to another vector (single-precision complex).",
+      "sourceHash": "a7232ab625a8306314730147c65d340c78c3954cac00c4b0e06d9374730e32d4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func cblas_cgbmv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_cgbmv(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_cgbmv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_cgbmv(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "2f1ef1ce9c050553aab1032ab3661d9a634e43814f7b3a4d04b1c34868588f3f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Scales a general band matrix, then multiplies by a vector, then adds a vector (single-precision complex).",
+      "ko": "Scales a general band matrix, then multiplies by a vector, then adds a vector (single-precision complex).",
+      "sourceHash": "6254755e1f838ae2d057d946c81fb69f2b8dd3f62253af6f43c61a7a3cc49286",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[func cblas_cgemm(CBLAS_ORDER, CBLAS_TRANSPOSE, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_cgemm(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_cgemm(CBLAS_ORDER, CBLAS_TRANSPOSE, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_cgemm(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "9ec8bc2750f66e89cbc4dfa207a8581cb5e4ab8932aa8b6065ea4ae16234318b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "Multiplies two matrices (single-precision complex).",
+      "ko": "Multiplies two matrices (single-precision complex).",
+      "sourceHash": "4e9987dfcc4110427c91f6f6f8f7ecb57f04ddb3081ce1cdc6aeca969acd65d2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[func cblas_cgemv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_cgemv(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_cgemv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_cgemv(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "337488b213c83cc13aee51483dda2ece3dc69ec7ad591d5185e87e45b2846171",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "Multiplies a matrix by a vector (single-precision complex).",
+      "ko": "Multiplies a matrix by a vector (single-precision complex).",
+      "sourceHash": "038acb7436efbbf481a664d75af61c3e09a1493d94bbe7487330a628c64f7c26",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[func cblas_cgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgerc(_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_cgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgerc(_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "d2e02bc6d4b879a68887a210948cc9a56409ccf1b74201b2780f97c3866b97bd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (single-precision complex).",
+      "ko": "Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (single-precision complex).",
+      "sourceHash": "c5b68d61f8fc181ee94e316d6dee37e287449664274739c77dd0a0f5d03f4b7c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[func cblas_cgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgeru(_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_cgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cgeru(_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "4943845299ef2de622f941cbfae3c5b096d8f5a2d8cc70c47f7df76402544155",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "Multiplies vector X by the transpose of vector Y, then adds matrix A (single-precision complex).",
+      "ko": "Multiplies vector X by the transpose of vector Y, then adds matrix A (single-precision complex).",
+      "sourceHash": "b088431e8390f2111c40ccc532b3c88c98c06cdfd217890e1343d2fd20658f96",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[func cblas_chbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_chbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "76bd1612385259e79cac118c63153a6d24b43b8765cdd0777edc8730cb6d7f80",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (single-precision complex).",
+      "ko": "Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (single-precision complex).",
+      "sourceHash": "02b6343ae3fb7e508469ec23c3de559126a2f6290fcba54f6a06363928f5dd39",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0029:0001",
+      "source": "[func cblas_chemm(CBLAS_ORDER, CBLAS_SIDE, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemm(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_chemm(CBLAS_ORDER, CBLAS_SIDE, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemm(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "42d75f9814ae487422c52a280fb6958d5180562739df70d7a23033c3cc752f40",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "Multiplies two Hermitian matrices (single-precision complex), then adds a third (with scaling).",
+      "ko": "Multiplies two Hermitian matrices (single-precision complex), then adds a third (with scaling).",
+      "sourceHash": "2e379066e29eba8f3f98f70afc2ce8f8bc17688bcefc0a9d508abd2ee9aa76de",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0031:0001",
+      "source": "[func cblas_chemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemv(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_chemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chemv(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "abd09de685508e57386472ee2dcf7cecebc1eeb538555ec1e4b895acdfa21d0f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0032:0001",
+      "source": "Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.",
+      "ko": "Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.",
+      "sourceHash": "400ade9a2d42899bb4562f713ac803ba286201339ac3353a1a18c8954a7d1df4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0033:0001",
+      "source": "[func cblas_cher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher(_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_cher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher(_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "5f31cc4ee191760ce458d31d25d7f7e8a3f6fec1df311956cdb128bc801cf775",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0034:0001",
+      "source": "Hermitian rank 1 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.",
+      "ko": "Hermitian rank 1 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.",
+      "sourceHash": "81c31407139c2bf8c5576f8540bce6c6853e8c0b59a42ad8d3653900fca6b0c5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0035:0001",
+      "source": "[func cblas_cher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher2(_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_cher2(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_cher2(_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "ff4ae1ea4e3d1e817550729e241db620a5494cd81d17e01bc67e16437aac0daf",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0036:0001",
+      "source": "Hermitian rank 2 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of vector `Y` to the product of the conjugate of the scaling factor, vector `Y`, and the conjugate transpose of vector `X`, and adds the result to matrix `A`.",
+      "ko": "Hermitian rank 2 update: adds the product of a scaling factor, vector `X`, and the conjugate transpose of vector `Y` to the product of the conjugate of the scaling factor, vector `Y`, and the conjugate transpose of vector `X`, and adds the result to matrix `A`.",
+      "sourceHash": "96c7a3a064ca8cbd369a6752af985bc1bab91d97e275d19aec249f0fd9000892",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0037:0001",
+      "source": "[func cblas_cher2k(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cher2k(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_cher2k(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cher2k(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "c4b457e1f04da61c20de3af56051b1b0a6397c729a5375c5de9604d73d2a55b4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0038:0001",
+      "source": "Performs a rank-2k update of a complex Hermitian matrix (single-precision complex).",
+      "ko": "Performs a rank-2k update of a complex Hermitian matrix (single-precision complex).",
+      "sourceHash": "db7f21d09082c3f464426fd636ad5400850fd8b3fea36cab52d892f5b852c8fd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0039:0001",
+      "source": "[func cblas_cherk(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cherk(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_cherk(CBLAS_ORDER, CBLAS_UPLO, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int, Float, OpaquePointer?, __LAPACK_int)](cblas_cherk(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "7f85de65d2d954e9d24e128259b53418362e44534a2da5f22281e2fdaf2316d5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0040:0001",
+      "source": "Rank-k update—multiplies a Hermitian matrix by its transpose and adds a second matrix (single precision).",
+      "ko": "Rank-k 업데이트는 Hermitian 행렬을 전치와 곱한 다음 두 번째 행렬(단일 정밀도)을 더합니다.",
+      "sourceHash": "b4db27361cbc8816444f56395c0e5a22097e5e23a3f2f57a11119846eb0b5816",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0041:0001",
+      "source": "[func cblas_chpmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chpmv(_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_chpmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_chpmv(_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "c55b837faf450c31202c094c0080c318dc68d66a4c6f48ed7f64e5c9a9fff84c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0042:0001",
+      "source": "Scales a packed hermitian matrix, multiplies it by a vector, and adds a scaled vector.",
+      "ko": "압축된 Hermitian 행렬을 스케일링하고 벡터와 곱한 뒤 스케일된 벡터를 더합니다.",
+      "sourceHash": "2e5df3e01b7e8c5581f563d017e7a730a958f9a96370b362723a4348a0d5c69a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0043:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0044:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/cblas_chpr(_:_:_:_:_:_:_:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/cblas_chpr(_:_:_:_:_:_:_:))*",
+      "sourceHash": "88181679e600f3efe1fefccdfb6b2a4b33e1f9a5aa37a2c8852d5cd09ae3b99f",
+      "status": "machine_translated"
+    }
+  ]
+}

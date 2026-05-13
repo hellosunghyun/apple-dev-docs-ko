@@ -1,0 +1,169 @@
+{
+  "docId": "documentation/ActivityKit/activityauthorizationinfo/activityenablementupdates-swift.struct/drop-while.md",
+  "title": "drop(while:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/activitykit/activityauthorizationinfo/activityenablementupdates-swift.struct/drop-while",
+  "segments": [
+    {
+      "id": "seg:heading:dropwhile:0000:0001",
+      "source": "drop(while:)",
+      "ko": "drop(while:)",
+      "sourceHash": "e8de6ffe13fe20318de7981eab10da5381351922fc11fba7a863b7e7fc7f5a21",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:dropwhile:0001:0001",
+      "source": "**Framework**: ActivityKit **Kind**: method",
+      "ko": "**Framework**: ActivityKit **Kind**: method",
+      "sourceHash": "5aa0baa3c5963fd4f7d4848a7671bd8d80441d96f190fe17ae3602b48c598712",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:dropwhile:0002:0001",
+      "source": "Omits elements from the base asynchronous sequence until a given closure returns false, after which it passes through all remaining elements.",
+      "ko": "주어진 클로저가 false를 반환할 때까지 기본 비동기 시퀀스에서 요소를 생략하고, 이후에는 나머지 모든 요소를 그대로 전달합니다.",
+      "sourceHash": "62a75716a6e3c10b97c1bdcdb155c59e50b571b7c23d71aeadf2c8ee549e956a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:dropwhile:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:dropwhile:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:dropwhile:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:dropwhile:0004:0003",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:dropwhile:0004:0004",
+      "source": "tvOS 13.0+",
+      "ko": "tvOS 13.0+",
+      "sourceHash": "030e6b7e51c85f674522c209ef14fc0e355ebd196e0259389daeaae4f69ad826",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:dropwhile:0004:0005",
+      "source": "watchOS 6.0+",
+      "ko": "watchOS 6.0+",
+      "sourceHash": "b51a82766977554dbe76aec20d5bc0ad6fe4984dddfcf6db82130e544b0631e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\n@preconcurrency\nfunc drop(while predicate: @escaping (Self.Element) async -> Bool) -> AsyncDropWhileSequence<Self>\n```",
+      "ko": "```swift\n@preconcurrency\nfunc drop(while predicate: @escaping (Self.Element) async -> Bool) -> AsyncDropWhileSequence<Self>\n```",
+      "sourceHash": "a9f35f826b267c20d456a746e70d76dc5c8cc3f61ad49aee2f8200ec5641455e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "An asynchronous sequence that skips over values from the base sequence until the provided closure returns `false`.",
+      "ko": "제공된 클로저가 `false`를 반환할 때까지 기본 시퀀스의 값을 건너뛰는 비동기 시퀀스입니다.",
+      "sourceHash": "1ff32016885c443294e1b82d910512d78e3aefdb2eeeb2d80213bdbd4872e8ee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Use `drop(while:)` to omit elements from an asynchronous sequence until the element received meets a condition you specify.",
+      "ko": "`drop(while:)`를 사용해 비동기 시퀀스에서 수신한 요소가 지정한 조건을 충족할 때까지 요소를 생략할 수 있습니다.",
+      "sourceHash": "e87b76e32ea3bc9311a225007a7bd8d4013cf9a8c2076a9be9fdf0ade082556d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "In this example, an asynchronous sequence called `Counter` produces `Int` values from `1` to `10`.",
+      "ko": "이 예제에서 `Counter`라는 비동기 시퀀스는 `1`에서 `10`까지의 `Int` 값을 생성합니다.",
+      "sourceHash": "1f7626545a0e12ba857d2990fe6e1beeb09c6f119a2f26fafb7630bf9af5a6f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0002",
+      "source": "The `drop(while:)` method causes the modified sequence to ignore received values until it encounters one that is divisible by `3`:",
+      "ko": "`drop(while:)` 메서드는 수정된 시퀀스가 `3`으로 나누어 떨어지는 값을 만날 때까지 수신한 값을 무시합니다.",
+      "sourceHash": "3556b2d3c89959fcdec5edd5c487fc8741fb7b6dcb0176868ecad0980a2e0f6b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0012:0001",
+      "source": "```swift\nlet stream = Counter(howHigh: 10)\n    .drop { $0 % 3 != 0 }\nfor await number in stream {\n    print(number, terminator: \" \")\n}\n// Prints \"3 4 5 6 7 8 9 10 \"\n```",
+      "ko": "```swift\nlet stream = Counter(howHigh: 10)\n    .drop { $0 % 3 != 0 }\nfor await number in stream {\n    print(number, terminator: \" \")\n}\n// Prints \"3 4 5 6 7 8 9 10 \"\n```",
+      "sourceHash": "18274cc09ef7d9da1cffec189bd5a861de588ac9dd0285016f4c7250b134891c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0013:0001",
+      "source": "After the predicate returns `false`, the sequence never executes it again, and from then on the sequence passes through elements from its underlying sequence as-is.",
+      "ko": "프레디케이트가 `false`를 반환하면 시퀀스가 다시 이를 실행하지 않으며, 이후에는 기본 시퀀스의 요소를 그대로 전달합니다.",
+      "sourceHash": "edb1bd1b72a914312b29ca79b6ec9d7083a2cab2582fea6104fff29ebd15bc59",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0014:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0015:0001",
+      "source": "`predicate`: A closure that takes an element as a parameter and   returns a Boolean value indicating whether to drop the element from the   modified sequence.",
+      "ko": "`predicate`: 요소를 매개변수로 받아 해당 요소를 수정된 시퀀스에서 삭제할지 여부를 나타내는 불리언 값을 반환하는 클로저입니다.",
+      "sourceHash": "3867f8243e4cd3bfee1d7caca1f3c7c395a5d1b5f053e83cb8bfa3bc597047b5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:parameters:0016:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:parameters:0017:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/activitykit/activityauthorizationinfo/activityenablementupdates-swift.struct/drop(while:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/activitykit/activityauthorizationinfo/activityenablementupdates-swift.struct/drop(while:))*",
+      "sourceHash": "0641955ca91e1b5bc8d5258bb66b4ac38fd356b39e9147f9d74d469f38190740",
+      "status": "machine_translated"
+    }
+  ]
+}

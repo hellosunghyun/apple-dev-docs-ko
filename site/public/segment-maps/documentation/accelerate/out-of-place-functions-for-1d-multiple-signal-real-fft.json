@@ -1,0 +1,106 @@
+{
+  "docId": "documentation/Accelerate/out-of-place-functions-for-1d-multiple-signal-real-fft.md",
+  "title": "Out-of-Place Functions for 1D Multiple-Signal Real FFT",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/out-of-place-functions-for-1d-multiple-signal-real-fft",
+  "segments": [
+    {
+      "id": "seg:heading:out-of-place-functions-for-1d-multiple-signal-real-fft:0000:0001",
+      "source": "Out-of-Place Functions for 1D Multiple-Signal Real FFT",
+      "ko": "Out-of-Place Functions for 1D Multiple-Signal Real FFT",
+      "sourceHash": "fb6f9402527b9d3d9605414ce9b072867459f01c0595fc4f5c8d22740391a34e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:out-of-place-functions-for-1d-multiple-signal-real-fft:0001:0001",
+      "source": "**Framework**: Accelerate",
+      "ko": "**Framework**: Accelerate",
+      "sourceHash": "29a5b8860afd67d96c79fe2585ca71addeb9f39a3fe9698cbaba2a7451def11b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:out-of-place-functions-for-1d-multiple-signal-real-fft:0002:0001",
+      "source": "Perform fast Fourier transforms out of place on multiple-signal 1D real data.",
+      "ko": "Perform fast Fourier transforms out of place on multiple-signal 1D real data.",
+      "sourceHash": "af454721469d67292a48d428cd7fd1fc2e8f1be2ef98b58a5e396ee6188c1a37",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "The functions in this group use the following operation for a forward real-to-complex transform:",
+      "ko": "The functions in this group use the following operation for a forward real-to-complex transform:",
+      "sourceHash": "a9db9a2cfe544c498fc5974155513466114e74c09b91b9ddd770a9ba3f6de0d3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:overview:0005:0001",
+      "source": "```c\nN = 1 << Log2N;\n\n// Repeat M times:\nfor (m = 0; m < M; ++m)\n{\n     scale = 2;\n\n     // Define a real vector, h:\n     for (j = 0; j < N/2; ++j)\n     {\n         h[2*j + 0] = A->realp[m*IMA + j*IA];\n         h[2*j + 1] = A->imagp[m*IMA + j*IA];\n     }\n\n     // Perform Discrete Fourier Transform.\n     for (k = 0; k < N; ++k)\n         H[k] = scale *\n             sum(h[j] * e**(-Direction*2*pi*i*j*k/N), 0 <= j < N);\n\n     // Pack DC and Nyquist components into initial elements.\n     C->realp[m*IMC + 0*IC] = Re(H[ 0 ]).\n     C->imagp[m*IMC + 0*IC] = Re(H[N/2]).\n\n     // Store regular components:\n     for (k = 1; k < N/2; ++k)\n     {\n         C->realp[m*IMC + k*IC] = Re(H[k]);\n         C->imagp[m*IMC + k*IC] = Im(H[k]);\n     }\n}\n\n```",
+      "ko": "```c\nN = 1 << Log2N;\n\n// Repeat M times:\nfor (m = 0; m < M; ++m)\n{\n     scale = 2;\n\n     // Define a real vector, h:\n     for (j = 0; j < N/2; ++j)\n     {\n         h[2*j + 0] = A->realp[m*IMA + j*IA];\n         h[2*j + 1] = A->imagp[m*IMA + j*IA];\n     }\n\n     // Perform Discrete Fourier Transform.\n     for (k = 0; k < N; ++k)\n         H[k] = scale *\n             sum(h[j] * e**(-Direction*2*pi*i*j*k/N), 0 <= j < N);\n\n     // Pack DC and Nyquist components into initial elements.\n     C->realp[m*IMC + 0*IC] = Re(H[ 0 ]).\n     C->imagp[m*IMC + 0*IC] = Re(H[N/2]).\n\n     // Store regular components:\n     for (k = 1; k < N/2; ++k)\n     {\n         C->realp[m*IMC + k*IC] = Re(H[k]);\n         C->imagp[m*IMC + k*IC] = Im(H[k]);\n     }\n}\n\n```",
+      "sourceHash": "29fae7c183c66063b995bd9c4751367dad62d646fcce817d6e381191f299182d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0001",
+      "source": "The functions in this group use the following operation for an inverse complex-to-real transform:",
+      "ko": "The functions in this group use the following operation for an inverse complex-to-real transform:",
+      "sourceHash": "ad829a1753c4e5b18848e708622cedbcdca20c6242a3c3b586ec9f627d5ae315",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:overview:0007:0001",
+      "source": "```c\nN = 1 << Log2N;\n\nscale = 1./N;\n\n// Repeat M times:\nfor (m = 0; m < M; ++m)\n{\n\n    // Define a complex vector, h:\n    h[ 0 ] = A->realp[m*IMA + 0*IA];\n    h[N/2] = A->imagp[m*IMA + 0*IA];\n    for (j = 1; j < N/2; ++j)\n    {\n        h[ j ] = A->realp[m*IMA + j*IA]\n           + i * A->imagp[m*IMA + j*IA];\n        h[N-j] = conj(h[j]);\n    }\n\n    // Perform Discrete Fourier Transform.\n    for (k = 0; k < N; ++k)\n        H[k] = scale *\n            sum(h[j] * e**(-Direction*2*pi*i*j*k/N), 0 <= j < N);\n\n    // Coerce real results into complex structure:\n    for (k = 0; k < N/2; ++k)\n    {\n        C->realp[m*IMC + k*IC] = H[2*k+0];\n        C->imagp[m*IMC + k*IC] = H[2*k+1];\n    }\n}\n\n\n```",
+      "ko": "```c\nN = 1 << Log2N;\n\nscale = 1./N;\n\n// Repeat M times:\nfor (m = 0; m < M; ++m)\n{\n\n    // Define a complex vector, h:\n    h[ 0 ] = A->realp[m*IMA + 0*IA];\n    h[N/2] = A->imagp[m*IMA + 0*IA];\n    for (j = 1; j < N/2; ++j)\n    {\n        h[ j ] = A->realp[m*IMA + j*IA]\n           + i * A->imagp[m*IMA + j*IA];\n        h[N-j] = conj(h[j]);\n    }\n\n    // Perform Discrete Fourier Transform.\n    for (k = 0; k < N; ++k)\n        H[k] = scale *\n            sum(h[j] * e**(-Direction*2*pi*i*j*k/N), 0 <= j < N);\n\n    // Coerce real results into complex structure:\n    for (k = 0; k < N/2; ++k)\n    {\n        C->realp[m*IMC + k*IC] = H[2*k+0];\n        C->imagp[m*IMC + k*IC] = H[2*k+1];\n    }\n}\n\n\n```",
+      "sourceHash": "aeb6f59677b0e6dfd3b5a91aea45e2bd772cc905f0b7c05f80104a585a35076b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "The temporary buffer versions perform the same operation but use a temporary buffer for improved performance.",
+      "ko": "The temporary buffer versions perform the same operation but use a temporary buffer for improved performance.",
+      "sourceHash": "05d11cb8fe40d6935f8477184f5c8318390dfe79c634961796de460401c5c04c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0009:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[In-Place Functions for 1D Multiple-Signal Real FFT](in-place-functions-for-1d-multiple-signal-real-fft.md)",
+      "ko": "[static let hlsDateRange: AVMetadataKeySpace](avmetadataobject/objecttype/micropdf417.md)",
+      "sourceHash": "ea72118bad0af818ac652b16ad79af553254e0106a345b0f020ba3b973d71113",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "Perform fast Fourier transforms in place on multiple-signal 1D real data.",
+      "ko": "HTTP Live Streaming 키 공간입니다.",
+      "sourceHash": "7637386db386ad80315a1d7144abd89b1e121fbc8d4576b52348c16e3adc0ada",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0012:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/out-of-place-functions-for-1d-multiple-signal-real-fft)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/out-of-place-functions-for-1d-multiple-signal-real-fft)*",
+      "sourceHash": "17ed7df03bee2dcb6a07d474562a7a575cfc7d1c0e55b7df0e676623e389d01d",
+      "status": "preserved"
+    }
+  ]
+}

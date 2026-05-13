@@ -64,35 +64,35 @@ static func tileBackward(outputGradient: BNNSNDArrayDescriptor, generatingInputG
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0022:0001"><a href="bnnspointerspecifier.md">struct BNNSPointerSpecifier</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0023:0001">Constants that specify which pointer the BNNS get filter function returns.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0023:0001">좌우 채널 밸런스를 제어하는 이벤트 유형입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0024:0001"><a href="bnns/gramlayer.md">class GramLayer</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0025:0001">A layer object that wraps a Gram matrix filter and manages its deinitialization.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0025:0001">좌우 채널 패닝을 제어하는 이벤트 유형입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0026:0001"><a href="bnnslayerparametersgram.md">struct BNNSLayerParametersGram</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0027:0001">A set of parameters that define a Gram matrix layer.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0027:0001">expression 컨트롤러를 나타내는 이벤트 유형입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0028:0001"><a href="bnnsfiltercreatelayergram(_:_:">func BNNSFilterCreateLayerGram(UnsafePointer&lt;BNNSLayerParametersGram&gt;, UnsafePointer&lt;BNNSFilterParameters&gt;?) -&gt; BNNSFilter?</a>.md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0029:0001">Returns a new Gram matrix layer.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0029:0001">댐퍼 페달을 켜거나 끄는 이벤트 유형입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0030:0001"><a href="bnns/clip(to:input:output:">static func clip(to: ClosedRange&lt;Float&gt;, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor) throws</a>.md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0031:0001">Clips the input tensor to a closed range and writes the result to the output tensor.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0031:0001">portamento를 켜거나 끄는 이벤트 유형입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0032:0001">[static func clipByNorm(threshold: Float, input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, axes: [Int]?) throws](bnns/clipbynorm(threshold:input:output:axes:).md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0033:0001">Clips the input tensor to a Euclidean norm and writes the result to the output tensor.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0033:0001">sostenuto를 켜거나 끄는 이벤트 유형입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0034:0001">[static func clipByGlobalNorm(threshold: Float, inputs: [BNNSNDArrayDescriptor], outputs: [BNNSNDArrayDescriptor], globalNorm: Float) throws](bnns/clipbyglobalnorm(threshold:inputs:outputs:globalnorm:).md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0035:0001">Clips the input tensors to a global Euclidean norm and writes the result to the output tensors.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0035:0001">노트의 볼륨을 낮추는 이벤트 유형입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0036:0001"><a href="bnnsclipbyvalue(_:_:_:_:">func BNNSClipByValue(UnsafeMutablePointer&lt;BNNSNDArrayDescriptor&gt;, UnsafePointer&lt;BNNSNDArrayDescriptor&gt;, Float, Float) -&gt; Int32</a>.md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0037:0001">Clips a tensor’s values to the specified minimum and maximum values.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0037:0001">legato 페달을 켜거나 끄는 이벤트 유형입니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0038:0001"><a href="bnnsclipbynorm(_:_:_:_:">func BNNSClipByNorm(UnsafeMutablePointer&lt;BNNSNDArrayDescriptor&gt;, UnsafePointer&lt;BNNSNDArrayDescriptor&gt;, Float, UInt32) -&gt; Int32</a>.md)</span>
 

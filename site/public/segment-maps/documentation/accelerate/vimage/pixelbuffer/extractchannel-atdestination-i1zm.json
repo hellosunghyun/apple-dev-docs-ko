@@ -1,0 +1,190 @@
+{
+  "docId": "documentation/Accelerate/vimage/pixelbuffer/extractchannel-atdestination-i1zm.md",
+  "title": "extractChannel(at:destination:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/extractchannel-atdestination-i1zm",
+  "segments": [
+    {
+      "id": "seg:heading:extractchannelatdestination:0000:0001",
+      "source": "extractChannel(at:destination:)",
+      "ko": "extractChannel(at:destination:)",
+      "sourceHash": "0f7902b70f4fb040d47a6d5f60029a159c4acc98647820cfbbe4daebb667d1e6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:extractchannelatdestination:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:extractchannelatdestination:0002:0001",
+      "source": "Extracts a single channel from an unsigned 16-bit-per-channel, 4-channel interleaved pixel buffer.",
+      "ko": "Extracts a single channel from an unsigned 16-bit-per-channel, 4-channel interleaved pixel buffer.",
+      "sourceHash": "45b070d3be1ca31f0da8a805020984e22a737639f93acc9475a1e6b227e0f108",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:extractchannelatdestination:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:extractchannelatdestination:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:extractchannelatdestination:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:extractchannelatdestination:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:extractchannelatdestination:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:extractchannelatdestination:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:extractchannelatdestination:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:extractchannelatdestination:0004:0007",
+      "source": "watchOS 9.0+",
+      "ko": "watchOS 9.0+",
+      "sourceHash": "74f54147ec06c7528917e10d68b6a402263ae2503dac544ef616ac2a86563097",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc extractChannel(at channelIndex: Int, destination: vImage.PixelBuffer<vImage.Planar16U>)\n```",
+      "ko": "```swift\nfunc extractChannel(at channelIndex: Int, destination: vImage.PixelBuffer<vImage.Planar16U>)\n```",
+      "sourceHash": "9267c64161906610634e88ce12415a6dac524ea661bbaa94e8ee84021a0a1e65",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "For example, the following code extracts channel `2` from a four-channel pixel buffer.",
+      "ko": "For example, the following code extracts channel `2` from a four-channel pixel buffer.",
+      "sourceHash": "3b18fae4cb5d3cfffa71178e5910b7006db7d2d86e902246747701e5099d4606",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:discussion:0009:0001",
+      "source": "```swift\nlet src = vImage.PixelBuffer<vImage.Interleaved16Ux4>(\n    pixelValues: [10, 11, 12, 13,\n                  20, 21, 22, 23,\n                  30, 31, 32, 33],\n    size: vImage.Size(width: 1, height: 3))\n\nlet dest = vImage.PixelBuffer<vImage.Planar16U>(\n    size: src.size)\n\nsrc.extractChannel(at: 2,\n                   destination: dest)\n\n// Prints \"[12, 22, 32]\"\nprint(dest.array)\n```",
+      "ko": "```swift\nlet src = vImage.PixelBuffer<vImage.Interleaved16Ux4>(\n    pixelValues: [10, 11, 12, 13,\n                  20, 21, 22, 23,\n                  30, 31, 32, 33],\n    size: vImage.Size(width: 1, height: 3))\n\nlet dest = vImage.PixelBuffer<vImage.Planar16U>(\n    size: src.size)\n\nsrc.extractChannel(at: 2,\n                   destination: dest)\n\n// Prints \"[12, 22, 32]\"\nprint(dest.array)\n```",
+      "sourceHash": "88673f46228ca3610ca1d9a6389195ee21425120cfd3dd61b9680e754638c321",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`channelIndex`: The index of the channel that the function extracts.",
+      "ko": "`channelIndex`: The index of the channel that the function extracts.",
+      "sourceHash": "ae27fbd2d388827043f5de17c7c6c9f0c40590cbbb53a4cca5b1143c33faf069",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0011:0002",
+      "source": "`destination`: The destination pixel buffer.",
+      "ko": "`destination`: The destination pixel buffer.",
+      "sourceHash": "e7ca0222b1e00858d290d86733488794c710af100a73892c243002bc8e32eb47",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func extractChannel(at: Int, destination: vImage.PixelBuffer<vImage.Planar8>)](vimage/pixelbuffer/extractchannel(at:destination:)-ageg.md)",
+      "ko": "[func extractChannel(at: Int, destination: vImage.PixelBuffer<vImage.Planar8>)](vimage/pixelbuffer/extractchannel(at:destination:)-ageg.md)",
+      "sourceHash": "e72a8aa7a0ee29e1ebe327b422f748c26f6c05549502e381f404e4d426af78fe",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Extracts a single channel from an 8-bit-per-channel, 4-channel interleaved pixel buffer.",
+      "ko": "요청한 데이터의 길이(바이트)입니다.",
+      "sourceHash": "24e853c6067b209d2eea92333730330a2edefa8abc87ef3e179362bc752abbac",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func extractChannel(at: Int, destination: vImage.PixelBuffer<vImage.PlanarF>)](vimage/pixelbuffer/extractchannel(at:destination:)-8xrq1.md)",
+      "ko": "[func extractChannel(at: Int, destination: vImage.PixelBuffer<vImage.PlanarF>)](vimage/pixelbuffer/extractchannel(at:destination:)-8xrq1.md)",
+      "sourceHash": "26c8a7ac50c1598f923f96ea2d4c8b78373528816aee8090ae1548ccb96b79ee",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Extracts a single channel from an 32-bit-per-channel, 4-channel interleaved pixel buffer.",
+      "ko": "Extracts a single channel from an 32-bit-per-channel, 4-channel interleaved pixel buffer.",
+      "sourceHash": "948c873d451e9cbaa5ed1ed8da9446f177e5bfa93d96fa7ee1339cb9a3e69724",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0017:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/extractchannel(at:destination:)-i1zm)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/extractchannel(at:destination:)-i1zm)*",
+      "sourceHash": "f990d92d4ad90a739cf0f645459a66568ed325239464d4550bd26b7ef51ba9a7",
+      "status": "failed"
+    }
+  ]
+}

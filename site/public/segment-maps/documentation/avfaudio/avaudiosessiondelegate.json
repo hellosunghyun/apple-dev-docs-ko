@@ -1,0 +1,267 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosessiondelegate.md",
+  "title": "AVAudioSessionDelegate",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosessiondelegate",
+  "segments": [
+    {
+      "id": "seg:heading:avaudiosessiondelegate:0000:0001",
+      "source": "AVAudioSessionDelegate",
+      "ko": "AVAudioSessionDelegate",
+      "sourceHash": "91d280d78d44de850c0588a15995dd47fcf99b659ff65268b1b3fba679f13abb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiosessiondelegate:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: protocol",
+      "ko": "**Framework**: AVFAudio **Kind**: protocol",
+      "sourceHash": "a4b10e4b9976b9adb3f6ea786d5d12feed158b72cd3e1b3d337aa6007a126315",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiosessiondelegate:0002:0001",
+      "source": "A protocol that defines responses to changes in state for the audio session.",
+      "ko": "오디오 세션의 상태 변경에 대한 응답을 정의하는 프로토콜입니다.",
+      "sourceHash": "a7a78fc9fe02b4d3226e3bc7ee0f2e5d33b76a0fd23b951ff705618618198413",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avaudiosessiondelegate:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosessiondelegate:0004:0001",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosessiondelegate:0004:0002",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nprotocol AVAudioSessionDelegate : NSObjectProtocol\n```",
+      "ko": "```swift\nprotocol AVAudioSessionDelegate : NSObjectProtocol\n```",
+      "sourceHash": "88d4ccced533fbb865b5b0a96427f3e9accfe60bdea3cf1e9a6da5ed31b6abba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "The delegate of an `AVAudioSession` object must adopt the `AVAudioSessionDelegate` protocol.",
+      "ko": "`AVAudioSession` 객체의 대리자는 `AVAudioSessionDelegate` 프로토콜을 채택해야 합니다.",
+      "sourceHash": "4480ec2535f22fe8e1a7de38ac2a7dcb3290b3e8bcdab996542d4d8e89582051",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "The methods in this protocol are optional.",
+      "ko": "이 프로토콜의 메서드는 선택 사항입니다.",
+      "sourceHash": "d579223a721f1665b4ab532ca18c1dfc707c48bf6670efdff19ff47a6fbac734",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0003",
+      "source": "They allow a delegate to respond to the following sorts of changes in state:",
+      "ko": "이로 인해 대리자는 다음과 같은 상태 변경에 대응할 수 있습니다.",
+      "sourceHash": "7616501f3164caa20a525ea208b6f01e38b3d675d8f7fbc3baf382b2acd70824",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0009:0001",
+      "source": "Changes to the availability of audio input",
+      "ko": "오디오 입력 가용성 변경",
+      "sourceHash": "0afd7f0682cc82d780445b9273664511bdb899c9c62c164ce47edf443203f38e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:overview:0009:0002",
+      "source": "Audio session interruption, or end of audio session interruption",
+      "ko": "오디오 세션 중단 또는 오디오 세션 중단 종료",
+      "sourceHash": "4af0e1475f73efead00433c66c52988c8479c1b0ea1cec6e42e8810541cf4c8f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "An `AVAudioSession` delegate can respond to interruptions at the audio session level.",
+      "ko": "`AVAudioSession` 대리자는 오디오 세션 수준에서 중단에 대응할 수 있습니다.",
+      "sourceHash": "5a53d751eb3ed47d38f0ff613cab43f8fba2955e3bad5ea2709b4be66ef5e551",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0002",
+      "source": "You can use this interface along with any iOS audio technology.",
+      "ko": "이 인터페이스는 모든 iOS 오디오 기술과 함께 사용할 수 있습니다.",
+      "sourceHash": "e12be6815ab249f1a424a2ec234d18779044bf78357d5745be25b3d9d0beabe1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0003",
+      "source": "For example, your `AVAudioSession` delegate can handle interruptions for OpenAL and audio unit playback.",
+      "ko": "예를 들어, `AVAudioSession` 대리자는 OpenAL 및 오디오 유닛 재생의 중단을 처리할 수 있습니다.",
+      "sourceHash": "126eedde9a5504b8f48a4e80fef51fe011db0593d8fa5d4bda58129446f8bb66",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0001",
+      "source": "When using the AVFoundation framework for recording or playback, you can also respond to interruptions at the individual recorder or player level.",
+      "ko": "AVFoundation 프레임워크를 사용해 녹음 또는 재생할 때도 개별 녹음기 또는 플레이어 수준에서 중단에 대응할 수 있습니다.",
+      "sourceHash": "2125c99d467d3f0845fc60f805b39e3845cd51c3c1765b1a92a167dfdf2bd4aa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0002",
+      "source": "To do this, create audio recorder or audio player delegates using the protocols described in [`AVAudioRecorderDelegate`](avaudiorecorderdelegate.md) and [`AVAudioPlayerDelegate`](avaudioplayerdelegate.md).",
+      "ko": "이를 위해서는 [`AVAudioRecorderDelegate`](avaudiorecorderdelegate.md) 및 [`AVAudioPlayerDelegate`](avaudioplayerdelegate.md)에 설명된 프로토콜을 사용해 오디오 녹음기 또는 오디오 플레이어 대리자를 생성해야 합니다.",
+      "sourceHash": "8af0379bdc3d3fa72a567f1e82eddf3d7f5aa5b17fff81dd3c1e97a0c3a9fc16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0012:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:delegate-methods:0013:0001",
+      "source": "Delegate Methods",
+      "ko": "대리자 메서드",
+      "sourceHash": "f4ff33c8ab80461d9e0cd44a012d788a98c723761c59827acaa175dd491e4f60",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:delegate-methods:0014:0001",
+      "source": "[func beginInterruption()](avaudiosessiondelegate/begininterruption.md)",
+      "ko": "[func beginInterruption()](avaudiosessiondelegate/begininterruption.md)",
+      "sourceHash": "46d508e8a17004edbe51d8636e707ee59e00af86ef690a5e08192bad31500e53",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:delegate-methods:0015:0001",
+      "source": "Called after your audio session is interrupted.",
+      "ko": "오디오 세션이 중단된 후 호출됩니다.",
+      "sourceHash": "bc182875a339f1cc222a5535436465ce9139244f669848892181648fd5300c49",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:delegate-methods:0016:0001",
+      "source": "[func endInterruption()](avaudiosessiondelegate/endinterruption.md)",
+      "ko": "[func endInterruption()](avaudiosessiondelegate/endinterruption.md)",
+      "sourceHash": "203a88a2b0725967b82c248b4a3f1010af16ac729cb385d2a8e8b2ae5d7a7fd9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:delegate-methods:0017:0001",
+      "source": "Called after your audio session interruption ends.",
+      "ko": "오디오 세션 중단이 종료된 뒤 호출됩니다.",
+      "sourceHash": "10cdace10c187135541325b2de233d34305420373bc9d42765e694dde3395ca6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:delegate-methods:0018:0001",
+      "source": "[func endInterruption(withFlags: Int)](avaudiosessiondelegate/endinterruption(withflags:).md)",
+      "ko": "[func endInterruption(withFlags: Int)](avaudiosessiondelegate/endinterruption(withflags:).md)",
+      "sourceHash": "e57c0cd12ab23779fb0f0ca6983711ce335a86be56a714bf0a34ebe3072276c2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:delegate-methods:0019:0001",
+      "source": "Called after your audio session interruption ends, with flags indicating the state of the audio session.",
+      "ko": "오디오 세션의 상태를 나타내는 플래그와 함께 오디오 세션 중단이 종료된 후 호출됩니다.",
+      "sourceHash": "662656218f6f5a714283a45144b792d959a8ddd57ce3ad7a07f2304bdd0a994a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:delegate-methods:0020:0001",
+      "source": "[func inputIsAvailableChanged(Bool)](avaudiosessiondelegate/inputisavailablechanged(_:).md)",
+      "ko": "[func inputIsAvailableChanged(Bool)](avaudiosessiondelegate/inputisavailablechanged(_:).md)",
+      "sourceHash": "969e47eeac39c8dc13613db4d4b366a83cc61870dc1f41e19d4c01364f45788e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:delegate-methods:0021:0001",
+      "source": "Called after the availability of audio input changes on a device.",
+      "ko": "기기에서 오디오 입력 가용성이 변경된 뒤 호출됩니다.",
+      "sourceHash": "e2e535bc8aa0045f5c015928a52ec05fe5beea30c7deced662a9380bf3605168",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0022:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0023:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0024:0001",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0025:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[var delegate: (any AVAudioSessionDelegate)?](avaudiosession/delegate.md)",
+      "ko": "[var delegate: (any AVAudioSessionDelegate)?](avaudiosession/delegate.md)",
+      "sourceHash": "3d6b340718f3885d1debb1588e35047f0ec2dd88ef5c1ffc38224adc97af2b9e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "The delegate object for the audio session.",
+      "ko": "오디오 세션의 대리자 객체입니다.",
+      "sourceHash": "27704e8e306ad628e6cd5c4b9f5c7da6fb0acf26b1618501744ec441df72f4cd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0028:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosessiondelegate)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosessiondelegate)*",
+      "sourceHash": "2d1f28c3e227127d97176a2977f6e93aee7f3b6e896fc10957d1365d0d86e16d",
+      "status": "preserved"
+    }
+  ]
+}

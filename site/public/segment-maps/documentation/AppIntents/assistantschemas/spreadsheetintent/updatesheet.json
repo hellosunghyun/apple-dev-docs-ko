@@ -1,0 +1,358 @@
+{
+  "docId": "documentation/AppIntents/assistantschemas/spreadsheetintent/updatesheet.md",
+  "title": "updateSheet",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appintents/assistantschemas/spreadsheetintent/updatesheet",
+  "segments": [
+    {
+      "id": "seg:heading:updatesheet:0000:0001",
+      "source": "updateSheet",
+      "ko": "updateSheet",
+      "sourceHash": "c659004a340d48ae329c4e6639bd32c65604a4e49abc396ffd32b6acf8228852",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:updatesheet:0001:0001",
+      "source": "**Framework**: App Intents **Kind**: property",
+      "ko": "**Framework**: App Intents **Kind**: property",
+      "sourceHash": "c3213499f1e1a5f450aa95a7dece3a06aa52aa656892889b0c8a178663cb2fd6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:updatesheet:0002:0001",
+      "source": "The app intent conforms to the schema for updating a sheet in a spreadsheet.",
+      "ko": "이 앱 인텐트는 스프레드시트에서 시트를 업데이트하는 스키마를 준수합니다.",
+      "sourceHash": "ba88d3a2d8ceeda23050f980aacd9a78d4a74064c974a790c31a88eb519d338e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:updatesheet:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:updatesheet:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:updatesheet:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:updatesheet:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:updatesheet:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:updatesheet:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:updatesheet:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:updatesheet:0004:0007",
+      "source": "watchOS 9.0+",
+      "ko": "watchOS 9.0+",
+      "sourceHash": "74f54147ec06c7528917e10d68b6a402263ae2503dac544ef616ac2a86563097",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar updateSheet: some AssistantSchemas.Intent { get }\n```",
+      "ko": "```swift\nvar updateSheet: some AssistantSchemas.Intent { get }\n```",
+      "sourceHash": "2d64a48cb0d1653221c4e6fd2ef68277520a0bf24853f0e73ba44bdb3a0f6399",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Use Swift macros that generate additional properties and add protocol conformance for your app intent implementation.",
+      "ko": "Swift 매크로를 사용하면 앱 인텐트 구현에서 추가 속성을 생성하고 protocol 적합성을 추가할 수 있습니다.",
+      "sourceHash": "89ae9f718a492020d200f02f2ad9192b36d239837924066a74daf45bab178f3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "The following example shows an app intent that conforms to the `.spreadsheet.updateSheet` schema:",
+      "ko": "다음 예제는 `.spreadsheet.updateSheet` 스키마를 준수하는 앱 인텐트를 보여줍니다.\n```swift\n@AppIntent(schema: .spreadsheet.updateSheet)\nstruct UpdateSheetIntent: AppIntent {\n    @Parameter\n    var target: SheetEntity\n\n    @Parameter\n    var name: String?\n\n    @Parameter\n    var position: Int?\n\n    func perform() async throws -> some IntentResult {\n        .result()\n    }\n```",
+      "sourceHash": "9ba9a5de784590ffe4088635d73774a3cebf3c2c155615956c76455594e2a58b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:overview:0009:0001",
+      "source": "```swift\n@AppIntent(schema: .spreadsheet.updateSheet)\nstruct UpdateSheetIntent: AppIntent {\n    @Parameter\n    var target: SheetEntity\n\n    @Parameter\n    var name: String?\n\n    @Parameter\n    var position: Int?\n\n    func perform() async throws -> some IntentResult {\n        .result()\n    }\n```",
+      "ko": "```swift\n@AppIntent(schema: .spreadsheet.updateSheet)\nstruct UpdateSheetIntent: AppIntent {\n    @Parameter\n    var target: SheetEntity\n\n    @Parameter\n    var name: String?\n\n    @Parameter\n    var position: Int?\n\n    func perform() async throws -> some IntentResult {\n        .result()\n    }\n```",
+      "sourceHash": "98cdc48c6d1c7057e278fca7c9925e28c30cccbef986406714e3338653c86ca9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "For more information about the `.spreadsheet` app intent domain, see [`Making spreadsheet actions available to Siri and Apple Intelligence`](making-spreadsheet-actions-available-to-siri-and-apple-intelligence.md).",
+      "ko": "`.spreadsheet` 앱 인텐트 도메인에 대한 자세한 내용은 [`Making spreadsheet actions available to Siri and Apple Intelligence`](making-spreadsheet-actions-available-to-siri-and-apple-intelligence.md)에서 확인할 수 있습니다.",
+      "sourceHash": "671cdea531a4cdd6c0c58ae9c2697064e99fef105b591f54144994724eebe73d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0002",
+      "source": "For general information about app intent domains, see [`Integrating actions with Siri and Apple Intelligence`](integrating-actions-with-siri-and-apple-intelligence.md).",
+      "ko": "앱 인텐트 도메인에 대한 일반적인 정보는 [`Integrating actions with Siri and Apple Intelligence`](integrating-actions-with-siri-and-apple-intelligence.md)에서 확인할 수 있습니다.",
+      "sourceHash": "172d28804899d227356fc599425496a8b37e3ccf72cf937f34263b9c082b5844",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var addAudioToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addaudiotosheet.md)",
+      "ko": "[var addAudioToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addaudiotosheet.md)",
+      "sourceHash": "7788b909a4d9ab22cebb05a49ae9282dc9a42851c8ec8349575386196f9ba4b4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "The app intent conforms to the schema for adding audio to a slide.",
+      "ko": "이 앱 인텐트는 슬라이드에 오디오를 추가하는 스키마를 준수합니다.",
+      "sourceHash": "4f9575f924c3284a44c416126d319e6dd34480bf8baea227ca7891b4fc98a04e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var addCommentToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addcommenttosheet.md)",
+      "ko": "[var addCommentToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addcommenttosheet.md)",
+      "sourceHash": "7e02d48391cff84b8ec9bd3d0bb91b2db207b63e9997cd8fcccaea42450fb0b3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "The app intent conforms to the schema for adding a comment to a sheet in a spreadsheet.",
+      "ko": "이 앱 인텐트는 스프레드시트의 시트에 코멘트를 추가하는 스키마를 준수합니다.",
+      "sourceHash": "36f5109e927215c71a69d201c42635de460bfa613f11af9c3c0743cdd6428d50",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var addImageToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addimagetosheet.md)",
+      "ko": "[var addImageToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addimagetosheet.md)",
+      "sourceHash": "1c01d1883547555630aeac5ecffaddbdaa1afde45139da6fff257c50934a68d9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "The app intent conforms to the schema for adding an image to a sheet in a spreadsheet.",
+      "ko": "이 앱 인텐트는 스프레드시트의 시트에 이미지를 추가하는 스키마를 준수합니다.",
+      "sourceHash": "7ad54e80da7f9f29b1e94ae073a8d658803cd74480c8a2c02b7f83dedf483d21",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var addTextBoxToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addtextboxtosheet.md)",
+      "ko": "[var addTextBoxToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addtextboxtosheet.md)",
+      "sourceHash": "2ff13d87028016c37d4977b8b2f8821be0519087cfd40d70e0c0eb39b89474b5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "The app intent conforms to the schema for adding a textbox to a sheet in a spreadsheet.",
+      "ko": "이 앱 인텐트는 스프레드시트의 시트에 텍스트 박스를 추가하는 스키마를 준수합니다.",
+      "sourceHash": "c0b65ad2dd469db599c05d9c4c5b5a227484826ab83c9548d308f40ef5aeb89a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[var addVideoToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addvideotosheet.md)",
+      "ko": "[var addVideoToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addvideotosheet.md)",
+      "sourceHash": "202831efc022fe2102600cdcfae3ce75e716e8f07c43a25577ad4d6a75be2ba9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "The app intent conforms to the schema for adding a video to a sheet in a spreadsheet.",
+      "ko": "이 앱 인텐트는 스프레드시트의 시트에 비디오를 추가하는 스키마를 준수합니다.",
+      "sourceHash": "a21669ce64ce81bf786dab5e426cccd81e31ce2a5ee549cc6051a543b556cca6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[var addWebVideoToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addwebvideotosheet.md)",
+      "ko": "[var addWebVideoToSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/addwebvideotosheet.md)",
+      "sourceHash": "68c462c63060fb24d5e918a8baa157c3531bfaf45924d85745f57d3aa35711c5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "The app intent conforms to the schema for adding a web video to a sheet in a spreadsheet.",
+      "ko": "이 앱 인텐트는 스프레드시트의 시트에 웹 비디오를 추가하는 스키마를 준수합니다.",
+      "sourceHash": "82cde8b7f5e11c5c08a53e22da2b08278895a8741b6d7a6cb58b772a4f0af85d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[var create: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/create.md)",
+      "ko": "[var create: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/create.md)",
+      "sourceHash": "5a81fa16dda51ae8661d1e02d1a4a31470f741db9f6e3b49f0599879b25e497a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "The app intent conforms to the schema for creating a spreadsheet.",
+      "ko": "The app intent conforms to the schema for creating a spreadsheet.",
+      "sourceHash": "5c7d7d86575e779dbc2012c3f4b2fe5ef7898ca567cdf32b3bd62d0e384438dc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[var createSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/createsheet.md)",
+      "ko": "[var createSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/createsheet.md)",
+      "sourceHash": "573862032e449e4ec4ecea39b456776c09492d05c5b3ab362bc5c4c70ebbee73",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "The app intent conforms to the schema for creating a sheet in a spreadsheet.",
+      "ko": "The app intent conforms to the schema for creating a sheet in a spreadsheet.",
+      "sourceHash": "ed6ce3e7b58e48c7ec29ae02b983c93f0d929d91bb522c5573239fa7031b370a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[var delete: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/delete.md)",
+      "ko": "[var delete: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/delete.md)",
+      "sourceHash": "077293cb5c8f42939c489c074ea18473a26b33c784f3568540923e41a60941ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "The app intent conforms to the schema for deleting a spreadsheet.",
+      "ko": "The app intent conforms to the schema for deleting a spreadsheet.",
+      "sourceHash": "7cd9da46bd3a95c2c3d8c31ce995d33349d836eef76331f3334d18d914c53dd7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[var deleteSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/deletesheet.md)",
+      "ko": "[var deleteSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/deletesheet.md)",
+      "sourceHash": "85f388b5935d1acc5864a15a45d193c317ef1d0a03ef4dd5fa82adc532aca98b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "The app intent conforms to the schema for deleting a sheet in a spreadsheet.",
+      "ko": "The app intent conforms to the schema for deleting a sheet in a spreadsheet.",
+      "sourceHash": "afcfc8e501bfa40cf90612d3d232dc91c8ca62693de1faa7dc0ebf8ee016eddf",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[var open: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/open.md)",
+      "ko": "[var open: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/open.md)",
+      "sourceHash": "49ee08aebe0d11cf886f0fc529ffc152f1880a4e59a2bec97aa9b99e62663e87",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "The app intent conforms to the schema for opening a spreadsheet.",
+      "ko": "The app intent conforms to the schema for opening a spreadsheet.",
+      "sourceHash": "d3b19bbe82e135613f06a2b3ea7d4289c2df73d2404cb19c97625da133b17d0a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[var openSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/opensheet.md)",
+      "ko": "[var openSheet: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/opensheet.md)",
+      "sourceHash": "ca3227681d0b8513be87001459416b2319bc53a6140e0516718724b6490211ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "The app intent conforms to the schema for opening a sheet in a spreadsheet.",
+      "ko": "The app intent conforms to the schema for opening a sheet in a spreadsheet.",
+      "sourceHash": "b42f56f66307d3c95393befa886fa9b8425bd3cdb74ff42d60b9c686c60abe9e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[var update: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/update.md)",
+      "ko": "[var update: some AssistantSchemas.Intent](assistantschemas/spreadsheetintent/update.md)",
+      "sourceHash": "5c3de0030376bdc129f7a296908d95157934a67981cd8d88ff77d322f8d9377c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "The app intent conforms to the schema for updating a spreadsheet.",
+      "ko": "The app intent conforms to the schema for updating a spreadsheet.",
+      "sourceHash": "dea95372e5c5c50a68d91f3d5a66371401e82538e78bc027929098493e3d5e54",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[AssistantSchemas.SpreadsheetIntent](assistantschemas/spreadsheetintent.md)",
+      "ko": "[AssistantSchemas.SpreadsheetIntent](assistantschemas/spreadsheetintent.md)",
+      "sourceHash": "934a8f877cd82d4ca75d8ecd518c41032560386acd12746efdc0842e6c6270b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Assistant schema conformance for app intents that offer spreadsheet functionality.",
+      "ko": "Assistant schema conformance for app intents that offer spreadsheet functionality.",
+      "sourceHash": "4b626fb5d6b54421a911447549beee8100fc57c21eb1964ce5d1aebaade10c9a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0040:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appintents/assistantschemas/spreadsheetintent/updatesheet)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appintents/assistantschemas/spreadsheetintent/updatesheet)*",
+      "sourceHash": "714f496834ffc588a16fd1cf06b5087dab9ea21784d716b614cf27916df4237d",
+      "status": "preserved"
+    }
+  ]
+}

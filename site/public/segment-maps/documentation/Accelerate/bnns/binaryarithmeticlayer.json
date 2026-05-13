@@ -1,0 +1,400 @@
+{
+  "docId": "documentation/Accelerate/bnns/binaryarithmeticlayer.md",
+  "title": "BNNS.BinaryArithmeticLayer",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnns/binaryarithmeticlayer",
+  "segments": [
+    {
+      "id": "seg:heading:bnnsbinaryarithmeticlayer:0000:0001",
+      "source": "BNNS.BinaryArithmeticLayer",
+      "ko": "BNNS.BinaryArithmeticLayer",
+      "sourceHash": "e931f6327ca20c74336df1cb4d147521d42d6c5705c2dc5cbd431c694d4233e2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnsbinaryarithmeticlayer:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: class",
+      "ko": "**Framework**: Accelerate **Kind**: class",
+      "sourceHash": "2d4c9fdad2aa718dfc2ca4ba7e8b154102f9aaa8e0c99762f893a3514639fd5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnsbinaryarithmeticlayer:0002:0001",
+      "source": "A layer object that wraps a binary arithmetic filter and manages its deinitialization.",
+      "ko": "A layer object that wraps a binary arithmetic filter and manages its deinitialization.",
+      "sourceHash": "4a6f4d13c21494de974a6150437998ffe3527ca7674424f156fa233e3454687c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:bnnsbinaryarithmeticlayer:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsbinaryarithmeticlayer:0004:0001",
+      "source": "iOS 14.0+",
+      "ko": "iOS 14.0+",
+      "sourceHash": "a09fb717eefa07878cab396c9697a744dfc726f6a8a77c093ef12e8124ffd90b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsbinaryarithmeticlayer:0004:0002",
+      "source": "iPadOS 14.0+",
+      "ko": "iPadOS 14.0+",
+      "sourceHash": "3bd5f9207436aaf3fd80bdb95d64d5d280ff80afc32e998b4c7ef682ec2802e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsbinaryarithmeticlayer:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:bnnsbinaryarithmeticlayer:0004:0004",
+      "source": "macOS 11.0+",
+      "ko": "macOS 11.0+",
+      "sourceHash": "b9d0915cd0d28054ced64852a8b4eb668d9bff9c754aec6f95028c5b01456c88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsbinaryarithmeticlayer:0004:0005",
+      "source": "tvOS 14.0+",
+      "ko": "tvOS 14.0+",
+      "sourceHash": "c82f0586cea06e7e3b23ac73e15255e7ccbb56eadf9421eeb43c4793905535a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsbinaryarithmeticlayer:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:bnnsbinaryarithmeticlayer:0004:0007",
+      "source": "watchOS 7.0+",
+      "ko": "watchOS 7.0+",
+      "sourceHash": "c062c9b3a973acc1ffdf60071a0ce7943a5b195f1b0ce07f283267c446e33961",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass BinaryArithmeticLayer\n```",
+      "ko": "```swift\nclass BinaryArithmeticLayer\n```",
+      "sourceHash": "417d2c1fe6058d32b6e7b6f15d8bb68c7e1a3d8c2ddc289931b0c971154066d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:topics:0007:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-binary-arithmetic-layer:0008:0001",
+      "source": "Creating a Binary Arithmetic Layer",
+      "ko": "Creating a Binary Arithmetic Layer",
+      "sourceHash": "abc70cdf6845d1319cb4e1876d5bcb5efba47571d60600f0fadbd3bbfbb2037a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-binary-arithmetic-layer:0009:0001",
+      "source": "[convenience init?(inputA: BNNSNDArrayDescriptor, inputADescriptorType: BNNS.DescriptorType, inputB: BNNSNDArrayDescriptor, inputBDescriptorType: BNNS.DescriptorType, output: BNNSNDArrayDescriptor, outputDescriptorType: BNNS.DescriptorType, function: BNNS.ArithmeticBinaryFunction, activation: BNNS.ActivationFunction, filterParameters: BNNSFilterParameters?)](bnns/binaryarithmeticlayer/init(inputa:inputadescriptortype:inputb:inputbdescriptortype:output:outputdescriptortype:function:activation:filterparameters:).md)",
+      "ko": "[convenience init?(inputA: BNNSNDArrayDescriptor, inputADescriptorType: BNNS.DescriptorType, inputB: BNNSNDArrayDescriptor, inputBDescriptorType: BNNS.DescriptorType, output: BNNSNDArrayDescriptor, outputDescriptorType: BNNS.DescriptorType, function: BNNS.ArithmeticBinaryFunction, activation: BNNS.ActivationFunction, filterParameters: BNNSFilterParameters?)](bnns/binaryarithmeticlayer/init(inputa:inputadescriptortype:inputb:inputbdescriptortype:output:outputdescriptortype:function:activation:filterparameters:).md)",
+      "sourceHash": "80029dc0a526eaba2f9414ee45d52129208344b020d9390508dc76b6cab8672a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-a-binary-arithmetic-layer:0010:0001",
+      "source": "Returns a new binary arithmetic layer.",
+      "ko": "Returns a new binary arithmetic layer.",
+      "sourceHash": "48d92baca31595283bcb10ddc14ab240b2e2cf6c94ce0219058b21069d414c04",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:specifying-a-binary-arithmetic-function:0011:0001",
+      "source": "Specifying a Binary Arithmetic Function",
+      "ko": "Specifying a Binary Arithmetic Function",
+      "sourceHash": "17a7fe26929ae1990c0e93ca45d6f8221152c63be9d8aa14afb953eb08f7aa07",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:specifying-a-binary-arithmetic-function:0012:0001",
+      "source": "[BNNS.ArithmeticBinaryFunction](bnns/arithmeticbinaryfunction.md)",
+      "ko": "[BNNS.ArithmeticBinaryFunction](bnns/arithmeticbinaryfunction.md)",
+      "sourceHash": "dddae034db51d09368b50b53ff05c95429b36ed35a7b154b4e8164246028d4c0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:specifying-a-binary-arithmetic-function:0013:0001",
+      "source": "Constants that describe binary arithmetic functions.",
+      "ko": "Constants that describe binary arithmetic functions.",
+      "sourceHash": "fcc4d5495be491f4341baafbe06fd6a231a784b30ca360ee764d34dfd3a7ceaf",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:specifying-a-descriptor-type:0014:0001",
+      "source": "Specifying a Descriptor Type",
+      "ko": "Specifying a Descriptor Type",
+      "sourceHash": "f3bf13d4d6221516f247ea744a583b9b65d30e636dec5b2cbcafa764d57e80c0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:specifying-a-descriptor-type:0015:0001",
+      "source": "[BNNS.DescriptorType](bnns/descriptortype.md)",
+      "ko": "[BNNS.DescriptorType](bnns/descriptortype.md)",
+      "sourceHash": "32a03e8ecc8740f2c7ebd47933c88a59b7d99d3cd5a67af20cd6bdaaf1c49ca9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:specifying-a-descriptor-type:0016:0001",
+      "source": "Constants that describe the input and output types of an arithmetic operation.",
+      "ko": "Constants that describe the input and output types of an arithmetic operation.",
+      "sourceHash": "153bdd04e9fbdb3cc81814ba72169ea41dff2db91a9ebd57bfae6d939827c71f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:applying-a-binary-arithmetic-layer:0017:0001",
+      "source": "Applying a Binary Arithmetic Layer",
+      "ko": "Applying a Binary Arithmetic Layer",
+      "sourceHash": "476ee933e527c3b83e065383f63d8e7852c792f622a6851e2d678a137573b916",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:applying-a-binary-arithmetic-layer:0018:0001",
+      "source": "[func apply(batchSize: Int, inputA: BNNSNDArrayDescriptor, inputB: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor) throws](bnns/binaryarithmeticlayer/apply(batchsize:inputa:inputb:output:).md)",
+      "ko": "[func apply(batchSize: Int, inputA: BNNSNDArrayDescriptor, inputB: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor) throws](bnns/binaryarithmeticlayer/apply(batchsize:inputa:inputb:output:).md)",
+      "sourceHash": "86dfdb17762450f9837c20e9c092801835d432769dcf1a0b2a4043887829c5a7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:applying-a-binary-arithmetic-layer:0019:0001",
+      "source": "Applies the layer to a set of input array descriptors, writing the result to a set of output array descriptors.",
+      "ko": "Applies the layer to a set of input array descriptors, writing the result to a set of output array descriptors.",
+      "sourceHash": "b5b4dd5b89887cee66740e1e42a110427885e3f65eb3246b8bc83e51a37c4645",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:applying-a-binary-arithmetic-layer:0020:0001",
+      "source": "[func applyBackward(batchSize: Int, inputA: BNNSNDArrayDescriptor, inputB: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, outputGradient: BNNSNDArrayDescriptor, generatingInputAGradient: BNNSNDArrayDescriptor, generatingInputBGradient: BNNSNDArrayDescriptor) throws](bnns/binaryarithmeticlayer/applybackward(batchsize:inputa:inputb:output:outputgradient:generatinginputagradient:generatinginputbgradient:).md)",
+      "ko": "[func applyBackward(batchSize: Int, inputA: BNNSNDArrayDescriptor, inputB: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, outputGradient: BNNSNDArrayDescriptor, generatingInputAGradient: BNNSNDArrayDescriptor, generatingInputBGradient: BNNSNDArrayDescriptor) throws](bnns/binaryarithmeticlayer/applybackward(batchsize:inputa:inputb:output:outputgradient:generatinginputagradient:generatinginputbgradient:).md)",
+      "sourceHash": "251dac0c71026045788428ef623e0cfc60196201ad319755c5f1722eeea0e28d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:applying-a-binary-arithmetic-layer:0021:0001",
+      "source": "Applies the layer backward to generate input gradients.",
+      "ko": "Applies the layer backward to generate input gradients.",
+      "sourceHash": "d075a9b6402d229a8872aca9e1b4f12e2f4a025b4c1de725746b7745989221af",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:relationships:0022:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0023:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0024:0001",
+      "source": "[BNNS.Layer](bnns/layer.md)",
+      "ko": "[BNNS.Layer](bnns/layer.md)",
+      "sourceHash": "aff81601b813d6f18ae9717916a53fb8da920b9335f298c35549534174deb38a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0025:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[class UnaryArithmeticLayer](bnns/unaryarithmeticlayer.md)",
+      "ko": "[class UnaryArithmeticLayer](bnns/unaryarithmeticlayer.md)",
+      "sourceHash": "835d62e63491bc198920faaacdde9c804aa279edfdaeb88733f309f623bde3ad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "A layer object that wraps a unary arithmetic filter and manages its deinitialization.",
+      "ko": "A layer object that wraps a unary arithmetic filter and manages its deinitialization.",
+      "sourceHash": "5158992d79f82ad28a2c5c53c2a2763bb122691c7e343c9c7b2b2d900f065df3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[class TernaryArithmeticLayer](bnns/ternaryarithmeticlayer.md)",
+      "ko": "[class TernaryArithmeticLayer](bnns/ternaryarithmeticlayer.md)",
+      "sourceHash": "382423a50567b7ace7bc00e1993aad191ca25362485c4e98110f53284064cbac",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "A layer object that wraps a ternary arithmetic filter and manages its deinitialization.",
+      "ko": "전면 또는 후면 카메라를 선택하거나 TrueDepth 카메라 또는 듀얼 카메라 같은 고급 기능을 사용할 수 있습니다.",
+      "sourceHash": "f16ce8fbcc788281913b5ccafc7278e733e4bf1199c37c8eb326815066fdf4b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[struct BNNSDescriptorType](bnnsdescriptortype.md)",
+      "ko": "[struct BNNSDescriptorType](bnnsdescriptortype.md)",
+      "sourceHash": "de1cb9b76d444274277383623f8124748e7880a9ae89f722f1954997f2a781f1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Constants that describe the input and output types of an arithmetic operation.",
+      "ko": "자동 구도 권장 사항을 제공하여 최적의 샷을 캡처합니다.",
+      "sourceHash": "153bdd04e9fbdb3cc81814ba72169ea41dff2db91a9ebd57bfae6d939827c71f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[struct BNNSArithmeticUnary](bnnsarithmeticunary.md)",
+      "ko": "[struct BNNSArithmeticUnary](bnnsarithmeticunary.md)",
+      "sourceHash": "38b177a32f1e80dda26c22c4dec4d8393ff3d2b15795af0537eaff2a9884b75a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "A structure that contains the input and output of an arithmetic operation with a single input.",
+      "ko": "카메라 또는 마이크와 같은 하드웨어 또는 가상 캡처 장치를 나타내는 객체입니다.",
+      "sourceHash": "6a7e603ce9781fafca29fae413cbb7130d23117be283212e409122b719745df4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[struct BNNSArithmeticBinary](bnnsarithmeticbinary.md)",
+      "ko": "[struct BNNSArithmeticBinary](bnnsarithmeticbinary.md)",
+      "sourceHash": "5cb303391142d9d8f4910896c79942eb2d21f29304d2c447bdbe9da33f3934c6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "A structure that contains the inputs and output of an arithmetic operation with two inputs.",
+      "ko": "캡처 세션으로 캡처 장치에서 미디어 입력을 제공하는 객체입니다.",
+      "sourceHash": "c6941157841f6f519358f31ebe4610c89ab3c41c3cf9f09618dd0238fba7daac",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[struct BNNSArithmeticTernary](bnnsarithmeticternary.md)",
+      "ko": "[struct BNNSArithmeticTernary](bnnsarithmeticternary.md)",
+      "sourceHash": "a236cc87a8aac3d23fba71159ed04bec26099a496230dad0df9ceeaf0cd8bf6b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "A structure that contains the inputs and output of an arithmetic operation with three inputs.",
+      "ko": "세 개의 입력을 갖는 산술 연산의 입력과 출력을 포함하는 구조체입니다.",
+      "sourceHash": "3dc96d6fea9acfe7a1138a21afbc44570170226c57804fe8f46500691f76413d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[struct BNNSArithmeticFunction](bnnsarithmeticfunction.md)",
+      "ko": "[struct BNNSArithmeticFunction](bnnsarithmeticfunction.md)",
+      "sourceHash": "a391be7cf6ab643ae383d09553c156c35de7a44693166b6d82cf1844dc9896fc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Constants that define arithmetic operations.",
+      "ko": "산술 연산을 정의하는 상수입니다.",
+      "sourceHash": "2a56461e4ede0f7ba76855f5abf7b37571074668c2a88c2cde763c760d3a001f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[struct BNNSLayerParametersArithmetic](bnnslayerparametersarithmetic.md)",
+      "ko": "[struct BNNSLayerParametersArithmetic](bnnslayerparametersarithmetic.md)",
+      "sourceHash": "98302bc688a42af3af57e1ab887e662b14e47c851d4853f6647e3f4e7f047bcc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "A structure that contains the parameters of an arithmetic layer.",
+      "ko": "산술 레이어의 매개변수를 포함하는 구조체입니다.",
+      "sourceHash": "60a77e0a1a52676d488bee4bec36834faa93f811fb42c5d18b5e7f5aa7aa5902",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[func BNNSFilterCreateLayerArithmetic(UnsafePointer<BNNSLayerParametersArithmetic>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayerarithmetic(_:_:).md)",
+      "ko": "[func BNNSFilterCreateLayerArithmetic(UnsafePointer<BNNSLayerParametersArithmetic>, UnsafePointer<BNNSFilterParameters>?) -> BNNSFilter?](bnnsfiltercreatelayerarithmetic(_:_:).md)",
+      "sourceHash": "00482f6cf64b34e325c4498371a181e03d41c82cb435af3e87df31bc3866a0af",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "Returns a new arithmetic layer.",
+      "ko": "새 산술 레이어를 반환합니다.",
+      "sourceHash": "08f4ef7f502862016ba6d2235c89019167f8d570fc0c160d6c08174189cccbd5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[func BNNSArithmeticFilterApplyBatch(BNNSFilter?, Int, Int, UnsafeMutablePointer<UnsafeRawPointer>, UnsafePointer<Int>, UnsafeMutableRawPointer, Int) -> Int32](bnnsarithmeticfilterapplybatch(_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSArithmeticFilterApplyBatch(BNNSFilter?, Int, Int, UnsafeMutablePointer<UnsafeRawPointer>, UnsafePointer<Int>, UnsafeMutableRawPointer, Int) -> Int32](bnnsarithmeticfilterapplybatch(_:_:_:_:_:_:_:).md)",
+      "sourceHash": "06b2a474841effcb3c03adc9c844235637be3d59558cdc73f665d444719b2d04",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "Applies an arithmetic filter to a set of input objects, writing the result to a set of output objects.",
+      "ko": "입력 객체 집합에 산술 필터를 적용하고 결과를 출력 객체 집합에 기록합니다.",
+      "sourceHash": "2ca350a568c66f3ec4b3fe0aa454ad7ea04eb54ef0e63ec16f97285a6d8875f5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0046:0001",
+      "source": "[func BNNSArithmeticFilterApplyBackwardBatch(BNNSFilter?, Int, Int, UnsafeMutablePointer<UnsafeRawPointer?>?, UnsafePointer<Int>?, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>>, UnsafePointer<Int>, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>, Int) -> Int32](bnnsarithmeticfilterapplybackwardbatch(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func BNNSArithmeticFilterApplyBackwardBatch(BNNSFilter?, Int, Int, UnsafeMutablePointer<UnsafeRawPointer?>?, UnsafePointer<Int>?, UnsafeMutablePointer<UnsafeMutablePointer<BNNSNDArrayDescriptor>>, UnsafePointer<Int>, UnsafeRawPointer?, Int, UnsafeMutablePointer<BNNSNDArrayDescriptor>, Int) -> Int32](bnnsarithmeticfilterapplybackwardbatch(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "5f3c025429587e4751ab873f4a3d6de08a81d6586d2a2c9fb6ba93155df9b58e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "Applies an arithmetic filter backward to generate input gradients.",
+      "ko": "입력 그래디언트를 생성하기 위해 산술 필터를 역방향으로 적용합니다.",
+      "sourceHash": "ec907c0ecd325112ac5aa31e2236708c6692440199a3b72326f15dfc1b7efebf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0048:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0049:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnns/binaryarithmeticlayer)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnns/binaryarithmeticlayer)*",
+      "sourceHash": "3e443e8831cacf4700c91046a00b8c9a2fdb80e341e38fce5e811a02b2798346",
+      "status": "preserved"
+    }
+  ]
+}

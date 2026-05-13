@@ -1,0 +1,491 @@
+{
+  "docId": "documentation/Accelerate/applying-affine-transformations-to-images.md",
+  "title": "Applying affine transformations to images",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/applying-affine-transformations-to-images",
+  "segments": [
+    {
+      "id": "seg:heading:applying-affine-transformations-to-images:0000:0001",
+      "source": "Applying affine transformations to images",
+      "ko": "이미지에 아핀 변환 적용",
+      "sourceHash": "a2b2532ed37b694a4a9d8258926eb1a264368cfb31ec331326a0808a5d2d5b72",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:applying-affine-transformations-to-images:0001:0001",
+      "source": "**Framework**: Accelerate",
+      "ko": "**프레임워크**: Accelerate",
+      "sourceHash": "29a5b8860afd67d96c79fe2585ca71addeb9f39a3fe9698cbaba2a7451def11b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:applying-affine-transformations-to-images:0002:0001",
+      "source": "Translate, rotate, and scale images.",
+      "ko": "이미지를 이동, 회전 및 크기 조정합니다.",
+      "sourceHash": "f91ad84713b979e169ac8f8e1f9892b9bf468007c7fa8efbfb2b0aa578f12a98",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0003:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:single-precision-affine-transformation:0004:0001",
+      "source": "Single-Precision Affine Transformation",
+      "ko": "단정밀도 아핀 변환",
+      "sourceHash": "065273eebacc7c7daca6741b3384d793b5522543ebe63fa578f93cc9756fd6ad",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:single-precision-affine-transformation:0005:0001",
+      "source": "[func vImageAffineWarp_Planar8(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, Pixel_8, vImage_Flags) -> vImage_Error](vimageaffinewarp_planar8(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarp_Planar8(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, Pixel_8, vImage_Flags) -> vImage_Error](vimageaffinewarp_planar8(_:_:_:_:_:_:).md)",
+      "sourceHash": "eb7ab791aeb7b6eb4e93030390ebe497fdfa064d05ce8bf9ea2ad62d1ecefc7d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:single-precision-affine-transformation:0006:0001",
+      "source": "Applies a single-precision affine transformation to an 8-bit planar image.",
+      "ko": "8비트 평면 이미지에 단정밀도 아핀 변환을 적용합니다.",
+      "sourceHash": "cb534b0bd3026fe6910390436bfd312d0d39adb02681c32ef64a20743ece1f8c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:single-precision-affine-transformation:0007:0001",
+      "source": "[func vImageAffineWarp_PlanarF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, Pixel_F, vImage_Flags) -> vImage_Error](vimageaffinewarp_planarf(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarp_PlanarF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, Pixel_F, vImage_Flags) -> vImage_Error](vimageaffinewarp_planarf(_:_:_:_:_:_:).md)",
+      "sourceHash": "963fb96a26f9ac233c985cedcff33fcad7c5d17d16803183cb8687ca7185e411",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:single-precision-affine-transformation:0008:0001",
+      "source": "Applies a single-precision affine transformation to a 32-bit planar image.",
+      "ko": "32비트 평면 이미지에 단정밀도 아핀 변환을 적용합니다.",
+      "sourceHash": "fa72b1e4eb5c629d8210211e534e2f13b8965c9ef88293157f47fe62887b2641",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:single-precision-affine-transformation:0009:0001",
+      "source": "[func vImageAffineWarp_ARGB16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_argb16u(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarp_ARGB16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_argb16u(_:_:_:_:_:_:).md)",
+      "sourceHash": "2264f2de41f2308615e724ab9f851218cd4729219c5c8ad3183d3a9371584d71",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:single-precision-affine-transformation:0010:0001",
+      "source": "Applies a single-precision affine transformation to an unsigned 16-bit-per-channel, 4-channel interleaved image.",
+      "ko": "채널당 부호 없는 16비트의 4채널 인터리브된 이미지에 단정밀도 아핀 변환을 적용합니다.",
+      "sourceHash": "1a8df165ae4175ea7af0b73fe0b958c4774c911fa936df4087a05391e5e7acee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:single-precision-affine-transformation:0011:0001",
+      "source": "[func vImageAffineWarp_ARGB16S(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<Int16>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_argb16s(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarp_ARGB16S(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<Int16>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_argb16s(_:_:_:_:_:_:).md)",
+      "sourceHash": "23bf73e829bb0c7cf257a4b0f5f5beceba81d9d7ec6c168d0a2a51d5dd031a78",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:single-precision-affine-transformation:0012:0001",
+      "source": "Applies a single-precision affine transformation to a signed 16-bit-per-channel, 4-channel interleaved image.",
+      "ko": "채널당 부호 있는 16비트의 4채널 인터리브된 이미지에 단정밀도 아핀 변환을 적용합니다.",
+      "sourceHash": "5bcba1bda9bc87a7445f86badaa3a22b4dec7e5e1af9e141461bfd1a1d3fa81c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:single-precision-affine-transformation:0013:0001",
+      "source": "[func vImageAffineWarp_ARGB8888(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_argb8888(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarp_ARGB8888(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_argb8888(_:_:_:_:_:_:).md)",
+      "sourceHash": "a3e02977ae25c6a796e569fedafbfd762f376bca9d5a503463aa4516b86eb63a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:single-precision-affine-transformation:0014:0001",
+      "source": "Applies a single-precision affine transformation to an 8-bit-per-channel, 4-channel interleaved image.",
+      "ko": "채널당 8비트의 4채널 인터리브된 이미지에 단정밀도 아핀 변환을 적용합니다.",
+      "sourceHash": "0946e6ca7590cb6f3c730e6f374df12f34018448cebcee5cae43b761404b2c55",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:single-precision-affine-transformation:0015:0001",
+      "source": "[func vImageAffineWarp_ARGBFFFF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<Float>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_argbffff(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarp_ARGBFFFF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<Float>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_argbffff(_:_:_:_:_:_:).md)",
+      "sourceHash": "c97cced5ea9530e70f8b925237777579550698a7a2f4c5c53c2a93f2a48d4a04",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:single-precision-affine-transformation:0016:0001",
+      "source": "Applies a single-precision affine transformation to a 32-bit-per-channel, 4-channel interleaved image.",
+      "ko": "채널당 32비트의 4채널 인터리브된 이미지에 단정밀도 아핀 변환을 적용합니다.",
+      "sourceHash": "8d4f1b31fdafae3a7a7a3eb4c1f61a9b75ea3a3899e557238aa26e5e159d9b8e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:single-precision-affine-transformation:0017:0001",
+      "source": "[func vImageAffineWarp_ARGB16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_argb16f(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarp_ARGB16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_argb16f(_:_:_:_:_:_:).md)",
+      "sourceHash": "547fdd0a0c33d9e57285cc1ae066caaff51161e9adb79a8dfde3196fb1973ba1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:single-precision-affine-transformation:0017:0002",
+      "source": "[func vImageAffineWarp_CbCr16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_cbcr16f(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarp_CbCr16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarp_cbcr16f(_:_:_:_:_:_:).md)",
+      "sourceHash": "73571e02eb19504e8a63c3a9f8041234bc3291e9c0db7fc57618d077115d37b0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:single-precision-affine-transformation:0017:0003",
+      "source": "[func vImageAffineWarp_Planar16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, Pixel_16F, vImage_Flags) -> vImage_Error](vimageaffinewarp_planar16f(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarp_Planar16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform>, Pixel_16F, vImage_Flags) -> vImage_Error](vimageaffinewarp_planar16f(_:_:_:_:_:_:).md)",
+      "sourceHash": "69deb0c2afb0254926a6f15427966f7438201e0b80f98f435e0854b0fae7dc86",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:double-precision-affine-transformation:0018:0001",
+      "source": "Double-Precision Affine Transformation",
+      "ko": "이중 정밀도 아핀 변환",
+      "sourceHash": "4accd8c39e002c1ea8210ca630749e43852fe28bcb46ba05595f8aa0537cae68",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:double-precision-affine-transformation:0019:0001",
+      "source": "[func vImageAffineWarpD_Planar8(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, Pixel_8, vImage_Flags) -> vImage_Error](vimageaffinewarpd_planar8(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpD_Planar8(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, Pixel_8, vImage_Flags) -> vImage_Error](vimageaffinewarpd_planar8(_:_:_:_:_:_:).md)",
+      "sourceHash": "fb8ebdd005bae40bf111c2f9736940ae7bd9bd6a3077beb5e8e74e5029a76534",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:double-precision-affine-transformation:0020:0001",
+      "source": "Applies a double-precision affine transformation to an 8-bit planar image.",
+      "ko": "8비트 평면 이미지에 이중 정밀도 아핀 변환을 적용합니다.",
+      "sourceHash": "f4b6ee422f9138fa5fba3a3c54e5058e8903e27bdb74db456169ca46c3d21165",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:double-precision-affine-transformation:0021:0001",
+      "source": "[func vImageAffineWarpD_PlanarF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, Pixel_F, vImage_Flags) -> vImage_Error](vimageaffinewarpd_planarf(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpD_PlanarF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, Pixel_F, vImage_Flags) -> vImage_Error](vimageaffinewarpd_planarf(_:_:_:_:_:_:).md)",
+      "sourceHash": "0fc130e3616808910b8de19552f18842af2992b3b4101265461c8300542f7403",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:double-precision-affine-transformation:0022:0001",
+      "source": "Applies a double-precision affine transformation to a 32-bit planar image.",
+      "ko": "32비트 평면 이미지에 이중 정밀도 affine 변환을 적용합니다.",
+      "sourceHash": "a957ff6f4155578e3364e07aa8f4031876366e2a7ed732ec6d497cbdea31f269",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:double-precision-affine-transformation:0023:0001",
+      "source": "[func vImageAffineWarpD_Planar16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, Pixel_16F, vImage_Flags) -> vImage_Error](vimageaffinewarpd_planar16f(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpD_Planar16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, Pixel_16F, vImage_Flags) -> vImage_Error](vimageaffinewarpd_planar16f(_:_:_:_:_:_:).md)",
+      "sourceHash": "0f0f2dcd41a3fac745e3916ceb166285884c6bc238268c6bed7b884f921c8a70",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:double-precision-affine-transformation:0024:0001",
+      "source": "Applies a double-precision affine transformation to a floating-point 16-bit planar image.",
+      "ko": "부동 소수점 16비트 평면 이미지에 이중 정밀도 affine 변환을 적용합니다.",
+      "sourceHash": "f4c57cfed539404ad79b98b7d7519b454ca81fdcec1d532e87517e28780cd010",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:double-precision-affine-transformation:0025:0001",
+      "source": "[func vImageAffineWarpD_CbCr16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_cbcr16f(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpD_CbCr16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_cbcr16f(_:_:_:_:_:_:).md)",
+      "sourceHash": "2f290788c5e14e973df1bc92efc59a0bde46ea4638356c737d8e118206d1b770",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:double-precision-affine-transformation:0026:0001",
+      "source": "Applies a double-precision affine transformation to a floating-point 16-bit-per-channel, 2-channel interleaved image.",
+      "ko": "부동 소수점 16비트, 채널당 2채널 인터리브 이미지에 이중 정밀도 affine 변환을 적용합니다.",
+      "sourceHash": "47a0a86d1feae3b68acb6d22f16aa888fe4cb8dab6e3b72351fa82875bebca47",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:double-precision-affine-transformation:0027:0001",
+      "source": "[func vImageAffineWarpD_ARGB8888(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_argb8888(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpD_ARGB8888(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_argb8888(_:_:_:_:_:_:).md)",
+      "sourceHash": "4164fc1bed6d3882c7f4b5e42ace06b7b3c89f5dfdc5307d5b4e76a9fb1c4693",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:double-precision-affine-transformation:0028:0001",
+      "source": "Applies a double-precision affine transformation to an 8-bit-per-channel, 4-channel interleaved image.",
+      "ko": "채널당 8비트, 4채널 인터리브 이미지에 이중 정밀도 affine 변환을 적용합니다.",
+      "sourceHash": "bb368ce539bc408e3bf4472ef90a91d159228bc893c36a54f4c899e9abb0ee52",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:double-precision-affine-transformation:0029:0001",
+      "source": "[func vImageAffineWarpD_ARGB16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_argb16u(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpD_ARGB16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_argb16u(_:_:_:_:_:_:).md)",
+      "sourceHash": "fd3981eed7e41786b02cfdc88e98a7ec6ca49bd59e152624a1923edfff0e1fdb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:double-precision-affine-transformation:0030:0001",
+      "source": "Applies a double-precision affine transformation to an unsigned 16-bit-per-channel, 4-channel interleaved image.",
+      "ko": "부호 없는 채널당 16비트, 4채널 인터리브 이미지에 이중 정밀도 affine 변환을 적용합니다.",
+      "sourceHash": "5b9d1eadfa26a295cf661fe44a94a336ed85559fc2dbeea023f6d4560c66e545",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:double-precision-affine-transformation:0031:0001",
+      "source": "[func vImageAffineWarpD_ARGB16S(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<Int16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_argb16s(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpD_ARGB16S(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<Int16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_argb16s(_:_:_:_:_:_:).md)",
+      "sourceHash": "f8228e77c89275148a7d913832d67ef9f9206b9e0b136e848303a9e26c99cdd8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:double-precision-affine-transformation:0032:0001",
+      "source": "Applies a double-precision affine transformation to a signed 16-bit-per-channel, 4-channel interleaved image.",
+      "ko": "부호 있는 채널당 16비트, 4채널 인터리브 이미지에 이중 정밀도 affine 변환을 적용합니다.",
+      "sourceHash": "bda3c5796e5883109d63cb99d60f7961823dbb25f19115986f5d89aa8ffca960",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:double-precision-affine-transformation:0033:0001",
+      "source": "[func vImageAffineWarpD_ARGB16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_argb16f(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpD_ARGB16F(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_argb16f(_:_:_:_:_:_:).md)",
+      "sourceHash": "7695bad91beae947f9a6dd6269de7d3fd502922fdf38c6a66dc82dced139d0a6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:double-precision-affine-transformation:0034:0001",
+      "source": "Applies a double-precision affine transformation to a floating-point 16-bit-per-channel, 4-channel interleaved image.",
+      "ko": "채널당 16비트 부동 소수점, 4채널 인터리브 이미지에 이중 정밀도 affine 변환을 적용합니다.",
+      "sourceHash": "8176affe5c45a5d63b774f30e6f1c010e85ad8a1a31e09d10a8f870938145e06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:double-precision-affine-transformation:0035:0001",
+      "source": "[func vImageAffineWarpD_ARGBFFFF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<Float>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_argbffff(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpD_ARGBFFFF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_AffineTransform_Double>, UnsafePointer<Float>!, vImage_Flags) -> vImage_Error](vimageaffinewarpd_argbffff(_:_:_:_:_:_:).md)",
+      "sourceHash": "da80354a86c95c404e645c893d533b5c5f8885266744d5099bb1c70802760ee2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:double-precision-affine-transformation:0036:0001",
+      "source": "Applies a double-precision affine transformation to a 32-bit-per-channel, 4-channel interleaved image.",
+      "ko": "채널당 32비트, 4채널 인터리브 이미지에 이중 정밀도 affine 변환을 적용합니다.",
+      "sourceHash": "bd07332cd1e69f68adabad3d0a1c705e74a837a48a3ada169ee38f17d53eb472",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:core-graphics-affine-transformation:0037:0001",
+      "source": "Core Graphics Affine Transformation",
+      "ko": "Core Graphics affine 변환",
+      "sourceHash": "a30fb95d366654ed439e321159db8814e2c0050fa62229141d5e2fe698f869b7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:core-graphics-affine-transformation:0038:0001",
+      "source": "[func vImageAffineWarpCG_Planar8(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, Pixel_8, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_planar8(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpCG_Planar8(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, Pixel_8, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_planar8(_:_:_:_:_:_:).md)",
+      "sourceHash": "792431dc219aade7475bc35772a8f53abe7e6e0f01eda412e1e452faf7e7d4ed",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:core-graphics-affine-transformation:0039:0001",
+      "source": "Applies a Core Graphics affine transformation to a Planar8 source image.",
+      "ko": "Planar8 소스 이미지에 Core Graphics affine 변환을 적용합니다.",
+      "sourceHash": "08383d06f25c36c52748e9142674117015726b0b29d2d7671b4041f7c27c9884",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:core-graphics-affine-transformation:0040:0001",
+      "source": "[func vImageAffineWarpCG_PlanarF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, Pixel_F, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_planarf(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpCG_PlanarF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, Pixel_F, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_planarf(_:_:_:_:_:_:).md)",
+      "sourceHash": "423e4ba2a9342d0dea698d338d5d227584c976564363a6aeadecf912de98daae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:core-graphics-affine-transformation:0041:0001",
+      "source": "Applies a Core Graphics affine transformation to a PlanarF source image.",
+      "ko": "PlanarF 소스 이미지에 Core Graphics affine 변환을 적용합니다.",
+      "sourceHash": "132257368dcf53fc97557d792ce386339b51226dfc927516193df7259a1295b6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:core-graphics-affine-transformation:0042:0001",
+      "source": "[func vImageAffineWarpCG_ARGB16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_argb16u(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpCG_ARGB16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, UnsafePointer<UInt16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_argb16u(_:_:_:_:_:_:).md)",
+      "sourceHash": "7c675ddeae17aead6eda34ceb514d0df104c175e26212bd17944a284e4a94028",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:core-graphics-affine-transformation:0043:0001",
+      "source": "Applies a Core Graphics affine transformation to an ARGB16U source image.",
+      "ko": "ARGB16U 소스 이미지에 Core Graphics affine 변환을 적용합니다.",
+      "sourceHash": "93b4fac3f550dc03d68931732aaa22cb90779967d788b1156651a25d5ef3a9bf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:core-graphics-affine-transformation:0044:0001",
+      "source": "[func vImageAffineWarpCG_ARGB16S(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, UnsafePointer<Int16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_argb16s(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpCG_ARGB16S(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, UnsafePointer<Int16>!, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_argb16s(_:_:_:_:_:_:).md)",
+      "sourceHash": "6d80b54962eb7e98352e4b5ecbaeaeecd34a5ae0ee0e5113b60ed8e28f933774",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:core-graphics-affine-transformation:0045:0001",
+      "source": "Applies a Core Graphics affine transformation to an ARGB16S source image.",
+      "ko": "ARGB16S 소스 이미지에 Core Graphics affine 변환을 적용합니다.",
+      "sourceHash": "cdc5c528a2dd79fc1a8a963034977107096190eccdc8c5663f935bf3fac9ba6d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:core-graphics-affine-transformation:0046:0001",
+      "source": "[func vImageAffineWarpCG_ARGB8888(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_argb8888(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpCG_ARGB8888(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_argb8888(_:_:_:_:_:_:).md)",
+      "sourceHash": "23d22b43dba0b20ee046c20fb91e2bc952e23eca518ac2468879a3d54ae2139a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:core-graphics-affine-transformation:0047:0001",
+      "source": "Applies a Core Graphics affine transformation to an ARGB8888 source image.",
+      "ko": "ARGB8888 소스 이미지에 Core Graphics affine 변환을 적용합니다.",
+      "sourceHash": "0e04da81f67b8e7af42dd8012e8194855072d2f430ef2ebd3e89b7c7367303d2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:core-graphics-affine-transformation:0048:0001",
+      "source": "[func vImageAffineWarpCG_ARGBFFFF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, UnsafePointer<Float>!, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_argbffff(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageAffineWarpCG_ARGBFFFF(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, UnsafePointer<vImage_CGAffineTransform>, UnsafePointer<Float>!, vImage_Flags) -> vImage_Error](vimageaffinewarpcg_argbffff(_:_:_:_:_:_:).md)",
+      "sourceHash": "fdda64120317acd68413d833906784cf5eabd62dc5754cc42705e627bd77d650",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:core-graphics-affine-transformation:0049:0001",
+      "source": "Applies a Core Graphics affine transformation to an ARGBFFFF source image.",
+      "ko": "ARGBFFFF 소스 이미지에 Core Graphics affine 변환을 적용합니다.",
+      "sourceHash": "a7fd8eebf9671448de347478b732c86dfa899f58d08e39af5770bf928e2a5ae1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0050:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0051:0001",
+      "source": "[Resampling in vImage](resampling-in-vimage.md)",
+      "ko": "[Resampling in vImage](resampling-in-vimage.md)",
+      "sourceHash": "e2769e1b35b2103d3a4c79725effa9e33a7e0baf00e9acdbc6629d207a11b2ff",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0052:0001",
+      "source": "Learn how vImage resamples image data during geometric operations.",
+      "ko": "vImage가 기하학적 연산 중 이미지 데이터를 다시 샘플링하는 방식을 확인합니다.",
+      "sourceHash": "e6641deb0f30bd0fa89db11f6115c1e7774e23a6074d4d15ff2a51a1a1ebb041",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0053:0001",
+      "source": "[Applying projective transformations to images](applying-projective-transformations-to-images.md)",
+      "ko": "[Applying projective transformations to images](applying-projective-transformations-to-images.md)",
+      "sourceHash": "9aa0809966b5cef1e0c16d4545429c6e431b3ce1dccdf1ee02e8dded9491cb23",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0054:0001",
+      "source": "Warp images in three dimensions.",
+      "ko": "이미지를 3차원으로 왜곡합니다.",
+      "sourceHash": "9f8f0e45582b08c46f2b6be4c58af375fe89d392419bc9b724188b819cf80e2d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0055:0001",
+      "source": "[Image reflection](image-reflection.md)",
+      "ko": "[Image reflection](image-reflection.md)",
+      "sourceHash": "7c261ef87caf7645f1f112b85ac6afaf92d0658391cd5fac3d1de8f0422cd733",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0056:0001",
+      "source": "Reflect images horizontally and vertically.",
+      "ko": "이미지를 수평 및 수직으로 반사합니다.",
+      "sourceHash": "2fc0406ba479708279ea15e6c07df01bec15a46e88fae6f73495812115130c3d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0057:0001",
+      "source": "[Image shearing](image-shearing.md)",
+      "ko": "[Image shearing](image-shearing.md)",
+      "sourceHash": "65fdd505ea83f93108befee2eea85bad7c9b7d6de080255b0215c0106864e21a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0058:0001",
+      "source": "Shear images horizontally and vertically.",
+      "ko": "이미지를 수평 및 수직으로 전단 변환합니다.",
+      "sourceHash": "2663dc7222f5a0186fa7d27d3899cd54770a193015693b8903f333a9132954cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0059:0001",
+      "source": "[Image rotation](image-rotation.md)",
+      "ko": "[Image rotation](image-rotation.md)",
+      "sourceHash": "40f60f404747ef1420dbce5e069d41a2c92dc4eb458f9a0a7c30f84ee7a5f7ca",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0060:0001",
+      "source": "Rotate images by arbitrary angles or by multiples of 90 degrees.",
+      "ko": "이미지를 임의 각도로 또는 90도 배수로 회전합니다.",
+      "sourceHash": "6302f1396d334a4b12a9616e8fd0004fbceb125f22797fe327613ca8a84d5361",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0061:0001",
+      "source": "[Image scaling](image-scaling.md)",
+      "ko": "[Image scaling](image-scaling.md)",
+      "sourceHash": "e0680cea9724276d0900cc303fbaf57bfd727d26800771e7f63fb5304dc869ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0062:0001",
+      "source": "Scale interlaced and planar images.",
+      "ko": "인터레이스 및 평면 이미지를 스케일링합니다.",
+      "sourceHash": "0795c03f12a2d3d2ba035840e5248c7bb9e6f27c037e267541a9e04f5845db70",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0063:0001",
+      "source": "[Getting the Buffer Size](getting-the-buffer-size.md)",
+      "ko": "[Getting the Buffer Size](getting-the-buffer-size.md)",
+      "sourceHash": "b8b205a9039a6bbd99f64e6c069f84c7f92fc2aba475d5a3fd8a6d062bbae27a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0064:0001",
+      "source": "Calculate the size of the temporary buffer needed by a high-level geometry functions.",
+      "ko": "고급 기하학 함수를 사용할 때 필요한 임시 버퍼 크기를 계산합니다.",
+      "sourceHash": "0b197033f976c670e98cf183f956cd9f5f8d6cf4f77e3c94fed0ccc02452a5ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0065:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0066:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/applying-affine-transformations-to-images)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/applying-affine-transformations-to-images)*",
+      "sourceHash": "2fb37002df9c608c48298dced5953cfb94e9f277821e459c31abb811d4a86889",
+      "status": "preserved"
+    }
+  ]
+}

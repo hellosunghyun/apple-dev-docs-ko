@@ -48,4 +48,4 @@ func slansp_(_ norm: UnsafePointer<CChar>, _ uplo: UnsafePointer<CChar>, _ n: Un
 
 ---
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">*<a href="https://developer.apple.com/documentation/accelerate/slansp_(_:_:_:_:_:">View on Apple Developer</a>)*</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">해당 면은 실제 세계의 천장 일부입니다.</span>

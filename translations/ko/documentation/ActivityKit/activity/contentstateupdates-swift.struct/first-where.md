@@ -1,0 +1,54 @@
+---
+source_path: "documentation/ActivityKit/activity/contentstateupdates-swift.struct/first-where.md"
+upstream_sha: "8a29a1d75e67151b588206d3e921a4ff212726be"
+translation_status: machine_translated
+official_url: "https://developer.apple.com/documentation/activitykit/activity/contentstateupdates-swift.struct/first-where"
+official: false
+---
+
+> 비공식 번역입니다. 정확한 최신 내용은 원문을 확인하세요.
+
+# <span class="ko-segment" data-segment-id="seg:heading:firstwhere:0000:0001">first(where:)</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:firstwhere:0001:0001">**Framework**: ActivityKit **Kind**: method</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:firstwhere:0002:0001">Returns the first element of the sequence that satisfies the given predicate.</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:firstwhere:0003:0001">**Availability**:</span>
+
+- <span class="ko-segment" data-segment-id="seg:list:firstwhere:0004:0001">iOS 13.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:firstwhere:0004:0002">iPadOS 13.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:firstwhere:0004:0003">macOS 10.15+</span>
+- <span class="ko-segment" data-segment-id="seg:list:firstwhere:0004:0004">tvOS 13.0+</span>
+- <span class="ko-segment" data-segment-id="seg:list:firstwhere:0004:0005">watchOS 6.0+</span>
+
+## <span class="ko-segment" data-segment-id="seg:heading:declaration:0005:0001">Declaration</span>
+
+```swift
+func first(where predicate: (Self.Element) async throws -> Bool) async rethrows -> Self.Element?
+```
+
+#### <span class="ko-segment" data-segment-id="seg:heading:return-value:0007:0001">Return Value</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:return-value:0008:0001">The first element of the sequence that satisfies <code>predicate</code>, or <code>nil</code> if there is no element that satisfies <code>predicate</code>.</span>
+
+#### <span class="ko-segment" data-segment-id="seg:heading:discussion:0009:0001">Discussion</span>
+
+<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0010:0001"><code>m * stride[4] + n * stride[5]</code>.</span> <span class="ko-segment" data-segment-id="seg:paragraph:discussion:0010:0002">The <code>first(where:)</code> method returns the first member of the sequence that’s evenly divisible by both <code>2</code> and <code>3</code>.</span>
+
+```swift
+let divisibleBy2And3 = await Counter(howHigh: 10)
+    .first { $0 % 2 == 0 && $0 % 3 == 0 }
+print(divisibleBy2And3 ?? "none")
+// Prints "6"
+```
+
+<span class="ko-segment" data-segment-id="seg:paragraph:discussion:0012:0001">The predicate executes each time the asynchronous sequence produces an element, until either the predicate finds a match or the sequence ends.</span>
+
+## <span class="ko-segment" data-segment-id="seg:heading:parameters:0013:0001">Parameters</span>
+
+- <span class="ko-segment" data-segment-id="seg:list:parameters:0014:0001"><code>predicate</code>: A closure that takes an element of the asynchronous   sequence as its argument and returns a Boolean value that indicates   whether the element is a match.</span>
+
+---
+
+<span class="ko-segment" data-segment-id="seg:paragraph:parameters:0016:0001">*<a href="https://developer.apple.com/documentation/activitykit/activity/contentstateupdates-swift.struct/first(where:">View on Apple Developer</a>)*</span>

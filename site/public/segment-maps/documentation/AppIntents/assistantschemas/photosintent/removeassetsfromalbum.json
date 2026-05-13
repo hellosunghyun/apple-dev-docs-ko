@@ -1,0 +1,372 @@
+{
+  "docId": "documentation/AppIntents/assistantschemas/photosintent/removeassetsfromalbum.md",
+  "title": "removeAssetsFromAlbum",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appintents/assistantschemas/photosintent/removeassetsfromalbum",
+  "segments": [
+    {
+      "id": "seg:heading:removeassetsfromalbum:0000:0001",
+      "source": "removeAssetsFromAlbum",
+      "ko": "removeAssetsFromAlbum",
+      "sourceHash": "44eb2368b237a9a3e2286ce18c2aba83468d9b7e58866262eedd5a6164dbe839",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:removeassetsfromalbum:0001:0001",
+      "source": "**Framework**: App Intents **Kind**: property",
+      "ko": "**Framework**: App Intents **Kind**: property",
+      "sourceHash": "c3213499f1e1a5f450aa95a7dece3a06aa52aa656892889b0c8a178663cb2fd6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:removeassetsfromalbum:0002:0001",
+      "source": "The app intent conforms to the schema for removing an asset from an album.",
+      "ko": "앱 인텐트가 앨범에서 에셋을 제거하는 스키마를 준수합니다.",
+      "sourceHash": "ab818999a47cb802b68732f634598dae657421f27eaf8d2aecf2f46f997ba613",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:removeassetsfromalbum:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:removeassetsfromalbum:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:removeassetsfromalbum:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:removeassetsfromalbum:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:removeassetsfromalbum:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:removeassetsfromalbum:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:removeassetsfromalbum:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:removeassetsfromalbum:0004:0007",
+      "source": "watchOS 9.0+",
+      "ko": "watchOS 9.0+",
+      "sourceHash": "74f54147ec06c7528917e10d68b6a402263ae2503dac544ef616ac2a86563097",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar removeAssetsFromAlbum: some AssistantSchemas.Intent { get }\n```",
+      "ko": "```swift\nvar removeAssetsFromAlbum: some AssistantSchemas.Intent { get }\n```",
+      "sourceHash": "5d10ad14de490251442f502874aa9cff817f1b4a55b384b7389f80fe430f7f9b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "Use Swift macros that generate additional properties and add protocol conformance for your app intent implementation.",
+      "ko": "앱 인텐트 구현에서 추가 속성을 생성하고 프로토콜 준수를 추가하는 Swift 매크로를 사용합니다.",
+      "sourceHash": "89ae9f718a492020d200f02f2ad9192b36d239837924066a74daf45bab178f3f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0002",
+      "source": "The following example shows an app intent that conforms to the `.photos.removeAssetsFromAlbum` schema:",
+      "ko": "다음 예제는 `.photos.removeAssetsFromAlbum` 스키마를 준수하는 앱 인텐트를 보여 줍니다.",
+      "sourceHash": "7b3a77327748c1ac69311ac29984e5acd5e0c071c4743ab6964bc5c9702e9284",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:overview:0009:0001",
+      "source": "```swift\n@AppIntent(schema: .photos.removeAssetsFromAlbum)\nstruct RemoveMediaAssetsFromAlbumIntent: AppIntent {\n    @Parameter\n    var album: PhotoAlbumEntity\n\n    @Parameter\n    var assets: [PhotoEntity]\n\n    func perform() async throws -> some IntentResult {\n        .result()\n    }\n}\n```",
+      "ko": "```swift\n@AppIntent(schema: .photos.removeAssetsFromAlbum)\nstruct RemoveMediaAssetsFromAlbumIntent: AppIntent {\n    @Parameter\n    var album: PhotoAlbumEntity\n\n    @Parameter\n    var assets: [PhotoEntity]\n\n    func perform() async throws -> some IntentResult {\n        .result()\n    }\n}\n```",
+      "sourceHash": "7d2153867890c5bfac40b6f1c74cbc2064e000b7385e72c0cf3d3820b54524c4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "For more information about the `.photos` app intent domain, see [`Making photo and video actions available to Siri and Apple Intelligence`](making-photo-and-video-actions-available-to-siri-and-apple-intelligence.md).",
+      "ko": "`.photos` 앱 인텐트 도메인에 대한 자세한 내용은 [`Making photo and video actions available to Siri and Apple Intelligence`](making-photo-and-video-actions-available-to-siri-and-apple-intelligence.md)를 참조합니다.",
+      "sourceHash": "afd5b715d8625c6c1dc6cc864cfde1113e95fe4a7800aed3baa0dd040fe08e2b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0002",
+      "source": "For general information about app intent domains, see [`Integrating actions with Siri and Apple Intelligence`](integrating-actions-with-siri-and-apple-intelligence.md).",
+      "ko": "앱 인텐트 도메인 일반 정보는 [`Integrating actions with Siri and Apple Intelligence`](integrating-actions-with-siri-and-apple-intelligence.md)를 참조합니다.",
+      "sourceHash": "172d28804899d227356fc599425496a8b37e3ccf72cf937f34263b9c082b5844",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var addAssetsToAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/addassetstoalbum.md)",
+      "ko": "[var addAssetsToAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/addassetstoalbum.md)",
+      "sourceHash": "862f9c240457e8e9b048933fd2488bed38160d161247fedf0f9998f941a82496",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "The app intent conforms to the schema for adding an asset to an album.",
+      "ko": "앱 인텐트가 앨범에 에셋을 추가하는 스키마를 준수합니다.",
+      "sourceHash": "734469a189d166cc000566a7147f1e006c2b290d0a067f70b4b65c2234f6dfd5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var cleanupPhoto: some AssistantSchemas.Intent](assistantschemas/photosintent/cleanupphoto.md)",
+      "ko": "[var cleanupPhoto: some AssistantSchemas.Intent](assistantschemas/photosintent/cleanupphoto.md)",
+      "sourceHash": "e32af02099a2c4aae66f94a0d82b6e212faac07262f649ab8c13677baac2350a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "The app intent conforms to the schema for undoing edits to an asset.",
+      "ko": "The app intent conforms to the schema for undoing edits to an asset.",
+      "sourceHash": "8cc69bac7e2987e6ed668037fe49433f140327c553fa824a05de021683056174",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var copyEdits: some AssistantSchemas.Intent](assistantschemas/photosintent/copyedits.md)",
+      "ko": "[var copyEdits: some AssistantSchemas.Intent](assistantschemas/photosintent/copyedits.md)",
+      "sourceHash": "a94c0cd3103515f3a54f9cb4a7cfff6ea283b5d1baee50cda62cd704ebbc14b5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "The app intent conforms to the schema for copying edits to an asset.",
+      "ko": "The app intent conforms to the schema for copying edits to an asset.",
+      "sourceHash": "c1b990a47241920dbb5a1101da66f5e1b96f9a39bf946fb050e878663a557364",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[var createAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/createalbum.md)",
+      "ko": "[var createAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/createalbum.md)",
+      "sourceHash": "f4c466fe2240e7ea03a2088a76f278c03f40a752d526cd78dbc91bc41437d1eb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "The app intent conforms to the schema for creating an album.",
+      "ko": "The app intent conforms to the schema for creating an album.",
+      "sourceHash": "398ef50b2b77af6f0846f21f9dbe02ea92f564939cac2142cf1c4dd52cd366a8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[var createAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/createassets.md)",
+      "ko": "[var createAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/createassets.md)",
+      "sourceHash": "00227678e6548e6a1cc20cef9d98e8d3de793e02484ae55a907eb8ff5cfb31f6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "The app intent conforms to the schema for creating an asset.",
+      "ko": "The app intent conforms to the schema for creating an asset.",
+      "sourceHash": "1edfd26f3add435e88876e3b9dfaa8468c883d3e30fbbcda3250d3daaf6935fe",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[var crop: some AssistantSchemas.Intent](assistantschemas/photosintent/crop.md)",
+      "ko": "[var crop: some AssistantSchemas.Intent](assistantschemas/photosintent/crop.md)",
+      "sourceHash": "d42b3431e1afc55638022a9cf996677604291707c0ad9eeb674dcd3660f1f195",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "The app intent conforms to the schema for cropping an asset.",
+      "ko": "The app intent conforms to the schema for cropping an asset.",
+      "sourceHash": "7ee9c2fb45d889136fe65a5518054d8f0431b11f2266c4df13114216c6c32508",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[var deleteAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/deletealbum.md)",
+      "ko": "[var deleteAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/deletealbum.md)",
+      "sourceHash": "20903fb538e79f3d7ff6f29aba1cbcfeed50e6d414bc60936ad2504b41a2a106",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "The app intent conforms to the schema for deleting an album.",
+      "ko": "The app intent conforms to the schema for deleting an album.",
+      "sourceHash": "57f23e454b572fe1606d6eab5ae90a45c8d086e3a808864cab03ec8929028b60",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[var deleteAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/deleteassets.md)",
+      "ko": "[var deleteAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/deleteassets.md)",
+      "sourceHash": "b2ad379745bbd8011d315fcb657f1dfbc189de9c9d3089d806d3ceab1ccf6c63",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "The app intent conforms to the schema for deleting an asset.",
+      "ko": "The app intent conforms to the schema for deleting an asset.",
+      "sourceHash": "e8fa3b028665b56747c7e882acc089203b2197a77f840fe049ec3efaf8a1c81f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[var duplicateAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/duplicateassets.md)",
+      "ko": "[var duplicateAssets: some AssistantSchemas.Intent](assistantschemas/photosintent/duplicateassets.md)",
+      "sourceHash": "43ca90902b0e6142ed9a026fbf3b8efbe748e4400eaf966d51da20b3c600af3e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "The app intent conforms to the schema for duplicating an asset.",
+      "ko": "The app intent conforms to the schema for duplicating an asset.",
+      "sourceHash": "a728087b767a380b9eba79bdde51fc8ff5da5686811ae6b404678e49f9a39c9f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[var openAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/openalbum.md)",
+      "ko": "[var openAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/openalbum.md)",
+      "sourceHash": "e6eec496d206a7b7355848390f9bbf42225232d8bd1c4ad35c275b97131acbca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "The app intent conforms to the schema for opening an album.",
+      "ko": "The app intent conforms to the schema for opening an album.",
+      "sourceHash": "89263f5e50babfcac4a0d616e0a542f8130181e0a44b86f826454d4dffb048bd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[var pasteEdits: some AssistantSchemas.Intent](assistantschemas/photosintent/pasteedits.md)",
+      "ko": "[var pasteEdits: some AssistantSchemas.Intent](assistantschemas/photosintent/pasteedits.md)",
+      "sourceHash": "0c6c92a06e548e313512bb2208b52459f7cd84ec4cada182b50a85ee278f2ada",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "The app intent conforms to the schema for pasting edits to an asset.",
+      "ko": "The app intent conforms to the schema for pasting edits to an asset.",
+      "sourceHash": "7c483f9797bf92d4aaf6a5335d8cfe91c48ce79493e4683bbd704ea852af26b7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[var postToSharedAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/posttosharedalbum.md)",
+      "ko": "[var postToSharedAlbum: some AssistantSchemas.Intent](assistantschemas/photosintent/posttosharedalbum.md)",
+      "sourceHash": "cc99d9eb4bdf13962a9fec007599ed0ec0213fea164f6340252abd50da01ea90",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "The app intent conforms to the schema for posting an asset to a shared album.",
+      "ko": "The app intent conforms to the schema for posting an asset to a shared album.",
+      "sourceHash": "971477db825f61fea5e8724aa349699f8d85d92b72119e1a340621e3f929a574",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[var search: some AssistantSchemas.Intent](assistantschemas/photosintent/search.md)",
+      "ko": "[var search: some AssistantSchemas.Intent](assistantschemas/photosintent/search.md)",
+      "sourceHash": "f8de0ba9766e9c56507caa7042a3e942d188e63588634f7c1d9b1cd13d3654db",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "The app intent conforms to the schema for searching the content in the media library.",
+      "ko": "The app intent conforms to the schema for searching the content in the media library.",
+      "sourceHash": "5fc72852ff0858527d6d902cc9e59424385c99a993ededb587a8da2e79f5fc5a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[var setDepth: some AssistantSchemas.Intent](assistantschemas/photosintent/setdepth.md)",
+      "ko": "[var setDepth: some AssistantSchemas.Intent](assistantschemas/photosintent/setdepth.md)",
+      "sourceHash": "2a2f27f393daff8a8e32b7fc252a49a54b9c39e62c7db7ec2f900e0122c02661",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "The app intent conforms to the schema for setting the aperture of an asset.",
+      "ko": "The app intent conforms to the schema for setting the aperture of an asset.",
+      "sourceHash": "b579b1c6f3d7e26d3a57bbc3579dea43514cfce0eff33682933785d16ee2298c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[var setExposure: some AssistantSchemas.Intent](assistantschemas/photosintent/setexposure.md)",
+      "ko": "[var setExposure: some AssistantSchemas.Intent](assistantschemas/photosintent/setexposure.md)",
+      "sourceHash": "95ce7e9d44f19ac4127ecc11d331ff21007810469fc19235b9e4f50cd0d02b91",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "The app intent conforms to the schema for setting the exposure of an asset.",
+      "ko": "The app intent conforms to the schema for setting the exposure of an asset.",
+      "sourceHash": "9518bdc35da7ba3b9c075026914791316051ab63e8dbf7ef4257f3340c3905aa",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0042:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appintents/assistantschemas/photosintent/removeassetsfromalbum)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appintents/assistantschemas/photosintent/removeassetsfromalbum)*",
+      "sourceHash": "869c6dd3da63f2ceade9a54dd3ecb2d50fb4ac1216cfe78f8f6e263b1f94b0ab",
+      "status": "preserved"
+    }
+  ]
+}

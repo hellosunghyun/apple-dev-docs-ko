@@ -1,0 +1,435 @@
+{
+  "docId": "documentation/Accelerate/converting-chroma-subsampled-images.md",
+  "title": "Converting chroma-subsampled images",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/converting-chroma-subsampled-images",
+  "segments": [
+    {
+      "id": "seg:heading:converting-chroma-subsampled-images:0000:0001",
+      "source": "Converting chroma-subsampled images",
+      "ko": "크로마 서브샘플링된 이미지 변환",
+      "sourceHash": "7297babe9237424c0b2ae2be84225e513711bef5c5d38ae5eb0ca8f113a13dab",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:converting-chroma-subsampled-images:0001:0001",
+      "source": "**Framework**: Accelerate",
+      "ko": "**프레임워크**: Accelerate",
+      "sourceHash": "29a5b8860afd67d96c79fe2585ca71addeb9f39a3fe9698cbaba2a7451def11b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:converting-chroma-subsampled-images:0002:0001",
+      "source": "Create vImage buffers with the correct dimensions to convert to and from images with subsampled chroma information.",
+      "ko": "서브샘플링된 크로마 정보를 가진 이미지들 간의 변환을 위해 적절한 차원의 vImage 버퍼를 생성합니다.",
+      "sourceHash": "502bda243fea2b24109ed63870546f9b0599f1ead2c49f6bee0826d8f3dc79a9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "When you work with video data, you often work with images represented by separate luminance (Y) and chrominance (CbCr) information at different resolutions.",
+      "ko": "비디오 데이터를 사용할 때는 서로 다른 해상도로 분리된 휘도(Y) 및 색차(CbCr) 정보를 사용하는 이미지를 자주 다룹니다.",
+      "sourceHash": "16ca29131e12b556eedfe725024cbdec414e7d0574330aacec42625a2987ad7d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0002",
+      "source": "The vImage library provides functionality to convert images in this format to an interleaved RGB format, which simplifies applying some image-processing operations.",
+      "ko": "vImage 라이브러리는 이 형식의 이미지를 인터리브된 RGB 형식으로 변환하는 기능을 제공하여 일부 이미지 처리 작업 적용을 단순화합니다.",
+      "sourceHash": "c0ce6954157f1828ec231acf206cd3ed4588c2e640d19cead5cf6730726599eb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0001",
+      "source": "Alternatively, other image transformations, such as adjusting saturation, require that you convert an RGB image to YCbCr.",
+      "ko": "반면에 채도 조정과 같은 다른 이미지 변환 작업은 RGB 이미지를 YCbCr로 변환해야 합니다.",
+      "sourceHash": "f1ecd69937446c1f4ecc027d93153d1e91c19286af88f0aba49c20541f15fed5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0002",
+      "source": "Reducing the resolution of the chrominance information can also improve the performance of your app because you’re only processing half or a quarter of the number of pixels.",
+      "ko": "색차 정보의 해상도를 낮추면 처리해야 하는 픽셀 수가 절반 또는 4분의 1로 줄어들므로 앱 성능이 향상됩니다.",
+      "sourceHash": "5876f3770ced454ccf40235bf8bf8e18774c4d68793256bc6cd23e20166054b5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0001",
+      "source": "*Chroma subsampling* describes the encoding that compresses image data by reducing the resolution of the chrominance information.",
+      "ko": "*크로마 서브샘플링*은 색차 정보의 해상도를 줄여 이미지 데이터를 압축하는 인코딩 방식입니다.",
+      "sourceHash": "f4fc25a546bba6f0f1bfadce0431b872c9784c56d63beeefd1bd12c516dae2d4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0006:0002",
+      "source": "Chroma subsampling relies on the fact that human vision is less sensitive to color than luminance.",
+      "ko": "크로마 서브샘플링은 인간 시각이 휘도보다 색상보다 덜 민감하다는 사실을 기반으로 합니다.",
+      "sourceHash": "d6ce524a6be8075531ac0803e66c59a9e949ea97c8ab26b418480657545fa6d4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0001",
+      "source": "The code in this article uses the 4:2:0 subsampling scheme, which means there’s one Cb and one Cr pixel for every four luminance pixels.",
+      "ko": "이 문서의 코드는 4:2:0 서브샘플링 방식을 사용하며, 이는 휘도 픽셀 4개마다 Cb 픽셀 1개와 Cr 픽셀 1개가 있다는 의미입니다.",
+      "sourceHash": "e0e8d7054d3e1a9e40a1074e91530c621cb49931041f7a80c88605589eacddb1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0002",
+      "source": "That is, each chrominance channel is half of the width and half of the height of the luminance channel.",
+      "ko": "즉 각 색차 채널은 휘도 채널의 너비와 높이의 절반입니다.",
+      "sourceHash": "1f5edb85c26519e97403207193572588fc047328595c1204665dd68fb50f8736",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0007:0003",
+      "source": "For example, 4:2:0 subsampling represents a 4 x 2 image with a 4 x 2 luminance channel and two 2 x 1 chrominance channels:",
+      "ko": "예를 들어 4:2:0 서브샘플링은 4 x 2 휘도 채널과 2 x 1 크기의 두 색차 채널을 가진 4 x 2 이미지를 나타냅니다.",
+      "sourceHash": "0bda523f31494f7a6f0b8a37ea8985cb6e2a951ee51576e5a3f866e07190a5fd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "![A diagram showing source RGB pixels converted to discrete luminance and chrominance pixels arranged as two-times-two tiles.](https://docs-assets.developer.apple.com/published/fc95d53c190aa0f91c8411fcd7bbf01a/media-4264983%402x.png)",
+      "ko": "![RGB 원본 픽셀이 2 x 2 타일로 정렬된 개별 휘도 및 색차 픽셀로 변환되는 다이어그램.](https://docs-assets.developer.apple.com/published/fc95d53c190aa0f91c8411fcd7bbf01a/media-4264983%402x.png)",
+      "sourceHash": "eb206502d8a280e2ad12cb7188353b4f8e3eddd95ebf8108b8b04fe9e917605f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0001",
+      "source": "The images below show the 4:2:0 subsampling scheme applied to a photograph.",
+      "ko": "아래 이미지는 사진에 4:2:0 서브샘플링 방식을 적용한 예시입니다.",
+      "sourceHash": "ba9963eb9fcc1d91b80c6da8314b24872bf0dc6d2ac6bc333a378e82520db687",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0002",
+      "source": "The *Y* luminance channel has the same resolution as the original image.",
+      "ko": "*Y* 휘도 채널은 원본 이미지와 동일한 해상도를 가집니다.",
+      "sourceHash": "71b6a852b8041936d5d59733feaaee820ef5968e2ead847f048a35f04a4cb7bb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0003",
+      "source": "However, the *Cb* and *Cr* chrominance channels have a lower resolution.",
+      "ko": "그러나 *Cb*와 *Cr* 색차 채널은 더 낮은 해상도를 가집니다.",
+      "sourceHash": "f4349c19b70a961a2ae048f092d6f288c17ef167f0ea3e858e1c13a197240c5b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0004",
+      "source": "For each 2 x 2 square of pixels in the luminance channel, the chrominance channels only contain a single pixel.",
+      "ko": "휘도 채널의 2 x 2 픽셀 정사각형마다 색차 채널에는 단일 픽셀 하나만 포함됩니다.",
+      "sourceHash": "0f6140cfa3d02598c3ec21f123086f50e210dbbc1b8da24301078d463ee8e205",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0009:0005",
+      "source": "Therefore, the chrominance channels are a quarter of the size of the luminance channel.",
+      "ko": "![YpCbCr 이미지의 두 색차 채널과 단일 휘도 채널 크기 및 내용을 동일한 피사체의 RGB 이미지와 비교한 다이어그램,",
+      "sourceHash": "16b4a6ae9fc00aec952a662b4edf4cad0d48a6f4d545e856ffb49acc8db51f0c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "![A diagram that shows the sizes and content of the two chrominance channels and single luminance channel of a YpCbCr image compared to an RGB image of the same subject.",
+      "ko": "좌측에는 세 개의 YpCbCr 채널이 있으며, 우측에는 단일 인터리브 RGB 이미지가 있습니다.](https://docs-assets.developer.apple.com/published/696306b4d1602091ebaca151924bab5d/media-3866875%402x.png)",
+      "sourceHash": "b8757729c85f5ab153d7755fd4affce106beb805a4903afc20277098bff26d46",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0002",
+      "source": "On the left are the three YpCbCr channels and on the right in the single, interleaved RGB image.](https://docs-assets.developer.apple.com/published/696306b4d1602091ebaca151924bab5d/media-3866875%402x.png)",
+      "ko": "On the left are the three YpCbCr channels and on the right in the single, interleaved RGB image.](https://docs-assets.developer.apple.com/published/696306b4d1602091ebaca151924bab5d/media-3866875%402x.png)",
+      "sourceHash": "1adab85fcc45dddfa8db72adb6cd9aa676fa4e468c4d4498eb818f690c84ddf6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:define-the-core-video-and-core-graphics-image-formats:0011:0001",
+      "source": "Define the Core Video and Core Graphics Image Formats",
+      "ko": "Core Video 및 Core Graphics 이미지 형식 정의",
+      "sourceHash": "94afaa039f9321ee978c4bc73834c78ca2ccee1cc8bdb7bbb1093061c9f1c60a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:define-the-core-video-and-core-graphics-image-formats:0012:0001",
+      "source": "If you’re working with [`CVPixelBuffer`](https://developer.apple.com/documentation/CoreVideo/cvpixelbuffer-q2e) objects, the vImage library provides the [`vImageCVImageFormat_CreateWithCVPixelBuffer(_:)`](vimagecvimageformat_createwithcvpixelbuffer(_:).md) and [`make(buffer:)`](vimagecvimageformat/make(buffer:).md) functions that generate a [`vImageCVImageFormat`](vimagecvimageformat.md) structure from a Core Video pixel buffer.",
+      "ko": "[`CVPixelBuffer`](https://developer.apple.com/documentation/CoreVideo/cvpixelbuffer-q2e) 객체를 사용하는 경우, vImage 라이브러리는 Core Video 픽셀 버퍼에서 [`vImageCVImageFormat`](vimagecvimageformat.md) 구조체를 생성하는 [`vImageCVImageFormat_CreateWithCVPixelBuffer(_:)`](vimagecvimageformat_createwithcvpixelbuffer(_:).md) 및 [`make(buffer:)`](vimagecvimageformat/make(buffer:).md) 함수를 제공합니다.",
+      "sourceHash": "5d310e20b78248da1dc2bc1527911a9deb073489c21ace6a6f73d32e5d97b960",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:define-the-core-video-and-core-graphics-image-formats:0012:0002",
+      "source": "However, the code in this article defines a [`vImageCVImageFormat.Format.format420YpCbCr8PlanarFullRange`](vimagecvimageformat/format/format420ypcbcr8planarfullrange.md) Core Video image format that describes the YpCbCr image.",
+      "ko": "하지만 이 문서의 코드는 YpCbCr 이미지를 설명하는 [`vImageCVImageFormat.Format.format420YpCbCr8PlanarFullRange`](vimagecvimageformat/format/format420ypcbcr8planarfullrange.md) Core Video 이미지 형식을 정의합니다.",
+      "sourceHash": "31aab1615dd725ea69193e890b198079a865e87590e212ce74ad71eeeb9a6356",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:define-the-core-video-and-core-graphics-image-formats:0012:0003",
+      "source": "The code below also defines an 8-bit-per-channel RGB Core Graphics image format:",
+      "ko": "아래 코드는 채널당 8비트 RGB Core Graphics 이미지 형식도 정의합니다.",
+      "sourceHash": "0a4e0f0ec60795ec05c4ac2334338cd31d035356a1626e452648a3ea3f978802",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:define-the-core-video-and-core-graphics-image-formats:0013:0001",
+      "source": "```swift\nvar cgImageFormat = vImage_CGImageFormat(\n    bitsPerComponent: 8,\n    bitsPerPixel: 8 * 3,\n    colorSpace: CGColorSpaceCreateDeviceRGB(),\n    bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.none.rawValue))!\n\nlet cvImageFormat = vImageCVImageFormat.make(\n    format: .format420YpCbCr8PlanarFullRange,\n    matrix: kvImage_ARGBToYpCbCrMatrix_ITU_R_601_4.pointee,\n    chromaSiting: .center,\n    colorSpace: CGColorSpaceCreateDeviceRGB(),\n    alphaIsOpaqueHint: true)!\n```",
+      "ko": "```swift\nvar cgImageFormat = vImage_CGImageFormat(\n    bitsPerComponent: 8,\n    bitsPerPixel: 8 * 3,\n    colorSpace: CGColorSpaceCreateDeviceRGB(),\n    bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.none.rawValue))!\n\nlet cvImageFormat = vImageCVImageFormat.make(\n    format: .format420YpCbCr8PlanarFullRange,\n    matrix: kvImage_ARGBToYpCbCrMatrix_ITU_R_601_4.pointee,\n    chromaSiting: .center,\n    colorSpace: CGColorSpaceCreateDeviceRGB(),\n    alphaIsOpaqueHint: true)!\n```",
+      "sourceHash": "e34d0c7e3e81c13229b036943c694ab7de1584bbd9ccd54177c48072fb3d03ac",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:perform-the-core-graphics-to-core-video-conversion:0014:0001",
+      "source": "Perform the Core Graphics to Core Video Conversion",
+      "ko": "Core Graphics에서 Core Video로의 변환 수행",
+      "sourceHash": "ffcf355fd1b254ee95ce2c293257edbb58b531acf316d9ac75023900ff74d854",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0015:0001",
+      "source": "Use the Core Video and Core Graphics image format descriptions to create an any-to-any [`vImageConverter`](vimageconverter.md) instance that converts from Core Graphics to Core Video image format.",
+      "ko": "Core Video 및 Core Graphics 이미지 형식 설명을 사용해 Core Graphics에서 Core Video 이미지 형식으로 변환하는 any-to-any [`vImageConverter`](vimageconverter.md) 인스턴스를 생성합니다.",
+      "sourceHash": "9af14961ad9f478b9af748308007c8b28fea9887c54403d99789ef4afaae1b13",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:perform-the-core-graphics-to-core-video-conversion:0016:0001",
+      "source": "```swift\nlet cgToCvConverter = try vImageConverter.make(sourceFormat: cgImageFormat,\n                                               destinationFormat: cvImageFormat)\n```",
+      "ko": "```swift\nlet cgToCvConverter = try vImageConverter.make(sourceFormat: cgImageFormat,\n                                               destinationFormat: cvImageFormat)\n```",
+      "sourceHash": "f02c58f1e9a8c5d2ab85d2a1684d8db4b1f9b3f90bdd30478186811df6a290db",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0017:0001",
+      "source": "The converter provides the [`destinationBufferCount`](vimageconverter/destinationbuffercount.md) property that you use to generate the correct number of destination buffers.",
+      "ko": "변환기는 대상 버퍼 수를 올바르게 생성하는 데 사용하는 [`destinationBufferCount`](vimageconverter/destinationbuffercount.md) 속성을 제공합니다.",
+      "sourceHash": "c1906b8adaead99251113c35770f5412bd017f48562bdd8d2351f73c962efe27",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0017:0002",
+      "source": "Although the chrominance size is a quarter of the luminance sizes, declare the sizes of all three pixel buffers as the source image size.",
+      "ko": "색차 크기는 휘도 크기의 1/4이지만, 세 개의 픽셀 버퍼 모두의 크기는 소스 이미지 크기로 선언합니다.",
+      "sourceHash": "ccc0a2823ba71546ff292ba1c4489a1f53dac76e43e8e5fa45e014027747e813",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:perform-the-core-graphics-to-core-video-conversion:0018:0001",
+      "source": "```swift\nlet ypCbCr8PlanarBuffers = (0 ..< cgToCvConverter.destinationBufferCount).map { _ in\n    vImage.PixelBuffer<vImage.Planar8>(size: rgbSourceBuffer.size)\n}\n```",
+      "ko": "```swift\nlet ypCbCr8PlanarBuffers = (0 ..< cgToCvConverter.destinationBufferCount).map { _ in\n    vImage.PixelBuffer<vImage.Planar8>(size: rgbSourceBuffer.size)\n}\n```",
+      "sourceHash": "c6fddc823b5284479803cd6dcffd3f9b19d6608afe9f3e14047069dba2e87d55",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:blockquote:perform-the-core-graphics-to-core-video-conversion:0019:0001",
+      "source": "❗ **Important**: The source and destination vlmage buffers that you pass to an any-to-any conversion must all share the same dimensions.",
+      "ko": "❗ **중요**: any-to-any 변환에 전달하는 소스 및 대상 vImage 버퍼는 모두 동일한 크기를 공유해야 합니다.",
+      "sourceHash": "12b3d03c1f2e6e420335c1c33caf0bd796a038b5c37574d9d0106a5cc0c9a12d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0020:0001",
+      "source": "In the code below, `rgbSourceBuffer` is a [`vImage.PixelBuffer`](vimage/pixelbuffer.md) with a format of [`vImage.Interleaved8x3`](vimage/interleaved8x3.md) (that matches the [`vImage_CGImageFormat`](vimage_cgimageformat.md) structure above) which contains a source image.",
+      "ko": "아래 코드에서 `rgbSourceBuffer`는 위의 [`vImage_CGImageFormat`](vimage_cgimageformat.md) 구조와 일치하는 형식의 [`vImage.Interleaved8x3`](vimage/interleaved8x3.md) [`vImage.PixelBuffer`](vimage/pixelbuffer.md)로, 소스 이미지를 포함합니다.",
+      "sourceHash": "2ef3c86b4ec4f7f97277068b3f6fd75f060747e34ecea68907482ba39e5c584e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0020:0002",
+      "source": "Call the [`convert(from:to:)`](vimageconverter/convert(from:to:)-587gc.md) method to populate the destination buffers.",
+      "ko": "대상 버퍼를 채우려면 [`convert(from:to:)`](vimageconverter/convert(from:to:)-587gc.md) 메서드를 호출합니다.",
+      "sourceHash": "986ddea6f4ddbe2163218a5eb7c070a449b9a877bd1a3bd4c92af44d2e500ad9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:perform-the-core-graphics-to-core-video-conversion:0021:0001",
+      "source": "```swift\ntry cgToCvConverter.convert(from: [rgbSourceBuffer],\n                            to: ypCbCr8PlanarBuffers)\n```",
+      "ko": "```swift\ntry cgToCvConverter.convert(from: [rgbSourceBuffer],\n                            to: ypCbCr8PlanarBuffers)\n```",
+      "sourceHash": "1cbf55fb68be2a3634c745d790b56441f9e57d08d0cb202f15893e1ccd2804bd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0022:0001",
+      "source": "On return, the three pixel buffers in the `ypCbCr8PlanarBuffers` array contain the luminance and two chrominance channels.",
+      "ko": "반환되면 `ypCbCr8PlanarBuffers` 배열의 세 픽셀 버퍼에 휘도와 두 개의 크로마 채널이 들어 있습니다.",
+      "sourceHash": "cf890235c8d8d88b136b4e11f34bf6d34f991df88b54dbd3f6715b827eadf2aa",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0022:0002",
+      "source": "The image below shows the luminance channel (left), the Cb channel (middle), and the Cr channel (right):",
+      "ko": "아래 이미지는 휘도 채널(왼쪽), Cb 채널(중간), Cr 채널(오른쪽)을 보여줍니다.",
+      "sourceHash": "ac44fdd1001a36ba0b4614edb846fb7cf945f3acb6c6b96844a70a0ed9d53bbb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0023:0001",
+      "source": "![Three grayscale images of the different planes of the YpCrCb representation of a photograph of a flower.",
+      "ko": "![꽃 사진의 YpCrCb 표현에서 서로 다른 평면을 보여주는 세 개의 그레이스케일 이미지.",
+      "sourceHash": "ab0b6836841c5afaf09f51c89cdb3dedf12f3fb040acf02dae6bd8748c30f301",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0023:0002",
+      "source": "The first image contains the luminance information.",
+      "ko": "첫 번째 이미지에는 휘도 정보가 포함되어 있습니다.",
+      "sourceHash": "ce9dab0045b69387c1279526888fb8f921a723c969bcfd3548b9b5295e04e5fd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-graphics-to-core-video-conversion:0023:0003",
+      "source": "The second and third images contain the chrominance information and are scaled that the only fill the top-left quarter of the image.](https://docs-assets.developer.apple.com/published/05210844d773d099f3ddea68afb37de1/media-4264989%402x.png)",
+      "ko": "두 번째와 세 번째 이미지는 크로마 정보가 포함되어 있으며, 이미지의 왼쪽 위 1/4 영역만 채우도록 크기가 조정됩니다.](https://docs-assets.developer.apple.com/published/05210844d773d099f3ddea68afb37de1/media-4264989%402x.png)",
+      "sourceHash": "4d20a11627212c623c34890ab7ba8fc092fe608cfb813141f14d790b34c71f92",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:apply-an-operation-to-the-subsampled-chrominance-channels:0024:0001",
+      "source": "Apply an Operation to the Subsampled Chrominance Channels",
+      "ko": "하위 샘플링된 크로마 채널에 연산 적용",
+      "sourceHash": "b6bca4506bb8d3909dabcb903ec89314961009946d07a4bd094b783ff374243e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:apply-an-operation-to-the-subsampled-chrominance-channels:0025:0001",
+      "source": "Although the two chrominance channels are the same size as the full-sized luminance channel, they only contain a quarter of the data.",
+      "ko": "두 크로마 채널은 전체 크기의 휘도 채널과 같은 크기이지만 데이터는 1/4만 포함합니다.",
+      "sourceHash": "08506989e352a9f179766215c650558a890ae41a4b95a2bf1828f84020546fd7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:apply-an-operation-to-the-subsampled-chrominance-channels:0025:0002",
+      "source": "If you’re applying an image-processing operation to the Cb and Cr channels, use the [`withUnsafeRegionOfInterest(_:_:)`](vimage/pixelbuffer/withunsaferegionofinterest(_:_:).md) method.",
+      "ko": "Cb 및 Cr 채널에 이미지 처리 연산을 적용하는 경우 [`withUnsafeRegionOfInterest(_:_:)`](vimage/pixelbuffer/withunsaferegionofinterest(_:_:).md) 메서드를 사용합니다.",
+      "sourceHash": "1fb75b2e7fa8c4b542c705187f5678de063a80000ad4d5ce1509ba658f86fc74",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:apply-an-operation-to-the-subsampled-chrominance-channels:0025:0003",
+      "source": "This ensures that you’re not processing unused pixels.",
+      "ko": "이렇게 하면 사용되지 않는 픽셀이 처리되지 않습니다.",
+      "sourceHash": "9a1d2d924089e7c449138c01efca2218c7241edc6e0350340d289e2e02e7bd3b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:apply-an-operation-to-the-subsampled-chrominance-channels:0025:0004",
+      "source": "The code below reduces the saturation of the image using the technique discussed in [`Adjusting saturation and applying tone mapping`](adjusting-saturation-and-applying-tone-mapping.md):",
+      "ko": "아래 코드는 [`Adjusting saturation and applying tone mapping`](adjusting-saturation-and-applying-tone-mapping.md)에서 다룬 방법을 사용해 이미지의 채도를 감소시킵니다.",
+      "sourceHash": "9af0433c265985eb8d794c4f3516739ef3e2b2ed8f5aa01ad7f8bb10b2846f24",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:apply-an-operation-to-the-subsampled-chrominance-channels:0026:0001",
+      "source": "```swift\nlet saturation = Float(0.25)\nlet preBias = -128\nlet divisor = 0x1000\nlet postBias = 128 * divisor\nlet factor = Int(saturation * Float(divisor))\n\n// Define a region of interest that's a quarter of the area of the\n// luminance channel.\nlet roi = CGRect(x: 0, y: 0,\n                 width: ypCbCr8PlanarBuffers[0].width / 2,\n                 height: ypCbCr8PlanarBuffers[0].height / 2)\n\n// Indices 1 and 2 refer to the Cb and Cr buffers, respectively.\nfor index in [1, 2] {\n    ypCbCr8PlanarBuffers[index].withUnsafeRegionOfInterest(roi) { buffer in\n        buffer.multiply(by: factor,\n                        divisor: divisor,\n                        preBias: preBias,\n                        postBias: postBias,\n                        destination: buffer)\n    }\n}\n```",
+      "ko": "```swift\nlet saturation = Float(0.25)\nlet preBias = -128\nlet divisor = 0x1000\nlet postBias = 128 * divisor\nlet factor = Int(saturation * Float(divisor))\n\n// Define a region of interest that's a quarter of the area of the\n// luminance channel.\nlet roi = CGRect(x: 0, y: 0,\n                 width: ypCbCr8PlanarBuffers[0].width / 2,\n                 height: ypCbCr8PlanarBuffers[0].height / 2)\n\n// Indices 1 and 2 refer to the Cb and Cr buffers, respectively.\nfor index in [1, 2] {\n    ypCbCr8PlanarBuffers[index].withUnsafeRegionOfInterest(roi) { buffer in\n        buffer.multiply(by: factor,\n                        divisor: divisor,\n                        preBias: preBias,\n                        postBias: postBias,\n                        destination: buffer)\n    }\n}\n```",
+      "sourceHash": "c32a8b1f2553ce121e9f9bf98fa51758f871554e84b65a5907f345a1b662af88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:apply-an-operation-to-the-subsampled-chrominance-channels:0027:0001",
+      "source": "For more information about limiting the effect of vImage operations to rectangular regions of interest, see [`Applying vImage operations to regions of interest`](applying-vimage-operations-to-regions-of-interest.md).",
+      "ko": "사각형 관심 영역에서만 vImage 연산을 제한하는 방법에 대한 자세한 내용은 [`Applying vImage operations to regions of interest`](applying-vimage-operations-to-regions-of-interest.md)를 참고하십시오.",
+      "sourceHash": "1a5f15d334cc78edbe40c5fcb32377721bef9ac66ce86e156f0eb9f7f0ba9b44",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:perform-the-core-video-to-core-graphics-conversion:0028:0001",
+      "source": "Perform the Core Video to Core Graphics Conversion",
+      "ko": "Core Video에서 Core Graphics로의 변환 수행",
+      "sourceHash": "5757bf03f8c01c01be6f94a833db2823225e620d349c9eccfc844bba64ab99ce",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-video-to-core-graphics-conversion:0029:0001",
+      "source": "To convert the YpCbCr buffers to an RGB buffer, create a converter with the Core Video image format as the source and the Core Graphics image format as the destination.",
+      "ko": "YpCbCr 버퍼를 RGB 버퍼로 변환하려면 소스가 Core Video 이미지 형식이고 대상은 Core Graphics 이미지 형식인 컨버터를 생성합니다.",
+      "sourceHash": "8a87462105e83c2983fe8a11f9e006e62ce2fbf7f0d26947d6b29614113e2d11",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-video-to-core-graphics-conversion:0029:0002",
+      "source": "Call the [`convert(from:to:)`](vimageconverter/convert(from:to:)-587gc.md) method as above, but specify the `ypCbCr8PlanarBuffers` array as the source and an 8-bit-per-channel interleaved buffer as the destination.",
+      "ko": "위와 동일하게 [`convert(from:to:)`](vimageconverter/convert(from:to:)-587gc.md) 메서드를 호출하되, 소스는 `ypCbCr8PlanarBuffers` 배열로, 대상은 채널당 8비트 인터리브 버퍼로 지정합니다.",
+      "sourceHash": "5b8dbba1f1a22c6f2e914aca06fd2d24e1d478cff8ab3d8818bd877a0261e7b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:perform-the-core-video-to-core-graphics-conversion:0030:0001",
+      "source": "```swift\nlet cvToCgConverter = try vImageConverter.make(sourceFormat: cvImageFormat,\n                                               destinationFormat: cgImageFormat)\n\nlet rgbDestinationBuffer = vImage.PixelBuffer<vImage.Interleaved8x3>(\n    size: ypCbCr8PlanarBuffers.first!.size)\n\ntry cvToCgConverter.convert(from: ypCbCr8PlanarBuffers,\n                            to: [rgbDestinationBuffer])\n```",
+      "ko": "```swift\nlet cvToCgConverter = try vImageConverter.make(sourceFormat: cvImageFormat,\n                                               destinationFormat: cgImageFormat)\n\nlet rgbDestinationBuffer = vImage.PixelBuffer<vImage.Interleaved8x3>(\n    size: ypCbCr8PlanarBuffers.first!.size)\n\ntry cvToCgConverter.convert(from: ypCbCr8PlanarBuffers,\n                            to: [rgbDestinationBuffer])\n```",
+      "sourceHash": "daea84356c44d07313a1c1a48442fd65dad67109eefde9b4408c5caa67f735bb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-video-to-core-graphics-conversion:0031:0001",
+      "source": "On return, `rgbDestinationBuffer` contains the desaturated version (right) of the original image (left).",
+      "ko": "반환되면 `rgbDestinationBuffer`에 원본 이미지(왼쪽)의 채도 감소 버전(오른쪽)이 들어 있습니다.",
+      "sourceHash": "83363c8b069c36cb07881d0c960eda7b2d9444783f8db40e30042ec8fbd74af4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:perform-the-core-video-to-core-graphics-conversion:0032:0001",
+      "source": "![A side-by-side comparison of the original photograph of a flower and the desaturated version of the same photograph.](https://docs-assets.developer.apple.com/published/1df1b26d502a07d2261f0ac6c69daf84/media-4264990%402x.png)",
+      "ko": "![꽃의 원본 사진과 동일한 사진의 채도 감소 버전을 나란히 비교한 이미지입니다.](https://docs-assets.developer.apple.com/published/1df1b26d502a07d2261f0ac6c69daf84/media-4264990%402x.png)",
+      "sourceHash": "5ef0180f02791bba0c4a89de0f215a878ce74ae609b7a8fe02d5de0c4f7c48a2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0033:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[Building a basic image conversion workflow](building-a-basic-image-conversion-workflow.md)",
+      "ko": "[Building a basic image conversion workflow](building-a-basic-image-conversion-workflow.md)",
+      "sourceHash": "b6991695baef6844dc548d50bc83a552c6602955d874ffcbb035473e6766f342",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Learn the fundamentals of the convert-any-to-any function by converting a CMYK image to an RGB image.",
+      "ko": "CMYK 이미지를 RGB 이미지로 변환하여 any-to-any 함수의 기본 동작을 익힐 수 있습니다.",
+      "sourceHash": "52ca10700b0c9d9fa29fa7ddfe47156fa00f083925b1e8d6efec5f3915a55c7e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[Functions that perform any-to-any conversion](functions-that-perform-any-to-any-conversion.md)",
+      "ko": "[Functions that perform any-to-any conversion](functions-that-perform-any-to-any-conversion.md)",
+      "sourceHash": "6ce6c9531bc5096a1681f5e0b11e1c6ffd0ad47eaa819227e99edf8a2598429c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Convert between Core Video or Core Graphics image data of arbitrary color spaces and bit depths.",
+      "ko": "임의의 색 공간과 비트 심도를 가진 Core Video 또는 Core Graphics 이미지 데이터 간을 변환합니다.",
+      "sourceHash": "a749d87dec76f03a9e82c8e4065ca702e263ddaf1cbbf208e8e1c15de39af7b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0038:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/converting-chroma-subsampled-images)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/converting-chroma-subsampled-images)*",
+      "sourceHash": "a1fbeb2e90de5b0ead6bfb6b465e8655e9ac588f5847f219f7e53d0e5733dbd8",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "docId": "documentation/AVKit/avplayerview/canbegintrimming.md",
+  "title": "canBeginTrimming",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avkit/avplayerview/canbegintrimming",
+  "segments": [
+    {
+      "id": "seg:heading:canbegintrimming:0000:0001",
+      "source": "canBeginTrimming",
+      "ko": "canBeginTrimming",
+      "sourceHash": "64860069cf4757af5ded19ef170fdfc53a0df6c9362525e60ecd4e225e83ef45",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:canbegintrimming:0001:0001",
+      "source": "**Framework**: AVKit **Kind**: property",
+      "ko": "**Framework**: AVKit **Kind**: property",
+      "sourceHash": "83a3186396f39e44fbb37509eb46c2da43361a841acd9dd1def3e7bfe61fd8e4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:canbegintrimming:0002:0001",
+      "source": "A Boolean value that indicates whether the player view can begin trimming.",
+      "ko": "A Boolean value that indicates whether the player view can begin trimming.",
+      "sourceHash": "32215dd60e6457988844e609da8d4396ccdc061c12df1ce250e6cc135767b74b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:canbegintrimming:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:canbegintrimming:0004:0001",
+      "source": "macOS 10.9+",
+      "ko": "macOS 10.9+",
+      "sourceHash": "ea7fd68a1169efd58a43f910e0a50ba2367a86a9bb7ffee8a512f04ee4f12758",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar canBeginTrimming: Bool { get }\n```",
+      "ko": "```swift\nvar canBeginTrimming: Bool { get }\n```",
+      "sourceHash": "629298efc1bc69b0140c1f98ee5c7a10b761da5e2ddfa57779e7b906217c7009",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Implementing Trimming in a macOS Player](implementing-trimming-in-a-macos-player.md)",
+      "ko": "[Implementing Trimming in a macOS Player](implementing-trimming-in-a-macos-player.md)",
+      "sourceHash": "002d0b15c6ee94c6a0642a6acdfde7484eaa74f1e9884289f665db1296f89425",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Before calling [`beginTrimming(completionHandler:)`](avplayerview/begintrimming(completionhandler:).md), check the value of this property to determine whether the player view and current media support trimming.",
+      "ko": "Before calling [`beginTrimming(completionHandler:)`](avplayerview/begintrimming(completionhandler:).md), check the value of this property to determine whether the player view and current media support trimming.",
+      "sourceHash": "420b821b2621427b7f5f1d5c0fa7f2f8010e10e6b86416d5c367fe9dbfc3b655",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "This property value is `false` if the current controls style doesn’t support trimming, the media is content protected, or when playing HTTP Live Streaming media.",
+      "ko": "Auto exposure defaults include [`minFrameRate`](avframeraterange/minframerate.md), [`maxFrameRate`](avframeraterange/maxframerate.md), and [`maxExposureDuration`](avcapturedevice/format/maxexposureduration.md).",
+      "sourceHash": "75ca320197d7a03dae3a4cb9f9d3912ab355ac60e497385fa1e7d7a6c27ff53a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "If you’re presenting a menu item to initiate trimming, a good place to perform this check is in the [`validateUserInterfaceItem(_:)`](https://developer.apple.com/documentation/AppKit/NSDocument/validateUserInterfaceItem(_:)) method of [`NSDocument`](https://developer.apple.com/documentation/AppKit/NSDocument):",
+      "ko": "If you’re presenting a menu item to initiate trimming, a good place to perform this check is in the [`validateUserInterfaceItem(_:)`](https://developer.apple.com/documentation/AppKit/NSDocument/validateUserInterfaceItem(_:)) method of [`NSDocument`](https://developer.apple.com/documentation/AppKit/NSDocument):",
+      "sourceHash": "3c4fde8300f90cfe75e4b4049aea51b71aef964b74def0b2005950a525eff7e7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:discussion:0012:0001",
+      "source": "```swift\noverride func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) -> Bool {\n    if item.action == #selector(beginTrimming) {\n        return playerView.canBeginTrimming\n    }\n    return super.validateUserInterfaceItem(item)\n}\n```",
+      "ko": "```swift\noverride func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) -> Bool {\n    if item.action == #selector(beginTrimming) {\n        return playerView.canBeginTrimming\n    }\n    return super.validateUserInterfaceItem(item)\n}\n```",
+      "sourceHash": "eb180b500c1ba2a0b0a77a16788d82e36465f6ad999784d0b39543e41a438aee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func beginTrimming(completionHandler: ((AVPlayerViewTrimResult) -> Void)?)](avplayerview/begintrimming(completionhandler:).md)",
+      "ko": "[func beginTrimming(completionHandler: ((AVPlayerViewTrimResult) -> Void)?)](avplayerview/begintrimming(completionhandler:).md)",
+      "sourceHash": "326b522d76bb18c078d943ef1b063a0df43f66136621099ad30dcdb3fc906488",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Puts the player view into trimming mode.",
+      "ko": "Puts the player view into trimming mode.",
+      "sourceHash": "93488e5aaa4a29386c3b67122068c41cc01644d4e0cd3f3dbc5eb4641e71e8e9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[enum AVPlayerViewTrimResult](avplayerviewtrimresult.md)",
+      "ko": "[enum AVPlayerViewTrimResult](avplayerviewtrimresult.md)",
+      "sourceHash": "27ab0a89eeed4d96a0ccb87c2ccb954cbbceb8b25027e2aa8210f226ed6e7146",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Constants that specify an action a user takes when trimming media in a player view.",
+      "ko": "Constants that specify an action a user takes when trimming media in a player view.",
+      "sourceHash": "e35ce093ec72848a2c06505efc428bc0c1f2365050e4f2c25f1fa9e0844f8907",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0018:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avplayerview/canbegintrimming)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avkit/avplayerview/canbegintrimming)*",
+      "sourceHash": "c43dafd65fbb21e8e2a11af0c5de8c906923a8d1f5588f3a760a8ee67d4d52ce",
+      "status": "preserved"
+    }
+  ]
+}

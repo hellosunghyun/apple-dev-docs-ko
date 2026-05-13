@@ -1,0 +1,1751 @@
+{
+  "docId": "documentation/AVFoundation/avplayer.md",
+  "title": "AVPlayer",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avplayer",
+  "segments": [
+    {
+      "id": "seg:heading:avplayer:0000:0001",
+      "source": "AVPlayer",
+      "ko": "AVPlayer",
+      "sourceHash": "d8ff4f1d578edbffb8b5791e7571c86c8e02d0db6265440e1f07ed9bee71e0f2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avplayer:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: class",
+      "ko": "**Framework**: AVFoundation **Kind**: class",
+      "sourceHash": "cd6816fffb1c70f3882206af193f9e3b303fe8bdf0932f60f735b4e718183218",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avplayer:0002:0001",
+      "source": "An object that provides the interface to control the player’s transport behavior.",
+      "ko": "플레이어의 재생 제어 동작을 관리하는 인터페이스를 제공하는 객체입니다.",
+      "sourceHash": "4c5f8c17a485e1ad01146c2d972756bdb59e84ae5ceb83dce74620487c83481b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:avplayer:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayer:0004:0001",
+      "source": "iOS 4.0+",
+      "ko": "iOS 4.0+",
+      "sourceHash": "0c0ed66d9f4133c5a709449f69be4759ac3625b24734b8390d2f7e23b33c3545",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayer:0004:0002",
+      "source": "iPadOS 4.0+",
+      "ko": "iPadOS 4.0+",
+      "sourceHash": "dfe042d2e3f40a7e917ced53f052a0d5f5ba8d69dfa62a3b59fb59de8ef49851",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayer:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayer:0004:0004",
+      "source": "macOS 10.7+",
+      "ko": "macOS 10.7+",
+      "sourceHash": "85cabdac151763141045e57f979fd5a261d777d4b8a0a8410593e38414888a24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayer:0004:0005",
+      "source": "tvOS 9.0+",
+      "ko": "tvOS 9.0+",
+      "sourceHash": "f18d834db812002ea0830ffe3beefc781889d33feaa1665e3f3ab431dba36af3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayer:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avplayer:0004:0007",
+      "source": "watchOS 1.0+",
+      "ko": "watchOS 1.0+",
+      "sourceHash": "2dbee682371896bee6965d157efc729a43696cec8b6451157482f77264ffbb65",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\n@MainActor\nclass AVPlayer\n```",
+      "ko": "```swift\n@MainActor\nclass AVPlayer\n```",
+      "sourceHash": "ac95e6061950b65727aa46327fab17c8569e69e290f82611bce2361dd9256df1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Controlling the transport behavior of a player](controlling-the-transport-behavior-of-a-player.md)",
+      "ko": "[Controlling the transport behavior of a player](controlling-the-transport-behavior-of-a-player.md)",
+      "sourceHash": "966055590ff41f788cf079be3ad9c171ca46ddc30067a35eb35b9f4e969294d7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:mentions:0008:0002",
+      "source": "[Observing playback state in SwiftUI](observing-playback-state-in-swiftui.md)",
+      "ko": "[Observing playback state in SwiftUI](observing-playback-state-in-swiftui.md)",
+      "sourceHash": "8d69956c6e935a22fec53350b139c35953fd2ef41ffaf68ff472221bc52a0993",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:mentions:0008:0003",
+      "source": "[Supporting AirPlay in your app](supporting-airplay-in-your-app.md)",
+      "ko": "[Supporting AirPlay in your app](supporting-airplay-in-your-app.md)",
+      "sourceHash": "34318ab4053226940c9fe574165a98e33b6e7fa488d85963e459a54622b3de0e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:mentions:0008:0004",
+      "source": "[Implementing simple enhanced buffering for your content](implementing-simple-enhanced-buffering-for-your-content.md)",
+      "ko": "[Implementing simple enhanced buffering for your content](implementing-simple-enhanced-buffering-for-your-content.md)",
+      "sourceHash": "428128d1f8a90f61d41d9de268cadfa779829643f60bff2cc845d73da7020029",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:mentions:0008:0005",
+      "source": "[Monitoring playback progress in your app](monitoring-playback-progress-in-your-app.md)",
+      "ko": "[Monitoring playback progress in your app](monitoring-playback-progress-in-your-app.md)",
+      "sourceHash": "9dbd964239d02e103fab1625e6e30e3c35202388dd03daddbb5a38a16e183052",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:mentions:0008:0006",
+      "source": "[Presenting chapter markers](presenting-chapter-markers.md)",
+      "ko": "[Presenting chapter markers](presenting-chapter-markers.md)",
+      "sourceHash": "217dbda68532d475bb53dd211fe22790daee865688cedc30d45ea0d7d3b4ddcb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:mentions:0008:0007",
+      "source": "[Selecting subtitles and alternative audio tracks](selecting-subtitles-and-alternative-audio-tracks.md)",
+      "ko": "[Selecting subtitles and alternative audio tracks](selecting-subtitles-and-alternative-audio-tracks.md)",
+      "sourceHash": "d65dbc328b549d6d1a1ba46e8d078cfd91c8c3121c5ac93dbc1c342e329b91e2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:overview:0009:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0001",
+      "source": "A player is a controller object that manages the playback and timing of a media asset.",
+      "ko": "플레이어는 미디어 에셋의 재생과 타이밍을 관리하는 컨트롤러 객체입니다.",
+      "sourceHash": "1aab0b5041dc7a8f35fee357b017bd862403509a4c4d4089d92ba12c2ea02c6f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0010:0002",
+      "source": "Use an instance of [`AVPlayer`](avplayer.md) to play local and remote file-based media, such as QuickTime movies and MP3 audio files, as well as audiovisual media served using HTTP Live Streaming.",
+      "ko": "[`AVPlayer`](avplayer.md) 인스턴스를 사용해 QuickTime 영화 및 MP3 오디오 파일과 같은 로컬/원격 파일 기반 미디어와 HTTP Live Streaming을 통해 제공되는 오디오/비디오 미디어를 재생할 수 있습니다.",
+      "sourceHash": "36f232615176c8ea2c32e4440b35616f4f7dd5c6cdac824e44a3df67633f6539",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0001",
+      "source": "Use a player object to play a single media asset.",
+      "ko": "단일 미디어 에셋을 재생하려면 플레이어 객체를 사용합니다.",
+      "sourceHash": "74b05e12b11319302ecd53a9eca24ebd232dc9f597ab44a9a9327cdcc688a024",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0002",
+      "source": "You can reuse the player instance to play additional media assets using its [`replaceCurrentItem(with:)`](avplayer/replacecurrentitem(with:).md) method, but it manages the playback of only a single media asset at a time.",
+      "ko": "[`replaceCurrentItem(with:)`](avplayer/replacecurrentitem(with:).md) 메서드를 사용해 플레이어 인스턴스를 재사용해 추가 미디어 에셋을 재생할 수 있지만, 한 번에 단일 미디어 에셋의 재생만 관리합니다.",
+      "sourceHash": "a97bf4b51c0ae8cb2e07aa44555e8f7fd877c9156159a9362c1285fdce29bf59",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0011:0003",
+      "source": "The framework also provides a subclass called [`AVQueuePlayer`](avqueueplayer.md) that you can use to manage the playback of a queue of media assets.",
+      "ko": "또한 프레임워크에서는 미디어 에셋 큐의 재생을 관리할 수 있는 하위 클래스인 [`AVQueuePlayer`](avqueueplayer.md)를 제공합니다.",
+      "sourceHash": "32f79dcfb8b8c42c93c8bcaaa1a7776d5cdabb1a0071d251426e66fbaac73512",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0012:0001",
+      "source": "You use an [`AVPlayer`](avplayer.md) to play media assets, which AVFoundation represents using the [`AVAsset`](avasset.md) class.",
+      "ko": "미디어 에셋을 재생하려면 [`AVPlayer`](avplayer.md)를 사용하며, AVFoundation은 이를 [`AVAsset`](avasset.md) 클래스로 표현합니다.",
+      "sourceHash": "02485bd685bbcfe4928b762d50a30c47e19e196fc7c3c2af6a7a0aa047bd28d4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0012:0002",
+      "source": "[`AVAsset`](avasset.md) only models the *static* aspects of the media, such as its duration or creation date, and on its own, isn’t suitable for playback with an [`AVPlayer`](avplayer.md).",
+      "ko": "[`AVAsset`](avasset.md)는 미디어의 기간이나 생성일 같은 *정적* 측면만 모델링하므로, 단독으로는 [`AVPlayer`](avplayer.md)로 재생하기에 적합하지 않습니다.",
+      "sourceHash": "8528ad0425223461547a72426cf3c7dda07f58ad168b07670e7fd492f72875b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0012:0003",
+      "source": "To play an asset, you create an instance of its *dynamic* counterpart found in [`AVPlayerItem`](avplayeritem.md).",
+      "ko": "에셋을 재생하려면 [`AVPlayerItem`](avplayeritem.md)에 정의된 해당 동적 대응 항목의 인스턴스를 생성해야 합니다.",
+      "sourceHash": "3ae8916de7dfdf49f33955757f1135333733d464a239ba728924be58c284fef1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:overview:0012:0004",
+      "source": "This object models the timing and presentation state of an asset played by an instance of [`AVPlayer`](avplayer.md).",
+      "ko": "This object models the timing and presentation state of an asset played by an instance of [`AVPlayer`](avplayer.md).",
+      "sourceHash": "86b571b27e86039a1343f908105c1bf9212636ec301509d39ab69beb8d4be58d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0012:0005",
+      "source": "See the [`AVPlayerItem`](avplayeritem.md) reference for more details.",
+      "ko": "See the [`AVPlayerItem`](avplayeritem.md) reference for more details.",
+      "sourceHash": "87945c0518d009cd6290bd2b33605b67d08587ec28baef67fc12d84a86f01158",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0013:0001",
+      "source": "[`AVPlayer`](avplayer.md) is a dynamic object whose state continuously changes.",
+      "ko": "[`AVPlayer`](avplayer.md) is a dynamic object whose state continuously changes.",
+      "sourceHash": "766ede83e1c18b8a0ed78b7f3e6abcaa153c961ec129c85a01d563eb1a79c020",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0013:0002",
+      "source": "There are two approaches you can use to observe a player’s state:",
+      "ko": "There are two approaches you can use to observe a player’s state:",
+      "sourceHash": "579755b16aef5208117a8f4fd939f6fd2d6e975c414063b3a80a856a070e5df5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:overview:0014:0001",
+      "source": "**General State Observations:** You can use key-value observing (KVO) to observe state changes to many of the player’s dynamic properties, such as its [`currentItem`](avplayer/currentitem.md) or its playback [`rate`](avplayer/rate.md).",
+      "ko": "**General State Observations:** You can use key-value observing (KVO) to observe state changes to many of the player’s dynamic properties, such as its [`currentItem`](avplayer/currentitem.md) or its playback [`rate`](avplayer/rate.md).",
+      "sourceHash": "b2de6cb606093f71663c2ab8ded5de4b42ad50a885790fd0205b7fbf2c262982",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:overview:0014:0002",
+      "source": "**Timed State Observations:** KVO works well for general state observations, but isn’t intended for observing continuously changing state like the player’s time. [`AVPlayer`](avplayer.md) provides two methods to observe time changes:",
+      "ko": "**Timed State Observations:** KVO works well for general state observations, but isn’t intended for observing continuously changing state like the player’s time. [`AVPlayer`](avplayer.md) provides two methods to observe time changes:",
+      "sourceHash": "bbfc5c3b7a22d858210e478830ec1fafae4641ff20acd2bcb7edaa2ffe797d05",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:overview:0014:0003",
+      "source": "[`addPeriodicTimeObserver(forInterval:queue:using:)`](avplayer/addperiodictimeobserver(forinterval:queue:using:).md)",
+      "ko": "[`addPeriodicTimeObserver(forInterval:queue:using:)`](avplayer/addperiodictimeobserver(forinterval:queue:using:).md)",
+      "sourceHash": "929942738b384cac21a278598f7a7fbd3f846205ddb90730dad05c49748b5d20",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:overview:0014:0004",
+      "source": "[`addBoundaryTimeObserver(forTimes:queue:using:)`](avplayer/addboundarytimeobserver(fortimes:queue:using:).md)",
+      "ko": "[`addBoundaryTimeObserver(forTimes:queue:using:)`](avplayer/addboundarytimeobserver(fortimes:queue:using:).md)",
+      "sourceHash": "c512904b1e4042c620ac92c492db5c099e4b6062e594327255a38ea31654b5d3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0015:0001",
+      "source": "These methods let you observe time changes either periodically or by boundary, respectively.",
+      "ko": "These methods let you observe time changes either periodically or by boundary, respectively.",
+      "sourceHash": "8bf236da79069820254d9bb8c3d74b62a5484bad248d6f3b88d3a088aedd9b30",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0015:0002",
+      "source": "As changes occur, invoke the callback block or closure you supply to these methods to give you the opportunity to take some action such as updating the state of your player’s user interface.",
+      "ko": "As changes occur, invoke the callback block or closure you supply to these methods to give you the opportunity to take some action such as updating the state of your player’s user interface.",
+      "sourceHash": "06165ecc33ac76705774e0f43e5efb6558bcd4868a94b3d616888baefc086fd1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0016:0001",
+      "source": "[`AVPlayer`](avplayer.md) and [`AVPlayerItem`](avplayeritem.md) are nonvisual objects, meaning that on their own they’re unable to present an asset’s video onscreen.",
+      "ko": "[`AVPlayer`](avplayer.md) and [`AVPlayerItem`](avplayeritem.md) are nonvisual objects, meaning that on their own they’re unable to present an asset’s video onscreen.",
+      "sourceHash": "3369a649ccfc9e728e8ee7e3ccd781cb3b26ffc03e4cae9919edb77f8c03d181",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0016:0002",
+      "source": "There are two primary approaches you use to present your video content onscreen:",
+      "ko": "There are two primary approaches you use to present your video content onscreen:",
+      "sourceHash": "0fe69df5eb5c5eecb2beac32172e8d57ade73d0697611dab1693900521876d27",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:overview:0017:0001",
+      "source": "**AVKit:** The best way to present your video content is with the AVKit framework’s [`AVPlayerViewController`](https://developer.apple.com/documentation/AVKit/AVPlayerViewController) class in iOS and tvOS, or the [`AVPlayerView`](https://developer.apple.com/documentation/AVKit/AVPlayerView) class in macOS. These classes present the video content, along with playback controls and other media features giving you a full-featured playback experience.",
+      "ko": "**AVKit:** The best way to present your video content is with the AVKit framework’s [`AVPlayerViewController`](https://developer.apple.com/documentation/AVKit/AVPlayerViewController) class in iOS and tvOS, or the [`AVPlayerView`](https://developer.apple.com/documentation/AVKit/AVPlayerView) class in macOS. These classes present the video content, along with playback controls and other media features giving you a full-featured playback experience.",
+      "sourceHash": "1de46529fb4423b8f564ec286ea80a9271ce938565ff7ba53369423d5451ac1f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:overview:0017:0002",
+      "source": "**AVPlayerLayer:** When building a custom interface for your player, use [`AVPlayerLayer`](avplayerlayer.md). You can set this layer a view’s backing layer or add it directly to the layer hierarchy. Unlike [`AVPlayerView`](https://developer.apple.com/documentation/AVKit/AVPlayerView) and [`AVPlayerViewController`](https://developer.apple.com/documentation/AVKit/AVPlayerViewController), a player layer doesn’t present any playback controls—it only presents the visual content onscreen. It’s up to you to build the playback transport controls to play, pause, and seek through the media.",
+      "ko": "**AVPlayerLayer:** When building a custom interface for your player, use [`AVPlayerLayer`](avplayerlayer.md). You can set this layer a view’s backing layer or add it directly to the layer hierarchy. Unlike [`AVPlayerView`](https://developer.apple.com/documentation/AVKit/AVPlayerView) and [`AVPlayerViewController`](https://developer.apple.com/documentation/AVKit/AVPlayerViewController), a player layer doesn’t present any playback controls—it only presents the visual content onscreen. It’s up to you to build the playback transport controls to play, pause, and seek through the media.",
+      "sourceHash": "f75a439789d33034043c1cc8ee994ea621159c34b5eb398b1997d41bc0168539",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0018:0001",
+      "source": "Alongside the visual content presented with AVKit or [`AVPlayerLayer`](avplayerlayer.md), you can also present animated content synchronized with the player’s timing using [`AVSynchronizedLayer`](avsynchronizedlayer.md).",
+      "ko": "Alongside the visual content presented with AVKit or [`AVPlayerLayer`](avplayerlayer.md), you can also present animated content synchronized with the player’s timing using [`AVSynchronizedLayer`](avsynchronizedlayer.md).",
+      "sourceHash": "f6a50b8e21b49bf668f5acd7a4a611d1c0186329d97594103a034adbf21214fc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0018:0002",
+      "source": "Use a synchronized layer pass along player timing to its layer subtree.",
+      "ko": "Use a synchronized layer pass along player timing to its layer subtree.",
+      "sourceHash": "82fd5e41dff34c62b14a20d15a67806106eac026088c78ff374672a01583567f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0018:0003",
+      "source": "You can use [`AVSynchronizedLayer`](avsynchronizedlayer.md) to build custom effects in Core Animation, such as animated lower thirds or video transitions, and have them play in sync with the timing of the player’s current [`AVPlayerItem`](avplayeritem.md).",
+      "ko": "You can use [`AVSynchronizedLayer`](avsynchronizedlayer.md) to build custom effects in Core Animation, such as animated lower thirds or video transitions, and have them play in sync with the timing of the player’s current [`AVPlayerItem`](avplayeritem.md).",
+      "sourceHash": "50a825d6bd703c7815c2114f42f034757a6793e8e67c05e6a2c7772b30681f7f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:topics:0019:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-player:0020:0001",
+      "source": "Creating a player",
+      "ko": "Creating a player",
+      "sourceHash": "a56d7ade3deb89cbccd5acb202d09cf0cddc2865e7a192f4cc11576461fc472d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-player:0021:0001",
+      "source": "[init(url: URL)](avplayer/init(url:)-87cxx.md)",
+      "ko": "[init(url: URL)](avplayer/init(url:)-87cxx.md)",
+      "sourceHash": "2da9d6ef0e79be27799f8adda678b661c9097ca79deb14a1eebedbbd409293cc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-a-player:0022:0001",
+      "source": "Creates a new player to play a single audiovisual resource referenced by a given URL.",
+      "ko": "Creates a new player to play a single audiovisual resource referenced by a given URL.",
+      "sourceHash": "cb28613eb57e67bed386a41f4b020cb56e50bacddc7f4012ab3eaca298039772",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-player:0023:0001",
+      "source": "[init(playerItem: AVPlayerItem?)](avplayer/init(playeritem:).md)",
+      "ko": "[init(playerItem: AVPlayerItem?)](avplayer/init(playeritem:).md)",
+      "sourceHash": "3aa091099b6ffb0477e7ccf57aa1fb04b061135a5f4fe1f5535a0aaee49bea6c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-a-player:0024:0001",
+      "source": "Creates a new player to play the specified player item.",
+      "ko": "Creates a new player to play the specified player item.",
+      "sourceHash": "f3e45efca7716efe3d9c24b1b6b83fa2e6468473ae6c12ddbd47702bcc2c3e24",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-player:0025:0001",
+      "source": "[init()](avplayer/init.md)",
+      "ko": "[init()](avplayer/init.md)",
+      "sourceHash": "0b6476fd8f10141b2b184784058701b320b104977846804b04de6f95199289b0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:creating-a-player:0026:0001",
+      "source": "Creates a player object.",
+      "ko": "Creates a player object.",
+      "sourceHash": "09709411e807797e9488d90f53b7de5af34a8746e036d541195d749d3777e133",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:managing-the-player-item:0027:0001",
+      "source": "Managing the player item",
+      "ko": "Managing the player item",
+      "sourceHash": "e8fe72b9df1dfa7c80165233e62cc14ee206e704d6a249d57affcc59b2e1f868",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:managing-the-player-item:0028:0001",
+      "source": "[var currentItem: AVPlayerItem?](avplayer/currentitem.md)",
+      "ko": "[var currentItem: AVPlayerItem?](avplayer/currentitem.md)",
+      "sourceHash": "6ec35f015db4941861f262dc708bfb49bbcc962483654e2e2e1113bbf44163f0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-the-player-item:0029:0001",
+      "source": "The item for which the player is currently controlling playback.",
+      "ko": "The item for which the player is currently controlling playback.",
+      "sourceHash": "9669eac11cef196414e8f7c6317db0ca22a3df3b2dd676c390ffb55cf32a2671",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:managing-the-player-item:0030:0001",
+      "source": "[func replaceCurrentItem(with: AVPlayerItem?)](avplayer/replacecurrentitem(with:).md)",
+      "ko": "[func replaceCurrentItem(with: AVPlayerItem?)](avplayer/replacecurrentitem(with:).md)",
+      "sourceHash": "b358807aa308b1fd4b1eb2ecf1f67efe04fa323c27994d678b4e64ce4ac2b8db",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:managing-the-player-item:0031:0001",
+      "source": "Replaces the current item with a new item.",
+      "ko": "Replaces the current item with a new item.",
+      "sourceHash": "64ca4689666dcbba73e6b6b8f1ab706a165745aeb859d6c780beef4ef5c9840d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:determining-player-readiness:0032:0001",
+      "source": "Determining player readiness",
+      "ko": "Determining player readiness",
+      "sourceHash": "628ea6007f461e23c3f580e9b3fc8c7dbc18808395d929af0e05d806292fe485",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:determining-player-readiness:0033:0001",
+      "source": "[var status: AVPlayer.Status](avplayer/status-swift.property.md)",
+      "ko": "[var status: AVPlayer.Status](avplayer/status-swift.property.md)",
+      "sourceHash": "6faf0d08df8d2c03d8fdd89df8b03e01b0f5b290655f8cf0ac79e2143bba2d46",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:determining-player-readiness:0034:0001",
+      "source": "A value that indicates the readiness of a player object for playback.",
+      "ko": "A value that indicates the readiness of a player object for playback.",
+      "sourceHash": "a67f4f0c3e8dd901861438dd3ea319f2aed201addcf7c4b406dc185c80232c95",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:determining-player-readiness:0035:0001",
+      "source": "[AVPlayer.Status](avplayer/status-swift.enum.md)",
+      "ko": "[AVPlayer.Status](avplayer/status-swift.enum.md)",
+      "sourceHash": "f2a4a2a9da5cb49353f34044a190e1b0829a159bc33577ca7df9eab9ebde1370",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:determining-player-readiness:0036:0001",
+      "source": "Status values that indicate whether a player can successfully play media.",
+      "ko": "Status values that indicate whether a player can successfully play media.",
+      "sourceHash": "e18b5b448dd7ba1a78ee534bca2df2ae14310108a0ed321be9e0ad5de7307ac0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:determining-player-readiness:0037:0001",
+      "source": "[var error: (any Error)?](avplayer/error.md)",
+      "ko": "[var error: (any Error)?](avplayer/error.md)",
+      "sourceHash": "3dbde8168c94a32e6e712adc03e7ad047c400d3ccaa84df7724d41e513521a8f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:determining-player-readiness:0038:0001",
+      "source": "An error that caused a failure.",
+      "ko": "An error that caused a failure.",
+      "sourceHash": "035634518206538c62732713d6135a6b8a18c6d2f4a52694477cd9d4b1a985e0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:controlling-playback:0039:0001",
+      "source": "Controlling playback",
+      "ko": "Controlling playback",
+      "sourceHash": "7b54237c5ed87454d27cb360706fdad48465ee7042ef84915c333793288cc893",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:controlling-playback:0040:0001",
+      "source": "[var defaultRate: Float](avplayer/defaultrate.md)",
+      "ko": "[var defaultRate: Float](avplayer/defaultrate.md)",
+      "sourceHash": "61b60f6df5059507d4848f959afa6a983338c9624390823918d8ff159839e203",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:controlling-playback:0041:0001",
+      "source": "A default rate at which to begin playback.",
+      "ko": "A default rate at which to begin playback.",
+      "sourceHash": "51da62e4581d31172da609e13224e59b1ce30e291808ea51ccc3f111f143ff9a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:controlling-playback:0042:0001",
+      "source": "[func play()](avplayer/play.md)",
+      "ko": "[func play()](avplayer/play.md)",
+      "sourceHash": "058038c053a3c30e46aeb53202bdd19b31e7cdee5222f6c2c9bc91df2b4bc0dc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:controlling-playback:0043:0001",
+      "source": "Begins playback of the current item.",
+      "ko": "Begins playback of the current item.",
+      "sourceHash": "dd631e23842f564faf5f645bdbdc4e904157e8ca1cd0f0687354697559442401",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:controlling-playback:0044:0001",
+      "source": "[func pause()](avplayer/pause.md)",
+      "ko": "[func pause()](avplayer/pause.md)",
+      "sourceHash": "4fbe24d65caf510e382fc9742da4de34545326d16f738654eb3630619404dcb0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:controlling-playback:0045:0001",
+      "source": "Pauses playback of the current item.",
+      "ko": "Pauses playback of the current item.",
+      "sourceHash": "6d444cd07fc476d80f27780b48f66643f197fde9a3b472c7b2f86afbd17dd3d8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:controlling-playback:0046:0001",
+      "source": "[var rate: Float](avplayer/rate.md)",
+      "ko": "[var rate: Float](avplayer/rate.md)",
+      "sourceHash": "845c9b78d1ce56a978a500a3a7652c0dcb95650e70bd84dd8127aba99f9df7e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:controlling-playback:0047:0001",
+      "source": "The current playback rate.",
+      "ko": "The current playback rate.",
+      "sourceHash": "dbf5427386872a7497888c7757661b4fc5f9a4ee4ec1a8930b52bc00a47abe55",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:controlling-playback:0048:0001",
+      "source": "[class let rateDidChangeNotification: NSNotification.Name](avplayer/ratedidchangenotification.md)",
+      "ko": "[class let rateDidChangeNotification: NSNotification.Name](avplayer/ratedidchangenotification.md)",
+      "sourceHash": "5da7c294b99d478ba39d16f77a2c025f02769fa285faaeb6e59399245babdeba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:controlling-playback:0049:0001",
+      "source": "A notification that a player posts when its rate changes.",
+      "ko": "A notification that a player posts when its rate changes.",
+      "sourceHash": "d7c11c31b9d661a5ea07328caaba8ae52736ad5ea9566666dfb3c6bf32dcd1c5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:observing-playback-time:0050:0001",
+      "source": "Observing playback time",
+      "ko": "Observing playback time",
+      "sourceHash": "82850633a87429f51e14fcb9062aeb26bc5caa26afd751680643cdd86837bf1c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:observing-playback-time:0051:0001",
+      "source": "[func currentTime() -> CMTime](avplayer/currenttime.md)",
+      "ko": "[func currentTime() -> CMTime](avplayer/currenttime.md)",
+      "sourceHash": "b5fdee9f1372e0773d396079559efc995b8347677101852da82a7a9e378c4df0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:observing-playback-time:0052:0001",
+      "source": "Returns the current time of the current player item.",
+      "ko": "Returns the current time of the current player item.",
+      "sourceHash": "100fddb8311d2e778b3d28364ba21a7e13cb171c87beb31ce1eba1aeda40c69f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:observing-playback-time:0053:0001",
+      "source": "[func addPeriodicTimeObserver(forInterval: CMTime, queue: dispatch_queue_t?, using: (CMTime) -> Void) -> Any](avplayer/addperiodictimeobserver(forinterval:queue:using:).md)",
+      "ko": "[func addPeriodicTimeObserver(forInterval: CMTime, queue: dispatch_queue_t?, using: (CMTime) -> Void) -> Any](avplayer/addperiodictimeobserver(forinterval:queue:using:).md)",
+      "sourceHash": "db7be2179a59615b5a4f0013b56c4960e544222cde5e34df0e98433e2232e54d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:observing-playback-time:0054:0001",
+      "source": "Requests the periodic invocation of a given block during playback to report changing time.",
+      "ko": "Requests the periodic invocation of a given block during playback to report changing time.",
+      "sourceHash": "4b229327744165185c8535122613bb4d8c3e374d2880a54f00ce86766e1f99a7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:observing-playback-time:0055:0001",
+      "source": "[func addBoundaryTimeObserver(forTimes: [NSValue], queue: dispatch_queue_t?, using: () -> Void) -> Any](avplayer/addboundarytimeobserver(fortimes:queue:using:).md)",
+      "ko": "[func addBoundaryTimeObserver(forTimes: [NSValue], queue: dispatch_queue_t?, using: () -> Void) -> Any](avplayer/addboundarytimeobserver(fortimes:queue:using:).md)",
+      "sourceHash": "20fa4859a2479b47129b21156ec9c690965c3c8b93f3ec64f1ccae7acd4362de",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:observing-playback-time:0056:0001",
+      "source": "Requests the invocation of a block when specified times are traversed during normal playback.",
+      "ko": "Requests the invocation of a block when specified times are traversed during normal playback.",
+      "sourceHash": "b4756323283fc5727f88efea36ea812b9b0768a9f3a1ba7daa0beed7f4d02752",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:observing-playback-time:0057:0001",
+      "source": "[func removeTimeObserver(Any)](avplayer/removetimeobserver(_:).md)",
+      "ko": "[func removeTimeObserver(Any)](avplayer/removetimeobserver(_:).md)",
+      "sourceHash": "898c6e6a1a6b3e924662f29411eb071a45ca676af166eaa5baf4398176ae1afb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:observing-playback-time:0058:0001",
+      "source": "Cancels a previously registered periodic or boundary time observer.",
+      "ko": "Cancels a previously registered periodic or boundary time observer.",
+      "sourceHash": "66ecbdfefab87b944d3519e4174b033af8a94b056ece14f484f64e68295727d2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:seeking-through-media:0059:0001",
+      "source": "Seeking through media",
+      "ko": "Seeking through media",
+      "sourceHash": "09eeb75fc00e741713f9929268f980bd4f24bc3f2d329715ff02e0091ce00424",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:seeking-through-media:0060:0001",
+      "source": "[func seek(to: CMTime)](avplayer/seek(to:)-87h2r.md)",
+      "ko": "[func seek(to: CMTime)](avplayer/seek(to:)-87h2r.md)",
+      "sourceHash": "ef1d321ea576c200923d0263172758d63f588fa5f3f0c58ba11f25adb7c84956",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:seeking-through-media:0061:0001",
+      "source": "Requests that the player seek to a specified time.",
+      "ko": "Requests that the player seek to a specified time.",
+      "sourceHash": "d578e5b1edc4cd081ec306f88648d5a8a6c26677888ccfb4ba01600466abee77",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:seeking-through-media:0062:0001",
+      "source": "[func seek(to: CMTime, completionHandler: (Bool) -> Void)](avplayer/seek(to:completionhandler:)-75bls.md)",
+      "ko": "[func seek(to: CMTime, completionHandler: (Bool) -> Void)](avplayer/seek(to:completionhandler:)-75bls.md)",
+      "sourceHash": "ac9e1472603a45ffb8b6883618b452db6dffc3631636a78d7ef489cd213c055f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:seeking-through-media:0063:0001",
+      "source": "Requests that the player seek to a specified time, and to notify you when the seek is complete.",
+      "ko": "Requests that the player seek to a specified time, and to notify you when the seek is complete.",
+      "sourceHash": "ab2d2963ae9b9064f43ffd2bc2a35942b5033126f8477cc55df340cdb6c61deb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:seeking-through-media:0064:0001",
+      "source": "[func seek(to: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime)](avplayer/seek(to:tolerancebefore:toleranceafter:).md)",
+      "ko": "[func seek(to: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime)](avplayer/seek(to:tolerancebefore:toleranceafter:).md)",
+      "sourceHash": "4da382f2f29d223c143a0b39863581b23b845b70a26a6bada5d45cec7ff65c39",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:seeking-through-media:0065:0001",
+      "source": "Requests that the player seek to a specified time with the amount of accuracy specified by the time tolerance values.",
+      "ko": "Requests that the player seek to a specified time with the amount of accuracy specified by the time tolerance values.",
+      "sourceHash": "6be4ecac60df2493b29852364334800532e9553422a56ab341eb6e906e314d3d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:seeking-through-media:0066:0001",
+      "source": "[func seek(to: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime, completionHandler: (Bool) -> Void)](avplayer/seek(to:tolerancebefore:toleranceafter:completionhandler:).md)",
+      "ko": "[func seek(to: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime, completionHandler: (Bool) -> Void)](avplayer/seek(to:tolerancebefore:toleranceafter:completionhandler:).md)",
+      "sourceHash": "ce517e4a6f862f37e3139d6353546a41c06ce5bf1a13110ee7a6742a377ef266",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:seeking-through-media:0067:0001",
+      "source": "Requests that the player seek to a specified time with the amount of accuracy specified by the time tolerance values, and to notify you when the seek is complete.",
+      "ko": "Requests that the player seek to a specified time with the amount of accuracy specified by the time tolerance values, and to notify you when the seek is complete.",
+      "sourceHash": "f44a7528e765e8a51855eabc8255f3e89bd8972ea9f21e5e927c3f90c04e6e60",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:seeking-through-media:0068:0001",
+      "source": "[func seek(to: Date)](avplayer/seek(to:)-9h9qr.md)",
+      "ko": "[func seek(to: Date)](avplayer/seek(to:)-9h9qr.md)",
+      "sourceHash": "a5386c41be4355a0d0672abea8abae35cd142685c75174a1c3b15ac4d8059032",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:seeking-through-media:0069:0001",
+      "source": "Requests that the player seek to a specified date.",
+      "ko": "Requests that the player seek to a specified date.",
+      "sourceHash": "4b7495ba8e81840006fa3b9aaedca554e8ea77262cf8a92dbe7eb77bc714b936",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:seeking-through-media:0070:0001",
+      "source": "[func seek(to: Date, completionHandler: (Bool) -> Void)](avplayer/seek(to:completionhandler:)-wr1l.md)",
+      "ko": "[func seek(to: Date, completionHandler: (Bool) -> Void)](avplayer/seek(to:completionhandler:)-wr1l.md)",
+      "sourceHash": "111e719e9447ec629d2ede30bd2e2656c5335f88d5a2db96f3382fc29db5e64f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:seeking-through-media:0071:0001",
+      "source": "Requests that the player seek to a specified date, and to notify you when the seek is complete.",
+      "ko": "Requests that the player seek to a specified date, and to notify you when the seek is complete.",
+      "sourceHash": "6ed3cf87fbca3b1da9b805bdd44c75f03c0ba4c7cbeab92e00cd42fdbac9cd27",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:configuring-waiting-behavior:0072:0001",
+      "source": "Configuring waiting behavior",
+      "ko": "Configuring waiting behavior",
+      "sourceHash": "cb8c7301a2db2153a33e85a1baeedb21b161a0af91873a66fb5558f475baa477",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-waiting-behavior:0073:0001",
+      "source": "[var automaticallyWaitsToMinimizeStalling: Bool](avplayer/automaticallywaitstominimizestalling.md)",
+      "ko": "[var automaticallyWaitsToMinimizeStalling: Bool](avplayer/automaticallywaitstominimizestalling.md)",
+      "sourceHash": "8b70cca38081587dfe38afac3b4c1080ac800187584cd4cf73862ad52e842056",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-waiting-behavior:0074:0001",
+      "source": "A Boolean value that indicates whether the player should automatically delay playback in order to minimize stalling.",
+      "ko": "A Boolean value that indicates whether the player should automatically delay playback in order to minimize stalling.",
+      "sourceHash": "a707a505f5171993e4b29db2b57408066812c5aae15629354d95127825fd6d00",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-waiting-behavior:0075:0001",
+      "source": "[var reasonForWaitingToPlay: AVPlayer.WaitingReason?](avplayer/reasonforwaitingtoplay.md)",
+      "ko": "[var reasonForWaitingToPlay: AVPlayer.WaitingReason?](avplayer/reasonforwaitingtoplay.md)",
+      "sourceHash": "a3337a3639e8de79203203fe9a9b2d0dd34fcb7089e25495e46ef21b3bfbea22",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-waiting-behavior:0076:0001",
+      "source": "The reason the player is currently waiting for playback to begin or resume.",
+      "ko": "The reason the player is currently waiting for playback to begin or resume.",
+      "sourceHash": "b110ffb155f84f007297d8b2eb5aa182b03a9bd1968990c38f618b2fd4f33557",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-waiting-behavior:0077:0001",
+      "source": "[AVPlayer.WaitingReason](avplayer/waitingreason.md)",
+      "ko": "[AVPlayer.WaitingReason](avplayer/waitingreason.md)",
+      "sourceHash": "d8f404098434e6ecff38ce2f3dcddb4a60c6fe7ea6b05da551e1f8b448f55a3d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-waiting-behavior:0078:0001",
+      "source": "The reasons a player is waiting to begin or resume playback.",
+      "ko": "The reasons a player is waiting to begin or resume playback.",
+      "sourceHash": "1e12224b81aa5bbabd07b1c5d0c3bd514ee5c69d8abe77ab18e4a5b221f486de",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-waiting-behavior:0079:0001",
+      "source": "[var timeControlStatus: AVPlayer.TimeControlStatus](avplayer/timecontrolstatus-swift.property.md)",
+      "ko": "[var timeControlStatus: AVPlayer.TimeControlStatus](avplayer/timecontrolstatus-swift.property.md)",
+      "sourceHash": "c1cad9030c2fac14bcbdc7faa647c28e0c4c6ca8cd155723ab45cdf9c951f884",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-waiting-behavior:0080:0001",
+      "source": "A value that indicates whether playback is in progress, paused indefinitely, or waiting for network conditions to improve.",
+      "ko": "A value that indicates whether playback is in progress, paused indefinitely, or waiting for network conditions to improve.",
+      "sourceHash": "0f1a9bca24b4670394afb1c0ba77b3bc3f27f7d57864453227ac743092d71cde",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-waiting-behavior:0081:0001",
+      "source": "[AVPlayer.TimeControlStatus](avplayer/timecontrolstatus-swift.enum.md)",
+      "ko": "[AVPlayer.TimeControlStatus](avplayer/timecontrolstatus-swift.enum.md)",
+      "sourceHash": "e812bcc09e4573957472fc999d9809ef632f486e627f18859978d7364b85befa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-waiting-behavior:0082:0001",
+      "source": "Constants that indicate the state of playback control.",
+      "ko": "Constants that indicate the state of playback control.",
+      "sourceHash": "1c2fe7b62d73530914e640710b7bcfb06283e975c58aedf997e10c72b4c19a86",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-waiting-behavior:0083:0001",
+      "source": "[func playImmediately(atRate: Float)](avplayer/playimmediately(atrate:).md)",
+      "ko": "[func playImmediately(atRate: Float)](avplayer/playimmediately(atrate:).md)",
+      "sourceHash": "844dded0450a514e2f095e66fa93a4c5ee63310267538000eb76444c8174e090",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:configuring-waiting-behavior:0084:0001",
+      "source": "Plays the available media data immediately, at the specified rate.",
+      "ko": "Plays the available media data immediately, at the specified rate.",
+      "sourceHash": "2590010f189a4a3fe41391859f9be1ae66c28fd6ebf1defdc79c0aa63f4cac00",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:responding-when-playback-ends:0085:0001",
+      "source": "Responding when playback ends",
+      "ko": "Responding when playback ends",
+      "sourceHash": "e119b6b02da343e5d52fd5d8a680513e0c53a6ca90dd55ad7c80f7fe95e18cd1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:responding-when-playback-ends:0086:0001",
+      "source": "[var actionAtItemEnd: AVPlayer.ActionAtItemEnd](avplayer/actionatitemend-swift.property.md)",
+      "ko": "[var actionAtItemEnd: AVPlayer.ActionAtItemEnd](avplayer/actionatitemend-swift.property.md)",
+      "sourceHash": "1e486a6fbcdf9186fa6ee4abb16754f96f87e465f169975163613b86fb4cab5a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:responding-when-playback-ends:0087:0001",
+      "source": "The action to perform when the current player item has finished playing.",
+      "ko": "The action to perform when the current player item has finished playing.",
+      "sourceHash": "9fa0540cbbb913d5b28093fcbdc10f2a989c13bfb28a30c37b890eec6065cfb1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:responding-when-playback-ends:0088:0001",
+      "source": "[AVPlayer.ActionAtItemEnd](avplayer/actionatitemend-swift.enum.md)",
+      "ko": "[AVPlayer.ActionAtItemEnd](avplayer/actionatitemend-swift.enum.md)",
+      "sourceHash": "eec0f8e7303db42017f9e51d4693183cebc7c326cb5e9ce8a825ab8d1ea8e939",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:responding-when-playback-ends:0089:0001",
+      "source": "The actions a player can take when it finishes playing.",
+      "ko": "The actions a player can take when it finishes playing.",
+      "sourceHash": "38025b912acd54ac6c7b6e35cae8304a168a41a9d65340c88f3080531273cb91",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:configuring-media-selection-criteria:0090:0001",
+      "source": "Configuring media selection criteria",
+      "ko": "Configuring media selection criteria",
+      "sourceHash": "9b1c4c1f25c495d328322f7032fd9da3080efba6e9c98a5932a30469781bf899",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-media-selection-criteria:0091:0001",
+      "source": "[var appliesMediaSelectionCriteriaAutomatically: Bool](avplayer/appliesmediaselectioncriteriaautomatically.md)",
+      "ko": "[var appliesMediaSelectionCriteriaAutomatically: Bool](avplayer/appliesmediaselectioncriteriaautomatically.md)",
+      "sourceHash": "cc255806b1104fd12e6d737ad6fa03de71d203ce96c58bcac7bc8a64d888093c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-media-selection-criteria:0092:0001",
+      "source": "A Boolean value that indicates whether the receiver should apply the current selection criteria automatically to player items.",
+      "ko": "A Boolean value that indicates whether the receiver should apply the current selection criteria automatically to player items.",
+      "sourceHash": "83985836102c35b6cf2e05cd8527de06648ae1f0d7099211d58617ef7823870e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-media-selection-criteria:0093:0001",
+      "source": "[func mediaSelectionCriteria(forMediaCharacteristic: AVMediaCharacteristic) -> AVPlayerMediaSelectionCriteria?](avplayer/mediaselectioncriteria(formediacharacteristic:).md)",
+      "ko": "[func mediaSelectionCriteria(forMediaCharacteristic: AVMediaCharacteristic) -> AVPlayerMediaSelectionCriteria?](avplayer/mediaselectioncriteria(formediacharacteristic:).md)",
+      "sourceHash": "8446ba4d58b9931053ce6ce0b832a029be277667c20de4a67f6a084707298654",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:configuring-media-selection-criteria:0094:0001",
+      "source": "Returns the automatic selection criteria for media items with the specified media characteristic.",
+      "ko": "Returns the automatic selection criteria for media items with the specified media characteristic.",
+      "sourceHash": "facdcec55e36f3a6dab992f33aa981d85826ace89f32482bafc6fc52fa04501e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-media-selection-criteria:0095:0001",
+      "source": "[func setMediaSelectionCriteria(AVPlayerMediaSelectionCriteria?, forMediaCharacteristic: AVMediaCharacteristic)](avplayer/setmediaselectioncriteria(_:formediacharacteristic:).md)",
+      "ko": "[func setMediaSelectionCriteria(AVPlayerMediaSelectionCriteria?, forMediaCharacteristic: AVMediaCharacteristic)](avplayer/setmediaselectioncriteria(_:formediacharacteristic:).md)",
+      "sourceHash": "581f83ace1f874fdfd1b46a339993d79abb52fb622a3e32fd24862d208149e78",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:configuring-media-selection-criteria:0096:0001",
+      "source": "Applies automatic selection criteria for media that has the specified media characteristic.",
+      "ko": "Applies automatic selection criteria for media that has the specified media characteristic.",
+      "sourceHash": "61cedc6a59af29f297da647b30bd670f56cb3f1ea427421c2f375be9a72dd78f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:accessing-player-output:0097:0001",
+      "source": "Accessing player output",
+      "ko": "Accessing player output",
+      "sourceHash": "73fee083136e1b0c2518dc118f394d2971e2cf3f8809b3dbb7ecbb24ef9b7406",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:accessing-player-output:0098:0001",
+      "source": "[var videoOutput: AVPlayerVideoOutput?](avplayer/videooutput.md)",
+      "ko": "[var videoOutput: AVPlayerVideoOutput?](avplayer/videooutput.md)",
+      "sourceHash": "79055109408c37c425740883c27d548a04dae8d12c3cde56408524dffe0a1618",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:accessing-player-output:0099:0001",
+      "source": "The video output for this player.",
+      "ko": "The video output for this player.",
+      "sourceHash": "05ccfdea87445bb46645af81241cd5126f44b6e39a2556cbeac218f704afa07b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:configuring-audio-behavior:0100:0001",
+      "source": "Configuring audio behavior",
+      "ko": "Configuring audio behavior",
+      "sourceHash": "b508548584519199dfe92e66e8e8e3d72dbf8ea2fa5d2fb582b0d60f08c2e654",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-audio-behavior:0101:0001",
+      "source": "[var volume: Float](avplayer/volume.md)",
+      "ko": "[var volume: Float](avplayer/volume.md)",
+      "sourceHash": "1667782c55c4f6e926085c76cc20d15f9310b8cab07646e67ad903c0fc91d43d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-behavior:0102:0001",
+      "source": "The audio playback volume for the player.",
+      "ko": "The audio playback volume for the player.",
+      "sourceHash": "8617aad89c68d4fa9ffd2cc0e33ff6f170e92242ea40988d815ce27a6e26e107",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-audio-behavior:0103:0001",
+      "source": "[var isMuted: Bool](avplayer/ismuted.md)",
+      "ko": "[var isMuted: Bool](avplayer/ismuted.md)",
+      "sourceHash": "52e9cef6c8ee702bd023fdc628b008d80addfd63d5d352e1f8ef1507d1124e75",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-behavior:0104:0001",
+      "source": "A Boolean value that indicates whether the audio output of the player is muted.",
+      "ko": "A Boolean value that indicates whether the audio output of the player is muted.",
+      "sourceHash": "9ce8b7bcbc71fece64686d1fb5440576026dcbf96f92731f3e115eb046025bff",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-audio-behavior:0105:0001",
+      "source": "[var allowedAudioSpatializationFormats: AVAudioSpatializationFormats](avplayeritem/allowedaudiospatializationformats.md)",
+      "ko": "[var allowedAudioSpatializationFormats: AVAudioSpatializationFormats](avplayeritem/allowedaudiospatializationformats.md)",
+      "sourceHash": "896e3c9aed6f6b688838ed65f49d7ec5bd5df1d4ad818ad2de0f4c7b4a86083f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-behavior:0106:0001",
+      "source": "The source audio channel layouts the player item supports for spatialization.",
+      "ko": "The source audio channel layouts the player item supports for spatialization.",
+      "sourceHash": "43f809ca7193030558d4f6c6120c6f25c80be7e44f79abbef6a34bb13aa9f481",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-audio-behavior:0107:0001",
+      "source": "[var isAudioSpatializationAllowed: Bool](avplayeritem/isaudiospatializationallowed.md)",
+      "ko": "[var isAudioSpatializationAllowed: Bool](avplayeritem/isaudiospatializationallowed.md)",
+      "sourceHash": "271050fe504376120f98f0b00a0a41424fba06d66d1fe64da1efc1842563789b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-behavior:0108:0001",
+      "source": "A Boolean value that indicates whether the player item allows spatialized audio playback.",
+      "ko": "A Boolean value that indicates whether the player item allows spatialized audio playback.",
+      "sourceHash": "5c6879b624c6aa61573d4464be2ad61244617498178bcf8f9c4553aae59cf5ff",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-audio-behavior:0109:0001",
+      "source": "[var audioOutputSuppressedDueToNonMixableAudioRoute: Bool](avplayer/audiooutputsuppressedduetononmixableaudioroute.md)",
+      "ko": "[var audioOutputSuppressedDueToNonMixableAudioRoute: Bool](avplayer/audiooutputsuppressedduetononmixableaudioroute.md)",
+      "sourceHash": "59a8d72fcb05923a3c74b8c1c0bcc1b4588fedb6617e264f76e55a0351cdb538",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-behavior:0110:0001",
+      "source": "Whether the player’s audio output is suppressed due to being on a non-mixable audio route.",
+      "ko": "Whether the player’s audio output is suppressed due to being on a non-mixable audio route.",
+      "sourceHash": "1c0114913d3c7656029dd5f7c4cb27b79ba520def9ef95e15ae051e5f9df1f28",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-audio-behavior:0111:0001",
+      "source": "[var intendedSpatialAudioExperience: any SpatialAudioExperience](avplayer/intendedspatialaudioexperience-1bd87.md)",
+      "ko": "[var intendedSpatialAudioExperience: any SpatialAudioExperience](avplayer/intendedspatialaudioexperience-1bd87.md)",
+      "sourceHash": "748f9b85f94e1e733d14ac15c76c51555ba4655bb8f62bc73c2bd179a9c6cd43",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-behavior:0112:0001",
+      "source": "The player’s intended Spatial Audio experience.",
+      "ko": "The player’s intended Spatial Audio experience.",
+      "sourceHash": "9fb17b009221336d8fefcdc0dad11ffa25c62f04398ba60cae5d0c96306b380e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:configuring-background-playback:0113:0001",
+      "source": "Configuring background playback",
+      "ko": "Configuring background playback",
+      "sourceHash": "aea7de211c56e06ce8e548d1042d0919567b48434a3bcd2e2bd9a9236ad7f2dd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-background-playback:0114:0001",
+      "source": "[var audiovisualBackgroundPlaybackPolicy: AVPlayerAudiovisualBackgroundPlaybackPolicy](avplayer/audiovisualbackgroundplaybackpolicy.md)",
+      "ko": "[var audiovisualBackgroundPlaybackPolicy: AVPlayerAudiovisualBackgroundPlaybackPolicy](avplayer/audiovisualbackgroundplaybackpolicy.md)",
+      "sourceHash": "269297efbf95c2f424dcede8ae23d4f47df45504c48da90f5f0d9b5829e64119",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-background-playback:0115:0001",
+      "source": "A policy that determines how playback of audiovisual media continues when the app transitions to the background.",
+      "ko": "A policy that determines how playback of audiovisual media continues when the app transitions to the background.",
+      "sourceHash": "9702cc9efda877732c6889929e9495728d890232caeb8390d6b6d9accb5f402a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-background-playback:0116:0001",
+      "source": "[enum AVPlayerAudiovisualBackgroundPlaybackPolicy](avplayeraudiovisualbackgroundplaybackpolicy.md)",
+      "ko": "[enum AVPlayerAudiovisualBackgroundPlaybackPolicy](avplayeraudiovisualbackgroundplaybackpolicy.md)",
+      "sourceHash": "39cb93dea670850ce3e858e0bd86a6653d1ac5313907deed3ad205eb371f2cca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-background-playback:0117:0001",
+      "source": "Policies that describe playback behavior when an app transitions to the background while playing video.",
+      "ko": "Policies that describe playback behavior when an app transitions to the background while playing video.",
+      "sourceHash": "b4807d92a0ced964d3a3d92941b16a1a25d695987afe513e348beec600be2131",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:managing-external-playback:0118:0001",
+      "source": "Managing external playback",
+      "ko": "Managing external playback",
+      "sourceHash": "0016de4deafd9e44f46d5b8379223a57d8f12a3ad745cb4b5a7f1f7461163aea",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:managing-external-playback:0119:0001",
+      "source": "[var allowsExternalPlayback: Bool](avplayer/allowsexternalplayback.md)",
+      "ko": "[var allowsExternalPlayback: Bool](avplayer/allowsexternalplayback.md)",
+      "sourceHash": "bdf626f4fcfaa98d5796cea8f61febd5a84df6d570c6f4c8208eeff63b820d0e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-external-playback:0120:0001",
+      "source": "A Boolean value that indicates whether the player allows switching to external playback mode.",
+      "ko": "A Boolean value that indicates whether the player allows switching to external playback mode.",
+      "sourceHash": "2f0d27c061a9e876fe329b091ee5b2fc246cb8ab90cc5617d739eaa5a29d1a7d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:managing-external-playback:0121:0001",
+      "source": "[var isExternalPlaybackActive: Bool](avplayer/isexternalplaybackactive.md)",
+      "ko": "[var isExternalPlaybackActive: Bool](avplayer/isexternalplaybackactive.md)",
+      "sourceHash": "c69b7d0b20d3781436beb029734caec27d45befdfff8d089fbaa25f8714545aa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-external-playback:0122:0001",
+      "source": "A Boolean value that indicates whether the player is currently playing video in external playback mode.",
+      "ko": "A Boolean value that indicates whether the player is currently playing video in external playback mode.",
+      "sourceHash": "fd0bd1d93ba4daa408b17b5a2420bd3eff55e07a65a4a1779a18366de102cf1d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:managing-external-playback:0123:0001",
+      "source": "[var usesExternalPlaybackWhileExternalScreenIsActive: Bool](avplayer/usesexternalplaybackwhileexternalscreenisactive.md)",
+      "ko": "[var usesExternalPlaybackWhileExternalScreenIsActive: Bool](avplayer/usesexternalplaybackwhileexternalscreenisactive.md)",
+      "sourceHash": "84987d32d602a785b91630079bd4b86a327f44a8ad117786874162b2caca10c9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-external-playback:0124:0001",
+      "source": "A Boolean value that indicates whether the player should automatically switch to external playback mode while the external screen mode is active.",
+      "ko": "A Boolean value that indicates whether the player should automatically switch to external playback mode while the external screen mode is active.",
+      "sourceHash": "a54e1062b68ef433cdb5c4f669061c241d9a8dc75172badf14d3dda1fbbb00b0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:managing-external-playback:0125:0001",
+      "source": "[var externalPlaybackVideoGravity: AVLayerVideoGravity](avplayer/externalplaybackvideogravity.md)",
+      "ko": "[var externalPlaybackVideoGravity: AVLayerVideoGravity](avplayer/externalplaybackvideogravity.md)",
+      "sourceHash": "444a24eda7b6b3e0098b34deb218603c907038695a8a20268211ad0759f759cb",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:managing-external-playback:0126:0001",
+      "source": "The video gravity of the player for external playback mode only.",
+      "ko": "The video gravity of the player for external playback mode only.",
+      "sourceHash": "cfeba427e9c5a9a1fa28ef0c9197d72f13321ac3f85a32138e84c0f4c2c1fb3f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:determining-hdr-playback-eligibility:0127:0001",
+      "source": "Determining HDR playback eligibility",
+      "ko": "Determining HDR playback eligibility",
+      "sourceHash": "bc6d41e23243abc2a2514dc6e74c6a6f99260942d2e31ebd5fdf36023c6eb085",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:determining-hdr-playback-eligibility:0128:0001",
+      "source": "[class var eligibleForHDRPlayback: Bool](avplayer/eligibleforhdrplayback.md)",
+      "ko": "[class var eligibleForHDRPlayback: Bool](avplayer/eligibleforhdrplayback.md)",
+      "sourceHash": "b17a24ec2580c9f8909668738b1d8b9e9423ea4f1f4307e6a864d7455d9abfa6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:determining-hdr-playback-eligibility:0129:0001",
+      "source": "A Boolean value that indicates whether the current device can present content to an HDR display.",
+      "ko": "A Boolean value that indicates whether the current device can present content to an HDR display.",
+      "sourceHash": "3f6eeee2b48468b548d7f90f6103c13df1955055a35e64eaa6d97b43ff0ec9aa",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:determining-hdr-playback-eligibility:0130:0001",
+      "source": "[class var availableHDRModes: AVPlayer.HDRMode](avplayer/availablehdrmodes.md)",
+      "ko": "[class var availableHDRModes: AVPlayer.HDRMode](avplayer/availablehdrmodes.md)",
+      "sourceHash": "fa4078b758535c38efb788379be749087cb76bc2c2eabf902d928b1b41c3a177",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:determining-hdr-playback-eligibility:0131:0001",
+      "source": "The HDR modes that are available for playback.",
+      "ko": "The HDR modes that are available for playback.",
+      "sourceHash": "28e361ab3ee30b0148fc0cc527c06ae0557cffcc04e096f28ae41afa401bdcdd",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:determining-hdr-playback-eligibility:0132:0001",
+      "source": "[AVPlayer.HDRMode](avplayer/hdrmode.md)",
+      "ko": "[AVPlayer.HDRMode](avplayer/hdrmode.md)",
+      "sourceHash": "10a95e60263e8561ae4a8c938077bcae80ffde84b652caf7955564f3f7e4d1f5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:determining-hdr-playback-eligibility:0133:0001",
+      "source": "A bitfield type that specifies an HDR mode.",
+      "ko": "A bitfield type that specifies an HDR mode.",
+      "sourceHash": "42786d08fdf5091fb374eed61b2faeb87fe735c7e02bb4141e43ab7eba40e430",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:determining-hdr-playback-eligibility:0134:0001",
+      "source": "[class let eligibleForHDRPlaybackDidChangeNotification: NSNotification.Name](avplayer/eligibleforhdrplaybackdidchangenotification.md)",
+      "ko": "[class let eligibleForHDRPlaybackDidChangeNotification: NSNotification.Name](avplayer/eligibleforhdrplaybackdidchangenotification.md)",
+      "sourceHash": "40a7edd027bef106b1ef7fe08b9888b3b91de2fbd84c1e6261b7c20c13bb9058",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:determining-hdr-playback-eligibility:0135:0001",
+      "source": "A notification that’s posted whenever HDR playback eligibility changes.",
+      "ko": "A notification that’s posted whenever HDR playback eligibility changes.",
+      "sourceHash": "2deab3d24d96ced4c2f9b53db121c50aa763489c2b7ca36de81ddea4984b491d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:coordinating-playback:0136:0001",
+      "source": "Coordinating playback",
+      "ko": "Coordinating playback",
+      "sourceHash": "44944786730bb2fd4aa251ec93a40201ddf8a0ebe6a6c2314579bbd8e5cc6641",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:coordinating-playback:0137:0001",
+      "source": "[var playbackCoordinator: AVPlayerPlaybackCoordinator](avplayer/playbackcoordinator.md)",
+      "ko": "[var playbackCoordinator: AVPlayerPlaybackCoordinator](avplayer/playbackcoordinator.md)",
+      "sourceHash": "2441b9ff1657fd23ac3485b905615966603d45831cf785c7b8760d5b94eaab88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:coordinating-playback:0138:0001",
+      "source": "The playback coordinator for the player.",
+      "ko": "The playback coordinator for the player.",
+      "sourceHash": "388a3c5df282a47010a4cbc5e7a6b6af057e17fafeceb59c5c18cbfdc14f82df",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:synchronizing-multiple-players:0139:0001",
+      "source": "Synchronizing multiple players",
+      "ko": "Synchronizing multiple players",
+      "sourceHash": "0ae509a401e2265e6acc631b8d4d55a045ba78e48427fde6e7274534103bb597",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:synchronizing-multiple-players:0140:0001",
+      "source": "[func setRate(Float, time: CMTime, atHostTime: CMTime)](avplayer/setrate(_:time:athosttime:).md)",
+      "ko": "[func setRate(Float, time: CMTime, atHostTime: CMTime)](avplayer/setrate(_:time:athosttime:).md)",
+      "sourceHash": "fcb14fea49e0f02d97055aa6704c77dad8524ec123328449e3d03e57a140d616",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:synchronizing-multiple-players:0141:0001",
+      "source": "Synchronizes the playback rate and time of the current item with an external source.",
+      "ko": "Synchronizes the playback rate and time of the current item with an external source.",
+      "sourceHash": "fee5a72001b92757b232bbd3ca89ef600fdaf489e61ac678b4a641159648d6d0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:synchronizing-multiple-players:0142:0001",
+      "source": "[func preroll(atRate: Float, completionHandler: ((Bool) -> Void)?)](avplayer/preroll(atrate:completionhandler:).md)",
+      "ko": "[func preroll(atRate: Float, completionHandler: ((Bool) -> Void)?)](avplayer/preroll(atrate:completionhandler:).md)",
+      "sourceHash": "2e861c6da16a1c46200682afeb6b3eca3dc8f1bc01d0b421d80126970a00d040",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:synchronizing-multiple-players:0143:0001",
+      "source": "Begins loading media data to prime the media pipelines for playback.",
+      "ko": "Begins loading media data to prime the media pipelines for playback.",
+      "sourceHash": "2769b0f6fd3021a49b34beb509cd74b4cb33be05a8f87cf4975bdac939463413",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:synchronizing-multiple-players:0144:0001",
+      "source": "[func cancelPendingPrerolls()](avplayer/cancelpendingprerolls.md)",
+      "ko": "[func cancelPendingPrerolls()](avplayer/cancelpendingprerolls.md)",
+      "sourceHash": "5027f677e2a3544f0cff67bf986d7ea5bfcca243feeb59f82ba4ae5cc73d2230",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:synchronizing-multiple-players:0145:0001",
+      "source": "Cancels any pending preroll requests and invokes the corresponding completion handlers, if present.",
+      "ko": "Cancels any pending preroll requests and invokes the corresponding completion handlers, if present.",
+      "sourceHash": "6bb6288e0057fd815132b4209074cc69e358d788a0cb5752fad74d008c0be31b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:synchronizing-multiple-players:0146:0001",
+      "source": "[var sourceClock: CMClock?](avplayer/sourceclock.md)",
+      "ko": "[var sourceClock: CMClock?](avplayer/sourceclock.md)",
+      "sourceHash": "f26c94fbc1c6140cb026f429f2dcc32e254ea3a5573aef6849be9b93a38ad03e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:synchronizing-multiple-players:0147:0001",
+      "source": "A clock the player uses for item time bases.",
+      "ko": "A clock the player uses for item time bases.",
+      "sourceHash": "29d6c42f62d1c1b89c4580080f3528b5f2697a0ba62abb2ac306e32fc1d20cb8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:synchronizing-multiple-players:0148:0001",
+      "source": "[var masterClock: CMClock?](avplayer/masterclock.md)",
+      "ko": "[var masterClock: CMClock?](avplayer/masterclock.md)",
+      "sourceHash": "026329d403a5ef274a3e952d7a5bdff8c0b5f5f2b263089a16a5c58041ed77dc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:synchronizing-multiple-players:0149:0001",
+      "source": "The host clock for item time bases.",
+      "ko": "The host clock for item time bases.",
+      "sourceHash": "12346b20b74da3adbc0c23b467ffa5732a5b30f7d3ac5efd12c84ad9079ba5e4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:preventing-sleep-and-backgrounding:0150:0001",
+      "source": "Preventing sleep and backgrounding",
+      "ko": "Preventing sleep and backgrounding",
+      "sourceHash": "f782e26271047af86795d31e54a9d9544880e47cf916c150bcccf757588c2ad1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:preventing-sleep-and-backgrounding:0151:0001",
+      "source": "[var preventsDisplaySleepDuringVideoPlayback: Bool](avplayer/preventsdisplaysleepduringvideoplayback.md)",
+      "ko": "[var preventsDisplaySleepDuringVideoPlayback: Bool](avplayer/preventsdisplaysleepduringvideoplayback.md)",
+      "sourceHash": "ef607305e717cb92bebf4dfaff8727578f991a62daf6589bd010a5dfb3b6f1ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:preventing-sleep-and-backgrounding:0152:0001",
+      "source": "A Boolean value that indicates whether video playback prevents display and device sleep.",
+      "ko": "A Boolean value that indicates whether video playback prevents display and device sleep.",
+      "sourceHash": "ad302d5f214b6b0773ffa38a5cffc7f5e2368d29bae2eed0c7ca8788ce8bf29e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:preventing-sleep-and-backgrounding:0153:0001",
+      "source": "[var preventsAutomaticBackgroundingDuringVideoPlayback: Bool](avplayer/preventsautomaticbackgroundingduringvideoplayback.md)",
+      "ko": "[var preventsAutomaticBackgroundingDuringVideoPlayback: Bool](avplayer/preventsautomaticbackgroundingduringvideoplayback.md)",
+      "sourceHash": "eff11428429219afe9a0b35775e3099fe96e48190566da98e75c090566b4a9ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:preventing-sleep-and-backgrounding:0154:0001",
+      "source": "A Boolean value that indicates whether video playback prevents the system from automatically backgrounding the app.",
+      "ko": "A Boolean value that indicates whether video playback prevents the system from automatically backgrounding the app.",
+      "sourceHash": "1cfddce3409a9e769cf39c7fe8b2e9e6a3db7c6c4b451d9e0988aecfd931ac65",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:determining-content-protections:0155:0001",
+      "source": "Determining content protections",
+      "ko": "Determining content protections",
+      "sourceHash": "d9d91f9c9bb75bd63cbd772d22070c5641e0bb5ca48561b34b1d076cb916205d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:determining-content-protections:0156:0001",
+      "source": "[var isOutputObscuredDueToInsufficientExternalProtection: Bool](avplayer/isoutputobscuredduetoinsufficientexternalprotection.md)",
+      "ko": "[var isOutputObscuredDueToInsufficientExternalProtection: Bool](avplayer/isoutputobscuredduetoinsufficientexternalprotection.md)",
+      "sourceHash": "ad1d83a4a3329a0b725cb47f4d7ac7cb47fff3f6851d13a6024e0f305bf24e24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:determining-content-protections:0157:0001",
+      "source": "A Boolean value that indicates whether output is being obscured because of insufficient external protection.",
+      "ko": "A Boolean value that indicates whether output is being obscured because of insufficient external protection.",
+      "sourceHash": "0d66c29d72f3b84cca6142fca67f4f2f4cf7173b30cdb69d9ab39122c70685c7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:configuring-audio-and-video-devices:0158:0001",
+      "source": "Configuring audio and video devices",
+      "ko": "Configuring audio and video devices",
+      "sourceHash": "e59a70c13e92928c4175139990e953bb756141b3547db247be00aa888c8e6d49",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-audio-and-video-devices:0159:0001",
+      "source": "[var audioOutputDeviceUniqueID: String?](avplayer/audiooutputdeviceuniqueid.md)",
+      "ko": "[var audioOutputDeviceUniqueID: String?](avplayer/audiooutputdeviceuniqueid.md)",
+      "sourceHash": "087aef931a336066ede80cbec099a3630b5d7cefc8a3421f70c3abdeca62b186",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-and-video-devices:0160:0001",
+      "source": "Specifies the unique ID of the Core Audio output device used to play audio.",
+      "ko": "Specifies the unique ID of the Core Audio output device used to play audio.",
+      "sourceHash": "a80d891d9c088aca8b9e5ad8a00b33f20df90730caeea01099313928afb891c0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-audio-and-video-devices:0161:0001",
+      "source": "[var preferredVideoDecoderGPURegistryID: UInt64](avplayer/preferredvideodecodergpuregistryid.md)",
+      "ko": "[var preferredVideoDecoderGPURegistryID: UInt64](avplayer/preferredvideodecodergpuregistryid.md)",
+      "sourceHash": "33667290600b4c437cfc518b6d042f9f86347f4ad788cc60a53cba776820b47e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-audio-and-video-devices:0162:0001",
+      "source": "The registry identifier for the GPU used for video decoding.",
+      "ko": "The registry identifier for the GPU used for video decoding.",
+      "sourceHash": "6d797d40b66bc0b1677c748e5044cd067ea6b97b655b59556fe9317b0d88232e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:configuring-the-network-resource-priority:0163:0001",
+      "source": "Configuring the network resource priority",
+      "ko": "Configuring the network resource priority",
+      "sourceHash": "cb6a1b653944a27505345dbe0e86c2304388ce5100b75414f3c97a6e1c014451",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-the-network-resource-priority:0164:0001",
+      "source": "[var networkResourcePriority: AVPlayer.NetworkResourcePriority](avplayer/networkresourcepriority-swift.property.md)",
+      "ko": "[var networkResourcePriority: AVPlayer.NetworkResourcePriority](avplayer/networkresourcepriority-swift.property.md)",
+      "sourceHash": "4ee299a3d375ac8e8f53304acc0020f09efc380be93cdfffaf703b52e2ea4efe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-the-network-resource-priority:0165:0001",
+      "source": "Indicates the priority of this player for network bandwidth resource distribution.",
+      "ko": "Indicates the priority of this player for network bandwidth resource distribution.",
+      "sourceHash": "740587c88929a9513889c4ee40b92e4c32cca5eddf8516d0a586d4d3a11c2228",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-the-network-resource-priority:0166:0001",
+      "source": "[AVPlayer.NetworkResourcePriority](avplayer/networkresourcepriority-swift.enum.md)",
+      "ko": "[AVPlayer.NetworkResourcePriority](avplayer/networkresourcepriority-swift.enum.md)",
+      "sourceHash": "ac42fe94f6140eab35dcd34203103c34d16a1a852d13fd4dab3e4b5911742674",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-the-network-resource-priority:0167:0001",
+      "source": "This defines the network resource priority for a player.",
+      "ko": "This defines the network resource priority for a player.",
+      "sourceHash": "98e7fc413ad621050a57c5d3e70fbcc6748d2ec5a3cf85e753fdd6a3d917fcab",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:configuring-observation:0168:0001",
+      "source": "Configuring observation",
+      "ko": "Configuring observation",
+      "sourceHash": "426a4ea833a9e92ad0f56eb964019c888a75304ae1d3f6ab4135fd4ce7322e77",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-observation:0169:0001",
+      "source": "[class var isObservationEnabled: Bool](avplayer/isobservationenabled.md)",
+      "ko": "[class var isObservationEnabled: Bool](avplayer/isobservationenabled.md)",
+      "sourceHash": "5a0b60a57315276f51d3e2da154e68ed646f4a10d2d4592d21d7470d84f03233",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-observation:0170:0001",
+      "source": "AVPlayer and other AVFoundation types can optionally be observed using Swift Observation.",
+      "ko": "AVPlayer and other AVFoundation types can optionally be observed using Swift Observation.",
+      "sourceHash": "7036599e402df86a8af438159b87e76a3b5e30fbcd1221997f9b82aa600003db",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:configuring-airplay-behavior:0171:0001",
+      "source": "Configuring AirPlay behavior",
+      "ko": "Configuring AirPlay behavior",
+      "sourceHash": "ea10e986add6d51166f9efebcaaf532417765524a00709935dfc9ab1d6769a80",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-airplay-behavior:0172:0001",
+      "source": "[var allowsAirPlayVideo: Bool](avplayer/allowsairplayvideo.md)",
+      "ko": "[var allowsAirPlayVideo: Bool](avplayer/allowsairplayvideo.md)",
+      "sourceHash": "cf6ddcccc7f8e5ee7dd6ab953a2703b8f8da88cffc03483de62e3f52689558dc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-airplay-behavior:0173:0001",
+      "source": "A Boolean value that indicates whether the player allows AirPlay video playback.",
+      "ko": "A Boolean value that indicates whether the player allows AirPlay video playback.",
+      "sourceHash": "abbc17dbbf9b3e6485d937ec71331250bd52839631f8c3dc718cb64e32777d43",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-airplay-behavior:0174:0001",
+      "source": "[var isAirPlayVideoActive: Bool](avplayer/isairplayvideoactive.md)",
+      "ko": "[var isAirPlayVideoActive: Bool](avplayer/isairplayvideoactive.md)",
+      "sourceHash": "9021e43440e0db9d5e44e6eda753af9e45ba3446caeecbfe5f7f5594f34fe094",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-airplay-behavior:0175:0001",
+      "source": "A Boolean value that indicates whether the player is playing video through AirPlay.",
+      "ko": "A Boolean value that indicates whether the player is playing video through AirPlay.",
+      "sourceHash": "f0e2c7be07b2d4d304c31198e1e4ea99ac71b65b9e95d80eccde0078a2ecb758",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:configuring-airplay-behavior:0176:0001",
+      "source": "[var usesAirPlayVideoWhileAirPlayScreenIsActive: Bool](avplayer/usesairplayvideowhileairplayscreenisactive.md)",
+      "ko": "[var usesAirPlayVideoWhileAirPlayScreenIsActive: Bool](avplayer/usesairplayvideowhileairplayscreenisactive.md)",
+      "sourceHash": "44f4b485bb18a455d6ad9344bf84072c5b08f8a6b9e515bf84a6c96294c7ac68",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-airplay-behavior:0177:0001",
+      "source": "A Boolean value that indicates whether the player automatically switches to AirPlay Video while AirPlay Screen is active.",
+      "ko": "A Boolean value that indicates whether the player automatically switches to AirPlay Video while AirPlay Screen is active.",
+      "sourceHash": "d224834bd3943b34bf9c2a59c4be31de12d959987be7689b148255b54a7dbcad",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:displaying-closed-captions:0178:0001",
+      "source": "Displaying closed captions",
+      "ko": "Displaying closed captions",
+      "sourceHash": "65401b50974308310ec035abe2550bc46d0635dacb2234a60b177d1a5fb03fff",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:displaying-closed-captions:0179:0001",
+      "source": "[var isClosedCaptionDisplayEnabled: Bool](avplayer/isclosedcaptiondisplayenabled.md)",
+      "ko": "[var isClosedCaptionDisplayEnabled: Bool](avplayer/isclosedcaptiondisplayenabled.md)",
+      "sourceHash": "1f3a8cb5411caba78c496f818d4ee86a3b4d9561656e54076de2df6d0f8fd5d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:displaying-closed-captions:0180:0001",
+      "source": "A Boolean value that indicates whether the player uses closed captioning.",
+      "ko": "A Boolean value that indicates whether the player uses closed captioning.",
+      "sourceHash": "75549bc1978c81e27a35823f9313d81c282f5121d15acb0394528cf0de086141",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:initializers:0181:0001",
+      "source": "Initializers",
+      "ko": "Initializers",
+      "sourceHash": "cfe0ff283ead420d3d0da2714f4b99ad4d5ee1eafb4dac91f5f4a8635062fbff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:initializers:0182:0001",
+      "source": "[convenience init(URL: URL)](avplayer/init(url:)-8aqw0.md)",
+      "ko": "[convenience init(URL: URL)](avplayer/init(url:)-8aqw0.md)",
+      "sourceHash": "2e3daa482466b919c8a83358b1dc65ac82896c19edb63f37e49e86f94ec4c1bb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:initializers:0182:0002",
+      "source": "[init(URL: URL)](avplayer/init(url:)-9cqj1.md)",
+      "ko": "[init(URL: URL)](avplayer/init(url:)-9cqj1.md)",
+      "sourceHash": "fed410908f97d8307bcb83b9c2ae066a404e5274c4a0c0dadb111503347bb619",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:instance-properties:0183:0001",
+      "source": "Instance Properties",
+      "ko": "Instance Properties",
+      "sourceHash": "093c2192f38e17fa2389cc524a76e2fe2ca3d129365f6ee47ffab107ed55cbc5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:instance-properties:0184:0001",
+      "source": "[var allowsCaptureOfClearKeyVideo: Bool](avplayer/allowscaptureofclearkeyvideo.md)",
+      "ko": "[var allowsCaptureOfClearKeyVideo: Bool](avplayer/allowscaptureofclearkeyvideo.md)",
+      "sourceHash": "4772ceaa73bdf5ca2ac037efff1d5d8bda1f3d037542a7133f8385848c6555fa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:instance-properties:0185:0001",
+      "source": "Indicates whether the video output of ClearKey Encrypted Video can be captured",
+      "ko": "Indicates whether the video output of ClearKey Encrypted Video can be captured",
+      "sourceHash": "08310b5cf361c9f374d87c1e2252d6f8b2f736461ff772b2bbfdffc97f326e1a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:relationships:0186:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0187:0001",
+      "source": "Inherits From",
+      "ko": "Inherits From",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:inherits-from:0188:0001",
+      "source": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "ko": "[NSObject](../ObjectiveC/NSObject-swift.class.md)",
+      "sourceHash": "6b1a057569a79d6ecf339ec92263a97c395e3343855ad137f490ce47a86611ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherited-by:0189:0001",
+      "source": "Inherited By",
+      "ko": "Inherited By",
+      "sourceHash": "42035a6fba4e21843f669d8b7e1e57fb192087a3ae79a1ddf62cfa85090744bb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:inherited-by:0190:0001",
+      "source": "[AVQueuePlayer](avqueueplayer.md)",
+      "ko": "[AVQueuePlayer](avqueueplayer.md)",
+      "sourceHash": "c81cd1aa8d288f6fc847a4b602611e84089c63f6867d66a11b3be83a69b74a69",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0191:0001",
+      "source": "Conforms To",
+      "ko": "Conforms To",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0001",
+      "source": "[AVRoutingPlaybackParticipant](../AVRouting/AVRoutingPlaybackParticipant.md)",
+      "ko": "[AVRoutingPlaybackParticipant](../AVRouting/AVRoutingPlaybackParticipant.md)",
+      "sourceHash": "8f862ba9b3a03b4da37247406ac40e3337c3fa19308ca79dd1f3ca4d907fee6f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0002",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0003",
+      "source": "[Copyable](../Swift/Copyable.md)",
+      "ko": "[Copyable](../Swift/Copyable.md)",
+      "sourceHash": "97209cb9173a2260422d13e2e0e206fdea5c86a623725a26a8dd32ebdc0c09ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0004",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0005",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0006",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0007",
+      "source": "[Escapable](../Swift/Escapable.md)",
+      "ko": "[Escapable](../Swift/Escapable.md)",
+      "sourceHash": "7feb6ca3e734e642d53793abf798a6853704d254bdd241d9c351c5a688861bf1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0008",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0009",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0010",
+      "source": "[Observable](../Observation/Observable.md)",
+      "ko": "[Observable](../Observation/Observable.md)",
+      "sourceHash": "89da424b2ff26b192c92c6f47818ce34222a4fa2babfd13e00dfc5a4d7538bc9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0192:0011",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0193:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0194:0001",
+      "source": "[Observing playback state in SwiftUI](observing-playback-state-in-swiftui.md)",
+      "ko": "[Observing playback state in SwiftUI](observing-playback-state-in-swiftui.md)",
+      "sourceHash": "8d69956c6e935a22fec53350b139c35953fd2ef41ffaf68ff472221bc52a0993",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0195:0001",
+      "source": "Keep your user interface in sync with state changes from playback objects.",
+      "ko": "Keep your user interface in sync with state changes from playback objects.",
+      "sourceHash": "740b36ecdc314a01f0df2b400ccdf22ffe8b22a6d2bc7332760d239a1c343b59",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0196:0001",
+      "source": "[Controlling the transport behavior of a player](controlling-the-transport-behavior-of-a-player.md)",
+      "ko": "[Controlling the transport behavior of a player](controlling-the-transport-behavior-of-a-player.md)",
+      "sourceHash": "966055590ff41f788cf079be3ad9c171ca46ddc30067a35eb35b9f4e969294d7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0197:0001",
+      "source": "Play, pause, and seek through a media presentation.",
+      "ko": "Play, pause, and seek through a media presentation.",
+      "sourceHash": "1d6a5533bd223802e0da0cc368561b1593c57f23e2f1d8051757e41833b1115d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0198:0001",
+      "source": "[Creating a seamless multiview playback experience](creating-a-seamless-multiview-playback-experience.md)",
+      "ko": "[Creating a seamless multiview playback experience](creating-a-seamless-multiview-playback-experience.md)",
+      "sourceHash": "0f87ff3b141c171eb9828744765ea047e531c426b385950f1100a10d08327787",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0199:0001",
+      "source": "Build advanced multiview playback experiences with the AVFoundation and AVRouting frameworks.",
+      "ko": "Build advanced multiview playback experiences with the AVFoundation and AVRouting frameworks.",
+      "sourceHash": "d7ef034c214553090e111b47ecd043a67f36507345fb85b99601761448a24f4f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0200:0001",
+      "source": "[class AVPlayerItem](avplayeritem.md)",
+      "ko": "[class AVPlayerItem](avplayeritem.md)",
+      "sourceHash": "369d53ac4245d0de88835460556487f2dabf4b5a1e3c6966496295076c1904b4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0201:0001",
+      "source": "An object that models the timing and presentation state of an asset during playback.",
+      "ko": "An object that models the timing and presentation state of an asset during playback.",
+      "sourceHash": "e9c3a9da75dd0b65485f96942606ed164a533817da04165654f804289ac9c0cc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0202:0001",
+      "source": "[class AVPlayerItemTrack](avplayeritemtrack.md)",
+      "ko": "[class AVPlayerItemTrack](avplayeritemtrack.md)",
+      "sourceHash": "e80048d8398de3eccff0c6dae951836ffaee4f4112f2f0bce7811785a5606aa5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0203:0001",
+      "source": "An object that represents the presentation state of an asset track during playback.",
+      "ko": "An object that represents the presentation state of an asset track during playback.",
+      "sourceHash": "e45fbbe95bb5f1db45d7735bc46bed370c0ded98d92b42ac2f7731940332fb87",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0204:0001",
+      "source": "[class AVQueuePlayer](avqueueplayer.md)",
+      "ko": "[class AVQueuePlayer](avqueueplayer.md)",
+      "sourceHash": "04fb0653d93df61c01883970f428554a9f8745d1b6a1a864b0f66fbfce1fe5ce",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0205:0001",
+      "source": "An object that plays a sequence of player items.",
+      "ko": "An object that plays a sequence of player items.",
+      "sourceHash": "15a8e5bc8c22745274900ac798676dcfff9b08bab95709f42aed0001fd5e0aa7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0206:0001",
+      "source": "[class AVPlayerLooper](avplayerlooper.md)",
+      "ko": "[class AVPlayerLooper](avplayerlooper.md)",
+      "sourceHash": "d7e95356c1b9f54c37d7b8dadd16b83d199a94c3525e9a45ed990dab4ea8877a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0207:0001",
+      "source": "An object that loops media content using a queue player.",
+      "ko": "An object that loops media content using a queue player.",
+      "sourceHash": "a55fc44040ffc838cb50672bf13466b7e5003b3c1578337f29732cdbcfc0c25a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0208:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0209:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayer)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avplayer)*",
+      "sourceHash": "eb4dedaa9c9e48d2849c56e29c19230b50d101a791bf3c7cfd006d7d5862256d",
+      "status": "preserved"
+    }
+  ]
+}

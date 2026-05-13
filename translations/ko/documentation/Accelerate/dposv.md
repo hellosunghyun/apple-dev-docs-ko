@@ -48,4 +48,4 @@ func dposv_(_ uplo: UnsafePointer<CChar>, _ n: UnsafePointer<__LAPACK_int>, _ nr
 
 ---
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">*<a href="https://developer.apple.com/documentation/accelerate/dposv_(_:_:_:_:_:_:_:_:">View on Apple Developer</a>)*</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">오디오 형식 샘플링 속도(헤르츠)입니다.</span>

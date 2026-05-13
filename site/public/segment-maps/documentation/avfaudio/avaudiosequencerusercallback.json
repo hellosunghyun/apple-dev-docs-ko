@@ -1,0 +1,176 @@
+{
+  "docId": "documentation/AVFAudio/avaudiosequencerusercallback.md",
+  "title": "AVAudioSequencerUserCallback",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfaudio/avaudiosequencerusercallback",
+  "segments": [
+    {
+      "id": "seg:heading:avaudiosequencerusercallback:0000:0001",
+      "source": "AVAudioSequencerUserCallback",
+      "ko": "AVAudioSequencerUserCallback",
+      "sourceHash": "ce5ac0fd159b62468c87fe9ca5d9bf7700ea6803f170079e065e834f488c3684",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiosequencerusercallback:0001:0001",
+      "source": "**Framework**: AVFAudio **Kind**: typealias",
+      "ko": "**Framework**: AVFAudio **Kind**: typealias",
+      "sourceHash": "75c43000948d269ae13bdb05d824bebe3c97bf93a66237cc6f07499f59a5c7fa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:avaudiosequencerusercallback:0002:0001",
+      "source": "A callback the sequencer calls asynchronously during playback when it encounters a user event.",
+      "ko": "A callback the sequencer calls asynchronously during playback when it encounters a user event.",
+      "sourceHash": "cdb65abc93012f396a1d582aea44f08a182a4a31fe019f2a829d9d68f1a552ec",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:avaudiosequencerusercallback:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosequencerusercallback:0004:0001",
+      "source": "iOS 16.0+",
+      "ko": "iOS 16.0+",
+      "sourceHash": "5fae28f25779bf5506b927a8c960fe6af2e12e09ef97768114b8313d55112ab2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosequencerusercallback:0004:0002",
+      "source": "iPadOS 16.0+",
+      "ko": "iPadOS 16.0+",
+      "sourceHash": "f77e0f6a30dd2c503a16dbde182558aaab36a506f96dc40873fa2e1ba64bba47",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosequencerusercallback:0004:0003",
+      "source": "Mac Catalyst 16.0+",
+      "ko": "Mac Catalyst 16.0+",
+      "sourceHash": "87ecab2e4ea7b5b949ac3608f01726f8e88b11cb3d4b8233535e965e0f50886b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosequencerusercallback:0004:0004",
+      "source": "macOS 13.0+",
+      "ko": "macOS 13.0+",
+      "sourceHash": "facd0cc4424fc593ae2723d2a398223d80c795723af4ffc97b35cdba24e42cad",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosequencerusercallback:0004:0005",
+      "source": "tvOS 16.0+",
+      "ko": "tvOS 16.0+",
+      "sourceHash": "aa745d003697df92ede7688e881a058e7e5f70aeab21a5ff5d23b9fb59969b13",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:avaudiosequencerusercallback:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\ntypealias AVAudioSequencerUserCallback = (AVMusicTrack, Data, AVMusicTimeStamp) -> Void\n```",
+      "ko": "```swift\ntypealias AVAudioSequencerUserCallback = (AVMusicTrack, Data, AVMusicTimeStamp) -> Void\n```",
+      "sourceHash": "97d214064b1a2cc4324488915be68249cc2a68ab56c14888936ed9a6c9136f01",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "The sequencer delivers this callback asynchronously to the rendering thread on an internal queue.",
+      "ko": "This property returns `nil` if you’re not encoding.",
+      "sourceHash": "2ea984b6d71e9bd71d3aa823682c867e60de9c152b35d30233bb7afe93407988",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "The `userData` this returns is unique to each [`AVMusicUserEvent`](avmusicuserevent.md) instance.",
+      "ko": "The `userData` this returns is unique to each [`AVMusicUserEvent`](avmusicuserevent.md) instance.",
+      "sourceHash": "bb54ce2ab3f4c87e2912d9b31ce9055f06b87ce86b3cd8fb8a517c7d89a13f96",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:parameters:0009:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0010:0001",
+      "source": "`track`: The track that contains the user event.",
+      "ko": "`track`: The track that contains the user event.",
+      "sourceHash": "57d8591c2272bdb49cc31e97224546998e4b765cf440518270d73d17f75b83e7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0010:0002",
+      "source": "`userData`: The data used to initialize the user event.",
+      "ko": "`userData`: The data used to initialize the user event.",
+      "sourceHash": "92b9eba8427ae8b27e0611961c747cf4af1e0dd830be0c411cffa7230c526ae8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0010:0003",
+      "source": "`timeStamp`: The beat location of the event.",
+      "ko": "`timeStamp`: The beat location of the event.",
+      "sourceHash": "44aaf96e9827f601b4e4293ae79fd44d10601209eb5aab7a660a04c575554652",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[func setUserCallback(AVAudioSequencerUserCallback?)](avaudiosequencer/setusercallback(_:).md)",
+      "ko": "[func setUserCallback(AVAudioSequencerUserCallback?)](avaudiosequencer/setusercallback(_:).md)",
+      "sourceHash": "b6cf026ffa3a27c4e637a274bde46f9addf586ad0b83987789b521471bee2d34",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Adds a callback that the sequencer calls each time it encounters a user event during playback.",
+      "ko": "Adds a callback that the sequencer calls each time it encounters a user event during playback.",
+      "sourceHash": "8309ace0688aeb0d03f73ff3a0e69a72c918fa110c4c597754a2b9a0f90937f1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0014:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosequencerusercallback)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfaudio/avaudiosequencerusercallback)*",
+      "sourceHash": "dec6df65d3cefc92d8392d1de54cf76eeeeae2828a3f893aaf83883ef695f630",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "docId": "documentation/Accelerate/sparsesolve-3aphv.md",
+  "title": "SparseSolve(:::::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/sparsesolve-3aphv",
+  "segments": [
+    {
+      "id": "seg:heading:sparsesolve:0000:0001",
+      "source": "SparseSolve(_:_:_:_:_:)",
+      "ko": "SparseSolve(_:_:_:_:_:)",
+      "sourceHash": "a96076172bfa080dcd7e38891b4715a1a3c1db3956fa91568e36183e872e8c69",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:sparsesolve:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: func",
+      "ko": "**Framework**: Accelerate **Kind**: func",
+      "sourceHash": "92505afed2b9832f88ee8e8741948f4ea109b670dc30717430f0006e8f343391",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:sparsesolve:0002:0001",
+      "source": "Solves the equation *Ax = b* for vectors of single-precision values using the specified iterative method and opaque preconditioner.",
+      "ko": "Solves the equation *Ax = b* for vectors of single-precision values using the specified iterative method and opaque preconditioner.",
+      "sourceHash": "0f765493a0f79c3784c41b609cfc1d6491d117fb7ab3ce610d897d5d4671fc32",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:sparsesolve:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0004",
+      "source": "macOS 10.13+",
+      "ko": "macOS 10.13+",
+      "sourceHash": "23711ad8ad80199ce092027e03a626cd50cd126e092245e0901de2515c6d69d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0005",
+      "source": "tvOS 11.0+",
+      "ko": "tvOS 11.0+",
+      "sourceHash": "f8613ea6967abbd6daada1f1969b72355a9ba3fff48c588fc3608e03084c22ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:sparsesolve:0004:0007",
+      "source": "watchOS 4.0+",
+      "ko": "watchOS 4.0+",
+      "sourceHash": "6e82232663b452f4277a975a1caf6a9a283ad5665ddd0b8d870d4ca5b8a1f7c4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc SparseSolve(_ method: SparseIterativeMethod, _ A: SparseMatrix_Float, _ b: DenseVector_Float, _ x: DenseVector_Float, _ Preconditioner: SparseOpaquePreconditioner_Float) -> SparseIterativeStatus_t\n```",
+      "ko": "```swift\nfunc SparseSolve(_ method: SparseIterativeMethod, _ A: SparseMatrix_Float, _ b: DenseVector_Float, _ x: DenseVector_Float, _ Preconditioner: SparseOpaquePreconditioner_Float) -> SparseIterativeStatus_t\n```",
+      "sourceHash": "421d4711f9d26fcabfb015a8438aaa59389f9736cc06763874504b0e28437eba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "Return Value",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "A [`SparseIterativeStatus_t`](sparseiterativestatus_t.md) enumeration that represents the status of the iterative solve.",
+      "ko": "A [`SparseIterativeStatus_t`](sparseiterativestatus_t.md) enumeration that represents the status of the iterative solve.",
+      "sourceHash": "7c8dcfc59d7af8967046a5afe1cbdc60c580b37f654636cfb7515989db850a81",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "Use this function to solve a system of linear equations using a factored coefficient matrix.",
+      "ko": "이 값은 활성 비디오 형식 또는 활성 깊이 데이터 형식이 변경될 때마다 재설정됩니다.",
+      "sourceHash": "cf5f3140d575d209e96d4b93bd3c40e73dcb31858e4da0868e148de4440c7b91",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "Preconditioning the coefficient matrix can reduce the number of iterations the function requires to converge the system.",
+      "ko": "Preconditioning the coefficient matrix can reduce the number of iterations the function requires to converge the system.",
+      "sourceHash": "5fd8be27b4cf1a232f475ec64c533a7c2109c72c7f5868aae1bc04a1b5ec3028",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "The following figure shows two systems of equations where the coefficient matrix is sparse:",
+      "ko": "The following figure shows two systems of equations where the coefficient matrix is sparse:",
+      "sourceHash": "33723fa769153add448cb522d9468bb690533714390c06f91149666508808499",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0001",
+      "source": "![A mathematical equation that has one set of three simultaneous equations on the left.",
+      "ko": "![A mathematical equation that has one set of three simultaneous equations on the left.",
+      "sourceHash": "9f56d032d1255f00e035a7aed46b355609e5cb0e98dd71eccdc111de2ff3f271",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0002",
+      "source": "Each equation has three unknowns.",
+      "ko": "Each equation has three unknowns.",
+      "sourceHash": "f88f68aee21af61a456474808f3121cf100f6cbd175c9fafce2fb708da6b7f02",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0003",
+      "source": "The same set of simultaneous equations appears on the right as a single matrix equation, A x equals B.",
+      "ko": "The same set of simultaneous equations appears on the right as a single matrix equation, A x equals B.",
+      "sourceHash": "d843f44d035ff6e6b5d449191b78c2c3654327b76ad01c2a5af7c1dd9259aa93",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0004",
+      "source": "The single matrix equation consists of a three-by-three matrix multiplied by a three-element column matrix that equals a three-element column matrix.](https://docs-assets.developer.apple.com/published/0974a26754c699cdf34196f2c95365c3/media-3703931%402x.png)",
+      "ko": "The single matrix equation consists of a three-by-three matrix multiplied by a three-element column matrix that equals a three-element column matrix.](https://docs-assets.developer.apple.com/published/0974a26754c699cdf34196f2c95365c3/media-3703931%402x.png)",
+      "sourceHash": "bf72b2f60cdc3b5d234842ab0d8897a961c26e27b604627b7d7a129cafadac40",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0013:0001",
+      "source": "The following code solves this system by applying a diagonal scaling preconditioner and using the least squares minimum residual method:",
+      "ko": "The following code solves this system by applying a diagonal scaling preconditioner and using the least squares minimum residual method:",
+      "sourceHash": "b3d2ff48233e0f1c36f31cadddd2b642ffc09fabcbf51cc30618e3788b5bc36a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:discussion:0014:0001",
+      "source": "```swift\n/// Create the coefficient matrix _A_.\nlet rowIndices: [Int32] =    [ 0,  1, 1,  2]\nlet columnIndices: [Int32] = [ 2,  0, 2,  1]\nlet aValues: [Float] =       [10, 20, 5, 50]\n\nlet A = SparseConvertFromCoordinate(3, 3,\n                                    4, 1,\n                                    SparseAttributes_t(),\n                                    rowIndices, columnIndices,\n                                    aValues)\nlet preconditioner = SparseCreatePreconditioner(SparsePreconditionerDiagScaling,\n                                                A)\n\ndefer {\n    SparseCleanup(A)\n    SparseCleanup(preconditioner)\n}\n\n/// Create the right-hand-side vector, _b_.\nvar bValues: [Float] = [30, 35, 100]\nvar xValues = [Float](repeating: .nan, count: bValues.count)\n\nbValues.withUnsafeMutableBufferPointer { bPtr in\n    xValues.withUnsafeMutableBufferPointer { xPtr in\n        \n        let b = DenseVector_Float(count: 3,\n                                   data: bPtr.baseAddress!)\n        \n        let x = DenseVector_Float(count: 3,\n                                   data: xPtr.baseAddress!)\n        \n        SparseSolve(SparseLSMR(),\n                    A, b, x,\n                    preconditioner)\n    }\n}\n```",
+      "ko": "```swift\n/// Create the coefficient matrix _A_.\nlet rowIndices: [Int32] =    [ 0,  1, 1,  2]\nlet columnIndices: [Int32] = [ 2,  0, 2,  1]\nlet aValues: [Float] =       [10, 20, 5, 50]\n\nlet A = SparseConvertFromCoordinate(3, 3,\n                                    4, 1,\n                                    SparseAttributes_t(),\n                                    rowIndices, columnIndices,\n                                    aValues)\nlet preconditioner = SparseCreatePreconditioner(SparsePreconditionerDiagScaling,\n                                                A)\n\ndefer {\n    SparseCleanup(A)\n    SparseCleanup(preconditioner)\n}\n\n/// Create the right-hand-side vector, _b_.\nvar bValues: [Float] = [30, 35, 100]\nvar xValues = [Float](repeating: .nan, count: bValues.count)\n\nbValues.withUnsafeMutableBufferPointer { bPtr in\n    xValues.withUnsafeMutableBufferPointer { xPtr in\n        \n        let b = DenseVector_Float(count: 3,\n                                   data: bPtr.baseAddress!)\n        \n        let x = DenseVector_Float(count: 3,\n                                   data: xPtr.baseAddress!)\n        \n        SparseSolve(SparseLSMR(),\n                    A, b, x,\n                    preconditioner)\n    }\n}\n```",
+      "sourceHash": "2ffa46bf09e212ba7297706c1efdff6354fac11dbb9b7e25e729e344b6dacabc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0015:0001",
+      "source": "On return, x`Values` contains the values `[1.0, 2.0, 3.0]`.",
+      "ko": "On return, x`Values` contains the values `[1.0, 2.0, 3.0]`.",
+      "sourceHash": "74fc71d6b9ecc70dfb81de73b35f93b9a8bc1d6d2d214fa7f188005995d06315",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:parameters:0016:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0017:0001",
+      "source": "`method`: The iterative method.",
+      "ko": "`method`: The iterative method.",
+      "sourceHash": "919029770bc47b9cedec9feec14bcc9bcf5aed1cd8b6c95ad33ebfdd3fce529c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0017:0002",
+      "source": "`A`: The matrix *A*.",
+      "ko": "`A`: The matrix *A*.",
+      "sourceHash": "1231dc927b55d37fab298096ead06abc6fef2117e495cd8c4d81919dcbd56a42",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0017:0003",
+      "source": "`b`: The vector *b*.",
+      "ko": "`b`: The vector *b*.",
+      "sourceHash": "399547dbced1375c02b42ddabff3865baa7e812dbe974c6c5bd5f95f8d507edc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0017:0004",
+      "source": "`x`: The vector *x*.",
+      "ko": "`x`: The vector *x*.",
+      "sourceHash": "e286a688cd2690db2f3f695c040b9422ad31959df448f9effd7345f5eebac2c7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0017:0005",
+      "source": "`Preconditioner`: The preconditioner to apply.",
+      "ko": "`Preconditioner`: The preconditioner to apply.",
+      "sourceHash": "26635be1cee1dbba25010d8347149f389e9c06ea885542ac937a5c062538e744",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0018:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Double, DenseVector_Double, DenseVector_Double, SparseOpaquePreconditioner_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-1qwax.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Double, DenseVector_Double, DenseVector_Double, SparseOpaquePreconditioner_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-1qwax.md)",
+      "sourceHash": "efc86180cff9fda7c4bdfc43c9cae6c4712c1d79bef2bdec2cea4d00836f6059",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "Solves the equation *Ax = b* for vectors of double-precision values using the specified iterative method and opaque preconditioner.",
+      "ko": "Solves the equation *Ax = b* for vectors of double-precision values using the specified iterative method and opaque preconditioner.",
+      "sourceHash": "b12fff34a5ec3215d5b0b05175f1513203432e3540f724c1e75c41e68fc31f5f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Double, DenseVector_Double, DenseVector_Double, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-5vs11.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Double, DenseVector_Double, DenseVector_Double, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-5vs11.md)",
+      "sourceHash": "57be995d80b6e6da93ab0cecbb3a27293f778f483e77d8c92016446c212bdfb5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "Solves the equation *Ax = b* for vectors of double-precision values using the specified iterative method and preconditioner type.",
+      "ko": "Solves the equation *Ax = b* for vectors of double-precision values using the specified iterative method and preconditioner type.",
+      "sourceHash": "24ac16edbc78690a3414c0159ded604c14a883567f0ec97e71de3b6bd346e708",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Float, DenseVector_Float, DenseVector_Float, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-9nzvm.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, SparseMatrix_Float, DenseVector_Float, DenseVector_Float, SparsePreconditioner_t) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-9nzvm.md)",
+      "sourceHash": "f6ddaf5fc687c998c960ec39814d81de52c272843733f1048c0bb7b7c9f70bfc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "Solves the equation *Ax = b* for vectors of single-precision values using the specified iterative method and preconditioner type.",
+      "ko": "Solves the equation *Ax = b* for vectors of single-precision values using the specified iterative method and preconditioner type.",
+      "sourceHash": "e83418163e62633e6396b01f834a7df9b87f9cb3bbff7f28ad11a86e027e2a1e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseVector_Double, DenseVector_Double) -> Void, DenseVector_Double, DenseVector_Double, SparseOpaquePreconditioner_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-6i1nx.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseVector_Double, DenseVector_Double) -> Void, DenseVector_Double, DenseVector_Double, SparseOpaquePreconditioner_Double) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-6i1nx.md)",
+      "sourceHash": "77ebe21036576ee9772637771dde04dc288114af78b69b303a5198dbbfa4ac78",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "Solves the equation *Ax = b* for vectors of double-precision values, treating *A* as an operator and using the specified iterative method and preconditioner.",
+      "ko": "Solves the equation *Ax = b* for vectors of double-precision values, treating *A* as an operator and using the specified iterative method and preconditioner.",
+      "sourceHash": "5fa9b39e7f2fb3d4d4aac3b8381b566206db089ae25dccfc5fc86c059f827eac",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseVector_Float, DenseVector_Float) -> Void, DenseVector_Float, DenseVector_Float, SparseOpaquePreconditioner_Float) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-7wnum.md)",
+      "ko": "[func SparseSolve(SparseIterativeMethod, (Bool, CBLAS_TRANSPOSE, DenseVector_Float, DenseVector_Float) -> Void, DenseVector_Float, DenseVector_Float, SparseOpaquePreconditioner_Float) -> SparseIterativeStatus_t](sparsesolve(_:_:_:_:_:)-7wnum.md)",
+      "sourceHash": "f5408b7810ef8da033552169d0b13f429d4f62378c7dd8e2d9f968a2817bca3c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "Solves the equation *Ax = b* for vectors of single-precision values, treating *A* as an operator and using the specified iterative method and preconditioner.",
+      "ko": "Solves the equation *Ax = b* for vectors of single-precision values, treating *A* as an operator and using the specified iterative method and preconditioner.",
+      "sourceHash": "bea8d358974e313df52242d17fefcd3a8e0afc0f5b899b35bd6615e4d851786e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0029:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/sparsesolve(_:_:_:_:_:)-3aphv)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/sparsesolve(_:_:_:_:_:)-3aphv)*",
+      "sourceHash": "40a99e98219f71d216bd6b12cbf53717f2059c9cb63d3a701ce454f2a2f4a80f",
+      "status": "failed"
+    }
+  ]
+}

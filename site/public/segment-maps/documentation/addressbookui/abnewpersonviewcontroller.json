@@ -1,0 +1,470 @@
+{
+  "docId": "documentation/AddressBookUI/abnewpersonviewcontroller.md",
+  "title": "ABNewPersonViewController",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/addressbookui/abnewpersonviewcontroller",
+  "segments": [
+    {
+      "id": "seg:heading:abnewpersonviewcontroller:0000:0001",
+      "source": "ABNewPersonViewController",
+      "ko": "ABNewPersonViewController",
+      "sourceHash": "ed28ab00a0bd81c4ad03df05f954a45261a72efab2ea672219498541023bfeb0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:abnewpersonviewcontroller:0001:0001",
+      "source": "**Framework**: Address Book UI **Kind**: class",
+      "ko": "**Framework**: Address Book UI **Kind**: class",
+      "sourceHash": "cabc23a4e06111b5ba5768de218a1e14a77a093d764c86987d570452407f45bc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:abnewpersonviewcontroller:0002:0001",
+      "source": "A view controller presenting an interface to create a contact.",
+      "ko": "연락처를 생성하는 인터페이스를 제공하는 뷰 컨트롤러입니다.",
+      "sourceHash": "6b26fc3ef40a731206afd898d0904403c003a80051a38c8f33bd1db8a7676f35",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:abnewpersonviewcontroller:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:abnewpersonviewcontroller:0004:0001",
+      "source": "iOS 2.0+",
+      "ko": "iOS 2.0+",
+      "sourceHash": "5bb0202e6f5db1a5b601dfae51741cbb965d59930ca2c18867b051267ae70b48",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:abnewpersonviewcontroller:0004:0002",
+      "source": "iPadOS 2.0+",
+      "ko": "iPadOS 2.0+",
+      "sourceHash": "9d81fb75e396d38bd4a50f627e688708b83132fe120fe8e7fa8ae79afab2e87b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:abnewpersonviewcontroller:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nclass ABNewPersonViewController\n```",
+      "ko": "```swift\nclass ABNewPersonViewController\n```",
+      "sourceHash": "f259cc4fca9d34b127faf4cc81834845d46f48679dd77acc770c33145ef1817d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:overview:0007:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0008:0001",
+      "source": "New-person view controllers are modal view controllers that manage a set of view controllers used to create a contact (`ABPersonRef`) and edit its properties.",
+      "ko": "New-person 뷰 컨트롤러는 연락처(`ABPersonRef`)를 생성하고 해당 속성을 편집하기 위해 사용되는 뷰 컨트롤러 집합을 관리하는 모달 뷰 컨트롤러입니다.",
+      "sourceHash": "2b036d3258c8708d53adf3f3a3ea6febf6bd157381e403cbbffcfa17ed5ccf68",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0009:0001",
+      "source": "❗ **Important**: New-person view controllers must be used with a navigation controller in order to function properly.",
+      "ko": "❗ **중요**: New-person 뷰 컨트롤러는 정상 동작을 위해 내비게이션 컨트롤러와 함께 사용해야 합니다.",
+      "sourceHash": "bef66a1ea3591fbbde33f1e1b8e1020daaf9305b8e7cab26ddc287301570503b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:overview:0009:0002",
+      "source": "It is recommended that you present a new-person view controller modally.",
+      "ko": "새 연락처 뷰 컨트롤러를 모달 방식으로 표시할 것을 권장합니다.",
+      "sourceHash": "50fccf7d274e32cedf0d1c40316530a6886f884edf0e8fb3423f38cf74454bd8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:subclassing:0010:0001",
+      "source": "Subclassing",
+      "ko": "Subclassing",
+      "sourceHash": "1a7de0e9b625518ca01057cc4119c64f88e01793c9605a18db7ad76d82211c14",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:subclassing:0011:0001",
+      "source": "The `ABNewPersonViewController` class does not support subclassing.",
+      "ko": "`ABNewPersonViewController` 클래스는 서브클래싱을 지원하지 않습니다.",
+      "sourceHash": "8db57fdfeeb352465a1601d905ecce9227988dd22890c1565b738635defe9c4a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0012:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:responding-to-view-controller-interactions:0013:0001",
+      "source": "Responding to View Controller Interactions",
+      "ko": "뷰 컨트롤러 상호작용 처리",
+      "sourceHash": "ac0499614f7ba937e4f4674dc728b8f179892fc79ddc15996ee91558f7fb0d82",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:responding-to-view-controller-interactions:0014:0001",
+      "source": "[var newPersonViewDelegate: (any ABNewPersonViewControllerDelegate)?](abnewpersonviewcontroller/newpersonviewdelegate.md)",
+      "ko": "[var newPersonViewDelegate: (any ABNewPersonViewControllerDelegate)?](abnewpersonviewcontroller/newpersonviewdelegate.md)",
+      "sourceHash": "7e3d4cd023fe1257715df6b814a2231e057aeb232dcdb54af98007c06e6fd332",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:responding-to-view-controller-interactions:0015:0001",
+      "source": "The delegate of a new-person view controller.",
+      "ko": "new-person 뷰 컨트롤러의 델리게이트입니다.",
+      "sourceHash": "02b80428715f03eb32d159067f2498b0eaab2bed6d62fc52c6f14086102a5721",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:responding-to-view-controller-interactions:0016:0001",
+      "source": "[protocol ABNewPersonViewControllerDelegate](abnewpersonviewcontrollerdelegate.md)",
+      "ko": "[protocol ABNewPersonViewControllerDelegate](abnewpersonviewcontrollerdelegate.md)",
+      "sourceHash": "57e4aad7b88156b6c204712a62e4c07a937076d8681dd41c3116f4d94fda6e5d",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:responding-to-view-controller-interactions:0017:0001",
+      "source": "The `ABNewPersonViewControllerDelegate` protocol declares the interface that [`ABNewPersonViewController`](abnewpersonviewcontroller.md) delegates must implement.",
+      "ko": "`ABNewPersonViewControllerDelegate` 프로토콜은 [`ABNewPersonViewController`](abnewpersonviewcontroller.md) 델리게이트가 구현해야 하는 인터페이스를 선언합니다.",
+      "sourceHash": "1b76797b5f515b4bfa42fa86d0673df17bcee48a0c6228f2951406deeab91cdb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:displaying-person-properties:0018:0001",
+      "source": "Displaying Person Properties",
+      "ko": "사람 속성 표시",
+      "sourceHash": "b838ccbc5907eb99688616917074a44e3d1bc94417d60127cb7e4e5e8d5585dd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:displaying-person-properties:0019:0001",
+      "source": "[var displayedPerson: ABRecord?](abnewpersonviewcontroller/displayedperson.md)",
+      "ko": "[var displayedPerson: ABRecord?](abnewpersonviewcontroller/displayedperson.md)",
+      "sourceHash": "2f5ff2f3d28dedc96b06e28ef53f0f20d89f917091d1239dd996e291e7c1fe31",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:displaying-person-properties:0020:0001",
+      "source": "Optional.",
+      "ko": "Optional.",
+      "sourceHash": "a9aaf97cc9e9ce8a8778726775a058f6e317e5f7f5f9d30fc96078d534378b30",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:displaying-person-properties:0020:0002",
+      "source": "Specifies the person properties that the new-person view controller pre-fills in its views.",
+      "ko": "새 연락처 뷰 컨트롤러가 뷰에서 미리 채우는 사람 속성을 지정합니다.",
+      "sourceHash": "f7940063ff321f09ac04bf6506486259b58fe16104b9697f105b1cad23c306ea",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:configuring-new-person-views:0021:0001",
+      "source": "Configuring New Person Views",
+      "ko": "새 연락처 뷰 구성",
+      "sourceHash": "813f724c9e096fa3f210c16b0afd9dd562462c81c7de4e9b2dd55aa442701256",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-new-person-views:0022:0001",
+      "source": "[var addressBook: ABAddressBook?](abnewpersonviewcontroller/addressbook.md)",
+      "ko": "[var addressBook: ABAddressBook?](abnewpersonviewcontroller/addressbook.md)",
+      "sourceHash": "6ce4397d73c1117d1eb6f895e988d7e251313dc30572b111436a47570fd34cfe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-new-person-views:0023:0001",
+      "source": "Optional.",
+      "ko": "Optional.",
+      "sourceHash": "a9aaf97cc9e9ce8a8778726775a058f6e317e5f7f5f9d30fc96078d534378b30",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-new-person-views:0023:0002",
+      "source": "The address book to which the new contact is added.",
+      "ko": "새 연락처가 추가되는 주소록입니다.",
+      "sourceHash": "31d16115b14f60935d173ace27d0162e42e738e75ef31b5542482fdcec8cfbe2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:configuring-new-person-views:0024:0001",
+      "source": "[var parentGroup: ABRecord?](abnewpersonviewcontroller/parentgroup.md)",
+      "ko": "[var parentGroup: ABRecord?](abnewpersonviewcontroller/parentgroup.md)",
+      "sourceHash": "3c2d041a728bc2d4df2fb1ebfd6fff78f552c80a167094d4c2b2132b48f27085",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-new-person-views:0025:0001",
+      "source": "Optional.",
+      "ko": "Optional.",
+      "sourceHash": "a9aaf97cc9e9ce8a8778726775a058f6e317e5f7f5f9d30fc96078d534378b30",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:configuring-new-person-views:0025:0002",
+      "source": "Specifies the group to which to add the new contact on save.",
+      "ko": "저장 시 새 연락처를 추가할 그룹을 지정합니다.",
+      "sourceHash": "a5a8ddaf1e925d0c8ecc46e270b4f26b1b3e3fd16b76202b0da53cc07b6fd31d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:relationships:0026:0001",
+      "source": "Relationships",
+      "ko": "Relationships",
+      "sourceHash": "85752a46aa46dc5e13e8f440ed8e93d127ff3321709530dff0e9834c6e45c6ba",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:inherits-from:0027:0001",
+      "source": "Inherits From",
+      "ko": "상속",
+      "sourceHash": "4e5ba090a8f14877ff680126ce65845e23c287d9bb11301ad825f572bcd9899a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:inherits-from:0028:0001",
+      "source": "[UIViewController](../UIKit/UIViewController.md)",
+      "ko": "[UIViewController](../UIKit/UIViewController.md)",
+      "sourceHash": "adf2d202eccb78146de4e69ffc47ab396b3c90b8b333c2d550fd0ecc43cca500",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:conforms-to:0029:0001",
+      "source": "Conforms To",
+      "ko": "준수",
+      "sourceHash": "0e8a363ad1447bfcbb96694ca7731e98eab17f855848616292f35955cc862282",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0001",
+      "source": "[CVarArg](../Swift/CVarArg.md)",
+      "ko": "[CVarArg](../Swift/CVarArg.md)",
+      "sourceHash": "48bf96e2ee88679c1753e53250f05fe8fc43165e318fae6a8127c3703ed8b0cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0002",
+      "source": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "ko": "[CustomDebugStringConvertible](../Swift/CustomDebugStringConvertible.md)",
+      "sourceHash": "c25bfe3eee3c8f56b52c482a83c6fc2d1892186510743a09a6672a42a854afc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0003",
+      "source": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "ko": "[CustomStringConvertible](../Swift/CustomStringConvertible.md)",
+      "sourceHash": "986ee3e62a79f644216d81e84da6b6ea81f3c87fe0137eba7bd495577883c5cd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0004",
+      "source": "[Equatable](../Swift/Equatable.md)",
+      "ko": "[Equatable](../Swift/Equatable.md)",
+      "sourceHash": "32cc73e4b9865acd10121dad3d014ffb4fef76316fe0297a863bd3e1778aaf62",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0005",
+      "source": "[Hashable](../Swift/Hashable.md)",
+      "ko": "[Hashable](../Swift/Hashable.md)",
+      "sourceHash": "596311f0d61be4e839f1536d517ce8a0e084d3ed47e9df3c2f8b6a7efb531798",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0006",
+      "source": "[NSCoding](../Foundation/NSCoding.md)",
+      "ko": "[NSCoding](../Foundation/NSCoding.md)",
+      "sourceHash": "af607052cedc51e60ff863609cb573f7fdea5ddf489103c8b59416e9aa32e36a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0007",
+      "source": "[NSExtensionRequestHandling](../Foundation/NSExtensionRequestHandling.md)",
+      "ko": "[NSExtensionRequestHandling](../Foundation/NSExtensionRequestHandling.md)",
+      "sourceHash": "a644066b4c5e9c44f9257c81089f2af435e0d51051a006fcc29fc402c4ac55d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0008",
+      "source": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "ko": "[NSObjectProtocol](../ObjectiveC/NSObjectProtocol.md)",
+      "sourceHash": "b2e74fd0b907a1a2bdc282457b6ee29f33987c92d4494715dc4e2d191a74d57f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0009",
+      "source": "[NSTouchBarProvider](../AppKit/NSTouchBarProvider.md)",
+      "ko": "[NSTouchBarProvider](../AppKit/NSTouchBarProvider.md)",
+      "sourceHash": "9dfa71bff55736eefa318deb22be5caf2296f09da678d4ebc3ad1a417e23f402",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0010",
+      "source": "[Sendable](../Swift/Sendable.md)",
+      "ko": "[Sendable](../Swift/Sendable.md)",
+      "sourceHash": "210341acfadf3b89b3cebc6f418829461ed2025b7ae46829d3d8e446e64e89fd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0011",
+      "source": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "ko": "[SendableMetatype](../Swift/SendableMetatype.md)",
+      "sourceHash": "a1b0b6d74160b578b680ede3437d2953997dedd94686e55bd6658e07ac953bc6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0012",
+      "source": "[UIActivityItemsConfigurationProviding](../UIKit/UIActivityItemsConfigurationProviding.md)",
+      "ko": "[UIActivityItemsConfigurationProviding](../UIKit/UIActivityItemsConfigurationProviding.md)",
+      "sourceHash": "6da50384a148d0b45c69b9339a63d7ed41f484ae636fe242a1a0e1f45d7a0057",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0013",
+      "source": "[UIContentContainer](../UIKit/UIContentContainer.md)",
+      "ko": "[UIContentContainer](../UIKit/UIContentContainer.md)",
+      "sourceHash": "b92cac3b4384716ea3658ae5e2d7f94da0b788b6ada465b0543a78c64d8fa6c3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0014",
+      "source": "[UIFocusEnvironment](../UIKit/UIFocusEnvironment.md)",
+      "ko": "[UIFocusEnvironment](../UIKit/UIFocusEnvironment.md)",
+      "sourceHash": "b23439c88a64d088ef07fb2dd3d78208399ba0991ebac64a336b6f61045c8c24",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0015",
+      "source": "[UIKit.UIAppearanceContainer](doc://com.apple.addressbookui/objc(pl)UIAppearanceContainer)",
+      "ko": "[UIKit.UIAppearanceContainer](doc://com.apple.addressbookui/objc(pl)UIAppearanceContainer)",
+      "sourceHash": "80a1ed93c3c527b4edac2360a0b761815de6c1abf7ff61c35efa5883f5caf384",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0016",
+      "source": "[UIPasteConfigurationSupporting](../UIKit/UIPasteConfigurationSupporting.md)",
+      "ko": "[UIPasteConfigurationSupporting](../UIKit/UIPasteConfigurationSupporting.md)",
+      "sourceHash": "813eefbe03e89ced9174b1580d4703092d29ab1ebeebb562041059c6ffcdb444",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0017",
+      "source": "[UIResponderStandardEditActions](../UIKit/UIResponderStandardEditActions.md)",
+      "ko": "[UIResponderStandardEditActions](../UIKit/UIResponderStandardEditActions.md)",
+      "sourceHash": "f87cb2422bade02d44a2dfe76b8635eb7a3b276f8c58a3fd979e57b413a88d44",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0018",
+      "source": "[UIStateRestoring](../UIKit/UIStateRestoring.md)",
+      "ko": "[UIStateRestoring](../UIKit/UIStateRestoring.md)",
+      "sourceHash": "5393dd6c5de0c125c36c9e463145fd9630bbafd961ca7565c055bc48bef11508",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0019",
+      "source": "[UITraitChangeObservable](../UIKit/UITraitChangeObservable-67e94.md)",
+      "ko": "[UITraitChangeObservable](../UIKit/UITraitChangeObservable-67e94.md)",
+      "sourceHash": "b95bf76aa3f174ab593767424085f297f694ecdcf0cd5652103a78bb253a3c3c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0020",
+      "source": "[UITraitEnvironment](../UIKit/UITraitEnvironment.md)",
+      "ko": "[UITraitEnvironment](../UIKit/UITraitEnvironment.md)",
+      "sourceHash": "5ba9bc4969ede92f6885617a66b278e81466d41bd53277d55a664478437100e5",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:conforms-to:0030:0021",
+      "source": "[UIUserActivityRestoring](../UIKit/UIUserActivityRestoring.md)",
+      "ko": "[UIUserActivityRestoring](../UIKit/UIUserActivityRestoring.md)",
+      "sourceHash": "bdf2cd719048e157f3a777b7c6cb5cfa951647cf53367651bfa6dd36a25d0fa6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0031:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[class ABPersonViewController](abpersonviewcontroller.md)",
+      "ko": "[class ABPersonViewController](abpersonviewcontroller.md)",
+      "sourceHash": "11dcb5670f352abf71f4873d2db8733870daf7836a1b9b6569c7f8be3fd7b4c7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "The `ABPersonViewController` class (whose instances are known as **person view controllers**) implements the view used to display a person record (`ABPersonRef`).",
+      "ko": "`ABPersonViewController` 클래스(인스턴스는 **person view controllers**로 알려짐)는 사람 레코드(`ABPersonRef`)를 표시하는 데 사용되는 뷰를 구현합니다.",
+      "sourceHash": "8c7525aaca9d2cb1725e0c795499ea9cbeb0e66e1107472435e6ab2ff226d7b8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[class ABUnknownPersonViewController](abunknownpersonviewcontroller.md)",
+      "ko": "[class ABUnknownPersonViewController](abunknownpersonviewcontroller.md)",
+      "sourceHash": "dce103c0b8abfa5b58032e21980698b90ed3e8e1bfde92a5f71f005d955cdab8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "The `ABUnknownPersonViewController` class (whose instances are known as **unknown-person view controllers**) implements a view controller used to create a person record from a set of person properties.",
+      "ko": "`ABUnknownPersonViewController` 클래스(인스턴스는 **unknown-person view controllers**로 알려짐)는 사람 속성 집합으로 사람 레코드를 생성하는 데 사용되는 뷰 컨트롤러를 구현합니다.",
+      "sourceHash": "8ed5ecc12435f8563cfed01c5876514518d3fdc27d00af0dc115c4dd0853c1b2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[func ABCreateStringWithAddressDictionary([AnyHashable : Any], Bool) -> String](abcreatestringwithaddressdictionary(_:_:).md)",
+      "ko": "[func ABCreateStringWithAddressDictionary([AnyHashable : Any], Bool) -> String](abcreatestringwithaddressdictionary(_:_:).md)",
+      "sourceHash": "33f7e3346924da4ce10618fe6cb06c34b2e9a2a7c3b846831d9a4f06cb0b4a4d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Returns a formatted address from an address property.",
+      "ko": "주소 속성에서 서식이 적용된 주소를 반환합니다.",
+      "sourceHash": "9de3775bf28731f9b36223b892796b7dff51572515704f3581bd82321784cc5c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0038:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/addressbookui/abnewpersonviewcontroller)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/addressbookui/abnewpersonviewcontroller)*",
+      "sourceHash": "1e6a09f1e842f50b8353fc6b31a7f27021825ab2309bceed379826798b80036b",
+      "status": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "docId": "documentation/Accelerate/vimageconvert-xrgb2101010toargb16u.md",
+  "title": "vImageConvertXRGB2101010ToARGB16U(:::::::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vimageconvert-xrgb2101010toargb16u",
+  "segments": [
+    {
+      "id": "seg:heading:vimageconvertxrgb2101010toargb16u:0000:0001",
+      "source": "vImageConvert_XRGB2101010ToARGB16U(_:_:_:_:_:_:_:)",
+      "ko": "vImageConvert_XRGB2101010ToARGB16U(_:_:_:_:_:_:_:)",
+      "sourceHash": "3a9109b53f7ec038ccaedcc7e0da05ba03a9eb2a83825c4a955e5b9776ecf37b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:vimageconvertxrgb2101010toargb16u:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: func",
+      "ko": "**Framework**: Accelerate **Kind**: func",
+      "sourceHash": "92505afed2b9832f88ee8e8741948f4ea109b670dc30717430f0006e8f343391",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:vimageconvertxrgb2101010toargb16u:0002:0001",
+      "source": "Converts an XRGB2101010 32-bit, 4-channel interleaved buffer to an unsigned 16-bit-per-channel, 4-channel interleaved buffer with permutation.",
+      "ko": "XRGB2101010 32비트 4채널 인터리브 버퍼를 순열이 적용된 채널당 부호 없는 16비트 4채널 인터리브 버퍼로 변환합니다.",
+      "sourceHash": "8167fbb2df0c5931d0c02c9aaf549cc8706c73ee43cd37285511fb7c89557151",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:vimageconvertxrgb2101010toargb16u:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:vimageconvertxrgb2101010toargb16u:0004:0001",
+      "source": "iOS 9.3+",
+      "ko": "iOS 9.3+",
+      "sourceHash": "71d0e03939219762ad99a207c01cbbfc8b6ad63ba40d6959cde00c159360a7cf",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:vimageconvertxrgb2101010toargb16u:0004:0002",
+      "source": "iPadOS 9.3+",
+      "ko": "iPadOS 9.3+",
+      "sourceHash": "8a9e26b09f686a1c6655642a8d2d26dcf14c6139a93776e05191980fd1f9dafe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:vimageconvertxrgb2101010toargb16u:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:vimageconvertxrgb2101010toargb16u:0004:0004",
+      "source": "macOS 10.12+",
+      "ko": "macOS 10.12+",
+      "sourceHash": "51bf670c7a7e82316fce5cadc625588deed5e08ff14f452868ac8417f95357a7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:vimageconvertxrgb2101010toargb16u:0004:0005",
+      "source": "tvOS 10.0+",
+      "ko": "tvOS 10.0+",
+      "sourceHash": "d1a7eced7578f36895aaf3e63b04e8fb117f734cbd59d4226a2f188b5f7d2e8f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:vimageconvertxrgb2101010toargb16u:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:vimageconvertxrgb2101010toargb16u:0004:0007",
+      "source": "watchOS 3.0+",
+      "ko": "watchOS 3.0+",
+      "sourceHash": "f5065b96913eb5dd10311b6694d2b1cf9b615a8eb0e13c476b894add036272df",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc vImageConvert_XRGB2101010ToARGB16U(_ src: UnsafePointer<vImage_Buffer>, _ alpha: UInt16, _ dest: UnsafePointer<vImage_Buffer>, _ RGB101010RangeMin: Int32, _ RGB101010RangeMax: Int32, _ permuteMap: UnsafePointer<UInt8>!, _ flags: vImage_Flags) -> vImage_Error\n```",
+      "ko": "```swift\nfunc vImageConvert_XRGB2101010ToARGB16U(_ src: UnsafePointer<vImage_Buffer>, _ alpha: UInt16, _ dest: UnsafePointer<vImage_Buffer>, _ RGB101010RangeMin: Int32, _ RGB101010RangeMax: Int32, _ permuteMap: UnsafePointer<UInt8>!, _ flags: vImage_Flags) -> vImage_Error\n```",
+      "sourceHash": "bace0b92018390a2da661d0e4e262c04fea01c0c41e8bf93997f3123e31436b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "[`kvImageNoError`](kvimagenoerror.md); otherwise, one of the error codes in [`Data Types and Constants`](data-types-and-constants.md).",
+      "ko": "[`kvImageNoError`](kvimagenoerror.md)가 반환되며, 그렇지 않으면 [`Data Types and Constants`](data-types-and-constants.md)의 오류 코드 중 하나가 반환됩니다.",
+      "sourceHash": "979342ea7579a9f2a5e6c4ef7ce9b4f1a02238e0c5adea66caf89e65271a694d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "The `RGB101010RangeMin` and `RGB101010RangeMax` parameters allow you to specify that the function represents source pixel values that are outside of the range `0.0 ...",
+      "ko": "`RGB101010RangeMin`과 `RGB101010RangeMax` 매개변수를 사용하면 함수에서 `0.0 ...` 범위를 벗어나는 소스 픽셀 값을 지정할 수 있습니다.",
+      "sourceHash": "9fbf9d65a03e8e7232aeb85e5535fac77ac190f664f827bfeed9b5eba03a46fc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "1.0`.",
+      "ko": "1.0`.",
+      "sourceHash": "bf8fbd4223a2e1dc632c8e0f95a0ad0508e8866e401c9dce1713a634ea7a32c8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0003",
+      "source": "For full-range pixel values, specify `RGB101010RangeMin` and `RGB101010RangeMax` as the following:",
+      "ko": "전체 범위 픽셀 값의 경우 `RGB101010RangeMin` 및 `RGB101010RangeMax`를 다음과 같이 지정합니다:",
+      "sourceHash": "b0624c3bd994838be6d0e5ddfe9a73a72ebf14fcc699b50297e2f4d673025e07",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0011:0001",
+      "source": "```swift\n RGB101010RangeMin = 0\n RGB101010RangeMax = 1023\n```",
+      "ko": "```swift\n RGB101010RangeMin = 0\n RGB101010RangeMax = 1023\n```",
+      "sourceHash": "d89257a4c43c4c46de44ed4a3b45b4c7ff110d74358385e12e2f439b0cb3e8d8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0012:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0013:0001",
+      "source": "`src`: A pointer to the vImage buffer that references 10-bit RGB interleaved source pixels.",
+      "ko": "`src`: 10-bit RGB 인터리브 소스 픽셀을 참조하는 vImage 버퍼에 대한 포인터입니다.",
+      "sourceHash": "4aeabcdc30cb917f91278e5c1e79bdbff05a1cbeacdabe8e8943fd72eadc4e80",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0002",
+      "source": "`alpha`: The constant destination alpha value.",
+      "ko": "`alpha`: 고정된 대상 alpha 값입니다.",
+      "sourceHash": "e8bccab0b1213860b6958138ca3a4756b240686b2df7ec3cbf9278e392ecb838",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0003",
+      "source": "`dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [`height`](vimage_buffer/height.md), [`width`](vimage_buffer/width.md), and [`rowBytes`](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.",
+      "ko": "`dest`: 대상 vImage 버퍼 구조체를 가리키는 포인터입니다. 이 구조체의 [`height`](vimage_buffer/height.md), [`width`](vimage_buffer/width.md), [`rowBytes`](vimage_buffer/rowbytes.md) 필드를 채우고, 적절한 크기의 데이터 버퍼를 할당해야 합니다. 반환 시 이 구조체가 가리키는 데이터 버퍼에는 대상 이미지 데이터가 들어 있습니다. 더 이상 데이터 버퍼가 필요하지 않으면 메모리 누수를 방지하기 위해 메모리를 해제해야 합니다.",
+      "sourceHash": "3a12d6fab2cf9b6658e090d04cb679b1f7ba65fa18da0acfa4abecf8b66611f6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0004",
+      "source": "`RGB101010RangeMin`: The minimum pixel value for the source image range.",
+      "ko": "`RGB101010RangeMin`: 소스 이미지 범위의 최소 픽셀 값입니다.",
+      "sourceHash": "14a9901b0fa39eb688c5667daed8004565196df5c3506fe81d111cafe6493048",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0005",
+      "source": "`RGB101010RangeMax`: The maximum pixel value for the source image range.",
+      "ko": "`RGB101010RangeMax`: 소스 이미지 범위의 최대 픽셀 값입니다.",
+      "sourceHash": "24046cc6d36cf7f0c4efa2c6b5eb47c4faf415a973ed681dbfbc87bd4652edd1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0006",
+      "source": "`permuteMap`: An array of four 8-bit integers with the values `0`, `1`, `2`, and 3, in some order. Each value specifies the channel from the source image that the function copies to the destination channel at the corresponding index.",
+      "ko": "`permuteMap`: 값이 `0`, `1`, `2`, `3`으로 구성된 임의 순서의 8비트 정수 4개 배열입니다. 각 값은 함수가 해당 인덱스의 대상 채널로 소스 이미지에서 복사할 채널을 지정합니다.",
+      "sourceHash": "55ba4daba8cc368f9c7c7b9ceb13ab4b0feaa92f783474acbe22b2099b09095b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0013:0007",
+      "source": "`flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [`kvImageDoNotTile`](kvimagedonottile.md); otherwise, pass [`kvImageNoFlags`](kvimagenoflags.md).",
+      "ko": "`flags`: 연산 수행 시 사용할 옵션입니다. 코드에서 자체 타일링이나 자체 멀티스레딩을 구현하는 경우 [`kvImageDoNotTile`](kvimagedonottile.md)를 전달하고, 그렇지 않으면 [`kvImageNoFlags`](kvimagenoflags.md)를 전달해야 합니다.",
+      "sourceHash": "1154c204190a627022fa22a830a59f2b31c2fe7618d11e8b8a82af9431eca693",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0014:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func vImageConvert_ARGB2101010ToARGB8888(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, Int32, Int32, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageconvert_argb2101010toargb8888(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageConvert_ARGB2101010ToARGB8888(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, Int32, Int32, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageconvert_argb2101010toargb8888(_:_:_:_:_:_:).md)",
+      "sourceHash": "a653422ab51a6433f5da3fea582419e55a39d03f4c96369b78a30d558d0d0eb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Converts an ARGB2101010 32-bit, 4-channel interleaved buffer to an 8-bit-per-channel, 4-channel interleaved buffer with permutation.",
+      "ko": "ARGB2101010 32비트 4채널 인터리브 버퍼를 순열이 적용된 채널당 8비트 4채널 인터리브 버퍼로 변환합니다.",
+      "sourceHash": "04679329fb4c2d4dbc30faec54695392bacc638bb92e4d4c1f6820c60539dd06",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func vImageConvert_XRGB2101010ToARGB8888(UnsafePointer<vImage_Buffer>, Pixel_8, UnsafePointer<vImage_Buffer>, Int32, Int32, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageconvert_xrgb2101010toargb8888(_:_:_:_:_:_:_:).md)",
+      "ko": "[func vImageConvert_XRGB2101010ToARGB8888(UnsafePointer<vImage_Buffer>, Pixel_8, UnsafePointer<vImage_Buffer>, Int32, Int32, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageconvert_xrgb2101010toargb8888(_:_:_:_:_:_:_:).md)",
+      "sourceHash": "349704dc46c80ea755c256486b4c0978dd10e8cd151fa2f488236baea7848e78",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Converts an XRGB2101010 32-bit, 4-channel interleaved buffer to an 8-bit-per-channel, 4-channel interleaved buffer with permutation.",
+      "ko": "XRGB2101010 32비트 4채널 인터리브 버퍼를 순열이 적용된 채널당 8비트 4채널 인터리브 버퍼로 변환합니다.",
+      "sourceHash": "d67ef46eda9df79c2687e306771b4fc2808fe503342c4cff8efa15531460a0d5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[func vImageConvert_ARGB2101010ToARGB16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, Int32, Int32, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageconvert_argb2101010toargb16u(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageConvert_ARGB2101010ToARGB16U(UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, Int32, Int32, UnsafePointer<UInt8>!, vImage_Flags) -> vImage_Error](vimageconvert_argb2101010toargb16u(_:_:_:_:_:_:).md)",
+      "sourceHash": "c064f0d60a8f45aabd0eb8eb4f6ada776ca452a3721d47e78524f48101f0b439",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "Converts an ARGB2101010 32-bit, 4-channel interleaved buffer to an unsigned 16-bit-per-channel, 4-channel interleaved buffer with permutation.",
+      "ko": "ARGB2101010 32비트 4채널 인터리브 버퍼를 순열이 적용된 채널당 부호 없는 16비트 4채널 인터리브 버퍼로 변환합니다.",
+      "sourceHash": "37de9a7f8297b684c5778315f45550764f74a30f78afdf6273773acff4830a75",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0021:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimageconvert_xrgb2101010toargb16u(_:_:_:_:_:_:_:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vimageconvert_xrgb2101010toargb16u(_:_:_:_:_:_:_:))*",
+      "sourceHash": "7f6e20996ff41bb7308d58ac4c2dade19867ada72903a8ab83fe2792329f28da",
+      "status": "machine_translated"
+    }
+  ]
+}

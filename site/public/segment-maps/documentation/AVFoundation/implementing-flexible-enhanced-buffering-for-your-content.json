@@ -1,0 +1,155 @@
+{
+  "docId": "documentation/AVFoundation/implementing-flexible-enhanced-buffering-for-your-content.md",
+  "title": "Implementing flexible enhanced buffering for your content",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/implementing-flexible-enhanced-buffering-for-your-content",
+  "segments": [
+    {
+      "id": "seg:heading:implementing-flexible-enhanced-buffering-for-your-content:0000:0001",
+      "source": "Implementing flexible enhanced buffering for your content",
+      "ko": "Implementing flexible enhanced buffering for your content",
+      "sourceHash": "54251f3fc034da0171a300efd7e89b6d831aafb78d4f7ddf24f3b251c0b93ece",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:implementing-flexible-enhanced-buffering-for-your-content:0001:0001",
+      "source": "**Framework**: AVFoundation",
+      "ko": "**Framework**: AVFoundation",
+      "sourceHash": "d1a1a81bcb090684ac27d86fff88465af08239993e5a6442a93dc76635a7ffc2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:implementing-flexible-enhanced-buffering-for-your-content:0002:0001",
+      "source": "Configure your app for flexible enhanced buffering to stream content faster to AirPlay-enabled devices and supported CarPlay vehicles.",
+      "ko": "Configure your app for flexible enhanced buffering to stream content faster to AirPlay-enabled devices and supported CarPlay vehicles.",
+      "sourceHash": "f84be19d35103055f705dddf9216b6f8d3a23df76862a04128abc6d9dba57781",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:overview:0003:0001",
+      "source": "Overview",
+      "ko": "Overview",
+      "sourceHash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:overview:0004:0001",
+      "source": "If you’re working with content that requires flexibility with buffering, use the [`AVSampleBufferAudioRenderer`](avsamplebufferaudiorenderer.md) and [`AVSampleBufferRenderSynchronizer`](avsamplebufferrendersynchronizer.md) classes.",
+      "ko": "If you’re working with content that requires flexibility with buffering, use the [`AVSampleBufferAudioRenderer`](avsamplebufferaudiorenderer.md) and [`AVSampleBufferRenderSynchronizer`](avsamplebufferrendersynchronizer.md) classes.",
+      "sourceHash": "fef111f7e41dfa6788201d101949d6ff44079b4d7c9fa3fb685d58aca56eb9a8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:overview:0005:0001",
+      "source": "To implement flexible enhanced buffering, complete the following steps.",
+      "ko": "To implement flexible enhanced buffering, complete the following steps.",
+      "sourceHash": "deffbfa428f1fa701352231e4ec2a9b10335ab8c7df258bebd5106fefb8ae1f8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:overview:0006:0001",
+      "source": "Create a serialization queue to perform all playback operations on, and create the audio renderer and the render synchronizer to establish the media timeline.",
+      "ko": "Create a serialization queue to perform all playback operations on, and create the audio renderer and the render synchronizer to establish the media timeline.",
+      "sourceHash": "babae569a85844ca76d72103fc6089757e3f14f71b49ed4b81272017370ba4f6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:overview:0007:0001",
+      "source": "```swift\nlet serializationQueue = DispatchQueue(label: \"sample.buffer.player.serialization.queue\")\nlet audioRenderer = AVSampleBufferAudioRenderer()\nlet renderSynchronizer = AVSampleBufferRenderSynchronizer()\n```",
+      "ko": "```swift\nlet serializationQueue = DispatchQueue(label: \"sample.buffer.player.serialization.queue\")\nlet audioRenderer = AVSampleBufferAudioRenderer()\nlet renderSynchronizer = AVSampleBufferRenderSynchronizer()\n```",
+      "sourceHash": "8d6bdd43d0025a98254910ea24cfe4183fde73b0b5cb9017d11da40aaad1fc45",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overview:0008:0001",
+      "source": "Observe when the renderer has flushed enqueued audio, such as when the rate of playback increases or decreases, and re-enqueue audio data starting from the time the flush occurred.",
+      "ko": "Observe when the renderer has flushed enqueued audio, such as when the rate of playback increases or decreases, and re-enqueue audio data starting from the time the flush occurred.",
+      "sourceHash": "798a2b8301bfc229b485ad65f0ebfe02547b4b89174c094178fc5b71ee52693a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:overview:0009:0001",
+      "source": "```swift\nautomaticFlushObserver = NotificationCenter.default.addObserver(forName: .AVSampleBufferAudioRendererWasFlushedAutomatically,\n                                                                object: audioRenderer,\n                                                                queue: nil) { [weak self] notification in\n    self?.serializationQueue.async { [weak self] in\n        guard let self = self else { return } \n        // Restart from the point where the flush interrupts the audio.\n        let restartTime = (notification.userInfo?[AVSampleBufferAudioRendererFlushTimeKey] as? NSValue)?.timeValue\n        self.autoflushPlayback(restartingAt: restartTime)\n    }\n}\n```",
+      "ko": "```swift\nautomaticFlushObserver = NotificationCenter.default.addObserver(forName: .AVSampleBufferAudioRendererWasFlushedAutomatically,\n                                                                object: audioRenderer,\n                                                                queue: nil) { [weak self] notification in\n    self?.serializationQueue.async { [weak self] in\n        guard let self = self else { return } \n        // Restart from the point where the flush interrupts the audio.\n        let restartTime = (notification.userInfo?[AVSampleBufferAudioRendererFlushTimeKey] as? NSValue)?.timeValue\n        self.autoflushPlayback(restartingAt: restartTime)\n    }\n}\n```",
+      "sourceHash": "159d1b33865fa59017308305d3fcdce3333d0993672b18a9cd7d9b974ef3b809",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overview:0010:0001",
+      "source": "Add the audio renderer to the render synchronizer, to tell the audio renderer to follow the media timeline.",
+      "ko": "Add the audio renderer to the render synchronizer, to tell the audio renderer to follow the media timeline.",
+      "sourceHash": "83bfbe832e808e8a5c1341b2fae89faa27622205ee9a38eda618ac7d6246bf84",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:overview:0011:0001",
+      "source": "```swift\nrenderSynchronizer.addRenderer(audioRenderer)\n```",
+      "ko": "```swift\nrenderSynchronizer.addRenderer(audioRenderer)\n```",
+      "sourceHash": "1fb21245bed84557e19db7729acdeefab60c009beb3b8b38fc0b67765cc921ff",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:overview:0012:0001",
+      "source": "Tell the audio renderer to start processing audio data, and set the render synchronizer’s rate to `1` to start playback.",
+      "ko": "Tell the audio renderer to start processing audio data, and set the render synchronizer’s rate to `1` to start playback.",
+      "sourceHash": "7df6cfeb9347c3dc92f51fee4e8bd336791c57a90bc757b55c1223ed3003c123",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:overview:0013:0001",
+      "source": "```swift\nserializationQueue.async { [weak self] in\n    guard let self = self else { return }\n    // Start processing audio data and stop when there's no more data.\n    self.audioRenderer.requestMediaDataWhenReady(on: serializationQueue) { [weak self] in\n        guard let self = self else { return }\n        while self.audioRenderer.isReadyForMoreMediaData {\n            let sampleBuffer = self.nextSampleBuffer() // Returns nil at end of data.\n            if let sampleBuffer = sampleBuffer {\n                self.audioRenderer.enqueue(sampleBuffer)\n            } else {\n                // Tell the renderer to stop requesting audio data.\n                audioRenderer.stopRequestingMediaData()\n            }\n        }\n    }\n\n    // Start playback at the natural rate of the media.\n    self.renderSynchronizer.rate = 1.0\n}\n```",
+      "ko": "```swift\nserializationQueue.async { [weak self] in\n    guard let self = self else { return }\n    // Start processing audio data and stop when there's no more data.\n    self.audioRenderer.requestMediaDataWhenReady(on: serializationQueue) { [weak self] in\n        guard let self = self else { return }\n        while self.audioRenderer.isReadyForMoreMediaData {\n            let sampleBuffer = self.nextSampleBuffer() // Returns nil at end of data.\n            if let sampleBuffer = sampleBuffer {\n                self.audioRenderer.enqueue(sampleBuffer)\n            } else {\n                // Tell the renderer to stop requesting audio data.\n                audioRenderer.stopRequestingMediaData()\n            }\n        }\n    }\n\n    // Start playback at the natural rate of the media.\n    self.renderSynchronizer.rate = 1.0\n}\n```",
+      "sourceHash": "15c8af2d71b5774b42bf93a6ff7e34a107fd9d48f19040cf69ee0018b41f0a6a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0014:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[Implementing simple enhanced buffering for your content](implementing-simple-enhanced-buffering-for-your-content.md)",
+      "ko": "[Implementing simple enhanced buffering for your content](implementing-simple-enhanced-buffering-for-your-content.md)",
+      "sourceHash": "428128d1f8a90f61d41d9de268cadfa779829643f60bff2cc845d73da7020029",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Configure your app for simple enhanced buffering to stream content faster to AirPlay-enabled devices and supported CarPlay vehicles.",
+      "ko": "Configure your app for simple enhanced buffering to stream content faster to AirPlay-enabled devices and supported CarPlay vehicles.",
+      "sourceHash": "bdfd5eeca686bfe86cf91d56ad541f056448b5d85a2ebda4fad02f461aaf22b4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[Integrating AirPlay for long-form video apps](integrating-airplay-for-long-form-video-apps.md)",
+      "ko": "[Integrating AirPlay for long-form video apps](integrating-airplay-for-long-form-video-apps.md)",
+      "sourceHash": "987eaf8a1bca4c90eae97a3b14b70ea2c5b752e0871b9fedd0f854c31bd5d078",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Integrate AirPlay features and implement a dedicated external playback experience by preparing the routing system for long-form video playback.",
+      "ko": "Integrate AirPlay features and implement a dedicated external playback experience by preparing the routing system for long-form video playback.",
+      "sourceHash": "113c3f3afada0267a115901f62c26f476ea4aca77e0030d9b09487b009bd63c8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0019:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/implementing-flexible-enhanced-buffering-for-your-content)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/implementing-flexible-enhanced-buffering-for-your-content)*",
+      "sourceHash": "102da73c3bfed22c7b46cb358d3ae5d66bc905c91a93d66a82a483fd33979ecd",
+      "status": "preserved"
+    }
+  ]
+}

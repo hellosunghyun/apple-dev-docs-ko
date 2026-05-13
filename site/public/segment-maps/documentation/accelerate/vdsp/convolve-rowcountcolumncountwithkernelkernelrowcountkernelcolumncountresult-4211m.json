@@ -1,0 +1,162 @@
+{
+  "docId": "documentation/Accelerate/vdsp/convolve-rowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult-4211m.md",
+  "title": "convolve(:rowCount:columnCount:withKernel:kernelRowCount:kernelColumnCount:result:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vdsp/convolve-rowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult-4211m",
+  "segments": [
+    {
+      "id": "seg:heading:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0000:0001",
+      "source": "convolve(_:rowCount:columnCount:withKernel:kernelRowCount:kernelColumnCount:result:)",
+      "ko": "convolve(_:rowCount:columnCount:withKernel:kernelRowCount:kernelColumnCount:result:)",
+      "sourceHash": "fd6aae1ada4990a92bda8efc2551ba5355a32119636a40cb12edd9511c3afaf0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0002:0001",
+      "source": "Calculates the 2D convolution of a double-precision vector with an arbitrarily sized kernel.",
+      "ko": "임의 크기의 커널을 사용해 배정밀도 벡터의 2D 컨볼루션을 계산합니다.",
+      "sourceHash": "cf669c8516cac1fddc465f05c90d3aa586a2d1caa65eadf1438f0df5574079e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0004:0004",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0004:0005",
+      "source": "tvOS 13.0+",
+      "ko": "tvOS 13.0+",
+      "sourceHash": "030e6b7e51c85f674522c209ef14fc0e355ebd196e0259389daeaae4f69ad826",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:convolverowcountcolumncountwithkernelkernelrowcountkernelcolumncountresult:0004:0007",
+      "source": "watchOS 6.0+",
+      "ko": "watchOS 6.0+",
+      "sourceHash": "b51a82766977554dbe76aec20d5bc0ad6fe4984dddfcf6db82130e544b0631e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstatic func convolve<T, U, V>(_ vector: T, rowCount: Int, columnCount: Int, withKernel kernel: U, kernelRowCount: Int, kernelColumnCount: Int, result: inout V) where T : AccelerateBuffer, U : AccelerateBuffer, V : AccelerateMutableBuffer, T.Element == Double, U.Element == Double, V.Element == Double\n```",
+      "ko": "```swift\nstatic func convolve<T, U, V>(_ vector: T, rowCount: Int, columnCount: Int, withKernel kernel: U, kernelRowCount: Int, kernelColumnCount: Int, result: inout V) where T : AccelerateBuffer, U : AccelerateBuffer, V : AccelerateMutableBuffer, T.Element == Double, U.Element == Double, V.Element == Double\n```",
+      "sourceHash": "4979e21590e7adb9f699c78bb9eaaf9c09efa248828d94c5c29e35b6553df2d6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:see-also:0007:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0008:0001",
+      "source": "[static func convolve<T, U>(T, rowCount: Int, columnCount: Int, withKernel: U, kernelRowCount: Int, kernelColumnCount: Int) -> [Double]](vdsp/convolve(_:rowcount:columncount:withkernel:kernelrowcount:kernelcolumncount:)-1sswe.md)",
+      "ko": "[static func convolve<T, U>(T, rowCount: Int, columnCount: Int, withKernel: U, kernelRowCount: Int, kernelColumnCount: Int) -> [Double]](vdsp/convolve(_:rowcount:columncount:withkernel:kernelrowcount:kernelcolumncount:)-1sswe.md)",
+      "sourceHash": "4bbbef98550a0f21b08b267be8e103141d17a8b56fe909af97853bc66948cc7c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0009:0001",
+      "source": "Returns the 2D convolution of a double-precision vector with an arbitrarily sized kernel.",
+      "ko": "임의 크기의 커널을 사용해 배정밀도 벡터의 2D 컨볼루션을 반환합니다.",
+      "sourceHash": "7a3b29717752ad0c4d2d9511a376690bd4b211d069ac594d8257c20f125bca1b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0010:0001",
+      "source": "[static func convolve<T, U>(T, rowCount: Int, columnCount: Int, withKernel: U, kernelRowCount: Int, kernelColumnCount: Int) -> [Float]](vdsp/convolve(_:rowcount:columncount:withkernel:kernelrowcount:kernelcolumncount:)-267yl.md)",
+      "ko": "[static func convolve<T, U>(T, rowCount: Int, columnCount: Int, withKernel: U, kernelRowCount: Int, kernelColumnCount: Int) -> [Float]](vdsp/convolve(_:rowcount:columncount:withkernel:kernelrowcount:kernelcolumncount:)-267yl.md)",
+      "sourceHash": "9f8303cefac6c19288c4cd9138742ec4176c5a40fbf5427d6c95fc5c81f65bd9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0011:0001",
+      "source": "Returns the 2D convolution of a single-precision vector with an arbitrarily sized kernel.",
+      "ko": "임의 크기의 커널을 사용해 단정밀도 벡터의 2D 컨볼루션을 반환합니다.",
+      "sourceHash": "b686bbccccb758db54987ed1900748df461f161d64e9e28823d75449f333f612",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[static func convolve<T, U, V>(T, rowCount: Int, columnCount: Int, withKernel: U, kernelRowCount: Int, kernelColumnCount: Int, result: inout V)](vdsp/convolve(_:rowcount:columncount:withkernel:kernelrowcount:kernelcolumncount:result:)-5hiro.md)",
+      "ko": "[static func convolve<T, U, V>(T, rowCount: Int, columnCount: Int, withKernel: U, kernelRowCount: Int, kernelColumnCount: Int, result: inout V)](vdsp/convolve(_:rowcount:columncount:withkernel:kernelrowcount:kernelcolumncount:result:)-5hiro.md)",
+      "sourceHash": "74452759b174543f3a28b6b513a6e953f3a9ec2283519e083c434c21e555c1b4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "Calculates the 2D convolution of a single-precision vector with an arbitrarily sized kernel.",
+      "ko": "Calculates the 2D convolution of a single-precision vector with an arbitrarily sized kernel.",
+      "sourceHash": "ea6be0d7b58a21dc5fe690880e18a5331cc070a32c79861396ff0594e01fd0ea",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0014:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/convolve(_:rowcount:columncount:withkernel:kernelrowcount:kernelcolumncount:result:)-4211m)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/convolve(_:rowcount:columncount:withkernel:kernelrowcount:kernelcolumncount:result:)-4211m)*",
+      "sourceHash": "6e7c8e80bd0c7208e6b4e5abbcc94d96d3705ea748909f12eb1b4e2d473c6185",
+      "status": "failed"
+    }
+  ]
+}

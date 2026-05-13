@@ -1,0 +1,316 @@
+{
+  "docId": "documentation/Accelerate/bnnsactivationfunctionselu.md",
+  "title": "BNNSActivationFunctionSELU",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/bnnsactivationfunctionselu",
+  "segments": [
+    {
+      "id": "seg:heading:bnnsactivationfunctionselu:0000:0001",
+      "source": "BNNSActivationFunctionSELU",
+      "ko": "BNNSActivationFunctionSELU",
+      "sourceHash": "889f467249b06af0bfd77d711871d21b90c80e48b69ee4c6450e797c9d843841",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnsactivationfunctionselu:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: var",
+      "ko": "**Framework**: Accelerate **Kind**: var",
+      "sourceHash": "647af8913cf17e438f040e1758581c5f448a7a3a958ebc717625094d7c7e1442",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:bnnsactivationfunctionselu:0002:0001",
+      "source": "An activation function that evaluates the scaled exponential linear units (SELU) on its input.",
+      "ko": "An activation function that evaluates the scaled exponential linear units (SELU) on its input.",
+      "sourceHash": "94f6c8c82ff0bb49814881da36e97e5c9c91b0afdeb8b876fac3540eff30831c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:bnnsactivationfunctionselu:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsactivationfunctionselu:0004:0001",
+      "source": "iOS 14.0+",
+      "ko": "iOS 14.0+",
+      "sourceHash": "a09fb717eefa07878cab396c9697a744dfc726f6a8a77c093ef12e8124ffd90b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsactivationfunctionselu:0004:0002",
+      "source": "iPadOS 14.0+",
+      "ko": "iPadOS 14.0+",
+      "sourceHash": "3bd5f9207436aaf3fd80bdb95d64d5d280ff80afc32e998b4c7ef682ec2802e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsactivationfunctionselu:0004:0003",
+      "source": "Mac Catalyst 14.0+",
+      "ko": "Mac Catalyst 14.0+",
+      "sourceHash": "727f1b47b9ec51505903037de1c0c2ada20ce77777311427a459a320a601d4e0",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsactivationfunctionselu:0004:0004",
+      "source": "macOS 11.0+",
+      "ko": "macOS 11.0+",
+      "sourceHash": "b9d0915cd0d28054ced64852a8b4eb668d9bff9c754aec6f95028c5b01456c88",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsactivationfunctionselu:0004:0005",
+      "source": "tvOS 14.0+",
+      "ko": "tvOS 14.0+",
+      "sourceHash": "c82f0586cea06e7e3b23ac73e15255e7ccbb56eadf9421eeb43c4793905535a2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsactivationfunctionselu:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:bnnsactivationfunctionselu:0004:0007",
+      "source": "watchOS 7.0+",
+      "ko": "watchOS 7.0+",
+      "sourceHash": "c062c9b3a973acc1ffdf60071a0ce7943a5b195f1b0ce07f283267c446e33961",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar BNNSActivationFunctionSELU: BNNSActivationFunction { get }\n```",
+      "ko": "```swift\nvar BNNSActivationFunctionSELU: BNNSActivationFunction { get }\n```",
+      "sourceHash": "2b624dcdd4ffd64fbde51ad58a68ddeb4fc27078c50a60ce949ab40e3c4ade68",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This constant defines an activation function that returns values using the following operation:",
+      "ko": "This constant defines an activation function that returns values using the following operation:",
+      "sourceHash": "9981aac84f6ad9e2a42f41769513eea80233d2b2808ab59f24c4a2b13e2051e2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:discussion:0009:0001",
+      "source": "```None\n// λ and ɑ have the values given by Klambauer, Unterthiner and Mayr \n// (~1.0507 and ~1.6733, respectively)\n\nif x < 0\n    λɑ(exp(x)-1)\nelse\n    λx\n```",
+      "ko": "```None\n// λ and ɑ have the values given by Klambauer, Unterthiner and Mayr \n// (~1.0507 and ~1.6733, respectively)\n\nif x < 0\n    λɑ(exp(x)-1)\nelse\n    λx\n```",
+      "sourceHash": "7ced07c8a37e55e654511439c3a824cc14f8d08d47e8c752704a0ce9e8cdd7c8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "The following illustrates the output that the activation function generates from inputs in the range `-10...10`:",
+      "ko": "이 메서드가 특정 스레드에서 호출된다고 가정하지 말고, 가능한 한 효율적으로 구현해야 합니다.",
+      "sourceHash": "9bca4b75c81156f1d263859ebe5fcd52d395fb2ca463ef9d91a924fe2cb73a8a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "![Graph that shows input values for the activation function on horizontal axis and its output values on vertical axis. ](https://docs-assets.developer.apple.com/published/6d06ab19caa65397994f694396e05d88/media-3560501%402x.png)",
+      "ko": "![Graph that shows input values for the activation function on horizontal axis and its output values on vertical axis. ](https://docs-assets.developer.apple.com/published/6d06ab19caa65397994f694396e05d88/media-3560501%402x.png)",
+      "sourceHash": "0cc15264a255211a484ab1e4c0c83879ea452cfa79de20057b8784da35139a85",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[init(UInt32)](bnnsactivationfunction/init(_:).md)",
+      "ko": "[init(UInt32)](bnnsactivationfunction/init(_:).md)",
+      "sourceHash": "16d2add54d40a2bd85210ee8ef2990b27755bce78ce1f5dfe90159b05669b037",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0013:0002",
+      "source": "[init(rawValue: UInt32)](bnnsactivationfunction/init(rawvalue:).md)",
+      "ko": "[init(rawValue: UInt32)](bnnsactivationfunction/init(rawvalue:).md)",
+      "sourceHash": "21cba7154d20c158bf6b3998573494d918972827a09b2af386d57ec77e31d05d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0013:0003",
+      "source": "[var rawValue: UInt32](bnnsactivationfunction/rawvalue.md)",
+      "ko": "[var rawValue: UInt32](bnnsactivationfunction/rawvalue.md)",
+      "sourceHash": "8c0d38c14a81796fa12b6c5874d9b069667babc3fd70a3b926ac2e2b589bbe95",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:see-also:0013:0004",
+      "source": "[var BNNSActivationFunctionAbs: BNNSActivationFunction](bnnsactivationfunctionabs.md)",
+      "ko": "[var BNNSActivationFunctionAbs: BNNSActivationFunction](bnnsactivationfunctionabs.md)",
+      "sourceHash": "398e6ce9b44ca3d350e8c3b5f8acd5f11fc98c5bf58831c0608881b3a016f91f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:see-also:0013:0005",
+      "source": "[var BNNSActivationFunctionCELU: BNNSActivationFunction](bnnsactivationfunctioncelu.md)",
+      "ko": "[var BNNSActivationFunctionCELU: BNNSActivationFunction](bnnsactivationfunctioncelu.md)",
+      "sourceHash": "8c0ecea038205659d0e479ca55e6660b052624ae27fb88df9515dd706cc3af27",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "An activation function that evaluates the continuously differentiable exponential linear units (CELU) on its input.",
+      "ko": "An activation function that evaluates the continuously differentiable exponential linear units (CELU) on its input.",
+      "sourceHash": "8d517822d02572767ae11f568d9268b1eb34f325f55ae5674e60b51b27f79dfb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[var BNNSActivationFunctionClampedLeakyRectifiedLinear: BNNSActivationFunction](bnnsactivationfunctionclampedleakyrectifiedlinear.md)",
+      "ko": "[var BNNSActivationFunctionClampedLeakyRectifiedLinear: BNNSActivationFunction](bnnsactivationfunctionclampedleakyrectifiedlinear.md)",
+      "sourceHash": "5304104275d71ce555bc576e9bba9bc14b056327522df8544c07f6d37099ced1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "An activation function that returns its input clamped to beta when that is greater than or equal to zero, otherwise it returns its input multiplied by alpha clamped to beta.",
+      "ko": "An activation function that returns its input clamped to beta when that is greater than or equal to zero, otherwise it returns its input multiplied by alpha clamped to beta.",
+      "sourceHash": "641ba1ea6d5b7b7660de54344ef64a9a95485f2c3a3bb7c6b62405d439d1b259",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[var BNNSActivationFunctionELU: BNNSActivationFunction](bnnsactivationfunctionelu.md)",
+      "ko": "[var BNNSActivationFunctionELU: BNNSActivationFunction](bnnsactivationfunctionelu.md)",
+      "sourceHash": "0f761bc160e995939fd0db1ae26caf9fde184a21141b597333a563f0a98b66f3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "An activation function that evaluates the exponential linear units (ELU) on its input.",
+      "ko": "An activation function that evaluates the exponential linear units (ELU) on its input.",
+      "sourceHash": "bb180302e96c4e6a8cfdacd2ed9da7b5481c2331a35d49dd81ecc3738d8a88a2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[var BNNSActivationFunctionErf: BNNSActivationFunction](bnnsactivationfunctionerf.md)",
+      "ko": "[var BNNSActivationFunctionErf: BNNSActivationFunction](bnnsactivationfunctionerf.md)",
+      "sourceHash": "13d72a48714cc328d8cee6d3e21d05dfffd71e6b0d0560f3d3a4ef9a914bbd3c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:see-also:0019:0002",
+      "source": "[var BNNSActivationFunctionGELU: BNNSActivationFunction](bnnsactivationfunctiongelu.md)",
+      "ko": "[var BNNSActivationFunctionGELU: BNNSActivationFunction](bnnsactivationfunctiongelu.md)",
+      "sourceHash": "18e3d7954ff5b4f72508d3a28312e38b58a9b7377971a180e810240603b2128c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:see-also:0019:0003",
+      "source": "[var BNNSActivationFunctionGELUApproximation: BNNSActivationFunction](bnnsactivationfunctiongeluapproximation.md)",
+      "ko": "[var BNNSActivationFunctionGELUApproximation: BNNSActivationFunction](bnnsactivationfunctiongeluapproximation.md)",
+      "sourceHash": "e4bbc7723b80a180e1f820421462f3eb718933e1dbc7da1a00986c2260707fb9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "An activation function that evaluates the Gaussian error linear units (GELU) approximation on its input.",
+      "ko": "An activation function that evaluates the Gaussian error linear units (GELU) approximation on its input.",
+      "sourceHash": "d05915fc6ea5c6aaa7325ef70fe583b0bee6451535460c6a2a530fc3572c2361",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[var BNNSActivationFunctionGELUApproximation2: BNNSActivationFunction](bnnsactivationfunctiongeluapproximation2.md)",
+      "ko": "[var BNNSActivationFunctionGELUApproximation2: BNNSActivationFunction](bnnsactivationfunctiongeluapproximation2.md)",
+      "sourceHash": "890622e523789b8c046c6f45efc58817f24db5cd64ffbb3beb71502660edf1f8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "An activation function that provides a fast evaluation of the Gaussian error linear units (GELU) approximation on its input.",
+      "ko": "An activation function that provides a fast evaluation of the Gaussian error linear units (GELU) approximation on its input.",
+      "sourceHash": "b6f410d03223b11d26dd5468c0f7fff0bf06d4a946ddf123a1f161b4c956fc27",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[var BNNSActivationFunctionGELUApproximationSigmoid: BNNSActivationFunction](bnnsactivationfunctiongeluapproximationsigmoid.md)",
+      "ko": "[var BNNSActivationFunctionGELUApproximationSigmoid: BNNSActivationFunction](bnnsactivationfunctiongeluapproximationsigmoid.md)",
+      "sourceHash": "9936f14d20609f6f88f26075f4f0a7a85f550cc4ed3985d0c1a906c44fafe691",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:see-also:0023:0002",
+      "source": "[var BNNSActivationFunctionGumbel: BNNSActivationFunction](bnnsactivationfunctiongumbel.md)",
+      "ko": "[var BNNSActivationFunctionGumbel: BNNSActivationFunction](bnnsactivationfunctiongumbel.md)",
+      "sourceHash": "39ae107dd0e505e66271b664ef4cdfe7ec6e96db9f220796c76241bf9d71eb23",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "An activation function that returns random numbers from the Gumbel distribution.",
+      "ko": "An activation function that returns random numbers from the Gumbel distribution.",
+      "sourceHash": "2192f61a8740aacfa5bf7a40471113d1239622cd3f4baefb336bd2f346dce412",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[var BNNSActivationFunctionGumbelMax: BNNSActivationFunction](bnnsactivationfunctiongumbelmax.md)",
+      "ko": "[var BNNSActivationFunctionGumbelMax: BNNSActivationFunction](bnnsactivationfunctiongumbelmax.md)",
+      "sourceHash": "b2af747233ac1f9e2e02f8a9a9c13cef82663d0bbc6afa2c5f2c25f57baaa3f8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "An activation function that returns random numbers from the Gumbel distribution.",
+      "ko": "An activation function that returns random numbers from the Gumbel distribution.",
+      "sourceHash": "2192f61a8740aacfa5bf7a40471113d1239622cd3f4baefb336bd2f346dce412",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[var BNNSActivationFunctionHardShrink: BNNSActivationFunction](bnnsactivationfunctionhardshrink.md)",
+      "ko": "[var BNNSActivationFunctionHardShrink: BNNSActivationFunction](bnnsactivationfunctionhardshrink.md)",
+      "sourceHash": "aa342a1caff49a541cae315485edd87752e67db8a8f9cc75b919f2245dae2197",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "An activation function that returns zero when the absolute input is less than alpha, otherwise it returns its input.",
+      "ko": "An activation function that returns zero when the absolute input is less than alpha, otherwise it returns its input.",
+      "sourceHash": "0943b83d8ba152dd514fe49f2c668fb89d50fda3857f49771b35c329ed06ef16",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0029:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsactivationfunctionselu)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/bnnsactivationfunctionselu)*",
+      "sourceHash": "9c2140d708b321954b8713bb32b4090df8749aae1fa5a48f7b6e81d3d068425d",
+      "status": "preserved"
+    }
+  ]
+}

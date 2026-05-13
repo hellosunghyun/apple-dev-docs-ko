@@ -1,0 +1,218 @@
+{
+  "docId": "documentation/AppKit/nscell/starttracking-atin.md",
+  "title": "startTracking(at:in:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/appkit/nscell/starttracking-atin",
+  "segments": [
+    {
+      "id": "seg:heading:starttrackingatin:0000:0001",
+      "source": "startTracking(at:in:)",
+      "ko": "startTracking(at:in:)",
+      "sourceHash": "876f98429ce1ac77384f22487fa12720345c7de207e4e8c8ea53c5a05ffa40a1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:starttrackingatin:0001:0001",
+      "source": "**Framework**: AppKit **Kind**: method",
+      "ko": "**Framework**: AppKit **Kind**: method",
+      "sourceHash": "d0bb5eba5cbec0f2e57076ce9bf28601986c84bd690d2e162e981dbbb6baff21",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:starttrackingatin:0002:0001",
+      "source": "Begins tracking mouse events within the receiver.",
+      "ko": "수신자 내에서 마우스 이벤트 추적을 시작합니다.",
+      "sourceHash": "16073ff022fd2ced4669a5d0b07586224a4efa069d8395b5d4ca11a6cb59cff8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:starttrackingatin:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:starttrackingatin:0004:0001",
+      "source": "macOS ?+",
+      "ko": "macOS ?+",
+      "sourceHash": "7565f9a2fe151983964ce7f1a1fff21dbf4130de4d3457f25bd88800eafbe279",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc startTracking(at startPoint: NSPoint, in controlView: NSView) -> Bool\n```",
+      "ko": "```swift\nfunc startTracking(at startPoint: NSPoint, in controlView: NSView) -> Bool\n```",
+      "sourceHash": "c808c92cb1b57a00abbea23e7c25308215263f1ed3fbf70d04181d199405b171",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:return-value:0007:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0008:0001",
+      "source": "[`true`](https://developer.apple.com/documentation/Swift/true) if the receiver is set to respond continuously or set to respond when the mouse is dragged, otherwise [`false`](https://developer.apple.com/documentation/Swift/false).",
+      "ko": "수신자가 연속 응답 모드이거나 마우스가 드래그될 때 응답하도록 설정된 경우 [`true`](https://developer.apple.com/documentation/Swift/true), 그렇지 않으면 [`false`](https://developer.apple.com/documentation/Swift/false)입니다.",
+      "sourceHash": "94e461b1899609d3b80cc2c2d2fb9d257a2c68ba40595ced1dba22762128565c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0009:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "The `NSCell` implementation of [`trackMouse(with:in:of:untilMouseUp:)`](nscell/trackmouse(with:in:of:untilmouseup:).md) invokes this method when tracking begins.",
+      "ko": "[`trackMouse(with:in:of:untilMouseUp:)`](nscell/trackmouse(with:in:of:untilmouseup:).md)의 `NSCell` 구현은 추적이 시작될 때 이 메서드를 호출합니다.",
+      "sourceHash": "dc94f6dd8f15d5ef2a3760f1385e58128945eb409b2b799236076f326632a769",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "Subclasses can override this method to implement special mouse-tracking behavior at the beginning of mouse tracking—for example, displaying a special cursor.",
+      "ko": "서브클래스는 마우스 추적 시작 시 특수한 마우스 추적 동작(예: 특수 커서 표시)을 구현하기 위해 이 메서드를 재정의할 수 있습니다.",
+      "sourceHash": "db8e6cab574b707455365485035a02fce687f4119e6604202362bfd49a01431e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0011:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0012:0001",
+      "source": "`startPoint`: The initial location of the cursor.",
+      "ko": "`startPoint`: 커서의 초기 위치입니다.",
+      "sourceHash": "5199f6f28db3fb916ab8c0eafecd4cd3bd44663b662831ec8e16a55f64d47229",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0012:0002",
+      "source": "`controlView`: The `NSControl` object managing the receiver.",
+      "ko": "`controlView`: 수신자를 관리하는 `NSControl` 객체입니다.",
+      "sourceHash": "28728741804176ad6bb1da8064e0744639a7224b3d02e1ada638bf168d8cac35",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0013:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[func trackMouse(with: NSEvent, in: NSRect, of: NSView, untilMouseUp: Bool) -> Bool](nscell/trackmouse(with:in:of:untilmouseup:).md)",
+      "ko": "[func trackMouse(with: NSEvent, in: NSRect, of: NSView, untilMouseUp: Bool) -> Bool](nscell/trackmouse(with:in:of:untilmouseup:).md)",
+      "sourceHash": "73e65c36ef2edf8e86292603d87b22b95980f48653b71634faca7239534c7d4a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "Initiates the mouse tracking behavior in a cell.",
+      "ko": "셀에서 마우스 추적 동작을 시작합니다.",
+      "sourceHash": "c7375325b4a4aede1cfcc8315962b161cd99168dbd5cf782592aa0646b244333",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[func continueTracking(last: NSPoint, current: NSPoint, in: NSView) -> Bool](nscell/continuetracking(last:current:in:).md)",
+      "ko": "[func continueTracking(last: NSPoint, current: NSPoint, in: NSView) -> Bool](nscell/continuetracking(last:current:in:).md)",
+      "sourceHash": "91fd281220b9c17081720fdae67f056f58e6f15f9bdf7fff7381287b459c83b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Returns a Boolean value that indicates whether mouse tracking should continue in the receiving cell.",
+      "ko": "수신 셀에서 마우스 추적을 계속해야 하는지 나타내는 Boolean 값을 반환합니다.",
+      "sourceHash": "ce8f364f6c1b855ce95ef4b69a4d0a3990f1cdd9ffbbb54b23842cc4cb1cb128",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[func stopTracking(last: NSPoint, current: NSPoint, in: NSView, mouseIsUp: Bool)](nscell/stoptracking(last:current:in:mouseisup:).md)",
+      "ko": "[func stopTracking(last: NSPoint, current: NSPoint, in: NSView, mouseIsUp: Bool)](nscell/stoptracking(last:current:in:mouseisup:).md)",
+      "sourceHash": "bf2ca74d6c6c96cdfc98097054fa427202f2d07f4425a911ebf4222269bcbf76",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Stops tracking mouse events within the receiver.",
+      "ko": "수신자 내에서 마우스 이벤트 추적을 중지합니다.",
+      "sourceHash": "806267c01d384a8e01790e2ca4efef092ec1461ef94eb9213f1e870fc9e05656",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[var mouseDownFlags: Int](nscell/mousedownflags.md)",
+      "ko": "[var mouseDownFlags: Int](nscell/mousedownflags.md)",
+      "sourceHash": "8897dc74a7e355e2d81e586615f112df81bca1ccae5240975746b11b2b235afa",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "The modifier flags for the last (left) mouse-down event.",
+      "ko": "마지막(왼쪽) 마우스 다운 이벤트의 modifier 플래그입니다.",
+      "sourceHash": "24e57f8459dc1836af9426088284a2681797c98c420d95938eec4186dbfa6e5f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[class var prefersTrackingUntilMouseUp: Bool](nscell/preferstrackinguntilmouseup.md)",
+      "ko": "[class var prefersTrackingUntilMouseUp: Bool](nscell/preferstrackinguntilmouseup.md)",
+      "sourceHash": "3acfb8c8ba2c8f4f73d6e1811fabddeb568d6ee54ab03be77c12902f426ba515",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Returns a Boolean value that indicates whether tracking stops when the cursor leaves the cell.",
+      "ko": "커서가 셀을 벗어날 때 추적이 중단되는지 여부를 나타내는 Boolean 값을 반환합니다.",
+      "sourceHash": "9155689b1240d93db3b51ce79149577ee6a96e612f31c2265a716e1d1ce713d9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[func getPeriodicDelay(UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>)](nscell/getperiodicdelay(_:interval:).md)",
+      "ko": "[func getPeriodicDelay(UnsafeMutablePointer<Float>, interval: UnsafeMutablePointer<Float>)](nscell/getperiodicdelay(_:interval:).md)",
+      "sourceHash": "73a28f808431bd044920f56bc1cf92a070a0f27f753869e422fd123ab70381b1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Returns the initial delay and repeat values for continuous sending of action messages to target objects.",
+      "ko": "대상 객체로 action 메시지를 연속 전송할 때 사용할 초기 지연값과 반복값을 반환합니다.",
+      "sourceHash": "d58d7be3b4b72984c0aea0e2d965a9cd34a3f61db1f34d80d0cc9a37997675d9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0026:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nscell/starttracking(at:in:))*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/appkit/nscell/starttracking(at:in:))*",
+      "sourceHash": "f8e10fdf1c038fa32ee451eb02b25ee61c563e445d29cf78d5efefa1f10aa81b",
+      "status": "machine_translated"
+    }
+  ]
+}

@@ -1,0 +1,463 @@
+{
+  "docId": "documentation/Accelerate/vdsp/subtract-multiplicationmultiplication-1ghyu.md",
+  "title": "subtract(multiplication:multiplication:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vdsp/subtract-multiplicationmultiplication-1ghyu",
+  "segments": [
+    {
+      "id": "seg:heading:subtractmultiplicationmultiplication:0000:0001",
+      "source": "subtract(multiplication:multiplication:)",
+      "ko": "subtract(multiplication:multiplication:)",
+      "sourceHash": "36c8f543615cd8a68af45c38eba5fec64ddf073ca9c229165728f8c793962d58",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:subtractmultiplicationmultiplication:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:subtractmultiplicationmultiplication:0002:0001",
+      "source": "Returns the single-precision element-wise difference of the products of two pairs of vectors.",
+      "ko": "이 함수는 두 벡터 쌍의 원소별 곱 결과 차이를 단정밀도로 반환합니다.",
+      "sourceHash": "08b48a34fe27132b88d4d228f82c4a4eb642d79947c90ba8c4304e1ccbeacad1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:subtractmultiplicationmultiplication:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationmultiplication:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationmultiplication:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationmultiplication:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationmultiplication:0004:0004",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationmultiplication:0004:0005",
+      "source": "tvOS 13.0+",
+      "ko": "tvOS 13.0+",
+      "sourceHash": "030e6b7e51c85f674522c209ef14fc0e355ebd196e0259389daeaae4f69ad826",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationmultiplication:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationmultiplication:0004:0007",
+      "source": "watchOS 6.0+",
+      "ko": "watchOS 6.0+",
+      "sourceHash": "b51a82766977554dbe76aec20d5bc0ad6fe4984dddfcf6db82130e544b0631e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstatic func subtract<R, S, T, U>(multiplication multiplicationAB: (a: T, b: U), multiplication multiplicationCD: (c: R, d: S)) -> [Float] where R : AccelerateBuffer, S : AccelerateBuffer, T : AccelerateBuffer, U : AccelerateBuffer, R.Element == Float, S.Element == Float, T.Element == Float, U.Element == Float\n```",
+      "ko": "```swift\nstatic func subtract<R, S, T, U>(multiplication multiplicationAB: (a: T, b: U), multiplication multiplicationCD: (c: R, d: S)) -> [Float] where R : AccelerateBuffer, S : AccelerateBuffer, T : AccelerateBuffer, U : AccelerateBuffer, R.Element == Float, S.Element == Float, T.Element == Float, U.Element == Float\n```",
+      "sourceHash": "bb6f53624e76db200cf4abc27d921362150c6ad1279d4b4cbe73cbb30c734a79",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:mentions:0007:0001",
+      "source": "Mentions",
+      "ko": "Mentions",
+      "sourceHash": "6f32e692ede03567b0539f2001b94ed58fbb6e3bd02fa11c5b2e933b1104d36b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mentions:0008:0001",
+      "source": "[Using vDSP for vector-based arithmetic](using-vdsp-for-vector-based-arithmetic.md)",
+      "ko": "[벡터 기반 산술에 vDSP 사용](using-vdsp-for-vector-based-arithmetic.md)",
+      "sourceHash": "85714c9ab2c73514b751dbb00c60d1f76f0dbfdb17a80e151d60357e88740780",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:return-value:0009:0001",
+      "source": "Return Value",
+      "ko": "반환 값",
+      "sourceHash": "4329767c30021f6eaae64eded9b3b1f59c1b1fe672ac5d4a30e3324691f43a1d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:return-value:0010:0001",
+      "source": "The output vector `E` in `E = (A * B) - (C * D)`.",
+      "ko": "수식 `E = (A * B) - (C * D)`에서 출력 벡터는 `E`입니다.",
+      "sourceHash": "68edf4bc5f59537501c2d3bbddd8652df492c40543b334e07e7561af39554b16",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:discussion:0011:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0012:0001",
+      "source": "This function calculates the differences of the first `N` elements of the product of vectors `A` and `B` and the product of vectors `C` and `D`.",
+      "ko": "이 함수는 벡터 `A`와 `B`의 곱셈 결과와 벡터 `C`와 `D`의 곱셈 결과의 첫 `N`개 원소 차이를 계산합니다.",
+      "sourceHash": "22e0c56768896ddc55625d5d68eed2a312e51d39d43ba5156a763905c33a9ea5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0013:0001",
+      "source": "```swift\n for (n = 0; n < N; ++n)\n    E[n] = A[n]*B[n] - C[n]*D[n]; \n```",
+      "ko": "```swift\n for (n = 0; n < N; ++n)\n    E[n] = A[n]*B[n] - C[n]*D[n]; \n```",
+      "sourceHash": "003d3e92fa8a78fd1f8a51ca45e3898c1a6c7de071421ac6998b7780800d4de1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0001",
+      "source": "![A diagram showing the operation of this function.",
+      "ko": "![이 함수의 동작을 보여 주는 다이어그램.",
+      "sourceHash": "4383a37a5bdb4c14507e3e2f5e569f875a88eb2c5e5803a98e18010e1f5ae9f2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0002",
+      "source": "There are four rows.",
+      "ko": "네 개의 행이 있습니다.",
+      "sourceHash": "9e0f9736804d6f84727760f803f00fae350cb55cd2c4e02aba71d9cf26c86ef0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0003",
+      "source": "The top row represents the input vectors, A, B, C, and D, with three boxes of each.",
+      "ko": "첫 번째 행은 입력 벡터 `A`, `B`, `C`, `D`를 각각 세 개의 상자로 나타냅니다.",
+      "sourceHash": "7429479f0756300ad88edc1a0d57c15215582898fa49e0dca0f08b597076467f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0004",
+      "source": "The second row represents the operations that multiply vectors A and B, and multiply vectors C and D, with three boxes of each.",
+      "ko": "두 번째 행은 벡터 `A`와 `B`의 곱셈 연산, 그리고 벡터 `C`와 `D`의 곱셈 연산을 각각 세 개의 상자로 나타냅니다.",
+      "sourceHash": "b3bb77a49acb42428bc77d9d617b3a0671939c32b7fba5d4b5e3b10267761a34",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0005",
+      "source": "The third row represents the subtraction operation as three boxes.",
+      "ko": "세 번째 행은 뺄셈 연산을 세 개의 상자로 나타냅니다.",
+      "sourceHash": "96dc6dc0eb4fda6beb2cdc20eaf3d26fb03352ce878ee7dfc9dd122e662f68da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0006",
+      "source": "The bottom row represents the output vector E as three boxes.",
+      "ko": "마지막 행은 출력 벡터 `E`를 세 개의 상자로 나타냅니다.",
+      "sourceHash": "146d7052857ec668d2783f657c1558a748b37b2b3468f92e12415b92f745477c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0014:0007",
+      "source": "The diagram has connecting lines from the input vectors to the operations, and from the operations to the output vectors. ](https://docs-assets.developer.apple.com/published/39d89329286f14952e7b03fb1b3f22de/media-4337028%402x.png)",
+      "ko": "이 다이어그램에는 입력 벡터에서 연산으로, 그리고 연산에서 출력 벡터로 이어지는 연결선이 있습니다.](https://docs-assets.developer.apple.com/published/39d89329286f14952e7b03fb1b3f22de/media-4337028%402x.png)",
+      "sourceHash": "115bee066e9e52ba09957beb11b00e14473ec1465c3a76f143846e4ff6eb4764",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0015:0001",
+      "source": "The following code shows an example of using this function:",
+      "ko": "다음 코드는 이 함수를 사용하는 예를 보여 줍니다.",
+      "sourceHash": "6a6645d7323dbaedfa632f913e9d50a0fccbb63d6d54e3c2e4adcf1d87ef8ec5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0016:0001",
+      "source": "```swift\n    let a: [Float] = [ 1,  2,  3,  4,  5]\n    let b: [Float] = [10, 20, 30, 40, 50]\n    let c: [Float] = [ 5,  4,  3,  2,  1]\n    let d: [Float] = [50, 40, 30, 20, 10]\n    \n    let e = vDSP.subtract(multiplication: (a, b),\n                          multiplication: (c, d))\n    \n    // Prints \"[-240.0, -120.0, 0.0, 120.0, 240.0]\".\n    print(e)\n\n```",
+      "ko": "```swift\n    let a: [Float] = [ 1,  2,  3,  4,  5]\n    let b: [Float] = [10, 20, 30, 40, 50]\n    let c: [Float] = [ 5,  4,  3,  2,  1]\n    let d: [Float] = [50, 40, 30, 20, 10]\n    \n    let e = vDSP.subtract(multiplication: (a, b),\n                          multiplication: (c, d))\n    \n    // Prints \"[-240.0, -120.0, 0.0, 120.0, 240.0]\".\n    print(e)\n\n```",
+      "sourceHash": "ab249ac43e8ccc7e765c16489146e5fb5647e93bb46e5845284b81335b3dcadd",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0017:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0018:0001",
+      "source": "`multiplicationAB`: A tuple that contains the vectors `A` and `B` in `E = (A * B) - (C * D)`.",
+      "ko": "`multiplicationAB`: 수식 `E = (A * B) - (C * D)`에서 벡터 `A`와 `B`를 포함하는 튜플입니다.",
+      "sourceHash": "536c1acf0c09e6ddd78cbfe4ad04991de306c478719be86cdbccde9a31482699",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0018:0002",
+      "source": "`multiplicationCD`: A tuple that contains the vectors `C` and `D` in `E = (A * B) - (C * D)`.",
+      "ko": "`multiplicationCD`: 수식 `E = (A * B) - (C * D)`에서 벡터 `C`와 `D`를 포함하는 튜플입니다.",
+      "sourceHash": "5f5ef6b546bd5a3094725ef6a1dae83f85b09af14acee91c4c8273c48e88da64",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0019:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[static func subtract<T, U>(U, T) -> [Double]](vdsp/subtract(_:_:)-8o5ai.md)",
+      "ko": "[static func subtract<T, U>(U, T) -> [Double]](vdsp/subtract(_:_:)-8o5ai.md)",
+      "sourceHash": "2c2fd8ed1c2b130cadf3740ff5d67e63fecac7755dd63e8a3b99849bfe7737f1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Returns the double-precision element-wise subtraction of two vectors.",
+      "ko": "두 벡터의 배정밀도 원소별 뺄셈 결과를 반환합니다.",
+      "sourceHash": "656f5705e94bd6116b749442458bb8122347e1d6e7dfa9586d7b5111f24bea19",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[static func subtract<T, U>(U, T) -> [Float]](vdsp/subtract(_:_:)-9xmo8.md)",
+      "ko": "[static func subtract<T, U>(U, T) -> [Float]](vdsp/subtract(_:_:)-9xmo8.md)",
+      "sourceHash": "f91a6eb25bb3e5585b747865396e4763dfddb1ebdaf630be4cbfafbd3e4b0774",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Returns the single-precision element-wise subtraction of two vectors.",
+      "ko": "두 벡터의 단정밀도 원소별 뺄셈 결과를 반환합니다.",
+      "sourceHash": "8e26e6deff1435bab8a464c63f6ec2a3116f57260766548ac600771d97e9def3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[static func subtract<T, U, V>(U, T, result: inout V)](vdsp/subtract(_:_:result:)-1ianx.md)",
+      "ko": "[static func subtract<T, U, V>(U, T, result: inout V)](vdsp/subtract(_:_:result:)-1ianx.md)",
+      "sourceHash": "e8469be1bd6f9a8319b5301e8b1a63fa53100344e7dd36d1be1dea52c2366c55",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Calculates the double-precision element-wise subtraction of two vectors.",
+      "ko": "두 벡터의 배정밀도 원소별 뺄셈을 계산합니다.",
+      "sourceHash": "b19e3db709cdc9fb0b27b2a6b7cc761e6e4a1be9e19e90379f911e399b155e41",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[static func subtract<T, U, V>(U, T, result: inout V)](vdsp/subtract(_:_:result:)-2p3fa.md)",
+      "ko": "[static func subtract<T, U, V>(U, T, result: inout V)](vdsp/subtract(_:_:result:)-2p3fa.md)",
+      "sourceHash": "13c1fa314c4e35294cde9dcde6ca15740fc072f8b6167f6a48087020b376a7bc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Calculates the single-precision element-wise subtraction of two vectors.",
+      "ko": "두 벡터의 단정밀도 원소별 뺄셈을 계산합니다.",
+      "sourceHash": "e0682f67fff2482b21b9dab509db5c09cde30d9cfff3db707efb86feb77a0aa8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[static func subtract(DSPSplitComplex, from: DSPSplitComplex, count: Int, result: inout DSPSplitComplex)](vdsp/subtract(_:from:count:result:)-4p5xd.md)",
+      "ko": "[static func subtract(DSPSplitComplex, from: DSPSplitComplex, count: Int, result: inout DSPSplitComplex)](vdsp/subtract(_:from:count:result:)-4p5xd.md)",
+      "sourceHash": "afcd5d78d37929f25030b3fd03dcb9467acf85394c343bb5cf068e7c28b64471",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Calculates the single-precision element-wise subtraction of a complex vector from a complex vector.",
+      "ko": "복소 벡터에서 복소 벡터를 단정밀도 원소별로 뺍니다.",
+      "sourceHash": "61724951ae94384dc5853132661b1c682c8be7f3e5014a0fdb7e5b4098427889",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[static func subtract(DSPDoubleSplitComplex, from: DSPDoubleSplitComplex, count: Int, result: inout DSPDoubleSplitComplex)](vdsp/subtract(_:from:count:result:)-80zi9.md)",
+      "ko": "[static func subtract(DSPDoubleSplitComplex, from: DSPDoubleSplitComplex, count: Int, result: inout DSPDoubleSplitComplex)](vdsp/subtract(_:from:count:result:)-80zi9.md)",
+      "sourceHash": "7465cc26b6b51e808e2fb97eb46c6587a2c281b1a3af5aa7e9784953594f051a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Calculates the double-precision element-wise subtraction of a complex vector from a complex vector.",
+      "ko": "복소 벡터에서 복소 벡터를 배정밀도 원소별로 뺍니다.",
+      "sourceHash": "ba9e301565cd78d16e405db83a1c7623c20a93ff2c204efa9744e5a48348361b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[static func subtract<T, U>(multiplication: (a: U, b: Double), T) -> [Double]](vdsp/subtract(multiplication:_:)-2hhme.md)",
+      "ko": "[static func subtract<T, U>(multiplication: (a: U, b: Double), T) -> [Double]](vdsp/subtract(multiplication:_:)-2hhme.md)",
+      "sourceHash": "f86e2fce0e37dd290da329ad7b01de5c675994df6c25e475a12df527d4b64a3d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Calculates the double-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "ko": "벡터와 스칼라 값의 곱과 벡터의 배정밀도 원소별 차이를 계산합니다.",
+      "sourceHash": "05c681d4e7138fd225891b9cdf4d65a07aceca2b1acd051b057bf617868d7606",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[static func subtract<S, T, U>(multiplication: (a: T, b: U), S) -> [Double]](vdsp/subtract(multiplication:_:)-9gphg.md)",
+      "ko": "[static func subtract<S, T, U>(multiplication: (a: T, b: U), S) -> [Double]](vdsp/subtract(multiplication:_:)-9gphg.md)",
+      "sourceHash": "3b22549dd5ef5775f3f49de5fe1edbf0b4b15bc479c8e0bf0efd1904f8e2cc77",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Returns the double-precision element-wise difference of a vector and the product of two vectors.",
+      "ko": "한 벡터와 두 벡터 곱의 배정밀도 원소별 차를 반환합니다.",
+      "sourceHash": "763b680ce0dde87fb63e8b4045d80f23493c35cbe21f6b9402a3e29d94a1f921",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[static func subtract<T, U>(multiplication: (a: U, b: Float), T) -> [Float]](vdsp/subtract(multiplication:_:)-3zm6l.md)",
+      "ko": "[static func subtract<T, U>(multiplication: (a: U, b: Float), T) -> [Float]](vdsp/subtract(multiplication:_:)-3zm6l.md)",
+      "sourceHash": "6443340eb72402fea9bef8193a4ec084f7deb6cf9b3eef04619f5bb4f3ed48b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Calculates the single-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "ko": "벡터와 스칼라 값의 곱과 벡터의 단정밀도 원소별 차이를 계산합니다.",
+      "sourceHash": "f0496f025aefd40d893983792446b52979fa8164922cfdd0ccefdf4c3d11d62b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[static func subtract<S, T, U>(multiplication: (a: T, b: U), S) -> [Float]](vdsp/subtract(multiplication:_:)-6u3sp.md)",
+      "ko": "[static func subtract<S, T, U>(multiplication: (a: T, b: U), S) -> [Float]](vdsp/subtract(multiplication:_:)-6u3sp.md)",
+      "sourceHash": "6cdce78482d00220d6d6c284b60a34754bfe231312480cd8014b4297e92df0e4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Returns the single-precision element-wise difference of a vector and the product of two vectors.",
+      "ko": "한 벡터와 두 벡터 곱의 단정밀도 원소별 차를 반환합니다.",
+      "sourceHash": "1ec056f010bd4e41f434632549dc1ce1c2092591f86b6f45f8a1100b7bc482fe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[static func subtract<T, U, V>(multiplication: (a: U, b: Double), T, result: inout V)](vdsp/subtract(multiplication:_:result:)-9p12h.md)",
+      "ko": "[static func subtract<T, U, V>(multiplication: (a: U, b: Double), T, result: inout V)](vdsp/subtract(multiplication:_:result:)-9p12h.md)",
+      "sourceHash": "e77156ead4ce3175de295ed9006304a3f929492e52263c81148633fc3f9e06e5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "Calculates the double-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "ko": "벡터와 스칼라 값의 곱과 벡터의 배정밀도 원소별 차이를 계산합니다.",
+      "sourceHash": "05c681d4e7138fd225891b9cdf4d65a07aceca2b1acd051b057bf617868d7606",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[static func subtract<T, U, V>(multiplication: (a: U, b: Float), T, result: inout V)](vdsp/subtract(multiplication:_:result:)-86gx3.md)",
+      "ko": "[static func subtract<T, U, V>(multiplication: (a: U, b: Float), T, result: inout V)](vdsp/subtract(multiplication:_:result:)-86gx3.md)",
+      "sourceHash": "2be2a59f5afe8d586686a43d3609221f7f7e2463f708a614aa0bdf32a4a23f9d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "Calculates the single-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "ko": "벡터와 스칼라 값의 곱과 벡터의 단정밀도 원소별 차이를 계산합니다.",
+      "sourceHash": "f0496f025aefd40d893983792446b52979fa8164922cfdd0ccefdf4c3d11d62b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[static func subtract<S, T, U, V>(multiplication: (a: T, b: U), S, result: inout V)](vdsp/subtract(multiplication:_:result:)-3f2bw.md)",
+      "ko": "[static func subtract<S, T, U, V>(multiplication: (a: T, b: U), S, result: inout V)](vdsp/subtract(multiplication:_:result:)-3f2bw.md)",
+      "sourceHash": "edbcaad1717348c02323c7f104f009632f90af93d8c0b4c328c288dae3fb6fa1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "Calculates the double-precision element-wise difference of a vector and the product of two vectors.",
+      "ko": "배정밀도 값 벡터와 두 벡터의 곱의 원소별 차이를 계산합니다.",
+      "sourceHash": "3590aabb6e39fb31c3ec9b3b0129fe4f340bf586c793696e49f774a45561a897",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0046:0001",
+      "source": "[static func subtract<S, T, U, V>(multiplication: (a: T, b: U), S, result: inout V)](vdsp/subtract(multiplication:_:result:)-6b91s.md)",
+      "ko": "[static func subtract<S, T, U, V>(multiplication: (a: T, b: U), S, result: inout V)](vdsp/subtract(multiplication:_:result:)-6b91s.md)",
+      "sourceHash": "3e656c8ebe7e6e60db4fa5b891652c5e03728a7165b4eb2cbab066bbca9f86e5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "Calculates the single-precision element-wise difference of a vector and the product of two vectors.",
+      "ko": "단정밀도 값 벡터와 두 벡터의 곱의 원소별 차이를 계산합니다.",
+      "sourceHash": "542eb657ff27b07049e4da0f4bd2cadccb7f808fda858e0bd1af6112aa7ee7f6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0048:0001",
+      "source": "[static func subtract<R, S, T, U>(multiplication: (a: T, b: U), multiplication: (c: R, d: S)) -> [Double]](vdsp/subtract(multiplication:multiplication:)-22a4b.md)",
+      "ko": "[static func subtract<R, S, T, U>(multiplication: (a: T, b: U), multiplication: (c: R, d: S)) -> [Double]](vdsp/subtract(multiplication:multiplication:)-22a4b.md)",
+      "sourceHash": "10123a9a3610c044e385d031ee1f7f171eb8f8504286e71f65b4afb18d20fe7f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0049:0001",
+      "source": "Returns the double-precision element-wise difference of the products of two pairs of vectors.",
+      "ko": "두 쌍의 벡터 곱셈 결과에 대한 원소별 차이를 배정밀도로 반환합니다.",
+      "sourceHash": "9e5675acea6021f9d51339a203350f3139b648e1b8006419f66f2ae2ed14c954",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0050:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0051:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/subtract(multiplication:multiplication:)-1ghyu)*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/vdsp/subtract(multiplication:multiplication:)-1ghyu)*",
+      "sourceHash": "f2346af0fb11e9edb332b267e3a50cbe55700e72ba2e6f5ad20ac0ae87eae506",
+      "status": "machine_translated"
+    }
+  ]
+}

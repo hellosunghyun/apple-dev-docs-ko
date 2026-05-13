@@ -1,0 +1,456 @@
+{
+  "docId": "documentation/Accelerate/cblas-zhpr2.md",
+  "title": "cblaszhpr2(:::::::::)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/cblas-zhpr2",
+  "segments": [
+    {
+      "id": "seg:heading:cblaszhpr2:0000:0001",
+      "source": "cblas_zhpr2(_:_:_:_:_:_:_:_:_:)",
+      "ko": "cblas_zhpr2(_:_:_:_:_:_:_:_:_:)",
+      "sourceHash": "6dede1aa3f8bc7de6ab683822d1981deb31adf1a19f86bd36b4797ae6565b932",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:cblaszhpr2:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: func",
+      "ko": "**Framework**: Accelerate **Kind**: func",
+      "sourceHash": "92505afed2b9832f88ee8e8741948f4ea109b670dc30717430f0006e8f343391",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:cblaszhpr2:0002:0001",
+      "source": "Multiplies a vector times the conjugate transpose of a second vector and vice-versa, sums the results, and adds a matrix.",
+      "ko": "두 번째 벡터의 복소켤레 전치와 첫 번째 벡터의 곱을 반대로 수행해 결과를 합산한 뒤 행렬을 더합니다.",
+      "sourceHash": "71f9562575e16eaac30a65635f071ac8d00bbf4f72a91784789d88cd4e7b8ba6",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:cblaszhpr2:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaszhpr2:0004:0001",
+      "source": "iOS 16.4+",
+      "ko": "iOS 16.4+",
+      "sourceHash": "2f68d20fc18159db64bf35c81494c88612de33963ee37a9b2b0ae327304225fe",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaszhpr2:0004:0002",
+      "source": "iPadOS 16.4+",
+      "ko": "iPadOS 16.4+",
+      "sourceHash": "44d5fef65c585b192b2d7e9505b21e7f7a5a8c04d7eec7ff6ec5c89da15748ee",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaszhpr2:0004:0003",
+      "source": "Mac Catalyst 16.4+",
+      "ko": "Mac Catalyst 16.4+",
+      "sourceHash": "4d3e7fe8d2f04fd3b4daaad2937b9724109c9aa9fe338cb29e4443172229405b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaszhpr2:0004:0004",
+      "source": "macOS 13.3+",
+      "ko": "macOS 13.3+",
+      "sourceHash": "632a0c66cf34b4b7e3333d25bfccb75863bfe662ab20dc27e2329dbcd5800eb1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaszhpr2:0004:0005",
+      "source": "tvOS 16.4+",
+      "ko": "tvOS 16.4+",
+      "sourceHash": "109f0319c5e7b371065fefe055e28c6b6ca7a81fea1475b53f7bce71c25b4d9b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaszhpr2:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:cblaszhpr2:0004:0007",
+      "source": "watchOS 9.4+",
+      "ko": "watchOS 9.4+",
+      "sourceHash": "67ee43dad6c91bed40ae9594100c469efd957d68cd852a3321f06f344700c6f2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nfunc cblas_zhpr2(_ ORDER: CBLAS_ORDER, _ UPLO: CBLAS_UPLO, _ N: __LAPACK_int, _ ALPHA: OpaquePointer, _ X: OpaquePointer?, _ INCX: __LAPACK_int, _ Y: OpaquePointer?, _ INCY: __LAPACK_int, _ AP: OpaquePointer?)\n```",
+      "ko": "```swift\nfunc cblas_zhpr2(_ ORDER: CBLAS_ORDER, _ UPLO: CBLAS_UPLO, _ N: __LAPACK_int, _ ALPHA: OpaquePointer, _ X: OpaquePointer?, _ INCX: __LAPACK_int, _ Y: OpaquePointer?, _ INCY: __LAPACK_int, _ AP: OpaquePointer?)\n```",
+      "sourceHash": "43ad8582e707a921c47adfb959ba58ddd845eb1594ab90354481d2f190bd9ad2",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Calcuates `alpha*x*conjg(y') + conjg(alpha)*y*conjg(x') + A`, and stores the result in `A`.",
+      "ko": "`alpha*x*conjg(y') + conjg(alpha)*y*conjg(x') + A`를 계산하고 결과를 `A`에 저장합니다.",
+      "sourceHash": "b47143267eb0449aa82a1214f3be71b5b71ead0c1adae373e6c7e2171bee0a45",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0001",
+      "source": "❗ **Important**: Apple provides the BLAS and LAPACK libraries under the Accelerate framework to be in line with LAPACK 3.9.1.",
+      "ko": "❗ **중요**: Apple은 Accelerate framework에서 BLAS 및 LAPACK 라이브러리를 LAPACK 3.9.1에 맞추어 제공합니다.",
+      "sourceHash": "a77369ab1a513f75d549e2a2b5f235354e7fe9eb179d30112cb5b875a0da3ca1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0002",
+      "source": "Starting with iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26, and watchOS 26, the libraries are in line with LAPACK 3.12.0.",
+      "ko": "iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26, watchOS 26부터 라이브러리는 LAPACK 3.12.0에 맞추어 제공됩니다.",
+      "sourceHash": "e97eae73b60b46857199b3a97c28a7fe190ea650310acb446b972c4028f031ba",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0003",
+      "source": "These new interfaces provide additional functionality, as well as a new ILP64 interface.",
+      "ko": "이 새 인터페이스는 추가 기능과 함께 새 ILP64 인터페이스를 제공합니다.",
+      "sourceHash": "0dc3eddf285da2e9fa8eeff1e0a16a3aa28c6605b012d1a7576852840eec7412",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0004",
+      "source": "To use the new interfaces, define `ACCELERATE_NEW_LAPACK` before including the Accelerate or vecLib headers.",
+      "ko": "새 인터페이스를 사용하려면 `Accelerate` 또는 `vecLib` 헤더를 포함하기 전에 `ACCELERATE_NEW_LAPACK`를 정의합니다.",
+      "sourceHash": "d4c90cb9ef138f9dba90b86be8520319ce986b8a1da37bf533614d2f6465326b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0005",
+      "source": "For ILP64 interfaces, also define `ACCELERATE_LAPACK_ILP64`.",
+      "ko": "ILP64 인터페이스를 사용할 때는 `ACCELERATE_LAPACK_ILP64`도 정의합니다.",
+      "sourceHash": "7649752f08ef6fac723ac25bcf97bdb73433ac54a80c54458d0c86dce09414b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:blockquote:discussion:0009:0006",
+      "source": "For Swift projects, specify `ACCELERATE_NEW_LAPACK=1` and `ACCELERATE_LAPACK_ILP64=1` as preprocessor macros in Xcode build settings.",
+      "ko": "Swift 프로젝트의 경우 Xcode 빌드 설정에서 전처리기 매크로로 `ACCELERATE_NEW_LAPACK=1` 및 `ACCELERATE_LAPACK_ILP64=1`을 지정합니다.",
+      "sourceHash": "91cb6773e72581ad6c7100f2f5abd4987cf89797f2a3c344059d4b6c9a66ba0b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:parameters:0010:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0011:0001",
+      "source": "`ORDER`: Specifies row-major (C) or column-major (Fortran) data ordering.",
+      "ko": "`ORDER`: 데이터 정렬을 row-major(C) 또는 column-major(Fortran) 방식으로 지정합니다.",
+      "sourceHash": "08877a937216d6e558921021db2163ce169607ef66721ae82d475c2729b85de2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0002",
+      "source": "`UPLO`: Specifies whether to use the upper or lower triangle from the matrix. Valid values are `'U'` or `'L'`.",
+      "ko": "`UPLO`: 행렬에서 상삼각 또는 하삼각을 사용할지 지정합니다. 유효 값은 `'U'` 또는 `'L'`입니다.",
+      "sourceHash": "ff06845512ee773e2faaf72d8602b6a5bc56161809115cd3dc73477375dc8c12",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0003",
+      "source": "`N`: Order of matrix `A` and the number of elements in vectors `x` and `y`.",
+      "ko": "`N`: 행렬 `A`의 차수와 벡터 `x` 및 `y`의 요소 수를 지정합니다.",
+      "sourceHash": "ebbefff2197f714a813aa46ac9e0e76f7aa08cc15d1f777ec6cade67984a14cd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0004",
+      "source": "`ALPHA`: Scaling factor that vector `x` is multiplied by.",
+      "ko": "`ALPHA`: 벡터 `x`에 곱해지는 스케일링 인수입니다.",
+      "sourceHash": "cfa5d202108127c51bcc2a98c8a97df55c6ae1208180d0d33410d2fb2e89ce83",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0005",
+      "source": "`X`: Vector `x`.",
+      "ko": "`X`: 벡터 `x`입니다.",
+      "sourceHash": "4f4230147b407c1d272b93b4ffe8646f52cf5109133884c8fd70a5b23b8f6540",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0006",
+      "source": "`INCX`: Stride within `X`. For example, if `incX` is 7, every 7th element is used.",
+      "ko": "`INCX`: `X` 내의 스트라이드입니다. 예를 들어 `incX`가 7이면 7번째 요소를 사용합니다.",
+      "sourceHash": "fa5b1657eb5b25c78a68a9739b5b374544dd7fcf7456243707c889e0a530b42e",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0007",
+      "source": "`Y`: Vector `y`.",
+      "ko": "`Y`: 벡터 `y`입니다.",
+      "sourceHash": "72bc4520fc2b27c7ff04936735418685550e7d72dbac9358f07b39644c1f95f7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0008",
+      "source": "`INCY`: Stride within `Y`. For example, if `incY` is 7, every 7th element is used.",
+      "ko": "`INCY`: `Y` 내의 스트라이드입니다. 예를 들어 `incY`가 7이면 7번째 요소를 사용합니다.",
+      "sourceHash": "bb5fc12717427c321599728de8f445a2405df056c20d92efebfa439ab03383f3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:parameters:0011:0009",
+      "source": "`AP`: Matrix `A` in packed storage format. Overwritten by the results on return.",
+      "ko": "`AP`: packed 형식의 행렬 `A`입니다. 반환 시 결과로 덮어씁니다.",
+      "sourceHash": "faa7b35e42cec339d0042fbdf382511b6d349eeaa60c4df805fa066f360ad2c8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0012:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0013:0001",
+      "source": "[func cblas_dzasum(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> Double](cblas_dzasum(_:_:_:).md)",
+      "ko": "[func cblas_dzasum(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> Double](cblas_dzasum(_:_:_:).md)",
+      "sourceHash": "b2472ff32b6ba836a6cc4d61e96d871a18d782fcc9d5613da6fb1e39ae696b2b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0014:0001",
+      "source": "Computes the sum of the absolute values of real and imaginary parts of elements in a vector (single-precision complex).",
+      "ko": "벡터의 요소에서 실수부와 허수부의 절댓값 합계를 계산합니다 (단정밀도 복소수).",
+      "sourceHash": "054b2e268a381c3972020ae69076be39995330d9ad0e2eaf6cf264c8de75c790",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0015:0001",
+      "source": "[func cblas_dznrm2(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> Double](cblas_dznrm2(_:_:_:).md)",
+      "ko": "[func cblas_dznrm2(__LAPACK_int, OpaquePointer?, __LAPACK_int) -> Double](cblas_dznrm2(_:_:_:).md)",
+      "sourceHash": "5077979f4c212d1400385d3af337bd0eabc4aa0d35e8e6478920ea040c41b6e1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0016:0001",
+      "source": "Computes the unitary norm of a vector (double-precision complex).",
+      "ko": "벡터의 unitary 노름을 계산합니다 (배정밀도 복소수).",
+      "sourceHash": "2faed3756f379254c8dd2129b54a46663b434602e8b9786244173b496a9ea336",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0017:0001",
+      "source": "[func cblas_zaxpy(__LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zaxpy(_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zaxpy(__LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zaxpy(_:_:_:_:_:_:).md)",
+      "sourceHash": "43d0b66f66442875164d24447139ed1a53159c107c8b0bae9eafa0fa716385da",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0018:0001",
+      "source": "Computes a constant times a vector plus a vector (double-precision complex).",
+      "ko": "상수 배 벡터에 벡터를 더합니다 (배정밀도 복소수).",
+      "sourceHash": "fac1ba396e64f40f3ca59da091c0ae6f8f4a21884358daf446b6bdf7a8a6fbae",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0019:0001",
+      "source": "[func cblas_zcopy(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zcopy(_:_:_:_:_:).md)",
+      "ko": "[func cblas_zcopy(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zcopy(_:_:_:_:_:).md)",
+      "sourceHash": "6b26c0274dc3bcc89bf002b8f6cda094e632196d133cf56e56560039606a4c19",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0020:0001",
+      "source": "Copies a vector to another vector (double-precision complex).",
+      "ko": "벡터를 다른 벡터로 복사합니다 (배정밀도 복소수).",
+      "sourceHash": "16ab3dd226c2f2fbbb7b000df20fbe78c1dc5c5520f6ef745d4038ac4a1e06a1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0021:0001",
+      "source": "[func cblas_zdrot(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Double, Double)](cblas_zdrot(_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zdrot(__LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, Double, Double)](cblas_zdrot(_:_:_:_:_:_:_:).md)",
+      "sourceHash": "610d33b06b1ef36a2321987919b8e21f16b0a5d15ee7e5f916d876b0d21df632",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0022:0001",
+      "source": "Applies a Givens rotation matrix to a pair of complex vectors.",
+      "ko": "복소수 벡터 두 개에 Givens 회전 행렬을 적용합니다.",
+      "sourceHash": "237565414bbda912a8e4590b4e51222494dde1028439ba8dbb55c3b5e01f9d31",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0023:0001",
+      "source": "[func cblas_zdscal(__LAPACK_int, Double, OpaquePointer?, __LAPACK_int)](cblas_zdscal(_:_:_:_:).md)",
+      "ko": "[func cblas_zdscal(__LAPACK_int, Double, OpaquePointer?, __LAPACK_int)](cblas_zdscal(_:_:_:_:).md)",
+      "sourceHash": "b516c2831509ea1b51fb6e0dd612de99df89db98215a48b266a0c7c386693f00",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0024:0001",
+      "source": "Multiplies each element of a vector by a constant (double-precision complex).",
+      "ko": "벡터의 각 요소를 상수와 곱합니다 (배정밀도 복소수).",
+      "sourceHash": "c0aee656b1a6c07f044fcf6bf4c0471cdcccdd64ac31cc81394d6d8f2d5501d8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0025:0001",
+      "source": "[func cblas_zgbmv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgbmv(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zgbmv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgbmv(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "a9538af8bdddd1c7eb4aef05ad578ab62d184237cc30164f86690d3b1bfbd310",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0026:0001",
+      "source": "Scales a general band matrix, then multiplies by a vector, then adds a vector (double-precision complex).",
+      "ko": "일반 밴드 행렬을 스케일링한 다음 벡터를 곱하고, 벡터를 더합니다 (배정밀도 복소수).",
+      "sourceHash": "2e8b8700bd7cb948be217aace575fe7aea4df6a8b09ca40c823171372f38ff0c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0027:0001",
+      "source": "[func cblas_zgemm(CBLAS_ORDER, CBLAS_TRANSPOSE, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgemm(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zgemm(CBLAS_ORDER, CBLAS_TRANSPOSE, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgemm(_:_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "a1bc4272aad2955b3363e07afd5638717da251f1288df605bd76614092d03a44",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0028:0001",
+      "source": "Multiplies two matrices (double-precision complex).",
+      "ko": "두 행렬을 곱합니다 (배정밀도 복소수).",
+      "sourceHash": "ef146aa08d1b7506b44326921fb394dd4d063af4beea1a74c7cd6a1931b67d1c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0029:0001",
+      "source": "[func cblas_zgemv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgemv(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zgemv(CBLAS_ORDER, CBLAS_TRANSPOSE, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zgemv(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "3e7cf94d5a0062c114b66c65ca5cf867a44f6b130beb562efd58a11379ee09ee",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0030:0001",
+      "source": "Multiplies a matrix by a vector (double-precision complex).",
+      "ko": "행렬을 벡터와 곱합니다 (배정밀도 복소수).",
+      "sourceHash": "845d51b70271adfedfd04c084306371beee70382c84ddebad0a6c8aa012623b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0031:0001",
+      "source": "[func cblas_zgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zgerc(_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zgerc(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zgerc(_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "30795bbdecb42f6e9aa77b8f9cff255e835b94fa063895297ba3b934f88c2ecc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0032:0001",
+      "source": "Multiplies vector X by the conjugate transpose of vector Y, then adds matrix A (double-precision complex).",
+      "ko": "벡터 X를 벡터 Y의 켤레 전치와 곱한 다음 행렬 A를 더합니다 (배정밀도 복소수).",
+      "sourceHash": "81ad749e2e8117cb37393f79ce2bd1015b2987b19b14a513f50fcd1ae16c1d1b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0033:0001",
+      "source": "[func cblas_zgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zgeru(_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zgeru(CBLAS_ORDER, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zgeru(_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "b770ca0d62fe1e34b5679f200d8791d2f9cbab8afa994b426cd26905140e7171",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0034:0001",
+      "source": "Multiplies vector X by the transpose of vector Y, then adds matrix A (double-precision complex).",
+      "ko": "벡터 X를 벡터 Y의 전치와 곱한 다음 행렬 A를 더합니다 (배정밀도 복소수).",
+      "sourceHash": "23785538d5ec2d24dc802935220b9d207129aaaa177b6d54bebffba07b80ac68",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0035:0001",
+      "source": "[func cblas_zhbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zhbmv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhbmv(_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "2eea53cdd9f54e93394c77e2d16f417f31f6dcaf689258b771944689e8fc00c7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0036:0001",
+      "source": "Scales a Hermitian band matrix, then multiplies by a vector, then adds a vector (double-precision complex).",
+      "ko": "에르미트 밴드 행렬을 스케일링하고 벡터를 곱한 다음 벡터를 더합니다 (배정밀도 복소수).",
+      "sourceHash": "b76b766d27ced8ad28c8769e174cb3ca57c8456dfb84e5c50cacd949a93a386f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0037:0001",
+      "source": "[func cblas_zhemm(CBLAS_ORDER, CBLAS_SIDE, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhemm(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zhemm(CBLAS_ORDER, CBLAS_SIDE, CBLAS_UPLO, __LAPACK_int, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhemm(_:_:_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "92c9298f5fc2a32dfb6ac156a5e8d7a3ee8b79bf6b4b2baac87bdb02a1b68e93",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0038:0001",
+      "source": "Multiplies two Hermitian matrices (double-precision complex).",
+      "ko": "두 에르미트 행렬을 곱합니다 (배정밀도 복소수).",
+      "sourceHash": "4316510421a316a3ed6bb2894af1ad9e9a694ffa924b0f1ec95fc0a998de70e3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0039:0001",
+      "source": "[func cblas_zhemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhemv(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zhemv(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int, OpaquePointer, OpaquePointer?, __LAPACK_int)](cblas_zhemv(_:_:_:_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "8818a291a40389876a8f10014926b706df367075dfa97eec262ee7bf085e58cc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0040:0001",
+      "source": "Scales and multiplies a Hermitian matrix by a vector, then adds a second (scaled) vector.",
+      "ko": "에르미트 행렬을 스케일링한 뒤 벡터와 곱하고, 두 번째(스케일링된) 벡터를 더합니다.",
+      "sourceHash": "400ade9a2d42899bb4562f713ac803ba286201339ac3353a1a18c8954a7d1df4",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0041:0001",
+      "source": "[func cblas_zher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Double, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zher(_:_:_:_:_:_:_:_:).md)",
+      "ko": "[func cblas_zher(CBLAS_ORDER, CBLAS_UPLO, __LAPACK_int, Double, OpaquePointer?, __LAPACK_int, OpaquePointer?, __LAPACK_int)](cblas_zher(_:_:_:_:_:_:_:_:).md)",
+      "sourceHash": "f380eeda65aea74272e3ce49b33fad6422bc32d62b8a5ac678fb6e613c88cc37",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0042:0001",
+      "source": "Adds the product of a scaling factor, vector `X`, and the conjugate transpose of `X` to matrix `A`.",
+      "ko": "스케일링 계수와 벡터 `X`, 그리고 벡터 `X`의 켤레 전치의 곱을 행렬 `A`에 더합니다.",
+      "sourceHash": "b943e70020cc7043ab36e1f8bf4395205771cf546e88a8c1c6d6ae548b9d2b07",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0043:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0044:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/cblas_zhpr2(_:_:_:_:_:_:_:_:_:))*",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/accelerate/cblas_zhpr2(_:_:_:_:_:_:_:_:_:))*",
+      "sourceHash": "5e84c465a44fe00c7c977f21ed197f4656867d615277f759223ff922671594d0",
+      "status": "machine_translated"
+    }
+  ]
+}

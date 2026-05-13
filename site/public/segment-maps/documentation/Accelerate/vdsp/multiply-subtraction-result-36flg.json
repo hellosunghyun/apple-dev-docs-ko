@@ -1,0 +1,442 @@
+{
+  "docId": "documentation/Accelerate/vdsp/multiply-subtraction-result-36flg.md",
+  "title": "multiply(subtraction::result:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vdsp/multiply-subtraction-result-36flg",
+  "segments": [
+    {
+      "id": "seg:heading:multiplysubtractionresult:0000:0001",
+      "source": "multiply(subtraction:_:result:)",
+      "ko": "multiply(subtraction:_:result:)",
+      "sourceHash": "a8e5386bb5ae1c4e6b0296cacd2af1932ee61cbbaa1dd55b44ae21f00ba7409b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:multiplysubtractionresult:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:multiplysubtractionresult:0002:0001",
+      "source": "Calculates the single-precision element-wise product of a vector and the differences of two vectors.",
+      "ko": "Calculates the single-precision element-wise product of a vector and the differences of two vectors.",
+      "sourceHash": "a35f05d8e9d3bff489ef34cc424a5b2f754302ed7dbb400bf2db381d76c58988",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:multiplysubtractionresult:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:multiplysubtractionresult:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:multiplysubtractionresult:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:multiplysubtractionresult:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:multiplysubtractionresult:0004:0004",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:multiplysubtractionresult:0004:0005",
+      "source": "tvOS 13.0+",
+      "ko": "tvOS 13.0+",
+      "sourceHash": "030e6b7e51c85f674522c209ef14fc0e355ebd196e0259389daeaae4f69ad826",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:multiplysubtractionresult:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:multiplysubtractionresult:0004:0007",
+      "source": "watchOS 6.0+",
+      "ko": "watchOS 6.0+",
+      "sourceHash": "b51a82766977554dbe76aec20d5bc0ad6fe4984dddfcf6db82130e544b0631e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstatic func multiply<S, T, U, V>(subtraction: (a: S, b: T), _ vector: U, result: inout V) where S : AccelerateBuffer, T : AccelerateBuffer, U : AccelerateBuffer, V : AccelerateMutableBuffer, S.Element == Float, T.Element == Float, U.Element == Float, V.Element == Float\n```",
+      "ko": "```swift\nstatic func multiply<S, T, U, V>(subtraction: (a: S, b: T), _ vector: U, result: inout V) where S : AccelerateBuffer, T : AccelerateBuffer, U : AccelerateBuffer, V : AccelerateMutableBuffer, S.Element == Float, T.Element == Float, U.Element == Float, V.Element == Float\n```",
+      "sourceHash": "19c595882fac981ad3685397d65bf5ed630c11a6e7e3ae74030d258af09eb832",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This function calculates the differences of the first `N` elements of `A` and `B`, multiplies each difference by the corresponding value in `C`, and writes the result to `D`.",
+      "ko": "파일 기반 미디어의 경우, [`AVPlayerItemTrack`](avplayeritemtrack.md)를 사용해 해당 미디어의 [`isEnabled`](avplayeritemtrack/isenabled.md) 표시 상태를 변경할 수 있습니다.",
+      "sourceHash": "2a1f5738c4cca8cb62cb83f8162819a24d9c8069a454a060d2b4f4e336c643a0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:code:discussion:0009:0001",
+      "source": "```swift\n for (n = 0; n < N; ++n)\n    D[n] = (A[n] - B[n]) * C[n];\n```",
+      "ko": "```swift\n for (n = 0; n < N; ++n)\n    D[n] = (A[n] - B[n]) * C[n];\n```",
+      "sourceHash": "fdbe999d02f8412b8ad411301ae831f1835837ed682ca6a96df3e52b30afce8a",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "![A diagram showing the operation of this function.",
+      "ko": "이 속성은 키-값 관찰을 지원합니다.",
+      "sourceHash": "4383a37a5bdb4c14507e3e2f5e569f875a88eb2c5e5803a98e18010e1f5ae9f2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "There are four rows.",
+      "ko": "There are four rows.",
+      "sourceHash": "9e0f9736804d6f84727760f803f00fae350cb55cd2c4e02aba71d9cf26c86ef0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0003",
+      "source": "The top row represents the input vectors, A and B, with three boxes of each.",
+      "ko": "The top row represents the input vectors, A and B, with three boxes of each.",
+      "sourceHash": "47b09ec3aa206c12e8a14447bc13afb6632b250ca00a9cbc98e5be29d1dae17a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0004",
+      "source": "The second row represents the operation that subtracts B from A, as well as the input vector C, with three boxes of each.",
+      "ko": "The second row represents the operation that subtracts B from A, as well as the input vector C, with three boxes of each.",
+      "sourceHash": "a50501e8304d1c3a4f816b51d73a55c0d2babce35ab2d1a2d7142a009e4b4bba",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0005",
+      "source": "The third row represents the multiplication operation as three boxes.",
+      "ko": "The third row represents the multiplication operation as three boxes.",
+      "sourceHash": "f85eb218ca07e9abe988251c1b819f6d591a9bb91672c9240faa917f097937f7",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0006",
+      "source": "The bottom row represents the output vector D as three boxes.",
+      "ko": "The bottom row represents the output vector D as three boxes.",
+      "sourceHash": "48be2b9f82ef28b314c58e392ed86031203e3e6ab329105ec051caa45d56252c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0007",
+      "source": "The diagram has connecting lines from the input vectors to the operations, and from the operations to the output vectors. ](https://docs-assets.developer.apple.com/published/7a0b0b6f6a09540df83d4c2453dbff21/media-4337014%402x.png)",
+      "ko": "The diagram has connecting lines from the input vectors to the operations, and from the operations to the output vectors. ](https://docs-assets.developer.apple.com/published/7a0b0b6f6a09540df83d4c2453dbff21/media-4337014%402x.png)",
+      "sourceHash": "eaad589f10a1935bafe15611b1db6daf5d5f1669b5b95fb2a449655800cd678f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "The following code shows an example of using this function:",
+      "ko": "The following code shows an example of using this function:",
+      "sourceHash": "6a6645d7323dbaedfa632f913e9d50a0fccbb63d6d54e3c2e4adcf1d87ef8ec5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:discussion:0012:0001",
+      "source": "```swift\n    let count = 5\n    \n    let a: [Float] = [ 1,  2,  3,  4,  5]\n    let b: [Float] = [10, 20, 30, 40, 50]\n    let c: [Float] = [ 5,  4,  3,  2,  1]\n    \n    let d = [Float](unsafeUninitializedCapacity: count) {\n        buffer, initializedCount in\n        \n        vDSP.multiply(subtraction: (a, b),\n                      c,\n                      result: &buffer)\n\n        initializedCount = count\n    }\n    \n    // Prints \"[-45.0, -72.0, -81.0, -72.0, -45.0]\".\n    print(d)\n\n```",
+      "ko": "```swift\n    let count = 5\n    \n    let a: [Float] = [ 1,  2,  3,  4,  5]\n    let b: [Float] = [10, 20, 30, 40, 50]\n    let c: [Float] = [ 5,  4,  3,  2,  1]\n    \n    let d = [Float](unsafeUninitializedCapacity: count) {\n        buffer, initializedCount in\n        \n        vDSP.multiply(subtraction: (a, b),\n                      c,\n                      result: &buffer)\n\n        initializedCount = count\n    }\n    \n    // Prints \"[-45.0, -72.0, -81.0, -72.0, -45.0]\".\n    print(d)\n\n```",
+      "sourceHash": "396fdbbbe80bb66c804a2d5334c0d22f932de9311dc5356c8df790c915ca5595",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0013:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0014:0001",
+      "source": "`subtraction`: A tuple that contains the vectors `A` and `B` in `D = (A - B) * C`.",
+      "ko": "`subtraction`: A tuple that contains the vectors `A` and `B` in `D = (A - B) * C`.",
+      "sourceHash": "0e7023958198b5e265db8ab3d595d4c33d8e61f9f8834b43d4b350a34a555179",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0014:0002",
+      "source": "`vector`: The input vector `C` in `D = (A - B) * C`.",
+      "ko": "`vector`: The input vector `C` in `D = (A - B) * C`.",
+      "sourceHash": "b951296249a16819c93b4f121540d5e30ce8bd84bd35d00c39665048be69d7d5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0014:0003",
+      "source": "`result`: The output vector `D` in `D = (A - B) * C`.",
+      "ko": "`result`: The output vector `D` in `D = (A - B) * C`.",
+      "sourceHash": "25f3c76edd53a46188e5e42699295e754f73432838b22c35e90ef381bb361648",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0015:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[static func multiply<U>(Double, U) -> [Double]](vdsp/multiply(_:_:)-9dxnc.md)",
+      "ko": "[class func mediaSelectionOptions(from: [AVMediaSelectionOption], withMediaCharacteristics: [AVMediaCharacteristic]) -> [AVMediaSelectionOption]](avmetadatakey/id3metadatakeyaudioseekpointindex.md)",
+      "sourceHash": "8ff17ccc622a6d3d6fd9e851d446a19e84ae7a9c4c9d416efa39d9585f8d197f",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Returns the double-precision element-wise product of a vector and a scalar value.",
+      "ko": "지정된 배열에서 지정된 미디어 특성과 일치하는 미디어 선택 옵션을 포함하는 배열을 반환합니다.",
+      "sourceHash": "92d38ff8d011ac160ad80272941b4828d8198a20f825c40e8e784dafd167f438",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[static func multiply<T, U>(T, U) -> [Double]](vdsp/multiply(_:_:)-1ckqt.md)",
+      "ko": "[class func mediaSelectionOptions(from: [AVMediaSelectionOption], filteredAndSortedAccordingToPreferredLanguages: [String]) -> [AVMediaSelectionOption]](avmetadatakey/id3metadatakeyband.md)",
+      "sourceHash": "0581977bd62ca07fbc01cea7481248ecf074f7e0b19c36e608f0cf872d1fcf1c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Returns the double-precision element-wise product of two vectors.",
+      "ko": "지정한 언어 중 하나와 로케일이 일치하는지 여부에 따라 미디어 선택 옵션을 필터링한 배열을 반환합니다.",
+      "sourceHash": "3133641a26ce32b5e7f95461e1dbc67d8e5deb2081f7ce5ebd6fb2895f34ebec",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[static func multiply<U>(Float, U) -> [Float]](vdsp/multiply(_:_:)-993yp.md)",
+      "ko": "[static let id3MetadataKeyBeatsPerMinute: AVMetadataKey](avmetadatakey/id3metadatakeybeatsperminute.md)",
+      "sourceHash": "1918d0412ce3423f50a513195ceaac1b1d1160dfc43ad51aae3454c9a4113da8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Returns the single-precision element-wise product of a vector and a scalar value.",
+      "ko": "AVMediaSelectionOptions에 대한 대체 선택 인터페이스를 제공하기 위해 작성된 콘텐츠의 경우, AVCustomMediaSelectionScheme은 미디어의 표시를 제어하는 사용자 정의 설정 모음을 제공합니다.",
+      "sourceHash": "0e7bd82913936d0df75686ee4d8b84bdffa0783b757ff95faf7704c7787d046c",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[static func multiply<T, U>(T, U) -> [Float]](vdsp/multiply(_:_:)-9zgw.md)",
+      "ko": "[static let id3MetadataKeyComments: AVMetadataKey](avmetadatakey/id3metadatakeycomments.md)",
+      "sourceHash": "0ca2c1de036bfc4ee400ee27b405d5f62fe65e4dc68eb1dd5f34cfcedc276e8d",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Returns the single-precision element-wise product of two vectors.",
+      "ko": "*[Apple Developer에서 보기](https://developer.apple.com/documentation/avfoundation/avmediaselectiongroup/mediaselectionoptions(from:withoutmediacharacteristics:))*",
+      "sourceHash": "6134eed843d76a68174861fc4389fce0c0fff6e65d558e13f23b99d773b8d5a1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[static func multiply<U, V>(Double, U, result: inout V)](vdsp/multiply(_:_:result:)-4xorc.md)",
+      "ko": "[static let id3MetadataKeyCommercial: AVMetadataKey](avmetadatakey/id3metadatakeycommercial.md)",
+      "sourceHash": "8d146042a88dae2c5b37d807b327656430166c80a3a03d90ed13efc39b0d3030",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Calculates the double-precision element-wise product of a vector and a scalar value.",
+      "ko": "미디어의 상업적 세부 정보를 나타내는 키입니다.",
+      "sourceHash": "8c8bf5a5d2a8e2cef0073c871425e901cc65c076dc4ac19061f995e10a8700e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[static func multiply<U, V>(Float, U, result: inout V)](vdsp/multiply(_:_:result:)-358cn.md)",
+      "ko": "[static let id3MetadataKeyCommercialInformation: AVMetadataKey](avmetadatakey/id3metadatakeycommercialinformation.md)",
+      "sourceHash": "5c2600ce98ee733c7bfa9e5271e9ab016f82fa7e98c1b5739ce7684d29e864df",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Calculates the single-precision element-wise product of a vector and a scalar value.",
+      "ko": "구매 정보를 포함하는 웹페이지를 나타내는 키입니다.",
+      "sourceHash": "1b7250ffc9fc878dcbb502eec1e2b481eee6274047e83819fdd3f8f7e536f45b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[static func multiply<T, U, V>(T, U, result: inout V)](vdsp/multiply(_:_:result:)-3ptjl.md)",
+      "ko": "[static let id3MetadataKeyComposer: AVMetadataKey](avmetadatakey/id3metadatakeycomposer.md)",
+      "sourceHash": "34fd3cd392f2120d82ba1c079122dbfbc6f7a4a7d74cc73ae9a59b34239e498b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Calculates the double-precision element-wise product of two vectors.",
+      "ko": "작곡가 이름을 나타내는 키입니다.",
+      "sourceHash": "f266e0a71f619438d3d05ee444ddb66625180663b4888714d2560d693da1f234",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[static func multiply<T, U, V>(T, U, result: inout V)](vdsp/multiply(_:_:result:)-155f3.md)",
+      "ko": "[static let id3MetadataKeyConductor: AVMetadataKey](avmetadatakey/id3metadatakeyconductor.md)",
+      "sourceHash": "c49dd7729f7db49d7e0f2f28647ccea87b5670f58c3aa40a7ffdacbe2d61d2b9",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Calculates the single-precision element-wise product of two vectors.",
+      "ko": "디지털 영상 및 의료 통신(DICOM) 파일 형식의 UTI입니다.",
+      "sourceHash": "5a288f27fda5c2a99f5ba672ed493041508bd43496a99566c6509e534979baf1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[static func multiply(DSPSplitComplex, by: DSPSplitComplex, count: Int, useConjugate: Bool, result: inout DSPSplitComplex)](vdsp/multiply(_:by:count:useconjugate:result:)-4idx8.md)",
+      "ko": "[static let dng: AVFileType](avmetadatakey/id3metadatakeycontentgroupdescription.md)",
+      "sourceHash": "835da8b1dbb74f8275b1ffa52777e7d9d207dc99a296415132db10fdc2484811",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Calculates the product of two complex single-precision vectors, optionally conjugating one of them.",
+      "ko": "Adobe Digital Negative 파일 형식의 UTI입니다.",
+      "sourceHash": "e6ee848e72bdccd30ba85943e15dc8df5dc7086ed3ae10f50b1711b83c6993cd",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[static func multiply(DSPDoubleSplitComplex, by: DSPDoubleSplitComplex, count: Int, useConjugate: Bool, result: inout DSPDoubleSplitComplex)](vdsp/multiply(_:by:count:useconjugate:result:)-79r8u.md)",
+      "ko": "[static let eac3: AVFileType](avfiletype/eac3.md)",
+      "sourceHash": "1a44a75423374d5bc65b92bce0569fabdb674f7ff1b744d4b595edc0c8812baf",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Calculates the element-wise product of two complex double-precision vectors, optionally conjugating one of them.",
+      "ko": "향상형 AC3 오디오 파일 형식의 UTI입니다.",
+      "sourceHash": "fa50f4c012077324752f175cadb2292914aa6dde4a2978c645358cc9f9f69851",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[static func multiply<U>(DSPSplitComplex, by: U, result: inout DSPSplitComplex)](vdsp/multiply(_:by:result:)-8b9eq.md)",
+      "ko": "[static let heic: AVFileType](avfiletype/heic.md)",
+      "sourceHash": "ef9b2512e1b80bedef55df730e32dabe42d0b1af888c4f8aa308c43757912cbe",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Calculates the double-precision element-wise product of a complex vector and a real vector.",
+      "ko": "HEVC 압축 이미지가 포함된 고효율 이미지 파일 형식의 UTI입니다.",
+      "sourceHash": "da673dac53953f7194d32182eb4426318de3d59e7642f19c7e82aefe982d7e57",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[static func multiply<U>(DSPDoubleSplitComplex, by: U, result: inout DSPDoubleSplitComplex)](vdsp/multiply(_:by:result:)-8jyhd.md)",
+      "ko": "[static let heif: AVFileType](avfiletype/heif.md)",
+      "sourceHash": "7c96521f2b1dd11072dd815306d35fffca84223212bbda45ae4326ecdc229127",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Calculates the single-precision element-wise product of a complex vector and a real vector.",
+      "ko": "모든 코덱에서 압축한 이미지를 포함하는 고효율 이미지 파일 형식의 UTI입니다.",
+      "sourceHash": "0c975d984562c02882fa7f4edf9ad9014ce01cf6e9e88435dfe37662a0f736e0",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[static func multiply<T, U>(addition: (a: T, b: U), Double) -> [Double]](vdsp/multiply(addition:_:)-4c9in.md)",
+      "ko": "[static func multiply<T, U>(addition: (a: T, b: U), Double) -> [Double]](vdsp/multiply(addition:_:)-4c9in.md)",
+      "sourceHash": "d9b0bda471e7a51bb50f2a796fad581eb506cef29c3af3197d35b72784f33435",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "Returns the double-precision element-wise product of the sum of two vectors and a scalar value.",
+      "ko": "Returns the double-precision element-wise product of the sum of two vectors and a scalar value.",
+      "sourceHash": "6db34703eccda0dfa1b762054da8127148e5f35ca5881ed663c3a96a15b4981a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[static func multiply<S, T, U>(addition: (a: S, b: T), U) -> [Double]](vdsp/multiply(addition:_:)-1wt61.md)",
+      "ko": "[static func multiply<S, T, U>(addition: (a: S, b: T), U) -> [Double]](vdsp/multiply(addition:_:)-1wt61.md)",
+      "sourceHash": "cfe1b791d95dd9e91a214991288faa40c2626cb3e9467ac6e28781566d5fb0cf",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "Returns the double-precision element-wise product of a vector and the sum of two vectors.",
+      "ko": "Returns the double-precision element-wise product of a vector and the sum of two vectors.",
+      "sourceHash": "1aa92655f7dcb009e42ff7f2546efbce57c55ce5e23e5cae92e469842ef2515a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[static func multiply<T, U>(addition: (a: T, b: U), Float) -> [Float]](vdsp/multiply(addition:_:)-4fnbx.md)",
+      "ko": "[static func multiply<T, U>(addition: (a: T, b: U), Float) -> [Float]](vdsp/multiply(addition:_:)-4fnbx.md)",
+      "sourceHash": "1e080846ab1b9f30dacfb58061051f939135ee669bd2f6c60ec43c5e118ef089",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "Returns the single-precision element-wise product of the sum of two vectors and a scalar value.",
+      "ko": "Returns the single-precision element-wise product of the sum of two vectors and a scalar value.",
+      "sourceHash": "6418c528e83f541d0fc253a1061b8e3ccc021583fc785857f94b39c9d580f0c9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0046:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/multiply(subtraction:_:result:)-36flg)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/multiply(subtraction:_:result:)-36flg)*",
+      "sourceHash": "66f99eec3e5fe0ccdb5333637b03a68bf99226344ecf7dc34aa38e37105cec5a",
+      "status": "failed"
+    }
+  ]
+}

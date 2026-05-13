@@ -1,0 +1,442 @@
+{
+  "docId": "documentation/Accelerate/vdsp/subtract-multiplication-result-6b91s.md",
+  "title": "subtract(multiplication::result:)",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/vdsp/subtract-multiplication-result-6b91s",
+  "segments": [
+    {
+      "id": "seg:heading:subtractmultiplicationresult:0000:0001",
+      "source": "subtract(multiplication:_:result:)",
+      "ko": "subtract(multiplication:_:result:)",
+      "sourceHash": "083792468f19314905d44ac7c854098f727a931ece2db44ba1f74150daf38f7d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:subtractmultiplicationresult:0001:0001",
+      "source": "**Framework**: Accelerate **Kind**: method",
+      "ko": "**Framework**: Accelerate **Kind**: method",
+      "sourceHash": "ba35aec6c34b6a960886b37c42f21602ce7488f84eec6dc848031848161a6ce8",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:subtractmultiplicationresult:0002:0001",
+      "source": "Calculates the single-precision element-wise difference of a vector and the product of two vectors.",
+      "ko": "Calculates the single-precision element-wise difference of a vector and the product of two vectors.",
+      "sourceHash": "542eb657ff27b07049e4da0f4bd2cadccb7f808fda858e0bd1af6112aa7ee7f6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:subtractmultiplicationresult:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationresult:0004:0001",
+      "source": "iOS 13.0+",
+      "ko": "iOS 13.0+",
+      "sourceHash": "8ad7665657aa1b826b0fd1b748725f1c4d794896f5d944655ccc715c288e7d5b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationresult:0004:0002",
+      "source": "iPadOS 13.0+",
+      "ko": "iPadOS 13.0+",
+      "sourceHash": "12a7755a0158c038b693f26a885f7e20c0770b634b3f58d4fcd24e58526cc02f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationresult:0004:0003",
+      "source": "Mac Catalyst ?+",
+      "ko": "Mac Catalyst ?+",
+      "sourceHash": "d09e67581b9d1e150cdff72f0c3ad7ac6cd7d0828c776aa1db7f060c86f102e6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationresult:0004:0004",
+      "source": "macOS 10.15+",
+      "ko": "macOS 10.15+",
+      "sourceHash": "549dfb7c5583ee6b719c3d05aaee08138246e847df542643ceaa813b31fb7e16",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationresult:0004:0005",
+      "source": "tvOS 13.0+",
+      "ko": "tvOS 13.0+",
+      "sourceHash": "030e6b7e51c85f674522c209ef14fc0e355ebd196e0259389daeaae4f69ad826",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationresult:0004:0006",
+      "source": "visionOS ?+",
+      "ko": "visionOS ?+",
+      "sourceHash": "014212caef4c39da3d3efa5f385ced48122c4710c77007c1c77979359da28f9d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:subtractmultiplicationresult:0004:0007",
+      "source": "watchOS 6.0+",
+      "ko": "watchOS 6.0+",
+      "sourceHash": "b51a82766977554dbe76aec20d5bc0ad6fe4984dddfcf6db82130e544b0631e3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nstatic func subtract<S, T, U, V>(multiplication: (a: T, b: U), _ vector: S, result: inout V) where S : AccelerateBuffer, T : AccelerateBuffer, U : AccelerateBuffer, V : AccelerateMutableBuffer, S.Element == Float, T.Element == Float, U.Element == Float, V.Element == Float\n```",
+      "ko": "```swift\nstatic func subtract<S, T, U, V>(multiplication: (a: T, b: U), _ vector: S, result: inout V) where S : AccelerateBuffer, T : AccelerateBuffer, U : AccelerateBuffer, V : AccelerateMutableBuffer, S.Element == Float, T.Element == Float, U.Element == Float, V.Element == Float\n```",
+      "sourceHash": "e0e63fae3e7d57e41ca123ca57a4b153083e509c44b74754f2624487e3fcad7b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "This function calculates the products of the first `N` elements of `A` and `B`, subtracts each product from the corresponding value in `C`, and writes the result to `D`.",
+      "ko": "This function calculates the products of the first `N` elements of `A` and `B`, subtracts each product from the corresponding value in `C`, and writes the result to `D`.",
+      "sourceHash": "25a896344ffb463a7433b2286fe643324fb584d5b391917fbc790724a2c12553",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:discussion:0009:0001",
+      "source": "```swift\n for (n = 0; n < N; ++n)\n    D[n] = (A[n] * B[n]) - C[n];\n```",
+      "ko": "```swift\n for (n = 0; n < N; ++n)\n    D[n] = (A[n] * B[n]) - C[n];\n```",
+      "sourceHash": "d27b3fece1597deeda39a45d0257267c4d551bf8587bbe009d211a50f51616f9",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "![A diagram showing the operation of this function.",
+      "ko": "![A diagram showing the operation of this function.",
+      "sourceHash": "4383a37a5bdb4c14507e3e2f5e569f875a88eb2c5e5803a98e18010e1f5ae9f2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0002",
+      "source": "There are four rows.",
+      "ko": "There are four rows.",
+      "sourceHash": "9e0f9736804d6f84727760f803f00fae350cb55cd2c4e02aba71d9cf26c86ef0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0003",
+      "source": "The top row represents the input vectors, A and B, with three boxes of each.",
+      "ko": "The top row represents the input vectors, A and B, with three boxes of each.",
+      "sourceHash": "47b09ec3aa206c12e8a14447bc13afb6632b250ca00a9cbc98e5be29d1dae17a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0004",
+      "source": "The second row represents the operation that multiplies A and B, as well as the input vector C, with three boxes of each.",
+      "ko": "The second row represents the operation that multiplies A and B, as well as the input vector C, with three boxes of each.",
+      "sourceHash": "58b3cd4d08d072130bf62f989a826aae9be82baa64e2312f210220e2bd044e29",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0005",
+      "source": "The third row represents the subtraction operation as three boxes.",
+      "ko": "The third row represents the subtraction operation as three boxes.",
+      "sourceHash": "96dc6dc0eb4fda6beb2cdc20eaf3d26fb03352ce878ee7dfc9dd122e662f68da",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0006",
+      "source": "The bottom row represents the output vector D as three boxes.",
+      "ko": "The bottom row represents the output vector D as three boxes.",
+      "sourceHash": "48be2b9f82ef28b314c58e392ed86031203e3e6ab329105ec051caa45d56252c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0007",
+      "source": "The diagram has connecting lines from the input vectors to the operations, and from the operations to the output vectors. ](https://docs-assets.developer.apple.com/published/9a514717c6dc246e1775caf6b56eec5a/media-4336999%402x.png)",
+      "ko": "The diagram has connecting lines from the input vectors to the operations, and from the operations to the output vectors. ](https://docs-assets.developer.apple.com/published/9a514717c6dc246e1775caf6b56eec5a/media-4336999%402x.png)",
+      "sourceHash": "ccacbd049c78e9cc838798718ba56cbe6dc1361f551b8f767e383879212f534f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:discussion:0011:0001",
+      "source": "The following code shows an example of using this function:",
+      "ko": "The following code shows an example of using this function:",
+      "sourceHash": "6a6645d7323dbaedfa632f913e9d50a0fccbb63d6d54e3c2e4adcf1d87ef8ec5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:code:discussion:0012:0001",
+      "source": "```swift\n    let count = 5\n    \n    let a: [Float] = [ 1,  2,  3,  4,  5]\n    let b: [Float] = [10, 20, 30, 40, 50]\n    let c: [Float] = [ 5,  4,  3,  2,  1]\n    \n    let d = [Float](unsafeUninitializedCapacity: count) {\n        buffer, initializedCount in\n        \n        vDSP.subtract(multiplication: (a, b), \n                      c,\n                      result: &buffer)\n        \n        initializedCount = count\n    }\n    \n    // Prints \"[5.0, 36.0, 87.0, 158.0, 249.0]\".\n    print(d)\n\n```",
+      "ko": "```swift\n    let count = 5\n    \n    let a: [Float] = [ 1,  2,  3,  4,  5]\n    let b: [Float] = [10, 20, 30, 40, 50]\n    let c: [Float] = [ 5,  4,  3,  2,  1]\n    \n    let d = [Float](unsafeUninitializedCapacity: count) {\n        buffer, initializedCount in\n        \n        vDSP.subtract(multiplication: (a, b), \n                      c,\n                      result: &buffer)\n        \n        initializedCount = count\n    }\n    \n    // Prints \"[5.0, 36.0, 87.0, 158.0, 249.0]\".\n    print(d)\n\n```",
+      "sourceHash": "82cf195c2d4269ff6464b7e268494592c1a541b615187109d5f8f311dcbab67e",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:parameters:0013:0001",
+      "source": "Parameters",
+      "ko": "Parameters",
+      "sourceHash": "e68b36b17cbd990802f57741cb75cf3a73fa66a61999b0cd70e3cf7d26cfb25f",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:parameters:0014:0001",
+      "source": "`multiplication`: A tuple that contains the vectors `A` and `B` in `D = (A * B) - C`.",
+      "ko": "`multiplication`: A tuple that contains the vectors `A` and `B` in `D = (A * B) - C`.",
+      "sourceHash": "b79b4a6b4d846e32c6ffd9a24b25d8cceb91156808b48ad0aa71b3cb32fff767",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0014:0002",
+      "source": "`vector`: The input vector `C` in `D = (A * B) - C`.",
+      "ko": "`vector`: The input vector `C` in `D = (A * B) - C`.",
+      "sourceHash": "b8d9e4c4a4a1fd0c71a6ec6c6eef9984e5b96eb3954ffc2e412fd26842b3dcff",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:parameters:0014:0003",
+      "source": "`result`: The output vector `D` in `D = (A * B) - C`.",
+      "ko": "`result`: The output vector `D` in `D = (A * B) - C`.",
+      "sourceHash": "dd26f8c90125db419e95ff42f68aecdad133e763a341f25bcf7b330ce4e44a7d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0015:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[static func subtract<T, U>(U, T) -> [Double]](vdsp/subtract(_:_:)-8o5ai.md)",
+      "ko": "[static let copyright: AVAudioSequencer.InfoDictionaryKey](avaudiosessionportdescription/channels.md)",
+      "sourceHash": "2c2fd8ed1c2b130cadf3740ff5d67e63fecac7755dd63e8a3b99849bfe7737f1",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "Returns the double-precision element-wise subtraction of two vectors.",
+      "ko": "저작권 문구를 나타내는 키입니다.",
+      "sourceHash": "656f5705e94bd6116b749442458bb8122347e1d6e7dfa9586d7b5111f24bea19",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[static func subtract<T, U>(U, T) -> [Float]](vdsp/subtract(_:_:)-9xmo8.md)",
+      "ko": "[static let genre: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/genre.md)",
+      "sourceHash": "f91a6eb25bb3e5585b747865396e4763dfddb1ebdaf630be4cbfafbd3e4b0774",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "Returns the single-precision element-wise subtraction of two vectors.",
+      "ko": "장르를 나타내는 키입니다.",
+      "sourceHash": "8e26e6deff1435bab8a464c63f6ec2a3116f57260766548ac600771d97e9def3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0020:0001",
+      "source": "[static func subtract<T, U, V>(U, T, result: inout V)](vdsp/subtract(_:_:result:)-1ianx.md)",
+      "ko": "[static let lyricist: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/lyricist.md)",
+      "sourceHash": "e8469be1bd6f9a8319b5301e8b1a63fa53100344e7dd36d1be1dea52c2366c55",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "Calculates the double-precision element-wise subtraction of two vectors.",
+      "ko": "작사가를 나타내는 키입니다.",
+      "sourceHash": "b19e3db709cdc9fb0b27b2a6b7cc761e6e4a1be9e19e90379f911e399b155e41",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0022:0001",
+      "source": "[static func subtract<T, U, V>(U, T, result: inout V)](vdsp/subtract(_:_:result:)-2p3fa.md)",
+      "ko": "[static let trackNumber: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/tracknumber.md)",
+      "sourceHash": "13c1fa314c4e35294cde9dcde6ca15740fc072f8b6167f6a48087020b376a7bc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0023:0001",
+      "source": "Calculates the single-precision element-wise subtraction of two vectors.",
+      "ko": "트랙 번호를 나타내는 키입니다.",
+      "sourceHash": "e0682f67fff2482b21b9dab509db5c09cde30d9cfff3db707efb86feb77a0aa8",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0024:0001",
+      "source": "[static func subtract(DSPSplitComplex, from: DSPSplitComplex, count: Int, result: inout DSPSplitComplex)](vdsp/subtract(_:from:count:result:)-4p5xd.md)",
+      "ko": "[static let subTitle: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/subtitle.md)",
+      "sourceHash": "afcd5d78d37929f25030b3fd03dcb9467acf85394c343bb5cf068e7c28b64471",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0025:0001",
+      "source": "Calculates the single-precision element-wise subtraction of a complex vector from a complex vector.",
+      "ko": "부제목을 나타내는 키입니다.",
+      "sourceHash": "61724951ae94384dc5853132661b1c682c8be7f3e5014a0fdb7e5b4098427889",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0026:0001",
+      "source": "[static func subtract(DSPDoubleSplitComplex, from: DSPDoubleSplitComplex, count: Int, result: inout DSPDoubleSplitComplex)](vdsp/subtract(_:from:count:result:)-80zi9.md)",
+      "ko": "[static let year: AVAudioSequencer.InfoDictionaryKey](avaudiosequencer/infodictionarykey/year.md)",
+      "sourceHash": "7465cc26b6b51e808e2fb97eb46c6587a2c281b1a3af5aa7e9784953594f051a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:see-also:0027:0001",
+      "source": "Calculates the double-precision element-wise subtraction of a complex vector from a complex vector.",
+      "ko": "연도를 나타내는 키입니다.",
+      "sourceHash": "ba9e301565cd78d16e405db83a1c7623c20a93ff2c204efa9744e5a48348361b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0028:0001",
+      "source": "[static func subtract<T, U>(multiplication: (a: U, b: Double), T) -> [Double]](vdsp/subtract(multiplication:_:)-2hhme.md)",
+      "ko": "[static func subtract<T, U>(multiplication: (a: U, b: Double), T) -> [Double]](vdsp/subtract(multiplication:_:)-2hhme.md)",
+      "sourceHash": "f86e2fce0e37dd290da329ad7b01de5c675994df6c25e475a12df527d4b64a3d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0029:0001",
+      "source": "Calculates the double-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "ko": "Calculates the double-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "sourceHash": "05c681d4e7138fd225891b9cdf4d65a07aceca2b1acd051b057bf617868d7606",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0030:0001",
+      "source": "[static func subtract<S, T, U>(multiplication: (a: T, b: U), S) -> [Double]](vdsp/subtract(multiplication:_:)-9gphg.md)",
+      "ko": "[static func subtract<S, T, U>(multiplication: (a: T, b: U), S) -> [Double]](vdsp/subtract(multiplication:_:)-9gphg.md)",
+      "sourceHash": "3b22549dd5ef5775f3f49de5fe1edbf0b4b15bc479c8e0bf0efd1904f8e2cc77",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0031:0001",
+      "source": "Returns the double-precision element-wise difference of a vector and the product of two vectors.",
+      "ko": "Returns the double-precision element-wise difference of a vector and the product of two vectors.",
+      "sourceHash": "763b680ce0dde87fb63e8b4045d80f23493c35cbe21f6b9402a3e29d94a1f921",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0032:0001",
+      "source": "[static func subtract<T, U>(multiplication: (a: U, b: Float), T) -> [Float]](vdsp/subtract(multiplication:_:)-3zm6l.md)",
+      "ko": "[static func subtract<T, U>(multiplication: (a: U, b: Float), T) -> [Float]](vdsp/subtract(multiplication:_:)-3zm6l.md)",
+      "sourceHash": "6443340eb72402fea9bef8193a4ec084f7deb6cf9b3eef04619f5bb4f3ed48b3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0033:0001",
+      "source": "Calculates the single-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "ko": "Calculates the single-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "sourceHash": "f0496f025aefd40d893983792446b52979fa8164922cfdd0ccefdf4c3d11d62b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[static func subtract<S, T, U>(multiplication: (a: T, b: U), S) -> [Float]](vdsp/subtract(multiplication:_:)-6u3sp.md)",
+      "ko": "[static func subtract<S, T, U>(multiplication: (a: T, b: U), S) -> [Float]](vdsp/subtract(multiplication:_:)-6u3sp.md)",
+      "sourceHash": "6cdce78482d00220d6d6c284b60a34754bfe231312480cd8014b4297e92df0e4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Returns the single-precision element-wise difference of a vector and the product of two vectors.",
+      "ko": "Returns the single-precision element-wise difference of a vector and the product of two vectors.",
+      "sourceHash": "1ec056f010bd4e41f434632549dc1ce1c2092591f86b6f45f8a1100b7bc482fe",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[static func subtract<T, U, V>(multiplication: (a: U, b: Double), T, result: inout V)](vdsp/subtract(multiplication:_:result:)-9p12h.md)",
+      "ko": "[static func subtract<T, U, V>(multiplication: (a: U, b: Double), T, result: inout V)](vdsp/subtract(multiplication:_:result:)-9p12h.md)",
+      "sourceHash": "e77156ead4ce3175de295ed9006304a3f929492e52263c81148633fc3f9e06e5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Calculates the double-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "ko": "Calculates the double-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "sourceHash": "05c681d4e7138fd225891b9cdf4d65a07aceca2b1acd051b057bf617868d7606",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0038:0001",
+      "source": "[static func subtract<T, U, V>(multiplication: (a: U, b: Float), T, result: inout V)](vdsp/subtract(multiplication:_:result:)-86gx3.md)",
+      "ko": "[static func subtract<T, U, V>(multiplication: (a: U, b: Float), T, result: inout V)](vdsp/subtract(multiplication:_:result:)-86gx3.md)",
+      "sourceHash": "2be2a59f5afe8d586686a43d3609221f7f7e2463f708a614aa0bdf32a4a23f9d",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "Calculates the single-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "ko": "Calculates the single-precision element-wise difference of the product of a vector and a scalar value, and a vector.",
+      "sourceHash": "f0496f025aefd40d893983792446b52979fa8164922cfdd0ccefdf4c3d11d62b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0040:0001",
+      "source": "[static func subtract<S, T, U, V>(multiplication: (a: T, b: U), S, result: inout V)](vdsp/subtract(multiplication:_:result:)-3f2bw.md)",
+      "ko": "[static func subtract<S, T, U, V>(multiplication: (a: T, b: U), S, result: inout V)](vdsp/subtract(multiplication:_:result:)-3f2bw.md)",
+      "sourceHash": "edbcaad1717348c02323c7f104f009632f90af93d8c0b4c328c288dae3fb6fa1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0041:0001",
+      "source": "Calculates the double-precision element-wise difference of a vector and the product of two vectors.",
+      "ko": "Calculates the double-precision element-wise difference of a vector and the product of two vectors.",
+      "sourceHash": "3590aabb6e39fb31c3ec9b3b0129fe4f340bf586c793696e49f774a45561a897",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0042:0001",
+      "source": "[static func subtract<R, S, T, U>(multiplication: (a: T, b: U), multiplication: (c: R, d: S)) -> [Double]](vdsp/subtract(multiplication:multiplication:)-22a4b.md)",
+      "ko": "[static func subtract<R, S, T, U>(multiplication: (a: T, b: U), multiplication: (c: R, d: S)) -> [Double]](vdsp/subtract(multiplication:multiplication:)-22a4b.md)",
+      "sourceHash": "10123a9a3610c044e385d031ee1f7f171eb8f8504286e71f65b4afb18d20fe7f",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0043:0001",
+      "source": "Returns the double-precision element-wise difference of the products of two pairs of vectors.",
+      "ko": "Returns the double-precision element-wise difference of the products of two pairs of vectors.",
+      "sourceHash": "9e5675acea6021f9d51339a203350f3139b648e1b8006419f66f2ae2ed14c954",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0044:0001",
+      "source": "[static func subtract<R, S, T, U>(multiplication: (a: T, b: U), multiplication: (c: R, d: S)) -> [Float]](vdsp/subtract(multiplication:multiplication:)-1ghyu.md)",
+      "ko": "[static func subtract<R, S, T, U>(multiplication: (a: T, b: U), multiplication: (c: R, d: S)) -> [Float]](vdsp/subtract(multiplication:multiplication:)-1ghyu.md)",
+      "sourceHash": "8c54d9f5bbea56cf603f025858443b2899f3b05dab60116260c9b822c7167c88",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0045:0001",
+      "source": "Returns the single-precision element-wise difference of the products of two pairs of vectors.",
+      "ko": "Returns the single-precision element-wise difference of the products of two pairs of vectors.",
+      "sourceHash": "08b48a34fe27132b88d4d228f82c4a4eb642d79947c90ba8c4304e1ccbeacad1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0046:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0047:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/subtract(multiplication:_:result:)-6b91s)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/vdsp/subtract(multiplication:_:result:)-6b91s)*",
+      "sourceHash": "8e45bbafa3f835a96aadace944a25e7a48c640da91a817a35bcf602649a45c3f",
+      "status": "failed"
+    }
+  ]
+}

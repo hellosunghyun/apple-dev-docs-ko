@@ -48,4 +48,4 @@ func slaed4_(_ n: UnsafePointer<__LAPACK_int>, _ i: UnsafePointer<__LAPACK_int>,
 
 ---
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">*<a href="https://developer.apple.com/documentation/accelerate/slaed4_(_:_:_:_:_:_:_:_:">View on Apple Developer</a>)*</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">아티스트를 나타내는 키입니다.</span>

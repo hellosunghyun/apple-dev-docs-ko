@@ -48,4 +48,4 @@ func cggsvd3_(_ jobu: UnsafePointer<CChar>, _ jobv: UnsafePointer<CChar>, _ jobq
 
 ---
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">*<a href="https://developer.apple.com/documentation/accelerate/cggsvd3_(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:">View on Apple Developer</a>)*</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0009:0001">ARKit가 앵커 추적을 시작할 때 발생하는 이벤트입니다.</span>

@@ -1,0 +1,211 @@
+{
+  "docId": "documentation/AVFoundation/avassetwriterinput/mediadatalocation-swiftproperty.md",
+  "title": "mediaDataLocation",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/avfoundation/avassetwriterinput/mediadatalocation-swiftproperty",
+  "segments": [
+    {
+      "id": "seg:heading:mediadatalocation:0000:0001",
+      "source": "mediaDataLocation",
+      "ko": "mediaDataLocation",
+      "sourceHash": "c5517d04051e6911160ef10f2dc6f1178f572023d4e15965f78ae1cfa0e9d045",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:mediadatalocation:0001:0001",
+      "source": "**Framework**: AVFoundation **Kind**: property",
+      "ko": "**Framework**: AVFoundation **Kind**: property",
+      "sourceHash": "9be7afa78beb048df65e0e45022701f51831a960b225aebb1a5edef3b8796a00",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:mediadatalocation:0002:0001",
+      "source": "Specifies how the input lays out and interleaves media data.",
+      "ko": "입력에서 미디어 데이터를 배치하고 인터리브하는 방식을 지정합니다.",
+      "sourceHash": "4c14652c3ab50750cdfb909b51ff5ade39843a8142ff009ec84ec633e2bdf2bc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:mediadatalocation:0003:0001",
+      "source": "**Availability**:",
+      "ko": "**Availability**:",
+      "sourceHash": "c54a2ed36492f9321cad7af43ab3edbbabcab53520c009f69016847ac8028dc3",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediadatalocation:0004:0001",
+      "source": "iOS 11.0+",
+      "ko": "iOS 11.0+",
+      "sourceHash": "a5b7a8a863769e30a4297a5c9a7962343ebc79ced3ecb99aee617ec6f7c51933",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediadatalocation:0004:0002",
+      "source": "iPadOS 11.0+",
+      "ko": "iPadOS 11.0+",
+      "sourceHash": "63063834d806bbb7db1b62cb2cda6ff10dbe50454d3c5a682b712d68b3d39688",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediadatalocation:0004:0003",
+      "source": "Mac Catalyst 13.1+",
+      "ko": "Mac Catalyst 13.1+",
+      "sourceHash": "0a540ec401b3abbf7c7b033a919b9d52e5a526ab64af740797002c39e76344d4",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediadatalocation:0004:0004",
+      "source": "macOS 10.13+",
+      "ko": "macOS 10.13+",
+      "sourceHash": "23711ad8ad80199ce092027e03a626cd50cd126e092245e0901de2515c6d69d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediadatalocation:0004:0005",
+      "source": "tvOS 11.0+",
+      "ko": "tvOS 11.0+",
+      "sourceHash": "f8613ea6967abbd6daada1f1969b72355a9ba3fff48c588fc3608e03084c22ca",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:list:mediadatalocation:0004:0006",
+      "source": "visionOS 1.0+",
+      "ko": "visionOS 1.0+",
+      "sourceHash": "df532ca1c3b263b963e53bdc363f000a85cb2968ca8a95fc98ada2b46aa85ba6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:declaration:0005:0001",
+      "source": "Declaration",
+      "ko": "Declaration",
+      "sourceHash": "7609342dc466589fdf6cb15b3c6d44a70ad491cf72cc8051cd04d8e03fd9078b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:code:declaration:0006:0001",
+      "source": "```swift\nvar mediaDataLocation: AVAssetWriterInput.MediaDataLocation { get set }\n```",
+      "ko": "```swift\nvar mediaDataLocation: AVAssetWriterInput.MediaDataLocation { get set }\n```",
+      "sourceHash": "54f5548d990bc0617715ea6dd1e5926ec46e1f83e0dacd9658dd5fec891b8ecc",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:discussion:0007:0001",
+      "source": "Discussion",
+      "ko": "Discussion",
+      "sourceHash": "5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0001",
+      "source": "Use this property to optimize tracks that contain a small amount of data that you need all at once, such as chapter tracks.",
+      "ko": "챕터 트랙처럼 한 번에 모두 필요한 소량의 데이터가 들어 있는 트랙을 최적화하려면 이 속성을 사용합니다.",
+      "sourceHash": "7c99249012adc85e5e226f13406b429c55fd67ff680e40e7165293530f048c0a",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0002",
+      "source": "Setting the value to [`beforeMainMediaDataNotInterleaved`](avassetwriterinput/mediadatalocation-swift.struct/beforemainmediadatanotinterleaved.md) causes the asset writer to try to write the media data for this track before interleaved inputs.",
+      "ko": "이 값을 [`beforeMainMediaDataNotInterleaved`](avassetwriterinput/mediadatalocation-swift.struct/beforemainmediadatanotinterleaved.md)로 설정하면 에셋 라이터가 이 트랙의 미디어 데이터를 인터리브된 입력 전에 쓰도록 시도합니다.",
+      "sourceHash": "a93a8e69804773af058c748b21996f0ea0e69a6c8fa4a83ff66b9b389fa7fbfc",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0008:0003",
+      "source": "For file types that support preloading media data, such as QuickTime files, setting this value also writes an indicator to the file to preload its media data.",
+      "ko": "QuickTime 파일과 같이 미디어 데이터 사전 로드를 지원하는 파일 형식의 경우, 이 값을 설정하면 파일에 미디어 데이터 사전 로드 지시자를 기록합니다.",
+      "sourceHash": "3d3e90a42fea19d99121321d45e170952ab662122a9f6cd845c8ef2b3b0c3afb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0009:0001",
+      "source": "Set the value to [`interleavedWithMainMediaData`](avassetwriterinput/mediadatalocation-swift.struct/interleavedwithmainmediadata.md) for tracks whose media data you need only as it approaches its presentation time, or when multiple inputs exist that supply media data that plays concurrently.",
+      "ko": "미디어 데이터를 표시 시간에 가까워질 때만 필요로 하거나, 동시에 재생되는 미디어 데이터를 제공하는 입력이 여러 개 있는 경우에는 이 값을 [`interleavedWithMainMediaData`](avassetwriterinput/mediadatalocation-swift.struct/interleavedwithmainmediadata.md)로 설정합니다.",
+      "sourceHash": "eadf7cc72f17283b03a60d08858befe4af0447807ff0708d24bb6734895e0614",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:discussion:0010:0001",
+      "source": "You can’t set this value after writing starts.",
+      "ko": "작성 시작 후에는 이 값을 설정할 수 없습니다.",
+      "sourceHash": "93a0db5daa679250f6ef1951e0bd91e880108676bdb6f79424ef3b90624e6ee7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:see-also:0011:0001",
+      "source": "See Also",
+      "ko": "참고 항목",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0012:0001",
+      "source": "[var preferredMediaChunkAlignment: Int](avassetwriterinput/preferredmediachunkalignment.md)",
+      "ko": "[var preferredMediaChunkAlignment: Int](avassetwriterinput/preferredmediachunkalignment.md)",
+      "sourceHash": "b8a349d10fcafe622e65c642ed99f126868b51e97514e343b415313b023fd7a6",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0013:0001",
+      "source": "The boundary, in bytes, for aligning media chunks.",
+      "ko": "미디어 청크를 정렬하기 위한 바이트 단위 경계입니다.",
+      "sourceHash": "c86788b07585133895946e38eac11aa277e8145cea72155e83dac1277cfcf119",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0014:0001",
+      "source": "[var preferredMediaChunkDuration: CMTime](avassetwriterinput/preferredmediachunkduration.md)",
+      "ko": "[var preferredMediaChunkDuration: CMTime](avassetwriterinput/preferredmediachunkduration.md)",
+      "sourceHash": "66f7645807f15b4c96d81da8de6ab0fa6c4e6fc459ab873dcf5d20b8137973d1",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0015:0001",
+      "source": "The duration to use for each chunk of sample data in the output file.",
+      "ko": "출력 파일의 샘플 데이터 각 청크에 사용할 기간입니다.",
+      "sourceHash": "62b2cd0f013505f17505ff2a770ee44a90d32ec1f872d36f85236e8f7bac0cff",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0016:0001",
+      "source": "[var sampleReferenceBaseURL: URL?](avassetwriterinput/samplereferencebaseurl.md)",
+      "ko": "[var sampleReferenceBaseURL: URL?](avassetwriterinput/samplereferencebaseurl.md)",
+      "sourceHash": "cf8b06801bbb4f2a24279fe0214dfdf8b3281033612ef04cd1b7b74f3df6fb4c",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0017:0001",
+      "source": "The base URL sample references are relative to.",
+      "ko": "샘플 참조의 기준이 되는 기본 URL입니다.",
+      "sourceHash": "a65d5ff337d730fdde6f54d7af17cc3fb977f81b3b23c9e3ea703bfe7db886e7",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:see-also:0018:0001",
+      "source": "[AVAssetWriterInput.MediaDataLocation](avassetwriterinput/mediadatalocation-swift.struct.md)",
+      "ko": "[AVAssetWriterInput.MediaDataLocation](avassetwriterinput/mediadatalocation-swift.struct.md)",
+      "sourceHash": "133ee2f3ec4c1b91c5f1ad30d383f576135783fb6f4eb2a2c6ef6c9ba4b3f75b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0019:0001",
+      "source": "A structure that indicates how to lay out and interleave media data.",
+      "ko": "미디어 데이터의 배치 및 인터리브 방식을 나타내는 구조체입니다.",
+      "sourceHash": "823789aa4ca6f3000ed7b312d667369e5c4ebc73cfec50f93d0dea28b1bc06fb",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0020:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0021:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetwriterinput/mediadatalocation-swift.property)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/avfoundation/avassetwriterinput/mediadatalocation-swift.property)*",
+      "sourceHash": "8abc6eac5e2d6fc1bafaa05e26e91aec0604d82519835af18d85f6db9fb95e32",
+      "status": "preserved"
+    }
+  ]
+}

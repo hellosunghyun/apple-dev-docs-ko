@@ -1,0 +1,288 @@
+{
+  "docId": "documentation/Accelerate/functions-that-perform-any-to-any-conversion.md",
+  "title": "Functions that perform any-to-any conversion",
+  "upstreamSha": "8a29a1d75e67151b588206d3e921a4ff212726be",
+  "officialUrl": "https://developer.apple.com/documentation/accelerate/functions-that-perform-any-to-any-conversion",
+  "segments": [
+    {
+      "id": "seg:heading:functions-that-perform-any-to-any-conversion:0000:0001",
+      "source": "Functions that perform any-to-any conversion",
+      "ko": "임의의 색상 공간 및 비트 깊이 간 임의 변환 수행 함수",
+      "sourceHash": "5916ea39ce6bc8893c56043d188ce9b05a683a03fb0ca3ee665fbfd7d10595b5",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:functions-that-perform-any-to-any-conversion:0001:0001",
+      "source": "**Framework**: Accelerate",
+      "ko": "**프레임워크**: Accelerate",
+      "sourceHash": "29a5b8860afd67d96c79fe2585ca71addeb9f39a3fe9698cbaba2a7451def11b",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:paragraph:functions-that-perform-any-to-any-conversion:0002:0001",
+      "source": "Convert between Core Video or Core Graphics image data of arbitrary color spaces and bit depths.",
+      "ko": "Core Video 또는 Core Graphics 이미지 데이터를 임의의 색상 공간과 비트 깊이 사이에서 변환합니다.",
+      "sourceHash": "a749d87dec76f03a9e82c8e4065ca702e263ddaf1cbbf208e8e1c15de39af7b3",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:heading:topics:0003:0001",
+      "source": "Topics",
+      "ko": "Topics",
+      "sourceHash": "e22820fcf5cd90e3fdd99a7569e0ee2f30eb7ebadfb2fe4d159b30c166ff81b7",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:heading:creating-a-converter:0004:0001",
+      "source": "Creating a converter",
+      "ko": "변환기 생성",
+      "sourceHash": "b320b106836522d419c759ffdf7ed21a1a5ef0fc0747ffcddc9a483bb361fa03",
+      "status": "machine_translated"
+    },
+    {
+      "id": "seg:list:creating-a-converter:0005:0001",
+      "source": "[class vImageConverter](vimageconverter.md)",
+      "ko": "[class vImageConverter](vimageconverter.md)",
+      "sourceHash": "36106dd609c01d4ad8744b303bc4260e01e39750ab560ed7fec188b9fd036f82",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:creating-a-converter:0006:0001",
+      "source": "A description of a conversion from one image format to another.",
+      "ko": "A description of a conversion from one image format to another.",
+      "sourceHash": "19af684c0019b566d183f9ddf2a891778a707bc9dca717a1a55a353de489e4cb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-converter:0007:0001",
+      "source": "[func vImageConverter_CreateWithCGImageFormat(UnsafePointer<vImage_CGImageFormat>, UnsafePointer<vImage_CGImageFormat>, UnsafePointer<CGFloat>!, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<vImageConverter>!](vimageconverter_createwithcgimageformat(_:_:_:_:_:).md)",
+      "ko": "[func vImageConverter_CreateWithCGImageFormat(UnsafePointer<vImage_CGImageFormat>, UnsafePointer<vImage_CGImageFormat>, UnsafePointer<CGFloat>!, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<vImageConverter>!](vimageconverter_createwithcgimageformat(_:_:_:_:_:).md)",
+      "sourceHash": "8c119c65899010acb74d9f316c3f686252b509b7cc9ff74314d878a31b56442a",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-a-converter:0008:0001",
+      "source": "Creates a vImage converter that converts from one vImage Core Graphics image format to another.",
+      "ko": "Creates a vImage converter that converts from one vImage Core Graphics image format to another.",
+      "sourceHash": "d57022db644460c873f160b286e4837b3bbac3737932ba480deeb61770f722d8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-converter:0009:0001",
+      "source": "[func vImageConverter_CreateWithCGColorConversionInfo(CGColorConversionInfo, UnsafePointer<vImage_CGImageFormat>, UnsafePointer<vImage_CGImageFormat>, UnsafePointer<CGFloat>!, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<vImageConverter>!](vimageconverter_createwithcgcolorconversioninfo(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageConverter_CreateWithCGColorConversionInfo(CGColorConversionInfo, UnsafePointer<vImage_CGImageFormat>, UnsafePointer<vImage_CGImageFormat>, UnsafePointer<CGFloat>!, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<vImageConverter>!](vimageconverter_createwithcgcolorconversioninfo(_:_:_:_:_:_:).md)",
+      "sourceHash": "2a7ebc6d1037b557b4157940620278dc90ae3d2ef254e4ee5ba6b0849f22e887",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-a-converter:0010:0001",
+      "source": "Creates an any-to-any converter that uses a color conversion information object to convert from one image format to another.",
+      "ko": "Creates an any-to-any converter that uses a color conversion information object to convert from one image format to another.",
+      "sourceHash": "8459635bca5cfc08c035c278369aca491113ad87f9ba2a47c309ef407e758cf1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-converter:0011:0001",
+      "source": "[func vImageConverter_CreateForCGToCVImageFormat(UnsafePointer<vImage_CGImageFormat>, vImageCVImageFormat, UnsafePointer<CGFloat>!, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<vImageConverter>!](vimageconverter_createforcgtocvimageformat(_:_:_:_:_:).md)",
+      "ko": "[func vImageConverter_CreateForCGToCVImageFormat(UnsafePointer<vImage_CGImageFormat>, vImageCVImageFormat, UnsafePointer<CGFloat>!, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<vImageConverter>!](vimageconverter_createforcgtocvimageformat(_:_:_:_:_:).md)",
+      "sourceHash": "ef370303d23c8231a1d8cc86b86933be322b6127fd9315fe45f60c9f3b20cceb",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-a-converter:0012:0001",
+      "source": "Creates a vImage converter that converts a Core Graphics-formatted image to a Core Video-formatted image.",
+      "ko": "Creates a vImage converter that converts a Core Graphics-formatted image to a Core Video-formatted image.",
+      "sourceHash": "bb5eae1b5fd86c047d51208d355306e7b65b880ddccaba8dc4d22d47673080f2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-converter:0013:0001",
+      "source": "[func vImageConverter_CreateForCVToCGImageFormat(vImageCVImageFormat, UnsafePointer<vImage_CGImageFormat>, UnsafePointer<CGFloat>!, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<vImageConverter>!](vimageconverter_createforcvtocgimageformat(_:_:_:_:_:).md)",
+      "ko": "[func vImageConverter_CreateForCVToCGImageFormat(vImageCVImageFormat, UnsafePointer<vImage_CGImageFormat>, UnsafePointer<CGFloat>!, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<vImageConverter>!](vimageconverter_createforcvtocgimageformat(_:_:_:_:_:).md)",
+      "sourceHash": "573d2c28166e3ab44d53938c51504def371f5977f7f0903ec6097c7fa4e47dd4",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-a-converter:0014:0001",
+      "source": "Creates a vImage converter that converts a Core Video-formatted image to a Core Graphics-formatted image.",
+      "ko": "Creates a vImage converter that converts a Core Video-formatted image to a Core Graphics-formatted image.",
+      "sourceHash": "db713306fe54760debd1f4bd5fddf868fa98eec9d4a2deae4428552cae4760b8",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:creating-a-converter:0015:0001",
+      "source": "[func vImageConverter_CreateWithColorSyncCodeFragment(CFTypeRef, UnsafePointer<vImage_CGImageFormat>, UnsafePointer<vImage_CGImageFormat>!, UnsafePointer<CGFloat>!, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<vImageConverter>!](vimageconverter_createwithcolorsynccodefragment(_:_:_:_:_:_:).md)",
+      "ko": "[func vImageConverter_CreateWithColorSyncCodeFragment(CFTypeRef, UnsafePointer<vImage_CGImageFormat>, UnsafePointer<vImage_CGImageFormat>!, UnsafePointer<CGFloat>!, vImage_Flags, UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<vImageConverter>!](vimageconverter_createwithcolorsynccodefragment(_:_:_:_:_:_:).md)",
+      "sourceHash": "d6699c831b59b1f1ca3a678cb56b4328190e38d90b4ae53f610075c46a6c9a14",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:creating-a-converter:0016:0001",
+      "source": "Creates a vImage converter to convert from one vImage Core Graphics image format to another, using custom ColorSync transform.",
+      "ko": "Creates a vImage converter to convert from one vImage Core Graphics image format to another, using custom ColorSync transform.",
+      "sourceHash": "a7f1403b72b1ac0eba751c66c02d914b42558aff459e256b6b3b296f2ff605fc",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:performing-a-conversion:0017:0001",
+      "source": "Performing a conversion",
+      "ko": "Performing a conversion",
+      "sourceHash": "7db6dc7e8b3076c5057409ceee85584d901c50f97c0b1d10858aecddaa828862",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:performing-a-conversion:0018:0001",
+      "source": "[func vImageConvert_AnyToAny(vImageConverter, UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, vImage_Flags) -> vImage_Error](vimageconvert_anytoany(_:_:_:_:_:).md)",
+      "ko": "[func vImageConvert_AnyToAny(vImageConverter, UnsafePointer<vImage_Buffer>, UnsafePointer<vImage_Buffer>, UnsafeMutableRawPointer!, vImage_Flags) -> vImage_Error](vimageconvert_anytoany(_:_:_:_:_:).md)",
+      "sourceHash": "e69ba6bc96f7452e246fcca8fb580eacd70a9d4263012d667b29ee138e1d9a99",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:performing-a-conversion:0019:0001",
+      "source": "Converts the pixels in a vImage buffer to another format, using the specified converter.",
+      "ko": "Converts the pixels in a vImage buffer to another format, using the specified converter.",
+      "sourceHash": "aa763a57359f55983ef1a67b4c5beedb5777cbc4b06b330764e3b23bfc67badf",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:performing-a-conversion:0020:0001",
+      "source": "[vImage Buffer Type Codes](1399056-vimage-buffer-type-codes.md)",
+      "ko": "[vImage Buffer Type Codes](1399056-vimage-buffer-type-codes.md)",
+      "sourceHash": "708a152afa7e06b6e823f0b2680ecc6fd2ba45b699842f37719af1e406d78bd0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:performing-a-conversion:0021:0001",
+      "source": "Constants that specify the contents of vImage buffers.",
+      "ko": "Constants that specify the contents of vImage buffers.",
+      "sourceHash": "e405f828828e7acfb644f745efc6724325045acdc3544db5a46de94fa067e275",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:querying-a-converters-properties:0022:0001",
+      "source": "Querying a converter’s properties",
+      "ko": "Querying a converter’s properties",
+      "sourceHash": "1bce29624604a8f522cafbf9c9ba39e8f3aa897f95fefec6460935f2ea3105ae",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:querying-a-converters-properties:0023:0001",
+      "source": "[func vImageConverter_MustOperateOutOfPlace(vImageConverter, UnsafePointer<vImage_Buffer>!, UnsafePointer<vImage_Buffer>!, vImage_Flags) -> vImage_Error](vimageconverter_mustoperateoutofplace(_:_:_:_:).md)",
+      "ko": "[func vImageConverter_MustOperateOutOfPlace(vImageConverter, UnsafePointer<vImage_Buffer>!, UnsafePointer<vImage_Buffer>!, vImage_Flags) -> vImage_Error](vimageconverter_mustoperateoutofplace(_:_:_:_:).md)",
+      "sourceHash": "eef7098536ed9325c64c404bf7e515ba14e8c274b34db0232b3800edf2684dc5",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:querying-a-converters-properties:0024:0001",
+      "source": "Determines whether a converter is capable of operating in place.",
+      "ko": "Determines whether a converter is capable of operating in place.",
+      "sourceHash": "e32c591ca175c9255ed2321e88632399b9bd18fde53f625a046a836e7d30f2f3",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:querying-a-converters-properties:0025:0001",
+      "source": "[func vImageConverter_GetSourceBufferOrder(vImageConverter) -> UnsafePointer<vImageBufferTypeCode>!](vimageconverter_getsourcebufferorder(_:).md)",
+      "ko": "[func vImageConverter_GetSourceBufferOrder(vImageConverter) -> UnsafePointer<vImageBufferTypeCode>!](vimageconverter_getsourcebufferorder(_:).md)",
+      "sourceHash": "4a8aa0464160746afbdc319ecfb96f2766f96aaab7afc05edb39d46b119a3f4b",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:querying-a-converters-properties:0026:0001",
+      "source": "Returns a list of vImage source buffer channel names, specifying the order of planes.",
+      "ko": "Returns a list of vImage source buffer channel names, specifying the order of planes.",
+      "sourceHash": "eae85ee7f22113941bd110ecab2672c53776eaf848db4bbc20b3b4ec68f6ea2c",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:querying-a-converters-properties:0027:0001",
+      "source": "[func vImageConverter_GetDestinationBufferOrder(vImageConverter) -> UnsafePointer<vImageBufferTypeCode>!](vimageconverter_getdestinationbufferorder(_:).md)",
+      "ko": "[func vImageConverter_GetDestinationBufferOrder(vImageConverter) -> UnsafePointer<vImageBufferTypeCode>!](vimageconverter_getdestinationbufferorder(_:).md)",
+      "sourceHash": "a2d283454e1fc71fd81660edaf35ae60f03626c91ffb74bf2fcb13a182f1f9d1",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:querying-a-converters-properties:0028:0001",
+      "source": "Returns a list of vImage destination buffer channel names, specifying the order of planes.",
+      "ko": "Returns a list of vImage destination buffer channel names, specifying the order of planes.",
+      "sourceHash": "bb4369910b13d37214753c32d1845a51242b4df42fe41efbcf3abc9d244ba338",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:querying-a-converters-properties:0029:0001",
+      "source": "[func vImageConverter_GetNumberOfSourceBuffers(vImageConverter) -> UInt](vimageconverter_getnumberofsourcebuffers(_:).md)",
+      "ko": "[func vImageConverter_GetNumberOfSourceBuffers(vImageConverter) -> UInt](vimageconverter_getnumberofsourcebuffers(_:).md)",
+      "sourceHash": "e935b35d61239133b2f011682e2f24b7a5e75cb61b56cdae3cea3870de0fbba6",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:querying-a-converters-properties:0030:0001",
+      "source": "Returns the number of source buffers consumed by the converter.",
+      "ko": "Returns the number of source buffers consumed by the converter.",
+      "sourceHash": "e433ffc0138f2dade4ba53baa27eab91c1aa0a30e27155b8ac4985f0a9bffc7e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:querying-a-converters-properties:0031:0001",
+      "source": "[func vImageConverter_GetNumberOfDestinationBuffers(vImageConverter) -> UInt](vimageconverter_getnumberofdestinationbuffers(_:).md)",
+      "ko": "[func vImageConverter_GetNumberOfDestinationBuffers(vImageConverter) -> UInt](vimageconverter_getnumberofdestinationbuffers(_:).md)",
+      "sourceHash": "920c755fad1e08e3a51ddba1a9675d3f55a0f41114e1a4e79f5e084e8fb0ea79",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:querying-a-converters-properties:0032:0001",
+      "source": "Returns the number of destination buffers written to by the converter.",
+      "ko": "Returns the number of destination buffers written to by the converter.",
+      "sourceHash": "3174352213b2d5dc246c86b541a444fa987cd7cbfbaa208d8b877058b5ed0b06",
+      "status": "failed"
+    },
+    {
+      "id": "seg:heading:see-also:0033:0001",
+      "source": "See Also",
+      "ko": "See Also",
+      "sourceHash": "3f86b834e243323bd671c9d3d3867d5a6cffdabbe063b257302fda50abcb4cb2",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0034:0001",
+      "source": "[Building a basic image conversion workflow](building-a-basic-image-conversion-workflow.md)",
+      "ko": "[Building a basic image conversion workflow](building-a-basic-image-conversion-workflow.md)",
+      "sourceHash": "b6991695baef6844dc548d50bc83a552c6602955d874ffcbb035473e6766f342",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0035:0001",
+      "source": "Learn the fundamentals of the convert-any-to-any function by converting a CMYK image to an RGB image.",
+      "ko": "Learn the fundamentals of the convert-any-to-any function by converting a CMYK image to an RGB image.",
+      "sourceHash": "52ca10700b0c9d9fa29fa7ddfe47156fa00f083925b1e8d6efec5f3915a55c7e",
+      "status": "failed"
+    },
+    {
+      "id": "seg:list:see-also:0036:0001",
+      "source": "[Converting chroma-subsampled images](converting-chroma-subsampled-images.md)",
+      "ko": "[Converting chroma-subsampled images](converting-chroma-subsampled-images.md)",
+      "sourceHash": "207a66c32b852682bfed8312d74c2043a69daa0ce56300692de8d16063a524d0",
+      "status": "failed"
+    },
+    {
+      "id": "seg:paragraph:see-also:0037:0001",
+      "source": "Create vImage buffers with the correct dimensions to convert to and from images with subsampled chroma information.",
+      "ko": "Create vImage buffers with the correct dimensions to convert to and from images with subsampled chroma information.",
+      "sourceHash": "502bda243fea2b24109ed63870546f9b0599f1ead2c49f6bee0826d8f3dc79a9",
+      "status": "failed"
+    },
+    {
+      "id": "seg:horizontal_rule:see-also:0038:0001",
+      "source": "---",
+      "ko": "---",
+      "sourceHash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "status": "preserved"
+    },
+    {
+      "id": "seg:paragraph:see-also:0039:0001",
+      "source": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/functions-that-perform-any-to-any-conversion)*",
+      "ko": "*[View on Apple Developer](https://developer.apple.com/documentation/accelerate/functions-that-perform-any-to-any-conversion)*",
+      "sourceHash": "b18cbc60f83b91f21c241498231f9eeacd277527e158f8f351f47feeb5d5e6c4",
+      "status": "preserved"
+    }
+  ]
+}

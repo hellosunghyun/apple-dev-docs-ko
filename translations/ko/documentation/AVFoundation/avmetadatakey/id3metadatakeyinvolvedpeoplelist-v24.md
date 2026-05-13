@@ -66,11 +66,11 @@ static let id3MetadataKeyInvolvedPeopleList_v24: AVMetadataKey
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0024:0001"><a href="avmetadatakey/id3metadatakeycommercial.md">static let id3MetadataKeyCommercial: AVMetadataKey</a></span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0025:0001">A key that represents the commercial details for the media.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0025:0001">앱에서 활성화할 수 있는 선택적 frame feature 유형입니다.</span>
 
-- <span class="ko-segment" data-segment-id="seg:list:see-also:0026:0001"><a href="avmetadatakey/id3metadatakeycommercialinformation.md">static let id3MetadataKeyCommercialInformation: AVMetadataKey</a></span>
+- <span class="ko-segment" data-segment-id="seg:list:see-also:0026:0001"><a href="arconfiguration/supportsframesemantics(_:">class func supportsFrameSemantics(ARConfiguration.FrameSemantics) -&gt; Bool</a>.md)</span>
 
-<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0027:0001">A key that represents the webpage containing purchasing information.</span>
+<span class="ko-segment" data-segment-id="seg:paragraph:see-also:0027:0001">특정 feature가 지원되는지 확인합니다.</span>
 
 - <span class="ko-segment" data-segment-id="seg:list:see-also:0028:0001"><a href="avmetadatakey/id3metadatakeycomposer.md">static let id3MetadataKeyComposer: AVMetadataKey</a></span>
 
