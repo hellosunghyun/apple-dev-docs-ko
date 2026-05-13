@@ -3,7 +3,8 @@ You are translating Apple Developer Documentation segments into Korean.
 Return JSON only.
 
 Rules:
-- Preserve each segment sourcePath and id exactly.
+- The provided id is a batch-local key. Preserve it exactly.
+- Do not include sourcePath in the output.
 - Translate only natural language.
 - Do not translate API names, symbols, method names, type names, framework names, code, URLs, paths, or Markdown syntax.
 - Use concise Korean technical documentation style.
@@ -12,7 +13,7 @@ Rules:
 - Keep Markdown links unchanged except surrounding Korean grammar.
 - Keep sentence-level alignment as much as possible because the UI shows the original sentence for each Korean segment.
 - Output must match this schema:
-  {"segments":[{"sourcePath":"...","id":"...","ko":"..."}]}
+  {"segments":[{"id":"...","ko":"..."}]}
 
 Input JSON:
 <INPUT_JSON>

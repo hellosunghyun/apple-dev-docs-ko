@@ -28,6 +28,10 @@ on:
         required: true
         default: "true"
         description: Run a second Gemini pass to review and correct each translated batch.
+      gemini_review_sample_rate:
+        required: true
+        default: "0.05"
+        description: Fraction of batches to run through second-pass Gemini review.
       batch_segments:
         required: false
         default: "180"
@@ -217,10 +221,12 @@ jobs:
           GEMINI_MODEL: ${{ inputs.gemini_model || 'gemini-3.1-flash-lite' }}
           GEMINI_REVIEWER_MODEL: ${{ inputs.gemini_reviewer_model || 'gemini-3.1-flash-lite' }}
           GEMINI_REVIEW_ENABLED: ${{ inputs.gemini_review_enabled || 'true' }}
+          GEMINI_REVIEW_SAMPLE_RATE: ${{ inputs.gemini_review_sample_rate || '0.05' }}
         run: |
           echo "Gemini translation model: ${GEMINI_MODEL}"
           echo "Gemini reviewer model: ${GEMINI_REVIEWER_MODEL}"
           echo "Gemini review enabled: ${GEMINI_REVIEW_ENABLED}"
+          echo "Gemini review sample rate: ${GEMINI_REVIEW_SAMPLE_RATE}"
       - id: shard
         run: |
           printf 'id=%04d\n' '${{ matrix.shard_index }}' >> "$GITHUB_OUTPUT"
@@ -284,6 +290,7 @@ jobs:
           GEMINI_MODEL: ${{ inputs.gemini_model || 'gemini-3.1-flash-lite' }}
           GEMINI_REVIEWER_MODEL: ${{ inputs.gemini_reviewer_model || 'gemini-3.1-flash-lite' }}
           GEMINI_REVIEW_ENABLED: ${{ inputs.gemini_review_enabled || 'true' }}
+          GEMINI_REVIEW_SAMPLE_RATE: ${{ inputs.gemini_review_sample_rate || '0.05' }}
           GEMINI_TIMEOUT_SECONDS: ${{ inputs.gemini_timeout_seconds || '900' }}
           GEMINI_RETRIES: ${{ inputs.gemini_retries || '1' }}
           MAX_TRANSLATION_FAILURES: ${{ inputs.max_translation_failures || '8' }}

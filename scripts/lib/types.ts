@@ -62,6 +62,7 @@ export interface TranslationConfig {
       model: string;
       reviewerModel: string;
       reviewEnabled: boolean;
+      reviewSampleRate: number;
       inputPricePerMillionTokens: number;
       outputPricePerMillionTokens: number;
     };

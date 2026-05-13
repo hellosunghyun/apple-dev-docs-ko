@@ -15,6 +15,9 @@ on:
       gemini_review_enabled:
         default: "true"
         required: true
+      gemini_review_sample_rate:
+        default: "0.05"
+        required: true
 
 permissions:
   contents: write
@@ -43,10 +46,12 @@ jobs:
           GEMINI_MODEL: ${{ inputs.gemini_model }}
           GEMINI_REVIEWER_MODEL: ${{ inputs.gemini_reviewer_model }}
           GEMINI_REVIEW_ENABLED: ${{ inputs.gemini_review_enabled }}
+          GEMINI_REVIEW_SAMPLE_RATE: ${{ inputs.gemini_review_sample_rate }}
         run: |
           echo "Gemini translation model: ${GEMINI_MODEL}"
           echo "Gemini reviewer model: ${GEMINI_REVIEWER_MODEL}"
           echo "Gemini review enabled: ${GEMINI_REVIEW_ENABLED}"
+          echo "Gemini review sample rate: ${GEMINI_REVIEW_SAMPLE_RATE}"
       - run: pnpm run upstream:sync
       - run: pnpm run manifest
       - run: pnpm tsx scripts/segmenter/split-segments.ts --limit-files "${{ inputs.limit_files }}"
@@ -58,6 +63,7 @@ jobs:
           GEMINI_MODEL: ${{ inputs.gemini_model }}
           GEMINI_REVIEWER_MODEL: ${{ inputs.gemini_reviewer_model }}
           GEMINI_REVIEW_ENABLED: ${{ inputs.gemini_review_enabled }}
+          GEMINI_REVIEW_SAMPLE_RATE: ${{ inputs.gemini_review_sample_rate }}
           GEMINI_TIMEOUT_MS: "900000"
           GEMINI_RETRIES: "1"
           LLM_CONCURRENCY: "1"

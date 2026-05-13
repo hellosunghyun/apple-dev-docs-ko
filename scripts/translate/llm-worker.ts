@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { loadTranslationConfig } from "../lib/config.js";
 import { readJson, readText, resolveRoot } from "../lib/fs.js";
 import { extractJsonObject, repairTranslationOutput, validateTranslationOutput } from "../lib/validate.js";
@@ -24,14 +25,17 @@ export async function translateBatch(input: TranslationBatchInput): Promise<Tran
 }
 
 async function translateWithGemini(input: TranslationBatchInput): Promise<TranslationBatchOutput> {
+  const config = await loadTranslationConfig();
   const promptTemplate = await readText(resolveRoot("prompts/translate-segments.md"));
   const reviewTemplate = await readText(resolveRoot("prompts/review-translation-segments.md"));
   const schema = await geminiSchema();
-  const prompt = promptTemplate.replace("<INPUT_JSON>", JSON.stringify(input, null, 2));
+  const compact = compactBatchInput(input);
+  const prompt = promptTemplate.replace("<INPUT_JSON>", JSON.stringify(compact.input, null, 2));
   const attempts = Math.max(1, Number(process.env.GEMINI_RETRIES ?? process.env.LLM_RETRIES ?? 1) + 1);
   const timeout = Number(process.env.GEMINI_TIMEOUT_MS ?? process.env.LLM_TIMEOUT_MS ?? 600_000);
   const models = activeGeminiModels();
   const reviewEnabled = (process.env.GEMINI_REVIEW_ENABLED ?? "true") !== "false";
+  const reviewSampleRate = normalizeSampleRate(process.env.GEMINI_REVIEW_SAMPLE_RATE ?? config.translation.gemini?.reviewSampleRate ?? 1);
   const reviewerModel = process.env.GEMINI_REVIEWER_MODEL || models[0] || geminiModel();
   let lastError: unknown;
 
@@ -40,9 +44,12 @@ async function translateWithGemini(input: TranslationBatchInput): Promise<Transl
       const model = models[modelIndex];
       try {
         const stdout = await runGemini(prompt, model, timeout, schema);
-        const translated = parseAndValidateOutput(input, stdout);
-        if (!reviewEnabled) return translated;
-        return await reviewGeminiTranslation(input, translated, reviewTemplate, reviewerModel, timeout, schema);
+        const translated = parseAndValidateOutput(compact.input, stdout);
+        const reviewed =
+          reviewEnabled && shouldReviewBatch(compact.input, reviewSampleRate)
+            ? await reviewGeminiTranslation(compact.input, translated, reviewTemplate, reviewerModel, timeout, schema)
+            : translated;
+        return restoreOriginalOutput(reviewed, compact.restore);
       } catch (error) {
         lastError = error;
         const message = errorMessage(error);
@@ -140,6 +147,41 @@ function parseAndValidateOutput(input: TranslationBatchInput, stdout: string): T
   return output;
 }
 
+function compactBatchInput(input: TranslationBatchInput): {
+  input: TranslationBatchInput;
+  restore: Map<string, { sourcePath: string; id: string }>;
+} {
+  const restore = new Map<string, { sourcePath: string; id: string }>();
+  return {
+    input: {
+      ...input,
+      segments: input.segments.map((segment, index) => {
+        const key = `s${index.toString(36)}`;
+        restore.set(key, { sourcePath: segment.sourcePath, id: segment.id });
+        return {
+          ...segment,
+          sourcePath: key,
+          id: key
+        };
+      })
+    },
+    restore
+  };
+}
+
+function restoreOriginalOutput(output: TranslationBatchOutput, restore: Map<string, { sourcePath: string; id: string }>): TranslationBatchOutput {
+  return {
+    segments: output.segments.map((segment) => {
+      const original = restore.get(segment.id);
+      return {
+        sourcePath: original?.sourcePath ?? segment.sourcePath,
+        id: original?.id ?? segment.id,
+        ko: segment.ko
+      };
+    })
+  };
+}
+
 function activeGeminiModels(): string[] {
   const models = configuredGeminiModels();
   const active = models.filter((model) => !limitedGeminiModels.has(model));
@@ -173,6 +215,21 @@ function splitConfiguredModels(value: string | undefined): string[] {
 function normalizeProvider(provider: string): TranslationProvider {
   if (provider === "gemini-api") return provider;
   throw new Error(`Unsupported translation provider: ${provider}. Use gemini-api.`);
+}
+
+function normalizeSampleRate(value: string | number): number {
+  const rate = Number(value);
+  if (!Number.isFinite(rate)) return 1;
+  return Math.max(0, Math.min(1, rate));
+}
+
+function shouldReviewBatch(input: TranslationBatchInput, sampleRate: number): boolean {
+  if (sampleRate >= 1) return true;
+  if (sampleRate <= 0) return false;
+  const seed = input.segments.map((segment) => `${segment.sourcePath}#${segment.id}`).join("\n");
+  const digest = createHash("sha256").update(seed).digest("hex").slice(0, 8);
+  const bucket = Number.parseInt(digest, 16) / 0xffffffff;
+  return bucket < sampleRate;
 }
 
 function errorMessage(error: unknown): string {

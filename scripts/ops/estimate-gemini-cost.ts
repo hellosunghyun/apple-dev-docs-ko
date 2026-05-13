@@ -13,11 +13,13 @@ program
   .option("--segments <count>", "estimate without queue files using a segment count")
   .option("--avg-source-chars <count>", "average source text chars per segment", "111")
   .option("--avg-context-chars <count>", "average context chars per segment", "215")
-  .option("--avg-metadata-chars <count>", "average JSON id/sourcePath/framework/title overhead per segment", "140")
+  .option("--avg-metadata-chars <count>", "average compact JSON id/framework/title overhead per segment", "80")
+  .option("--avg-output-metadata-chars <count>", "average JSON id overhead per translated segment", "45")
   .option("--batch-segments <count>", "segments per batch", "180")
   .option("--batch-chars <count>", "source+context character budget per batch", "60000")
   .option("--review", "include second-pass review cost", true)
   .option("--no-review", "exclude second-pass review cost")
+  .option("--review-sample-rate <number>", "fraction of batches to review when review is enabled")
   .option("--output-ratio <number>", "estimated Korean output chars per source char", "0.75")
   .option("--chars-per-token <number>", "rough character-to-token divisor", "4")
   .option("--input-price <usd>", "input price per 1M tokens")
@@ -31,9 +33,11 @@ const options = program.opts<{
   avgSourceChars: string;
   avgContextChars: string;
   avgMetadataChars: string;
+  avgOutputMetadataChars: string;
   batchSegments: string;
   batchChars: string;
   review: boolean;
+  reviewSampleRate?: string;
   outputRatio: string;
   charsPerToken: string;
   inputPrice?: string;
@@ -60,13 +64,18 @@ const inputPrice = Number(options.inputPrice ?? config.translation.gemini?.input
 const outputPrice = Number(options.outputPrice ?? config.translation.gemini?.outputPricePerMillionTokens ?? 1.5);
 const charsPerToken = Number(options.charsPerToken);
 const reviewEnabled = options.review;
+const reviewSampleRate = reviewEnabled
+  ? clamp(Number(options.reviewSampleRate ?? config.translation.gemini?.reviewSampleRate ?? 1), 0, 1)
+  : 0;
 
 const promptTemplate = await readText(resolveRoot("prompts/translate-segments.md"));
 const reviewTemplate = await readText(resolveRoot("prompts/review-translation-segments.md"));
 const queueFiles = await collectQueueFiles();
 const estimate = queueFiles.length ? await estimateFromQueues(queueFiles) : estimateFromAggregate();
-const billableInputChars = estimate.translationInputChars + (reviewEnabled ? estimate.reviewInputChars : 0);
-const billableOutputChars = estimate.translationOutputChars + (reviewEnabled ? estimate.reviewOutputChars : 0);
+const sampledReviewInputChars = Math.ceil(estimate.reviewInputChars * reviewSampleRate);
+const sampledReviewOutputChars = Math.ceil(estimate.reviewOutputChars * reviewSampleRate);
+const billableInputChars = estimate.translationInputChars + sampledReviewInputChars;
+const billableOutputChars = estimate.translationOutputChars + sampledReviewOutputChars;
 const inputTokens = Math.ceil(billableInputChars / charsPerToken);
 const outputTokens = Math.ceil(billableOutputChars / charsPerToken);
 const inputCost = (inputTokens / 1_000_000) * inputPrice;
@@ -77,9 +86,12 @@ const result = {
   model: config.translation.gemini?.model ?? "gemini-3.1-flash-lite",
   pricingPerMillionTokens: { input: inputPrice, output: outputPrice },
   reviewEnabled,
+  reviewSampleRate,
   charsPerToken,
   estimate: {
     ...estimate,
+    sampledReviewInputChars,
+    sampledReviewOutputChars,
     billableInputChars,
     billableOutputChars,
     inputTokens,
@@ -93,7 +105,7 @@ const result = {
 console.log(JSON.stringify(result, null, 2));
 console.error(
   `Gemini cost estimate: ${estimate.segments.toLocaleString()} segments, ${estimate.batches.toLocaleString()} batches, ` +
-    `$${roundMoney(totalCost).toLocaleString()} total (${reviewEnabled ? "with" : "without"} review).`
+    `$${roundMoney(totalCost).toLocaleString()} total (${reviewEnabled ? `${Math.round(reviewSampleRate * 100)}% sampled review` : "without review"}).`
 );
 
 async function collectQueueFiles(): Promise<string[]> {
@@ -116,8 +128,9 @@ async function estimateFromQueues(queueFiles: string[]): Promise<Estimate> {
     const queueDir = path.dirname(queuePath);
     for (const [batchIndex, ref] of queue.batches.entries()) {
       const batch = await loadBatch(ref, batchIndex, queueDir);
-      const inputJson = JSON.stringify(batch, null, 2);
-      const draftJson = estimatedOutputJson(batch);
+      const compactBatch = compactBatchForCost(batch);
+      const inputJson = JSON.stringify(compactBatch, null, 2);
+      const draftJson = estimatedOutputJson(compactBatch);
       batches += 1;
       segments += batch.segments.length;
       translationInputChars += promptTemplate.replace("<INPUT_JSON>", inputJson).length;
@@ -150,6 +163,7 @@ function estimateFromAggregate(): Estimate {
   const avgSourceChars = Number(options.avgSourceChars);
   const avgContextChars = Number(options.avgContextChars);
   const avgMetadataChars = Number(options.avgMetadataChars);
+  const avgOutputMetadataChars = Number(options.avgOutputMetadataChars);
   const batchSegments = Number(options.batchSegments);
   const batchChars = Number(options.batchChars);
   const outputRatio = Number(options.outputRatio);
@@ -157,7 +171,7 @@ function estimateFromAggregate(): Estimate {
   const segmentsPerBatch = Math.max(1, Math.min(batchSegments, Math.floor(batchChars / charsForBatchLimit)));
   const batches = Math.ceil(segments / segmentsPerBatch);
   const segmentInputChars = avgSourceChars + avgContextChars + avgMetadataChars;
-  const segmentOutputChars = avgSourceChars * outputRatio + avgMetadataChars;
+  const segmentOutputChars = avgSourceChars * outputRatio + avgOutputMetadataChars;
   const promptOverhead = promptTemplate.replace("<INPUT_JSON>", "").length;
   const reviewOverhead = reviewTemplate.replace("<INPUT_JSON>", "").replace("<DRAFT_JSON>", "").length;
   const translationInputChars = Math.ceil(segments * segmentInputChars + batches * promptOverhead);
@@ -171,11 +185,29 @@ function estimatedOutputJson(batch: TranslationBatchInput): string {
   const outputRatio = Number(options.outputRatio);
   return JSON.stringify({
     segments: batch.segments.map((segment) => ({
-      sourcePath: segment.sourcePath,
       id: segment.id,
       ko: "가".repeat(Math.max(1, Math.ceil(segment.source.length * outputRatio)))
     }))
   });
+}
+
+function compactBatchForCost(batch: TranslationBatchInput): TranslationBatchInput {
+  return {
+    ...batch,
+    segments: batch.segments.map((segment, index) => {
+      const key = `s${index.toString(36)}`;
+      return {
+        ...segment,
+        sourcePath: key,
+        id: key
+      };
+    })
+  };
+}
+
+function clamp(value: number, min: number, max: number): number {
+  if (!Number.isFinite(value)) return max;
+  return Math.max(min, Math.min(max, value));
 }
 
 function roundMoney(value: number): number {
