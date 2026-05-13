@@ -1,0 +1,280 @@
+{
+  "batchIndex": 14,
+  "status": "success",
+  "completedAt": "2026-05-12T16:04:47.209Z",
+  "durationMs": 21637,
+  "output": {
+    "segments": [
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:overview:0019:0002",
+        "ko": "연속 제스처를 처리할 때는 거의 항상 제스처 인식기 객체가 필요합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:overview:0019:0003",
+        "ko": "예를 들어 회전 제스처의 경우 업데이트된 회전 값을 얻으려면 제스처 인식기 객체를 사용합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:overview:0019:0004",
+        "ko": "또한 제스처 인식기 객체를 사용해 제스처가 발생한 위치를 가져올 수도 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:heading:state-transitions:0020:0001",
+        "ko": "상태 전환"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:state-transitions:0021:0001",
+        "ko": "제스처 인식기는 미리 정의된 상태 머신 내에서 동작하며 이벤트를 처리할 때마다 상태에서 상태로 전환됩니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:state-transitions:0021:0002",
+        "ko": "모든 제스처 인식기는 Possible ([`NSGestureRecognizer.State.possible`](nsgesturerecognizer/state-swift.enum/possible.md)) 상태에서 시작하지만, 연속 제스처와 이산 제스처의 가능한 전환은 다릅니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:state-transitions:0022:0001",
+        "ko": "이산 제스처는 제스처를 성공적으로 해석했는지 여부에 따라 Possible 상태에서 바로 Recognized ([`recognized`](nsgesturerecognizer/state-swift.enum/recognized.md)) 또는 Failed ([`NSGestureRecognizer.State.failed`](nsgesturerecognizer/state-swift.enum/failed.md)) 상태로 전환됩니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:state-transitions:0022:0002",
+        "ko": "이산 제스처 인식기가 Recognized 상태로 전환되면 대상 객체의 action 메서드를 호출합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:state-transitions:0023:0001",
+        "ko": "연속 제스처의 경우 상태 전환은 다음과 같습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:list:state-transitions:0024:0001",
+        "ko": "Possible —> Began —> [Changed] —> Cancelled"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:list:state-transitions:0024:0002",
+        "ko": "Possible —> Began —> [Changed] —> Ended"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:state-transitions:0025:0001",
+        "ko": "Changed 상태는 선택 사항이며 Cancelled 또는 Ended 상태에 도달하기 전에 여러 번 발생할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:state-transitions:0025:0002",
+        "ko": "많은 상태 전환이 제스처 인식기에서 action 메서드를 호출하게 합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:state-transitions:0025:0003",
+        "ko": "이벤트를 모니터링하는 동안 [`state`](nsgesturerecognizer/state-swift.property.md) 속성을 [`NSGestureRecognizer.State.changed`](nsgesturerecognizer/state-swift.enum/changed.md)로 설정하면 action 메서드도 호출됩니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:state-transitions:0025:0004",
+        "ko": "이러한 호출을 사용해 앱의 상태를 갱신하거나 사용자 정의 애니메이션을 업데이트할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:state-transitions:0026:0001",
+        "ko": "가능한 상태 목록은 [`NSGestureRecognizer.State`](nsgesturerecognizer/state-swift.enum.md) 상수에서 확인할 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:heading:subclassing-notes:0027:0001",
+        "ko": "서브클래싱 노트"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:subclassing-notes:0028:0001",
+        "ko": "예를 들어 “check mark” 제스처처럼 고유한 제스처를 인식하는 `NSGestureRecognizer` 하위 클래스를 만들 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:subclassing-notes:0028:0002",
+        "ko": "사용자 지정 제스처 인식기는 해당 제스처를 감지하기 위한 적절한 이벤트 관련 메서드와 상태 정보를 관리하는 몇 가지 추가 메서드를 구현합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:subclassing-notes:0029:0001",
+        "ko": "모든 제스처 인식기는 적절한 시점에 state 속성 값을 업데이트해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:subclassing-notes:0029:0002",
+        "ko": "특히 모든 상태 전환에 대해 이를 업데이트해야 합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:subclassing-notes:0029:0003",
+        "ko": "제스처 인식기의 가능한 상태 전환에 대한 자세한 내용은 [`State Transitions`](nsgesturerecognizer#State-Transitions.md)를 참조합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:blockquote:subclassing-notes:0030:0001",
+        "ko": "**Note**: [`NSGestureRecognizer`](nsgesturerecognizer.md)는 다른 비 제스처 인식기 메커니즘(예: drag and drop, pop-up menus)으로 이벤트 추적을 위임하지 않습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:heading:methods-to-override:0031:0001",
+        "ko": "재정의할 메서드"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:methods-to-override:0032:0001",
+        "ko": "사용자 정의 제스처 인식기 하위 클래스를 만들 때는 다음을 수행합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:list:methods-to-override:0033:0001",
+        "ko": "[`reset()`](nsgesturerecognizer/reset().md) 메서드와 하위 클래스용 메서드에 해당하는 다른 관련 메서드를 구현합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:list:methods-to-override:0033:0002",
+        "ko": "제스처에 적합한 기준점을 지정하려면 필요에 따라 [`location(in:)`](nsgesturerecognizer/location(in:).md) 메서드를 재정의합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:methods-to-override:0034:0001",
+        "ko": "AppKit은 제스처 인식 절차를 시작하기 전에 mouse-down 이벤트, magnify 이벤트 또는 rotation 이벤트가 발생하기를 기다립니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:methods-to-override:0034:0002",
+        "ko": "key-down 이벤트만 사용해 제스처를 인식하는 제스처 인식기의 경우, [`keyDown(with:)`](nsgesturerecognizer/keydown(with:).md) 메서드는 mouse-down, magnify 또는 rotation 이벤트가 인식 과정을 시작할 때까지 호출되지 않습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:heading:alternatives-to-subclassing:0035:0001",
+        "ko": "서브클래싱 대체 방법"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:alternatives-to-subclassing:0036:0001",
+        "ko": "`NSGestureRecognizer` 클래스는 모든 구체적인 제스처 인식기에 대해 구성할 수 있는 공통 동작을 정의합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:alternatives-to-subclassing:0036:0002",
+        "ko": "It also supports a delegate—an object that adopts the [`NSGestureRecognizerDelegate`](nsgesturerecognizerdelegate.md) protocol—for handling finer-grained customization of some behaviors without the need for subclassing."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:alternatives-to-subclassing:0036:0003",
+        "ko": "예를 들어 delegate를 사용해 특정 제스처 인식기 객체 간의 종속성을 만들 수 있습니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:alternatives-to-subclassing:0037:0001",
+        "ko": "제스처 인식기 동작을 제어할 때 delegate 사용에 대한 자세한 내용은 [`NSGestureRecognizerDelegate`](nsgesturerecognizerdelegate.md)를 참조합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:heading:initializing-a-gesture-recognizer:0039:0001",
+        "ko": "제스처 인식기 초기화"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:list:initializing-a-gesture-recognizer:0040:0001",
+        "ko": "[init(target: Any?, action: Selector?)](nsgesturerecognizer/init(target:action:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:initializing-a-gesture-recognizer:0041:0001",
+        "ko": "지정한 target 및 action 정보를 사용해 제스처 인식기를 초기화합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:heading:accessing-the-target-and-action:0042:0001",
+        "ko": "target 및 action 접근"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:accessing-the-target-and-action:0044:0001",
+        "ko": "제스처가 인식되면 호출할 action 메서드입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:accessing-the-target-and-action:0046:0001",
+        "ko": "action 메서드를 구현하는 객체입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:heading:getting-the-location-of-events:0047:0001",
+        "ko": "이벤트의 위치 가져오기"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:list:getting-the-location-of-events:0048:0001",
+        "ko": "[func location(in: NSView?) -> NSPoint](nsgesturerecognizer/location(in:).md)"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:getting-the-location-of-events:0049:0001",
+        "ko": "제스처의 위치로 계산된 지점을 반환합니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:heading:accessing-the-recognizers-state:0050:0001",
+        "ko": "인식기 상태 접근"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:accessing-the-recognizers-state:0052:0001",
+        "ko": "제스처 인식기의 현재 상태입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:accessing-the-recognizers-state:0054:0001",
+        "ko": "제스처 인식기가 연결된 뷰입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:accessing-the-recognizers-state:0056:0001",
+        "ko": "제스처 인식기가 이벤트를 처리할 수 있는지 여부를 나타내는 Boolean 값입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:heading:delaying-events:0057:0001",
+        "ko": "이벤트 지연"
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:delaying-events:0059:0001",
+        "ko": "1차 마우스 버튼 이벤트가 제스처 인식이 실패한 후에만 전달되는지 나타내는 Boolean 값입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:delaying-events:0061:0001",
+        "ko": "2차 마우스 버튼 이벤트가 제스처 인식이 실패한 후에만 전달되는지 나타내는 Boolean 값입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:delaying-events:0063:0001",
+        "ko": "기타 마우스 버튼 이벤트가 제스처 인식이 실패한 후에만 전달되는지 나타내는 Boolean 값입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:delaying-events:0065:0001",
+        "ko": "키 이벤트가 제스처 인식이 실패한 후에만 전달되는지 나타내는 Boolean 값입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:delaying-events:0067:0001",
+        "ko": "magnification 이벤트가 제스처 인식이 실패한 후에만 전달되는지 나타내는 Boolean 값입니다."
+      },
+      {
+        "sourcePath": "documentation/AppKit/nsgesturerecognizer.md",
+        "id": "seg:paragraph:delaying-events:0069:0001",
+        "ko": "rotation 이벤트가 제스처 인식이 실패한 후에만 전달되는지 나타내는 Boolean 값입니다."
+      }
+    ]
+  }
+}
