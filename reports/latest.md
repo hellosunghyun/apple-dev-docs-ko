@@ -8,7 +8,7 @@
 ## Summary
 
 - Files: 339016
-- Translated files: 1987
+- Translated files: 2556
 - Failed segments: 11090
 - Review needed: 0
 
